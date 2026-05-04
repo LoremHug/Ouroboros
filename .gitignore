@@ -1,0 +1,10 @@
+.venv/
+manifold.kuzu
+manifold.kuzu.wal
+manifold.kuzu.shm
+manifold.kuzu/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+
