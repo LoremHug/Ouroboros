@@ -22,7 +22,9 @@ LABEL_RE = re.compile(r"\\label\{(sec:[^}]+|chap:[^}]+|part:[^}]+)\}")
 # Anything not listed falls back to heuristic (substring match).
 MANUAL_MAP: dict[str, list[str]] = {
     "DEF": ["sec:a0-method", "sec:epistemic-manifold"],
-    "N_Triangulation": ["sec:triangulation"],
+    "N_Triangulation": ["sec:triangulation",
+                        "sec:l31-minimality", "sec:z3-minimality",
+                        "sec:SM-algebra-derivation", "sec:iso-fp"],
     "N_BPIEngagement": ["sec:bpi-engagement"],
     "N_DopaminePredictionError": ["sec:dopamine-prediction-error"],
     "N_FEP": ["sec:hom-fep"],
@@ -74,7 +76,7 @@ MANUAL_MAP: dict[str, list[str]] = {
              "sec:sm-translator", "part:topo-geometry",
              "sec:l31-minimality", "sec:z3-minimality"],
     "N129": ["sec:SM-algebra-derivation"],
-    "N165": ["sec:ergodicity"],
+    "N165": ["sec:ergodicity", "sec:open-steps"],
     "N182": ["sec:iso-pi"],
     "N_FEP": ["sec:hom-fep", "sec:ai-fep"],
     "N_LeptonMassScale": ["sec:lepton-mass-scale", "sec:hertault-geom",
@@ -82,7 +84,8 @@ MANUAL_MAP: dict[str, list[str]] = {
     "N_ZGaugeDecomposition": ["sec:three-interactions"],
     "N_NoSeparatePieces": ["sec:reduction1", "sec:reduction2",
                            "sec:reduction3", "sec:reduction4",
-                           "sec:coordinate-theorem", "sec:scorecard"],
+                           "sec:coordinate-theorem", "sec:scorecard",
+                           "sec:synthesis-results"],
     # extend N067 (was just primary section before)
     "N067": ["sec:spectral-dim-prob", "sec:formula-spectral",
              "sec:scale-contact", "sec:classicality"],
