@@ -8,6 +8,7 @@ on:
     paths:
       - "manifold_graph.txt"
       - "THE_IMPEDANCE_MANIFOLD_v3_6.tex"
+      - "additions.yaml"
       - "schema/**"
       - "scripts/**"
       - "web/.nojekyll"
@@ -36,21 +37,26 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Build database (migrate + enrich)
         run: |
-          python -m scripts.migrate
-          python -m scripts.enrich_from_tex
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip list
+
+      - name: Build database (migrate)
+        run: python -m scripts.migrate
+
+      - name: Enrich with .tex sections
+        run: python -m scripts.enrich_from_tex
 
       - name: Generate map
         run: python -m scripts.generate_map
 
       - name: Verify output
         run: |
-          test -f web/index.html
-          test -f web/.nojekyll
+          test -f web/index.html || { echo "ERROR: web/index.html missing"; exit 1; }
+          test -f web/.nojekyll || { echo "ERROR: web/.nojekyll missing"; exit 1; }
           ls -la web/
+          wc -c web/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

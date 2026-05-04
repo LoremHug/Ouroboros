@@ -332,6 +332,7 @@ const node = zoomG.append('g').selectAll('g')
   .data(DATA.nodes).join('g')
   .attr('class', 'node')
   .call(d3.drag()
+    .clickDistance(5)
     .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.2).restart(); d.fx = d.x; d.fy = d.y; })
     .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
     .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); }));
@@ -501,7 +502,11 @@ window.closePanel = closePanel;
 window.openSectionPanel = openSectionPanel;
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
-svg.on('click', () => closePanel());
+// Close panel only when clicking empty SVG canvas — not nodes, not links, not panel.
+svg.on('click', (e) => {
+  if (e.target.closest('g.node, line.link, #panel')) return;
+  closePanel();
+});
 
 // ─────────────────────────────────────────── LEGEND
 const legendItems = document.getElementById('legend-items');
