@@ -13,8 +13,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from schema import Node, Edge, Status, EdgeStatus, layer_of  # noqa: E402
+from schema import Node, Edge, Status, EdgeStatus, Layer, layer_of  # noqa: E402
 from scripts.db import connect, reset, DB_PATH  # noqa: E402
+from scripts import additions as additions_io  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 GRAPH_FILE = ROOT / "manifold_graph.txt"
@@ -283,6 +284,90 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
         )
 
 
+def apply_additions(conn) -> tuple[int, int]:
+    """Apply nodes and edges from additions.yaml on top of the migrated DB."""
+    data = additions_io.load()
+    n_added = 0
+    e_added = 0
+
+    for nspec in data.get("nodes") or []:
+        nid = nspec["id"]
+        # Upsert: delete if exists, then create.
+        conn.execute("MATCH (n:Node {id: $id}) DETACH DELETE n", {"id": nid})
+        layer_value = nspec.get("layer") or layer_of(nid).value
+        params = {
+            "id": nid,
+            "title": nspec.get("title", ""),
+            "layer": layer_value,
+            "status": nspec.get("status", "STUB"),
+            "anchors": int(nspec.get("anchors", 0)),
+            "a_inf": bool(nspec.get("a_infinity", False)),
+            "summary": nspec.get("summary", ""),
+            "why": nspec.get("why_status", ""),
+            "not_m": nspec.get("not_misinterpretations", ""),
+            "content": nspec.get("content", ""),
+            "zs": float(nspec.get("z_struct", 0.0)),
+            "zt": float(nspec.get("z_therm", 0.0)),
+            "zh": float(nspec.get("z_hidden", 0.0)),
+            "lvl": int(nspec.get("level", -1)),
+            "ph": bool(nspec.get("is_placeholder", False)),
+        }
+        conn.execute(
+            """
+            CREATE (n:Node {
+                id: $id, title: $title, layer: $layer, status: $status,
+                anchors: $anchors, a_infinity: $a_inf,
+                summary: $summary, why_status: $why,
+                not_misinterpretations: $not_m, content: $content,
+                z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
+                is_placeholder: $ph
+            })
+            """,
+            params,
+        )
+        n_added += 1
+
+    for espec in data.get("edges") or []:
+        # Verify endpoints exist
+        for endpoint_id in (espec["source"], espec["target"]):
+            r = conn.execute("MATCH (n:Node {id: $id}) RETURN count(n)", {"id": endpoint_id})
+            if r.get_next()[0] == 0:
+                raise RuntimeError(
+                    f"additions.yaml references missing node {endpoint_id} "
+                    f"in edge {espec['source']} → {espec['target']} : {espec.get('label','')}"
+                )
+        # Skip if exact (source, target, label) already present
+        r = conn.execute(
+            """
+            MATCH (a:Node {id: $src})-[e:Edge]->(b:Node {id: $tgt})
+            WHERE e.label = $lbl
+            RETURN count(e)
+            """,
+            {"src": espec["source"], "tgt": espec["target"], "lbl": espec.get("label", "")},
+        )
+        if r.get_next()[0] > 0:
+            continue
+        conn.execute(
+            """
+            MATCH (a:Node {id: $src}), (b:Node {id: $tgt})
+            CREATE (a)-[:Edge {
+                label: $lbl, edge_status: $st,
+                justification: $j, why_forced: $w
+            }]->(b)
+            """,
+            {
+                "src": espec["source"], "tgt": espec["target"],
+                "lbl": espec.get("label", ""),
+                "st": espec.get("edge_status", "D"),
+                "j": espec.get("justification", "") or "",
+                "w": espec.get("why_forced", "") or "",
+            },
+        )
+        e_added += 1
+
+    return n_added, e_added
+
+
 def main() -> None:
     text = GRAPH_FILE.read_text(encoding="utf-8")
     nodes, edges = parse_graph(text)
@@ -310,6 +395,12 @@ def main() -> None:
 
     write_to_kuzu(nodes, edges)
     print(f"wrote → {DB_PATH}")
+
+    # Apply additions.yaml on top
+    db, conn = connect()
+    n_added, e_added = apply_additions(conn)
+    if n_added or e_added:
+        print(f"applied additions.yaml: +{n_added} nodes, +{e_added} edges")
 
 
 if __name__ == "__main__":

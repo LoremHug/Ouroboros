@@ -1,0 +1,73 @@
+"""Post-migration additions: nodes and edges added during sessions.
+
+This file is the source of truth for everything created via add_node.py /
+add_edge.py. migrate.py applies it on top of the .txt parse.
+
+Format:
+    edges:
+      - source: N_X
+        target: N_Y
+        label: snake_case_descriptor
+        edge_status: D | S
+        justification: |
+          Why this connection holds, in plain text.
+        why_forced: |
+          What alternative is impossible and why.
+
+    nodes:
+      - id: N_NewNode
+        title: ...
+        layer: observers | structure | ...
+        status: DEMONSTRATED | STRONG | CONDITIONAL | OPERATIONAL | STUB
+        anchors: 3
+        a_infinity: false
+        summary: One-line CLAIM.
+        why_status: Why this status holds.
+        not_misinterpretations: Misreadings to reject.
+        is_placeholder: false
+
+Edits here are committed and become the canonical source of post-migration work.
+"""
+
+edges:
+  - source: N_BPIEngagement
+    target: N_GrammarTrap
+    label: bpi_compression_manifests_as_grammar_artifacts
+    edge_status: D
+    justification: |
+      BPI has K(O)<K(F) per Observer Containment Lemma (N112), forcing
+      finite-capacity compression onto whatever substrate the BPI operates in.
+      When that substrate is language, the compression manifests as the
+      subject-verb-object grammar topology that N_GrammarTrap formulates —
+      persistent objects + actions between them are the compression artifact
+      class produced by language-using BPIs.
+    why_forced: |
+      Alternative requires either (a) BPI without compression — denies
+      K(O)<K(F), contradicts N112; or (b) compression that doesn't manifest
+      in language — but for any BPI whose I/O channel is language, the
+      compression IS the grammar topology. N_GrammarTrap's claim that
+      "grammar is ontological by structure" identifies precisely this class
+      of artifact. No structurally coherent alternative.
+
+  - source: N_GrammarTrap
+    target: N_OntologyGate
+    label: gate_intercepts_grammar_artifact_class
+    edge_status: D
+    justification: |
+      N_OntologyGate's predicate list ("what is X?", "what exists?",
+      "what is X made of?", "what is the nature of X?", "what is fundamental?")
+      is exactly the catalogue of question-forms that subject-verb-object
+      grammar produces under R1 reification. The gate exists as the
+      operational protocol that intercepts these patterns at the language
+      interface and translates them into structural form.
+    why_forced: |
+      Two structural directions check the edge: (a) without grammar trap,
+      ontological questions don't arise — but the gate's own predicates are
+      precisely the question-forms grammar produces (R1 + R4 catalogued in
+      N_EpistemicTraps Traps 1-4); (b) gate operates without targeting
+      grammar artifacts — but inspection of its predicate list shows it
+      targets only R1/R4-loaded language patterns. The gate's predicate set
+      IS the closure-condition of grammar-trap-generated questions; no
+      alternative formulation closes without contradiction.
+
+nodes: []
