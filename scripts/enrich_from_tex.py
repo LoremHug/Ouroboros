@@ -47,6 +47,7 @@ MANUAL_MAP: dict[str, list[str]] = {
     "N366": ["sec:fusion-z"],
     "N367": ["sec:rotodiffusion"],
     "N363": ["sec:zipf"],
+    "N_PhiAttractor": ["sec:fibonacci"],
     "N327": ["sec:weber-fechner", "sec:weber-snr"],
     "N_Math": ["sec:n301-math-language"],
     "N_NoSeparatePieces": ["sec:reduction1", "sec:reduction2", "sec:reduction3", "sec:reduction4"],

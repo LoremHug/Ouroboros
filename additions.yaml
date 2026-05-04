@@ -223,6 +223,101 @@ edges:
       coincide by construction once the gauge identification is made.
       Structural identity, no alternative.
 
+  - source: DEF
+    target: N_PhiAttractor
+    label: phi_is_a0_attractor_continuous
+    edge_status: D
+    justification: |
+      A_0 = argmin Z applied to a substrate satisfying conditions C1-C5
+      (sequential placement, repulsive coupling with decay, two-memory
+      effective coupling, continuous angular dimension, parameter within
+      Fibonacci basin) gives the recurrence F(n) = F(n-1) + F(n-2) with
+      characteristic equation x² = x + 1, whose unique positive root is
+      φ = (1+√5)/2. Six independent derivations confirm the same attractor:
+      Binet two-memory recurrence, Levitov SL(2,Z) cylindrical compression,
+      Atela-Golé-Hotton phyllotaxis bifurcation, Hurwitz/Markov Diophantine
+      extremum, Penrose smallest-Pisot inflation, Lee-Levitov mechanical
+      universality. φ is what argmin of two-memory dissipative dynamics on
+      continuous angular substrate looks like.
+    why_forced: |
+      Alternative requires either (a) different memory depth — but
+      one-memory yields geometric (rational) attractor, three-memory yields
+      Tribonacci constant ≈ 1.839, four-memory yields Tetranacci ≈ 1.928;
+      each memory depth has a unique attractor and φ is specific to
+      two-memory; or (b) discrete substrate — which removes C4 and gives
+      the L(3,1)/Z_3 attractor class instead. Within the C1-C5 class, φ is
+      uniquely forced as supremum of Markov spectrum (Hurwitz 1891), as
+      smallest Pisot supporting aperiodicity (Penrose 1974), and as
+      smallest non-trivial irreducible quadratic root. Multiple structural
+      routes close on the same point.
+
+  - source: N_Triangulation
+    target: N_PhiAttractor
+    label: paired_attractor_continuous_class
+    edge_status: D
+    justification: |
+      N_Triangulation establishes that A_0 minimisation on discrete substrate
+      forces 3 components (the triangulation principle: minimum complete
+      coordinate system in transition-space). N_PhiAttractor establishes the
+      parallel result for continuous angular substrate: the minimum stable
+      configuration is φ. Both are A_0-forced attractors counting "minimum
+      number of stable configurations"; they differ only in C4 — discrete
+      vs continuous angular dimension along the relevant axis.
+    why_forced: |
+      The two attractor classes are mutually exclusive (a substrate is
+      either discrete or continuous angular along the relevant axis) and
+      jointly exhaustive (any A_0-bearing substrate falls into one class).
+      The pairing is forced by C4 acting as the partition criterion. Without
+      N_PhiAttractor as the continuous-substrate attractor, the framework
+      would have a structural gap: A_0 would have no defined attractor for
+      phyllotactic / Penrose / cortex substrates. The bidirectional edge
+      reflects that triangulation and φ-attractor sit at the same structural
+      level — neither is logically prior.
+
+  - source: N_PhiAttractor
+    target: N_Triangulation
+    label: paired_attractor_discrete_class
+    edge_status: D
+    justification: |
+      Reverse direction of the same identification: discrete spin-sector
+      substrates (Z_3 acting freely on S³ to give L(3,1)) realise the
+      triangulation principle as the discrete counterpart of the continuous
+      φ-attractor. N_PhiAttractor's existence forces the partner question —
+      what is the A_0 attractor on discrete substrates? — answered by
+      N_Triangulation.
+    why_forced: |
+      Same structural symmetry as the forward edge: the two are coordinate
+      expressions of A_0 restricted to the two substrate classes selected
+      by C4 (continuous vs discrete). Counter-instance verification: the
+      .tex counter-instance table lists "Crystal Z_3 → discrete sectors →
+      C4 failed → L(3,1) topology" — when C4 fails, φ-emergence is
+      structurally prevented and Z_3 attractor takes over. The transition
+      condition C4 is itself the structural witness of the pairing.
+
+  - source: N_PhiAttractor
+    target: N067
+    label: phi_scale_in_spectral_dim_formula
+    edge_status: S
+    justification: |
+      The cortex application combines φ-attractor with the spectral dimension
+      formula d_s(r) = 2 + 2r/(r + r_0) from N067, evaluated at the φ-scale
+      r* = r_0/φ. This gives predicted fractal dimension d_f = d_s(r_0/φ) =
+      2 + 2/φ² ≈ 2.764, matching measured cortex fractal dimension
+      d_f ≈ 2.73 (Kiselev et al. 2003), which corresponds to r/r_0 ≈ 1/φ.
+      The two structural results combine to make a quantitative prediction
+      confirmed empirically.
+    why_forced: |
+      STRONG, not DEMONSTRATED, because the identification step "cortex is
+      a C1-C5 substrate with characteristic scale r* = r_0/φ" requires
+      anatomical/developmental verification beyond pure structure. But the
+      mathematical machinery is forced: without N067's RG-derived d_s(r)
+      formula, the φ-scale has no metric to project onto; without
+      N_PhiAttractor's identification of r* = r_0/φ as the cortex
+      characteristic scale, N067's formula has no specific evaluation point
+      for cortex. The combined prediction matches measurement; alternative
+      requires independent derivation of cortex fractal dim from non-A_0
+      principles, which would introduce a free parameter.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -347,6 +442,57 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N_PhiAttractor
+    title: Golden Ratio φ as A₀ Attractor on Continuous Angular Substrates
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 6
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      φ = (1+√5)/2 is the A_0 attractor for substrates satisfying five
+      conditions: (C1) sequential placement, (C2) repulsive coupling with
+      decay, (C3) two-memory effective coupling, (C4) continuous angular
+      dimension, (C5) parameter range within Fibonacci basin. Six
+      independent derivations converge on φ — Binet two-memory recurrence,
+      Levitov SL(2,Z) cylindrical compression, Atela-Golé-Hotton phyllotaxis
+      bifurcation, Hurwitz/Markov Diophantine extremum, Penrose smallest-
+      Pisot inflation, Lee-Levitov mechanical universality. Counter-instance
+      enumeration verifies each Ci individually necessary: removing any one
+      produces a different documented attractor (crystal hexagonal, Lucas
+      99.5°, bijugate 68.75°, etc.).
+    why_status: |
+      DEMONSTRATED with A=6 from six independent classical mathematical
+      results. The convergence is itself the structural fact: φ is
+      simultaneously (a) root of smallest non-trivial irreducible quadratic
+      x²=x+1, (b) smallest Pisot number supporting aperiodicity, (c)
+      supremum of Markov spectrum (most-irrational), (d) limit of pruned
+      van Iterson tree principal branch, (e) minimum-non-trivial two-memory
+      characteristic root. These six properties unifying on one number
+      establish φ as a number-theoretic singularity, not a coincidental
+      attractor. The unification through Markov theory + SL(2,Z) modular
+      action is what makes A=6 non-redundant — six coordinate expressions
+      of one underlying singularity. Refinement: φ is the principal stable
+      attractor (largest basin, densest occurrence, max-irrational position
+      on Markov spectrum); secondary noble-number attractors (Lucas,
+      multijugate) coexist within the same dynamical system but with
+      smaller basins, related to φ by SL(2,Z) orbit equivalence.
+    not_misinterpretations: |
+      φ is a coincidental approximation in nature (no — it is structurally
+      forced for any substrate satisfying C1-C5; counter-instances enumerated
+      in .tex verify each condition is individually necessary) · φ-emergence
+      requires biological intent (no — it appears in Penrose tilings without
+      sequential growth, in atomic quasicrystals with 5-fold symmetry, in
+      cortex without conscious selection; substrate satisfaction is the only
+      requirement) · this contradicts the L(3,1) Z_3 result (no — the two
+      occupy disjoint substrate classes selected by C4: continuous angular
+      vs discrete spin sector; both are A_0-forced attractors in their
+      respective classes) · 137.5° golden angle is empirical fitting (it
+      follows analytically from 360°/φ² with no free parameter) · six
+      derivations are six independent confirmations (they are six coordinate
+      expressions of one number-theoretic singularity, not six unrelated
+      witnesses; the convergence is the structural fact)
 
   - id: N110
     title: Inevitability Theorem for L(3,1) — From BPI Vertex-Transitivity to S³/Z₃

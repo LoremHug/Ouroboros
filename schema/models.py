@@ -71,6 +71,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N_TopologyProcessIdentity": Layer.STRUCTURE,
     "N_Logic": Layer.STRUCTURE,
     "N_Math": Layer.STRUCTURE,
+    "N_PhiAttractor": Layer.STRUCTURE,
     "N067": Layer.STRUCTURE,
     "N370": Layer.STRUCTURE,
     # epistemics
