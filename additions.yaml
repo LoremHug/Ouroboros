@@ -941,6 +941,179 @@ edges:
       specialisation: any apparent qualia/trigger duality dissolves under
       the same R1-resolution that N_NoSeparatePieces formulates generally.
 
+  # ─── Round 2 forced edges (Jaccard pass + manual review) ───
+
+  - source: N370
+    target: N372
+    label: L31_topology_forces_Sr2RuO4_eg_block
+    edge_status: D
+    justification: |
+      N370 forces L(3,1) substrate. N372 (Sr_2RuO_4 superconducting
+      Z-minimum) realises the forced 1+2 E_g block with Z_2 degeneracy
+      on this substrate. Same substrate-realisation pattern as N373/374/
+      375/376 — Sr_2RuO_4 is one material instance of physics on L(3,1).
+    why_forced: |
+      Sr_2RuO_4's E_g block structure follows from group representation
+      theory on the Z_3-graded covering of L(3,1) — without N370's
+      L(3,1) base, the specific block structure has no derivation.
+      Alternative manifolds excluded by N370. The substrate-realisation
+      chain is the same forcedness as N373/374/375/376; N372 was simply
+      missed in the previous batch.
+
+  - source: N373
+    target: N_InversiveTheory
+    label: pairing_symmetry_competition_is_inversive_resolution
+    edge_status: D
+    justification: |
+      UTe_2 had decade-long "competing pairing symmetry" debate (s-wave
+      vs p-wave vs d-wave vs f-wave triplet). N373's resolution shows
+      these are not competing structures but coordinate projections of
+      the forced 4D Kramers-pair active space with antisymmetric rung
+      coupling. The "competition" was Trap 8 (structure selection among
+      A_0-minima) — alternatives were not actual alternatives, but
+      coordinate views of one structure. N_InversiveTheory's principle
+      "alternatives don't exist" applies directly.
+    why_forced: |
+      UTe_2's experimental signatures (NMR, c_66, Kerr, etc.) measure
+      material-specific parameters that fix one structure, not select
+      between many. The dissolution of "competition" requires
+      N_InversiveTheory as the structural ground; without it, the
+      experimental convergence has no theoretical interpretation.
+
+  - source: N374
+    target: N_InversiveTheory
+    label: three_phase_competition_is_inversive_resolution
+    edge_status: D
+    justification: |
+      UPt_3's three superconducting phases (A, B, C) appeared as three
+      "competing" order parameters in 30+ years of literature. N374
+      resolves: three phases are three Z_3-sectors of one active space
+      on L(3,1), distinguished only by external field/temperature
+      parameters. The "competition" is Trap 8 — coordinate views of
+      one Z_3-graded structure.
+    why_forced: |
+      The phases are connected by symmetry-breaking transitions in
+      one parametric family, not by selection among independent
+      candidates. N_InversiveTheory's "alternatives reduce to coordinate
+      views" specialises here; without it, the phase sequence has no
+      structural unification.
+
+  - source: N375
+    target: N_InversiveTheory
+    label: cuprate_35yr_competition_is_trap_8_inversive
+    edge_status: D
+    justification: |
+      Cuprate superconductivity has had a 35-year "competing theories"
+      debate (RVB, spin-fluctuations, t-J, d-density wave, Amperean,
+      stripe pseudogap, FL*, YRZ, etc.). N375's resolution explicitly
+      marks "Competition framing is Trap 8 disguised as theoretical
+      debate" — these are not competing theories but coordinate
+      projections of the dual-sector Z-structure on L(3,1) at different
+      parameter regimes. N_InversiveTheory is the structural ground.
+    why_forced: |
+      Each "competing" approach captures a specific coordinate of one
+      A_0-forced structure (RVB → Mott constraint sector; spin-
+      fluctuations → AFM-channel projection; stripes → CDW instability;
+      FL* → topological gauge mode). The 35-year non-convergence is
+      itself evidence that no "alternative" actually exists at the
+      structural level. N_InversiveTheory codifies this directly.
+
+  - source: N376
+    target: N_InversiveTheory
+    label: iron_based_multi_orbital_family_is_inversive
+    edge_status: D
+    justification: |
+      Iron-based superconductors (122, 1111, 11, 111 families) appeared
+      as "different superconductor types" requiring different theories.
+      N376 resolves: one parametric family with coupled multi-sector
+      phase diagram on shared L(3,1) substrate; orbital-character at
+      Fermi level is the parameter, not the choice among theories.
+      Direct instance of N_InversiveTheory.
+    why_forced: |
+      The structural similarity across iron-based families (universal
+      gap topology, common pairing symmetry class, parametric coupling
+      to magnetism) shows them as one family, not separate structures.
+      The "multiple theories" framing was Trap 8; N_InversiveTheory
+      grounds the family-level structural unity.
+
+  - source: N377
+    target: N_ForcedId
+    label: feature_absorption_is_literal_forced_identification
+    edge_status: D
+    justification: |
+      N377's title is "Sparse Autoencoder Feature Absorption — Forced
+      Geometric Divergence Between Non-Equivalent argmin Processes on
+      Shared LLM Activation Space, Independent of Architecture or
+      Hyperparameters." The phrase "Forced" in the title invokes
+      N_ForcedId directly — N377 documents one specific instance of
+      forced identification in LLM interpretability substrate.
+    why_forced: |
+      N377's claim is precisely that feature absorption is forced (not
+      a contingent training artifact) — different SAE training runs
+      converge on the same feature decomposition because the
+      decomposition IS structurally forced by the activation-space
+      geometry. This forcedness is the content of N_ForcedId; N377
+      specialises N_ForcedId to LLM activation substrate.
+
+  - source: N_Invariants
+    target: N370
+    label: invariants_are_structural_inputs_to_L31_inevitability
+    edge_status: D
+    justification: |
+      N370's derivation uses I_Sym (vertex-transitivity → free Z_3
+      action) and I_Bound (compact 3-manifold) as explicit structural
+      inputs. Without I_Sym there is no free action; without I_Bound
+      the manifold is not closed; without both, spherical space form
+      classification doesn't apply. N_Invariants supplies the
+      foundational invariants on which L(3,1) inevitability is built.
+    why_forced: |
+      Removing any of I_Sym, I_Bound dissolves N370's derivation chain.
+      Alternative requires either (a) L(3,1) without invariants — but
+      the manifold's properties (closed, oriented, finite π_1) ARE
+      invariant statements; or (b) different manifold without
+      invariants — but then no manifold survives the derivation. The
+      input dependency is structural.
+
+  - source: N_DopaminePredictionError
+    target: N_NoSeparatePieces
+    label: biphasic_dopamine_is_one_process_two_phases
+    edge_status: D
+    justification: |
+      N_DopaminePredictionError documents biphasic dopamine — caudate
+      (anticipation) + nucleus accumbens (resolution). The two phases
+      are not separate events but two coordinate readings of one
+      prediction-error→resolution cycle. The neural substrate
+      manifests N_NoSeparatePieces principle directly: anticipation and
+      resolution are coordinate views of one A_0 process, not separate
+      pieces with a relationship between them.
+    why_forced: |
+      Salimpoor 2011 and subsequent work show the biphasic response is
+      synchronised — caudate and accumbens activations are not
+      independent events. They IS one prediction-error cycle in two
+      anatomical projections. Without N_NoSeparatePieces as the general
+      principle, the synchrony has no structural interpretation; with
+      it, synchrony is forced.
+
+  - source: N_Invariants
+    target: N_Logic
+    label: invariants_ground_logical_stability
+    edge_status: D
+    justification: |
+      Logical operation requires four invariants to be stable: (1) I_Sym
+      ensures truth preservation across substitution (A=A under
+      transitions); (2) I_Null ensures unique conclusion (no spontaneous
+      contradiction); (3) I_Bound ensures bounded inference (finite-step
+      proofs terminate); (4) I_Quant ensures discrete truth values.
+      Without invariants, modus ponens has no stable medium to operate
+      on — truth preservation, non-contradiction, and termination all
+      depend on invariant stability.
+    why_forced: |
+      Modus ponens's classical correctness depends on truth preservation
+      (= I_Sym), non-contradiction (= I_Null), and finite computability
+      (= I_Bound + I_Quant). Removing any invariant dissolves a
+      requirement for logic to operate. Logic is what the invariants
+      look like in symbolic substrate; the grounding is structural.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
