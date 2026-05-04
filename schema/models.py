@@ -2,7 +2,7 @@
 from __future__ import annotations
 from enum import Enum
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, Field
 
 
 class Status(str, Enum):
@@ -40,6 +40,7 @@ class Node(BaseModel):
     z_hidden: float = 0.0
     level: int = -1
     is_placeholder: bool = False
+    aliases: list[str] = Field(default_factory=list)
 
 
 class EdgeStatus(str, Enum):

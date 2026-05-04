@@ -24,7 +24,16 @@ GRAPH_FILE = ROOT / "manifold_graph.txt"
 # Spurious markers like META/CONCL/NORM_SILENCE are filtered out.
 VALID_ID_RE = re.compile(r"^(DEF|N\d+[a-z]?|N_[A-Za-z]\w*)$")
 
-NODE_HEADER_RE = re.compile(r"^\[([A-Za-z0-9_]+)\](?:\s*\((.*?)\))?\s*$")
+# Header forms accepted:
+#   [N_Foo] (Title)
+#   [N067] (Title)
+#   [N067 / N068 / N069] (Title)   — grouped block: first id is canonical
+NODE_HEADER_RE = re.compile(
+    r"^\[((?:N_[A-Za-z]\w*|N\d+[a-z]?|DEF)(?:\s*/\s*(?:N\d+[a-z]?|N_[A-Za-z]\w*))*)\]"
+    r"(?:\s*\((.*?)\))?\s*$"
+)
+
+ALIAS_MAP_LINE_RE = re.compile(r"^(N\d+[a-z]?)\s*←\s*also:\s*(.+)$")
 STATUS_RE = re.compile(r"^Status:\s*(.+?)(?:\s*\|\s*A\s*=\s*(\S+))?\s*$")
 
 # Field markers that begin multi-line node-level field bodies.
@@ -71,10 +80,36 @@ def parse_anchors(a: str | None) -> tuple[int, bool]:
     return max(int(n) for n in nums), False
 
 
+def build_alias_map(text: str) -> dict[str, str]:
+    """Build alias→canonical map from explicit ALIAS MAP section."""
+    alias_map: dict[str, str] = {}
+    in_alias = False
+    for line in text.splitlines():
+        if "ALIAS MAP" in line:
+            in_alias = True
+            continue
+        if in_alias:
+            stripped = line.strip()
+            if not stripped:
+                continue
+            # Stop at next section marker
+            if stripped.startswith("#") or stripped.startswith("[") or stripped.startswith("%"):
+                break
+            m = ALIAS_MAP_LINE_RE.match(stripped)
+            if m:
+                canon = m.group(1)
+                for alias in m.group(2).split(","):
+                    alias_map[alias.strip()] = canon
+    return alias_map
+
+
 def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
     nodes: dict[str, Node] = {}
     edges: list[Edge] = []
     skipped_markers: list[str] = []
+
+    # Build full alias resolution from ALIAS MAP + inline grouped headers
+    alias_map = build_alias_map(text)
 
     lines = text.splitlines()
     n = len(lines)
@@ -105,6 +140,12 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
         commit_field()
         title = cur.get("title", "")
         is_placeholder = "Stub — Referenced" in title or "stub" in title.lower()
+        # Inline grouped header → aliases come straight from header
+        aliases = list(cur.get("aliases", []))
+        # Also pick up aliases from ALIAS MAP for the canonical id
+        for alias, canon in alias_map.items():
+            if canon == cur["id"] and alias not in aliases:
+                aliases.append(alias)
         nodes[cur["id"]] = Node(
             id=cur["id"],
             title=title,
@@ -117,6 +158,7 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
             not_misinterpretations=cur.get("not_misinterpretations", ""),
             content="\n".join(cur.get("content_lines", [])).strip(),
             is_placeholder=is_placeholder,
+            aliases=aliases,
         )
         cur = None
 
@@ -131,20 +173,24 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
             i += 1
             continue
 
-        # Node header
+        # Node header — supports both single id and grouped form [N067 / N068 / N069]
         m = NODE_HEADER_RE.match(stripped)
         if m:
             commit_node()
-            nid = m.group(1)
-            if not VALID_ID_RE.match(nid):
-                skipped_markers.append(nid)
+            id_field = m.group(1)
+            ids = [s.strip() for s in id_field.split("/")] if "/" in id_field else [id_field]
+            canonical = ids[0]
+            inline_aliases = ids[1:]
+            if not VALID_ID_RE.match(canonical):
+                skipped_markers.append(id_field)
                 cur = None
                 i += 1
                 continue
             cur = {
-                "id": nid,
+                "id": canonical,
                 "title": (m.group(2) or "").strip(),
                 "content_lines": [],
+                "aliases": inline_aliases,
             }
             i += 1
             continue
@@ -208,16 +254,42 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
     commit_node()
 
     if skipped_markers:
-        print(f"skipped {len(skipped_markers)} non-node markers: {', '.join(skipped_markers)}")
+        print(f"skipped {len(skipped_markers)} non-node markers: {', '.join(skipped_markers[:10])}{'…' if len(skipped_markers) > 10 else ''}")
 
-    # Synthesize stubs for edge endpoints not seen in any block.
-    # Filter edges referencing skipped markers.
-    valid_edges = []
+    # Sanitize alias_map: any id that has its own block is canonical, NOT an alias.
+    # The .txt's ALIAS MAP can be outdated (e.g., N187←also:N188 when N188 has its
+    # own block with distinct content).
+    stale_aliases = [a for a in alias_map if a in nodes]
+    for a in stale_aliases:
+        del alias_map[a]
+    # Also remove from any node's `aliases` field
+    for n in nodes.values():
+        n.aliases = [a for a in n.aliases if a not in nodes]
+    if stale_aliases:
+        print(f"removed {len(stale_aliases)} stale alias entries (have own block): {', '.join(stale_aliases[:10])}{'…' if len(stale_aliases) > 10 else ''}")
+
+    # Build full alias→canonical map combining ALIAS MAP + inline grouped headers
+    full_alias_map = dict(alias_map)
+    for canon_id, node_obj in nodes.items():
+        for alias in node_obj.aliases:
+            full_alias_map.setdefault(alias, canon_id)
+
+    # Resolve edge endpoints through alias map; drop edges with invalid IDs
+    resolved_edges = []
+    resolved_count = 0
     for e in edges:
-        if not VALID_ID_RE.match(e.source) or not VALID_ID_RE.match(e.target):
+        src = full_alias_map.get(e.source, e.source)
+        tgt = full_alias_map.get(e.target, e.target)
+        if not VALID_ID_RE.match(src) or not VALID_ID_RE.match(tgt):
             continue
-        valid_edges.append(e)
-    edges = valid_edges
+        if src != e.source or tgt != e.target:
+            resolved_count += 1
+        e.source = src
+        e.target = tgt
+        resolved_edges.append(e)
+    edges = resolved_edges
+    if resolved_count:
+        print(f"resolved {resolved_count} edges via alias map")
 
     for e in edges:
         for nid in (e.source, e.target):
@@ -236,6 +308,7 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
     reset()
     db, conn = connect()
 
+    import json as _json
     for n in nodes.values():
         conn.execute(
             """
@@ -246,7 +319,8 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
                 not_misinterpretations: $not_m,
                 content: $content,
                 z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
-                is_placeholder: $ph
+                is_placeholder: $ph,
+                aliases: $aliases
             })
             """,
             {
@@ -259,6 +333,7 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
                 "content": n.content,
                 "zs": n.z_struct, "zt": n.z_therm, "zh": n.z_hidden,
                 "lvl": n.level, "ph": n.is_placeholder,
+                "aliases": _json.dumps(n.aliases, ensure_ascii=False),
             },
         )
 
@@ -290,9 +365,17 @@ def apply_additions(conn) -> tuple[int, int]:
     n_added = 0
     e_added = 0
 
+    import json as _json
     for nspec in data.get("nodes") or []:
         nid = nspec["id"]
-        # Upsert: delete if exists, then create.
+        # Preserve existing aliases unless yaml explicitly provides them
+        existing_aliases = "[]"
+        try:
+            r = conn.execute("MATCH (n:Node {id: $id}) RETURN n.aliases", {"id": nid})
+            if r.has_next():
+                existing_aliases = r.get_next()[0] or "[]"
+        except Exception:
+            pass
         conn.execute("MATCH (n:Node {id: $id}) DETACH DELETE n", {"id": nid})
         layer_value = nspec.get("layer") or layer_of(nid).value
         params = {
@@ -311,6 +394,7 @@ def apply_additions(conn) -> tuple[int, int]:
             "zh": float(nspec.get("z_hidden", 0.0)),
             "lvl": int(nspec.get("level", -1)),
             "ph": bool(nspec.get("is_placeholder", False)),
+            "aliases": _json.dumps(nspec["aliases"], ensure_ascii=False) if "aliases" in nspec else existing_aliases,
         }
         conn.execute(
             """
@@ -320,7 +404,8 @@ def apply_additions(conn) -> tuple[int, int]:
                 summary: $summary, why_status: $why,
                 not_misinterpretations: $not_m, content: $content,
                 z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
-                is_placeholder: $ph
+                is_placeholder: $ph,
+                aliases: $aliases
             })
             """,
             params,

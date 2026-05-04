@@ -66,22 +66,47 @@ def get_node(node_id: str) -> str:
     """Fetch full node details: all fields + outgoing/incoming edges +
     linked .tex sections.
 
+    Resolves aliases automatically: if node_id is an alias of a canonical
+    node (e.g., N068 → N067), returns the canonical node with a note.
     Single call replaces several Cypher queries that would otherwise need
     Bash heredocs. Returns JSON.
     """
     conn = _conn()
+    # Try direct lookup first
     res = conn.execute(
         """
         MATCH (n:Node {id: $id})
         RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
                n.summary, n.why_status, n.not_misinterpretations, n.content,
-               n.z_struct, n.z_therm, n.z_hidden, n.level, n.is_placeholder
+               n.z_struct, n.z_therm, n.z_hidden, n.level, n.is_placeholder, n.aliases
         """,
         {"id": node_id},
     )
+    resolved_from = None
     if not res.has_next():
-        return json.dumps({"error": f"node {node_id} not found"}, ensure_ascii=False)
+        # Try alias resolution: search nodes whose aliases include node_id
+        res2 = conn.execute(
+            "MATCH (n:Node) WHERE n.aliases CONTAINS $id RETURN n.id LIMIT 1",
+            {"id": f'"{node_id}"'},
+        )
+        if not res2.has_next():
+            return json.dumps({"error": f"node {node_id} not found (no canonical, no alias match)"}, ensure_ascii=False)
+        canonical = res2.get_next()[0]
+        resolved_from = node_id
+        res = conn.execute(
+            """
+            MATCH (n:Node {id: $id})
+            RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
+                   n.summary, n.why_status, n.not_misinterpretations, n.content,
+                   n.z_struct, n.z_therm, n.z_hidden, n.level, n.is_placeholder, n.aliases
+            """,
+            {"id": canonical},
+        )
     row = res.get_next()
+    try:
+        aliases = json.loads(row[15] or "[]")
+    except Exception:
+        aliases = []
     node = {
         "id": row[0], "title": row[1], "layer": row[2], "status": row[3],
         "anchors": row[4], "a_infinity": row[5],
@@ -89,15 +114,19 @@ def get_node(node_id: str) -> str:
         "not_misinterpretations": row[8], "content": row[9],
         "z_struct": row[10], "z_therm": row[11], "z_hidden": row[12],
         "level": row[13], "is_placeholder": row[14],
+        "aliases": aliases,
     }
+    if resolved_from:
+        node["resolved_from_alias"] = resolved_from
 
+    canonical_id = node["id"]
     out_edges = []
     res = conn.execute(
         """
         MATCH (a:Node {id: $id})-[e:Edge]->(b:Node)
         RETURN b.id, e.label, e.edge_status, e.justification, e.why_forced
         """,
-        {"id": node_id},
+        {"id": canonical_id},
     )
     for r in _rows(res):
         out_edges.append({
@@ -111,7 +140,7 @@ def get_node(node_id: str) -> str:
         MATCH (a:Node)-[e:Edge]->(b:Node {id: $id})
         RETURN a.id, e.label, e.edge_status, e.justification, e.why_forced
         """,
-        {"id": node_id},
+        {"id": canonical_id},
     )
     for r in _rows(res):
         in_edges.append({
@@ -126,7 +155,7 @@ def get_node(node_id: str) -> str:
             MATCH (n:Node {id: $id})-[:DESCRIBED_BY]->(s:Section)
             RETURN s.label, s.title, s.kind
             """,
-            {"id": node_id},
+            {"id": canonical_id},
         )
         for r in _rows(res):
             sections.append({"label": r[0], "title": r[1], "kind": r[2]})

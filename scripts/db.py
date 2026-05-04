@@ -32,7 +32,8 @@ def bootstrap_schema(conn: kuzu.Connection) -> None:
             z_therm DOUBLE,
             z_hidden DOUBLE,
             level INT64,
-            is_placeholder BOOLEAN
+            is_placeholder BOOLEAN,
+            aliases STRING
         )
     """)
     conn.execute("""

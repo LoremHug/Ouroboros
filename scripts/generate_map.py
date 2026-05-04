@@ -24,10 +24,14 @@ def fetch_data() -> dict:
         RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
                n.summary, n.why_status, n.not_misinterpretations,
                n.content, n.z_struct, n.z_therm, n.z_hidden, n.level,
-               n.is_placeholder
+               n.is_placeholder, n.aliases
     """)
     while res.has_next():
         row = res.get_next()
+        try:
+            aliases = json.loads(row[15] or "[]")
+        except Exception:
+            aliases = []
         nodes.append({
             "id": row[0], "title": row[1], "layer": row[2],
             "status": row[3], "anchors": row[4], "a_infinity": row[5],
@@ -37,6 +41,7 @@ def fetch_data() -> dict:
             "content": row[9],
             "z_struct": row[10], "z_therm": row[11], "z_hidden": row[12],
             "level": row[13], "is_placeholder": row[14],
+            "aliases": aliases,
         })
 
     edges = []
@@ -422,6 +427,7 @@ function openNodePanel(d) {
       <span class="badge" style="color:#64748b">A = ${d.a_infinity ? '∞' : d.anchors}</span>
       <span class="badge" style="color:#64748b">deg ${adj.length}</span>
       ${d.is_placeholder ? '<span class="badge" style="color:#B25A00">PLACEHOLDER</span>' : ''}
+      ${d.aliases && d.aliases.length ? `<span class="badge" style="color:#64748b">aliases: ${d.aliases.join(', ')}</span>` : ''}
     </div>
     ${d.summary ? `<div class="section"><div class="section-title">Claim</div><div class="content">${escapeHtml(d.summary)}</div></div>` : ''}
     ${d.why_status ? `<div class="section"><div class="section-title">Why ${escapeHtml(d.status)}</div><div class="content">${escapeHtml(d.why_status)}</div></div>` : ''}
