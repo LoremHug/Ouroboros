@@ -1901,6 +1901,1229 @@ edges:
       that N280 relies on. Direction: cited grounds citing per framework
       convention.
 
+
+# ─── Round 6: semantic grounding of orphans ───
+
+  - source: N112
+    target: N061
+    label: observer_containment_grounds_born_rule
+    edge_status: D
+    justification: |
+      N112 grounds N061's argument: Born rule 'derived from Observer Containment Lemma combined with Z-gradient field and Gleasons theorem'.
+    why_forced: |
+      N061's claim invokes N112-content as structural input;
+      removing N112 dissolves N061's derivation chain.
+
+  - source: N370
+    target: N063
+    label: L31_Z3_grounds_KS_obstruction
+    edge_status: D
+    justification: |
+      N370 grounds N063's argument: KS theorem 'explicit qutrit presheaf construction from Z_3 = pi_1(L(3,1))'.
+    why_forced: |
+      N063's claim invokes N370-content as structural input;
+      removing N370 dissolves N063's derivation chain.
+
+  - source: N188
+    target: N070
+    label: qualia_one_process_grounds_measurement_dissolution
+    edge_status: D
+    justification: |
+      N188 grounds N070's argument: Measurement problem 'presupposes structural duality that does not exist: observer/observed not two separate entities'.
+    why_forced: |
+      N070's claim invokes N188-content as structural input;
+      removing N188 dissolves N070's derivation chain.
+
+  - source: N187
+    target: N070
+    label: hard_problem_dissolution_grounds_measurement_dissolution
+    edge_status: D
+    justification: |
+      N187 grounds N070's argument: Same dissolution mechanism as Hard Problem: both presuppose observer outside system.
+    why_forced: |
+      N070's claim invokes N187-content as structural input;
+      removing N187 dissolves N070's derivation chain.
+
+  - source: N370
+    target: N074
+    label: L31_compactness_grounds_zero_initial_Z_hidden
+    edge_status: D
+    justification: |
+      N370 grounds N074's argument: Z_hidden(0)=0 forced by compactness of L(3,1).
+    why_forced: |
+      N074's claim invokes N370-content as structural input;
+      removing N370 dissolves N074's derivation chain.
+
+  - source: N078
+    target: N085
+    label: gravity_thermo_grounds_Hubble_tension
+    edge_status: D
+    justification: |
+      N078 grounds N085's argument: Z_hidden accumulates as Landauer debt; via N078 grounding.
+    why_forced: |
+      N085's claim invokes N078-content as structural input;
+      removing N078 dissolves N085's derivation chain.
+
+  - source: N071
+    target: N085
+    label: dark_energy_grounds_Lambda_variation
+    edge_status: D
+    justification: |
+      N071 grounds N085's argument: Lambda is coordinate expression of accumulated Z_hidden (dark energy chain).
+    why_forced: |
+      N085's claim invokes N071-content as structural input;
+      removing N071 dissolves N085's derivation chain.
+
+  - source: N067
+    target: N094
+    label: spectral_dim_2_grounds_SO2_U1_at_sub_r0
+    edge_status: D
+    justification: |
+      N067 grounds N094's argument: At scale r_S < r_0, d_s = 2 implies SO(2)xU(1) symmetry with complex phases.
+    why_forced: |
+      N094's claim invokes N067-content as structural input;
+      removing N067 dissolves N094's derivation chain.
+
+  - source: N067
+    target: N097
+    label: spectral_dim_grounds_decoherence_timescale
+    edge_status: D
+    justification: |
+      N067 grounds N097's argument: Decoherence timescale derived from A_0 via cross-section using d_s(r) formula.
+    why_forced: |
+      N097's claim invokes N067-content as structural input;
+      removing N067 dissolves N097's derivation chain.
+
+  - source: N067
+    target: N098
+    label: spectral_dim_grounds_diffusion_metric
+    edge_status: D
+    justification: |
+      N067 grounds N098's argument: g^(Z) equals Riemannian at r >> r_0 and quantum random-walk at r << r_0 — uses N067 d_s(r).
+    why_forced: |
+      N098's claim invokes N067-content as structural input;
+      removing N067 dissolves N098's derivation chain.
+
+  - source: N370
+    target: N103
+    label: L31_Z3_spectrum_grounds_complex_hilbert
+    edge_status: D
+    justification: |
+      N370 grounds N103's argument: Complex Hilbert forced because Z_3 has no irreducible real representation of degree 3.
+    why_forced: |
+      N103's claim invokes N370-content as structural input;
+      removing N370 dissolves N103's derivation chain.
+
+  - source: N112
+    target: N117
+    label: observer_containment_grounds_BPI_definition
+    edge_status: D
+    justification: |
+      N112 grounds N117's argument: BPI is sub-process measuring Z; Z is minimal condition for change.
+    why_forced: |
+      N117's claim invokes N112-content as structural input;
+      removing N112 dissolves N117's derivation chain.
+
+  - source: N370
+    target: N119
+    label: L31_three_sectors_grounds_matter_decomposition
+    edge_status: D
+    justification: |
+      N370 grounds N119's argument: matter field decomposes into exactly three Z_3-sectors of L(3,1).
+    why_forced: |
+      N119's claim invokes N370-content as structural input;
+      removing N370 dissolves N119's derivation chain.
+
+  - source: N_ZGaugeDecomposition
+    target: N119
+    label: gauge_decomposition_grounds_three_sectors
+    edge_status: D
+    justification: |
+      N_ZGaugeDecomposition grounds N119's argument: three sectors carry identical gauge quantum numbers via covering action.
+    why_forced: |
+      N119's claim invokes N_ZGaugeDecomposition-content as structural input;
+      removing N_ZGaugeDecomposition dissolves N119's derivation chain.
+
+  - source: N370
+    target: N123
+    label: L31_pi1_grounds_generation_problem
+    edge_status: D
+    justification: |
+      N370 grounds N123's argument: Generation Problem resolved: count forced by pi_1(L(3,1)) = Z_3.
+    why_forced: |
+      N123's claim invokes N370-content as structural input;
+      removing N370 dissolves N123's derivation chain.
+
+  - source: N129
+    target: N133
+    label: connes_algebra_grounds_one_SM_generation
+    edge_status: D
+    justification: |
+      N129 grounds N133's argument: One SM generation from A_F representation on H_F (N129 supplies algebra).
+    why_forced: |
+      N133's claim invokes N129-content as structural input;
+      removing N129 dissolves N133's derivation chain.
+
+  - source: N370
+    target: N133
+    label: L31_topology_grounds_one_SM_generation
+    edge_status: D
+    justification: |
+      N370 grounds N133's argument: fermions emerge structurally from L(3,1) topology.
+    why_forced: |
+      N133's claim invokes N370-content as structural input;
+      removing N370 dissolves N133's derivation chain.
+
+  - source: N138
+    target: N135
+    label: 4D_completion_grounds_higgs_mass
+    edge_status: D
+    justification: |
+      N138 grounds N135's argument: m_H = v sqrt(8/pi^3) from quartic coupling 4/pi^3 on M_4 = L(3,1)xS^1.
+    why_forced: |
+      N135's claim invokes N138-content as structural input;
+      removing N138 dissolves N135's derivation chain.
+
+  - source: N207
+    target: N135
+    label: higgs_computation_grounds_higgs_mass_value
+    edge_status: D
+    justification: |
+      N207 grounds N135's argument: lambda_H = 4/pi^3 derived geometrically via Peter-Weyl in N207.
+    why_forced: |
+      N135's claim invokes N207-content as structural input;
+      removing N207 dissolves N135's derivation chain.
+
+  - source: N209
+    target: N135
+    label: spectral_action_BC_grounds_higgs_mass
+    edge_status: D
+    justification: |
+      N209 grounds N135's argument: lambda_H from spectral action on L(3,1)xF via Chamseddine-Connes.
+    why_forced: |
+      N135's claim invokes N209-content as structural input;
+      removing N209 dissolves N135's derivation chain.
+
+  - source: N370
+    target: N138
+    label: L31_grounds_4D_completion
+    edge_status: D
+    justification: |
+      N370 grounds N138's argument: 4D completion M_4 = L(3,1) x S^1_beta integrates spatial 3-manifold.
+    why_forced: |
+      N138's claim invokes N370-content as structural input;
+      removing N370 dissolves N138's derivation chain.
+
+  - source: N129
+    target: N138
+    label: connes_algebra_grounds_4D_gauge_constants
+    edge_status: D
+    justification: |
+      N129 grounds N138's argument: Spectral Action on 4D produces YM kinetic terms via A_F structure.
+    why_forced: |
+      N138's claim invokes N129-content as structural input;
+      removing N129 dissolves N138's derivation chain.
+
+  - source: N138
+    target: N207
+    label: 4D_completion_grounds_higgs_computation
+    edge_status: D
+    justification: |
+      N138 grounds N207's argument: Higgs quartic via Peter-Weyl on M_4 = L(3,1) x S^1.
+    why_forced: |
+      N207's claim invokes N138-content as structural input;
+      removing N138 dissolves N207's derivation chain.
+
+  - source: N129
+    target: N207
+    label: connes_algebra_grounds_higgs_computation
+    edge_status: D
+    justification: |
+      N129 grounds N207's argument: lambda_PW(j=1/2) = 4/3 from A_F representation theory.
+    why_forced: |
+      N207's claim invokes N129-content as structural input;
+      removing N129 dissolves N207's derivation chain.
+
+  - source: N138
+    target: N209
+    label: 4D_completion_grounds_spectral_action_BC
+    edge_status: D
+    justification: |
+      N138 grounds N209's argument: spectral action on L(3,1) x F gives Higgs coupling.
+    why_forced: |
+      N209's claim invokes N138-content as structural input;
+      removing N138 dissolves N209's derivation chain.
+
+  - source: N129
+    target: N209
+    label: connes_algebra_grounds_spectral_action_BC
+    edge_status: D
+    justification: |
+      N129 grounds N209's argument: CC formulas on A_F = ℂ⊕ℍ⊕M_3(ℂ).
+    why_forced: |
+      N209's claim invokes N129-content as structural input;
+      removing N129 dissolves N209's derivation chain.
+
+  - source: N145
+    target: N140
+    label: koide_grounds_mass_ordering
+    edge_status: D
+    justification: |
+      N145 grounds N140's argument: mass ordering m_0 < m_1 < m_2 strict corollary of Koide.
+    why_forced: |
+      N140's claim invokes N145-content as structural input;
+      removing N145 dissolves N140's derivation chain.
+
+  - source: N370
+    target: N140
+    label: L31_winding_grounds_mass_phase
+    edge_status: D
+    justification: |
+      N370 grounds N140's argument: phase Omega fixed by unique spin structure of L(3,1).
+    why_forced: |
+      N140's claim invokes N370-content as structural input;
+      removing N370 dissolves N140's derivation chain.
+
+  - source: N_Invariants
+    target: N145
+    label: I_Sym_grounds_Koide_K_2_3
+    edge_status: D
+    justification: |
+      N_Invariants grounds N145's argument: I_Sym (vertex-transitivity) is one of three forcing inputs for K=2/3.
+    why_forced: |
+      N145's claim invokes N_Invariants-content as structural input;
+      removing N_Invariants dissolves N145's derivation chain.
+
+  - source: N112
+    target: N145
+    label: observer_containment_grounds_koide_via_Z_hidden
+    edge_status: D
+    justification: |
+      N112 grounds N145's argument: Z_hidden > 0 (Observer Containment) is one of three forcing inputs for r=sqrt(2).
+    why_forced: |
+      N145's claim invokes N112-content as structural input;
+      removing N112 dissolves N145's derivation chain.
+
+  - source: N165
+    target: N145
+    label: ergodicity_grounds_koide_r_sqrt2
+    edge_status: D
+    justification: |
+      N165 grounds N145's argument: r_Koide = sqrt(2) demonstrated via ergodicity theorem (Gibbs equipartition).
+    why_forced: |
+      N145's claim invokes N165-content as structural input;
+      removing N165 dissolves N145's derivation chain.
+
+  - source: N063
+    target: N157
+    label: kochen_specker_grounds_tsirelson_bridge
+    edge_status: D
+    justification: |
+      N063 grounds N157's argument: KS theorem (qutrit Hilbert space dim 3) bridges to lepton mass amplitudes.
+    why_forced: |
+      N157's claim invokes N063-content as structural input;
+      removing N063 dissolves N157's derivation chain.
+
+  - source: N145
+    target: N157
+    label: koide_grounds_z_lep_amplitudes
+    edge_status: D
+    justification: |
+      N145 grounds N157's argument: normalized Z_3-amplitude vector z_lep from Koide.
+    why_forced: |
+      N157's claim invokes N145-content as structural input;
+      removing N145 dissolves N157's derivation chain.
+
+  - source: N145
+    target: N161
+    label: koide_grounds_mtau_prediction
+    edge_status: D
+    justification: |
+      N145 grounds N161's argument: tau mass prediction uses K=2/3 with measured m_e and m_mu.
+    why_forced: |
+      N161's claim invokes N145-content as structural input;
+      removing N145 dissolves N161's derivation chain.
+
+  - source: N_Bar
+    target: N161
+    label: bar_dirac_spectrum_grounds_mtau_prediction
+    edge_status: D
+    justification: |
+      N_Bar grounds N161's argument: Bar Dirac spectrum + Koide gives complete numerical derivation.
+    why_forced: |
+      N161's claim invokes N_Bar-content as structural input;
+      removing N_Bar dissolves N161's derivation chain.
+
+  - source: N370
+    target: N168
+    label: L31_grounds_dirac_operator
+    edge_status: D
+    justification: |
+      N370 grounds N168's argument: Dirac operator on L(3,1) isomorphic to Reality Protocol transition operator.
+    why_forced: |
+      N168's claim invokes N370-content as structural input;
+      removing N370 dissolves N168's derivation chain.
+
+  - source: N078
+    target: N171
+    label: gravity_thermo_grounds_QCD_scale
+    edge_status: D
+    justification: |
+      N078 grounds N171's argument: mass scale A structurally identified as Lambda_QCD via string-tension.
+    why_forced: |
+      N171's claim invokes N078-content as structural input;
+      removing N078 dissolves N171's derivation chain.
+
+  - source: N138
+    target: N171
+    label: 4D_completion_grounds_QCD_scale
+    edge_status: D
+    justification: |
+      N138 grounds N171's argument: QCD scale linked to mass relation Y^2(S) = 4g^2 on M_4.
+    why_forced: |
+      N171's claim invokes N138-content as structural input;
+      removing N138 dissolves N171's derivation chain.
+
+  - source: N370
+    target: N175
+    label: L31_eta_invariant_grounds_CKM
+    edge_status: D
+    justification: |
+      N370 grounds N175's argument: phase arg(b) decomposes into eta(L(3,1)) + 2pi*CS(m=2).
+    why_forced: |
+      N175's claim invokes N370-content as structural input;
+      removing N370 dissolves N175's derivation chain.
+
+  - source: N370
+    target: N178
+    label: L31_geometric_resolution_grounds_strong_CP
+    edge_status: D
+    justification: |
+      N370 grounds N178's argument: theta_QCD = 0 from L(3,1) Z_3 spin structure (geometric resolution).
+    why_forced: |
+      N178's claim invokes N370-content as structural input;
+      removing N370 dissolves N178's derivation chain.
+
+  - source: N350
+    target: N178
+    label: frobenius_schur_grounds_strong_CP
+    edge_status: D
+    justification: |
+      N350 grounds N178's argument: KO-dimension 6 (N350) supports Strong CP geometric argument.
+    why_forced: |
+      N178's claim invokes N350-content as structural input;
+      removing N350 dissolves N178's derivation chain.
+
+  - source: DEF
+    target: N182
+    label: A0_argmin_S_grounds_path_integral
+    edge_status: D
+    justification: |
+      DEF grounds N182's argument: A_0 path of least resistance and Feynman path integral isomorphic.
+    why_forced: |
+      N182's claim invokes DEF-content as structural input;
+      removing DEF dissolves N182's derivation chain.
+
+  - source: N029
+    target: N189
+    label: arrhenius_grounds_ebbinghaus_decay
+    edge_status: D
+    justification: |
+      N029 grounds N189's argument: Ebbinghaus R(t)=exp(-t/tau) from A_0 minimisation of Z_therm.
+    why_forced: |
+      N189's claim invokes N029-content as structural input;
+      removing N029 dissolves N189's derivation chain.
+
+  - source: N363
+    target: N189
+    label: zipf_distributed_tau_grounds_ebbinghaus_fractal
+    edge_status: D
+    justification: |
+      N363 grounds N189's argument: Zipf-distributed tau spectrum gives fractal dimension.
+    why_forced: |
+      N189's claim invokes N363-content as structural input;
+      removing N363 dissolves N189's derivation chain.
+
+  - source: N067
+    target: N194
+    label: spectral_dim_4_grounds_classical_limit
+    edge_status: D
+    justification: |
+      N067 grounds N194's argument: classical limit at r >> r_0: d_s -> 4.
+    why_forced: |
+      N194's claim invokes N067-content as structural input;
+      removing N067 dissolves N194's derivation chain.
+
+  - source: N085
+    target: N201
+    label: G_variation_grounds_early_universe_G
+    edge_status: D
+    justification: |
+      N085 grounds N201's argument: larger early-universe G analyzed structurally via N085.
+    why_forced: |
+      N201's claim invokes N085-content as structural input;
+      removing N085 dissolves N201's derivation chain.
+
+  - source: N078
+    target: N206
+    label: gravity_thermo_grounds_QG_global_symmetries
+    edge_status: D
+    justification: |
+      N078 grounds N206's argument: global symmetries inexact in UV-complete QG follows from gravity-as-thermodynamics.
+    why_forced: |
+      N206's claim invokes N078-content as structural input;
+      removing N078 dissolves N206's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N206
+    label: inversive_grounds_QG_no_alternatives
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N206's argument: global symmetries argument upgraded via inversive theory.
+    why_forced: |
+      N206's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N206's derivation chain.
+
+  - source: N370
+    target: N218
+    label: L31_covering_grounds_generation_isomorphism
+    edge_status: D
+    justification: |
+      N370 grounds N218's argument: isomorphism between leaves of S^3 -> L(3,1) and SM generations.
+    why_forced: |
+      N218's claim invokes N370-content as structural input;
+      removing N370 dissolves N218's derivation chain.
+
+  - source: N123
+    target: N218
+    label: generation_problem_grounds_iso_theorem
+    edge_status: D
+    justification: |
+      N123 grounds N218's argument: three sectors map canonically to three SM generations.
+    why_forced: |
+      N218's claim invokes N123-content as structural input;
+      removing N123 dissolves N218's derivation chain.
+
+  - source: N370
+    target: N231
+    label: L31_DF_block_grounds_proton_stability
+    edge_status: D
+    justification: |
+      N370 grounds N231's argument: proton stability from D_F block-diagonal structure on L(3,1).
+    why_forced: |
+      N231's claim invokes N370-content as structural input;
+      removing N370 dissolves N231's derivation chain.
+
+  - source: N129
+    target: N231
+    label: connes_algebra_grounds_proton_stability_via_DF
+    edge_status: D
+    justification: |
+      N129 grounds N231's argument: finite spectral triple block-diagonal D_F.
+    why_forced: |
+      N231's claim invokes N129-content as structural input;
+      removing N129 dissolves N231's derivation chain.
+
+  - source: N370
+    target: N232
+    label: L31_eta_grounds_arg_b
+    edge_status: D
+    justification: |
+      N370 grounds N232's argument: Brannen phase arg(b) IS eta(L(3,1)) = -2/9.
+    why_forced: |
+      N232's claim invokes N370-content as structural input;
+      removing N370 dissolves N232's derivation chain.
+
+  - source: N145
+    target: N232
+    label: koide_grounds_brannen_phase_fit
+    edge_status: D
+    justification: |
+      N145 grounds N232's argument: Brannen 2006 fit relates to Koide circulant phase.
+    why_forced: |
+      N232's claim invokes N145-content as structural input;
+      removing N145 dissolves N232's derivation chain.
+
+  - source: N129
+    target: N235
+    label: connes_algebra_grounds_krajewski_elimination
+    edge_status: D
+    justification: |
+      N129 grounds N235's argument: Krajewski + Wedderburn elimination uniquely selects A_F.
+    why_forced: |
+      N235's claim invokes N129-content as structural input;
+      removing N129 dissolves N235's derivation chain.
+
+  - source: N370
+    target: N235
+    label: L31_pi1_grounds_triality_unification
+    edge_status: D
+    justification: |
+      N370 grounds N235's argument: pi_1(L(3,1)) = Z_3 ≅ Center(SU(3)) drives triality.
+    why_forced: |
+      N235's claim invokes N370-content as structural input;
+      removing N370 dissolves N235's derivation chain.
+
+  - source: N370
+    target: N243
+    label: L31_eta_grounds_cabibbo_angle
+    edge_status: D
+    justification: |
+      N370 grounds N243's argument: sin(theta_Cabibbo) = |eta(L(3,1))| = 2/9.
+    why_forced: |
+      N243's claim invokes N370-content as structural input;
+      removing N370 dissolves N243's derivation chain.
+
+  - source: N370
+    target: N245
+    label: L31_grounds_chern_simons_invariants
+    edge_status: D
+    justification: |
+      N370 grounds N245's argument: CS(m=2) = 1/3 = lk(L(3,1)) — invariants of L(3,1).
+    why_forced: |
+      N245's claim invokes N370-content as structural input;
+      removing N370 dissolves N245's derivation chain.
+
+  - source: N129
+    target: N250
+    label: connes_algebra_grounds_RH_neutrino
+    edge_status: D
+    justification: |
+      N129 grounds N250's argument: one SM generation 16 = 15 + 1 from A_F representation.
+    why_forced: |
+      N250's claim invokes N129-content as structural input;
+      removing N129 dissolves N250's derivation chain.
+
+  - source: N_WylerStepG
+    target: N252
+    label: wyler_step_G_grounds_137_036
+    edge_status: D
+    justification: |
+      N_WylerStepG grounds N252's argument: alpha = 1/137.036 from Z_3-reduction of Wyler boundary.
+    why_forced: |
+      N252's claim invokes N_WylerStepG-content as structural input;
+      removing N_WylerStepG dissolves N252's derivation chain.
+
+  - source: N370
+    target: N252
+    label: L31_grounds_wyler_formula
+    edge_status: D
+    justification: |
+      N370 grounds N252's argument: L(3,1) is Z_3-reduction of Wyler conformal boundary.
+    why_forced: |
+      N252's claim invokes N370-content as structural input;
+      removing N370 dissolves N252's derivation chain.
+
+  - source: DEF
+    target: N258
+    label: A0_method_grounds_method_logic_chain
+    edge_status: D
+    justification: |
+      DEF grounds N258's argument: A_0 method = eliminate assumptions -> structural remainder.
+    why_forced: |
+      N258's claim invokes DEF-content as structural input;
+      removing DEF dissolves N258's derivation chain.
+
+  - source: N_Logic
+    target: N258
+    label: logic_grounds_method_logic_chain
+    edge_status: D
+    justification: |
+      N_Logic grounds N258's argument: method-and-logic chain ties A_0 method to logical structure.
+    why_forced: |
+      N258's claim invokes N_Logic-content as structural input;
+      removing N_Logic dissolves N258's derivation chain.
+
+  - source: N_OntologyGate
+    target: N258
+    label: gate_grounds_method_logic_chain
+    edge_status: D
+    justification: |
+      N_OntologyGate grounds N258's argument: method applies ontology elimination.
+    why_forced: |
+      N258's claim invokes N_OntologyGate-content as structural input;
+      removing N_OntologyGate dissolves N258's derivation chain.
+
+  - source: N370
+    target: N259
+    label: L31_chiral_grounds_classical_paradoxes
+    edge_status: D
+    justification: |
+      N370 grounds N259's argument: matter/antimatter asymmetry: L(3,1) natively chiral, no symmetric predecessor.
+    why_forced: |
+      N259's claim invokes N370-content as structural input;
+      removing N370 dissolves N259's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N259
+    label: inversive_grounds_paradox_dissolution
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N259's argument: classical paradoxes dissolve via inversive principle.
+    why_forced: |
+      N259's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N259's derivation chain.
+
+  - source: N370
+    target: N265
+    label: L31_S3_covering_grounds_Z2_breaking
+    edge_status: D
+    justification: |
+      N370 grounds N265's argument: S^3 -> Z_2 symmetry breaking sub-r_0 from covering structure.
+    why_forced: |
+      N265's claim invokes N370-content as structural input;
+      removing N370 dissolves N265's derivation chain.
+
+  - source: N067
+    target: N265
+    label: spectral_dim_grounds_sub_r0_stochasticity
+    edge_status: D
+    justification: |
+      N067 grounds N265's argument: d_s(r) at r << r_0 gives stochastic regime.
+    why_forced: |
+      N265's claim invokes N067-content as structural input;
+      removing N067 dissolves N265's derivation chain.
+
+  - source: N370
+    target: N281
+    label: L31_eta_grounds_brannen_neutrino_phase
+    edge_status: D
+    justification: |
+      N370 grounds N281's argument: theta_Brannen = 132.7324° geometrically identical to delta_L31.
+    why_forced: |
+      N281's claim invokes N370-content as structural input;
+      removing N370 dissolves N281's derivation chain.
+
+  - source: N145
+    target: N281
+    label: koide_grounds_brannen_geometric_phase
+    edge_status: D
+    justification: |
+      N145 grounds N281's argument: Koide phase identification ties to neutrino phase.
+    why_forced: |
+      N281's claim invokes N145-content as structural input;
+      removing N145 dissolves N281's derivation chain.
+
+  - source: N145
+    target: N289
+    label: koide_grounds_top_quark_via_lepton_scale
+    edge_status: D
+    justification: |
+      N145 grounds N289's argument: top quark mass via lepton scale m_0^lep = m_proton/3.
+    why_forced: |
+      N289's claim invokes N145-content as structural input;
+      removing N145 dissolves N289's derivation chain.
+
+  - source: N138
+    target: N289
+    label: 4D_completion_grounds_top_quark
+    edge_status: D
+    justification: |
+      N138 grounds N289's argument: CCM mass relation Y^2(S) = 4g^2 at unification scale.
+    why_forced: |
+      N289's claim invokes N138-content as structural input;
+      removing N138 dissolves N289's derivation chain.
+
+  - source: N370
+    target: N293
+    label: L31_eta_grounds_neutrino_delta_m_squared
+    edge_status: D
+    justification: |
+      N370 grounds N293's argument: Delta m^2_21 = 7 |Q_d|^2 |eta|^2 / q^4 from L(3,1) invariants.
+    why_forced: |
+      N293's claim invokes N370-content as structural input;
+      removing N370 dissolves N293's derivation chain.
+
+  - source: N145
+    target: N293
+    label: koide_grounds_neutrino_mass_pattern
+    edge_status: D
+    justification: |
+      N145 grounds N293's argument: neutrino sector ties to lepton Koide structure.
+    why_forced: |
+      N293's claim invokes N145-content as structural input;
+      removing N145 dissolves N293's derivation chain.
+
+  - source: N370
+    target: N294
+    label: L31_eta_grounds_theta_13
+    edge_status: D
+    justification: |
+      N370 grounds N294's argument: sin(theta_13) = 4/27 from L(3,1) invariants.
+    why_forced: |
+      N294's claim invokes N370-content as structural input;
+      removing N370 dissolves N294's derivation chain.
+
+  - source: N_Bar
+    target: N294
+    label: bar_dirac_grounds_bismut_freed_correction
+    edge_status: D
+    justification: |
+      N_Bar grounds N294's argument: Bismut-Freed theorem gives imaginary effective contribution.
+    why_forced: |
+      N294's claim invokes N_Bar-content as structural input;
+      removing N_Bar dissolves N294's derivation chain.
+
+  - source: N370
+    target: N295
+    label: L31_grounds_cos2theta_pattern
+    edge_status: D
+    justification: |
+      N370 grounds N295's argument: pattern cos^2(theta_f) = 3/8 + n_f/12 from L(3,1) structure.
+    why_forced: |
+      N295's claim invokes N370-content as structural input;
+      removing N370 dissolves N295's derivation chain.
+
+  - source: N138
+    target: N295
+    label: 4D_completion_grounds_weinberg_3_8
+    edge_status: D
+    justification: |
+      N138 grounds N295's argument: Weinberg sin^2(theta_W) = 3/8 from algebra A_F.
+    why_forced: |
+      N295's claim invokes N138-content as structural input;
+      removing N138 dissolves N295's derivation chain.
+
+  - source: N245
+    target: N323
+    label: CS_invariant_grounds_topological_gaps
+    edge_status: D
+    justification: |
+      N245 grounds N323's argument: lepton-quark phase gap = CS(m=2) = 1/3.
+    why_forced: |
+      N323's claim invokes N245-content as structural input;
+      removing N245 dissolves N323's derivation chain.
+
+  - source: N370
+    target: N323
+    label: L31_grounds_topological_gaps
+    edge_status: D
+    justification: |
+      N370 grounds N323's argument: topological gaps in D_F from L(3,1) structure.
+    why_forced: |
+      N323's claim invokes N370-content as structural input;
+      removing N370 dissolves N323's derivation chain.
+
+  - source: DEF
+    target: N334
+    label: A0_argmin_grounds_nash_equilibrium
+    edge_status: D
+    justification: |
+      DEF grounds N334's argument: Nash equilibrium = A_0 local Z minimisation (Z_i = -u_i).
+    why_forced: |
+      N334's claim invokes DEF-content as structural input;
+      removing DEF dissolves N334's derivation chain.
+
+  - source: N357
+    target: N358
+    label: CKM_phase_grounds_quark_mass_ratios
+    edge_status: D
+    justification: |
+      N357 grounds N358's argument: quark ratios from D_F^quark with delta_q = 126.3662°.
+    why_forced: |
+      N358's claim invokes N357-content as structural input;
+      removing N357 dissolves N358's derivation chain.
+
+  - source: DEF
+    target: N361
+    label: A0_argmin_Z_grounds_jarzynski
+    edge_status: D
+    justification: |
+      DEF grounds N361's argument: Jarzynski equality is A_0 in non-equilibrium statistical mechanics.
+    why_forced: |
+      N361's claim invokes DEF-content as structural input;
+      removing DEF dissolves N361's derivation chain.
+
+  - source: N078
+    target: N361
+    label: gravity_thermo_grounds_jarzynski_via_Z_balance
+    edge_status: D
+    justification: |
+      N078 grounds N361's argument: Jarzynski = Z-balance external confirmation of Landauer/Z=-S.
+    why_forced: |
+      N361's claim invokes N078-content as structural input;
+      removing N078 dissolves N361's derivation chain.
+
+  - source: N_Shannon
+    target: N003
+    label: shannon_grounds_kolmogorov_identity
+    edge_status: D
+    justification: |
+      N_Shannon grounds N003's argument: Z_struct = K(x) via Levin Coding Theorem and rate-distortion.
+    why_forced: |
+      N003's claim invokes N_Shannon-content as structural input;
+      removing N_Shannon dissolves N003's derivation chain.
+
+  - source: DEF
+    target: N004
+    label: A0_natural_units_reduce_to_Z_relations
+    edge_status: D
+    justification: |
+      DEF grounds N004's argument: in natural units every formula reduces to Z-value relations.
+    why_forced: |
+      N004's claim invokes DEF-content as structural input;
+      removing DEF dissolves N004's derivation chain.
+
+  - source: DEF
+    target: N005
+    label: A0_argmin_Z_grounds_min_not_max_question
+    edge_status: D
+    justification: |
+      DEF grounds N005's argument: why minimise Z rather than maximise — argmin Z IS A_0 by definition.
+    why_forced: |
+      N005's claim invokes DEF-content as structural input;
+      removing DEF dissolves N005's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N005
+    label: inversive_grounds_no_alternative_to_argmin
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N005's argument: alternative requires non-A_0 stable structure — inversive forecloses.
+    why_forced: |
+      N005's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N005's derivation chain.
+
+  - source: N_Invariants
+    target: N006
+    label: I_Null_grounds_time_direction
+    edge_status: D
+    justification: |
+      N_Invariants grounds N006's argument: time direction from I_Null (Z_therm strict monotone increase).
+    why_forced: |
+      N006's claim invokes N_Invariants-content as structural input;
+      removing N_Invariants dissolves N006's derivation chain.
+
+  - source: N078
+    target: N006
+    label: gravity_thermo_grounds_arrow_of_time
+    edge_status: D
+    justification: |
+      N078 grounds N006's argument: thermodynamic time direction from Z_therm = -kT log of Z.
+    why_forced: |
+      N006's claim invokes N078-content as structural input;
+      removing N078 dissolves N006's derivation chain.
+
+  - source: DEF
+    target: N007
+    label: A0_grounds_three_wheeler_identities
+    edge_status: D
+    justification: |
+      DEF grounds N007's argument: Three Wheeler identities (Surprisal, Landauer, Kolmogorov) consolidated.
+    why_forced: |
+      N007's claim invokes DEF-content as structural input;
+      removing DEF dissolves N007's derivation chain.
+
+  - source: N_Triangulation
+    target: N007
+    label: triangulation_grounds_self_referential_closure
+    edge_status: D
+    justification: |
+      N_Triangulation grounds N007's argument: A_0 as triangulation of own gradients — direct manifestation.
+    why_forced: |
+      N007's claim invokes N_Triangulation-content as structural input;
+      removing N_Triangulation dissolves N007's derivation chain.
+
+  - source: N_Triangulation
+    target: N009
+    label: triangulation_grounds_three_gradients_definition
+    edge_status: D
+    justification: |
+      N_Triangulation grounds N009's argument: three gradients U, R, T defined purely in informational terms.
+    why_forced: |
+      N009's claim invokes N_Triangulation-content as structural input;
+      removing N_Triangulation dissolves N009's derivation chain.
+
+  - source: DEF
+    target: N010
+    label: A0_grounds_conformal_invariance
+    edge_status: D
+    justification: |
+      DEF grounds N010's argument: A_0 symmetry larger than conformal — A_0 conformal invariance argument.
+    why_forced: |
+      N010's claim invokes DEF-content as structural input;
+      removing DEF dissolves N010's derivation chain.
+
+  - source: N_Invariants
+    target: N011
+    label: I_Bound_from_lyapunov_stability
+    edge_status: D
+    justification: |
+      N_Invariants grounds N011's argument: I_Bound follows from Lyapunov stability for dissipative systems.
+    why_forced: |
+      N011's claim invokes N_Invariants-content as structural input;
+      removing N_Invariants dissolves N011's derivation chain.
+
+  - source: N_NoSeparatePieces
+    target: N012
+    label: no_separate_pieces_grounds_cross_domain
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces grounds N012's argument: cross-domain correspondences ARE coordinate expressions of one structure.
+    why_forced: |
+      N012's claim invokes N_NoSeparatePieces-content as structural input;
+      removing N_NoSeparatePieces dissolves N012's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N012
+    label: inversive_grounds_cross_domain_unity
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N012's argument: isomorphism = no alternatives at structural level.
+    why_forced: |
+      N012's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N012's derivation chain.
+
+  - source: N_NoSeparatePieces
+    target: N013
+    label: no_separate_pieces_grounds_coordinate_freedom_application
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces grounds N013's argument: A_0 applicable to any domain by coordinate identification.
+    why_forced: |
+      N013's claim invokes N_NoSeparatePieces-content as structural input;
+      removing N_NoSeparatePieces dissolves N013's derivation chain.
+
+  - source: N_OntologyGate
+    target: N014
+    label: ontology_gate_grounds_randomness_symptom_diagnosis
+    edge_status: D
+    justification: |
+      N_OntologyGate grounds N014's argument: attributing ontological randomness is gate-targetable error.
+    why_forced: |
+      N014's claim invokes N_OntologyGate-content as structural input;
+      removing N_OntologyGate dissolves N014's derivation chain.
+
+  - source: N_EpistemicTraps
+    target: N014
+    label: traps_catalogue_grounds_randomness_misreading
+    edge_status: D
+    justification: |
+      N_EpistemicTraps grounds N014's argument: topological reality vs ontological randomness — Trap 3 pattern.
+    why_forced: |
+      N014's claim invokes N_EpistemicTraps-content as structural input;
+      removing N_EpistemicTraps dissolves N014's derivation chain.
+
+  - source: N112
+    target: N015
+    label: observer_containment_grounds_QM_status
+    edge_status: D
+    justification: |
+      N112 grounds N015's argument: QM status from Observer Containment Lemma.
+    why_forced: |
+      N015's claim invokes N112-content as structural input;
+      removing N112 dissolves N015's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N015
+    label: inversive_grounds_QM_coordinate_status
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N015's argument: QM as coordinate expression — no alternative status.
+    why_forced: |
+      N015's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N015's derivation chain.
+
+  - source: DEF
+    target: N017
+    label: A0_grounds_transition_topology_protocol
+    edge_status: D
+    justification: |
+      DEF grounds N017's argument: A_0 explicit operational protocol across domains.
+    why_forced: |
+      N017's claim invokes DEF-content as structural input;
+      removing DEF dissolves N017's derivation chain.
+
+  - source: DEF
+    target: N022
+    label: A0_grounds_null_result_meaning
+    edge_status: D
+    justification: |
+      DEF grounds N022's argument: null result = framework structural prediction.
+    why_forced: |
+      N022's claim invokes DEF-content as structural input;
+      removing DEF dissolves N022's derivation chain.
+
+  - source: N_OntologyGate
+    target: N024
+    label: gate_grounds_classical_eval_critique
+    edge_status: D
+    justification: |
+      N_OntologyGate grounds N024's argument: classical evaluation criteria targetable by ontology gate.
+    why_forced: |
+      N024's claim invokes N_OntologyGate-content as structural input;
+      removing N_OntologyGate dissolves N024's derivation chain.
+
+  - source: N_NoSeparatePieces
+    target: N025
+    label: no_separate_pieces_grounds_frame_shift
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces grounds N025's argument: frame shift to topology — evidence base unification.
+    why_forced: |
+      N025's claim invokes N_NoSeparatePieces-content as structural input;
+      removing N_NoSeparatePieces dissolves N025's derivation chain.
+
+  - source: N188
+    target: N026
+    label: qualia_one_process_grounds_LM_human_unity
+    edge_status: D
+    justification: |
+      N188 grounds N026's argument: LM, human, response = one process in three coordinates.
+    why_forced: |
+      N026's claim invokes N188-content as structural input;
+      removing N188 dissolves N026's derivation chain.
+
+  - source: N_NoSeparatePieces
+    target: N026
+    label: no_separate_pieces_grounds_LM_human_unity
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces grounds N026's argument: three-objects framing is artifact.
+    why_forced: |
+      N026's claim invokes N_NoSeparatePieces-content as structural input;
+      removing N_NoSeparatePieces dissolves N026's derivation chain.
+
+  - source: DEF
+    target: N027
+    label: A0_least_path_grounds_fermat
+    edge_status: D
+    justification: |
+      DEF grounds N027's argument: Fermat principle = travel-time minimum = A_0 in optical substrate.
+    why_forced: |
+      N027's claim invokes DEF-content as structural input;
+      removing DEF dissolves N027's derivation chain.
+
+  - source: N_PhiAttractor
+    target: N031
+    label: phi_attractor_grounds_acoustic_harmony
+    edge_status: D
+    justification: |
+      N_PhiAttractor grounds N031's argument: acoustic harmony as phi-attractor in continuous-angular substrate (Berezovsky).
+    why_forced: |
+      N031's claim invokes N_PhiAttractor-content as structural input;
+      removing N_PhiAttractor dissolves N031's derivation chain.
+
+  - source: N_PhiAttractor
+    target: N045
+    label: phi_attractor_grounds_golden_ratio_definition
+    edge_status: D
+    justification: |
+      N_PhiAttractor grounds N045's argument: golden ratio = unique attractor of A_0 over continuous variable with min-memory.
+    why_forced: |
+      N045's claim invokes N_PhiAttractor-content as structural input;
+      removing N_PhiAttractor dissolves N045's derivation chain.
+
+  - source: N_Invariants
+    target: N051
+    label: I_Sym_grounds_no_preferred_state
+    edge_status: D
+    justification: |
+      N_Invariants grounds N051's argument: no preferred state from I_Sym (vertex-transitivity).
+    why_forced: |
+      N051's claim invokes N_Invariants-content as structural input;
+      removing N_Invariants dissolves N051's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N053
+    label: inversive_grounds_falsification_method
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N053's argument: cross-domain isomorphisms found in adversarial falsification.
+    why_forced: |
+      N053's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N053's derivation chain.
+
+  - source: N_EpistemicTraps
+    target: N054
+    label: traps_grounds_no_disguised_type2
+    edge_status: D
+    justification: |
+      N_EpistemicTraps grounds N054's argument: no item Type 2 disguised as Type 1 — RP gate exhausted.
+    why_forced: |
+      N054's claim invokes N_EpistemicTraps-content as structural input;
+      removing N_EpistemicTraps dissolves N054's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N054
+    label: inversive_grounds_type2_completeness
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N054's argument: meta-level no-disguise claim follows from inversive completeness.
+    why_forced: |
+      N054's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N054's derivation chain.
+
+  - source: N_PhiAttractor
+    target: N056
+    label: phi_attractor_grounds_fibonacci_anchor_chain
+    edge_status: D
+    justification: |
+      N_PhiAttractor grounds N056's argument: anchor counts converging — Fibonacci-style structural feature.
+    why_forced: |
+      N056's claim invokes N_PhiAttractor-content as structural input;
+      removing N_PhiAttractor dissolves N056's derivation chain.
+
+  - source: N067
+    target: N057
+    label: spectral_dim_grounds_QM_as_coordinate_system
+    edge_status: D
+    justification: |
+      N067 grounds N057's argument: QM as coordinate system for sub-r_0 manifold dynamics.
+    why_forced: |
+      N057's claim invokes N067-content as structural input;
+      removing N067 dissolves N057's derivation chain.
+
+  - source: N_InversiveTheory
+    target: N057
+    label: inversive_grounds_no_process_compatibility_postulate
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N057's argument: identification does not require Process Compatibility postulate.
+    why_forced: |
+      N057's claim invokes N_InversiveTheory-content as structural input;
+      removing N_InversiveTheory dissolves N057's derivation chain.
+
+  - source: N112
+    target: N058
+    label: observer_containment_grounds_entanglement_BPI_artifact
+    edge_status: D
+    justification: |
+      N112 grounds N058's argument: entanglement nonlocality is BPI artifact (Observer Containment).
+    why_forced: |
+      N058's claim invokes N112-content as structural input;
+      removing N112 dissolves N058's derivation chain.
+
+  - source: N370
+    target: N058
+    label: L31_topology_grounds_entanglement_via_covering
+    edge_status: D
+    justification: |
+      N370 grounds N058's argument: two correlated particles = same Z_3-sector structure on L(3,1).
+    why_forced: |
+      N058's claim invokes N370-content as structural input;
+      removing N370 dissolves N058's derivation chain.
+
+  - source: N_OntologyGate
+    target: N_TranslationLayer
+    label: ontology_gate_provides_translation_target
+    edge_status: D
+    justification: |
+      N_OntologyGate grounds N_TranslationLayer's argument: translation table for AI use — applies when ontological language appears.
+    why_forced: |
+      N_TranslationLayer's claim invokes N_OntologyGate-content as structural input;
+      removing N_OntologyGate dissolves N_TranslationLayer's derivation chain.
+
+  - source: N_GrammarTrap
+    target: N_TranslationLayer
+    label: grammar_trap_provides_translation_source
+    edge_status: D
+    justification: |
+      N_GrammarTrap grounds N_TranslationLayer's argument: translation table maps subject-verb-object grammar to topology.
+    why_forced: |
+      N_TranslationLayer's claim invokes N_GrammarTrap-content as structural input;
+      removing N_GrammarTrap dissolves N_TranslationLayer's derivation chain.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
