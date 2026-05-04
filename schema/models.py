@@ -101,6 +101,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N354": Layer.PHYSICS,
     "N304": Layer.PHYSICS,
     "N000": Layer.PHYSICS,
+    "N129": Layer.PHYSICS,  # SM Spectral Triple Algebra derivation
     "N165": Layer.STRUCTURE,  # Ergodicity theorem — Reality Protocol Markov dynamics
     # comms / operations
     "N_CommThm": Layer.COMMS,
