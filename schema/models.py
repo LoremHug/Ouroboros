@@ -103,6 +103,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N354": Layer.PHYSICS,
     "N304": Layer.PHYSICS,
     "N000": Layer.PHYSICS,
+    "N078": Layer.PHYSICS,  # Gravity as Thermodynamics — Jacobson identity
     "N110": Layer.STRUCTURE,  # Inevitability Theorem for L(3,1)
     "N129": Layer.PHYSICS,  # SM Spectral Triple Algebra derivation
     "N165": Layer.STRUCTURE,  # Ergodicity theorem — Reality Protocol Markov dynamics
@@ -121,7 +122,6 @@ LAYER_MAP: dict[str, Layer] = {
     "N_AestheticEngagement": Layer.COMMS,
     "N048": Layer.COMMS,
     "N001": Layer.COMMS,
-    "N078": Layer.COMMS,
     "N336": Layer.COMMS,
 }
 

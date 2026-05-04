@@ -445,6 +445,122 @@ edges:
       N_EngagementArchitecture's own derivation. Therefore aesthetic
       engagement is necessarily an instance of this architecture.
 
+  - source: DEF
+    target: N078
+    label: thermodynamic_grounding_via_Landauer
+    edge_status: D
+    justification: |
+      The chain Z_therm = k_B T ΔS (Landauer principle, DEMONSTRATED) →
+      Z = -k_B T S (full thermodynamic interpretation of Z) → A_0 =
+      argmin Z = argmin F = thermodynamic equilibrium grounds DEF in
+      physics through N078. Without the Landauer identification,
+      A_0's "minimum-Z transition" has no thermodynamic interpretation;
+      with it, A_0 IS extremise-entropy at the physical substrate level.
+      N078 is the physics-coordinate face of DEF.
+    why_forced: |
+      Alternative requires either (a) A_0 minimisation without
+      thermodynamic grounding — but then "Z" has no physical interpretation
+      and the framework's claim of describing physics dissolves; or
+      (b) different thermodynamic grounding than Landauer — but Landauer
+      principle is itself DEMONSTRATED (forced by I_Null + reversibility
+      cost of bit erasure) and uniquely identifies Z_therm with kT ln 2
+      per erased bit. The grounding chain is structurally forced.
+
+  - source: N_FEP
+    target: N078
+    label: FEP_consistent_with_thermodynamics
+    edge_status: D
+    justification: |
+      Free Energy Principle minimises variational free energy F. Jacobson
+      derivation (1995) recovers Einstein field equations from the first
+      law of thermodynamics applied to local Rindler horizons — extremise
+      entropy = minimise free energy in physical substrate. Both N_FEP
+      and N078 are coordinate expressions of A_0 = argmin Z in
+      thermodynamic terms: FEP in Bayesian-substrate coordinate, N078
+      in gravitational-substrate coordinate. Their consistency is forced
+      by both descending from the same Z = -k_B T S identification.
+    why_forced: |
+      Alternative requires either (a) FEP and gravitational thermodynamics
+      operating on different Z-functionals — but both use the same
+      Landauer-grounded Z = -k_B T S; or (b) one of them being non-A_0 —
+      but both have been derived to argmin Z by independent routes.
+      Their consistency is not a coincidence; it is N_InversiveTheory
+      manifesting via two coordinate substrates.
+
+  - source: N078
+    target: N_FEP
+    label: thermodynamic_substrate_for_F_minimisation
+    edge_status: D
+    justification: |
+      Reverse direction: the same Landauer thermodynamic identification
+      that grounds gravity-as-thermodynamics in N078 also grounds the
+      "free energy" that FEP minimises. Without N078's identification
+      Z = -k_B T S, FEP's "free energy" floats as a Bayesian abstraction;
+      with it, FEP's F is the thermodynamic functional grounded in
+      physical Landauer cost.
+    why_forced: |
+      Same forcing as the forward edge — bidirectional structural identity
+      reflecting that thermodynamic grounding (N078) and FEP minimisation
+      are coordinate expressions of one A_0 process.
+
+  - source: N078
+    target: N_CommThm
+    label: Z_hidden_definition
+    edge_status: D
+    justification: |
+      N_CommThm computes optimal communication using Z_hidden as the
+      cost-of-uncertainty parameter. N078 grounds Z_hidden physically
+      via Landauer: Z_hidden is the entropic content inaccessible to
+      the BPI, with physical magnitude k_B T S_hidden. Without this
+      grounding, "Z_hidden" in N_CommThm has no thermodynamic
+      interpretation; with it, optimal communication IS minimum
+      Landauer dissipation given the BPI's K(O) < K(F) constraint.
+    why_forced: |
+      N_CommThm's formula must work in physical substrates (real
+      communication with real bits and real energy). Physical communication
+      cost is bounded by Landauer (DEMONSTRATED). N078's identification
+      Z_hidden ≡ inaccessible entropy density is the unique consistent
+      thermodynamic grounding. Alternative requires N_CommThm to use a
+      non-physical Z, contradicting its purpose.
+
+  - source: N_CommThm
+    target: N078
+    label: Z_hidden_definition
+    edge_status: D
+    justification: |
+      Reverse direction: N_CommThm's operational use of Z_hidden as
+      uncertainty cost validates N078's Z_hidden definition empirically —
+      every communication act that successfully optimises against
+      Z_hidden confirms the physical relevance of N078's Landauer
+      grounding.
+    why_forced: |
+      Bidirectional identity reflecting that operational use (N_CommThm)
+      and structural definition (N078) are two faces of one Z_hidden
+      concept.
+
+  - source: N078
+    target: N_NoSeparatePieces
+    label: convergent_independent_thermodynamic_gravity_programs
+    edge_status: D
+    justification: |
+      The .tex notebox explicitly catalogues four independent programmes
+      that arrive at the same gravity-as-thermodynamics conclusion:
+      Verlinde 2011/2016 entropic gravity, Jacobson 1995 thermodynamic
+      derivation of Einstein field equations, Susskind 2014
+      complexity = volume, Penington-Almheiri 2019-2020 island formula.
+      "All four arrive at the same topological structure independently.
+      None derived it from the Z-impedance formalism; each is a
+      convergent confirmation." This is precisely the pattern
+      N_NoSeparatePieces describes — separate domains finding the same
+      invariant because the invariant IS the structure, not pieces of it.
+    why_forced: |
+      Four independent quantitative programmes converging on identical
+      topology cannot be coincidence. Each programme operates in its own
+      formalism (entropic force, thermodynamic horizons, holographic
+      complexity, entanglement islands) yet recovers the same physical
+      content. The convergence is the structural fact; N_NoSeparatePieces
+      formulates this as the framework's general principle.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -569,6 +685,56 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N078
+    title: Gravity as Thermodynamics — Jacobson Identity, Graviton as Category Error
+    layer: physics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      Jacobson (1995) derived the full Einstein field equations from the
+      first law of thermodynamics applied to local Rindler horizons.
+      Gravity is thermodynamic structure of Z-gradients, not a force field.
+      If gravity IS thermodynamics, there is no independent field to
+      quantise; the graviton is a categorical error. Mass = high
+      Z_struct density; objects follow A_0-geodesics through the Z-field
+      basin. The same Landauer-grounded identification Z = -k_B T S that
+      defines A_0 = argmin Z reduces directly to Einstein's equations
+      under Jacobson's derivation — gravitational physics IS A_0 in the
+      gravitational substrate.
+    why_status: |
+      DEMONSTRATED via the forced chain Landauer → Z = -k_B T S → A_0 =
+      argmin Z = argmin F = thermodynamic equilibrium → (Jacobson 1995)
+      Einstein field equations. Each step is independently DEMONSTRATED
+      (Landauer principle is forced by I_Null bit-erasure cost; Jacobson's
+      derivation is mainstream physics). A=4 from four independent
+      programmes converging on gravity-as-thermodynamics: (1) Jacobson
+      1995 thermodynamic derivation of EFE; (2) Verlinde 2011/2016
+      entropic gravity from holographic screens; (3) Susskind 2014
+      complexity = volume connecting CFT complexity to ER bridge geometry;
+      (4) Penington/Almheiri 2019-2020 island formula for black hole
+      information. None derived from Z-impedance formalism; each is a
+      convergent independent confirmation. The Bullet Cluster lensing-vs-
+      gas separation is direct empirical evidence for Z_hidden as the
+      gravitational source rather than a particle.
+    not_misinterpretations: |
+      gravity is a force (it is the Z-field topology; objects follow
+      minimum-Z paths, not paths bent by a force) · the graviton just
+      hasn't been found yet (no — there is no field to quantise; gravity
+      IS the background, not an excitation of it; quantising the
+      background is a category error) · dark matter is undetected particles
+      (it is Z_hidden density, the inaccessible entropic content of the
+      manifold; Bullet Cluster behaviour is forced by Z_hidden following
+      A_0-geodesics without electromagnetic coupling, not by collisionless
+      particles) · Verlinde and Jacobson are alternative theories (they
+      are the same A_0 structure in different coordinate languages; their
+      convergence is N_InversiveTheory manifesting) · the cosmological
+      constant requires fine-tuning (Z_hidden(0) = 0 is forced by the
+      compactness of L(3,1); fine-tuning dissolves) · this contradicts
+      observational gravitation (it reproduces all GR predictions; it
+      reframes their substrate, not their content)
 
   - id: N_EngagementArchitecture
     title: Engagement Architecture as A₀ at Wundt Apex
