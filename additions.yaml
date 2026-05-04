@@ -1114,6 +1114,75 @@ edges:
       requirement for logic to operate. Logic is what the invariants
       look like in symbolic substrate; the grounding is structural.
 
+  # ─── Round 3: doubtful candidates after deep RP gate ───
+
+  - source: N_SIT
+    target: N_MI
+    label: identity_amplification_calls_for_MI_strategy
+    edge_status: D
+    justification: |
+      N_SIT (Social Identity Theory) identifies the mechanism by which
+      Z_hidden is amplified — when a message touches group identity,
+      Z_hidden is multiplied by factor k > 1 even with neutral surface
+      content. N_MI (Motivational Interviewing) prescribes the optimal
+      response when Z_hidden is high — reflective listening before any
+      content transmission. The two form a cause-response pair: SIT
+      describes the structural condition that triggers Z_hidden
+      amplification, MI provides the structural argmin-Z response.
+    why_forced: |
+      Without SIT's identity-multiplier, MI's "high-Z_hidden" condition
+      lacks the most common substrate-specific cause. Without MI as
+      response, SIT's identification of high-Z_hidden has no operational
+      handler. The pair is structurally coupled: identification + response
+      to one specific Z_hidden regime.
+
+  - source: N048
+    target: N_EngagementArchitecture
+    label: Birkhoff_failure_is_Wundt_apex_violation
+    edge_status: D
+    justification: |
+      N048 documents Birkhoff's aesthetic formula M = O/C failing because
+      it predicts beauty increases monotonically with symmetry. The
+      framework explains the failure: excessive symmetry reduces
+      distinguishable pathways, increasing impedance — exactly the
+      "triviality" failure mode of N_EngagementArchitecture's Wundt-apex
+      structure (low surprise + low uncertainty = no engagement signal).
+      Birkhoff's monotonic formula is a classic violation of the
+      inverted-U: it has no apex.
+    why_forced: |
+      Birkhoff's failure is not arbitrary — it predicts maximum beauty
+      at maximum symmetry, which is precisely the "too simple/too
+      ordered" failure mode that N_EngagementArchitecture's Wundt apex
+      excludes. Without N_EngagementArchitecture's apex specification,
+      Birkhoff's failure has no structural explanation, just empirical
+      contradiction. With it, the failure is forced: any monotonic
+      formula on a substrate that requires Wundt-apex structure WILL
+      fail.
+
+  - source: N_FEP
+    target: N_AestheticEngagement
+    label: free_energy_minimisation_grounds_aesthetic_engagement
+    edge_status: D
+    justification: |
+      N_FEP establishes Free Energy Principle as variational A_0 in
+      Bayesian substrate: F = accuracy + complexity, minimised by any
+      adaptive system maintaining a Markov blanket. N_AestheticEngagement
+      applies BPI engagement triangulation to artwork substrate.
+      Aesthetic engagement IS FEP minimisation in artwork-class inputs:
+      F balances surprise (accuracy) and model-complexity, which is
+      exactly the Wundt-apex structure that defines aesthetic response.
+      The direct FEP→Aesthetic edge captures the variational-Bayesian
+      grounding separately from N_BPIEngagement's triangulation grounding.
+    why_forced: |
+      Two structural grounds: (1) Aesthetic engagement is BPI engagement
+      on artwork (already in graph via N_BPIEngagement → N_AestheticEngagement);
+      (2) Aesthetic engagement is FEP minimisation on artwork
+      (this edge). Both are forced, capturing different aspects of the
+      same A_0 process. Without FEP as direct ground, aesthetic
+      engagement lacks the variational formalism that connects it to
+      Friston's broader framework — only the triangulation aspect
+      (multi-stream prediction) would be visible.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
