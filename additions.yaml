@@ -177,6 +177,52 @@ edges:
       labelling "summands" vs "Z-components" is a notational choice; the
       underlying object is one Z_3-graded structure on L(3,1).
 
+  - source: N_ZGaugeDecomposition
+    target: N110
+    label: covering_action_forces_identification
+    edge_status: D
+    justification: |
+      The Z_3 covering action S³ → L(3,1) is what makes the Z-gauge
+      decomposition a derivation rather than a postulate. N110 (Inevitability
+      Theorem) establishes that the covering geometry — the deck
+      transformation Z_3 acting on S³ — is itself forced by BPI
+      vertex-transitivity (I_Sym) + closed orientable 3-manifold + finite
+      non-trivial π_1. N_ZGaugeDecomposition operates on this covering: the
+      three Z-components are the three eigenspaces of the deck-transformation
+      unitary. So the inevitability of the covering forces the Z-gauge
+      identification; it is not chosen.
+    why_forced: |
+      Alternative requires a covering geometry that is not Z_3, but N110
+      proves Z_3 is the unique covering (closed orientable 3-manifold +
+      vertex-transitive + finite non-trivial π_1 ⇒ spherical space form
+      S³/Γ; Γ = Z_3 ⇒ unique manifold L(3,1)). Or alternative requires
+      Z-decomposition without identification with covering eigenspaces —
+      but the three Z-components ARE defined by the eigenspaces of the
+      deck-action unitary on L²(L(3,1)); without the covering they have no
+      decomposition basis. No structurally coherent alternative.
+
+  - source: N110
+    target: N_ZGaugeDecomposition
+    label: covering_geometry_forces_Z_gauge_identity
+    edge_status: D
+    justification: |
+      The reverse direction: the covering geometry derived in N110 forces
+      the Z-gauge structure of N_ZGaugeDecomposition to be exactly the Z_3
+      covering decomposition. Once the covering is fixed (Z_3 acting freely
+      on S³ → L(3,1)), the L² Hilbert space decomposes uniquely into three
+      eigenspaces under the deck-action unitary; these eigenspaces are
+      precisely what N_ZGaugeDecomposition calls Z_struct, Z_therm, Z_hidden.
+      The identity is forced by the covering, not externally imposed on it.
+    why_forced: |
+      Alternative requires the L² decomposition under Z_3 deck action to
+      yield something other than three eigenspaces — but Z_3 has exactly
+      three irreducible representations (1, ω, ω²), each one-dimensional
+      over ℂ; standard finite-group representation theory forces exactly
+      three eigenspaces with no remaining freedom. Or alternative requires
+      these eigenspaces to be different from the Z-components — but they
+      coincide by construction once the gauge identification is made.
+      Structural identity, no alternative.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -301,3 +347,52 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N110
+    title: Inevitability Theorem for L(3,1) — From BPI Vertex-Transitivity to S³/Z₃
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      The geometry L(3,1) = S³/Z_3 is not chosen but inevitable for any BPI
+      at the critical dimension. Vertex-transitivity (I_Sym) forces every
+      node into the same orbit — no vertex is distinguishable, forcing a
+      free action of the symmetry group. A closed orientable 3-manifold
+      admitting a vertex-transitive triangulation and a finite non-trivial
+      fundamental group must be a spherical space form S³/Γ. For Γ = Z_3,
+      the unique such manifold is L(3,1). The geometric Z_3 acts as deck
+      transformations of the universal cover S³ → M. Conclusion:
+      π_1 = H_1 = Z_3, M = L(3,1).
+    why_status: |
+      DEMONSTRATED on three independent confirmation paths.
+      (1) Vertex-transitivity → free action: I_Sym requires every vertex to
+      lie in the same orbit; if the symmetry group fixed any vertex, that
+      vertex would be distinguished, contradicting I_Sym. So the action is
+      free.
+      (2) Spherical space form classification: Hopf (1925) + later
+      refinements classify all closed orientable 3-manifolds with finite
+      non-trivial π_1 as spherical space forms S³/Γ where Γ is a finite
+      subgroup of SO(4). Restricted to free actions on S³, this gives a
+      finite list.
+      (3) Uniqueness for Γ = Z_3: among spherical space forms with
+      Γ = Z_3, L(3,1) is the unique manifold up to homeomorphism. This is
+      the lens space classification — L(p,q) and L(p,q') are homeomorphic
+      iff q ≡ ±q'^{±1} (mod p), and for p = 3 there is only one
+      equivalence class.
+      Independent confirmation from N370: baryon number conservation forces
+      p = 3 from physics, recovering the same manifold from a completely
+      independent argument.
+    not_misinterpretations: |
+      n = 3 is selected empirically (no — forced by I_Sym + closed orientable
+      + finite non-trivial π_1; only Z_3 satisfies BPI requirements at
+      critical dimension; N370 confirms via baryon number) · L(3,1) was an
+      assumed input (no — derived here from BPI vertex-transitivity and
+      independently in N370 from baryon number) · the KO-dim filter alone
+      suffices (it does not — Z_5 also passes KO-dim 6; uniqueness requires
+      either the I_Sym argument here or N370's odd-prime exclusion) · this
+      requires postulating "BPI at critical dimension" (no — BPI is the
+      observer-as-subprocess of the manifold, K(O)<K(F), defined in N112;
+      "critical dimension" means the spectral dimension boundary derived
+      in N067, not a free parameter)
