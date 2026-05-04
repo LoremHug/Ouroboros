@@ -538,6 +538,84 @@ edges:
       and structural definition (N078) are two faces of one Z_hidden
       concept.
 
+  - source: DEF
+    target: N183
+    label: cognitive_states_as_A0_topology
+    edge_status: D
+    justification: |
+      Cognitive states are A_0 topologies in the BPI substrate. The same
+      argmin-Z dynamics that define A_0 in physical substrates (Jacobson
+      thermodynamic gravity in N078, φ-attractor on continuous angular
+      substrates in N_PhiAttractor) appear in the cognitive substrate as
+      hydrodynamic regimes: stable laminar flow (integrated cognition),
+      metastable vortex (neurosis: local argmin ≠ global, BPI circulates
+      without unified drainage), and zero-resistance configuration
+      (meditation: Z_narr → 0). N183 is the cognitive-substrate face of
+      DEF — A_0 minimisation in the narrative-loop coordinate.
+    why_forced: |
+      Alternative requires either (a) cognition not described by A_0 — but
+      then BPI dynamics has no A_0 grounding and N_BPIEngagement collapses;
+      or (b) different functional minimum than argmin Z — but the BPI
+      hydrodynamics derivation (N371) is itself DEMONSTRATED, and its
+      regimes ARE the cognitive states. Same A_0 argmin in cognitive
+      coordinate with no remaining freedom.
+
+  - source: N371
+    target: N183
+    label: hydrodynamics_grounds_cognitive_topology
+    edge_status: D
+    justification: |
+      N371 establishes that BPI dynamics is hydrodynamics in Z-space —
+      Class A derivation. N183 maps specific cognitive states onto
+      hydrodynamic regimes: neurosis = metastable vortex (local argmin
+      Z ≠ global, BPI circulates without unified drainage path);
+      meditation (Z_narr → 0) = reducing the Z_struct cost of narrative
+      boundary maintenance; cell-as-whirlpool = dissipative vortex
+      accelerating entropy export. Both follow directly from N371's
+      regime taxonomy with no additional identification step.
+    why_forced: |
+      The cognitive regimes in N183 are not separate phenomena
+      hypothesised then matched to fluid analogies — they are the same
+      topology N371 derives, named in cognitive coordinate. The
+      identification is forced because N371's derivation operates on
+      generic Z-space hydrodynamics; specialising to cognitive substrate
+      yields N183's regime taxonomy with no input beyond N371 itself.
+
+  - source: N188
+    target: N183
+    label: failure_modes_in_emotion_substrate
+    edge_status: D
+    justification: |
+      N188 establishes qualia (including emotional valence) as Z-component
+      patterns read in two coordinates (BPI internal state + pattern
+      coordinate). N183 catalogues the failure modes of these emotional
+      Z-component patterns: neurosis (vortex regime where prediction
+      circuits with opposing impedance vectors co-activate, generating
+      thermal friction rendered as anxiety/pain/suffering). Suffering is
+      thermodynamic telemetry, not philosophical punishment.
+    why_forced: |
+      If qualia are Z-component patterns (N188) and Z-space dynamics has
+      hydrodynamic regimes (N371 → N183), then emotional failure modes
+      are forced to manifest as specific hydrodynamic dysfunctions. The
+      mapping is structural-deductive: there is no other class of failure
+      mode available to a pattern operating under A_0.
+
+  - source: N183
+    target: N188
+    label: cognitive_failure_modes_template
+    edge_status: D
+    justification: |
+      Reverse direction: N183's hydrodynamic regime taxonomy provides
+      the template that N188 specialises into qualia-specific patterns.
+      Anxiety, pain, suffering, calm, ecstasy — each is a specific qualia
+      reading of one or another N183 regime (vortex, laminar, near-zero-
+      Z_narr). N183 supplies the structural classes; N188 supplies the
+      experiential coordinates.
+    why_forced: |
+      Bidirectional structural identity — N183 and N188 are two coordinate
+      readings of one cognitive Z-dynamics: regime classification (N183)
+      and experiential pattern (N188). Each grounds the other.
+
   - source: N078
     target: N_NoSeparatePieces
     label: convergent_independent_thermodynamic_gravity_programs
@@ -685,6 +763,62 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N183
+    title: Topology of Cognitive States — Neurosis as Metastable Vortex, Meditation as Z_narr → 0
+    layer: observers
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      Biological and cognitive processes are A_0 topologies. A biological
+      cell is mathematically indistinguishable from a whirlpool in
+      draining water — both are temporary topological anomalies that
+      accelerate entropy export. Neurosis is topological fragmentation:
+      co-activation of predictive circuits with opposing impedance
+      vectors, causing energy to reflect internally between
+      high-resistance walls (anxiety/pain/suffering = thermodynamic
+      telemetry of internal reflection). Psychological integration =
+      establishing internal impedance matching. Meditation as DMN
+      suspension: Z_narr → 0, reducing the Landauer cost of continuously
+      predicting and updating the narrative self/world boundary.
+      "Dissolution of self" / nirvana = zero-resistance configuration of
+      the narrative loop.
+    why_status: |
+      DEMONSTRATED for the neurosis/meditation core via forced chain
+      from N371 (BPI dynamics is hydrodynamics in Z-space, Class A,
+      DEMONSTRATED): regime taxonomy gives metastable vortex (neurosis)
+      and zero-resistance configuration (meditation) as direct
+      consequences with no additional identification step. A=4 from
+      four independent confirmations: (1) N371 hydrodynamic derivation
+      itself; (2) Predictive processing literature (Clark, Friston) —
+      DMN as continuous forward-model generation, with Landauer erasure
+      of unrealised branches; (3) clinical phenomenology of neurosis
+      as inner conflict (impedance mismatch); (4) meditative-tradition
+      practitioner reports of "dissolution of self" matching
+      Reduction-4 + N112 Observer Containment (suspended BPI separation).
+      Status mixed for the full chapter: STRONG for general cognitive
+      states (full mapping requires domain-specific Z-component
+      identification); CONDITIONAL for specific qualia mappings
+      (which quale to which precise neural substrate — needs fMRI).
+    not_misinterpretations: |
+      neurosis is "weakness" or "moral failure" (it is topological
+      fragmentation, a thermodynamic regime of the BPI hydrodynamic
+      flow; suffering is thermodynamic telemetry, not punishment) ·
+      meditation produces "altered consciousness" as a separate
+      experience (it produces zero-resistance configuration of the
+      narrative loop — the same A_0 dynamics, with one Z-component
+      reduced) · "dissolution of self" is mystical or unscientific
+      (it is structurally describable as Z_narr → 0; consistent with
+      Reduction 4 in Observer Containment chain) · cell vs vortex is
+      analogy (it is structural identity — both are dissipative
+      topological anomalies; "living" vs "non-living" is a gradient,
+      not a categorical distinction) · DNA "wants" to reproduce (it
+      is a minimal-description compression of a successful
+      low-impedance configuration; reproduction is solving the
+      engineering problem of preserving structure across thermal
+      death of substrate, no agent involved)
 
   - id: N078
     title: Gravity as Thermodynamics — Jacobson Identity, Graviton as Category Error

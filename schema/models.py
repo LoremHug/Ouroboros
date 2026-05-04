@@ -86,7 +86,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N_FEP": Layer.OBSERVERS,
     "N_EngagementArchitecture": Layer.OBSERVERS,
     "N188": Layer.OBSERVERS,
-    "N183": Layer.OBSERVERS,
+    "N183": Layer.OBSERVERS,  # Topology of Cognitive States — neurosis/meditation
     "N187": Layer.OBSERVERS,
     "N112": Layer.OBSERVERS,
     # physics
