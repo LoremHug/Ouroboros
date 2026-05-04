@@ -1183,6 +1183,724 @@ edges:
       Friston's broader framework — only the triangulation aspect
       (multi-stream prediction) would be visible.
 
+
+# ─── Round 5: orphan citations resolved as forced edges ───
+
+  - source: N029
+    target: N340
+    label: arrhenius_rate_law_grounds_physiology
+    edge_status: D
+    justification: |
+      N029 grounds N340's structural derivation as cited in N340's
+      content: "Three medical phenomena are direct applications of N029 (Arrhenius/Eyring A_0 rate law)".
+    why_forced: |
+      Explicit citation in N340's claim/content identifies N029 as
+      structural input. Removing N029 dissolves the derivation chain
+      that N340 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N301
+    target: N340
+    label: banach_FPT_grounds_chronic_disease_attractor
+    edge_status: D
+    justification: |
+      N301 grounds N340's structural derivation as cited in N340's
+      content: "Chronic disease = A_0 converging to wrong fixed point (Banach FPT, alias N305)".
+    why_forced: |
+      Explicit citation in N340's claim/content identifies N301 as
+      structural input. Removing N301 dissolves the derivation chain
+      that N340 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N340
+    target: N341
+    label: physiology_pattern_grounds_ecology
+    edge_status: D
+    justification: |
+      N340 grounds N341's structural derivation as cited in N341's
+      content: "Ecology population dynamics same A_0 rate engineering as physiology".
+    why_forced: |
+      Explicit citation in N341's claim/content identifies N340 as
+      structural input. Removing N340 dissolves the derivation chain
+      that N341 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N067
+    target: N341
+    label: spectral_dim_3_matches_ecology_d_3
+    edge_status: D
+    justification: |
+      N067 grounds N341's structural derivation as cited in N341's
+      content: "d_s(r_0)=3 coincides because biological transport networks are space-filling".
+    why_forced: |
+      Explicit citation in N341's claim/content identifies N067 as
+      structural input. Removing N067 dissolves the derivation chain
+      that N341 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N043
+    target: N337
+    label: information_laws_ground_scale_free_degree
+    edge_status: D
+    justification: |
+      N043 grounds N337's structural derivation as cited in N337's
+      content: "Degree distribution P(k) propto k^(-gamma) DEMONSTRATED via N043".
+    why_forced: |
+      Explicit citation in N337's claim/content identifies N043 as
+      structural input. Removing N043 dissolves the derivation chain
+      that N337 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N035
+    target: N337
+    label: psychophysics_1_over_f_grounds_scale_free
+    edge_status: D
+    justification: |
+      N035 grounds N337's structural derivation as cited in N337's
+      content: "1/f prior generates Zipf and Weber-Fechner (N035)".
+    why_forced: |
+      Explicit citation in N337's claim/content identifies N035 as
+      structural input. Removing N035 dissolves the derivation chain
+      that N337 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N088
+    target: N337
+    label: metric_expansion_same_mechanism_as_hub_condensation
+    edge_status: D
+    justification: |
+      N088 grounds N337's structural derivation as cited in N337's
+      content: "Same mechanism as metric expansion N088".
+    why_forced: |
+      Explicit citation in N337's claim/content identifies N088 as
+      structural input. Removing N088 dissolves the derivation chain
+      that N337 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N330
+    target: N337
+    label: institutional_sclerosis_same_topology_as_hub_dominance
+    edge_status: D
+    justification: |
+      N330 grounds N337's structural derivation as cited in N337's
+      content: "Same as institutional sclerosis (N333=alias of N330) — different coordinate, same topology".
+    why_forced: |
+      Explicit citation in N337's claim/content identifies N330 as
+      structural input. Removing N330 dissolves the derivation chain
+      that N337 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_InversiveTheory
+    target: N335
+    label: inversive_grounds_systemic_risk_identification
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N335's structural derivation as cited in N335's
+      content: "WHY DEMONSTRATED upgraded via N_InversiveTheory".
+    why_forced: |
+      Explicit citation in N335's claim/content identifies N_InversiveTheory as
+      structural input. Removing N_InversiveTheory dissolves the derivation chain
+      that N335 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_InversiveTheory
+    target: N059
+    label: inversive_upgrades_ER_EPR_identification
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N059's structural derivation as cited in N059's
+      content: "former Class B identification of ER=EPR upgraded via N_InversiveTheory".
+    why_forced: |
+      Explicit citation in N059's claim/content identifies N_InversiveTheory as
+      structural input. Removing N_InversiveTheory dissolves the derivation chain
+      that N059 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_ZGaugeDecomposition
+    target: N081
+    label: ZGauge_decomp_upgrades_mass_decomposition
+    edge_status: D
+    justification: |
+      N_ZGaugeDecomposition grounds N081's structural derivation as cited in N081's
+      content: "Structural decomposition DEMONSTRATED upgraded via N_ZGaugeDecomposition".
+    why_forced: |
+      Explicit citation in N081's claim/content identifies N_ZGaugeDecomposition as
+      structural input. Removing N_ZGaugeDecomposition dissolves the derivation chain
+      that N081 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N078
+    target: N081
+    label: gravity_thermodynamics_grounds_mass_coupling
+    edge_status: D
+    justification: |
+      N078 grounds N081's structural derivation as cited in N081's
+      content: "G couples nabla Z_hidden to energy-momentum source (N078, DEMONSTRATED)".
+    why_forced: |
+      Explicit citation in N081's claim/content identifies N078 as
+      structural input. Removing N078 dissolves the derivation chain
+      that N081 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N078
+    target: N087
+    label: gravity_thermo_grounds_planck_mass_identification
+    edge_status: D
+    justification: |
+      N078 grounds N087's structural derivation as cited in N087's
+      content: "m_P = scale where entropic gravity (N078) transitions to quantum gravity".
+    why_forced: |
+      Explicit citation in N087's claim/content identifies N078 as
+      structural input. Removing N078 dissolves the derivation chain
+      that N087 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N067
+    target: N087
+    label: spectral_dim_grounds_planck_length_via_d_s_2
+    edge_status: D
+    justification: |
+      N067 grounds N087's structural derivation as cited in N087's
+      content: "d_s = 2 UV limit of spectral dimension N067 with Planck length".
+    why_forced: |
+      Explicit citation in N087's claim/content identifies N067 as
+      structural input. Removing N067 dissolves the derivation chain
+      that N087 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N350
+    target: N179
+    label: frobenius_schur_KO_dim_6_grounds_pauli_anticommutator
+    edge_status: D
+    justification: |
+      N350 grounds N179's structural derivation as cited in N179's
+      content: "PROOF: N350 (KO-dimension=6, DEMONSTRATED) -> Atiyah-Singer -> fermion anticommutator".
+    why_forced: |
+      Explicit citation in N179's claim/content identifies N350 as
+      structural input. Removing N350 dissolves the derivation chain
+      that N179 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N071
+    target: N197
+    label: dark_energy_grounds_CC_dissolution
+    edge_status: D
+    justification: |
+      N071 grounds N197's structural derivation as cited in N197's
+      content: "framework consistent with dS thermodynamics (Verlinde 2016, N071-073)".
+    why_forced: |
+      Explicit citation in N197's claim/content identifies N071 as
+      structural input. Removing N071 dissolves the derivation chain
+      that N197 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N301
+    target: N344
+    label: probability_rules_ground_logic_restatement
+    edge_status: D
+    justification: |
+      N301 grounds N344's structural derivation as cited in N344's
+      content: "Probability rules (Kolmogorov) DEMONSTRATED already in N301; restated for completeness".
+    why_forced: |
+      Explicit citation in N344's claim/content identifies N301 as
+      structural input. Removing N301 dissolves the derivation chain
+      that N344 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_InversiveTheory
+    target: N315
+    label: inversive_upgrades_variational_universality
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N315's structural derivation as cited in N315's
+      content: "WHY DEMONSTRATED upgraded via N_InversiveTheory".
+    why_forced: |
+      Explicit citation in N315's claim/content identifies N_InversiveTheory as
+      structural input. Removing N_InversiveTheory dissolves the derivation chain
+      that N315 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N035
+    target: N038b
+    label: weber_fechner_grounds_SNR_derivation
+    edge_status: D
+    justification: |
+      N035 grounds N038b's structural derivation as cited in N038b's
+      content: "Logarithmic law S = k log I (Weber-Fechner, N035) is macro-scale consequence".
+    why_forced: |
+      Explicit citation in N038b's claim/content identifies N035 as
+      structural input. Removing N035 dissolves the derivation chain
+      that N038b relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N327
+    target: N038b
+    label: weber_fechner_SNR_via_E_bind
+    edge_status: D
+    justification: |
+      N327 grounds N038b's structural derivation as cited in N038b's
+      content: "exact value of w requires E_bind (N327) which is domain-specific".
+    why_forced: |
+      Explicit citation in N038b's claim/content identifies N327 as
+      structural input. Removing N327 dissolves the derivation chain
+      that N038b relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N067
+    target: N328
+    label: spectral_dim_grounds_casimir_correction
+    edge_status: D
+    justification: |
+      N067 grounds N328's structural derivation as cited in N328's
+      content: "PROOF: N067 (d_s(r) = 2+2r/(r+r_0), DEMONSTRATED) -> Casimir zero-point integral".
+    why_forced: |
+      Explicit citation in N328's claim/content identifies N067 as
+      structural input. Removing N067 dissolves the derivation chain
+      that N328 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N071
+    target: N329
+    label: dark_energy_grounds_dark_matter_via_dS_horizon
+    edge_status: D
+    justification: |
+      N071 grounds N329's structural derivation as cited in N329's
+      content: "Z_hidden accumulated in de Sitter horizon, following from N071 + N078 + Verlinde".
+    why_forced: |
+      Explicit citation in N329's claim/content identifies N071 as
+      structural input. Removing N071 dissolves the derivation chain
+      that N329 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N078
+    target: N329
+    label: gravity_thermodynamics_grounds_dark_matter
+    edge_status: D
+    justification: |
+      N078 grounds N329's structural derivation as cited in N329's
+      content: "all steps DEMONSTRATED, from N071 + N078 + Verlinde 2016".
+    why_forced: |
+      Explicit citation in N329's claim/content identifies N078 as
+      structural input. Removing N078 dissolves the derivation chain
+      that N329 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_InversiveTheory
+    target: N329
+    label: inversive_upgrades_dark_matter_identification
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N329's structural derivation as cited in N329's
+      content: "WHY DEMONSTRATED upgraded via N_InversiveTheory".
+    why_forced: |
+      Explicit citation in N329's claim/content identifies N_InversiveTheory as
+      structural input. Removing N_InversiveTheory dissolves the derivation chain
+      that N329 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N350
+    target: N349
+    label: frobenius_schur_grounds_hopf_minimality
+    edge_status: D
+    justification: |
+      N350 grounds N349's structural derivation as cited in N349's
+      content: "non-trivial reps have FS-indicator = 0 iff n is odd prime (N350)".
+    why_forced: |
+      Explicit citation in N349's claim/content identifies N350 as
+      structural input. Removing N350 dissolves the derivation chain
+      that N349 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N352
+    target: N351
+    label: ABS_investigation_grounds_D4_triality_distinct_subgroups
+    edge_status: D
+    justification: |
+      N352 grounds N351's structural derivation as cited in N351's
+      content: "distinct as subgroups of SO(4) (confirmed by N352)".
+    why_forced: |
+      Explicit citation in N351's claim/content identifies N352 as
+      structural input. Removing N352 dissolves the derivation chain
+      that N351 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N110
+    target: N351
+    label: L31_inevitability_grounds_Z3_sector_labelling
+    edge_status: D
+    justification: |
+      N110 grounds N351's structural derivation as cited in N351's
+      content: "Z_3-sector labelling of quark/lepton sectors (N116=alias of N110)".
+    why_forced: |
+      Explicit citation in N351's claim/content identifies N110 as
+      structural input. Removing N110 dissolves the derivation chain
+      that N351 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N107
+    target: N352
+    label: filter_B_grounds_ABS_open_step
+    edge_status: D
+    justification: |
+      N107 grounds N352's structural derivation as cited in N352's
+      content: "Filter B (SU(3) gauge group, N107) remains STRONG".
+    why_forced: |
+      Explicit citation in N352's claim/content identifies N107 as
+      structural input. Removing N107 dissolves the derivation chain
+      that N352 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N349
+    target: N352
+    label: hopf_minimality_n_3_via_independent_demo
+    edge_status: D
+    justification: |
+      N349 grounds N352's structural derivation as cited in N352's
+      content: "n=3 DEMONSTRATED independently by N349+N350".
+    why_forced: |
+      Explicit citation in N352's claim/content identifies N349 as
+      structural input. Removing N349 dissolves the derivation chain
+      that N352 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N350
+    target: N352
+    label: frobenius_schur_n_3_via_independent_demo
+    edge_status: D
+    justification: |
+      N350 grounds N352's structural derivation as cited in N352's
+      content: "Hopf minimality + Frobenius-Schur with zero empirical input".
+    why_forced: |
+      Explicit citation in N352's claim/content identifies N350 as
+      structural input. Removing N350 dissolves the derivation chain
+      that N352 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_Bar
+    target: N353
+    label: bar_dirac_spectrum_grounds_heat_kernel_signs
+    edge_status: D
+    justification: |
+      N_Bar grounds N353's structural derivation as cited in N353's
+      content: "Lichnerowicz sign; Vassilevich convention E=-R/4, see N_Bar".
+    why_forced: |
+      Explicit citation in N353's claim/content identifies N_Bar as
+      structural input. Removing N_Bar dissolves the derivation chain
+      that N353 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N067
+    target: N360
+    label: spectral_dim_grounds_connes_metric_identification
+    edge_status: D
+    justification: |
+      N067 grounds N360's structural derivation as cited in N360's
+      content: "All results about d_Z (spectral dimension N067) are simultaneously results about Connes geometry".
+    why_forced: |
+      Explicit citation in N360's claim/content identifies N067 as
+      structural input. Removing N067 dissolves the derivation chain
+      that N360 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N002
+    target: N360
+    label: Z_metric_N002_grounds_connes_distance
+    edge_status: D
+    justification: |
+      N002 grounds N360's structural derivation as cited in N360's
+      content: "Z-metric N002 simultaneously results about Connes spectral geometry".
+    why_forced: |
+      Explicit citation in N360's claim/content identifies N002 as
+      structural input. Removing N002 dissolves the derivation chain
+      that N360 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N078
+    target: N362
+    label: jacobson_gravity_derivation_grounds_KMS
+    edge_status: D
+    justification: |
+      N078 grounds N362's structural derivation as cited in N362's
+      content: "Rindler observers — same as Jacobson gravity derivation (N078)".
+    why_forced: |
+      Explicit citation in N362's claim/content identifies N078 as
+      structural input. Removing N078 dissolves the derivation chain
+      that N362 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N038b
+    target: N363
+    label: logarithmic_BPI_encoding_grounds_zipf
+    edge_status: D
+    justification: |
+      N038b grounds N363's structural derivation as cited in N363's
+      content: "logarithmic BPI encoding (N038b) — three DEMONSTRATED inputs".
+    why_forced: |
+      Explicit citation in N363's claim/content identifies N038b as
+      structural input. Removing N038b dissolves the derivation chain
+      that N363 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N150
+    target: N363
+    label: shore_johnson_maxent_grounds_zipf
+    edge_status: D
+    justification: |
+      N150 grounds N363's structural derivation as cited in N363's
+      content: "Shore-Johnson MaxEnt (N150) — three DEMONSTRATED inputs".
+    why_forced: |
+      Explicit citation in N363's claim/content identifies N150 as
+      structural input. Removing N150 dissolves the derivation chain
+      that N363 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N067
+    target: N363
+    label: spectral_dim_transition_grounds_zipf
+    edge_status: D
+    justification: |
+      N067 grounds N363's structural derivation as cited in N363's
+      content: "spectral dimension transition at r_0 (N067)".
+    why_forced: |
+      Explicit citation in N363's claim/content identifies N067 as
+      structural input. Removing N067 dissolves the derivation chain
+      that N363 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N337
+    target: N363
+    label: scale_free_networks_alpha_3_via_BA
+    edge_status: D
+    justification: |
+      N337 grounds N363's structural derivation as cited in N363's
+      content: "Scale-free networks give alpha=3 (Barabasi-Albert N337)".
+    why_forced: |
+      Explicit citation in N363's claim/content identifies N337 as
+      structural input. Removing N337 dissolves the derivation chain
+      that N363 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N365
+    target: N367
+    label: taylor_relaxation_connection_to_rotodiffusion
+    edge_status: D
+    justification: |
+      N365 grounds N367's structural derivation as cited in N367's
+      content: "Connection to N365: high rotation gives double benefit".
+    why_forced: |
+      Explicit citation in N367's claim/content identifies N365 as
+      structural input. Removing N365 dissolves the derivation chain
+      that N367 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N366
+    target: N367
+    label: fusion_z_landscape_connection_to_rotodiffusion
+    edge_status: D
+    justification: |
+      N366 grounds N367's structural derivation as cited in N367's
+      content: "Connection to N366: same fusion regime".
+    why_forced: |
+      Explicit citation in N367's claim/content identifies N366 as
+      structural input. Removing N366 dissolves the derivation chain
+      that N367 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N_InversiveTheory
+    target: N367
+    label: inversive_upgrades_rotodiffusion_stable_process
+    edge_status: D
+    justification: |
+      N_InversiveTheory grounds N367's structural derivation as cited in N367's
+      content: "WHY DEMONSTRATED upgraded via N_InversiveTheory".
+    why_forced: |
+      Explicit citation in N367's claim/content identifies N_InversiveTheory as
+      structural input. Removing N_InversiveTheory dissolves the derivation chain
+      that N367 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N357
+    target: N355
+    label: CKM_phase_grounds_quark_DF_derivation
+    edge_status: D
+    justification: |
+      N357 grounds N355's structural derivation as cited in N355's
+      content: "phase delta_q = 126.3662 deg DEMONSTRATED (N357)".
+    why_forced: |
+      Explicit citation in N355's claim/content identifies N357 as
+      structural input. Removing N357 dissolves the derivation chain
+      that N355 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N354
+    target: N357
+    label: lepton_step_5b_chain_applied_to_quark_rho1
+    edge_status: D
+    justification: |
+      N354 grounds N357's structural derivation as cited in N357's
+      content: "same Bar 1992 + APS section 4 chain as lepton Step 5b (N354), applied to rho_1".
+    why_forced: |
+      Explicit citation in N357's claim/content identifies N354 as
+      structural input. Removing N354 dissolves the derivation chain
+      that N357 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N188
+    target: N016
+    label: qualia_specifics_ground_zombie_critique
+    edge_status: D
+    justification: |
+      N188 grounds N016's structural derivation as cited in N016's
+      content: "N188 supplies CONDITIONAL qualia mapping; zombie argument relies on this gap".
+    why_forced: |
+      Explicit citation in N016's claim/content identifies N188 as
+      structural input. Removing N188 dissolves the derivation chain
+      that N016 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N251
+    target: N217
+    label: fine_structure_RGE_links_bottleneck_a4
+    edge_status: D
+    justification: |
+      N251 grounds N217's structural derivation as cited in N217's
+      content: "single Type 1 open task closes N217 and N251 simultaneously".
+    why_forced: |
+      Explicit citation in N217's claim/content identifies N251 as
+      structural input. Removing N251 dissolves the derivation chain
+      that N217 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N315
+    target: N264
+    label: variational_principle_uncertainty_grounds_r0_balance
+    edge_status: D
+    justification: |
+      N315 grounds N264's structural derivation as cited in N264's
+      content: "edge target from N321 (Uncertainty Principle as Z-balance), N321 alias of N315".
+    why_forced: |
+      Explicit citation in N264's claim/content identifies N315 as
+      structural input. Removing N315 dissolves the derivation chain
+      that N264 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N315
+    target: N028
+    label: scale_free_topology_chain_to_stub_placeholder
+    edge_status: D
+    justification: |
+      N315 grounds N028's structural derivation as cited in N028's
+      content: "A_0 trajectory output from N316 (alias of N315)".
+    why_forced: |
+      Explicit citation in N028's claim/content identifies N315 as
+      structural input. Removing N315 dissolves the derivation chain
+      that N028 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N114
+    label: L31_chain_to_generation_isomorphism_stub
+    edge_status: D
+    justification: |
+      N311 grounds N114's structural derivation as cited in N114's
+      content: "L(3,1) chain input to N313a (alias of N311), generation isomorphism chain".
+    why_forced: |
+      Explicit citation in N114's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N114 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N228
+    label: critical_transitions_chain_to_isomorphism_stub
+    edge_status: D
+    justification: |
+      N311 grounds N228's structural derivation as cited in N228's
+      content: "Critical transitions input to N313a (alias of N311)".
+    why_forced: |
+      Explicit citation in N228's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N228 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N273
+    label: scale_free_topology_chain_output
+    edge_status: D
+    justification: |
+      N311 grounds N273's structural derivation as cited in N273's
+      content: "Scale-free topology node, output of N314 (alias of N311)".
+    why_forced: |
+      Explicit citation in N273's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N273 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N301
+    target: N274
+    label: spectral_dim_2_UV_regime_loop
+    edge_status: D
+    justification: |
+      N301 grounds N274's structural derivation as cited in N274's
+      content: "Spectral dimension d_s = 2 at r -> 0, bidirectional loop with N309 (alias of N301)".
+    why_forced: |
+      Explicit citation in N274's claim/content identifies N301 as
+      structural input. Removing N301 dissolves the derivation chain
+      that N274 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N275
+    label: CP_structure_Z3_chain_output
+    edge_status: D
+    justification: |
+      N311 grounds N275's structural derivation as cited in N275's
+      content: "CP structure = Z_3 coordinate reflection. Output of N313b (alias of N311)".
+    why_forced: |
+      Explicit citation in N275's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N275 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N276
+    label: antimatter_Z3_inversion_chain_output
+    edge_status: D
+    justification: |
+      N311 grounds N276's structural derivation as cited in N276's
+      content: "Antimatter = Z_3 inversion. Output of N313b (alias of N311)".
+    why_forced: |
+      Explicit citation in N276's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N276 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N310
+    target: N278
+    label: godel_argument_chain_input
+    edge_status: D
+    justification: |
+      N310 grounds N278's structural derivation as cited in N278's
+      content: "Input to N310 (Godel incompleteness node)".
+    why_forced: |
+      Explicit citation in N278's claim/content identifies N310 as
+      structural input. Removing N310 dissolves the derivation chain
+      that N278 relies on. Direction: cited grounds citing per framework
+      convention.
+
+  - source: N311
+    target: N280
+    label: godel_argument_chain_path_a
+    edge_status: D
+    justification: |
+      N311 grounds N280's structural derivation as cited in N280's
+      content: "Path A of Godel argument chain. Input to N312 (alias of N311)".
+    why_forced: |
+      Explicit citation in N280's claim/content identifies N311 as
+      structural input. Removing N311 dissolves the derivation chain
+      that N280 relies on. Direction: cited grounds citing per framework
+      convention.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
