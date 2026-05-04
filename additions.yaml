@@ -538,6 +538,98 @@ edges:
       and structural definition (N078) are two faces of one Z_hidden
       concept.
 
+  - source: N371
+    target: N330
+    label: basin_dynamics_explains_polarisation
+    edge_status: D
+    justification: |
+      N371 establishes BPI dynamics as hydrodynamics in Z-space. N330
+      identifies polarisation specifically: under sustained K(F) >> K(O)
+      overload, the A_0-optimal compression to budget-K(O) is the
+      minimum non-trivial partition — two states. The BPI hydrodynamic
+      flow under sustained overload necessarily collapses to a binary
+      basin structure. Two basins, no intermediate state — polarisation
+      is the asymptotic regime of N371's flow under information overload.
+    why_forced: |
+      Alternative compressions (3-way, n-way) require greater K(O) budget
+      than 2-way. Under K(O) constraint, argmin Z forces minimum non-
+      trivial partition. Trivial partition (1 state) carries no
+      distinction; 2-state is the next available — and it is reached
+      first by argmin under tightening constraint. N371's flow taxonomy
+      forces this asymptote.
+
+  - source: N330
+    target: N371
+    label: binary_collapse_is_degenerate_basin
+    edge_status: D
+    justification: |
+      Reverse direction: polarisation is a specific degenerate case of
+      N371's basin taxonomy. Two-basin structure with no intermediate
+      attractors is the limiting case of N371's flow under maximum
+      information overload. N330 specialises N371; N371 grounds N330.
+    why_forced: |
+      Bidirectional structural identity between BPI hydrodynamic regime
+      (N371) and social polarisation pattern (N330). Same structure,
+      two coordinate readings: BPI-internal and social-collective.
+
+  - source: N112
+    target: N330
+    label: Observer_Containment_forces_binarisation
+    edge_status: D
+    justification: |
+      N112 (Observer Containment Lemma) establishes K(O) < K(F) — observer
+      complexity is strictly less than the field complexity. Under
+      sustained overload (K(F) >> K(O)), the BPI must compress field
+      input to fit within K(O) budget. The argmin-Z compression of
+      n-dimensional input to K(O) budget is the minimum non-trivial
+      partition. N330 follows directly from N112 + I_Bound.
+    why_forced: |
+      Alternative requires either (a) BPI without K(O) bound — denies
+      Observer Containment, contradicts N112; or (b) compression that
+      doesn't reach minimum partition — fails argmin Z when K(O)
+      tightens. N330 is the asymptotic argmin of N112 under overload.
+
+  - source: N332
+    target: N371
+    label: trust_asymmetry_is_phase_transition_hysteresis
+    edge_status: D
+    justification: |
+      Trust = Z_hidden(A|B) ≈ 0 (B's state predictable to A within
+      relevant scope). Building trust = reducing Z_hidden = entropy
+      reduction = costs work (Second Law). Destroying trust = single
+      Z_hidden spike = entropy increase = free. The asymmetry —
+      "trust takes years, seconds to destroy" — IS phase-transition
+      hysteresis: forward direction (build) requires sustained energy
+      input, backward direction (destroy) is barrier-free relaxation
+      to high-entropy state. N371's BPI hydrodynamic flow has this
+      hysteresis built into its regime structure.
+    why_forced: |
+      Alternative requires either (a) trust as symmetric quantity —
+      contradicts I_Null (Second Law) in social graphs: ΔS(disorder)
+      ≪ ΔS(order) is forced by entropy direction; or (b) trust without
+      entropy interpretation — but Z_hidden IS entropy of inaccessible
+      state per N078 Landauer grounding. The asymmetry is forced by
+      thermodynamics, not by social convention.
+
+  - source: N_Invariants
+    target: N332
+    label: I_Null_in_social_substrate
+    edge_status: D
+    justification: |
+      I_Null (the null transition is unique; equivalently, Second Law:
+      no spontaneous entropy decrease) is one of the four DEMONSTRATED
+      invariants in N_Invariants. N332 (trust asymmetry) is precisely
+      I_Null specialised to the social-graph substrate: trust building
+      = entropy reduction (forbidden spontaneously, requires work);
+      trust destruction = entropy increase (spontaneous, free). The
+      same equation, different substrate.
+    why_forced: |
+      Alternative requires social-graph entropy dynamics that violate
+      I_Null — but I_Null is DEMONSTRATED at the manifold level
+      (uniqueness of null transition; Z_therm strict monotone increase
+      per Landauer). Specialising to any substrate preserves the
+      direction. N332 is forced by I_Null with no remaining freedom.
+
   - source: DEF
     target: N183
     label: cognitive_states_as_A0_topology
@@ -763,6 +855,86 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N330
+    title: Polarisation as A₀ Binary Compression Under Information Overload
+    layer: comms
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      Under sustained information overload (K(F) >> K(O), per N112), the
+      BPI must compress n-dimensional input to a budget-K(O) representation.
+      The A_0-optimal compression is the minimum non-trivial partition:
+      two states. Any BPI network under sustained overload necessarily
+      collapses to a binary state. Polarisation is not a social pathology
+      requiring explanation — it is the asymptotic argmin Z of compression
+      under tightening K(O) constraint.
+    why_status: |
+      DEMONSTRATED through forced chain N112 (DEMONSTRATED, Observer
+      Containment) + I_Bound (DEMONSTRATED, finite K(O) budget) ⇒
+      binarisation as argmin Z. No identification step remains. A=3 from
+      three independent confirmations: (1) Observer Containment K(O)<K(F)
+      requires compression; (2) I_Bound forces finite budget on
+      compression representation; (3) minimum non-trivial partition is
+      mathematically two — any 1-partition is trivial, any n-partition
+      with n>2 requires more than budget-K(O) bits to maintain
+      distinctions.
+    not_misinterpretations: |
+      polarisation is irrational mass behaviour (it is the structurally
+      forced asymptote of BPI compression under overload — argmin Z, not
+      irrationality) · this requires modelling group dynamics (the binary
+      collapse is per-BPI; collective polarisation is the aggregate of
+      individual A_0-forced compressions) · diversity-promotion can
+      reverse polarisation (it can only succeed if it reduces K(F)
+      below the K(O) saturation threshold; otherwise the compression
+      remains forced) · this is descriptive, not predictive (it predicts
+      that any information environment with K(F) >> K(O) will produce
+      polarisation in connected BPI networks — observationally
+      consistent with social-media polarisation studies)
+
+  - id: N332
+    title: Trust Asymmetry as Second Law in Social Graphs
+    layer: comms
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      Trust = Z_hidden(A|B) ≈ 0 (B's state is predictable to A within
+      relevant scope). Building trust = reducing Z_hidden = entropy
+      reduction = costs work (Second Law / I_Null, DEMONSTRATED).
+      Destroying trust = one Z_hidden spike = entropy increase = free.
+      The asymmetric "trust takes years, seconds to destroy" is a direct
+      Second Law corollary in social graphs — phase-transition hysteresis
+      with sustained-input forward direction and barrier-free reverse.
+      ΔS(order→disorder) ≫ ΔS(disorder→order) IS I_Null in the social
+      substrate.
+    why_status: |
+      DEMONSTRATED through forced chain I_Null (Second Law, one of four
+      DEMONSTRATED invariants in N_Invariants) ⇒ entropy direction
+      preserved across substrates ⇒ trust dynamics asymmetric. The
+      identification Z_hidden(A|B) ≡ entropy of inaccessible state is
+      Class A (forced by N078 Landauer grounding). A=3 from three
+      independent confirmations: (1) I_Null at manifold level
+      (Z_therm strict monotone increase via Landauer); (2) Z_hidden as
+      thermodynamic entropy via N078 (Jacobson grounding);
+      (3) phenomenological observation across social systems (no
+      society spontaneously increases trust; trust collapse is generic
+      and rapid).
+    not_misinterpretations: |
+      this is a moral observation about human nature (it is a Second-Law
+      corollary in the social substrate — same equation as physical
+      entropy direction) · trust can be rebuilt symmetrically with
+      enough effort (the asymmetry is in spontaneous direction; rebuilding
+      requires sustained work input, exactly as predicted) · this is
+      pessimistic / depressing (it is structurally precise; it identifies
+      the work required to maintain trust, which enables interventions)
+      · this contradicts examples of rapid trust development (rapid trust
+      = rapid Z_hidden reduction, possible when channel capacity matches
+      work input; the asymmetry is in spontaneous baseline, not in
+      maximum achievable rate)
 
   - id: N183
     title: Topology of Cognitive States — Neurosis as Metastable Vortex, Meditation as Z_narr → 0

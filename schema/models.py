@@ -123,6 +123,8 @@ LAYER_MAP: dict[str, Layer] = {
     "N048": Layer.COMMS,
     "N001": Layer.COMMS,
     "N336": Layer.COMMS,
+    "N330": Layer.COMMS,  # Polarisation as A₀ Binary Compression
+    "N332": Layer.COMMS,  # Trust Asymmetry as Second Law in Social Graphs
 }
 
 

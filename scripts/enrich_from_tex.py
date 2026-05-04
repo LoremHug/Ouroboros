@@ -47,6 +47,8 @@ MANUAL_MAP: dict[str, list[str]] = {
     "N366": ["sec:fusion-z"],
     "N367": ["sec:rotodiffusion"],
     "N363": ["sec:zipf"],
+    "N330": ["sec:hom-social"],
+    "N332": ["sec:hom-social"],
     "N_PhiAttractor": ["sec:fibonacci"],
     "N_EngagementArchitecture": [
         "sec:adap-statement", "sec:adap-cross-substrate",
