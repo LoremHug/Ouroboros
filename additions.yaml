@@ -91,6 +91,48 @@ edges:
       being structural inevitability and becomes a hypothesis. No
       structurally coherent alternative.
 
+  - source: N_Triangulation
+    target: N067
+    label: triangulation_forces_spectral_dim_3
+    edge_status: D
+    justification: |
+      Triangulation forces Z to have exactly 3 components. The same π₁(L(3,1))
+      = Z₃ acting on S³ that produces the 3-fold Z-decomposition also forces
+      the spectral dimension formula d_s(r) = 2 + 2r/(r + r_0) via RG fixed
+      point analysis (η = 0 exact for the linear A₀ operator). At the unique
+      half-transition scale r_0, d_s(r_0) = 3. The same "3" appears in both
+      coordinates because both follow from one topological fact.
+    why_forced: |
+      Alternative requires either (a) d_s(r_0) ≠ 3 — but RG analysis with
+      η = 0 (Nelson 1966; Wilson-Fisher) gives the unique formula d_s(r) =
+      2 + 2r/(r + r_0); substitution at r = r_0 yields exactly 3 with no
+      free parameter; or (b) triangulation has Z components ≠ 3 — but
+      N_Triangulation establishes the triangulation principle (3 minimal
+      Z-components for unique localisation in transition-space) as forced
+      by definition of minimality. Both routes converge on 3, and the
+      convergence is itself structural, not coincidental.
+
+  - source: N067
+    target: N_Triangulation
+    label: spectral_dim_3_confirms_triangulation
+    edge_status: D
+    justification: |
+      Independent topological derivation (sec:spectral-dim-prob via L(3,1)
+      Hopf fibration, RG fixed point with η = 0) yields d_s(r_0) = 3 with no
+      reference to Z-decomposition. This is a coordinate confirmation of
+      the triangulation count: two independent calculations (Z-component
+      count from triangulation, spectral dimension from RG) yielding the
+      same integer 3 is the structural signature of one fact in two
+      coordinates.
+    why_forced: |
+      The convergence is forced because both calculations descend from
+      π₁(L(3,1)) = Z₃: the Z-decomposition via the Z₃ covering action
+      (N_ZGaugeDecomposition), the spectral dimension via the Z₃ fibre-
+      freezing in the Hopf fibration. Were the values different, that would
+      signal inconsistent topology between the two coordinate expressions.
+      Their identity at value 3 is forced by the same underlying topological
+      structure.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -130,3 +172,44 @@ nodes:
       degree 3) · real or quaternionic alternatives are possible for
       the Hilbert space on L(3,1) (the Z3 spectrum excludes them by
       character theory; complex coefficients are structurally necessary)
+
+  - id: N067
+    title: Spectral Dimension d_s(r) and the Half-Transition Scale
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      The spectral dimension d_s(r) = 2 + 2r/(r + r_0) follows uniquely from
+      RG fixed-point analysis with η = 0 (exact for the linear A_0 operator).
+      At the unique half-transition scale r_0, d_s(r_0) = 3. Three independent
+      characterisations of r_0 coincide: (i) scale where d_s = 3, (ii) thermal
+      de Broglie wavelength sqrt(ℏ²/m k_B T), (iii) impedance balance scale
+      where Z_struct = Z_therm. Boundary conditions: d_s(0) = 2 (UV, Z₃ fibre
+      freezing on Hopf base S²), d_s(∞) = 4 (IR, full L(3,1) × ℝ resolved).
+    why_status: |
+      DEMONSTRATED on three independent paths converging on the same formula.
+      (1) Functional form: η = 0 is exact for A_0 = argmin Z (a linear
+      selection operator with no higher-order interactions; Gaussian fixed
+      point per Nelson 1966 / Wilson-Fisher). The RG equation r·dd_s/dr =
+      c(d_s − 2)(4 − d_s) with η = 0 yields uniquely n = 1 in d_s(r) = 2 +
+      2/(1 + (r_0/r)^n). (2) UV boundary d_s(0) = 2: forced by Z₃ fibre-
+      freezing on the Hopf S¹ → S³ → S² of L(3,1); the discrete Z₃
+      direction drops out of the return-probability dimension at r ≪ r_0.
+      (3) IR boundary d_s(∞) = 4: dim(L(3,1)) + dim(ℝ_time) = 3 + 1.
+      Independent external confirmation: Causal Dynamical Triangulations,
+      Asymptotic Safety Gravity, and Loop Quantum Gravity find d_s(0) = 2
+      in three separate quantum gravity programmes — convergence on the
+      same UV reduction without coordination, evidence the Z₃ fibre-freezing
+      mechanism is universal.
+    not_misinterpretations: |
+      d_s(r) = 2 + 2r/(r + r_0) is fitted to data (it is RG fixed-point
+      determined by η = 0 exactness; no fit) · η ≠ 0 might apply (η = 0
+      identically for argmin of a linear functional — no non-Gaussian
+      vertices to generate anomalous dimension) · d_s(0) = 2 is borrowed
+      from CDT/ASG/LQG (it is structurally derived from Z₃ fibre-freezing
+      on the Hopf base S²; CDT/ASG/LQG independently capture the same
+      mechanism, which is why their convergence is evidence not assumption)
+      · the value 3 at r_0 is approximate (it is exact substitution into
+      the RG formula at the half-transition scale)
