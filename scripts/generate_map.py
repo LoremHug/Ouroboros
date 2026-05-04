@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from scripts.db import connect  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "web" / "map.html"
+OUT = ROOT / "web" / "index.html"
 
 
 def fetch_data() -> dict:
