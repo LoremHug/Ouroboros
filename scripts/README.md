@@ -1,6 +1,7 @@
 # Ouroboros toolkit
 
-Local Kuzu-backed structural graph + map generator. Single venv, no external services.
+Local Kuzu-backed structural graph + map generator + MCP server. Single venv,
+no external services.
 
 ## Setup (one-time)
 
@@ -8,6 +9,27 @@ Local Kuzu-backed structural graph + map generator. Single venv, no external ser
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
+
+## MCP server (Claude Code integration)
+
+`.mcp.json` at the repo root registers a project-scoped MCP server exposing
+direct tool calls to the Kuzu graph. After cloning + setup, **restart Claude
+Code in this directory** so it picks up the config. First-time use prompts
+for approval; once approved, these tools become available:
+
+| Tool | Purpose |
+|---|---|
+| `query` | raw Cypher (read-only by convention) |
+| `get_node` | full node details + edges + linked .tex sections in one call |
+| `get_section` | full body of a .tex section by label |
+| `list_stubs` | STUB / placeholder nodes with degree |
+| `find_jaccard_pairs` | candidate missing edges (high common-neighbour, no direct edge) |
+| `graph_stats` | counts: status, layer, placeholders, unjustified edges |
+| `add_or_update_node` | upsert node into additions.yaml + DB |
+| `add_or_update_edge` | upsert edge into additions.yaml + DB |
+
+Writes go through `additions.yaml` (committed source-of-truth) before
+mirroring to the live DB. Always commit `additions.yaml` after a session.
 
 ## Build / rebuild the database
 
