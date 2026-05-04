@@ -32,11 +32,14 @@ class Node(BaseModel):
     anchors: int = 0
     a_infinity: bool = False
     summary: str = ""
+    why_status: str = ""
+    not_misinterpretations: str = ""
     content: str = ""
     z_struct: float = 0.0
     z_therm: float = 0.0
     z_hidden: float = 0.0
     level: int = -1
+    is_placeholder: bool = False
 
 
 class EdgeStatus(str, Enum):

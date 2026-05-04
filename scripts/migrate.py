@@ -1,14 +1,16 @@
 """Migrate manifold_graph.txt → Kuzu DB.
 
 Idempotent: drops and recreates DB on each run.
-Parses node blocks ([N_xxx] ... edges) and adjacency lines (A --> B : label [D]).
+Parses node blocks ([N_xxx] ... fields ... edges).
+Extracts: CLAIM, WHY DEMONSTRATED/STRONG/CONDITIONAL/OPERATIONAL, NOT, edges.
+Filters spurious section markers (META, CONCL, NORM_SILENCE).
+Marks "Stub — Referenced in Edge Lists" entries as is_placeholder.
 """
 from __future__ import annotations
 import re
 import sys
 from pathlib import Path
 
-# Make package imports work when run as script
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from schema import Node, Edge, Status, EdgeStatus, layer_of  # noqa: E402
@@ -17,9 +19,29 @@ from scripts.db import connect, reset, DB_PATH  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 GRAPH_FILE = ROOT / "manifold_graph.txt"
 
+# Allowlist for valid node IDs: DEF, Nxxx (numeric), N_Xxx (named).
+# Spurious markers like META/CONCL/NORM_SILENCE are filtered out.
+VALID_ID_RE = re.compile(r"^(DEF|N\d+[a-z]?|N_[A-Za-z]\w*)$")
+
 NODE_HEADER_RE = re.compile(r"^\[([A-Za-z0-9_]+)\](?:\s*\((.*?)\))?\s*$")
 STATUS_RE = re.compile(r"^Status:\s*(.+?)(?:\s*\|\s*A\s*=\s*(\S+))?\s*$")
-CLAIM_RE = re.compile(r"^CLAIM:\s*(.+)$", re.IGNORECASE)
+
+# Field markers that begin multi-line node-level field bodies.
+# Each runs until the next marker, edge line, node header, or comment.
+FIELD_MARKERS = {
+    "CLAIM": "summary",
+    "WHY DEMONSTRATED": "why_status",
+    "WHY STRONG": "why_status",
+    "WHY CONDITIONAL": "why_status",
+    "WHY OPERATIONAL": "why_status",
+    "WHY NOT DEMONSTRATED": "why_status",
+    "WHY NOT PURE DEMONSTRATED": "why_status",
+    "NOT": "not_misinterpretations",
+}
+FIELD_RE = re.compile(
+    r"^(" + "|".join(re.escape(k) for k in FIELD_MARKERS) + r"):\s*(.*)$"
+)
+
 EDGE_RE = re.compile(
     r"^([A-Za-z0-9_]+)\s*-->\s*([A-Za-z0-9_]+)\s*"
     r"(?::\s*([^\[\n]+?))?\s*"
@@ -27,26 +49,21 @@ EDGE_RE = re.compile(
 )
 
 
-def parse_status(s: str) -> tuple[Status, int, bool]:
-    """Extract primary status, anchor count, and a_infinity flag."""
-    s_part = s.strip()
-    # Multi-status lines like "DEMONSTRATED / STRONG" → take first
-    primary = s_part.split("/")[0].strip().split("(")[0].strip()
+def parse_status(s: str) -> Status:
+    """First token of multi-status (e.g. 'DEMONSTRATED / STRONG' → DEMONSTRATED)."""
+    primary = s.strip().split("/")[0].strip().split("(")[0].strip()
     try:
-        status = Status(primary)
+        return Status(primary)
     except ValueError:
-        status = Status.STUB
-    return status
+        return Status.STUB
 
 
 def parse_anchors(a: str | None) -> tuple[int, bool]:
-    """Parse 'A=N' or 'A=∞'. Returns (anchors, a_infinity)."""
     if not a:
         return 0, False
     a = a.strip()
     if a in ("∞", r"\infty", "infinity", "inf"):
         return 0, True
-    # Multi-value like "4,5" — take max
     nums = re.findall(r"\d+", a)
     if not nums:
         return 0, False
@@ -56,72 +73,110 @@ def parse_anchors(a: str | None) -> tuple[int, bool]:
 def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
     nodes: dict[str, Node] = {}
     edges: list[Edge] = []
+    skipped_markers: list[str] = []
 
     lines = text.splitlines()
-    i = 0
-    current_id: str | None = None
-    current_title: str = ""
-    current_status: Status = Status.STUB
-    current_anchors: int = 0
-    current_a_inf: bool = False
-    current_claim: str = ""
-    current_content: list[str] = []
+    n = len(lines)
 
-    def flush():
-        nonlocal current_id, current_title, current_status
-        nonlocal current_anchors, current_a_inf, current_claim, current_content
-        if current_id is None:
+    # Walking state for current node
+    cur: dict | None = None  # active node accumulator
+    cur_field: str | None = None  # field currently being accumulated
+    cur_field_lines: list[str] = []
+
+    def commit_field():
+        """Save current field body into current node."""
+        nonlocal cur_field, cur_field_lines
+        if cur is None or cur_field is None:
+            cur_field = None
+            cur_field_lines = []
             return
-        nodes[current_id] = Node(
-            id=current_id,
-            title=current_title,
-            layer=layer_of(current_id),
-            status=current_status,
-            anchors=current_anchors,
-            a_infinity=current_a_inf,
-            summary=current_claim[:280],
-            content="\n".join(current_content).strip(),
-        )
-        current_id = None
-        current_title = ""
-        current_status = Status.STUB
-        current_anchors = 0
-        current_a_inf = False
-        current_claim = ""
-        current_content = []
+        body = "\n".join(cur_field_lines).strip()
+        # Append to existing (multiple WHY blocks merge)
+        prev = cur.get(cur_field, "")
+        cur[cur_field] = (prev + "\n\n" + body).strip() if prev else body
+        cur_field = None
+        cur_field_lines = []
 
-    while i < len(lines):
+    def commit_node():
+        nonlocal cur
+        if cur is None:
+            return
+        commit_field()
+        title = cur.get("title", "")
+        is_placeholder = "Stub — Referenced" in title or "stub" in title.lower()
+        nodes[cur["id"]] = Node(
+            id=cur["id"],
+            title=title,
+            layer=layer_of(cur["id"]),
+            status=cur.get("status", Status.STUB),
+            anchors=cur.get("anchors", 0),
+            a_infinity=cur.get("a_infinity", False),
+            summary=cur.get("summary", "")[:1000],
+            why_status=cur.get("why_status", ""),
+            not_misinterpretations=cur.get("not_misinterpretations", ""),
+            content="\n".join(cur.get("content_lines", [])).strip(),
+            is_placeholder=is_placeholder,
+        )
+        cur = None
+
+    i = 0
+    while i < n:
         line = lines[i]
         stripped = line.rstrip()
 
         # Skip section comments
         if stripped.startswith("%"):
+            commit_field()
             i += 1
             continue
 
+        # Node header
         m = NODE_HEADER_RE.match(stripped)
         if m:
-            flush()
-            current_id = m.group(1)
-            current_title = (m.group(2) or "").strip()
+            commit_node()
+            nid = m.group(1)
+            if not VALID_ID_RE.match(nid):
+                skipped_markers.append(nid)
+                cur = None
+                i += 1
+                continue
+            cur = {
+                "id": nid,
+                "title": (m.group(2) or "").strip(),
+                "content_lines": [],
+            }
             i += 1
             continue
 
-        if current_id is not None:
+        # Status (only valid in active node)
+        if cur is not None:
             sm = STATUS_RE.match(stripped)
             if sm:
-                current_status = parse_status(sm.group(1))
-                current_anchors, current_a_inf = parse_anchors(sm.group(2))
+                commit_field()
+                cur["status"] = parse_status(sm.group(1))
+                anchors, a_inf = parse_anchors(sm.group(2))
+                cur["anchors"] = anchors
+                cur["a_infinity"] = a_inf
                 i += 1
                 continue
-            cm = CLAIM_RE.match(stripped)
-            if cm:
-                current_claim = cm.group(1).strip()
 
-        # Edge line works regardless of node context (block-level edges live
-        # both inside node bodies and between blocks)
+            # New field marker (CLAIM:, WHY *:, NOT:)
+            fm = FIELD_RE.match(stripped)
+            if fm:
+                commit_field()
+                cur_field = FIELD_MARKERS[fm.group(1)]
+                first_value = fm.group(2).strip()
+                if first_value:
+                    cur_field_lines = [first_value]
+                else:
+                    cur_field_lines = []
+                i += 1
+                continue
+
+        # Edge line
         em = EDGE_RE.match(stripped)
         if em and "-->" in stripped:
+            commit_field()
             src, tgt, label, est = em.groups()
             try:
                 edge_status = EdgeStatus(est) if est else EdgeStatus.D
@@ -133,19 +188,36 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
                 label=(label or "").strip(),
                 edge_status=edge_status,
             ))
-            if current_id is not None:
-                current_content.append(stripped)
             i += 1
             continue
 
-        if current_id is not None:
-            current_content.append(line)
+        # Continuation: append to current field if active, else to free content
+        if cur is not None:
+            if cur_field is not None:
+                if line.strip():
+                    cur_field_lines.append(line.rstrip())
+                elif cur_field_lines:
+                    # Blank line ends the field body
+                    commit_field()
+            else:
+                cur["content_lines"].append(line)
 
         i += 1
 
-    flush()
+    commit_node()
 
-    # Synthesize Node entries for any edge endpoints missing from blocks
+    if skipped_markers:
+        print(f"skipped {len(skipped_markers)} non-node markers: {', '.join(skipped_markers)}")
+
+    # Synthesize stubs for edge endpoints not seen in any block.
+    # Filter edges referencing skipped markers.
+    valid_edges = []
+    for e in edges:
+        if not VALID_ID_RE.match(e.source) or not VALID_ID_RE.match(e.target):
+            continue
+        valid_edges.append(e)
+    edges = valid_edges
+
     for e in edges:
         for nid in (e.source, e.target):
             if nid not in nodes:
@@ -154,6 +226,7 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
                     layer=layer_of(nid),
                     status=Status.STUB,
                     summary="(referenced in edges, no block content)",
+                    is_placeholder=True,
                 )
     return nodes, edges
 
@@ -168,20 +241,26 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
             CREATE (n:Node {
                 id: $id, title: $title, layer: $layer, status: $status,
                 anchors: $anchors, a_infinity: $a_inf,
-                summary: $summary, content: $content,
-                z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl
+                summary: $summary, why_status: $why,
+                not_misinterpretations: $not_m,
+                content: $content,
+                z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
+                is_placeholder: $ph
             })
             """,
             {
                 "id": n.id, "title": n.title, "layer": n.layer.value,
                 "status": n.status.value, "anchors": n.anchors,
-                "a_inf": n.a_infinity, "summary": n.summary,
-                "content": n.content, "zs": n.z_struct, "zt": n.z_therm,
-                "zh": n.z_hidden, "lvl": n.level,
+                "a_inf": n.a_infinity,
+                "summary": n.summary,
+                "why": n.why_status,
+                "not_m": n.not_misinterpretations,
+                "content": n.content,
+                "zs": n.z_struct, "zt": n.z_therm, "zh": n.z_hidden,
+                "lvl": n.level, "ph": n.is_placeholder,
             },
         )
 
-    # Dedup edges (same source/target/label can appear repeatedly in source file)
     seen: set[tuple[str, str, str]] = set()
     for e in edges:
         key = (e.source, e.target, e.label)
@@ -211,11 +290,23 @@ def main() -> None:
 
     by_status: dict[str, int] = {}
     by_layer: dict[str, int] = {}
+    placeholders = 0
+    has_why = 0
+    has_not = 0
     for n in nodes.values():
         by_status[n.status.value] = by_status.get(n.status.value, 0) + 1
         by_layer[n.layer.value] = by_layer.get(n.layer.value, 0) + 1
-    print("status:", by_status)
-    print("layer :", by_layer)
+        if n.is_placeholder:
+            placeholders += 1
+        if n.why_status:
+            has_why += 1
+        if n.not_misinterpretations:
+            has_not += 1
+    print("status     :", by_status)
+    print("layer      :", by_layer)
+    print(f"placeholders: {placeholders}")
+    print(f"with why_status: {has_why}")
+    print(f"with NOT field : {has_not}")
 
     write_to_kuzu(nodes, edges)
     print(f"wrote → {DB_PATH}")

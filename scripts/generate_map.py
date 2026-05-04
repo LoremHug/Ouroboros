@@ -22,16 +22,21 @@ def fetch_data() -> dict:
     res = conn.execute("""
         MATCH (n:Node)
         RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
-               n.summary, n.content, n.z_struct, n.z_therm, n.z_hidden, n.level
+               n.summary, n.why_status, n.not_misinterpretations,
+               n.content, n.z_struct, n.z_therm, n.z_hidden, n.level,
+               n.is_placeholder
     """)
     while res.has_next():
         row = res.get_next()
         nodes.append({
             "id": row[0], "title": row[1], "layer": row[2],
             "status": row[3], "anchors": row[4], "a_infinity": row[5],
-            "summary": row[6], "content": row[7],
-            "z_struct": row[8], "z_therm": row[9], "z_hidden": row[10],
-            "level": row[11],
+            "summary": row[6],
+            "why_status": row[7],
+            "not_misinterpretations": row[8],
+            "content": row[9],
+            "z_struct": row[10], "z_therm": row[11], "z_hidden": row[12],
+            "level": row[13], "is_placeholder": row[14],
         })
 
     edges = []
@@ -333,9 +338,10 @@ const node = zoomG.append('g').selectAll('g')
 
 node.append('circle')
   .attr('r', nodeRadius)
-  .attr('fill', d => LAYER_COLORS[d.layer] + (d.layer === 'numeric' ? '55' : 'cc'))
+  .attr('fill', d => d.is_placeholder ? 'transparent' : LAYER_COLORS[d.layer] + (d.layer === 'numeric' ? '55' : 'cc'))
   .attr('stroke', d => LAYER_COLORS[d.layer])
   .attr('stroke-width', d => d.layer === 'core' ? 2 : 1)
+  .attr('stroke-dasharray', d => d.is_placeholder ? '3,3' : null)
   .attr('filter', d => d.layer === 'core' ? 'url(#glow)' : null);
 
 node.filter(d => d.layer !== 'numeric' || d.id === 'DEF')
@@ -414,12 +420,15 @@ function openNodePanel(d) {
       <span class="badge" style="color:${sc}">${d.status}</span>
       <span class="badge" style="color:#64748b">A = ${d.a_infinity ? '∞' : d.anchors}</span>
       <span class="badge" style="color:#64748b">deg ${adj.length}</span>
+      ${d.is_placeholder ? '<span class="badge" style="color:#B25A00">PLACEHOLDER</span>' : ''}
     </div>
-    ${d.summary ? `<div class="section"><div class="section-title">Summary</div><div class="content">${escapeHtml(d.summary)}</div></div>` : ''}
+    ${d.summary ? `<div class="section"><div class="section-title">Claim</div><div class="content">${escapeHtml(d.summary)}</div></div>` : ''}
+    ${d.why_status ? `<div class="section"><div class="section-title">Why ${escapeHtml(d.status)}</div><div class="content">${escapeHtml(d.why_status)}</div></div>` : ''}
+    ${d.not_misinterpretations ? `<div class="section"><div class="section-title">NOT (common misinterpretations)</div><div class="content">${escapeHtml(d.not_misinterpretations)}</div></div>` : ''}
     ${out.length ? `<div class="section"><div class="section-title">Outgoing → (${out.length})</div><div class="edge-list">${out.map(e => renderEdgeItem(e, 'out')).join('')}</div></div>` : ''}
     ${inE.length ? `<div class="section"><div class="section-title">← Incoming (${inE.length})</div><div class="edge-list">${inE.map(e => renderEdgeItem(e, 'in')).join('')}</div></div>` : ''}
     ${d.sections && d.sections.length ? `<div class="section"><div class="section-title">.tex sections (${d.sections.length})</div><div class="edge-list">${d.sections.map(s => `<div class="edge-item" onclick='openSectionPanel(${JSON.stringify(s.label)})'><span class="edge-arrow">§</span><span>${escapeHtml(s.title)}</span><span class="edge-label">${escapeHtml(s.label)}</span></div>`).join('')}</div></div>` : ''}
-    ${d.content ? `<div class="section"><div class="section-title">Graph entry</div><div class="content">${escapeHtml(d.content)}</div></div>` : ''}
+    ${d.content ? `<div class="section"><div class="section-title">Free body</div><div class="content">${escapeHtml(d.content)}</div></div>` : ''}
   `;
   panel.classList.add('open');
 }

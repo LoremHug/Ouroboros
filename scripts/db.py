@@ -25,11 +25,14 @@ def bootstrap_schema(conn: kuzu.Connection) -> None:
             anchors INT64,
             a_infinity BOOLEAN,
             summary STRING,
+            why_status STRING,
+            not_misinterpretations STRING,
             content STRING,
             z_struct DOUBLE,
             z_therm DOUBLE,
             z_hidden DOUBLE,
-            level INT64
+            level INT64,
+            is_placeholder BOOLEAN
         )
     """)
     conn.execute("""
@@ -47,7 +50,15 @@ def reset() -> None:
     """Delete the entire DB. Use only for clean re-migration."""
     import shutil
     if DB_PATH.exists():
-        shutil.rmtree(DB_PATH)
+        if DB_PATH.is_dir():
+            shutil.rmtree(DB_PATH)
+        else:
+            DB_PATH.unlink()
+    # Kuzu may also leave WAL/SHM sidecar files
+    for suffix in (".wal", ".shm", ".tmp"):
+        side = DB_PATH.with_suffix(DB_PATH.suffix + suffix)
+        if side.exists():
+            side.unlink()
 
 
 if __name__ == "__main__":
