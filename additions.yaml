@@ -731,6 +731,216 @@ edges:
       content. The convergence is the structural fact; N_NoSeparatePieces
       formulates this as the framework's general principle.
 
+  # ─── Forced edges discovered via find_jaccard_pairs (2026-05) ───
+
+  - source: N_Logic
+    target: N_Math
+    label: logic_grounds_mathematical_deduction
+    edge_status: D
+    justification: |
+      A theorem in mathematics IS a chain of logical deductions from
+      premises (axioms or prior results). Modus ponens applied iteratively
+      yields proof structure. N_Logic establishes that modus ponens is
+      argmin Z in formal substrate; N_Math establishes mathematical
+      existence as stability under A_0 iteration. Without logical
+      inference, mathematical proof has no engine — math operates ON the
+      logical inference engine.
+    why_forced: |
+      Alternative requires either (a) mathematics without logical
+      deduction — but proof by definition is a chain of valid
+      inferences, removing logic dissolves "proof"; or (b) logic and
+      math as independent domains — but theorems ARE the stable A_0
+      structures that logical iteration produces in formal substrate.
+      They are not separate domains: math is what logic produces under
+      A_0 iteration in formal substrate.
+
+  - source: N_Math
+    target: N_Logic
+    label: math_provides_substrate_for_logical_iteration
+    edge_status: D
+    justification: |
+      Reverse direction: mathematical structure (sets, types, formal
+      systems, propositions) provides the substrate ON WHICH logic
+      operates. Pure logic without mathematical objects has no content
+      to manipulate — modus ponens needs structured content to deduce
+      about. The substrate that logic acts on is mathematical.
+    why_forced: |
+      Bidirectional structural identity: without mathematical substrate,
+      logic is abstract relation operator with no content; without
+      logical iteration, math is static collection. The two are
+      coordinate twins of A_0 in symbolic substrate, mutually grounding.
+
+  - source: N112
+    target: N_InversiveTheory
+    label: observer_containment_grounds_inversive_argument
+    edge_status: D
+    justification: |
+      N_InversiveTheory's claim that "any attempt to falsify A_0 uses A_0
+      to do so" presupposes the falsifier cannot step outside A_0. This
+      is the formal content of N112 (Observer Containment Lemma): K(O) <
+      K(F) means observer complexity is strictly less than field
+      complexity, so the observer is contained within the field.
+      Without N112, the inversive argument has no formal anchor — without
+      observer containment, an external falsifier might exist in
+      principle.
+    why_forced: |
+      The inversive structural claim depends on the observer being unable
+      to occupy a position outside the structure being examined. K(O) <
+      K(F) is precisely the formal statement of that inability.
+      Alternative requires either (a) inversive theory without
+      containment — then "alternatives" can be evaluated externally,
+      contradicting the eliminative argument; or (b) containment without
+      inversive consequence — but containment IS what makes alternatives
+      structurally unreachable, hence non-existent at the level the
+      inversive theory operates on.
+
+  - source: N_EpistemicTraps
+    target: N_ZGaugeDecomposition
+    label: traps_arise_from_misread_Z_decomposition
+    edge_status: D
+    justification: |
+      N_EpistemicTraps catalogues 8 systematic reasoning failures. Trap 6
+      (transfer/cancellation as prerequisite) and Trap 8 (structure
+      selection among A_0-minima) are explicitly about misreading
+      Z-decomposition: assuming separate "structures" where one
+      Z-decomposition exists in different coordinates. The trap
+      descriptions reference N_ZGaugeDecomposition's domain (Z
+      components, gauge structure, covering action) as the substrate
+      where these errors occur.
+    why_forced: |
+      Trap 6 and Trap 8 cannot be formulated without prior identification
+      of "the Z-decomposition that gets misread." N_ZGaugeDecomposition
+      supplies the structural object (Z = Z_struct + Z_therm + Z_hidden
+      with Z_3 covering action), N_EpistemicTraps supplies the catalogue
+      of errors people make when reading it. Without ZGauge as the
+      structural target, the traps have no domain to operate on.
+
+  - source: N_InversiveTheory
+    target: N_TopologyProcessIdentity
+    label: inversive_resolution_implies_object_process_identity
+    edge_status: D
+    justification: |
+      N_InversiveTheory's "alternatives don't exist" applied to the
+      object/process distinction yields N_TopologyProcessIdentity: there
+      is no object SEPARATE from the process — they are one structure in
+      two coordinates. The inversive principle eliminates the apparent
+      duality at the most foundational level.
+    why_forced: |
+      The R1 artifact (object reification) IS an "alternative" in the
+      inversive sense — an alternative description of process-as-object.
+      N_InversiveTheory's argument that alternatives reduce to A_0 or
+      are unstable specializes to: object-frame is unstable as an
+      alternative description, so what remains is process-as-coordinate.
+      The R1 → topology-process identity move is structurally forced.
+
+  - source: N_TopologyProcessIdentity
+    target: N_InversiveTheory
+    label: object_process_identity_instantiates_inversive
+    edge_status: D
+    justification: |
+      Reverse direction: N_TopologyProcessIdentity is one specific
+      instance of N_InversiveTheory operating on the object/process
+      distinction. Each manifestation of "topology IS process, not
+      topology OF process" is an inversive resolution at a specific
+      coordinate level.
+    why_forced: |
+      Bidirectional structural identity — N_InversiveTheory provides the
+      general principle (no alternatives), N_TopologyProcessIdentity
+      provides one of its most important instantiations (no object/process
+      duality). Each grounds the other; the bidirectional edge reflects
+      that they sit at the same structural level, neither logically prior.
+
+  - source: N370
+    target: N373
+    label: L31_topology_forces_UTe2_active_space
+    edge_status: D
+    justification: |
+      N370 establishes L(3,1) = S³/Z_3 as the inevitable manifold for
+      any BPI at the critical dimension. N373 (UTe_2 superconducting
+      Z-minimum) operates on this exact manifold: the 4D Kramers-pair
+      active space, antisymmetric rung coupling, and bc-plane d-vector
+      are forced features once L(3,1) topology is fixed. UTe_2 is one
+      material-substrate realisation of the geometry N370 forces.
+    why_forced: |
+      UTe_2's structural claims derive from L(3,1) topology + material
+      parameters. Alternative requires either (a) UTe_2 physics on a
+      different manifold — but N370 forecloses other manifolds for any
+      BPI at the critical dimension; or (b) the L(3,1)/material connection
+      being incidental — but the Z_3-graded structure of the active space
+      directly maps to π_1(L(3,1)) = Z_3.
+
+  - source: N370
+    target: N374
+    label: L31_topology_forces_UPt3_three_phase_structure
+    edge_status: D
+    justification: |
+      N370 forces L(3,1) as the substrate manifold. N374 (UPt_3 three-
+      phase superconducting Z-minimum) realises the three-phase 2D active
+      space in the conduction sector with f² non-magnetic local ground
+      state. The "three phases" of UPt_3 directly map to the three
+      Z_3-sectors of L(3,1) covering structure.
+    why_forced: |
+      UPt_3's three-phase structure is forced by π_1(L(3,1)) = Z_3 in
+      exactly the same way that three particle generations are forced
+      (per N370 + N_ZGaugeDecomposition). Alternative requires either
+      different number of phases (excluded by Z_3) or different manifold
+      (excluded by N370). The substrate-realisation chain is structural.
+
+  - source: N370
+    target: N375
+    label: L31_topology_forces_cuprate_dual_sector_phase_diagram
+    edge_status: D
+    justification: |
+      N370 forces L(3,1) substrate. N375 (Cuprate phase diagram) realises
+      the dual-sector pseudogap phase + single-sector strange metal +
+      sector-level topology change at p* on this substrate. The
+      "dual-sector" structure is precisely the Z_3-covering decomposition
+      manifested in cuprate carriers.
+    why_forced: |
+      Cuprate phase diagram is parametric family on the same L(3,1)
+      substrate that N370 forces. The earlier 35-year "competing theories"
+      debate (RVB, spin-fluctuations, t-J, etc.) is resolved as Trap 8
+      (structure selection among A_0-minima): all candidates were
+      coordinate projections of the dual-sector Z-structure on L(3,1).
+      Without N370, the dual-sector decomposition has no manifold home.
+
+  - source: N370
+    target: N376
+    label: L31_topology_forces_iron_based_multi_orbital_phase_diagram
+    edge_status: D
+    justification: |
+      N370 forces L(3,1) substrate. N376 (Iron-based superconductor
+      family) realises the multi-orbital parametric family with coupled
+      multi-sector phase diagram on this substrate. The multi-orbital
+      structure (d_xy, d_xz, d_yz) couples to the Z_3-graded sector
+      structure of L(3,1) through orbital-sector mixing.
+    why_forced: |
+      Iron-based families' coupled multi-sector phase diagram is forced
+      by the Z_3-graded covering structure on L(3,1). Alternative requires
+      either decoupled sectors (excluded by Z_3 covering action) or
+      different manifold (excluded by N370). Iron pnictides/chalcogenides
+      are parametric realisations of the same structural template that
+      cuprates instantiate, on the same substrate.
+
+  - source: N188
+    target: N_NoSeparatePieces
+    label: qualia_trigger_is_not_separate_pieces
+    edge_status: D
+    justification: |
+      N188's CLAIM directly: "Qualia and their triggers are not separate
+      structures with a relationship between them — they are coupled
+      coordinate readings of one transition... not separate structures."
+      This phrasing IS N_NoSeparatePieces principle applied to the
+      qualia/trigger relationship. N188 is the specific instantiation of
+      the no-separate-pieces principle in the qualia substrate.
+    why_forced: |
+      Without N_NoSeparatePieces as the general principle, N188's "not
+      separate, two coordinate readings" claim is ungrounded — it would
+      be one specific structural argument unconnected to the framework's
+      systematic position. With N_NoSeparatePieces, N188 is a forced
+      specialisation: any apparent qualia/trigger duality dissolves under
+      the same R1-resolution that N_NoSeparatePieces formulates generally.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
