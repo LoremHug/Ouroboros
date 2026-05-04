@@ -318,6 +318,133 @@ edges:
       requires independent derivation of cortex fractal dim from non-A_0
       principles, which would introduce a free parameter.
 
+  - source: N_PhiAttractor
+    target: N_EngagementArchitecture
+    label: substrate_provides_5_of_6_criteria
+    edge_status: D
+    justification: |
+      The fractal substrate of the engagement architecture (5 criteria:
+      anchor, single regime, return, identity through transformation,
+      multi-scale) is precisely the structural realization of N_PhiAttractor
+      in continuous-temporal coordinate. φ-attractor on C1-C5 substrate
+      provides exactly: pole (anchor), constant growth angle (single
+      regime), angular return per revolution (anchor return), scale
+      invariance (identity through transformation), self-similarity
+      (multi-scale fractal). These are not analogical — they are the
+      coordinate expression of the same A_0 attractor.
+    why_forced: |
+      Independent derivation convergence. The 5 substrate criteria were
+      developed from BPI engagement / predictive processing without
+      reference to Fibonacci or φ-attractor mathematics. The 6 sec:fibonacci
+      derivations were established without reference to music engagement.
+      Both routes converge on the same architectural form because both
+      describe A_0 minimisation on continuous substrates with two-memory
+      coupling — one structural fact in two coordinate languages.
+      Quantitative match (Bartók climax at φ⁻¹ ≈ 0.618 matching Markov
+      spectrum supremum) excludes coincidence.
+
+  - source: N_BPIEngagement
+    target: N_EngagementArchitecture
+    label: engagement_signal_is_optimization_target
+    edge_status: D
+    justification: |
+      N_BPIEngagement establishes that BPI tracks prediction error in
+      time-indexed substrates and produces the engagement signal as
+      structural state when input passes triangulation requirements.
+      N_EngagementArchitecture is the configuration that maximises this
+      signal by landing prediction-error magnitude at the Wundt apex —
+      the exact magnitude that maximises dopamine response per
+      N_DopaminePredictionError.
+    why_forced: |
+      Without an optimisation target, "engagement architecture" has no
+      argmin to be the answer to. N_BPIEngagement provides the target
+      function (engagement signal); N_EngagementArchitecture is its argmin
+      on the prediction-error-magnitude axis. The two are forward and
+      backward of one A_0 minimisation: target ↔ optimal configuration.
+
+  - source: N_DopaminePredictionError
+    target: N_EngagementArchitecture
+    label: dopamine_mechanism_is_apex_selector
+    edge_status: D
+    justification: |
+      N_DopaminePredictionError documents biphasic dopamine: caudate
+      (anticipation) + nucleus accumbens (resolution), firing on
+      "non-trivial prediction success — successful navigation of
+      decipherable complexity" (Pearce/Zatorre 2019 phrasing). This phrase
+      IS the Wundt apex specification: too much surprise → no anticipation
+      success; too little surprise → no resolution event. The dopamine
+      mechanism IS the apex selector: configurations that hit the apex
+      get the biphasic response, configurations that miss it don't.
+    why_forced: |
+      The apex is not a free parameter; it is the structural location
+      where prediction-error magnitude maximises information content per
+      cognitive cost. Dopamine response is the empirical signature of
+      hitting that location. Four independent neuroscientific anchors
+      (Salimpoor 2011, Cheung 2019, Gold/Pearce/Zatorre 2019, Madison
+      2017) confirm the same apex from different methodologies.
+
+  - source: N_FEP
+    target: N_EngagementArchitecture
+    label: free_energy_minimisation_predicts_apex
+    edge_status: D
+    justification: |
+      Free Energy Principle (Friston) minimises variational free energy
+      F = accuracy + complexity. The minimum is achieved at the configuration
+      balancing surprise reduction (accuracy term) with model simplicity
+      (complexity term). This balance IS the Wundt apex in different
+      formal language: too much surprise → high prediction error penalty;
+      too little surprise → high model-complexity penalty. F-minimum and
+      Wundt apex are the same structural point through two formalisms.
+    why_forced: |
+      Independent route convergence. Friston's variational formalism was
+      developed without reference to music or aesthetic engagement;
+      Berlyne's inverted-U was developed without reference to free energy.
+      Both yield the same optimal configuration. This is N_InversiveTheory
+      manifesting: one structural fact (optimal A_0 configuration) viewed
+      through Bayesian-substrate coordinate (FEP) and behavioural-aesthetic
+      coordinate (Wundt curve).
+
+  - source: N_Shannon
+    target: N_EngagementArchitecture
+    label: prediction_error_magnitude_is_shannon_information
+    edge_status: D
+    justification: |
+      N_Shannon establishes H(X) ≡ Z_struct: Shannon entropy is the
+      mathematical content of "prediction error magnitude" used in
+      Wundt-apex specifications. Without H(X) as the metric, "intermediate
+      complexity" has no quantifiable axis. Cheung 2019 (uncertainty ×
+      surprise saddle surface) explicitly uses Shannon entropy of
+      expectation distribution as one axis and Shannon information content
+      of actual events as the other.
+    why_forced: |
+      Shannon information is the unique consistent measure of expectation
+      uncertainty (Shannon-Khinchin axioms). Any quantification of
+      prediction-error magnitude reduces to Shannon information at the
+      ensemble level. N_EngagementArchitecture's Wundt-apex specification
+      necessarily lives on a Shannon-entropy axis. Without N_Shannon's
+      identification H ≡ Z_struct, the Wundt apex has no metric.
+
+  - source: N_AestheticEngagement
+    target: N_EngagementArchitecture
+    label: aesthetic_engagement_is_architecture_instance
+    edge_status: D
+    justification: |
+      N_AestheticEngagement applies N_BPIEngagement to artwork-class
+      inputs. N_EngagementArchitecture specifies the structural form
+      that artwork must take to reliably produce engagement: fractal
+      substrate + engineered break + return. Aesthetic engagement IS
+      this architecture realised in artwork-class substrates (music,
+      visual art, narrative). The architecture generalises beyond
+      aesthetics to any engagement-driven substrate (storytelling, drama,
+      games, video pacing).
+    why_forced: |
+      Aesthetic engagement requires Wundt-apex prediction-error magnitude
+      (otherwise the response is "boring" or "incomprehensible", neither
+      of which is aesthetic). The unique architectural realisation that
+      consistently lands at the apex is fractal+break+return per
+      N_EngagementArchitecture's own derivation. Therefore aesthetic
+      engagement is necessarily an instance of this architecture.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -442,6 +569,64 @@ nodes:
       KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
       Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
       independently by Connes' fermion-doubling J²=-1 argument)
+
+  - id: N_EngagementArchitecture
+    title: Engagement Architecture as A₀ at Wundt Apex
+    layer: observers
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      The unique configuration that consistently lands BPI prediction-error
+      magnitude at the Wundt apex (the optimum of inverted-U pleasure-vs-
+      complexity relationship). Architecture: fractal substrate (5 of 6
+      music-engagement criteria — anchor, single regime, return, identity
+      through transformation, multi-scale) + engineered break (1 criterion
+      — concentrated single-locus deviation) + return to fractal. Forced
+      as A_0 minimisation of |prediction_error − optimal_dopamine_threshold|.
+      Generalises beyond music to any engagement-driven substrate
+      (storytelling, drama, games, video pacing).
+    why_status: |
+      DEMONSTRATED via five independent confirmation paths converging on
+      the same optimal configuration.
+      (1) Wundt 1874 — descriptive: balanced predictable/dynamic mixture
+      necessary for aesthetic appreciation; two failure modes (chaos,
+      triviality) excluded analytically.
+      (2) Berlyne 1971 — formalised inverted-U: liking-vs-complexity peak
+      at intermediate.
+      (3) Salimpoor 2011 (Nat Neurosci) — biphasic dopamine confirms
+      neuroanatomical substrate: caudate (anticipation) + accumbens
+      (resolution); the architecture is what produces both phases.
+      (4) Gold/Pearce/Zatorre 2019 (J Neurosci) — computational validation
+      via uncertainty/surprise modelling: "intermediate complexity, which
+      maximizes both reducible uncertainty and learnable information,
+      thus optimizes reward-related responses".
+      (5) Cheung 2019 (Curr Biol) — 2D saddle surface (uncertainty ×
+      surprise) shows peak pleasure exclusively at low-uncertainty +
+      high-surprise quadrant, which IS the architecture's signature.
+      Independent confirmation through φ-attractor route: music-engagement
+      criteria developed without reference to Fibonacci converge on the
+      same architectural form derived independently from Markov spectrum
+      / smallest Pisot / two-memory recurrence (sec:fibonacci) — the
+      quantitative match (Bartók climax at φ⁻¹ ≈ 0.618) excludes
+      coincidence.
+    not_misinterpretations: |
+      one option among many (no — alternative configurations either land
+      in chaos quadrant or triviality quadrant per Cheung 2019 saddle;
+      apex-landing requires this specific architecture) · music-only (no
+      — generalises to all engagement-driven substrates: story, drama,
+      games, video pacing; music is one instance) · the engineered break
+      is arbitrary design choice (no — break itself is forced because
+      pure fractal yields zero prediction error, no signal; Wundt-apex
+      magnitude is forced by dopamine mechanism; only the timing /
+      material content is choice) · this duplicates ADAP framework (no —
+      ADAP is a corpus-validated test for this architecture; the
+      structural claim is what ADAP verifies) · convergence with φ-route
+      is coincidence (no — independent derivations on the same substrate
+      class necessarily reach the same A_0 attractor; quantitative
+      Bartók-Markov match excludes coincidence by ruling out alternative
+      irrationals)
 
   - id: N_PhiAttractor
     title: Golden Ratio φ as A₀ Attractor on Continuous Angular Substrates

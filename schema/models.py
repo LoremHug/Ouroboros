@@ -84,6 +84,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N_BPIEngagement": Layer.OBSERVERS,
     "N_DopaminePredictionError": Layer.OBSERVERS,
     "N_FEP": Layer.OBSERVERS,
+    "N_EngagementArchitecture": Layer.OBSERVERS,
     "N188": Layer.OBSERVERS,
     "N183": Layer.OBSERVERS,
     "N187": Layer.OBSERVERS,
