@@ -336,17 +336,16 @@ def apply_additions(conn) -> tuple[int, int]:
                     f"additions.yaml references missing node {endpoint_id} "
                     f"in edge {espec['source']} → {espec['target']} : {espec.get('label','')}"
                 )
-        # Skip if exact (source, target, label) already present
-        r = conn.execute(
+        # Upsert: delete existing edge with same (source, target, label), then create.
+        # additions.yaml is the override source — its richer justification wins.
+        conn.execute(
             """
             MATCH (a:Node {id: $src})-[e:Edge]->(b:Node {id: $tgt})
             WHERE e.label = $lbl
-            RETURN count(e)
+            DELETE e
             """,
             {"src": espec["source"], "tgt": espec["target"], "lbl": espec.get("label", "")},
         )
-        if r.get_next()[0] > 0:
-            continue
         conn.execute(
             """
             MATCH (a:Node {id: $src}), (b:Node {id: $tgt})

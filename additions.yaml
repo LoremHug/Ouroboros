@@ -70,4 +70,63 @@ edges:
       IS the closure-condition of grammar-trap-generated questions; no
       alternative formulation closes without contradiction.
 
-nodes: []
+  - source: DEF
+    target: N165
+    label: definition_requires_ergodicity
+    edge_status: D
+    justification: |
+      DEF defines A₀ = argmin Z as the unique stable transitioning that
+      Banach contraction maps to its fixed point. Banach guarantees a fixed
+      point only if iterations cover the relevant phase space (no permanent
+      hidden basins). N165 (ergodicity theorem) provides exactly this
+      coverage guarantee: the Reality Protocol Markov chain reaches the
+      unique Gibbs state from any initial state via Perron-Frobenius. Without
+      ergodicity, DEF's convergence claim is incomplete.
+    why_forced: |
+      Alternative requires either (a) A₀ converges without ergodicity — but
+      then some basin is permanently hidden, contradicting K(O)<K(F) which
+      already requires that the observer's accessible substrate is fully
+      explored under the Z-cost gradient (per Observer Containment N112);
+      or (b) DEF's fixed-point claim is weakened — but then A₀(A₀)=A₀ stops
+      being structural inevitability and becomes a hypothesis. No
+      structurally coherent alternative.
+
+nodes:
+  - id: N165
+    title: Ergodicity of the Reality Protocol
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    is_placeholder: false
+    summary: |
+      Reality Protocol is an ergodic Markov chain on the Z-graph. The chain
+      converges to a unique stationary distribution (Gibbs state) uniform on
+      each Z3-orbit. Single result simultaneously closes three previously
+      open problems: derivation of r=√2 (Koide), Poisson distribution of A0
+      transitions, and emergence of complex Hilbert space.
+    why_status: |
+      DEMONSTRATED conditional on axiom F (finite Z-graph), which follows from
+      the Bekenstein-Hawking / Bousso covariant entropy bound: any finite
+      spatial region has finite degrees of freedom. Three independent
+      sub-results form the chain: (F) finiteness via holographic bound,
+      (I) irreducibility via vertex-transitivity under I_Sym on a connected
+      3-manifold, (A) aperiodicity via Z3 (odd-cycle, non-bipartite) plus
+      monotonic Z_therm increase. Perron-Frobenius then gives the unique
+      stationary distribution. A=3 from these three independent confirmation
+      paths. Note: consequence (3) — complex Hilbert space — is STRONG not
+      DEMONSTRATED, carried by the identification step L^2(L(3,1)) = physical
+      Hilbert space; consequences (1) and (2) are full DEMONSTRATED given
+      ergodicity.
+    not_misinterpretations: |
+      this is Boltzmann ergodicity of single-trajectory coverage (it is
+      Jaynes ergodicity — convergence to maximum-entropy distribution on
+      the accessible phase space, like water reaching hydrostatic
+      equilibrium without every molecule visiting every point) ·
+      complex Hilbert space follows from ergodicity alone (it follows
+      from Z3 representation theory; ergodicity establishes the Gibbs
+      state over which L^2 is defined, but the complex structure comes
+      from the fact that Z3 has no irreducible real representation of
+      degree 3) · real or quaternionic alternatives are possible for
+      the Hilbert space on L(3,1) (the Z3 spectrum excludes them by
+      character theory; complex coefficients are structurally necessary)
