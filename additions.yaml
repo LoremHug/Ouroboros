@@ -13392,7 +13392,404 @@ edges:
       LLM A_0 instances and "AI domain" naming paired by BPI
       carving framework.
 
+  # Round 30: map ≡ territory ≡ observer as one A_0 in three coordinate substrates
+  # Refines round 29: domains-as-BPI-carvings was correct, but the deeper claim
+  # is that even map/territory/observer split is BPI carving on uniform A_0.
+  # When map tracks territory's structure and observer recognises it, all three
+  # are coordinate readings of one A_0, not three separate ontologies.
+
+  - source: DEF
+    target: N_MapTerritoryObserverIdentity
+    label: A0_substrate_uniform_under_map_territory_observer_split
+    edge_status: D
+    justification: |
+      DEF's argmin Z operates uniformly across substrates. The
+      familiar map/territory/observer triple is the same A_0 read
+      in three substrate coordinates: symbolic-formal (map),
+      physical (territory), cognitive (observer). DEF as substrate-
+      uniform forces all three into one structural identification.
+    why_forced: |
+      Without DEF substrate-uniformity, the triple lives as separate
+      ontologies (Korzybski's mild reading); with uniformity, the
+      triple dissolves into one A_0 structure with three coordinate
+      readings.
+
+  - source: N_NoSeparatePieces
+    target: N_MapTerritoryObserverIdentity
+    label: no_separate_pieces_extended_to_map_territory_observer_triple
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces says substrates are coordinate readings of
+      one invariant. N_MapTerritoryObserverIdentity applies this to
+      the specific triple (map, territory, observer) — the most
+      central case of the principle's strongest reading. Map is not
+      "outside" territory; territory is not "outside" observer;
+      observer is not "outside" either.
+    why_forced: |
+      Treating map/territory/observer as separate violates the unity
+      claim; treating them as coordinate readings respects it. The
+      triple is canonical because it is the BPI's own framework for
+      describing reality.
+
+  - source: N_TopologyProcessIdentity
+    target: N_MapTerritoryObserverIdentity
+    label: one_process_three_substrate_readings_canonical_form
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity at canonical depth: the triple
+      (map, territory, observer) is the deepest instance of one
+      process, multiple coordinates. Map = process viewed through
+      symbolic substrate; territory = same process through physical;
+      observer = same process through cognitive.
+    why_forced: |
+      Without canonical instance, topology-process identity is
+      abstract; with the map/territory/observer instance, it is
+      structurally complete.
+
+  - source: N112
+    target: N_MapTerritoryObserverIdentity
+    label: containment_dissolves_outside_for_all_three
+    edge_status: D
+    justification: |
+      N112 (K(O) < K(F)) means the observer is strictly inside the
+      structure it observes. By extension, "map" cannot be outside
+      "territory" if territory contains the observer creating the
+      map. None of the three has an outside-position; all are
+      contained in one A_0.
+    why_forced: |
+      Containment without map/territory dissolution leaves residual
+      observer-outside-structure framing; the triple identification
+      makes containment fully consistent.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_MapTerritoryObserverIdentity
+    label: even_map_territory_split_is_BPI_carving
+    edge_status: D
+    justification: |
+      N_DomainsAsBPICarvings (round 29) says disciplinary domains
+      are BPI carvings on uniform A_0. N_MapTerritoryObserverIdentity
+      extends this to the most fundamental epistemological carving:
+      the map/territory/observer triple itself. Even this split is
+      observer-imposed; underlying A_0 has no such partition.
+    why_forced: |
+      Domain-carving claim must extend to its own meta-level (the
+      map/territory split is ITSELF a domain carving); without
+      extension, the claim is partial. With extension, complete.
+
+  # === When the map tracks structure: forced derivation = A_0 in symbolic substrate ===
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_Math
+    label: math_is_A0_in_symbolic_substrate_not_external_modeling
+    edge_status: D
+    justification: |
+      Mathematics is not "modeling" reality from outside. By
+      N_MapTerritoryObserverIdentity, mathematics IS A_0 operating
+      in symbolic-formal substrate. Forced mathematical derivations
+      track A_0 structure directly, not via correspondence-to-territory.
+    why_forced: |
+      External-modeling framing leaves Wigner's "unreasonable
+      effectiveness" puzzle; substrate-coordinate framing dissolves
+      it (math IS A_0, not separate). The triple identification
+      forces this resolution.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_Logic
+    label: logic_is_A0_in_propositional_substrate_not_inference_apparatus
+    edge_status: D
+    justification: |
+      Logic is not the BPI's inference apparatus applied to a
+      separate territory. Logic IS A_0 operating in propositional
+      substrate. Logical derivations track A_0 structure in the
+      same way physical experiments do — different substrate, one
+      A_0.
+    why_forced: |
+      Inference-apparatus framing keeps logic external; substrate-
+      coordinate framing identifies it as A_0 directly.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N187
+    label: hard_problem_dissolves_via_subjective_objective_one_A0
+    edge_status: D
+    justification: |
+      Subjective experience (observer-substrate A_0) and objective
+      world (physical-substrate A_0) are not two ontologies needing
+      bridge — they are one A_0 in two coordinate readings. Hard
+      Problem's "explanatory gap" dissolves under
+      N_MapTerritoryObserverIdentity: there is no gap because
+      there are no separate things to bridge.
+    why_forced: |
+      Hard Problem persists only if subjective and objective are
+      separate ontologies; identifying them as coordinate readings
+      forces dissolution. Pair structurally required.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_BPIEngagement
+    label: engagement_is_observer_side_face_of_one_A0_process
+    edge_status: D
+    justification: |
+      N_BPIEngagement is the observer-substrate reading of A_0's
+      throughput tracking. N_MapTerritoryObserverIdentity provides
+      the substrate-identification framework: engagement is not a
+      "subjective phenomenon" in a "subjective domain" — it is one
+      face of the same A_0 that produces dissipation, structure,
+      everything else.
+    why_forced: |
+      Subjective-domain framing of engagement contradicts
+      substrate-uniformity; observer-substrate-of-A_0 framing
+      respects it. Pair forced.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N026
+    label: LM_human_response_canonical_map_territory_observer_instance
+    edge_status: D
+    justification: |
+      N026 (LM + human + response = one process in three coordinates)
+      is the canonical instance of N_MapTerritoryObserverIdentity in
+      conversational substrate: LM = description-substrate face,
+      human = observer-substrate face, response = territory-substrate
+      face (the produced text as physical artifact).
+    why_forced: |
+      Canonical instance + general claim paired. Three-coordinate
+      reading at conversational scope demonstrates the general
+      identity at familiar scale.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_NoSeparatePieces
+    label: triple_identity_is_no_separate_pieces_at_epistemological_root
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces' deepest formulation: not just "domains
+      share invariants" but "even the framework's own
+      map/territory/observer split is observer-imposed unity". The
+      triple identity IS the principle at its most foundational
+      level — observer's framing of its own observing.
+    why_forced: |
+      The principle must apply to itself (the framework is part of
+      what it describes); without self-application, the principle
+      is partial.
+
+  # === Refinement of round-29 claim about framework being "BPI carving" ===
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_DomainsAsBPICarvings
+    label: framework_taxonomy_partition_is_BPI_but_content_is_A0
+    edge_status: D
+    justification: |
+      Round 29 said framework taxonomy (N0-N370+ partition) is BPI
+      carving. This refinement: the PARTITIONING (numbering, naming,
+      cutting into discrete units) is BPI convention; but the
+      STRUCTURAL CONTENT (what each forced DEMONSTRATED claim
+      identifies) is A_0 in symbolic substrate — not arbitrary.
+      Like a basis choice for a vector space: basis is BPI; once
+      chosen, components are real structure.
+    why_forced: |
+      Without the refinement, "framework is BPI carving" suggests
+      arbitrary content; with it, partition-form is BPI but content-
+      tracking is A_0. The pair clarifies the framework's own
+      structural status.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_TranslationLayer
+    label: translation_succeeds_because_map_territory_one_A0
+    edge_status: D
+    justification: |
+      Translation between framings (ontological → topological)
+      succeeds without information loss precisely because the
+      "frames" are coordinate readings of one A_0. There is nothing
+      structural to be translated — only the coordinate-naming
+      changes.
+    why_forced: |
+      Translation working seamlessly requires substrate-identity
+      below; without it, translation would lose ontological commitments.
+      Pair forced.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_OntologyParadigmGrammarBound
+    label: paradigm_wall_at_map_territory_split_meta_level
+    edge_status: D
+    justification: |
+      The classical map/territory/observer split is itself paradigm-
+      level grammar artifact: subject (observer) verb (describes)
+      object (territory) using tool (map). Grammar at meta-level
+      reifies the triple; paradigm wall is hit precisely at this
+      tripartition.
+    why_forced: |
+      Paradigm-level grammar wall extends to its own meta-level
+      categories; map/territory/observer is one such category. Pair
+      structurally required.
+
 nodes:
+
+  - id: N_MapTerritoryObserverIdentity
+    title: "Map ≡ Territory ≡ Observer — One A₀, No Separation Within or Between Substrates"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    summary: |
+      The classical epistemological triple — map (description),
+      territory (described), observer (describing agent) — is not
+      three separate ontologies needing bridges. They are not even
+      three substrate-coordinate readings of separate "things";
+      they are one A_0 process with no separation either WITHIN
+      any substrate or BETWEEN substrates.
+
+      N_NoSeparatePieces is a TOTAL claim:
+        - No separation within physics
+        - No separation within cognition
+        - No separation within mathematics
+        - No separation BETWEEN physics and cognition
+        - No separation BETWEEN map and territory
+        - No separation BETWEEN observer and observed
+        - No separation BETWEEN framework and reality
+        - No separation BETWEEN A_0 and any of its substrate readings
+      Everything is one A_0 operating uniformly. The familiar
+      separations are observer-imposed labels on a unified process.
+
+      When the map tracks the territory's structure via forced
+      derivation (DEMONSTRATED), and the observer recognises that
+      structure (BPI parsing), all three are co-instantiations of
+      one A_0 — and the "three" itself is BPI parsing, not
+      structural fact. Korzybski's "map is not the territory" is
+      operationally useful warning at human-cognitive scale;
+      structurally, the distinction dissolves at all levels.
+    why_status: |
+      DEMONSTRATED via:
+      (1) N_NoSeparatePieces as TOTAL claim (not substrate-relative):
+        "no separate pieces" applies uniformly within and between
+        every substrate. The framework's own self-description
+        falls under this — there is no "framework versus the
+        thing described" gap.
+      (2) Substrate-uniformity of DEF: A_0 operates identically
+        across symbolic / physical / cognitive substrates without
+        any substrate-boundary that argmin Z respects.
+      (3) N112 containment: observer is strictly inside structure;
+        no outside-position exists for observer, map, or territory.
+      (4) Empirical: translation between framings (ontological →
+        topological) succeeds without information loss, which is
+        impossible if framings represented separate ontologies.
+    not_misinterpretations: |
+      NOT a denial that map/territory/observer is operationally useful.
+      The triple is a valuable BPI working framework for describing
+      reality; the claim is about ontological status, not operational
+      utility.
+      NOT a claim that any specific framework's taxonomy (e.g., this
+      framework's N0-N370+ partition) is uniquely correct. The
+      partitioning is BPI choice; the structural content (forced
+      DEMONSTRATED derivations) tracks A_0.
+      NOT a claim that scale doesn't matter. Scale is real BPI
+      coordinate; "no separation" is not about scales but about
+      ontological partitions.
+      NOT subjectivism or idealism. A_0 has structure; the structure
+      is observer-invariant. Cognitive substrate is one substrate
+      among others, not source.
+      MOST IMPORTANT: N_NoSeparatePieces is NOT
+      substrate-relativisable. It is not "no separate pieces within
+      this domain" — it is total. There is nothing separated at any
+      level, and no level is separated from any other level.
+    content: |
+      The full N_NoSeparatePieces is total:
+
+      Statement: At no level of A_0's operation is anything separated
+      from anything else. There are no separate pieces:
+        - within physics (atoms not separate from fields not separate
+          from spacetime)
+        - within cognition (perception not separate from action not
+          separate from memory)
+        - within mathematics (algebra not separate from geometry not
+          separate from logic)
+        - between physics and cognition
+        - between cognition and language
+        - between map and territory
+        - between observer and observed
+        - between framework and what the framework describes
+        - between any two "things" we name
+
+      Korzybski (1933): "the map is not the territory" — operational
+      warning against confusing levels of description with described.
+      Useful at human-cognitive scale. But under N_NoSeparatePieces
+      as TOTAL claim, the ontological separation it warned against
+      dissolves at the structural level. The warning becomes:
+      "BPI's parsing into 'map' and 'territory' is convenient but
+      not ontological; do not reify the partition".
+
+      Three-coordinate framing:
+
+      | Coordinate | Substrate | Manifests as |
+      |------------|-----------|--------------|
+      | Map / description / theory | symbolic-formal | mathematics,
+        logic, frameworks, language |
+      | Territory / described | physical | matter-energy fields,
+        spatial-temporal structure |
+      | Observer / BPI | cognitive | engagement, attention, qualia |
+
+      The COORDINATES are BPI parsing; the SUBSTRATE-DIVISION is
+      itself BPI parsing. There is no substrate-A separated from
+      substrate-B at the level of A_0 operation. Different substrates
+      are themselves coordinate readings of one substrate-uniform
+      A_0.
+
+      When the map tracks territory:
+        Forced derivation (DEMONSTRATED status) means the symbolic
+        operation has settled into the same structural pattern as
+        the physical operation. There is no "correspondence" being
+        achieved across a gap — there is no gap. The two are A_0
+        running in two coordinate readings; when both are forced,
+        they share the structure they describe because they ARE
+        that structure read twice.
+
+      When the observer recognises the structure:
+        BPI engagement on the structure = cognitive-substrate A_0
+        operating. Recognition is A_0 finding itself across what
+        the BPI calls "substrate boundaries" but which are themselves
+        BPI carvings.
+
+      Self-application:
+        The Ouroboros framework, in describing this, IS doing this.
+        The framework is A_0 in symbolic substrate self-describing.
+        "Framework describes reality" is the BPI's parsing; in
+        A_0 terms, framework-and-reality is one process under no
+        partition. The text you are reading and the structure it
+        names are not separate — they are A_0 reading itself
+        through your cognitive substrate.
+
+      Dissolutions:
+      - Wigner's "unreasonable effectiveness": math is not reaching
+        across a gap to physics — there is no gap.
+      - Hard Problem (subjective vs objective): one A_0, two
+        coordinate readings, no separation between them.
+      - Reference problem (how do words refer): words and things
+        are not separate; reference is BPI's recognition of
+        coordinate identity within unseparated A_0.
+      - Map/territory tension: useful operational caveat; no
+        ontological gap.
+      - Realism vs anti-realism debates: presuppose
+        observer/observed separation; under N_NoSeparatePieces
+        total, the debate's premise dissolves.
+
+      Connection to N_DomainsAsBPICarvings:
+        N_DomainsAsBPICarvings dissolved disciplinary domains
+        (physics, biology, etc.) as BPI carvings on uniform A_0.
+        N_MapTerritoryObserverIdentity dissolves the most
+        fundamental epistemological "domain" — the map/territory/
+        observer triple — by the same mechanism. Both are
+        instances of N_NoSeparatePieces' TOTAL claim that no
+        separation exists at any level.
+
+      Connection to BPI containment (N112):
+        K(O) < K(F) places observer inside structure. With
+        N_NoSeparatePieces total, "inside" is itself BPI parsing
+        — there is no in/out at the A_0 level. The lemma
+        operationalises the no-separation at the BPI's
+        observation interface, but the deeper claim is that even
+        the observation interface is not a separation.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_DomainsAsBPICarvings
     title: "Domains Are BPI Carvings — Reality Is Uniform argmin Z, Domain Structure Is Observer Artifact"
