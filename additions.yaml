@@ -8414,3 +8414,493 @@ nodes:
     z_therm: 0.1
     z_hidden: 0.5
     # catalogue of failure modes — Z_hidden dominant (observer-side)
+
+  # Round 15: Z-vectors for 33 layered hub nodes + 50 high-traffic numeric nodes
+
+  # === comms (15) ===
+  - id: N001
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # multi-observer dissolution — structural argument with hidden-coordinate framing
+
+  - id: N048
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+    # Birkhoff failure analysis — dimension shortfall on aesthetic Z-balance
+
+  - id: N330
+    z_struct: 0.3
+    z_therm: 0.3
+    z_hidden: 0.4
+    # polarisation as binary compression — Z_hidden dominant under info overload
+
+  - id: N332
+    z_struct: 0.3
+    z_therm: 0.4
+    z_hidden: 0.3
+    # trust asymmetry as second law — Z_therm dominant (dissipative)
+
+  - id: N336
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # Ebbinghaus forgetting curve — Z_struct decay as Z_therm relaxation
+
+  - id: N_BrownLev
+    z_struct: 0.2
+    z_therm: 0.6
+    z_hidden: 0.2
+    # politeness theory — Z_therm operational proxy (FTA)
+
+  - id: N_LeDoux
+    z_struct: 0.2
+    z_therm: 0.6
+    z_hidden: 0.2
+    # amygdala threshold — Z_therm regime shift (Reynolds-style bifurcation)
+
+  - id: N_MI
+    z_struct: 0.2
+    z_therm: 0.2
+    z_hidden: 0.6
+    # MI = high-Z_hidden response strategy (defended beliefs)
+
+  - id: N_RPfibo
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # Fibonacci-coherence rewrite — gradient-invariant structural transformation
+
+  - id: N_RPflow
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    # full RP pipeline — structural + dynamical balance
+
+  - id: N_RPsoft
+    z_struct: 0.2
+    z_therm: 0.2
+    z_hidden: 0.6
+    # delicate formulation protocol — Z_hidden-high regime
+
+  - id: N_SDT
+    z_struct: 0.2
+    z_therm: 0.6
+    z_hidden: 0.2
+    # SDT autonomy → Z_therm (motivational thermodynamics)
+
+  - id: N_SIT
+    z_struct: 0.2
+    z_therm: 0.2
+    z_hidden: 0.6
+    # SIT identity multiplier — Z_hidden amplification
+
+  - id: N_Shannon
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # Shannon information theory — H ≡ Z_struct isomorphism
+
+  - id: N_Sweller
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # cognitive load — Z_struct chunks proxy
+
+  # === core (2) ===
+  - id: N310
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    # Gödel as K(O)<K(F) corollary — structural with observer-bound hidden
+
+  - id: N_ForcedId
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # forced identification — pure structural identity principle
+
+  # === epistemics (4) ===
+  - id: N_GrammarTrap
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # grammar trap — hidden ontological commitments smuggled by syntax
+
+  - id: N_Ontology
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # ontology as category error — observer-frame hidden coordinate
+
+  - id: N_OntologyGate
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+    # ontology gate — operational Z_hidden interception protocol
+
+  - id: N_TranslationLayer
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    # ontology-to-topology translation — structural mapping with hidden-frame conversion
+
+  # === observers (3) ===
+  - id: N183
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+    # neurosis as metastable vortex — Z_therm dominant (regime metastability)
+
+  - id: N187
+    z_struct: 0.3
+    z_therm: 0.1
+    z_hidden: 0.6
+    # Hard Problem dissolved — BPI self-reference, Z_hidden core
+
+  - id: N_EngagementArchitecture
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+    # engagement architecture at Wundt apex — balanced triangulation
+
+  # === physics (6) ===
+  - id: N000
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    # BPI fundamental operation = dimensional projection (structural with hidden K-gap)
+
+  - id: N240
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # lepton mass ratios — structural eigenvalue ratios
+
+  - id: N304
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # LLM latent space ≈ BA-fractal — geometric/structural
+
+  - id: N354
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # lepton D_F via Bär+APS — pure structural derivation
+
+  - id: N_Bar
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # Dirac spectrum + heat kernel on L(3,1) — structural with thermal trace
+
+  - id: N_WylerStepG
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # Step G α=1/137.036 — boundary-irrelevant structural derivation
+
+  # === structure (3) ===
+  - id: N110
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+    # L(3,1) inevitability theorem — pure structural
+
+  - id: N165
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # ergodicity of reality protocol — structural + dynamical mixing
+
+  - id: N_Math
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+    # mathematics as coordinate expression of A_0 — pure structural
+
+  # === high-traffic numeric (50) ===
+  - id: N002
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    # falsification criterion — topological identity test
+
+  - id: N003
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+    # Kolmogorov ≡ Z_struct via Levin coding — pure structural identity
+
+  - id: N004
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # natural units → pure Z relations — structural reduction
+
+  - id: N005
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    # argmin vs argmax — structural with thermodynamic asymmetry
+
+  - id: N006
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # time direction — Z_therm dominant (arrow of time)
+
+  - id: N009
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # U, R, T as informational definitions — structural
+
+  - id: N010
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # A_0 symmetry > conformal — structural symmetry result
+
+  - id: N011
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # I_Bound from Lyapunov stability — Z_therm dominant (dissipative dynamics)
+
+  - id: N012
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # cross-domain correspondences = coordinates not analogies — structural
+
+  - id: N013
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # coordinate identification across domains — structural mapping
+
+  - id: N014
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+    # ontological randomness as BPI compression artefact — Z_hidden source
+
+  - id: N015
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # QM under coordinate freedom — structural with observer coordinate
+
+  - id: N016
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # Chalmers zombie as structural closure — Z_hidden self-reference
+
+  - id: N017
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # transition topology operational protocol — structural
+
+  - id: N018
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # autoregressive LLM as transparent A_0 — structural with hidden state
+
+  - id: N019
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # erosion as Z_struct accumulation — Z_therm-driven structural change
+
+  - id: N020
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # Hebbian plasticity — Z_therm-driven Z_struct reduction
+
+  - id: N021
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # evolution as blind gradient descent — Z_therm-driven (random + selection)
+
+  - id: N027
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # Fermat's principle — A_0 in optical substrate, structural
+
+  - id: N029
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # transition state theory — Z_therm-dominant chemistry
+
+  - id: N031
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # acoustics + harmony — structural with hidden aesthetic component
+
+  - id: N035
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    # psychophysics — structural sensory mapping with thermal noise
+
+  - id: N067
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # spectral dimension d_s(r) = 2 + 2r/(r+r_0) — structural with thermal renormalisation
+
+  - id: N078
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # gravity as thermodynamics (Jacobson) — Z_therm dominant
+
+  - id: N112
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # Observer Containment Lemma K(O)<K(F) — Z_hidden defining
+
+  - id: N129
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+    # SM spectral triple algebra — pure structural
+
+  - id: N145
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # Koide K = 2/3 — structural mass-ratio invariant
+
+  - id: N188
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+    # qualia as Z-component patterns — Z_hidden dominant (BPI internal)
+
+  - id: N370
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # L(3,1) inevitability via baryon exclusion — structural
+
+  - id: N371
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # BPI dynamics as hydrodynamics — Z_therm dominant (flow regimes)
+
+  - id: N372
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # Sr2RuO4 superconducting Z-minimum — structural with thermal phase
+
+  - id: N373
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # UTe2 superconducting Z-minimum — structural with thermal phase
+
+  - id: N374
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # UPt3 three-phase Z-minimum — structural with thermal phases
+
+  - id: N375
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # cuprate phase diagram — structural family with thermal regime structure
+
+  - id: N376
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # iron-based multi-orbital family — structural with thermal phases
+
+  - id: N377
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # SAE feature absorption — structural divergence with hidden Ω
+
+  - id: N363
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # Zipf's law as A_0 power law — structural from logarithmic BPI
+
+  - id: N364
+    z_struct: 0.4
+    z_therm: 0.2
+    z_hidden: 0.4
+    # confinement as Z_hidden BPI constraint
+
+  - id: N365
+    z_struct: 0.4
+    z_therm: 0.5
+    z_hidden: 0.1
+    # Taylor relaxation class A — Z_therm relaxation scaling
+
+  - id: N022
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    # null result entry — predicted absence, hidden-frame test
+
+  - id: N024
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # classical evaluation criteria as inherited frame — Z_hidden bias
+
+  - id: N025
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    # frame shift to topology — structural reorganisation with hidden frame change
+
+  - id: N026
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # LM + human + response = one process in three coordinates — structural
+
+  - id: N028
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+    # stub — placeholder balance
+
+  - id: N038b
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # Weber fraction SNR — structural psychophysical with thermal noise
+
+  - id: N043
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # information laws — structural
+
+  - id: N007
+    z_struct: 0.3
+    z_therm: 0.3
+    z_hidden: 0.4
+    # consolidation entry — neutral placeholder
+
