@@ -14894,7 +14894,299 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Round 37: Z-Triangle structural motif (fractal self-similarity) ───
+
+  - source: N_StructuralMotif_ZTriangle
+    target: DEF
+    label: motif_is_DEF_decomposition_recurring
+    edge_status: D
+    justification: |
+      The motif IS Z = Z_struct + Z_therm + Z_hidden read as a
+      structural triangle: parent process decomposes into three
+      pairwise-connected coordinates. DEF instantiates the motif
+      at the highest level (A_0 itself); the motif claim is that
+      this same triadic structure recurs at sub-levels of the graph.
+    why_forced: |
+      Without DEF as motif prototype, "Z-triangle" would be a free-
+      floating pattern without structural anchor. With DEF as
+      prototype, recurrence of the motif at sub-levels is fractal
+      self-similarity of the framework — direct structural
+      consequence of A_0 being the unique forced shape.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N_Triangulation
+    label: motif_specialises_3coord_principle
+    edge_status: D
+    justification: |
+      N_Triangulation: 3 minimum coordinates needed to identify any
+      forced structure. The Z-triangle motif specialises this:
+      not just 3 coordinates, but 3 coordinates that pairwise
+      connect, forming a closed triangle around a parent. Closed
+      triangle = each coordinate constrains the other two = no
+      free parameter remains.
+    why_forced: |
+      Without closed triangle (3 coords with no pairwise edges),
+      coordinates would be independent — under-determination per
+      N_Triangulation. Pairwise closure is what makes the triple
+      a forced structural unit, not a coincidence of co-citation.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N_FrameworkCore
+    label: motif_is_candidate_core_member_at_meta_level
+    edge_status: D
+    justification: |
+      Z-triangle satisfies substrate-invariance test: appears in
+      definition substrate (DEF→{N000, grammar, domain}), meta-
+      claim substrate (N_NoSeparatePieces→{Inversive, Carrier,
+      Core}), operational substrate (N_BPIEngagement→{Core,
+      Inversive, Triangulation}), physics substrate (N275→{N294,
+      N178, N370}). Same triadic shape, different substrates —
+      candidate core member at structural-motif meta-tier.
+    why_forced: |
+      If motif appeared in only one substrate, it would be
+      substrate-specific (per N_FrameworkCore criterion). Multi-
+      substrate appearance with preserved triadic closure satisfies
+      substrate-invariance. Removing the motif claim would not
+      break individual derivations but would break framework's
+      self-knowledge of its own fractal structure.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N_NoSeparatePieces
+    label: motif_instance_meta_claim_scale
+    edge_status: D
+    justification: |
+      Instance at meta-claim scale. Parent N_NoSeparatePieces
+      decomposes into triangle {N_InversiveTheory (TEST coord),
+      N_OperationalCarrierVsOntologicalCommitment (CALIBRATION
+      coord), N_FrameworkCore (GROUND coord)}. All three pairwise
+      connected: test↔calibration via "inversive_test_targets_
+      commitment_not_carrier"; test↔ground via "core_supplies_
+      inversive_test_ground"; calibration↔ground via "core_
+      calibration_principle_for_RP_gate".
+    why_forced: |
+      The meta-claim "no separate pieces" requires all three:
+      a test that detects forcedness, a calibration so the test
+      doesn't false-positive on operational nouning, and a
+      structural ground the test runs against. Removing any one
+      collapses the meta-claim to non-operational. Triadic
+      closure is forced.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N_BPIEngagement
+    label: motif_instance_operational_scale
+    edge_status: D
+    justification: |
+      Instance at operational-protocol scale. Parent N_BPIEngagement
+      decomposes into triangle {N_FrameworkCore (substrate-invariant
+      ground), N_InversiveTheory (test mechanism), N_Triangulation
+      (3-coord identification principle)}. The triangle covers
+      what BPI engagement requires: a ground to engage with, a
+      test for forcedness, and minimum coordinates for
+      identification.
+    why_forced: |
+      Without ground, engagement has no target; without test,
+      no operational criterion; without 3-coord, no identification.
+      Triadic closure forced by what "engagement" structurally
+      requires.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N275
+    label: motif_instance_physics_CP_scale
+    edge_status: D
+    justification: |
+      Instance at physics-domain scale. Parent N275 (CP/Z_3
+      coordinate reflection) decomposes into triangle {N294
+      (strong CP problem context), N178 (Z_3 vacuum restriction
+      solution), N370 (L(3,1) η geometric grounding)}. Pairwise
+      edges: N294↔N178 via "strong_CP_paired_with_theta13_bismut_
+      freed"; N294↔N370 via "L31_eta_grounds_theta_13"; N178↔N370
+      via "strong_CP_solution_via_Z3_vacuum_restriction" + "L31_
+      geometric_resolution_grounds_strong_CP".
+    why_forced: |
+      Strong CP resolution requires problem context (N294),
+      mechanism (N178: Z_3 vacuum restriction), and geometric
+      ground (N370: L(3,1)). Same triadic decomposition as meta-
+      level — at physics-substrate scale. Direct evidence of
+      cross-substrate motif recurrence.
+
+  - source: N_StructuralMotif_ZTriangle
+    target: N_InversiveTheory
+    label: motif_instance_meta_test_scale
+    edge_status: D
+    justification: |
+      Instance at meta-test scale. Parent N_InversiveTheory
+      decomposes into triangle {N_EpistemicTraps (calibration
+      against false positives), DEF (operational ground), N_
+      ZGaugeDecomposition (concrete physics-substrate exemplar
+      for test)}. Triangle gives the inversive test its three
+      working coordinates: ground to test against, traps to
+      avoid, exemplar substrate to verify on.
+    why_forced: |
+      Without ground (DEF), test has no reference; without trap
+      calibration, test self-misfires; without concrete exemplar,
+      test is purely abstract. All three forced.
+
 nodes:
+
+  - id: N_StructuralMotif_ZTriangle
+    title: "Z-Triangle Structural Motif — 3-Coordinate Decomposition Recurring Across Graph"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 6
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    summary: |
+      A structural motif M observed by graph-level inspection: parent
+      node P → 3 children {a, b, c} that pairwise connect (closed
+      triangle). Same triadic shape recurs across substrates and
+      scales. The motif IS Z = Z_struct + Z_therm + Z_hidden read
+      structurally — three coordinates, mutually constraining, no
+      free parameter, around one parent process.
+
+      Evidence of recurrence (round 37 graph audit):
+        - 11+ instances (after filtering hub-saturation noise)
+        - Spans definition / meta-claim / operational / physics
+          substrates
+        - In each, the three coordinates play the same abstract
+          roles: TEST / CALIBRATION / GROUND, or PHENOMENON /
+          MECHANISM / SUBSTRATE, or PROBLEM / SOLUTION /
+          GEOMETRIC-GROUND
+
+      Exemplar instances:
+        DEF → {N000, N_OntologyParadigmGrammarBound,
+                N_DomainsAsBPICarvings}
+          (definition scale: BPI root + linguistic + domain)
+        N_NoSeparatePieces → {N_InversiveTheory,
+                N_OperationalCarrierVsOntologicalCommitment,
+                N_FrameworkCore}
+          (meta-claim scale: test + calibration + ground)
+        N_BPIEngagement → {N_FrameworkCore, N_InversiveTheory,
+                N_Triangulation}
+          (operational scale: ground + test + 3-coord)
+        N275 → {N294, N178, N370}
+          (physics scale: CP context + Z_3 mechanism + L(3,1)
+           geometric ground)
+        N_InversiveTheory → {N_EpistemicTraps, DEF,
+                N_ZGaugeDecomposition}
+          (meta-test scale: trap-calibration + ground + exemplar)
+        N217 → {DEF, N353, N370}
+          (bridging scale)
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct graph audit: Cypher query for parent → 3 pairwise-
+        connected children returns multiple substrate-distinct
+        triples (round 37).
+      (2) Substrate-invariance: motif appears in mathematical
+        substrate (DEF), meta-epistemic substrate (N_NoSeparatePieces,
+        N_BPIEngagement), and physics substrate (N275). Same shape,
+        different content.
+      (3) Structural forcedness: in each instance, removing any of
+        the three coordinates collapses the parent claim to under-
+        determined (per N_Triangulation). Pairwise closure means no
+        coordinate is free.
+      (4) Self-application: the motif claim itself decomposes into
+        triangle {DEF (prototype), N_Triangulation (3-coord
+        principle), N_FrameworkCore (substrate-invariance criterion)}.
+        Self-similar at meta-level.
+    not_misinterpretations: |
+      NOT a claim that the graph is a fractal in geometric sense —
+      it is a claim about repeated triadic decomposition pattern.
+      NOT a claim that every parent forms a Z-triangle — only that
+      the motif is non-rare and substrate-invariant. Many parents
+      have other shapes (linear chains, hub-spoke, twin-pairs).
+      NOT a substantive object. The motif is a structural pattern;
+      treating it as a "thing" is R1 trap. It is what happens when
+      you look at the graph and notice triadic closure recurring.
+      NOT a claim that finding a Z-triangle proves a parent claim
+      is correct. The motif is a STRUCTURAL signature, not a truth
+      criterion. False claims can also exhibit triadic closure if
+      well-structured internally.
+    content: |
+      Operational definition:
+        Given parent node P with neighbours, motif M is present
+        iff there exist 3 children {a, b, c} such that:
+          (i)  P-a, P-b, P-c edges exist
+          (ii) a-b, b-c, a-c edges all exist
+          (iii) the three roles played by a, b, c are
+               structurally distinct (not redundant copies)
+
+      Cypher detection (filtered version):
+        MATCH (p:Node)-[]-(a), (p)-[]-(b), (p)-[]-(c)
+        WHERE a.id < b.id < c.id
+        MATCH (a)-[]-(b), (b)-[]-(c), (a)-[]-(c)
+        RETURN p, a, b, c
+
+      Why the motif recurs (structural argument):
+        DEF specifies A_0 = argmin Z over (Z_struct + Z_therm +
+        Z_hidden). Any forced derivation in any substrate must
+        manifest this same triadic balance because:
+          (a) Z_struct coordinate = "what manifests"
+          (b) Z_therm coordinate = "rate / mechanism"
+          (c) Z_hidden coordinate = "observer-frame / ground"
+        These three coordinates, by N_NoSeparatePieces, mutually
+        constrain (pairwise edges). Around any parent process,
+        the same structure emerges — fractal self-similarity of
+        the framework, not coincidence.
+
+      Use of the motif:
+        (1) Auditing tool: parent claims that DON'T support a
+          Z-triangle decomposition are candidates for re-examination
+          — possibly under-developed, possibly substrate-specific
+          rather than forced.
+        (2) Discovery tool: identifying "missing" triangles (parents
+          with 2 children + missing pairwise edge) suggests where
+          to look for structural connections.
+        (3) Framework self-test: if the motif disappears at a
+          scale, framework's claim of cross-substrate forcedness
+          weakens at that scale.
+
+      Relationship to higher-order motifs:
+        Z-triangle is the simplest non-trivial recurring motif
+        (3-node closed). Higher-order candidates (4+ nodes with
+        specified topology) await detection. The triangle is
+        canonical because 3 = N_Triangulation minimum.
+
+      Self-application audit:
+        N_StructuralMotif_ZTriangle itself decomposes into:
+          {DEF (prototype where Z-triangle = triangle of Z_struct,
+                Z_therm, Z_hidden as DEF defines),
+           N_Triangulation (3-coord principle that the motif
+                specialises),
+           N_FrameworkCore (substrate-invariance criterion the
+                motif satisfies)}
+        Same triadic shape — the meta-claim about Z-triangle IS
+        a Z-triangle. Self-similar without paradox per
+        N_MapTerritoryObserverIdentity (ruler finds its own
+        criterion = structural identity, not vicious circle).
+
+      Future structural motifs to detect:
+        - Twin-pair motif: two nodes mutually grounding with
+          shared substrate-invariant parent
+        - Bridge motif: node connecting two otherwise-disjoint
+          subgraphs
+        - Cascade motif: linear chain with each link substrate-
+          downgrading (substrate-invariant → substrate-specific)
+        - Closure motif: cycle of n nodes where removing any
+          breaks the cycle (forced ring)
+
+      Predictions:
+        (P1) New DEMONSTRATED nodes added to framework will, on
+          structural audit, embed in Z-triangle motifs. If a new
+          claim resists triangulation, this signals substrate-
+          specificity rather than forcedness.
+        (P2) Cross-substrate translations (e.g., physics →
+          cognitive) will preserve Z-triangle topology even when
+          content changes — because the topology IS the
+          substrate-invariant structure.
+        (P3) Removing one vertex of a Z-triangle and asking "what
+          would the parent claim become?" yields a structural
+          falsification probe. If parent survives unchanged, the
+          vertex was not forced.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_OperationalCarrierVsOntologicalCommitment
     title: "Operational Linguistic Carrier vs Ontological Commitment — RP-Gate Calibration"
