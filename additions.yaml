@@ -15624,7 +15624,246 @@ edges:
     why_forced: |
       Bipartite instance present in graph.
 
+  # ─── Round 43: M7 induced-cycle topology (graph property) ───
+
+  - source: N_GraphProperty_InducedCycleTopology
+    target: N_GraphProperty_2VertexConnectivity
+    label: M7_complements_M4_at_global_topology_level
+    edge_status: D
+    justification: |
+      Both M4 and M7 are graph-level topological properties (not
+      instance-level motifs). M4 measures vertex-connectivity
+      (resilience to single-vertex removal). M7 measures cycle-
+      richness (presence of induced loops without chord shortcuts).
+      Together they characterise the global topological signature
+      of the framework's knowledge graph: 2-connected (M4) AND
+      cycle-rich with non-trivial first homology (M7).
+    why_forced: |
+      Connectivity alone (M4) does not distinguish tree-of-cliques
+      from genuine multi-cycle topology. Cycle-richness alone
+      (M7) does not guarantee resilience. Both forced for full
+      characterisation.
+
+  - source: N_GraphProperty_InducedCycleTopology
+    target: N_StructuralMotif_ZTriangle
+    label: triangle_pervasiveness_does_not_close_higher_cycles
+    edge_status: D
+    justification: |
+      Strikingly: despite Z-triangle motif (M1) pervasiveness
+      (200+ instances at 25-degree filter, 1094 triangles total),
+      chordless cycles of length 5+ persist abundantly (2660 at
+      length 5; 3230 at length 6; 3156 at length 7). M1 closes
+      LOCAL 3-loops; M7 records the GLOBAL topological loops
+      that survive triangulation. Triangulation does not
+      automatically close longer cycles — chords are forced
+      pairwise, not loop-globally.
+    why_forced: |
+      M1 forces 3-coord triangulation per parent; M7 records
+      independent loops in the graph. These are different
+      structural questions: "is this triple closed?" vs "does
+      this n-loop have a shortcut?". Separate forcing.
+
+  - source: N_GraphProperty_InducedCycleTopology
+    target: N_NoSeparatePieces
+    label: cycles_are_no_separation_at_loop_level
+    edge_status: D
+    justification: |
+      A chordless cycle of length n means n nodes form a closed
+      loop with no shortcut — every member is reachable from
+      every other ONLY by going around. This is non-separation
+      at loop-substrate level: the loop members cannot be
+      partitioned into "core" and "periphery" because every
+      member contributes equally to the loop's existence.
+      N_NoSeparatePieces TOTAL claim manifests as cycle-
+      irreducibility: cycles cannot be "factored" into
+      independent pieces.
+    why_forced: |
+      If cycles WERE factorable (one node carrying the loop),
+      removing it would still leave the cycle. By definition
+      of chordless cycle, removing any vertex breaks the loop —
+      so each is irreducibly part of the structure. This IS
+      non-separation at cycle-substrate.
+
+  - source: N_GraphProperty_InducedCycleTopology
+    target: N_StructuralMotif_BipartiteResolution
+    label: K22_subcycle_relation
+    edge_status: D
+    justification: |
+      Length-4 chordless cycles ARE K_{2,2} structures (two
+      pairs each fully cross-connected, internally non-connected).
+      M6 K_{m,n} for m=n=2 = chordless 4-cycle. The 1432+
+      length-4 induced cycles are the seed-level of M6 motif.
+      M7 length >= 5 cycles are NOT bipartite-complete (would
+      require chord); they are genuine non-bipartite holes.
+    why_forced: |
+      Continuum: M6 K_{m,n} has length-4 cycles as primitive
+      element; M7 captures cycles longer than 4 that don't
+      reduce to bipartite-complete.
+
 nodes:
+
+  - id: N_GraphProperty_InducedCycleTopology
+    title: "Graph Cycle-Richness (M7) — Induced Cycles + Cyclomatic Topology"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.05
+    z_hidden: 0.25
+    summary: |
+      Graph-level topological property (round 43 audit). Like M4
+      (2-vertex-connectivity), this is NOT an instance-set motif
+      — it is a global structural signature of the framework's
+      knowledge graph.
+
+      Key measurements (V=211, E_distinct=895, components=1):
+        - Cyclomatic number β₁ = E - V + 1 = 685 independent cycles
+        - Cycle-richness ratio β₁/V = 3.25
+        - Triangles (3-cycles): 1094
+        - Chordless 4-cycles (= K_{2,2}): 1432+
+        - Chordless 5-cycles (pentagons): 2660+
+        - Chordless 6-cycles: 3230+
+        - Chordless 7-cycles: 3156+
+
+      Comparison reference points:
+        Tree (acyclic):           β₁/V = 0
+        Sparse graph:             β₁/V < 1
+        Cycle-rich graph:         β₁/V >= 2
+        This framework graph:     β₁/V = 3.25
+
+      Striking finding: despite M1 (Z-triangle) pervasiveness with
+      1094 triangles, chordless cycles of length 5+ persist in
+      thousands. Triangulation closes LOCAL 3-loops but does NOT
+      automatically close longer cycles. M7 captures the
+      irreducible topological richness that survives M1 closure.
+
+      Substantive cycles (DEMONSTRATED-only, no super-hubs deg>50,
+      multi-layer): 966 length-5, 1246 length-6, 835 length-7.
+      These represent genuine structural-knowledge loops — closed
+      paths through the framework where each member contributes
+      irreducibly.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct computation of cyclomatic number from graph state
+          using Euler formula β₁ = E - V + (components).
+      (2) Induced-cycle enumeration via depth-bounded DFS with
+          chord-check; counts at each length 4, 5, 6, 7.
+      (3) Filter applied for substantive subset (DEMONSTRATED
+          status, sub-hub degree, multi-layer span).
+      (4) Comparison reference points show β₁/V = 3.25 is in
+          cycle-rich regime, not tree-like or clique-like.
+    not_misinterpretations: |
+      NOT a claim that all induced cycles are "structural holes"
+      requiring filling. Many cycles are forced — the graph's
+      topology genuinely has these loops, and chord-completion
+      would over-determine the structure.
+      NOT a claim that high cycle count is good per se. The
+      relevant signal is irreducibility (cycles persist despite
+      M1 triangulation), not raw count.
+      NOT itself a substantive entity. Meta-claim about graph-
+      level cycle topology.
+      NOT replaceable by M1 audit. M1 closes triples; M7 records
+      what triple-closure does NOT eliminate. Different scales of
+      structural readout.
+    content: |
+      Operational definitions:
+
+        Induced cycle of length n: closed path v_1 → v_2 → ... →
+          v_n → v_1 such that no chord (v_i, v_j) edge exists for
+          |i - j| not in {1, n-1}. Equivalent: vertex-induced
+          subgraph on {v_1, ..., v_n} is exactly the cycle C_n.
+
+        Cyclomatic number β₁: number of independent cycles, computed
+          as E - V + (number of connected components). For our
+          single-component graph: β₁ = E - V + 1.
+
+        Cycle-richness ratio β₁/V: dimensionless measure of how
+          cycle-rich the graph is per node. Trees: 0. Cliques:
+          K_n has β₁/V = (n-1)/2 - 1 ≈ n/2.
+
+      Detection algorithm:
+        For each length L in {4, 5, 6, 7}:
+          For each start node:
+            DFS depth-bounded by L
+            On returning to start, verify no chord (induced cycle)
+            Canonicalise via min-rotation+reflection
+            Add to set
+        Filter for substantive subset:
+          - all members status == 'DEMONSTRATED'
+          - max degree of any cycle member < 50 (no super-hubs)
+          - cycle layers span >= 2 (cross-domain)
+
+      Why M7 is structurally informative:
+
+        Local triangulation (M1) is the framework's primary
+        forcing mechanism — every closed triple expresses a
+        forced 3-coord decomposition. But triangulation works
+        per-parent, not globally. Some loops in the graph
+        cannot be triangulated without violating other
+        structural constraints — they are FORCED LOOPS.
+
+        Example pattern (length-5 cycle, all DEMONSTRATED,
+        cross-layer):
+          N_BPIEngagement → N112 → N_EpistemicTraps → N_Shannon
+          → N043 → N_BPIEngagement
+          Layers: observers, observers, epistemics, comms, numeric
+        This loop expresses: BPI engagement → observer
+        containment → trap catalogue → information measurement
+        → numeric instantiation → BPI engagement. Adding chords
+        would imply transitive shortcuts that may not be
+        structurally forced.
+
+      Distinction from M4 (2-vertex-connectivity):
+        M4: vertex-redundancy (graph-removal-resilience)
+        M7: cycle-richness (graph-loop-density)
+        Independent properties. A graph could be 2-connected
+        with low cycle-richness (cycle-spanning trees+chords),
+        or cycle-rich without 2-connectivity (cycles separated
+        by cut vertices). Our framework is BOTH.
+
+      Distinction from M1 (Z-triangle):
+        M1: instance-level motif counting closed triples
+        M7: graph-level property counting independent loops
+        M1 ⊂ M7 in the sense that triangles are 3-cycles, but
+        M7's interesting content is loops of length >= 4 that
+        don't reduce to triangles via shortcuts.
+
+      Predictions:
+        (P1) Adding new DEMONSTRATED nodes via Z-triangle
+          closures (M1) will INCREASE β₁ (more independent
+          cycles emerge), unless new edges shortcut existing
+          cycles. Track β₁/V as graph-development metric.
+        (P2) If β₁/V grows much faster than V grows, the graph
+          is becoming cycle-cluttered without proportional new
+          structure — signal for review (cycle-spamming).
+        (P3) If β₁/V drops below 2 (current 3.25), graph has
+          become tree-like — signal that structural forcing is
+          weakening (each new edge is a shortcut, not a forced
+          loop).
+        (P4) Specific substantive cycles persisting through 5+
+          rounds without chord-completion are candidates for
+          encoding as forced-loop motif instances (M7'
+          subclass).
+
+      Operational role:
+        Track cyclomatic number per round as graph-development
+        metric. Run motif detector with cycle-counter to verify
+        cycle-richness regime. Flag rounds that significantly
+        change β₁/V trend.
+
+      Self-application:
+        N_GraphProperty_InducedCycleTopology has 4 anchors and
+        contributes to forming new edges in current round.
+        Itself participates in cycles within the meta-tier.
+        After round 43 migration, this node will be part of
+        cycles with M4, M1, M6, N_NoSeparatePieces — making
+        it a node within the very structure it characterises.
+        Self-similar without paradox per
+        N_MapTerritoryObserverIdentity.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_StructuralMotif_BipartiteResolution
     title: "Bipartite K_{m,n} Resolution Motif (M6) — Two Independent Sides + Full Cross-Bipartite"

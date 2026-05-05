@@ -427,6 +427,130 @@ def detect_bipartite_kmn(
     return out
 
 
+# ─── M7: induced-cycle topology (graph-level property) ──────────────
+
+def measure_cycle_topology(
+    adj: dict[str, set[str]],
+    statuses: dict[str, str] | None = None,
+    layers: dict[str, str] | None = None,
+    super_hub_degree: int = 50,
+    lengths: tuple[int, ...] = (4, 5, 6, 7),
+    enumerate_cap: int = 5000,
+) -> dict[str, Any]:
+    """Measure graph-level cycle-richness (round 43 motif M7).
+
+    Returns:
+      - cyclomatic_number β₁ = E - V + components
+      - triangle_count (M1-class closures)
+      - induced cycle counts at each length in `lengths`
+      - substantive cycle counts (DEMONSTRATED, sub-hub, multi-layer)
+        if statuses + layers provided
+    """
+    V = len(adj)
+    E = sum(len(v) for v in adj.values()) // 2
+
+    # Components (connected)
+    visited: set[str] = set()
+    components = 0
+    for n in adj:
+        if n in visited:
+            continue
+        components += 1
+        stack = [n]
+        while stack:
+            x = stack.pop()
+            if x in visited:
+                continue
+            visited.add(x)
+            stack.extend(y for y in adj.get(x, set()) if y not in visited)
+
+    cyclomatic = E - V + components
+
+    # Triangle count
+    triangles = 0
+    for a in adj:
+        for b in adj[a]:
+            if b > a:
+                for c in adj[a]:
+                    if c > b and c in adj[b]:
+                        triangles += 1
+
+    deg = {n: len(adj[n]) for n in adj}
+
+    def find_induced_cycles(length: int, cap: int) -> list[tuple[str, ...]]:
+        found: set[tuple[str, ...]] = set()
+        nodes = sorted(adj.keys())
+        for start in nodes:
+            if len(found) >= cap:
+                break
+            stack = [(start, [start])]
+            while stack:
+                cur, path = stack.pop()
+                if len(path) == length:
+                    if start in adj.get(cur, set()):
+                        cycle = path
+                        chord_free = True
+                        for i, x in enumerate(cycle):
+                            for j in range(i + 2, len(cycle)):
+                                if j == len(cycle) - 1 and i == 0:
+                                    continue
+                                if cycle[j] in adj.get(x, set()):
+                                    chord_free = False
+                                    break
+                            if not chord_free:
+                                break
+                        if chord_free:
+                            rotations = [
+                                tuple(cycle[i:] + cycle[:i])
+                                for i in range(length)
+                            ]
+                            rotations += [
+                                tuple(reversed(r)) for r in rotations
+                            ]
+                            found.add(min(rotations))
+                    continue
+                if len(path) >= length:
+                    continue
+                for nb in adj.get(cur, set()):
+                    if nb in path or nb < start:
+                        continue
+                    stack.append((nb, path + [nb]))
+        return list(found)
+
+    cycle_counts: dict[int, int] = {}
+    substantive_counts: dict[int, int] = {}
+    sample_substantive: dict[int, list[list[str]]] = {}
+
+    for L in lengths:
+        cycles = find_induced_cycles(L, enumerate_cap)
+        cycle_counts[L] = len(cycles)
+        if statuses is not None and layers is not None:
+            sub = []
+            for c in cycles:
+                if any(deg.get(n, 0) > super_hub_degree for n in c):
+                    continue
+                cy_layers = {layers.get(n, "?") for n in c}
+                if len(cy_layers) < 2:
+                    continue
+                if not all(statuses.get(n, "") == "DEMONSTRATED" for n in c):
+                    continue
+                sub.append(list(c))
+            substantive_counts[L] = len(sub)
+            sample_substantive[L] = sub[:5]
+
+    return {
+        "V": V,
+        "E_distinct": E,
+        "components": components,
+        "cyclomatic_number_beta1": cyclomatic,
+        "cycle_richness_ratio": round(cyclomatic / V, 3) if V else 0.0,
+        "triangles": triangles,
+        "induced_cycle_counts": cycle_counts,
+        "substantive_cycle_counts": substantive_counts,
+        "sample_substantive_cycles": sample_substantive,
+    }
+
+
 # ─── Top-level: run all detectors ─────────────────────────────────────
 
 def run_all_detectors(
