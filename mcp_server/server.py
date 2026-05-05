@@ -26,6 +26,7 @@ from schema import Status, Layer, EdgeStatus, layer_of  # noqa: E402
 from scripts.db import connect  # noqa: E402
 from scripts import additions as additions_io  # noqa: E402
 from mcp_server import rp_gate as _rp_gate  # noqa: E402
+from mcp_server import motifs as _motifs  # noqa: E402
 
 mcp = FastMCP("ouroboros")
 
@@ -688,6 +689,130 @@ def rp_gate_twin_check(
     summary = _rp_gate.summarise_twins(flags)
     summary["candidate_id"] = candidate_id
     summary["candidate_neighbor_count"] = len(candidate_neighbors)
+    return json.dumps(summary, ensure_ascii=False, default=str)
+
+
+# ────────────────────────────────────────────────────── MOTIF DETECTOR
+
+# N_FrameworkCore tier-1 + tier-2/3/4/5 (substrate-invariant principles).
+# These get treated as "principle stratum" candidates when partitioning
+# K_n cliques per round 39 finding.
+_CORE_PRINCIPLE_IDS = frozenset({
+    # Tier 1 (Foundational)
+    "DEF", "N_Invariants", "N_Triangulation", "N_NoSeparatePieces",
+    "N_InversiveTheory",
+    # Tier 2 (Observer-structure)
+    "N112", "N_TopologyProcessIdentity", "N_ForcedId",
+    # Tier 3 (Description/paradigm)
+    "N_GrammarTrap", "N_OntologyParadigmGrammarBound",
+    "N_DomainsAsBPICarvings", "N_MapTerritoryObserverIdentity",
+    # Tier 4 (Measurement bridge)
+    "N_Shannon",
+    # Tier 5 (Observer-substrate)
+    "N_BPIEngagement",
+    # Cross-cutting principles that participate in stratification
+    "N370", "N_ZGaugeDecomposition", "N_FrameworkCore",
+})
+
+
+@mcp.tool()
+def detect_motifs(
+    z_triangle_hub_threshold: int = 25,
+    z_triangle_max: int = 50,
+    clique_min_size: int = 5,
+    clique_min_cousins: int = 3,
+    twin_jaccard: float = 1.0,
+    twin_min_shared: int = 3,
+    extra_principle_ids_csv: str = "",
+    format: str = "report",
+) -> str:
+    """Run all structural-motif detectors over the graph.
+
+    Detects and tags:
+      M1 — Z-triangles (parent → 3 pairwise-connected children),
+           hub-filtered; per N_StructuralMotif_ZTriangle (round 37).
+      M2 — K_n family-clique (1 anchor + n cousins), per round 38.
+      M5 — Principle-stratification K_{p+n} (>= 2 anchors + cousins),
+           per round 39.
+      M3 — Structural twin pairs (Jaccard >= twin_jaccard),
+           per N_StructuralMotif_StructuralTwins.
+      M4 — Articulation points; 2-vertex-connectivity audit per
+           N_GraphProperty_2VertexConnectivity.
+
+    The principle-vs-cousin partition for M2/M5 uses N_FrameworkCore
+    member IDs as the principle stratum. extra_principle_ids_csv lets
+    caller add domain-specific principles temporarily.
+
+    Args:
+      z_triangle_hub_threshold: nodes with degree >= this excluded
+        from Z-triangle CHILD positions (still allowed as parents).
+      z_triangle_max: cap on Z-triangles returned (graph has many).
+      clique_min_size: minimum clique size to consider for M2/M5.
+      clique_min_cousins: minimum cousin count (cousins = clique
+        members not in principle stratum).
+      twin_jaccard: Jaccard threshold for twin pair detection.
+      twin_min_shared: minimum shared neighbours.
+      extra_principle_ids_csv: optional comma-separated extra IDs
+        to treat as principles for this run only.
+      format: "report" (markdown) or "json" (structured).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+
+    extras = {
+        x.strip() for x in extra_principle_ids_csv.split(",") if x.strip()
+    }
+    principle_ids = set(_CORE_PRINCIPLE_IDS) | extras
+
+    report = _motifs.run_all_detectors(
+        edge_pairs=edge_pairs,
+        core_principle_ids=principle_ids,
+        z_triangle_hub_threshold=z_triangle_hub_threshold,
+        z_triangle_max=z_triangle_max,
+        clique_min_size=clique_min_size,
+        clique_min_cousins=clique_min_cousins,
+        twin_jaccard=twin_jaccard,
+        twin_min_shared=twin_min_shared,
+    )
+    if format == "report":
+        return _motifs.format_motif_report(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
+
+
+@mcp.tool()
+def rp_gate_audit_node(node_id: str, format: str = "json") -> str:
+    """Run rp_gate text scan on a graph node's content fields.
+
+    Concatenates summary + content + why_status + not_misinterpretations
+    and runs the trap detector. Useful for self-audit of framework
+    nodes — does the framework's own description of itself trip its
+    own gate?
+
+    Returns json or markdown report.
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (n:Node {id: $id}) "
+        "RETURN n.summary, n.content, n.why_status, n.not_misinterpretations",
+        {"id": node_id},
+    )
+    if not res.has_next():
+        err = {"error": f"node '{node_id}' not found"}
+        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+    s, c, w, nm = res.get_next()
+    parts = [p for p in [s, c, w, nm] if p]
+    if not parts:
+        msg = f"Node `{node_id}` has no text fields to audit."
+        return json.dumps({"warning": msg}) if format == "json" else msg
+    text = "\n\n".join(parts)
+    if format == "report":
+        return _rp_gate.format_report(text)
+    summary = _rp_gate.summarise(text)
+    summary["node_id"] = node_id
     return json.dumps(summary, ensure_ascii=False, default=str)
 
 
