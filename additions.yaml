@@ -13194,7 +13194,334 @@ edges:
     why_forced: |
       Predictive siblings forced.
 
+  # Round 29: domains as BPI carvings — reality is uniform argmin Z
+
+  - source: DEF
+    target: N_DomainsAsBPICarvings
+    label: A0_uniform_substrate_grounds_no_domains_in_reality
+    edge_status: D
+    justification: |
+      DEF defines A_0 = argmin Z over transitions. The argmin
+      operation is substrate-general — it does not contain a
+      "domain" parameter. There is no level at which the operation
+      changes; only the BPI's resolution and scope-of-attention
+      change. Reality is uniform argmin Z; domains are BPI-imposed
+      classifications.
+    why_forced: |
+      DEF without domain-uniformity claim is ambiguous on whether
+      A_0 operates differently in different "domains"; the
+      uniformity is forced by argmin Z's substrate-general definition.
+
+  - source: N_NoSeparatePieces
+    target: N_DomainsAsBPICarvings
+    label: no_separate_pieces_strong_form_domains_themselves_are_BPI
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces (mild reading): "domains share one invariant
+      via coordinate transformation". N_DomainsAsBPICarvings (strong
+      reading): "domains are not even real coordinate sets — they
+      are BPI's carvings on the uniform A_0 process". Mild reading
+      treats domains as observer-relative coordinate choices on a
+      pre-existing structure; strong reading says the "structure"
+      itself has no domain-organisation, only BPI's parsing does.
+    why_forced: |
+      The mild reading leaves residual "domain" ontology (different
+      coordinate sets exist independently of observation); the
+      strong reading is forced by N000's BPI reification operation
+      applied to domain-naming itself. N_NoSeparatePieces taken to
+      its limit IS this claim.
+
+  - source: N000
+    target: N_DomainsAsBPICarvings
+    label: BPI_reification_operates_at_domain_level
+    edge_status: D
+    justification: |
+      N000's object-reification operation applies not just to
+      individual entities ("electron", "neuron") but to category
+      structures themselves ("physics", "biology"). Domain-naming
+      is one application level of the same BPI reification operation.
+    why_forced: |
+      Without applying reification at the domain level, "domains"
+      escape the BPI-artifact analysis that applies to lesser
+      ontological units. Consistency forces extension.
+
+  - source: N_GrammarTrap
+    target: N_DomainsAsBPICarvings
+    label: grammar_imposes_domain_taxonomy_at_disciplinary_level
+    edge_status: D
+    justification: |
+      Disciplinary names ("physics", "chemistry", "biology") are
+      grammatical nouns that pre-suppose object-categories with
+      properties. Grammar at disciplinary scope imposes the same
+      reification it does at sentence scope. Domain taxonomy IS
+      grammar-trap operating at meta-disciplinary level.
+    why_forced: |
+      Disciplinary grammar inherits sentence grammar's reification
+      mechanism; without N_GrammarTrap, domain naming is
+      "neutral category"; with it, naming IS reification.
+
+  - source: N_OntologyParadigmGrammarBound
+    target: N_DomainsAsBPICarvings
+    label: paradigm_fragmentation_into_domains_is_grammar_artifact
+    edge_status: D
+    justification: |
+      N_OntologyParadigmGrammarBound diagnoses paradigm-level grammar
+      binding; one of the most visible symptoms is the partition of
+      science into separate disciplines. Domain-fragmentation IS the
+      paradigm-level grammar artifact at the disciplinary scope.
+    why_forced: |
+      Paradigm-level grammar wall + domain fragmentation are paired
+      symptoms of one mechanism. Pair structurally required.
+
+  - source: N012
+    target: N_DomainsAsBPICarvings
+    label: cross_domain_transfer_dissolves_via_domains_as_artifacts
+    edge_status: D
+    justification: |
+      N012 says: cross-domain correspondences are coordinate
+      transformations, not analogies. N_DomainsAsBPICarvings says:
+      the "domains" being transformed across are themselves BPI
+      artifacts; the "transfer" dissolves because there is no
+      real domain to transfer from/to — only one A_0 process.
+    why_forced: |
+      Cross-domain transfer is "surprising" only if domains are
+      ontologically real; under BPI-carving framing, no transfer
+      happens because no domains exist to bridge. Pair makes the
+      dissolution explicit.
+
+  - source: N_TopologyProcessIdentity
+    target: N_DomainsAsBPICarvings
+    label: one_process_many_carvings_at_domain_scope
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity at the level of individual processes:
+      one process, many coordinate views. At the domain level: one
+      A_0 substrate, many BPI carvings. N_DomainsAsBPICarvings is
+      N_TopologyProcessIdentity applied to the meta-level of
+      disciplinary categorisation.
+    why_forced: |
+      Process-not-object principle scales to all levels; without
+      domain-level application, the principle is partial.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_TranslationLayer
+    label: domain_artifacts_explain_why_translation_works
+    edge_status: D
+    justification: |
+      N_TranslationLayer translates between ontological framings
+      (physics-talk → topology-talk). It works seamlessly only
+      because the underlying structure has no domain divisions to
+      respect — translation is just choosing a different BPI
+      carving of the same A_0. N_DomainsAsBPICarvings explains
+      WHY translation is possible.
+    why_forced: |
+      Translation between separate-piece domains would require
+      bridging conventions; under uniform A_0 + BPI carvings,
+      translation is just re-carving. Pair structurally required.
+
+  - source: N026
+    target: N_DomainsAsBPICarvings
+    label: LM_human_response_canonical_BPI_carving_instance
+    edge_status: D
+    justification: |
+      N026 (LM + human + response = one process in three coordinates)
+      is a canonical instance of N_DomainsAsBPICarvings at
+      conversational scope: BPI carves continuous signal-transition
+      stream into "LLM domain", "human domain", "response domain".
+      No domain boundary exists in the underlying process.
+    why_forced: |
+      Canonical instance + general claim paired. Without N026's
+      conversational instance, the domain-carving claim is abstract;
+      with it, concrete.
+
+  - source: N070
+    target: N_DomainsAsBPICarvings
+    label: observer_observed_split_is_domain_carving_at_QM
+    edge_status: D
+    justification: |
+      The "observer/observed" split presupposed by the measurement
+      problem IS domain-carving at QM scope. N_DomainsAsBPICarvings
+      generalises: not just observer/observed split, but every
+      "system 1 / system 2" boundary in physics is BPI's carving.
+    why_forced: |
+      Measurement problem dissolution generalises to all
+      domain-boundary problems; the general claim subsumes the
+      specific QM case.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_Ontology
+    label: domain_carvings_are_ontology_category_error_at_meta_level
+    edge_status: D
+    justification: |
+      N_Ontology identifies category error at object-name level
+      (treating processes as objects). N_DomainsAsBPICarvings
+      identifies the same category error at meta-level (treating
+      BPI's carving artifacts as ontologically real domains).
+      Same error, two levels.
+    why_forced: |
+      Category-error principle scales; meta-level application
+      forced by consistency.
+
+  - source: N_DomainsAsBPICarvings
+    target: N021
+    label: cross_substrate_A0_realisations_one_process_BPI_labelled
+    edge_status: D
+    justification: |
+      Evolution (biology), Fermat's principle (optics), price
+      equilibrium (economics) are all "the same A_0" reading per
+      N021 + N027 + N335. N_DomainsAsBPICarvings provides the
+      structural reason: they are not "different applications of
+      one principle" — they are one process labelled differently
+      by BPI in different observational contexts.
+    why_forced: |
+      Cross-substrate A_0 instances are siblings; the unity beneath
+      requires the BPI-carving framing to dissolve the apparent
+      multiplicity.
+
+  - source: N_DomainsAsBPICarvings
+    target: N018
+    label: LLM_substrate_one_argmin_Z_carved_as_NLP_domain
+    edge_status: D
+    justification: |
+      N018 establishes LLM autoregressive forward pass as A_0.
+      What we call "natural language processing" or "AI" is the
+      BPI carving of this same A_0 substrate by an external
+      observer. The substrate operates uniformly; the domain
+      label is BPI-imposed.
+    why_forced: |
+      LLM A_0 instances and "AI domain" naming paired by BPI
+      carving framework.
+
 nodes:
+
+  - id: N_DomainsAsBPICarvings
+    title: "Domains Are BPI Carvings — Reality Is Uniform argmin Z, Domain Structure Is Observer Artifact"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.3
+    z_therm: 0.1
+    z_hidden: 0.6
+    summary: |
+      Reality at every level is argmin Z, uniformly. The argmin
+      operation is substrate-general — it does not change form
+      between "physics" and "biology" and "cognition" and "music".
+      What we call "domains" — the partitions of phenomena into
+      physics, chemistry, biology, cognition, economics, art, etc.
+      — are BPI carvings: classifications imposed by the observer's
+      parsing apparatus on the uniform underlying process. They
+      are not ontological divisions in reality. Reality has no
+      domains; the BPI does.
+
+      Cross-domain "transfer" (Fermat ≡ Hamilton ≡ FEP, evolution
+      ≡ market dynamics ≡ neural plasticity) dissolves: nothing is
+      transferred. There is one A_0 process, and the BPI re-labels
+      it depending on observation scope, scale, and the cultural
+      taxonomy of disciplines.
+    why_status: |
+      DEMONSTRATED via three independent routes:
+      (1) Substrate-uniformity of DEF: argmin Z's definition does
+        not contain a domain parameter; uniformity is forced.
+      (2) BPI reification operation (N000) applied recursively:
+        if BPI reifies "electron" and "particle", it also reifies
+        "physics" — the operation has no privileged stopping level.
+      (3) Empirical: cross-domain identifications (Fermat-Hamilton,
+        evolution-gradient-descent, FEP-Shannon-thermodynamics) work
+        without translation friction precisely because no domains
+        exist to translate between.
+      (4) Structural: N_NoSeparatePieces strong reading, plus
+        N_GrammarTrap at disciplinary scope, plus
+        N_OntologyParadigmGrammarBound at paradigm scope, all
+        converge on this claim.
+    not_misinterpretations: |
+      NOT a denial that disciplinary specialisation is useful.
+      Specialised vocabularies and methods are operationally
+      valuable BPI conveniences; the claim is about their
+      ontological status, not their utility.
+      NOT a claim that "physics = biology = music" in any literal
+      sense. The claim is that the underlying A_0 substrate has no
+      partition; the disciplinary partition is observer-imposed.
+      NOT a claim that scale doesn't matter. Scale (atomic /
+      molecular / cellular / organism / ecosystem) is a real BPI
+      coordinate; "domains" are different — they are taxonomic
+      categories, not scale ranges.
+      NOT subjectivism. Reality has structure (A_0 = argmin Z);
+      the structure is invariant under BPI choice. What is
+      observer-relative is the carving into named categories,
+      not the underlying transitions themselves.
+    content: |
+      The strong reading of N_NoSeparatePieces:
+
+      Mild reading: "Different domains describe one invariant via
+        coordinate transformation."
+      Strong reading: "There are no domains to begin with. The
+        underlying structure has no partition; only BPI's parsing
+        imposes one."
+
+      Mechanism (BPI carving operation):
+        BPI's fundamental operation (N000) is object-reification —
+        converting a stream of perceptual transitions into stable
+        labelled entities. The same operation applies recursively
+        at multiple scopes:
+          - sentence scope: "the electron has spin"
+            (S-V-O reification)
+          - object scope: "an electron" (entity reification)
+          - taxonomic scope: "particle physics" (domain reification)
+          - meta-scope: "the natural sciences" (super-domain
+            reification)
+        At every scope, the operation produces named units where
+        the underlying substrate is one continuous A_0 process.
+
+      Why cross-domain transfer dissolves:
+        If there are no domains, "transfer between domains" is a
+        category error. What look like cross-domain identifications
+        (Fermat in optics ↔ Hamilton in mechanics ↔ FEP in cognition
+        ↔ Shannon in info ↔ Boltzmann in thermo) are not transfers
+        but recognition: the BPI notices it has been carving one
+        A_0 process into multiple labels.
+
+      Implications for science:
+        - The "fragmentation" diagnosed by N_OntologyParadigmGrammarBound
+          is not just paradigm-level — it is built into the very
+          act of naming domains.
+        - The framework does not just predict cross-domain
+          correspondences (N012) — it explains why they appear
+          inevitable to a non-confused observer.
+        - "Why is mathematics so unreasonably effective in physics?"
+          (Wigner's question) dissolves: it is not unreasonable
+          because mathematics and physics are not separate domains
+          — they are co-named carvings of the same A_0.
+        - "Hard problem of consciousness" (Chalmers) inherits this
+          treatment: there is no domain "subjective experience" vs
+          "objective physics"; one process, two BPI labels.
+
+      Implications for the framework itself:
+        The framework's nodes (N0-N370+) are themselves BPI
+        carvings of the same uniform A_0. The framework does not
+        claim ontological reality for its own taxonomy — it claims
+        operational convenience. The taxonomy is the BPI's working
+        coordinate system for describing the uniform substrate;
+        the structure of A_0 itself does not have N0-N370+ as
+        partitions.
+
+      Connection to N_TranslationLayer:
+        N_TranslationLayer translates between ontological framings
+        (physics-talk → topology-talk). It works precisely because
+        the underlying structure has no domain divisions to respect.
+        Translation is just BPI re-carving; it succeeds because
+        nothing structural is being crossed.
+
+      Reality's perspective:
+        Reality at all scales = argmin Z. The Z-functional has no
+        domain partition. Atomic transitions, cellular transitions,
+        cognitive transitions, social transitions all minimise the
+        same Z under their respective substrate constraints. The
+        word "domain" does not appear in any structural derivation;
+        it appears only in BPI's labelling apparatus.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_TransitionRateAsZthermFlow
     title: "Transition Frequency as Z_therm Rate Component — Crystal vs Plasma Pole"
