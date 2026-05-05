@@ -8904,3 +8904,496 @@ nodes:
     z_hidden: 0.4
     # consolidation entry — neutral placeholder
 
+
+  # Round 16: Z-vectors for remaining 98 numeric nodes
+
+  - id: N045
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N051
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N053
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N054
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N056
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N057
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N058
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+
+  - id: N059
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N061
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N063
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N070
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+
+  - id: N071
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N074
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N081
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N085
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N087
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N088
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N094
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N097
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+
+  - id: N098
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N103
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N107
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N114
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N117
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N119
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N123
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N133
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N135
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N138
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N140
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N150
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N157
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N161
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N168
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N171
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N175
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N178
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N179
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N182
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N189
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N194
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+
+  - id: N197
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N201
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N206
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N207
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N209
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N217
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N218
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N228
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N231
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N232
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N235
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N243
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N245
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N250
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N251
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N252
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N258
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N259
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N264
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N265
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N273
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N274
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N275
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N276
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N278
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N280
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+
+  - id: N281
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N289
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N293
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N294
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N295
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N301
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N311
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N315
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N323
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N327
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N328
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N329
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N334
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N335
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N337
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+
+  - id: N340
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N341
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N344
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N349
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N350
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N351
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N352
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+
+  - id: N353
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N355
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N357
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N358
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N360
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N361
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N362
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
+  - id: N366
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+
+  - id: N367
+    z_struct: 0.3
+    z_therm: 0.5
+    z_hidden: 0.2
+
