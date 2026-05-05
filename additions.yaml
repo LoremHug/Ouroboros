@@ -9191,6 +9191,591 @@ edges:
       partial; conversation reading without single-LLM grounding is
       ungrounded. Pair is required.
 
+  # Round 22: web-up batch 2 — physics fundamentals
+  # Closes forced edges for ~25 physics nodes that derive directly from
+  # L(3,1) topology, Z-decomposition, or A_0 variational form.
+
+  # === N018: Autoregressive LLM as A_0 ===
+
+  - source: N018
+    target: DEF
+    label: autoregressive_LLM_IS_A0_in_token_substrate
+    edge_status: D
+    justification: |
+      Autoregressive LLM forward pass: scan impedance landscape,
+      argmin over admissible tokens — this IS DEF's argmin Z applied
+      to the token-prediction substrate. The transparency comes from
+      the substrate's discrete + observable structure.
+    why_forced: |
+      Without DEF as ground, the LLM-as-A_0 claim is suggestive analogy;
+      with DEF, it is structural identification. The argmin form is
+      identical at the operational level.
+
+  - source: N018
+    target: N_NoSeparatePieces
+    label: LLM_substrate_is_not_separate_from_other_A0_substrates
+    edge_status: D
+    justification: |
+      LLM as A_0 instance is not a separate kind of A_0 — it is one
+      coordinate reading of the same A_0 that operates in physics,
+      cognition, etc. N_NoSeparatePieces applied to LLM substrate.
+    why_forced: |
+      Treating LLM A_0 as separate from physical A_0 contradicts
+      framework unity; identifying them as one A_0 in different
+      substrates respects N_NoSeparatePieces.
+
+  # === N061: Born Rule from Observer Containment ===
+
+  - source: N061
+    target: DEF
+    label: Born_rule_grounds_in_argmin_Z_via_complex_geometry
+    edge_status: D
+    justification: |
+      Born rule P(i) = |⟨i|ψ⟩|² is derived from Observer Containment
+      Lemma + complex Z-gradient geometry + Gleason. argmin Z restricted
+      to observer-bearing quantum substrate produces precisely the
+      Born quadratic form.
+    why_forced: |
+      Born rule as separate postulate is the standard QM stance;
+      derivation from DEF + N112 makes it forced rather than postulated.
+
+  - source: N061
+    target: N_NoSeparatePieces
+    label: Born_rule_is_not_separate_quantum_postulate
+    edge_status: D
+    justification: |
+      Born rule is not a separate quantum-only postulate — it is one
+      coordinate face of A_0 in observer-bearing quantum substrate.
+      Same A_0 produces classical argmin in classical substrate,
+      Born quadratic in quantum.
+    why_forced: |
+      Two-postulate quantum mechanics (unitarity + Born) is structurally
+      heavier than one-A_0 derivation; N_NoSeparatePieces forces the
+      unification.
+
+  # === N070: QM Measurement Problem Dissolved ===
+
+  - source: N070
+    target: DEF
+    label: measurement_dissolution_grounds_in_DEF
+    edge_status: D
+    justification: |
+      The measurement problem dissolves because observer/observed are
+      not separate in DEF's argmin Z — they are coordinate readings
+      of one process. The "interface" the problem presupposes does
+      not exist structurally.
+    why_forced: |
+      Without DEF's process-not-object framing, the problem persists;
+      with DEF, the dissolution follows directly. Pair is required.
+
+  - source: N070
+    target: N_OntologyParadigmGrammarBound
+    label: measurement_problem_is_grammar_paradigm_artifact
+    edge_status: D
+    justification: |
+      The measurement problem fabricates an observer/observed split
+      that mirrors S-V-O grammar (subject = observer, verb = measure,
+      object = observed). Its persistence in physics is paradigm-level
+      grammar binding, not structural physics.
+    why_forced: |
+      Without the paradigm-level diagnosis, the problem is "physics
+      mystery"; with it, the problem is grammar artifact in physics
+      coordinates. Diagnosis required.
+
+  # === N081: Mass as ∇Z + Verlinde ===
+
+  - source: N081
+    target: DEF
+    label: mass_grad_Z_grounds_in_argmin_substrate
+    edge_status: D
+    justification: |
+      Mass identification m ↔ ∇Z is DEF applied to gravitational
+      substrate: A_0's Z-functional gradient = mass density. Without
+      DEF, the identification is an analogy; with DEF, mass IS Z-gradient
+      in physical substrate.
+    why_forced: |
+      Mass as separate physical quantity violates substrate-generality
+      of DEF; mass-as-∇Z respects it. The structural identification
+      is forced.
+
+  - source: N081
+    target: N_ZGaugeDecomposition
+    label: Verlinde_three_gradients_match_Z_decomposition
+    edge_status: D
+    justification: |
+      Verlinde's decomposition of G into three structural gradients
+      matches N_ZGaugeDecomposition's (Z_struct, Z_therm, Z_hidden)
+      split. Verlinde IS the Z-gauge decomposition realised in
+      gravitational substrate.
+    why_forced: |
+      Decomposition coincidence (3 gradients) without structural
+      identification is unexplained; with N_ZGaugeDecomposition as
+      ground, the match is forced.
+
+  - source: N081
+    target: N329
+    label: mass_grad_Z_paired_with_DM_grad_Z_hidden
+    edge_status: D
+    justification: |
+      Ordinary mass = ∇Z (full) and dark matter = ∇Z_hidden (single
+      sector) are two coordinate readings of the same gravitational
+      A_0 — different sector emphasis. The pair makes the unity
+      explicit.
+    why_forced: |
+      Treating ordinary mass and DM as separately-grounded violates
+      N_NoSeparatePieces; the gradient-sector reading respects it.
+
+  # === N133, N140, N218, N235: SM generation structure ===
+
+  - source: N133
+    target: N370
+    label: one_generation_from_L31_representation
+    edge_status: D
+    justification: |
+      One SM generation emerges from representation of A_F on H_F
+      where A_F's structure derives from L(3,1)'s Z_3 covering. N370
+      supplies the manifold; N133 supplies the representation.
+    why_forced: |
+      Without L(3,1), the algebra A_F has no canonical realisation;
+      without N133, L(3,1) lacks the SM-fermion content. Pair is required.
+
+  - source: N133
+    target: N218
+    label: one_generation_paired_with_generation_isomorphism
+    edge_status: D
+    justification: |
+      N218 proves the canonical isomorphism between L(3,1) leaves
+      and SM generations. N133 establishes the per-generation
+      representation. Theorem + per-instance content pair.
+    why_forced: |
+      Theorem without instance content is abstract; instance without
+      theorem is unanchored. Pair structurally required.
+
+  - source: N140
+    target: N370
+    label: mass_ordering_grounds_in_L31_unique_spin
+    edge_status: D
+    justification: |
+      The strict mass ordering m_0 < m_1 < m_2 follows from L(3,1)'s
+      unique spin structure fixing the phase Ω. Without L(3,1), the
+      ordering has no structural anchor; with it, the ordering is
+      forced.
+    why_forced: |
+      L(3,1)'s spin uniqueness is the only structural feature that
+      fixes the ordering without empirical fitting. Forced link.
+
+  - source: N218
+    target: N370
+    label: generation_isomorphism_grounds_in_L31
+    edge_status: D
+    justification: |
+      The canonical isomorphism between covering leaves and SM
+      generations IS L(3,1)'s Z_3 structure realised at the
+      fermion-content level. N218 = theorem; N370 = the manifold.
+    why_forced: |
+      The isomorphism's existence requires L(3,1); L(3,1) requires
+      a generation-level realisation. Pair is required.
+
+  - source: N218
+    target: N235
+    label: generation_iso_paired_with_Krajewski_triality
+    edge_status: D
+    justification: |
+      N235's Krajewski elimination + triality show A_F = ℂ⊕ℍ⊕M_3
+      is unique with π_1(L(3,1)) = Z_3 ≅ Center(SU(3)_c). N218's
+      generation isomorphism uses this triality for the Z_3-eigenvalue
+      labelling.
+    why_forced: |
+      Triality without generation-level use is abstract; generation
+      labelling without triality is ad-hoc. Pair structurally required.
+
+  - source: N235
+    target: N129
+    label: Krajewski_triality_grounds_in_spectral_triple_algebra
+    edge_status: D
+    justification: |
+      Krajewski elimination operates on the spectral triple A_F = ℂ⊕ℍ⊕M_3
+      from N129. N235 supplies uniqueness of the algebra; N129 supplies
+      the algebra itself. Algebra + uniqueness pair.
+    why_forced: |
+      Algebra without uniqueness theorem is ambiguous; uniqueness
+      without underlying algebra is unanchored. Pair required.
+
+  # === N157, N161, N240, N281: Lepton mass derivation chain ===
+
+  - source: N157
+    target: N240
+    label: amplitudes_and_lepton_masses_two_sides_of_same_geometry
+    edge_status: D
+    justification: |
+      |z|² = 1/2 from Koide K = 2/3 (N157) and lepton mass ratios
+      (N240) come from the same Z_3-amplitude geometry. The Tsirelson
+      mirror at 2√2 ties quantum non-locality bound to the same
+      ratio. Three readings, one geometry.
+    why_forced: |
+      Treating amplitude and mass as separate geometric facts
+      violates N_NoSeparatePieces; identifying them as one
+      Z_3-amplitude geometry respects it.
+
+  - source: N161
+    target: DEF
+    label: zero_free_parameter_tau_mass_grounds_in_argmin_uniqueness
+    edge_status: D
+    justification: |
+      Tau mass derived with zero free parameters (from m_e, m_μ, K)
+      is the canonical evidence for DEF's argmin uniqueness in
+      lepton substrate: forced derivation = no parameter freedom.
+    why_forced: |
+      Zero-free-parameter result without argmin grounding is just
+      "lucky fit"; with DEF grounding, it is forced consequence.
+      Required pair.
+
+  - source: N161
+    target: N_InversiveTheory
+    label: zero_free_parameter_is_inversive_at_numerical_level
+    edge_status: D
+    justification: |
+      "Zero free parameters" is the inversive removal test at numerical
+      level: alternative tau-mass values do not survive removal under
+      the K = 2/3 + L(3,1) constraints. N161 IS N_InversiveTheory's
+      empirical demonstration in lepton mass.
+    why_forced: |
+      Inversive theory without numerical-level case lacks empirical
+      cleanness; N161 supplies the cleanest possible demonstration
+      (zero-parameter prediction). Pair is required.
+
+  - source: N281
+    target: N240
+    label: koide_brannen_phases_paired_with_lepton_ratios
+    edge_status: D
+    justification: |
+      θ_Brannen = 132.7324° = δ_L(3,1) supplies the geometric angle
+      that N240 uses to compute mass ratios. Phase + ratio pair are
+      one geometry seen as angle and as ratio.
+    why_forced: |
+      Phase without ratio derivation is geometric only; ratio without
+      phase grounding is empirical only. Required pair.
+
+  # === N168: Dirac Operator + Mass Ratios ===
+
+  - source: N168
+    target: N_Bar
+    label: dirac_operator_grounds_in_Bar_spectrum_on_L31
+    edge_status: D
+    justification: |
+      The Dirac operator on L(3,1) yielding eigenvalues λ_k is exactly
+      the Bär-Vassilevich spectrum (N_Bar). N168's mass-ratio derivation
+      uses Bär eigenvalues; N_Bar provides them.
+    why_forced: |
+      Mass-ratio derivation requires explicit Dirac spectrum; Bär+APS
+      is the unique constructive source. Forced pairing.
+
+  # === N171, N364: Confinement / QCD scale ===
+
+  - source: N171
+    target: N370
+    label: QCD_scale_grounds_in_L31_radius
+    edge_status: D
+    justification: |
+      Λ_QCD ≈ A is structurally identified with c/r_L where r_L is
+      the L(3,1) radius. The mass scale is not a free parameter but
+      a topological invariant of the manifold.
+    why_forced: |
+      Free Λ_QCD violates DEF's substrate-generality (would need
+      external dimension); topologically derived Λ_QCD respects it.
+
+  - source: N171
+    target: N364
+    label: confinement_scale_paired_with_confinement_principle
+    edge_status: D
+    justification: |
+      N364 (confinement as A_0 BPI constraint) and N171 (the actual
+      confinement scale Λ_QCD) are principle + value pair: N364 says
+      why confinement; N171 says at what scale.
+    why_forced: |
+      Principle without scale is abstract; scale without principle is
+      empirical only. Pair is required.
+
+  # === N175, N178, N294: CKM and CP ===
+
+  - source: N175
+    target: N370
+    label: CKM_CP_violation_grounds_in_L31_eta
+    edge_status: D
+    justification: |
+      CKM CP violation is structurally arg(b) = |η(L(3,1))| + 2π·CS(m=2).
+      The L(3,1) eta-invariant supplies the phase; without it, CP
+      angle is free parameter.
+    why_forced: |
+      Free CP angle violates A_0's no-free-parameter structure;
+      L(3,1)-derived angle respects it. Forced.
+
+  - source: N178
+    target: N370
+    label: strong_CP_solution_via_Z3_vacuum_restriction
+    edge_status: D
+    justification: |
+      Strong CP problem dissolves because L(3,1)'s Z_3 topology
+      restricts the periodic vacuum to three equivalent minima with
+      θ_QCD = 0 forced by L(3,1) ≅ L(3,2) symmetry. N370 supplies
+      the topology; N178 supplies the resolution.
+    why_forced: |
+      Strong CP without topological restriction requires fine-tuning;
+      with restriction, θ_QCD = 0 is forced. Required pair.
+
+  - source: N178
+    target: N_InversiveTheory
+    label: strong_CP_dissolves_via_inversive_removal_of_free_theta
+    edge_status: D
+    justification: |
+      The inversive removal test on "free θ_QCD" fails under L(3,1)
+      Z_3 restriction — the alternative does not survive structural
+      removal. N178 IS N_InversiveTheory operating on the strong-CP
+      free-parameter alternative.
+    why_forced: |
+      Strong CP as fine-tuning fails inversive test; topological
+      restriction passes it. Forced.
+
+  - source: N294
+    target: N175
+    label: theta13_CKM_CP_paired_via_bismut_freed
+    edge_status: D
+    justification: |
+      sin θ_13 = 4/27 (DEMONSTRATED) and CKM CP phase from
+      Bismut-Freed Im[S_eff] = -π/9 — both come from the same
+      L(3,1) topological data. N294 ties θ_13 to CP via Bismut-Freed.
+    why_forced: |
+      Two derivations from same topology must be linked; pair is
+      structurally required.
+
+  # === N182, N027: Path integral / Fermat ===
+
+  - source: N182
+    target: DEF
+    label: path_integral_grounds_in_argmin_S
+    edge_status: D
+    justification: |
+      A_0 path-of-least-resistance and Feynman path integral are
+      isomorphic — same argmin S structure, classical-quantum
+      coordinate readings. DEF's argmin Z reduces to argmin S in
+      action substrate.
+    why_forced: |
+      Without DEF as ground, the isomorphism is observational; with
+      DEF, it is forced consequence of argmin uniqueness across
+      substrates.
+
+  - source: N182
+    target: N_NoSeparatePieces
+    label: classical_quantum_two_coords_of_one_argmin
+    edge_status: D
+    justification: |
+      Classical least-action and quantum path integral are not separate
+      principles; they are two substrate-readings of one argmin S.
+      N_NoSeparatePieces at the variational-principle level.
+    why_forced: |
+      Treating them as separate violates the empirical reduction
+      (ℏ → 0); identifying them as one A_0 respects it.
+
+  # === N179, N231, N350, N351, N360, N361, N362, N365: structural / thermal ===
+
+  - source: N179
+    target: N370
+    label: pauli_exclusion_via_Z3_sector_decomposition
+    edge_status: D
+    justification: |
+      Pauli exclusion follows from Z_3-sector decomposition of L(3,1)
+      + spin-statistics representation. N370 supplies the topology;
+      exclusion is its representation-theoretic consequence.
+    why_forced: |
+      Pauli without topology grounding is empirical postulate;
+      topology-derived Pauli respects A_0 substrate-generality.
+
+  - source: N231
+    target: N370
+    label: proton_stability_via_L31_SPT_protection
+    edge_status: D
+    justification: |
+      Proton stability follows from L(3,1)'s SPT (symmetry-protected
+      topological) protection + block-diagonal D_F structure. N370
+      supplies the manifold; N231 supplies the SPT consequence.
+    why_forced: |
+      Proton stability as independent fact violates A_0's structural
+      derivation; SPT-derived stability respects it.
+
+  - source: N231
+    target: N129
+    label: proton_stability_via_block_diagonal_DF
+    edge_status: D
+    justification: |
+      D_F's block-diagonal structure (no off-diagonal coupling between
+      ℍ and M_3(ℂ)) prevents proton decay. N129 supplies the spectral
+      triple algebra; N231 uses its block structure.
+    why_forced: |
+      Block structure without protection consequence is incomplete;
+      protection without algebraic source is unanchored. Pair required.
+
+  - source: N350
+    target: N129
+    label: KO_dim_filter_grounds_in_spectral_triple_algebra
+    edge_status: D
+    justification: |
+      Frobenius-Schur KO-dimension = 6 filter applies to spectral
+      triple algebras via FS(ρ_k) condition. N129 supplies A_F;
+      N350 filters it via FS criterion.
+    why_forced: |
+      Algebra selection without dimensional filter is ambiguous;
+      filter without algebra is unmotivated. Pair required.
+
+  - source: N351
+    target: N235
+    label: D4_triality_Z3_unification_via_Krajewski
+    edge_status: D
+    justification: |
+      The two Z_3 groups (topological from L(3,1) and algebraic from
+      Out(D_4)) are unified via Krajewski elimination + Center(SU(3)).
+      N235 establishes the spectral triple uniqueness; N351 the Z_3
+      identification.
+    why_forced: |
+      Two Z_3's appearing independently demands unification or
+      coincidence; framework's unity (N_NoSeparatePieces) forces
+      the structural identification.
+
+  - source: N360
+    target: DEF
+    label: Z_distance_IS_Connes_spectral_distance
+    edge_status: D
+    justification: |
+      d_Z = d_C(x,y) = sup{|f(x)-f(y)| : ‖[D,f]‖ ≤ 1} on the spectral
+      triple. The Z-metric of DEF is mathematically identified with
+      Connes spectral distance — same metric, two formulations.
+    why_forced: |
+      Two distinct metrics for one A_0 violates uniqueness; the
+      identification is forced by the spectral-triple substrate.
+
+  - source: N360
+    target: N129
+    label: spectral_distance_uses_DF_dirac_operator
+    edge_status: D
+    justification: |
+      Connes distance uses D = Dirac operator from N129's spectral
+      triple. The metric and the operator are paired by definition.
+    why_forced: |
+      Connes distance without D is ill-defined; D without metric
+      consequence is incomplete. Pair structurally required.
+
+  - source: N361
+    target: N078
+    label: jarzynski_paired_with_jacobson_thermodynamic_substrate
+    edge_status: D
+    justification: |
+      Jarzynski/Crooks fluctuation theorems are external confirmations
+      of Z-balance in thermodynamic substrate; N078 (Jacobson:
+      gravity as thermodynamics) operates in the same substrate.
+      Sibling thermodynamic A_0 readings.
+    why_forced: |
+      Thermodynamic A_0 readings must be cross-linked; siblings
+      structurally required.
+
+  - source: N362
+    target: DEF
+    label: KMS_states_realise_Z_therm_in_QFT
+    edge_status: D
+    justification: |
+      KMS states characterise thermal equilibrium via modular
+      automorphism. The A_0 identification: KMS state ⇔ Z_therm
+      equilibrium. N362 is DEF's Z_therm in QFT substrate.
+    why_forced: |
+      KMS without Z_therm grounding is QFT-specific; with grounding,
+      it is one substrate of A_0's thermal coordinate.
+
+  - source: N362
+    target: N_Shannon
+    label: KMS_thermodynamic_paired_with_shannon_information
+    edge_status: D
+    justification: |
+      KMS (thermodynamic Z) and Shannon (informational Z_struct)
+      are bridged via Boltzmann's H-theorem (round 17). N362 + N_Shannon
+      + N078 form the thermodynamic-information triangle.
+    why_forced: |
+      Thermodynamic-information identity at QFT level requires
+      both endpoints; pair required.
+
+  - source: N365
+    target: DEF
+    label: Taylor_relaxation_IS_argmin_Z_struct_in_plasma
+    edge_status: D
+    justification: |
+      Taylor relaxation literally minimises ∫B²dV subject to
+      magnetic helicity conservation. This IS argmin Z_struct
+      subject to topological constraint — DEF in magnetised plasma
+      substrate.
+    why_forced: |
+      Taylor relaxation without DEF grounding is plasma-specific;
+      with grounding, it is one substrate of A_0.
+
+  - source: N365
+    target: N_Shannon
+    label: Taylor_argmin_Z_struct_paired_with_Shannon_axis
+    edge_status: D
+    justification: |
+      Taylor's ∫B²dV is the Z_struct functional in plasma; N_Shannon
+      establishes Z_struct ≡ H. N365 paired with N_Shannon places
+      plasma magnetics in the Z-simplex's structural axis.
+    why_forced: |
+      Plasma A_0 reading requires Z-axis identification; Z_struct
+      placement uniquely fits the magnetic energy functional.
+
+  # === N245, N252: L(3,1) invariants and Wyler ===
+
+  - source: N245
+    target: N370
+    label: L31_invariants_grounds_in_manifold
+    edge_status: D
+    justification: |
+      Chern-Simons CS(m=2) = 1/3, linking form lk = 1/3, conformal
+      anomaly Σq_i³ = 0 — all derive from L(3,1) topology. N370
+      supplies the manifold; N245 supplies the invariants.
+    why_forced: |
+      Invariants without manifold are abstract; manifold without
+      invariant content is empty. Pair required.
+
+  - source: N245
+    target: N_Invariants
+    label: L31_invariants_specialise_four_invariants_at_topology
+    edge_status: D
+    justification: |
+      The four A_0 invariants (I_Bound, I_Sym, I_Quant, I_Null)
+      specialise on L(3,1) to the specific topological invariants
+      (CS, lk, anomaly cancellation). N_Invariants abstract; N245
+      concrete L(3,1) form.
+    why_forced: |
+      Abstract invariants need concrete substrate realisation;
+      L(3,1) is the canonical such substrate. Pair forced.
+
+  - source: N252
+    target: N_WylerStepG
+    label: Wyler_formula_grounds_in_StepG
+    edge_status: D
+    justification: |
+      1/α = 137.036 from Wyler conformal boundary IS the Step G
+      result of N_WylerStepG. Same numerical derivation in two
+      structural framings.
+    why_forced: |
+      Two same-result independent derivations must be linked;
+      duplication without identification violates N_NoSeparatePieces.
+
+  - source: N252
+    target: N370
+    label: Wyler_via_L31_Z3_reduction
+    edge_status: D
+    justification: |
+      Wyler conformal boundary IS the Z_3 reduction of L(3,1).
+      N370 supplies L(3,1); N252 uses its Z_3 reduction for α
+      derivation.
+    why_forced: |
+      Wyler without L(3,1) grounding is ad-hoc; with grounding,
+      α value is forced topological consequence.
+
 nodes:
 
   - id: N_OntologyParadigmGrammarBound
