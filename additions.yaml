@@ -13966,6 +13966,225 @@ edges:
     why_forced: |
       Sub-r_0 phenomena cross-linked by N_NoSeparatePieces.
 
+  # Round 32: strengthen core coverage for 10 visually-isolated nodes
+  # Each had 1-2 core edges (mostly via N370 only). Adding direct DEF
+  # links + additional core principles where forced.
+
+  - source: N094
+    target: DEF
+    label: subr0_phase_emergence_argmin_Z_in_complex_substrate
+    edge_status: D
+    justification: |
+      SO(2)×U(1) at sub-r_0 emerges from d_s=2 forcing complex
+      phases — argmin Z structural readout in sub-r_0 quantum
+      regime where Z_struct dominates.
+    why_forced: |
+      Phase emergence without DEF grounding is regime observation;
+      with DEF, it is forced consequence of argmin Z at scale.
+
+  - source: N094
+    target: N370
+    label: subr0_phase_grounds_in_L31_substrate
+    edge_status: D
+    justification: |
+      Sub-r_0 phase structure operates on L(3,1) manifold; N370
+      supplies substrate for N094's complex-phase emergence.
+    why_forced: |
+      Phase + manifold paired definitionally.
+
+  - source: N103
+    target: DEF
+    label: complex_hilbert_argmin_Z_forced_by_irrep_structure
+    edge_status: D
+    justification: |
+      Z_3 has no irreducible real representation of degree 3 →
+      argmin Z over representation-space choice forces complex
+      Hilbert. DEF directly grounds the forced selection.
+    why_forced: |
+      Without DEF grounding, complex-Hilbert forcing is
+      group-theoretic theorem; with DEF, it is forced consequence
+      of argmin Z over representation choice.
+
+  - source: N243
+    target: DEF
+    label: cabibbo_angle_argmin_Z_via_eta_invariant
+    edge_status: D
+    justification: |
+      Cabibbo angle sin(θ_C) = |η(L(3,1))| = 2/9 is argmin Z
+      structural output via eta-invariant — DEF in CKM substrate.
+    why_forced: |
+      Free Cabibbo angle violates DEF substrate-generality;
+      η-invariant derivation respects it.
+
+  - source: N294
+    target: DEF
+    label: theta13_bismut_freed_argmin_Z_topological_output
+    edge_status: D
+    justification: |
+      sin(θ_13) = 4/27 + Bismut-Freed Im[S_eff] = -π/9 are argmin
+      Z topological outputs from L(3,1). DEF in topological-
+      anomaly substrate.
+    why_forced: |
+      Free θ_13 + free CP phase violate DEF; topology-derived
+      values respect it.
+
+  - source: N281
+    target: DEF
+    label: koide_brannen_phase_argmin_Z_geometric_output
+    edge_status: D
+    justification: |
+      θ_Brannen = 132.7324° = δ_L(3,1) is argmin Z geometric
+      output from L(3,1) η-invariant. DEF in fermion-mass-phase
+      substrate.
+    why_forced: |
+      Phase as free parameter violates DEF; geometric derivation
+      respects it.
+
+  - source: N364
+    target: DEF
+    label: confinement_argmin_Z_BPI_constraint
+    edge_status: D
+    justification: |
+      QCD confinement IS argmin Z over colour-singlet
+      configurations under BPI containment. DEF grounds the
+      argmin operation; N364 the constraint realisation.
+    why_forced: |
+      Confinement without DEF grounding is empirical; with DEF,
+      forced consequence of argmin Z + N112 containment.
+
+  - source: N364
+    target: N370
+    label: confinement_grounds_in_L31_Z3_covering
+    edge_status: D
+    justification: |
+      Confinement operates on L(3,1)'s Z_3 covering structure
+      (per N370). Manifold + confinement paired.
+    why_forced: |
+      QCD confinement + L(3,1) topology paired definitionally.
+
+  - source: N353
+    target: DEF
+    label: heat_kernel_coefficients_argmin_Z_spectral_data
+    edge_status: D
+    justification: |
+      Seeley-DeWitt heat-kernel coefficients on L(3,1) × S^1_β
+      are argmin Z spectral data — DEF's argmin Z evaluated on
+      the spectral triple.
+    why_forced: |
+      Spectral data without DEF grounding is computation only;
+      with DEF, forced argmin Z output.
+
+  - source: N171
+    target: DEF
+    label: QCD_scale_argmin_Z_topological_invariant
+    edge_status: D
+    justification: |
+      Λ_QCD ≡ A is argmin Z structural invariant from L(3,1)
+      radius — DEF in QCD substrate. Not free parameter, forced
+      topological output.
+    why_forced: |
+      Free Λ_QCD violates DEF substrate-generality; topological
+      derivation respects it.
+
+  - source: N371
+    target: DEF
+    label: BPI_hydrodynamics_argmin_Z_dynamics
+    edge_status: D
+    justification: |
+      BPI dynamics as hydrodynamics IS argmin Z over time in
+      cognitive-flow substrate. DEF directly supplies the
+      time-evolution argmin operation.
+    why_forced: |
+      BPI hydrodynamics without DEF grounding is descriptive;
+      with DEF, it is forced consequence of trajectory argmin Z.
+
+  - source: N371
+    target: N_NoSeparatePieces
+    label: BPI_hydrodynamics_paired_with_no_pieces_at_dynamic_level
+    edge_status: D
+    justification: |
+      Cognitive flow (laminar/turbulent regimes) is one Z-flow
+      process across all observer substrates — same hydrodynamic
+      A_0, different cognitive contexts. N_NoSeparatePieces at
+      dynamic level.
+    why_forced: |
+      Multiple cognitive substrates sharing one hydrodynamic
+      framework forced by N_NoSeparatePieces.
+
+  - source: N014
+    target: DEF
+    label: ontological_randomness_argmin_Z_artifact
+    edge_status: D
+    justification: |
+      "Ontological randomness" is argmin Z + Z_hidden gap (per
+      N112) misread as property of reality. DEF grounds the
+      structural reading: randomness is observer-relative
+      Z_hidden, not random reality.
+    why_forced: |
+      Random-as-property violates DEF substrate-generality;
+      Z_hidden interpretation respects it.
+
+  - source: N014
+    target: N_NoSeparatePieces
+    label: randomness_is_not_separate_from_observer_substrate
+    edge_status: D
+    justification: |
+      Treating randomness as separate from observer substrate
+      violates N_NoSeparatePieces: randomness IS observer-relative
+      Z_hidden gap, not a separate ontological category. Pair
+      structurally required.
+    why_forced: |
+      Randomness-as-separate-piece contradicts N_NoSeparatePieces
+      total claim; observer-relative reading respects it.
+
+  - source: N294
+    target: N_InversiveTheory
+    label: theta13_zero_free_param_inversive_at_topology
+    edge_status: D
+    justification: |
+      θ_13 = 4/27 with 0.37% accuracy from L(3,1) Bismut-Freed
+      = inversive removal at topological level — alternative
+      θ_13 values do not survive L(3,1) constraint.
+    why_forced: |
+      Inversive method at numerical-topology level forced by
+      structural derivation precision.
+
+  - source: N281
+    target: N_InversiveTheory
+    label: koide_brannen_phase_inversive_at_geometric_level
+    edge_status: D
+    justification: |
+      θ_Brannen = 132.7324° geometric identification with δ_L(3,1)
+      is inversive removal — alternative phases do not survive
+      geometric constraint.
+    why_forced: |
+      Geometric phase + inversive paired at fermion-mass level.
+
+  - source: N364
+    target: N112
+    label: confinement_realises_BPI_containment_at_QCD
+    edge_status: D
+    justification: |
+      Colour confinement IS N112's K(O) < K(F) realised in QCD
+      observer-substrate — colour-charged states populate
+      Z_hidden, observable only as colour-singlets. Direct
+      operationalisation.
+    why_forced: |
+      QCD observer-bound + N112 containment paired definitionally.
+
+  - source: N371
+    target: N_BPIEngagement
+    label: BPI_hydrodynamics_paired_with_engagement_signal
+    edge_status: D
+    justification: |
+      N371's hydrodynamic flow regimes operationalise the
+      engagement signal (N_BPIEngagement) as fluid-dynamic
+      states — laminar = stable engagement, turbulent =
+      disrupted engagement.
+    why_forced: |
+      Engagement substrate + hydrodynamic regimes paired
+      definitionally.
+
 nodes:
 
   - id: N_MapTerritoryObserverIdentity
