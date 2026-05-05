@@ -192,6 +192,14 @@ body {
   backdrop-filter: blur(20px); padding: 32px; overflow-y: auto;
   transform: translateX(520px); transition: transform 0.25s ease-out; z-index: 50;
 }
+@media (max-width: 640px) {
+  #panel { width: 100vw; padding: 20px; transform: translateX(100vw); }
+  #legend { top: 12px; left: 12px; padding: 10px 14px; min-width: 0; max-width: 45vw; }
+  #title { top: 12px; right: 12px; }
+  #search { top: 70px; left: 12px; right: 12px; transform: none; padding: 8px 12px; }
+  #search input { width: 100%; }
+  #info, #stats { font-size: 9px; }
+}
 #panel.open { transform: translateX(0); }
 #panel .close {
   position: absolute; top: 16px; right: 16px; cursor: pointer;
@@ -230,6 +238,15 @@ body {
 #panel .edge-arrow { color: var(--muted); font-size: 10px; }
 #panel .edge-label { color: var(--muted); font-size: 10px; margin-left: auto; }
 
+.zbar { display: flex; height: 14px; border: 1px solid rgba(255,255,255,0.08); margin-top: 6px; overflow: hidden; }
+.zbar > div { display: flex; align-items: center; justify-content: center; font-size: 9px; color: rgba(0,0,0,0.7); font-weight: 600; transition: flex-grow 0.2s; }
+.zbar .zs { background: #4fa3e0; }
+.zbar .zt { background: #f59e42; }
+.zbar .zh { background: #a78bfa; }
+.zlegend { display: flex; gap: 12px; font-size: 9px; color: var(--muted); margin-top: 4px; letter-spacing: 0.05em; }
+.zlegend span { display: flex; align-items: center; gap: 4px; }
+.zlegend .swatch { width: 8px; height: 8px; }
+
 .node circle { cursor: pointer; transition: r 0.2s, opacity 0.2s; }
 .node text { pointer-events: none; font-family: 'JetBrains Mono', monospace; }
 line.link { cursor: pointer; }
@@ -249,7 +266,10 @@ line.link:hover { stroke-opacity: 1 !important; }
   <input type="text" placeholder="search node id or title…" id="search-input">
 </div>
 
-<div id="legend"><h3>Layers</h3><div id="legend-items"></div></div>
+<div id="legend">
+  <h3>Layers</h3><div id="legend-items"></div>
+  <h3 style="margin-top:14px">Status</h3><div id="status-items"></div>
+</div>
 
 <div id="tooltip">
   <div class="t-name" id="t-name"></div>
@@ -411,6 +431,26 @@ function escapeHtml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+function renderZBar(d) {
+  const s = +d.z_struct || 0, t = +d.z_therm || 0, h = +d.z_hidden || 0;
+  const sum = s + t + h;
+  if (sum === 0) return '';
+  const sp = Math.round(s / sum * 100), tp = Math.round(t / sum * 100), hp = 100 - sp - tp;
+  return `<div class="section">
+    <div class="section-title">Z-vector  ·  struct ${s.toFixed(2)} · therm ${t.toFixed(2)} · hidden ${h.toFixed(2)}</div>
+    <div class="zbar">
+      <div class="zs" style="flex-grow:${sp}">${sp > 8 ? sp + '%' : ''}</div>
+      <div class="zt" style="flex-grow:${tp}">${tp > 8 ? tp + '%' : ''}</div>
+      <div class="zh" style="flex-grow:${hp}">${hp > 8 ? hp + '%' : ''}</div>
+    </div>
+    <div class="zlegend">
+      <span><span class="swatch" style="background:#4fa3e0"></span>Z_struct</span>
+      <span><span class="swatch" style="background:#f59e42"></span>Z_therm</span>
+      <span><span class="swatch" style="background:#a78bfa"></span>Z_hidden</span>
+    </div>
+  </div>`;
+}
+
 function openNodePanel(d) {
   const adj = edgesByNode.get(d.id) || [];
   const out = adj.filter(e => (e.source.id || e.source) === d.id);
@@ -429,6 +469,7 @@ function openNodePanel(d) {
       ${d.is_placeholder ? '<span class="badge" style="color:#B25A00">PLACEHOLDER</span>' : ''}
       ${d.aliases && d.aliases.length ? `<span class="badge" style="color:#64748b">aliases: ${d.aliases.join(', ')}</span>` : ''}
     </div>
+    ${renderZBar(d)}
     ${d.summary ? `<div class="section"><div class="section-title">Claim</div><div class="content">${escapeHtml(d.summary)}</div></div>` : ''}
     ${d.why_status ? `<div class="section"><div class="section-title">Why ${escapeHtml(d.status)}</div><div class="content">${escapeHtml(d.why_status)}</div></div>` : ''}
     ${d.not_misinterpretations ? `<div class="section"><div class="section-title">NOT (common misinterpretations)</div><div class="content">${escapeHtml(d.not_misinterpretations)}</div></div>` : ''}
@@ -436,9 +477,28 @@ function openNodePanel(d) {
     ${inE.length ? `<div class="section"><div class="section-title">← Incoming (${inE.length})</div><div class="edge-list">${inE.map(e => renderEdgeItem(e, 'in')).join('')}</div></div>` : ''}
     ${d.sections && d.sections.length ? `<div class="section"><div class="section-title">.tex sections (${d.sections.length})</div><div class="edge-list">${d.sections.map(s => `<div class="edge-item" onclick='openSectionPanel(${JSON.stringify(s.label)})'><span class="edge-arrow">§</span><span>${escapeHtml(s.title)}</span><span class="edge-label">${escapeHtml(s.label)}</span></div>`).join('')}</div></div>` : ''}
     ${d.content ? `<div class="section"><div class="section-title">Free body</div><div class="content">${escapeHtml(d.content)}</div></div>` : ''}
+    <div class="section"><div class="edge-item" onclick='exportNode(${JSON.stringify(d.id)})' style="justify-content:center;color:var(--muted)">⤓ export node + edges as JSON</div></div>
   `;
   panel.classList.add('open');
 }
+
+function exportNode(id) {
+  const n = nodeById.get(id);
+  if (!n) return;
+  const adj = edgesByNode.get(id) || [];
+  const payload = {
+    node: n,
+    outgoing: adj.filter(e => (e.source.id || e.source) === id),
+    incoming: adj.filter(e => (e.target.id || e.target) === id),
+    sections: n.sections || [],
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `${id}.json`; a.click();
+  URL.revokeObjectURL(url);
+}
+window.exportNode = exportNode;
 
 function renderEdgeItem(e, dir) {
   const otherId = dir === 'out' ? (e.target.id || e.target) : (e.source.id || e.source);
@@ -538,17 +598,50 @@ function toggleLayer(layer, el) {
   }
   applyFilter();
 }
+
+const STATUS_COLORS = {
+  DEMONSTRATED: '#1B7F3A', STRONG: '#1A5E9E', CONDITIONAL: '#B25A00',
+  OPERATIONAL: '#5B4A9E', STUB: '#4a4a4a',
+};
+const statusItemsEl = document.getElementById('status-items');
+const statusCounts = {};
+DATA.nodes.forEach(n => statusCounts[n.status] = (statusCounts[n.status] || 0) + 1);
+const activeStatusFilters = new Set();
+['DEMONSTRATED', 'STRONG', 'CONDITIONAL', 'OPERATIONAL', 'STUB'].forEach(st => {
+  if (!statusCounts[st]) return;
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<div class="legend-left"><div class="legend-dot" style="background:${STATUS_COLORS[st]}"></div>${st.toLowerCase()}</div><span class="legend-count">${statusCounts[st]}</span>`;
+  item.onclick = () => toggleStatus(st, item);
+  statusItemsEl.appendChild(item);
+});
+function toggleStatus(st, el) {
+  if (activeStatusFilters.has(st)) {
+    activeStatusFilters.delete(st);
+    el.classList.remove('active');
+  } else {
+    activeStatusFilters.add(st);
+    el.classList.add('active');
+  }
+  applyFilter();
+}
+
+function nodePasses(d) {
+  if (activeFilters.size > 0 && !activeFilters.has(d.layer)) return false;
+  if (activeStatusFilters.size > 0 && !activeStatusFilters.has(d.status)) return false;
+  return true;
+}
 function applyFilter() {
-  if (activeFilters.size === 0) {
+  if (activeFilters.size === 0 && activeStatusFilters.size === 0) {
     node.style('display', null);
     link.style('display', null);
     return;
   }
-  node.style('display', d => activeFilters.has(d.layer) ? null : 'none');
+  node.style('display', d => nodePasses(d) ? null : 'none');
   link.style('display', d => {
-    const sl = (d.source.layer || nodeById.get(d.source).layer);
-    const tl = (d.target.layer || nodeById.get(d.target).layer);
-    return (activeFilters.has(sl) && activeFilters.has(tl)) ? null : 'none';
+    const s = nodeById.get(d.source.id || d.source);
+    const t = nodeById.get(d.target.id || d.target);
+    return (nodePasses(s) && nodePasses(t)) ? null : 'none';
   });
 }
 
