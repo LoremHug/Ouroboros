@@ -3,7 +3,16 @@
 Detects R1-R4 traps + grammar trap + domain carving + Shannon overhead.
 Pattern-based v1; foundation for LLM-assisted v2.
 
+Per N_OperationalCarrierVsOntologicalCommitment (round 36):
+patterns alone do not equal traps. Operational descriptive nouning is
+forced linguistic carrier (acceptable). Trap is ontological commitment
+(causal verbs, property attribution to processes, agent-grammar on
+totalities). v1 is proto-detector — flags pattern, classifies severity
+by commitment-likelihood markers. v2 will add semantic context.
+
 Reference nodes in framework:
+  N_FrameworkCore     — substrate-invariant principle set (round 35)
+  N_OperationalCarrierVsOntologicalCommitment — calibration (round 36)
   N_EpistemicTraps    — R1-R4 catalogue
   N_GrammarTrap       — S-V-O ontological imposition
   N_OntologyGate      — operational interception layer
@@ -21,6 +30,56 @@ from dataclasses import dataclass, asdict
 from typing import Any
 
 
+# ─── Operational vs commitment markers ───────────────────────────────
+# Verbs / phrases that signal OPERATIONAL/DESCRIPTIVE use (downgrade severity)
+OPERATIONAL_MARKERS = re.compile(
+    r"\b(describes?|tracks?|labels?|denotes?|represents?|signifies|"
+    r"refers? to|stands for|encodes?|maps? to|measures?|reveals?|"
+    r"reflects?|expresses?|formaliz(es|ation)|models?|operationaliz(es|ation)|"
+    r"shorthand for|name for|reading of|coordinate of|face of|"
+    r"in (this|the) (framework|substrate|context|reading|terminology)|"
+    r"(per|via|by|under) (inversive|structural|argmin|derivation|theorem|N_|forced|RP[- ]gate|the framework|substrate-invariance)|"
+    r"is forced (by|via|per)|forced (by|via|per))\b",
+    re.IGNORECASE,
+)
+# Verbs / phrases that signal ONTOLOGICAL COMMITMENT (escalate severity).
+# Note: "forces?", "determines?", "underlies?", "grounds?" REMOVED — too
+# ambiguous with framework-internal use. Only unambiguous causal/property
+# markers retained.
+COMMITMENT_MARKERS = re.compile(
+    r"\b(causes?|caused|produces?|generates?|creates?|brings? about|"
+    r"gives? rise to|"
+    r"is an? object|is a thing|are (real|things|objects)|"
+    r"exists? in itself|independent(ly)? of (observation|observer|measurement|consciousness|description)|"
+    r"regardless of (observation|observer|measurement|consciousness|description)|"
+    r"has (the |a |any |some |its |their )?propert(y|ies)|"
+    r"with (the |a |any )?propert(y|ies)|"
+    r"possesses?|fundamental(ly)? (property|exists?|consists? of|made (of|up of))|"
+    r"consists? of (objects?|things?|substances?)|"
+    r"made (of|up of) (objects?|things?|substances?))\b",
+    re.IGNORECASE,
+)
+
+
+def calibrate_severity(default_severity: str, surrounding_text: str) -> tuple[str, str]:
+    """Adjust severity based on operational vs commitment markers in context.
+
+    Returns (new_severity, classification) where classification is one of:
+      "TRAP"                  — commitment-marker present
+      "OPERATIONAL"           — operational-marker present, no commitment
+      "AMBIGUOUS"             — neither marker (default to original severity)
+    """
+    has_op = bool(OPERATIONAL_MARKERS.search(surrounding_text))
+    has_commit = bool(COMMITMENT_MARKERS.search(surrounding_text))
+    if has_commit:
+        return ("high", "TRAP")
+    if has_op and not has_commit:
+        # Downgrade: forced linguistic carrier
+        downgrade = {"high": "low", "medium": "low", "low": "low"}
+        return (downgrade[default_severity], "OPERATIONAL")
+    return (default_severity, "AMBIGUOUS")
+
+
 @dataclass
 class TrapFlag:
     """One detected trap occurrence."""
@@ -30,6 +89,7 @@ class TrapFlag:
     char_start: int          # 0-indexed char position in full text
     context: str             # ±30 chars around match
     severity: str            # low | medium | high
+    classification: str      # TRAP | OPERATIONAL | AMBIGUOUS (round 36 calibration)
     diagnosis: str           # what the trap is
     suggestion: str          # how to repair
     framework_node: str      # which node diagnoses this
@@ -51,6 +111,16 @@ R1_PATTERNS = [
      "medium",
      "R1: explicit object-reification language",
      "Reframe as 'is a coordinate reading of...', 'is forced structure...', etc.",
+     "N000"),
+    (r"\b(reality|the universe|the cosmos|nature|the world)\s+(fundamentally |essentially |actually )?(consists? of|comprises?|is made (of|up of))\s+(objects?|things?|substances?|particles?|stuff|entities)\b",
+     "high",
+     "R1: ontological reification — totality treated as composed of objects",
+     "Reframe: 'reality is one A_0 process; what we call objects are coordinate readings'.",
+     "N_TopologyProcessIdentity"),
+    (r"\b(has|have|possess(es)?)\s+(the |a |any |some |its |their |intrinsic )?propert(y|ies)\b",
+     "high",
+     "R1: property-attribution to nouns (substantive object framing)",
+     "Reframe: 'X is characterised by Z-coordinate Y' or 'X under measurement Y reads as Z'.",
      "N000"),
 ]
 
@@ -177,16 +247,20 @@ PATTERN_GROUPS: list[tuple[str, list[tuple[str, str, str, str, str]]]] = [
 
 def scan(text: str) -> list[TrapFlag]:
     """Return all trap flags found in text. Overlapping flags at the same
-    char_start are deduplicated keeping the highest-severity entry."""
+    char_start are deduplicated keeping the highest-severity entry.
+    Severity is calibrated per round 36: operational markers nearby
+    downgrade to low; commitment markers escalate to high."""
     raw: list[TrapFlag] = []
     for trap_type, patterns in PATTERN_GROUPS:
         for tup in patterns:
             pat, severity, diagnosis, suggestion, node = tup
             for m in re.finditer(pat, text, re.IGNORECASE):
                 line_no = text[:m.start()].count("\n") + 1
-                ctx_start = max(0, m.start() - 40)
-                ctx_end = min(len(text), m.end() + 40)
+                ctx_start = max(0, m.start() - 80)
+                ctx_end = min(len(text), m.end() + 80)
                 context = text[ctx_start:ctx_end].replace("\n", " ").strip()
+                # Calibrate severity using context ±80 chars
+                calibrated_sev, classification = calibrate_severity(severity, context)
                 raw.append(
                     TrapFlag(
                         trap_type=trap_type,
@@ -194,7 +268,8 @@ def scan(text: str) -> list[TrapFlag]:
                         line=line_no,
                         char_start=m.start(),
                         context=f"…{context}…",
-                        severity=severity,
+                        severity=calibrated_sev,
+                        classification=classification,
                         diagnosis=diagnosis,
                         suggestion=suggestion,
                         framework_node=node,
@@ -240,14 +315,20 @@ def summarise(text: str) -> dict[str, Any]:
     word_count = len(text.split())
     by_type: dict[str, int] = {}
     by_severity: dict[str, int] = {"low": 0, "medium": 0, "high": 0}
+    by_classification: dict[str, int] = {"TRAP": 0, "OPERATIONAL": 0, "AMBIGUOUS": 0}
     for f in flags:
         by_type[f.trap_type] = by_type.get(f.trap_type, 0) + 1
         by_severity[f.severity] = by_severity.get(f.severity, 0) + 1
+        by_classification[f.classification] = by_classification.get(f.classification, 0) + 1
+    # True traps = commitment-classified
+    true_traps = [f for f in flags if f.classification == "TRAP"]
     return {
         "total_flags": len(flags),
+        "true_trap_count": len(true_traps),
         "word_count": word_count,
         "by_trap_type": by_type,
         "by_severity": by_severity,
+        "by_classification": by_classification,
         "shannon_overhead": shannon_overhead_estimate(flags, word_count),
         "flags": [asdict(f) for f in flags],
     }

@@ -14723,7 +14723,337 @@ edges:
     why_forced: |
       Without DEF as Tier-1 root, core has no foundational anchor.
 
+  # Round 36: operational nouning vs ontological reification — RP-gate calibration
+
+  - source: N_GrammarTrap
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: grammar_trap_refines_to_ontological_commitment_not_noun_use
+    edge_status: D
+    justification: |
+      N_GrammarTrap correctly identifies S-V-O as forced ontological
+      imposition at language level. But trap is the ONTOLOGICAL
+      COMMITMENT to S-V-O parsing, not noun-use itself. Linguistic
+      nouning is forced (any natural language is S-V-O); the trap
+      fires only when nouns are granted substantive ontological
+      status with properties/causal powers.
+    why_forced: |
+      Without this distinction, N_GrammarTrap would forbid all language
+      use — operationally impossible. With it, principle is applicable
+      while remaining strict.
+
+  - source: N_OperationalCarrierVsOntologicalCommitment
+    target: N_OntologyGate
+    label: distinction_calibrates_runtime_validation
+    edge_status: D
+    justification: |
+      Operational ontology gate (RP-gate runtime) needs the carrier-
+      vs-commitment distinction to avoid false positives. Pattern
+      detection alone over-flags valid operational nouning;
+      true validation requires recognising commitment, not just
+      pattern.
+    why_forced: |
+      Without calibration, runtime validator has poor signal/noise.
+      With calibration, runtime distinguishes real traps from
+      forced linguistic carriers.
+
+  - source: N_OntologyParadigmGrammarBound
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: paradigm_wall_specifically_at_ontological_commitment_layer
+    edge_status: D
+    justification: |
+      Paradigm-level grammar wall fires at ontological-commitment
+      layer, not at descriptive-label layer. Scientists CAN say
+      "the electron has charge" operationally (good descriptive
+      shorthand); paradigm wall hits when "has charge" is treated
+      as substantive property of substantive object.
+    why_forced: |
+      Localising paradigm wall to commitment layer makes diagnosis
+      precise. Without this, diagnosis appears to forbid
+      operationally necessary language.
+
+  - source: DEF
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: A0_substrate_uniformity_includes_linguistic_substrate
+    edge_status: D
+    justification: |
+      DEF's substrate-uniformity (per N_DomainsAsBPICarvings) means
+      A_0 operates in linguistic substrate too. Linguistic
+      operational forms are A_0 readings in symbolic substrate;
+      ontological commitments are R1 trap inserted at description
+      layer. Distinction recognises both as substrate phenomena.
+    why_forced: |
+      Substrate-uniformity demands accommodating language as substrate.
+      Without distinction, framework cannot use its own language
+      consistently.
+
+  - source: N_TopologyProcessIdentity
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: process_not_object_at_ontological_layer_only
+    edge_status: D
+    justification: |
+      "Process not object" applies at ontological-commitment layer.
+      Operational descriptive nouning ("the gradient", "the
+      wavefunction") is acceptable when treated as descriptive
+      coordinate label, problematic when granted independent
+      object-status with properties/agency.
+    why_forced: |
+      Without restriction to commitment layer, principle would
+      forbid descriptive language about processes — operationally
+      untenable.
+
+  - source: N_NoSeparatePieces
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: TOTAL_no_pieces_accommodates_linguistic_substrate
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces TOTAL claim includes linguistic substrate
+      among non-separated substrates. Language is one face of A_0,
+      not separate from physical/cognitive A_0. Operational use is
+      A_0 in symbolic substrate; ontological reification breaks this
+      unity by positing "language layer" + "real layer" separation.
+    why_forced: |
+      Maintaining TOTAL no-separation requires accommodating
+      language; commitment layer is where the false separation
+      sneaks back in.
+
+  - source: N_FrameworkCore
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: core_calibration_principle_for_RP_gate
+    edge_status: D
+    justification: |
+      N_FrameworkCore + RP-gate runtime need this calibration
+      principle to avoid mass false positives. Each core principle
+      flag from RP-gate must distinguish: pattern → commitment? or
+      pattern → operational carrier?
+    why_forced: |
+      Without calibration, core-validation produces high noise.
+      With it, validation becomes precise.
+
+  - source: N_OperationalCarrierVsOntologicalCommitment
+    target: N_MapTerritoryObserverIdentity
+    label: framework_self_tautology_resolves_via_substrate_unity
+    edge_status: D
+    justification: |
+      Framework's "ruler-of-stability finds stability everywhere
+      stability exists" tautology IS resolved structurally:
+      framework IS A_0 self-describing in symbolic substrate (per
+      N_MapTerritoryObserverIdentity). Self-validation is not
+      vicious circle — it is forced consequence of substrate-unity.
+      The "tautology" is the structural identification map = territory
+      = observer at the meta-level.
+    why_forced: |
+      Without self-application validation framework, ruler-finds-stability
+      looks circular; with it, the circularity IS the structural identity.
+
+  - source: N_InversiveTheory
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: inversive_test_targets_commitment_not_carrier
+    edge_status: D
+    justification: |
+      Inversive removal test: does ALTERNATIVE survive removal? The
+      alternative being tested is at ontological-commitment layer
+      (does the alternative ontology survive?), not at linguistic-
+      carrier layer (could we use different word?). Word choice is
+      operationally free; ontological commitment is structurally
+      tested.
+    why_forced: |
+      Without restriction to commitment layer, inversive test would
+      become trivial word-substitution exercise. Commitment-layer
+      restriction makes it structural.
+
+  - source: N187
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: hard_problem_dissolution_uses_carrier_distinction
+    edge_status: D
+    justification: |
+      "Subjective experience" as descriptive label for BPI
+      self-reference Z-pattern: operational, acceptable (per round
+      18 DEF→N187). "Subjective experience as substantive
+      ontological property requiring explanation": commitment-layer
+      ontology, dissolved by N187. Distinction is what makes
+      dissolution work without losing operational vocabulary.
+    why_forced: |
+      Hard Problem dissolution preserves "qualia", "subjective
+      experience" as operational descriptive terms while removing
+      their substantive-property status. Distinction structurally
+      required.
+
+  - source: N_OperationalCarrierVsOntologicalCommitment
+    target: N_OntologyGate
+    label: gate_severity_calibration_via_commitment_detection
+    edge_status: D
+    justification: |
+      RP-gate severity calibration: HIGH severity reserved for
+      patterns indicating ontological commitment (causal verbs,
+      property-attribution to processes, agent-grammar on
+      totalities). MEDIUM/LOW for ambiguous patterns where context
+      determines whether commitment is being made. Operational
+      descriptive nouning gets minimal flag (awareness only).
+    why_forced: |
+      Without severity calibration via commitment detection,
+      runtime validator has uniform severity for all patterns —
+      poor signal.
+
 nodes:
+
+  - id: N_OperationalCarrierVsOntologicalCommitment
+    title: "Operational Linguistic Carrier vs Ontological Commitment — RP-Gate Calibration"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    summary: |
+      Linguistic nouning ("the wavefunction", "the framework", "the
+      brain") is FORCED — natural language is S-V-O (per
+      N_GrammarTrap). The R1 grammar trap is not noun-use itself;
+      it is ONTOLOGICAL COMMITMENT to those nouns as substantive
+      objects with properties and causal powers.
+
+      Two layers must be distinguished:
+
+      Operational carrier (forced, acceptable):
+        - "the wavefunction" as descriptive label for Z-pattern
+        - "stable structure" as shorthand for forced argmin output
+        - "framework reveals X" as operational reading of derivation
+        - "consciousness" as label for cognitive-substrate A_0 reading
+
+      Ontological commitment (R1 trap):
+        - "the wavefunction collapses, causing X" — agent-grammar on
+          process, granting causal power
+        - "stable structures cause behaviour" — agent-grammar on
+          description
+        - "consciousness emerges from the brain" — substantive-
+          property attribution to coordinate reading
+        - "X has property Y" treating X as independent object
+
+      The framework itself uses operational nouning extensively
+      ("argmin Z", "Z-decomposition", "BPI", "engagement") as
+      descriptive labels. This is necessary; the labels track
+      structural patterns. Self-application: framework's own
+      noun-use is operational, not ontological.
+
+      Tautology of self-validation:
+        "Ruler designed to detect stable structure finds tautology
+        wherever stable structure exists." This is structural
+        self-identification, not vicious circle. Per
+        N_MapTerritoryObserverIdentity: framework IS A_0 self-
+        describing in symbolic substrate. The "circularity" IS the
+        structural identity at meta-level.
+
+      RP-gate runtime calibration:
+        Pattern detection ≠ trap detection. Pattern + ontological-
+        commitment-context = trap. Pattern + operational-carrier-
+        context = forced linguistic carrier (awareness flag, not
+        violation).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Substrate-uniformity of DEF: A_0 operates in linguistic
+        substrate; operational nouning IS A_0 in symbolic-formal
+        substrate.
+      (2) N_GrammarTrap content: explicitly recognises S-V-O as
+        FORCED at language level. Trap is conflation of forced-
+        linguistic-form with ontological-commitment.
+      (3) Empirical: scientific language is unavoidably noun-heavy.
+        Demanding noun-elimination makes science inarticulable.
+        Distinguishing operational use from commitment makes both
+        framework AND science articulable.
+      (4) Framework's own self-application: it uses noun-language
+        ("argmin Z", "BPI", etc.) extensively. If noun-use were
+        trap, framework would self-refute. Distinction preserves
+        coherence.
+    not_misinterpretations: |
+      NOT a relaxation of N_GrammarTrap. Grammar trap remains; this
+      sharpens it. The trap is COMMITMENT, not nouns themselves.
+      NOT a license for sloppy language. Operational nouning still
+      requires awareness — speaker/writer must know they are using
+      descriptive label, not ontological commitment. Lazy use slips
+      into commitment.
+      NOT contextual nihilism. Some patterns ARE ontological
+      commitment regardless of context (e.g., "X causes Y" with X
+      a process is almost always trap). Distinction is precise, not
+      arbitrary.
+      NOT escape route from RP-gate. Distinction sharpens the gate;
+      it does not bypass it. False-positive reduction, not trap
+      avoidance.
+    content: |
+      Distinguishing markers (heuristic):
+
+      Operational descriptive nouning (typical markers):
+        - Verbs like "describes", "tracks", "labels", "represents",
+          "denotes"
+        - Use as subject of sentence about its operation:
+          "the gradient measures Z_struct"
+        - Use within explicitly framework-relative context:
+          "in this framework, X is..."
+        - Awareness markers:
+          "for purposes of discussion, call this X"
+
+      Ontological commitment (typical markers):
+        - Causal verbs: "X causes Y", "X creates Y", "X produces Y"
+        - Property attribution to processes: "X has property Y"
+          when X is a process
+        - Agent-grammar on totalities: "reality tells us", "the
+          universe demands"
+        - Existence claims: "X exists in itself", "X is a real thing"
+        - Independence assertions: "X is independent of observation"
+          when X is observer-relative
+
+      Scientific writing pattern audit:
+        Most scientific writing CAN be read operationally OR
+        ontologically. The same sentence "the wavefunction collapses
+        upon measurement" can be:
+        - Operational: shorthand for Z-pattern transition under
+          observer interaction; descriptive label for argmin Z
+          step in QM substrate
+        - Ontological: granting wavefunction substantive object-
+          status with collapse as event; reifying observer/observed
+          interaction as causal exchange between separate things
+        Context disambiguates. Frequent ambiguity is itself an
+        artifact: paradigm prefers ontological reading by default.
+
+      Framework's self-use:
+        "Argmin Z" is a noun phrase; framework uses it constantly.
+        Operational use: it is a label for the argmin-of-Z-functional
+        operation. Ontological use (forbidden): treating "argmin Z"
+        as a thing that exists and acts. The framework's discipline
+        is to use the noun while staying at operational layer.
+
+      Framework's tautology resolution:
+        "The framework, designed to detect forced structure, finds
+        forced structure everywhere it is present. Therefore the
+        framework's success is tautological."
+        Yes — and this is not a bug. Per
+        N_MapTerritoryObserverIdentity: framework IS A_0 self-
+        describing. The ruler-finds-its-criterion is the structural
+        identification at meta-level. Substrate-uniformity guarantees
+        the ruler IS the criterion in symbolic substrate. There is
+        no outside-of-A_0 from which to falsify A_0; falsification
+        operates at structural-coherence + empirical-prediction
+        levels (per round on falsification conditions).
+
+      RP-gate v2 implications:
+        Current v1 (regex-based) flags patterns. v2 must add:
+        - Verb-class classifier (causal vs descriptive)
+        - Subject-class context (process vs object name)
+        - Framework-relative vs absolute claim detection
+        - Severity reweighting based on commitment-likelihood
+
+        Not all patterns become commitment. RP-gate v2 should
+        produce three labels: TRAP, OPERATIONAL_AWARENESS,
+        AMBIGUOUS_NEEDS_CONTEXT.
+
+      Operational implication for framework's own writing:
+        When framework explains itself, it uses operational
+        nouning. Reader must read at operational layer (default
+        framework-internal), not project ontological commitment.
+        The framework's content fields use S-V-O grammar; the
+        derivations remain structural.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_FrameworkCore
     title: "Framework Core — Substrate-Invariant Principle Set"
