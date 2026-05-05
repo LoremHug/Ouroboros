@@ -11255,7 +11255,310 @@ edges:
       purely cognitive/affective; with grounding, it is forced
       consequence of A_0 in dissipative observer substrate.
 
+  # Round 26: transition rate as Z_therm flow component
+  # Refines N_ComplexityAsDissipationPath by separating Z_therm into
+  # (rate) × (per-transition cost). Speed = transition frequency.
+  # Crystal vs plasma = canonical rate-axis comparison.
+
+  - source: DEF
+    target: N_TransitionRateAsZthermFlow
+    label: A0_Z_therm_decomposes_into_rate_and_magnitude
+    edge_status: D
+    justification: |
+      DEF's argmin Z over trajectories implies dissipation power
+      dW/dt has two factors: per-transition cost (Z_therm magnitude,
+      scales with T) AND transition frequency (Z_therm rate,
+      bits-erased per unit time). Both are Z_therm-coordinate
+      readings; their product gives total dissipation rate.
+    why_forced: |
+      Treating Z_therm as a single scalar conflates two distinct
+      structural quantities (cost-per-event vs events-per-time).
+      Trajectory argmin requires separating them — one substrate
+      can have low cost × high rate (plasma), another high cost ×
+      low rate (deep solid).
+
+  - source: N_ComplexityAsDissipationPath
+    target: N_TransitionRateAsZthermFlow
+    label: complexity_dissipation_factorises_into_complexity_and_rate
+    edge_status: D
+    justification: |
+      The full dissipation power decomposes as:
+        dW/dt ≈ ν · ΔK · k_B T ln 2
+      where ν = transition rate (this node), ΔK = bits per transition
+      (Z_struct complexity, N_ComplexityAsDissipationPath), k_B T ln 2
+      = thermal scale. N_ComplexityAsDissipationPath supplies the
+      complexity factor; this node supplies the rate factor.
+    why_forced: |
+      Complexity alone does not determine dissipation power — a
+      crystal has structure but minimal rate. Rate alone does not
+      either — a high-temperature gas has rate but limited per-
+      transition complexity. The product is forced by the trajectory
+      argmin.
+
+  - source: N029
+    target: N_TransitionRateAsZthermFlow
+    label: arrhenius_rate_realises_Z_therm_flow_in_chemistry
+    edge_status: D
+    justification: |
+      Arrhenius rate constant k = ν₀ · exp(-ΔG‡/kT) is exactly the
+      Z_therm flow decomposition: ν₀ is the pre-factor frequency
+      (this node's "rate"), exp(-ΔG‡/kT) is the per-transition cost
+      Boltzmann factor (Z_therm magnitude). N029 is the
+      chemistry-substrate realisation; this node the general claim.
+    why_forced: |
+      Without the rate-magnitude separation, Arrhenius is a chemistry
+      formula; with it, it is one substrate-specific instance of a
+      general Z_therm decomposition.
+
+  - source: N365
+    target: N_TransitionRateAsZthermFlow
+    label: plasma_high_rate_face_of_Z_therm_flow
+    edge_status: D
+    justification: |
+      Plasma's defining feature — extremely high reconfiguration rate
+      with moderate per-transition complexity — places it at the
+      high-rate pole of Z_therm flow. Taylor relaxation (N365) is
+      argmin Z_struct in this high-rate regime; the rate axis itself
+      is what distinguishes plasma from crystal.
+    why_forced: |
+      Treating plasma as "just argmin Z_struct" misses its high-rate
+      substrate; explicit rate axis places plasma structurally
+      against low-rate substrates.
+
+  - source: N078
+    target: N_TransitionRateAsZthermFlow
+    label: jacobson_thermodynamic_substrate_grounds_rate_decomposition
+    edge_status: D
+    justification: |
+      Jacobson's gravity-as-thermodynamics derivation operates in
+      the same thermodynamic substrate where Z_therm has both rate
+      and magnitude aspects. Horizon entropy growth has rate (per
+      Hawking) and magnitude (per area) — a gravitational realisation
+      of the same decomposition.
+    why_forced: |
+      Cross-substrate thermodynamic readings of the rate-magnitude
+      decomposition force the link.
+
+  - source: N362
+    target: N_TransitionRateAsZthermFlow
+    label: KMS_modular_automorphism_carries_rate_axis
+    edge_status: D
+    justification: |
+      KMS condition's modular automorphism σ^t parameterises thermal
+      time — directly the rate axis of Z_therm flow. KMS without rate
+      reading is partial; with rate reading, KMS time IS Z_therm rate
+      coordinate.
+    why_forced: |
+      Modular time has rate dimension; this dimension belongs to the
+      Z_therm decomposition's rate face. Pair definitionally required.
+
+  - source: N_NoSeparatePieces
+    target: N_TransitionRateAsZthermFlow
+    label: rate_and_magnitude_are_not_separate_aspects_of_Z_therm
+    edge_status: D
+    justification: |
+      Rate and magnitude do not exist independently — the substrate
+      determines BOTH: T sets pre-factor frequency AND per-transition
+      Boltzmann weight. Treating them as separate violates
+      N_NoSeparatePieces; identifying them as joint coordinates of
+      one Z_therm respects it.
+    why_forced: |
+      Separation predicts substrates with arbitrary rate/magnitude
+      ratios; the empirical correlation (T sets both) refutes this.
+      Joint coordinate reading forced.
+
+  - source: N_ZSimplexProjections
+    target: N_TransitionRateAsZthermFlow
+    label: Z_therm_axis_internally_decomposes_into_rate_and_magnitude
+    edge_status: D
+    justification: |
+      The Z_therm corner of the Z-simplex (per N_ZSimplexProjections)
+      itself has internal structure: rate × magnitude product. This
+      adds resolution within the Z_therm projection without breaking
+      the simplex's three-corner structure.
+    why_forced: |
+      Higher resolution within a projection coordinate is forced by
+      the empirical distinguishability of substrates at same total
+      Z_therm but different rate/magnitude split (crystal vs plasma).
+
+  - source: N_TransitionRateAsZthermFlow
+    target: N011
+    label: lyapunov_stability_bounds_rate_in_dissipative_attractor
+    edge_status: D
+    justification: |
+      I_Bound from Lyapunov stability bounds not just total Z but the
+      transition rate as well — an unbounded rate would destroy
+      attractor stability. Lyapunov bounds extend naturally to the
+      rate axis.
+    why_forced: |
+      Without rate bound, attractors with bounded total Z but
+      unbounded rate would exist; empirically they do not (any stable
+      configuration has finite update rate). Bound extension forced.
+
+  - source: N_TransitionRateAsZthermFlow
+    target: N371
+    label: BPI_hydrodynamic_regimes_distinguished_by_rate
+    edge_status: D
+    justification: |
+      N371's laminar-vs-turbulent regime distinction in BPI dynamics
+      IS a rate-axis distinction: laminar = low transition rate,
+      smooth Z-flow; turbulent = high transition rate, chaotic
+      Z-flow. The Reynolds-number analogy works precisely because
+      it is the rate ratio.
+    why_forced: |
+      Hydrodynamic regimes without rate axis lack a formal definition;
+      with rate axis, they are forced by Reynolds-number-like rate
+      thresholds.
+
+  - source: N_TransitionRateAsZthermFlow
+    target: N029
+    label: rate_decomposition_realises_in_arrhenius_chemistry
+    edge_status: D
+    justification: |
+      The reverse direction of arrhenius_rate edge: this node IS the
+      generalisation of Arrhenius to all substrates. N029 is the
+      canonical chemistry instance.
+    why_forced: |
+      General principle without canonical instance is abstract; pair
+      forced.
+
+  - source: N_TransitionRateAsZthermFlow
+    target: N327
+    label: weber_floor_includes_rate_component
+    edge_status: D
+    justification: |
+      Weber lower bound w_min = k_B T ln 2 / E_bind is per-detection
+      cost; the FULL perceptual dissipation rate also includes
+      detection rate. The lower bound applies per-event; total
+      perceptual Z-flow scales with rate × bound.
+    why_forced: |
+      Weber bound is one factor in the dissipation decomposition;
+      it implicitly assumes a rate context. Explicit rate connection
+      forced.
+
+  - source: N_TransitionRateAsZthermFlow
+    target: N365
+    label: plasma_taylor_relaxation_canonical_high_rate_anchor
+    edge_status: D
+    justification: |
+      Reverse direction: Taylor plasma relaxation IS the canonical
+      high-transition-rate Z-flow case. This node abstract; N365
+      concrete plasma instance.
+    why_forced: |
+      Abstract rate axis needs canonical extreme-substrate anchor;
+      plasma supplies it.
+
 nodes:
+
+  - id: N_TransitionRateAsZthermFlow
+    title: "Transition Frequency as Z_therm Rate Component — Crystal vs Plasma Pole"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.3
+    z_therm: 0.6
+    z_hidden: 0.1
+    summary: |
+      Z_therm decomposes internally into two factors that conflate
+      under naive reading: per-transition cost (magnitude, scales
+      with T) and transition rate (frequency, bits-erased per unit
+      time). Total dissipation power is their PRODUCT:
+        dW/dt ≈ ν · ΔK · k_B T ln 2
+      where ν = transition rate, ΔK = bits per transition (complexity),
+      k_B T ln 2 = thermal scale. "Speed" in dissipative-substrate
+      reasoning is precisely this transition frequency ν.
+
+      Crystal and plasma are opposite poles on the rate axis:
+        - Crystal: very low ν (slow lattice rearrangement) ×
+          moderate ΔK × moderate T → very low dW/dt
+        - Plasma: very high ν (constant E&M reconfiguration) ×
+          moderate-high ΔK × high T → very high dW/dt
+      Their structural difference is primarily on the rate axis,
+      not the complexity axis (both have substantial structure).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Arrhenius equation k = ν₀ · exp(-ΔG‡/kT): explicit
+        rate-magnitude factorisation in chemistry (per N029).
+      (2) Eyring equation k = (k_B T/h) · exp(-ΔG‡/kT): same
+        decomposition with Boltzmann pre-factor.
+      (3) Empirical substrate ordering (crystal → solid → liquid →
+        gas → plasma) is primarily a rate-axis ordering at
+        approximately constant per-event complexity.
+      (4) KMS modular time σ^t supplies the formal Z_therm rate
+        axis at QFT level (N362).
+
+      Status DEMONSTRATED rather than STRONG because the two-factor
+      decomposition is mathematically forced by trajectory argmin —
+      no empirical fitting required.
+    not_misinterpretations: |
+      NOT a claim that "speed = energy". Energy is per-transition
+      cost (magnitude axis); speed is rate (frequency axis). Their
+      product is power.
+      NOT a claim that high-rate always means high dissipation.
+      A high-rate substrate with very low per-transition complexity
+      (e.g., trivial gas) has low dissipation. Both factors needed.
+      NOT identical to "kinetic energy of constituents". A plasma's
+      kinetic energy is one component; the structural reconfiguration
+      rate is what matters for Z_therm flow.
+      NOT inconsistent with crystals having complexity. Crystals
+      have high static Z_struct; the rate axis says they have low
+      ν, hence low dissipation power despite the structure.
+    content: |
+      Mathematical form:
+        Power dissipated = ν · ΔK · k_B T ln 2
+        where:
+          ν   = transition rate (Hz, bits-erased per unit time)
+          ΔK  = bits per transition (Kolmogorov complexity ≡ Z_struct)
+          T   = temperature (Z_therm scale)
+
+      Substrate map (rate axis):
+        Crystal (low T, deep wells): ν ≈ 10^(-10) Hz at room T
+        Solid bulk: ν ≈ 10^0 - 10^3 Hz
+        Liquid: ν ≈ 10^9 - 10^12 Hz (molecular reorientation)
+        Gas: ν ≈ 10^12 Hz (collision rate)
+        Plasma: ν ≈ 10^15+ Hz (E&M reconfiguration, ionisation flips)
+        Neural cortex: ν ≈ 10^4 Hz (synaptic events) at vastly
+          higher per-event complexity than gas
+
+      Crystal vs plasma comparison:
+        Both have non-trivial Z_struct content (lattice vs collective
+        E&M state). They differ primarily in ν:
+          - Crystal: ν ≈ 0 (lattice fixed for years)
+          - Plasma: ν → maximum substrate allows
+        Z_therm magnitude comparable (per-event cost similar order).
+        So total dW/dt differs by 25 orders of magnitude — driven
+        almost entirely by rate axis.
+
+      Connection to N_ComplexityAsDissipationPath:
+        That node says: complexity builds along A_0 in dissipative
+        substrate. This node says: complexity alone does not determine
+        dissipation rate — rate is the orthogonal axis. The full
+        picture: A_0 favours configurations that BUILD COMPLEXITY
+        AT HIGH RATE in throughput substrates. Brain ≫ ecosystem ≫
+        crystal because brain has high complexity AND high rate.
+
+      Connection to Arrhenius/Eyring (N029):
+        The pre-factor ν₀ is the rate axis at the per-reaction level.
+        ΔG‡ is the magnitude. Their product — exp(-ΔG‡/kT) modulating
+        ν₀ — is the rate-magnitude decomposition realised in chemistry.
+
+      Connection to BPI hydrodynamics (N371):
+        Laminar regime = low ν, organised Z-flow. Turbulent regime
+        = high ν, chaotic Z-flow. The Reynolds analogy works because
+        rate is the relevant axis. Cognitive engagement at Wundt apex
+        = optimal ν for dispatch (not too slow, not turbulent).
+
+      Connection to engagement and FEP:
+        Brain operates at intermediate ν (~10^4 Hz synaptic events)
+        with very high ΔK (synaptic state space). This combination
+        gives moderate-high dissipation power with maximum
+        throughput-per-bit-erased efficiency — the
+        complexity-dissipation sweet spot for observer-bearing
+        substrate.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_ComplexityAsDissipationPath
     title: "Complexity Builds for Efficient Dissipation — A₀ Path through Z_struct as Z_therm Amplifier"
