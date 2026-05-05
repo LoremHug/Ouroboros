@@ -454,16 +454,55 @@ def apply_additions(conn) -> tuple[int, int]:
                     f"additions.yaml references missing node {endpoint_id} "
                     f"in edge {espec['source']} → {espec['target']} : {espec.get('label','')}"
                 )
-        # Upsert: delete existing edge with same (source, target, label), then create.
-        # additions.yaml is the override source — its richer justification wins.
-        conn.execute(
+        # Field-level merge: if edge exists with same (src, tgt, label), only
+        # SET fields explicitly provided in yaml. If yaml entry has fuller
+        # justification/why_forced than existing, they win — but missing fields
+        # don't wipe existing.
+        # If edge doesn't exist, CREATE with yaml fields + defaults.
+        r = conn.execute(
             """
             MATCH (a:Node {id: $src})-[e:Edge]->(b:Node {id: $tgt})
             WHERE e.label = $lbl
-            DELETE e
+            RETURN count(e), max(size(e.justification)), max(size(e.why_forced))
             """,
             {"src": espec["source"], "tgt": espec["target"], "lbl": espec.get("label", "")},
         )
+        row = r.get_next()
+        exists = row[0] > 0
+        existing_j_size = row[1] or 0
+        existing_w_size = row[2] or 0
+
+        if exists:
+            sets = []
+            params: dict = {
+                "src": espec["source"], "tgt": espec["target"],
+                "lbl": espec.get("label", ""),
+            }
+            if "edge_status" in espec:
+                sets.append("e.edge_status = $st")
+                params["st"] = espec["edge_status"]
+            # Only overwrite justification/why_forced if yaml version is longer
+            new_j = espec.get("justification", "") or ""
+            new_w = espec.get("why_forced", "") or ""
+            if new_j and len(new_j) > existing_j_size:
+                sets.append("e.justification = $j")
+                params["j"] = new_j
+            if new_w and len(new_w) > existing_w_size:
+                sets.append("e.why_forced = $w")
+                params["w"] = new_w
+            if sets:
+                conn.execute(
+                    f"""
+                    MATCH (a:Node {{id: $src}})-[e:Edge]->(b:Node {{id: $tgt}})
+                    WHERE e.label = $lbl
+                    SET {', '.join(sets)}
+                    """,
+                    params,
+                )
+            e_added += 1
+            continue
+
+        # New edge: CREATE
         conn.execute(
             """
             MATCH (a:Node {id: $src}), (b:Node {id: $tgt})

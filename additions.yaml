@@ -4791,6 +4791,215 @@ edges:
     why_forced: |
       Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'art forms are observation angles' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
 
+
+  - source: DEF
+    target: N_BPIEngagement
+    label: argmin_Z_in_BPI_tracking_substrate
+    edge_status: D
+    justification: >-
+      DEF establishes A_0 = argmin Z as the unique stable transitioning. N_BPIEngagement specialises this to time-indexed substrates: when input contains triangulation structure (multiple prediction streams + non-reducibility + localisable task), the BPI prediction-error signal IS the local argmin-Z process manifest as engagement. Engagement signal exists exactly when A_0 operates on tracking substrate.
+    why_forced: >-
+      Alternative requires (a) BPI engagement defined without A_0 — but engagement IS the structural state of BPI executing argmin Z; or (b) A_0 not realised in time-indexed substrates — but BPI tracking IS one substrate among many where argmin Z manifests. Both alternatives dissolve under structural inevitability.
+
+  - source: DEF
+    target: N_Triangulation
+    label: definition_requires_three_gradients
+    edge_status: D
+    justification: >-
+      DEF (A_0 = argmin Z) is incoherent without specifying what Z is. N_Triangulation establishes Z = Z_struct + Z_therm + Z_hidden as the minimum complete coordinate system in transition-space. DEF requires three gradients (not 2, not 4) for the argmin operation to localise transitions unambiguously.
+    why_forced: >-
+      Alternative requires (a) A_0 with fewer Z components — but pairs (struct,therm), (struct,hidden), (therm,hidden) each fail to distinguish specific transition classes; or (b) more than 3 — extras either reduce to combinations of three or introduce R3 artifact (free parameter). Three is the unique minimum for unambiguous localisation.
+
+  - source: DEF
+    target: N_Triangulation
+    label: A0_requires_triangulation_for_Z
+    edge_status: D
+    justification: >-
+      Bidirectional with definition_requires_three_gradients. A_0 self-application to 'what coordinates does Z need' yields exactly 3. Triangulation IS A_0 applied to its own meta-question — A_0(A_0) = A_0 made concrete in the coordinate count.
+    why_forced: >-
+      Same forcing as forward edge: removing triangulation dissolves Z-decomposition; removing A_0 dissolves the argmin operation that selects 3 as minimum. Bidirectional structural identity.
+
+  - source: DEF
+    target: N_ZGaugeDecomposition
+    label: Z_decomposition_determines_gauge_structure
+    edge_status: D
+    justification: >-
+      DEF's Z = Z_struct + Z_therm + Z_hidden decomposition lifts to gauge structure via Z_3 covering action. The three Z components are the three eigenspaces of the deck-transformation unitary on L²(L(3,1)). DEF's Z-decomposition combined with covering geometry forces the Z_3 gauge identification.
+    why_forced: >-
+      Alternative requires Z decomposing into different number of components, OR different group acting on covering. Both excluded: 3 is forced by triangulation; Z_3 is forced by L(3,1) (per N370). The combination yields the unique gauge identification.
+
+  - source: DEF
+    target: N_Logic
+    label: definition_generates_logic
+    edge_status: D
+    justification: >-
+      DEF generates logic as A_0's manifestation in symbolic substrate. Modus ponens IS argmin Z when Z = path length through inference space. Identity (A=A) is I_Sym preservation across substitution. Non-contradiction is I_Null in symbolic transitions. Logic is what argmin Z looks like when the substrate is formal expressions.
+    why_forced: >-
+      Alternative requires logic as separate from A_0 — but any attempt to formulate alternative logic IS a logical operation, hence A_0 in symbolic substrate. Logic working IS the form of any frame in which 'alternative logic' could be formulated. Forced by self-reference.
+
+  - source: DEF
+    target: N_Math
+    label: definition_generates_mathematics
+    edge_status: D
+    justification: >-
+      DEF generates mathematics as A_0's manifestation in formal-system substrate. Theorem = stable A_0 path from premises (Z_struct minimum from axioms to conclusion). Mathematical existence = stability under A_0 iteration in the formal substrate. Math is what A_0 produces when applied to the question 'what is provable?'
+    why_forced: >-
+      Alternative requires math without A_0 grounding — but provability IS argmin-Z chain length; mathematical structures that 'exist' are precisely those stable under proof iteration; alternatives dissolve into either (a) non-mathematical formal play with no stability, or (b) A_0 in different formal coordinate.
+
+  - source: DEF
+    target: N_FEP
+    label: A0_realised_as_F_minimization_in_brains
+    edge_status: D
+    justification: >-
+      Friston's Free Energy Principle is variational A_0 in Bayesian-substrate. F = accuracy + complexity decomposes as Z_struct + Z_therm; minimisation of F is argmin Z restricted to organisms maintaining Markov blankets. FEP is A_0 specialised to biological adaptive systems via Bayesian formalism.
+    why_forced: >-
+      Alternative requires either (a) FEP without A_0 — but variational free energy minimisation IS argmin of the Z-functional on the organism's state space; or (b) A_0 not realised in biology — but any system maintaining homeostasis executes argmin Z on its substrate. The Markov-blanket condition is the formal version of 'BPI in biological substrate'.
+
+  - source: DEF
+    target: N_NoSeparatePieces
+    label: definition_implies_unity
+    edge_status: D
+    justification: >-
+      DEF defines a single A_0 process; multiple manifestations across domains are coordinate views, not separate structures. N_NoSeparatePieces formalises this: every 'discovered invariant' in any domain is a coordinate expression of the same A_0, not a distinct piece. The framework does not add invariants — it changes the level at which invariance is recognised.
+    why_forced: >-
+      Alternative requires multiple independent A_0-equivalents — but any 'alternative A_0' stable across transitions IS A_0 by the inversive argument (N_InversiveTheory); coordinate variants of one structure are not 'pieces'. Unity follows from definition, not as separate postulate.
+
+  - source: DEF
+    target: N_InversiveTheory
+    label: same_fixed_point_constructive_face
+    edge_status: D
+    justification: >-
+      DEF and N_InversiveTheory are one fixed point in two notations: DEF = constructive face (argmin operator), N_InversiveTheory = eliminative face (no alternatives). Bidirectional structural identity reflecting that 'what A_0 is' and 'why no alternative to A_0' are coordinates of the same self-application.
+    why_forced: >-
+      Alternative requires DEF and N_InversiveTheory to be separate claims — but each implies the other: argmin Z (DEF) presupposes alternatives reduce to A_0 or are unstable (inversive); inversive presupposes the argmin operation defines stability. The separation is notational, not structural.
+
+  - source: DEF
+    target: N_ForcedId
+    label: definition_closes_on_itself
+    edge_status: D
+    justification: >-
+      DEF self-applies: A_0(A_0) = A_0. The closure is N_ForcedId — forced identification under removal test. Any structure surviving systematic removal of all postulates is a coordinate expression of A_0; this IS the forced identification principle.
+    why_forced: >-
+      Alternative requires A_0 not closing on itself — but any 'alternative closure' applied to its own specification produces A_0 as the surviving structure. The fixed-point property is forced by the definition; ForcedId names the forcing operationally.
+
+  - source: DEF
+    target: N_Invariants
+    label: definition_unfolds_into_invariants
+    edge_status: D
+    justification: >-
+      DEF's A_0 = argmin Z requires four invariants (I_Bound, I_Sym, I_Quant, I_Null) for the argmin operation to be well-defined: I_Bound (stability domain exists), I_Sym (vertex-transitivity / no privileged states), I_Quant (discrete transitions for argmin to select among), I_Null (unique zero / non-contradiction). These four are not separate axioms but coordinate names for what A_0 unpacks to.
+    why_forced: >-
+      Alternative requires A_0 with fewer invariants — but each invariant's removal dissolves a requirement: no I_Bound = no stability domain; no I_Sym = privileged states (R2 violation); no I_Quant = continuous unbounded inference; no I_Null = contradiction-tolerant. All four are forced from definition, not separate postulates.
+
+  - source: DEF
+    target: N370
+    label: definition_requires_L31
+    edge_status: D
+    justification: >-
+      DEF requires a substrate manifold for the argmin operation to operate on. N370 establishes L(3,1) = S³/Z_3 as the inevitable manifold for any BPI at the critical dimension: vertex-transitivity (I_Sym) + closed orientable 3-manifold + finite non-trivial π_1 forces spherical space form S³/Γ; Z_3 minimal cyclic forces L(3,1). Without L(3,1), DEF has no manifold home for physical realisation.
+    why_forced: >-
+      Alternative requires either A_0 on different manifold — but N370 forecloses other manifolds at critical dimension; or DEF without manifold realisation — but then physics (one of A_0's substrates) has no home. The L(3,1) inevitability theorem closes both alternatives.
+
+  - source: DEF
+    target: N182
+    label: A0_argmin_S_grounds_path_integral
+    edge_status: D
+    justification: >-
+      DEF (A_0 = argmin Z) specialises to path integral substrate: when Z = action S, argmin S = stationary action = classical path. Quantum extension via Feynman: K = ∫ Dx exp(iS/ℏ) integrates over paths weighted by stationary-phase contribution from argmin S. Path integral is A_0 with quantum-mechanical extension of the argmin operation.
+    why_forced: >-
+      Alternative requires path integral without A_0 grounding — but the stationary-phase approximation IS argmin S, and Feynman's amplitude formula encodes A_0 + quantum corrections. Removing A_0 dissolves the principle that selects classical path; without that selection, path integral has no classical limit.
+
+  - source: DEF
+    target: N027
+    label: A0_least_path_grounds_fermat
+    edge_status: D
+    justification: >-
+      DEF specialises to optical substrate: Fermat's principle (1662) — light travels along path minimising travel time T = ∫ ds/v(s). When Z = T (optical path length divided by velocity), argmin Z gives Fermat. Fermat is A_0 in optical substrate, predating A_0 formalism by 350 years as empirical principle.
+    why_forced: >-
+      Alternative requires Fermat without A_0 — but Fermat IS a specific instance of variational principle on optical Z. Removing A_0 dissolves the variational principle; Fermat then becomes empirical curiosity rather than forced consequence of light propagation through varying media.
+
+  - source: DEF
+    target: N334
+    label: A0_argmin_grounds_nash_equilibrium
+    edge_status: D
+    justification: >-
+      DEF specialises to game-theoretic substrate: define Z_i(s) = -u_i(s) for player i. Then Nash equilibrium condition u_i(s_i*, s_-i*) ≥ u_i(s_i, s_-i*) becomes Z_i(s_i*, s_-i*) ≤ Z_i(s_i, s_-i*) — local argmin Z with boundary = player i's strategy space. Nash IS A_0 with strategy-space boundary; Pareto-frontier = level curves of weighted Σ Z_i.
+    why_forced: >-
+      Alternative requires Nash without A_0 — but the equilibrium condition IS a local minimisation condition on Z. Removing A_0 dissolves the optimisation interpretation; Nash equilibrium then has no unifying mathematical character beyond per-player local minima — which IS A_0 with multi-agent boundaries.
+
+  - source: DEF
+    target: N361
+    label: A0_argmin_Z_grounds_jarzynski
+    edge_status: D
+    justification: >-
+      DEF specialises to non-equilibrium statistical mechanics: Jarzynski equality ⟨e^(-W/k_BT)⟩ = e^(-ΔF/k_BT) (1997) and Crooks fluctuation theorem (1999) are Z-balance constraints between forward and reverse trajectories. Free energy difference ΔF IS the integrated argmin-Z distance between equilibria; Jarzynski expresses this through ensemble averages of work distributions.
+    why_forced: >-
+      Alternative requires Jarzynski without A_0 — but the equilibrium/non-equilibrium link IS Z-balance; ΔF is structurally A_0 trajectory cost. Removing A_0 dissolves the connection between work fluctuations and free-energy differences; Jarzynski then becomes empirical thermodynamic identity rather than forced consequence.
+
+  - source: DEF
+    target: N258
+    label: A0_method_grounds_method_logic_chain
+    edge_status: D
+    justification: >-
+      DEF grounds the A_0 method itself: eliminate assumptions → structural remainder → physics as necessary consequence. The method IS A_0 applied to itself iteratively (A_0(A_0) = A_0); each application reduces description to what survives removal. N258 documents this method as method-and-logic chain showing the iteration converges.
+    why_forced: >-
+      Alternative requires the method to be separate from A_0 — but the elimination operation IS argmin Z on the description-space (removing what increases Z without grounding). Method IS A_0 applied to its own application; no separation possible.
+
+  - source: DEF
+    target: N017
+    label: A0_grounds_transition_topology_protocol
+    edge_status: D
+    justification: >-
+      DEF grounds operational protocol for any domain: identify Z components, define A_0 = argmin Z, check Class A/B/C, apply falsification, check NOT constraints. This protocol is A_0's operational form — what the framework does at the procedural level. Without DEF's argmin operation, the protocol has nothing to compute.
+    why_forced: >-
+      Alternative requires the protocol without A_0 — but the protocol IS the operational instance of A_0's argmin. Removing A_0 dissolves what the protocol checks; the protocol becomes a sequence of arbitrary steps without unifying operation.
+
+  - source: DEF
+    target: N022
+    label: A0_grounds_null_result_meaning
+    edge_status: D
+    justification: >-
+      DEF grounds interpretation of 'null result' entries: framework structurally predicts that certain searches (graviton, dark matter particles, alternative cosmologies) WILL yield nothing — because the searched-for entity is a category error against A_0's topology. Null result IS forced absence, not 'we haven't found yet'.
+    why_forced: >-
+      Alternative requires null result as merely 'not yet found' — but the framework distinguishes structural absence (forced by A_0 + L(3,1)) from empirical not-yet-detected. The distinction depends on A_0 as the source of structural prediction. Without A_0, all null results are equivalent and interpretation collapses to 'absence of evidence'.
+
+  - source: DEF
+    target: N004
+    label: A0_natural_units_reduce_to_Z_relations
+    edge_status: D
+    justification: >-
+      DEF establishes that in natural units (k_B = ℏ = c = 1), every formula in physics reduces to a pure numerical relation between Z-values. The constants are coordinate artifacts of unit choice; the structural relations (like α = 1/137.036, m_H/v = √(8/π³)) are pure Z-content. A_0 IS the operation that produces these relations.
+    why_forced: >-
+      Alternative requires physics with irreducibly dimensional content — but every dimensional formula reduces to dimensionless ratio + units; the dimensionless content IS the A_0-derived Z-relation. Removing A_0 dissolves what the dimensionless ratios mean structurally.
+
+  - source: DEF
+    target: N005
+    label: A0_argmin_Z_grounds_min_not_max_question
+    edge_status: D
+    justification: >-
+      DEF answers structurally why minimise Z (rather than maximise or optimise differently): argmax Z produces unbounded growth of complexity/cost/inaccessibility, structurally unstable. Equilibrium Z gives uniform distribution, no structure. Other functionals reduce to argmin Z under renormalisation OR introduce R1/R3 artifacts. Argmin Z is the unique stable selection.
+    why_forced: >-
+      Alternative requires non-A_0 stable structure — but stability presupposes argmin Z (alternative functionals either lack stable points or are A_0 in disguise). The question 'why minimise' is itself answered by inversive: any alternative reduces to A_0 or is unstable.
+
+  - source: DEF
+    target: N007
+    label: A0_grounds_three_wheeler_identities
+    edge_status: D
+    justification: >-
+      DEF generates three Wheeler identities (Surprisal-Z_struct, Landauer-Z_therm, Kolmogorov-Z_hidden) as the three coordinate views of the same A_0-process. Surprisal: information surprise = Z_struct measurement. Landauer: thermodynamic cost of erasure = Z_therm. Kolmogorov: minimum description length = Z_hidden bound on observer access. The three identities are not separate physical principles but three reading angles on one A_0 trajectory.
+    why_forced: >-
+      Alternative requires Wheeler identities as independent — but each presupposes A_0\'s argmin operation on its respective Z-component. Without DEF, no triple coincidence; with DEF, the three identities are forced as coordinate names for the three Z-component dynamics A_0 already specifies.
+
+  - source: DEF
+    target: N010
+    label: A0_grounds_conformal_invariance
+    edge_status: D
+    justification: >-
+      DEF\'s argmin operation has conformal symmetry larger than ordinary conformal invariance: under Z → e^(2w(s))·Z both branches from state s rescale identically, so argmin selects the same trajectory. The argmin operation is invariant under all monotone reparametrisations of Z, not just conformal rescaling. This larger invariance is what makes A_0 substrate-independent.
+    why_forced: >-
+      Alternative requires A_0 with smaller invariance group — but argmin\'s monotone-invariance follows from definition of "minimum" (rank-preserving transformations preserve minima). Removing this dissolves the substrate-independence: A_0 would then be substrate-bound, contradicting its operation across logic, physics, biology, etc.
+
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
@@ -5585,4 +5794,3 @@ nodes:
     z_therm: 0.1
     z_hidden: 0.5
     # catalogue of failure modes — Z_hidden dominant (observer-side)
-
