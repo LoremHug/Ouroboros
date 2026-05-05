@@ -107,24 +107,35 @@ MANUAL_MAP: dict[str, list[str]] = {
 }
 
 
-def parse_tex_sections(tex: str) -> list[dict]:
-    """Walk text, emit sections {label, title, kind, body}."""
+def _slugify(s: str) -> str:
+    """Convert a title to a slug suitable for an auto-label."""
+    s = s.lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    s = s.strip("-")
+    return s[:60]
+
+
+def parse_tex_sections(tex: str, include_unlabeled: bool = True) -> list[dict]:
+    """Walk text, emit sections {label, title, kind, body, auto_label}.
+
+    If include_unlabeled=True, sections without an explicit \\label{} get a
+    synthetic label "auto:<kind>-<slug>" and auto_label=True. This makes
+    every section's body searchable via the Section table, even if no Node
+    is linked to it yet.
+    """
     lines = tex.splitlines()
     n = len(lines)
     sections: list[dict] = []
 
-    # Find all (line_no, kind, title, label?) tuples
     markers = []
     for i, line in enumerate(lines):
         for m in SECTION_RE.finditer(line):
             kind, title = m.group(1), m.group(2).strip()
-            # Look for label on same or next non-empty line
             label = None
             lm = LABEL_RE.search(line)
             if lm:
                 label = lm.group(1)
             else:
-                # Check next 3 lines for label
                 for j in range(i + 1, min(i + 4, n)):
                     nlm = LABEL_RE.search(lines[j])
                     if nlm:
@@ -132,20 +143,33 @@ def parse_tex_sections(tex: str) -> list[dict]:
                         break
             markers.append((i, kind, title, label))
 
-    # Slice text between consecutive markers (regardless of kind)
+    seen_labels: set[str] = set()
     for idx, (start, kind, title, label) in enumerate(markers):
         end = markers[idx + 1][0] if idx + 1 < len(markers) else n
         body_lines = lines[start + 1:end]
         body = "\n".join(body_lines).strip()
-        # Strip excess LaTeX commands from body for readability
         body = clean_latex(body)
+        clean_title = clean_latex_inline(title)
+        auto = False
+        if not label:
+            if not include_unlabeled:
+                continue
+            base = f"auto:{kind}-{_slugify(clean_title)}"
+            label = base
+            suffix = 2
+            while label in seen_labels:
+                label = f"{base}-{suffix}"
+                suffix += 1
+            auto = True
+        seen_labels.add(label)
         sections.append({
             "label": label,
-            "title": clean_latex_inline(title),
+            "title": clean_title,
             "kind": kind,
-            "body": body[:8000],  # cap to keep DB writes reasonable
+            "body": body[:8000],
+            "auto_label": auto,
         })
-    return [s for s in sections if s["label"]]  # only labeled
+    return sections
 
 
 _RE_LABEL = re.compile(r"\\label\{[^}]+\}")
@@ -217,7 +241,8 @@ def bootstrap_section_schema(conn) -> None:
             label STRING PRIMARY KEY,
             title STRING,
             kind STRING,
-            body STRING
+            body STRING,
+            auto_label BOOLEAN
         )
     """)
     conn.execute("""
@@ -233,8 +258,9 @@ def main() -> None:
         sys.exit(1)
 
     text = TEX.read_text(encoding="utf-8", errors="replace")
-    sections = parse_tex_sections(text)
-    print(f"parsed {len(sections)} labeled sections from .tex")
+    sections = parse_tex_sections(text, include_unlabeled=True)
+    auto_count = sum(1 for s in sections if s.get("auto_label"))
+    print(f"parsed {len(sections)} sections from .tex ({auto_count} with auto-labels)")
 
     # Dedup by label: keep the longest body
     by_label: dict[str, dict] = {}
@@ -253,10 +279,12 @@ def main() -> None:
         conn.execute(
             """
             CREATE (s:Section {
-                label: $lbl, title: $ttl, kind: $k, body: $body
+                label: $lbl, title: $ttl, kind: $k, body: $body,
+                auto_label: $auto
             })
             """,
-            {"lbl": s["label"], "ttl": s["title"], "k": s["kind"], "body": s["body"]},
+            {"lbl": s["label"], "ttl": s["title"], "k": s["kind"],
+             "body": s["body"], "auto": bool(s.get("auto_label"))},
         )
     print(f"inserted {len(sections)} Section rows")
 
