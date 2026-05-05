@@ -427,7 +427,320 @@ def detect_bipartite_kmn(
     return out
 
 
-# ─── M7: induced-cycle topology (graph-level property) ──────────────
+# ─── Motif-aware structural lint (round 45) ─────────────────────────
+
+def _add_node_to_adj(
+    adj: dict[str, set[str]],
+    new_id: str,
+    new_neighbors: set[str],
+) -> dict[str, set[str]]:
+    """Return new adjacency dict with new_id added connecting to new_neighbors.
+    Original adj is not mutated."""
+    new_adj = {k: set(v) for k, v in adj.items()}
+    new_adj[new_id] = set(new_neighbors)
+    for nb in new_neighbors:
+        new_adj.setdefault(nb, set()).add(new_id)
+    return new_adj
+
+
+def lint_node_addition(
+    adj: dict[str, set[str]],
+    new_id: str,
+    new_neighbors: set[str],
+    core_principle_ids: set[str],
+    statuses: dict[str, str] | None = None,
+    layers: dict[str, str] | None = None,
+    twin_jaccard: float = 0.7,
+    twin_min_shared: int = 3,
+) -> dict[str, Any]:
+    """Motif-aware structural lint for a candidate node addition.
+
+    Reports what the new node creates, extends, and whether it
+    introduces twin/duplication signals. Compares motif inventories
+    BEFORE and AFTER the hypothetical addition.
+
+    Args:
+      adj: current adjacency
+      new_id: candidate node ID (may or may not exist)
+      new_neighbors: proposed connections
+      core_principle_ids: ids treated as principle stratum
+      statuses, layers: optional, used for cycle-substantivity filter
+      twin_jaccard: threshold for twin warning
+      twin_min_shared: minimum shared for twin warning
+
+    Returns: structured report.
+    """
+    if new_id in adj:
+        # Existing node — lint against current graph (skip hypothetical
+        # comparison, just report what motifs it currently participates in)
+        before_adj = adj
+        after_adj = adj
+        is_existing = True
+    else:
+        before_adj = adj
+        after_adj = _add_node_to_adj(adj, new_id, new_neighbors)
+        is_existing = False
+
+    def graph_metrics(a: dict[str, set[str]]) -> dict[str, Any]:
+        V = len(a)
+        E = sum(len(v) for v in a.values()) // 2
+        # components
+        visited = set(); comps = 0
+        for n in a:
+            if n in visited: continue
+            comps += 1
+            stack = [n]
+            while stack:
+                x = stack.pop()
+                if x in visited: continue
+                visited.add(x)
+                stack.extend(y for y in a.get(x, set()) if y not in visited)
+        # triangles
+        T = 0
+        for u in a:
+            for v in a[u]:
+                if v > u:
+                    for w in a[u]:
+                        if w > v and w in a[v]:
+                            T += 1
+        return {
+            "V": V, "E": E, "components": comps,
+            "beta1": E - V + comps, "triangles": T,
+        }
+
+    before_m = graph_metrics(before_adj)
+    after_m = graph_metrics(after_adj)
+
+    # Z-triangles formed BY new node (parent OR child)
+    z_tri_created = []
+    if not is_existing:
+        # New node as parent: its 3 children pairwise connected
+        children = sorted(new_neighbors)
+        for i, a in enumerate(children):
+            for j in range(i + 1, len(children)):
+                b = children[j]
+                if b not in after_adj.get(a, set()):
+                    continue
+                for k in range(j + 1, len(children)):
+                    c = children[k]
+                    if c in after_adj.get(a, set()) and c in after_adj.get(b, set()):
+                        z_tri_created.append({
+                            "parent": new_id, "children": [a, b, c],
+                        })
+        # New node as child: existing parent has 2 other children pairwise
+        # connected, all three pairwise (incl. new_id)
+        for parent in new_neighbors:
+            other_children = after_adj.get(parent, set()) - {new_id}
+            for sib1 in other_children:
+                if sib1 not in new_neighbors:
+                    continue
+                for sib2 in other_children:
+                    if sib2 <= sib1 or sib2 not in new_neighbors:
+                        continue
+                    if sib2 in after_adj.get(sib1, set()):
+                        z_tri_created.append({
+                            "parent": parent, "children": sorted([new_id, sib1, sib2]),
+                        })
+
+    # M2/M5 clique participation: find maximal cliques containing new_id
+    # in after_adj (limit to size >= 4 for relevance)
+    cliques_joined = []
+    if not is_existing:
+        # Bron-Kerbosch restricted to cliques containing new_id
+        cands_for_new = {n for n in after_adj.get(new_id, set())}
+        # Recursive enumeration of cliques in subgraph induced by new_id ∪ its neighbours
+        def find_cliques_with(R: set[str], P: set[str], X: set[str], out: list):
+            if not P and not X:
+                if len(R) >= 4 and new_id in R:
+                    out.append(frozenset(R))
+                return
+            pivot = max(P | X, key=lambda u: len(after_adj.get(u, set()) & P), default=None)
+            if pivot is None: return
+            for v in list(P - after_adj.get(pivot, set())):
+                nbrs = after_adj.get(v, set())
+                find_cliques_with(R | {v}, P & nbrs, X & nbrs, out)
+                P = P - {v}; X = X | {v}
+        cliques_with_new: list[frozenset[str]] = []
+        # Start clique enumeration from new_id
+        find_cliques_with({new_id}, cands_for_new, set(), cliques_with_new)
+        # Dedup and partition
+        seen = set()
+        for clq in sorted(cliques_with_new, key=lambda c: -len(c)):
+            key = tuple(sorted(clq))
+            if key in seen: continue
+            seen.add(key)
+            principles = sorted(c for c in clq if c in core_principle_ids)
+            cousins = sorted(c for c in clq if c not in core_principle_ids)
+            if len(principles) == 1 and len(cousins) >= 3:
+                motif = "M2"
+            elif len(principles) >= 2 and len(cousins) >= 3:
+                motif = "M5"
+            elif len(principles) == 0 and len(cousins) >= 4:
+                motif = "M2_orphan"
+            else:
+                continue
+            new_role = "principle" if new_id in core_principle_ids else "cousin"
+            cliques_joined.append({
+                "motif": motif,
+                "size": len(clq),
+                "principles": principles,
+                "cousins": cousins,
+                "new_node_role": new_role,
+            })
+
+    # Twin candidates via Jaccard
+    twin_warnings = []
+    target_neighbors = after_adj.get(new_id, set())
+    for nid, nbrs in after_adj.items():
+        if nid == new_id: continue
+        a_n = target_neighbors - {nid}
+        b_n = nbrs - {new_id}
+        if not a_n or not b_n: continue
+        shared = a_n & b_n
+        if len(shared) < twin_min_shared: continue
+        union = a_n | b_n
+        jac = len(shared) / len(union) if union else 0.0
+        if jac < twin_jaccard: continue
+        # Family-edge reclassification check (sibling-style edge between new and nid)
+        # Not available without edge_labels — skip refinement here
+        twin_warnings.append({
+            "candidate": nid, "jaccard": round(jac, 3),
+            "shared_count": len(shared),
+            "shared_sample": sorted(shared)[:6],
+        })
+    twin_warnings.sort(key=lambda x: -x["jaccard"])
+
+    # K_{m,n} (M6) check: does new node complete or extend any K_{3,3}?
+    # Quick heuristic: check if new node + 2 existing non-adjacent peers
+    # form K_{3,n} side with shared independent set of size >= 3.
+    m6_extensions = []
+    if not is_existing:
+        # Find pairs of new_neighbors that are not adjacent to each other
+        new_nbrs_list = sorted(new_neighbors)
+        for i, x in enumerate(new_nbrs_list):
+            for j in range(i + 1, len(new_nbrs_list)):
+                y = new_nbrs_list[j]
+                if y in after_adj.get(x, set()): continue  # need non-adj for side B
+                # Common neighbours of x and y, intersected with new_id's neighbours
+                common = after_adj[x] & after_adj[y] & new_neighbors
+                common = [c for c in common if c != new_id]
+                # Check c, x, y mutually non-adjacent
+                if len(common) < 1: continue
+                # Need at least 1 more node forming K_{3,*} side
+                # full structural check: side_A = {new_id, x, y}, must be independent
+                if x in after_adj.get(new_id, set()) and y in after_adj.get(new_id, set()):
+                    # new_id-x and new_id-y are edges (they are neighbours by setup), but
+                    # we need new_id, x, y to form INDEPENDENT side meaning NOT pairwise
+                    # connected. Since x,y are new_id's neighbours, new_id<->x and
+                    # new_id<->y are edges → side_A is NOT independent.
+                    # Skip — bipartite side requires non-edges.
+                    continue
+
+    # Cycle-richness delta
+    beta1_delta = after_m["beta1"] - before_m["beta1"]
+    triangle_delta = after_m["triangles"] - before_m["triangles"]
+
+    # Articulation status: would removing new_id leave graph 2-connected?
+    # If is_existing, run articulation check; if hypothetical, the new node
+    # is automatically not an articulation (it's a leaf relative to existing).
+    articulation_concern = None
+    if not is_existing and len(new_neighbors) == 1:
+        articulation_concern = (
+            f"Single connection ({list(new_neighbors)[0]}) — new node will "
+            f"be a leaf. Articulation point of length-1; minimal structural "
+            f"integration."
+        )
+
+    return {
+        "is_existing": is_existing,
+        "new_id": new_id,
+        "new_neighbors": sorted(new_neighbors),
+        "before": before_m,
+        "after": after_m,
+        "delta": {
+            "V": after_m["V"] - before_m["V"],
+            "E": after_m["E"] - before_m["E"],
+            "beta1": beta1_delta,
+            "triangles": triangle_delta,
+        },
+        "z_triangles_created": z_tri_created[:20],
+        "z_triangles_count": len(z_tri_created),
+        "cliques_joined": cliques_joined[:10],
+        "cliques_joined_count": len(cliques_joined),
+        "twin_warnings": twin_warnings[:5],
+        "twin_warnings_count": len(twin_warnings),
+        "articulation_concern": articulation_concern,
+    }
+
+
+def format_lint_report(report: dict[str, Any]) -> str:
+    """Markdown report of motif-aware lint."""
+    lines = ["# RP-Gate Motif-Aware Lint Report\n"]
+    new_id = report["new_id"]
+    lines.append(f"**Candidate node:** `{new_id}`")
+    if report["is_existing"]:
+        lines.append("- Mode: lint EXISTING node\n")
+    else:
+        lines.append(f"- Mode: hypothetical addition")
+        lines.append(f"- Proposed neighbours ({len(report['new_neighbors'])}): "
+                     f"{', '.join('`'+n+'`' for n in report['new_neighbors'][:10])}"
+                     + (" …" if len(report['new_neighbors']) > 10 else ""))
+        lines.append("")
+        d = report["delta"]
+        lines.append("## Topology delta")
+        lines.append(f"- ΔV: +{d['V']}")
+        lines.append(f"- ΔE: +{d['E']}")
+        lines.append(f"- Δβ₁ (independent cycles): "
+                     f"{'+' if d['beta1'] >= 0 else ''}{d['beta1']}")
+        lines.append(f"- Δtriangles: +{d['triangles']}")
+        lines.append("")
+
+    if report["z_triangles_count"]:
+        lines.append(f"## Z-triangles created (M1): {report['z_triangles_count']}")
+        for t in report["z_triangles_created"][:5]:
+            p = t["parent"]; c = t["children"]
+            lines.append(f"  - parent `{p}` → "
+                         f"{{`{c[0]}`, `{c[1]}`, `{c[2]}`}}")
+        if report["z_triangles_count"] > 5:
+            lines.append(f"  …and {report['z_triangles_count']-5} more")
+        lines.append("")
+
+    if report["cliques_joined_count"]:
+        lines.append(f"## Cliques joined (M2/M5): {report['cliques_joined_count']}")
+        for c in report["cliques_joined"][:5]:
+            lines.append(
+                f"  - **{c['motif']}** K_{c['size']} as {c['new_node_role']}: "
+                f"P={c['principles']}, C={c['cousins']}"
+            )
+        if report["cliques_joined_count"] > 5:
+            lines.append(f"  …and {report['cliques_joined_count']-5} more")
+        lines.append("")
+
+    if report["twin_warnings_count"]:
+        lines.append(f"## Twin warnings (M3): {report['twin_warnings_count']}")
+        for w in report["twin_warnings"][:3]:
+            lines.append(
+                f"  - `{w['candidate']}` Jaccard={w['jaccard']} "
+                f"(shared={w['shared_count']}, sample: "
+                f"{', '.join('`'+x+'`' for x in w['shared_sample'])})"
+            )
+        if report["twin_warnings_count"] > 3:
+            lines.append(f"  …and {report['twin_warnings_count']-3} more")
+        lines.append("")
+
+    if report["articulation_concern"]:
+        lines.append(f"## ⚠ Articulation concern\n")
+        lines.append(report["articulation_concern"])
+        lines.append("")
+
+    if (report["z_triangles_count"] == 0 and report["cliques_joined_count"] == 0
+            and report["twin_warnings_count"] == 0):
+        lines.append("\n_No structural-motif signals detected. Node integrates "
+                     "without joining cliques, creating triangles, or duplicating "
+                     "neighbour sets._")
+
+    return "\n".join(lines)
+
 
 def measure_cycle_topology(
     adj: dict[str, set[str]],

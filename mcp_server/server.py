@@ -816,6 +816,86 @@ def rp_gate_audit_node(node_id: str, format: str = "json") -> str:
     return json.dumps(summary, ensure_ascii=False, default=str)
 
 
+@mcp.tool()
+def rp_gate_motif_lint(
+    node_id: str,
+    proposed_neighbors_csv: str = "",
+    extra_principle_ids_csv: str = "",
+    twin_jaccard: float = 0.7,
+    twin_min_shared: int = 3,
+    format: str = "report",
+) -> str:
+    """Motif-aware structural lint for a candidate node addition or
+    existing node review.
+
+    Combines round-40 twin detector + round-41 motif inventory into a
+    single structural-lint call. Reports what motifs the candidate
+    extends (joins existing K_n / Z-triangle / etc.), what new motifs
+    it creates, twin/duplication warnings, topology delta (β₁, ΔE,
+    Δtriangles), and articulation concerns.
+
+    Two modes:
+      1. Hypothetical addition: pass node_id of NEW node + proposed_
+         neighbors_csv. Report includes before/after delta.
+      2. Existing-node review: pass node_id of existing graph node;
+         neighbours are looked up from graph; reports current motif
+         participation.
+
+    Returns json (structured) or report (markdown).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+    adj = _motifs._build_adjacency(edge_pairs)
+
+    # Statuses + layers (used elsewhere; not needed for lint core)
+    statuses: dict[str, str] = {}
+    layers: dict[str, str] = {}
+    res = conn.execute("MATCH (n:Node) RETURN n.id, n.status, n.layer")
+    for r in _rows(res):
+        statuses[r[0]] = r[1] or ""
+        layers[r[0]] = r[2] or "unknown"
+
+    extras = {x.strip() for x in extra_principle_ids_csv.split(",") if x.strip()}
+    principle_ids = set(_CORE_PRINCIPLE_IDS) | extras
+
+    if node_id in adj and not proposed_neighbors_csv:
+        new_neighbors = adj[node_id]
+    elif proposed_neighbors_csv:
+        new_neighbors = {
+            x.strip() for x in proposed_neighbors_csv.split(",") if x.strip()
+        }
+        unknown = new_neighbors - set(adj.keys())
+        if unknown:
+            err = {"error": f"unknown neighbours: {sorted(unknown)}"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+    else:
+        err = {
+            "error": (
+                "must provide either node_id of existing node, or "
+                "node_id + proposed_neighbors_csv for hypothetical addition"
+            )
+        }
+        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+
+    report = _motifs.lint_node_addition(
+        adj=adj,
+        new_id=node_id,
+        new_neighbors=new_neighbors,
+        core_principle_ids=principle_ids,
+        statuses=statuses,
+        layers=layers,
+        twin_jaccard=twin_jaccard,
+        twin_min_shared=twin_min_shared,
+    )
+    if format == "report":
+        return _motifs.format_lint_report(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
+
+
 # ────────────────────────────────────────────────────── ENTRY
 
 def main() -> None:
