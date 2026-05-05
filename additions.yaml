@@ -13619,6 +13619,353 @@ edges:
       categories; map/territory/observer is one such category. Pair
       structurally required.
 
+  # Round 31: wire all 9 placeholder stubs + strengthen N043, N265
+  # Placeholders have real structural claims in their summaries but only 1
+  # edge each (to the chain-source). Each needs proper forced edges to core.
+
+  # === N028: A_0 trajectory from scale-free topology ===
+  - source: N028
+    target: DEF
+    label: A0_trajectory_grounds_in_argmin_Z
+    edge_status: D
+    justification: |
+      N028 is an A_0 trajectory output from scale-free topology
+      convergence. Trajectory IS argmin Z over time in scale-free
+      substrate; DEF directly supplies the trajectory framework.
+    why_forced: |
+      A_0 trajectory without DEF grounding is descriptive; with DEF,
+      it is forced consequence of substrate-applied argmin Z.
+
+  - source: N028
+    target: N337
+    label: A0_trajectory_paired_with_scale_free_networks
+    edge_status: D
+    justification: |
+      N028 (A_0 trajectory) is the dynamic counterpart to N337's
+      scale-free Barabási-Albert network: same topology substrate,
+      static structure (N337) + dynamic trajectory (N028).
+    why_forced: |
+      Static-dynamic pair on same substrate forced by N_NoSeparatePieces.
+
+  - source: N028
+    target: N363
+    label: A0_trajectory_paired_with_zipf_power_law_attractor
+    edge_status: D
+    justification: |
+      Scale-free convergence in N028 yields Zipf-like power-law
+      distributions per N363. Trajectory + asymptotic-distribution
+      pair.
+    why_forced: |
+      Scale-free trajectory + Zipf law are siblings on same
+      power-law substrate.
+
+  # === N114: L(3,1) chain input to generation iso ===
+  - source: N114
+    target: N370
+    label: L31_chain_input_grounds_in_manifold
+    edge_status: D
+    justification: |
+      N114 is input to the L(3,1) → generation isomorphism chain.
+      Manifold (N370) supplies the substrate; N114 is one of its
+      structural inputs.
+    why_forced: |
+      L(3,1) chain content requires manifold reference; pair forced.
+
+  - source: N114
+    target: N218
+    label: L31_chain_input_grounds_generation_isomorphism
+    edge_status: D
+    justification: |
+      N114's role in generation isomorphism chain (per N218) makes
+      it a direct ingredient of the canonical isomorphism between
+      L(3,1) leaves and SM generations.
+    why_forced: |
+      Chain-input + theorem paired structurally.
+
+  - source: N114
+    target: DEF
+    label: L31_chain_grounds_in_argmin_Z
+    edge_status: D
+    justification: |
+      The L(3,1) chain grounds in argmin Z structural derivation
+      (DEF). N114's chain placement is one substrate of A_0.
+    why_forced: |
+      Chain in framework = A_0 substrate instance; DEF grounding
+      forced.
+
+  # === N228: critical transitions input ===
+  - source: N228
+    target: DEF
+    label: critical_transitions_argmin_Z_regime_shift
+    edge_status: D
+    justification: |
+      Critical transitions are argmin Z bifurcations between
+      regimes. DEF specifies the argmin operation; N228 the
+      bifurcation events.
+    why_forced: |
+      Bifurcation without argmin Z grounding is descriptive; with
+      it, forced.
+
+  - source: N228
+    target: N371
+    label: critical_transitions_paired_with_BPI_hydrodynamic_regime_shift
+    edge_status: D
+    justification: |
+      Critical transitions in dynamics ↔ N371's hydrodynamic
+      regime shifts (laminar→turbulent). Same regime-shift
+      phenomenon, two readings.
+    why_forced: |
+      Regime-shift phenomena cross-linked by N_NoSeparatePieces.
+
+  - source: N228
+    target: N011
+    label: critical_transitions_paired_with_Lyapunov_stability_loss
+    edge_status: D
+    justification: |
+      Critical transitions occur at loss of Lyapunov stability
+      (N011). Stability framework + transition events paired.
+    why_forced: |
+      Stability + bifurcation paired definitionally.
+
+  # === N273: scale-free topology output ===
+  - source: N273
+    target: DEF
+    label: scale_free_topology_argmin_Z_in_network_substrate
+    edge_status: D
+    justification: |
+      N273 is scale-free topology output; convergence to scale-free
+      structure IS argmin Z in network substrate.
+    why_forced: |
+      Network A_0 + DEF grounding forced.
+
+  - source: N273
+    target: N337
+    label: scale_free_output_paired_with_BA_model
+    edge_status: D
+    justification: |
+      N273 is the topology output of the convergence process
+      formalised in N337's Barabási-Albert preferential attachment.
+    why_forced: |
+      BA process + topology output paired.
+
+  - source: N273
+    target: N028
+    label: scale_free_output_paired_with_A0_trajectory
+    edge_status: D
+    justification: |
+      N273 (topology) and N028 (trajectory) are sibling outputs
+      of scale-free convergence — structure + dynamics pair.
+    why_forced: |
+      Structure + dynamics siblings forced.
+
+  # === N274: spectral dim d_s=2 at UV ===
+  - source: N274
+    target: DEF
+    label: spectral_dim_2_UV_argmin_Z_in_quantum_walk_regime
+    edge_status: D
+    justification: |
+      d_s = 2 at r → 0 IS argmin Z in quantum-walk substrate where
+      Z_struct dominates. DEF specialised to UV regime.
+    why_forced: |
+      UV regime A_0 + DEF grounding forced.
+
+  - source: N274
+    target: N067
+    label: spectral_dim_2_UV_paired_with_full_d_s_formula
+    edge_status: D
+    justification: |
+      N274 is the UV asymptote (d_s → 2 at r → 0) of N067's full
+      d_s(r) = 2 + 2r/(r+r_0) formula. Asymptote + formula pair.
+    why_forced: |
+      Asymptote + formula paired definitionally.
+
+  - source: N274
+    target: N370
+    label: UV_regime_grounds_in_L31_substrate
+    edge_status: D
+    justification: |
+      UV regime of L(3,1) operates on the manifold substrate; N370
+      supplies manifold for N274's dimensional-asymptote claim.
+    why_forced: |
+      Manifold + regime paired.
+
+  # === N275: CP structure Z_3 reflection ===
+  - source: N275
+    target: N370
+    label: CP_Z3_reflection_grounds_in_L31_topology
+    edge_status: D
+    justification: |
+      CP structure as Z_3 coordinate reflection x → -x grounds in
+      N370's L(3,1) Z_3 covering symmetry.
+    why_forced: |
+      CP topology source manifold-grounded.
+
+  - source: N275
+    target: N178
+    label: CP_Z3_paired_with_strong_CP_resolution
+    edge_status: D
+    justification: |
+      N275 (CP = Z_3 reflection, θ_QCD = 0) and N178 (Strong CP
+      problem dissolved via L(3,1) Z_3 vacuum restriction) are
+      paired CP structural claims.
+    why_forced: |
+      Strong CP + θ_QCD = 0 paired.
+
+  - source: N275
+    target: N294
+    label: CP_Z3_paired_with_CKM_CP_via_eta_invariant
+    edge_status: D
+    justification: |
+      N275's CP Z_3 reflection paired with N294's CKM CP via
+      Bismut-Freed eta-invariant structure.
+    why_forced: |
+      CP-Z_3 + CKM-CP siblings.
+
+  # === N276: antimatter Z_3 inversion ===
+  - source: N276
+    target: N370
+    label: antimatter_Z3_inversion_grounds_in_L31_chirality
+    edge_status: D
+    justification: |
+      Antimatter as x → -x Z_3 inversion grounds in L(3,1)'s native
+      chirality (per N259). N370 supplies manifold; N276 the
+      inversion realisation.
+    why_forced: |
+      Native chirality + inversion realisation paired.
+
+  - source: N276
+    target: N259
+    label: antimatter_paired_with_classical_paradox_dissolution
+    edge_status: D
+    justification: |
+      Matter/antimatter asymmetry dissolves under L(3,1) chirality
+      (per N259); N276 is the structural mechanism. Paradox +
+      mechanism pair.
+    why_forced: |
+      Paradox dissolution + mechanism paired.
+
+  - source: N276
+    target: DEF
+    label: antimatter_argmin_Z_via_Z3_inversion_substrate
+    edge_status: D
+    justification: |
+      Antimatter as Z_3 inversion is a substrate-coordinate of
+      argmin Z on L(3,1). DEF grounds the inversion-operation
+      structurally.
+    why_forced: |
+      Inversion + argmin substrate paired.
+
+  # === N278: input to Gödel ===
+  - source: N278
+    target: N310
+    label: godel_input_paired_with_godel_theorem_node
+    edge_status: D
+    justification: |
+      N278 is input to the Gödel incompleteness derivation (N310).
+      Direct pair: input + theorem.
+    why_forced: |
+      Chain-input + theorem pair definitional.
+
+  - source: N278
+    target: DEF
+    label: godel_chain_input_grounds_in_argmin_Z
+    edge_status: D
+    justification: |
+      Gödel chain inputs operate within DEF's argmin Z applied to
+      formal-system substrate.
+    why_forced: |
+      Formal-system A_0 + DEF grounding forced.
+
+  # === N280: Path A Gödel argument ===
+  - source: N280
+    target: N310
+    label: godel_path_a_paired_with_godel_theorem
+    edge_status: D
+    justification: |
+      N280 is one path of the Gödel argument chain leading to
+      N310's incompleteness theorem. Chain-step + conclusion pair.
+    why_forced: |
+      Argument-step + conclusion paired definitionally.
+
+  - source: N280
+    target: N107
+    label: godel_path_paired_with_simplicial_homology
+    edge_status: D
+    justification: |
+      Gödel's incompleteness has homological structure (Chaitin
+      version uses Kolmogorov; both relate to N107's simplicial
+      framework).
+    why_forced: |
+      Formal-system limit + homological framework paired.
+
+  - source: N280
+    target: DEF
+    label: godel_path_grounds_in_argmin_Z
+    edge_status: D
+    justification: |
+      Gödel argument paths operate in DEF's formal substrate;
+      direct grounding.
+    why_forced: |
+      Formal-substrate A_0 + DEF paired.
+
+  # === N043: Information Laws — strengthen ===
+  - source: N043
+    target: DEF
+    label: information_laws_argmin_Z_in_logarithmic_substrate
+    edge_status: D
+    justification: |
+      Benford + Zipf + Weber-Fechner share 1/x prior structure =
+      argmin Z in logarithmic-coordinate substrate. DEF directly.
+    why_forced: |
+      Information laws without DEF grounding are empirical; with
+      DEF, forced.
+
+  - source: N043
+    target: N_BPIEngagement
+    label: information_laws_grounds_in_BPI_logarithmic_compression
+    edge_status: D
+    justification: |
+      1/x prior reflects BPI's logarithmic compression of dynamic
+      range — engagement signal compression mechanism. N_BPIEngagement
+      supplies BPI framework.
+    why_forced: |
+      BPI compression + information-law siblings forced.
+
+  - source: N043
+    target: N_PhiAttractor
+    label: information_laws_paired_with_phi_attractor_continuous_powerlaw
+    edge_status: D
+    justification: |
+      1/x power-law prior is continuous-substrate A_0 attractor
+      sibling with N_PhiAttractor's φ scaling. Both are continuous
+      A_0 attractors in different specifics.
+    why_forced: |
+      Continuous attractor siblings forced.
+
+  # === N265: S³→Z_2 sub-r_0 stochasticity — strengthen ===
+  - source: N265
+    target: DEF
+    label: subr0_stochasticity_argmin_Z_unsplit_Z_components
+    edge_status: D
+    justification: |
+      Sub-r_0 stochasticity from un-split Z_hidden/Z_struct is
+      argmin Z under degenerate-coordinate substrate (DEF in
+      sub-r_0 regime).
+    why_forced: |
+      Sub-r_0 A_0 + DEF grounding forced.
+
+  - source: N265
+    target: N094
+    label: subr0_stochasticity_paired_with_complex_phase_emergence
+    edge_status: D
+    justification: |
+      N265 (S³→Z_2 not yet broken at sub-r_0) and N094 (SO(2)×U(1)
+      complex phases at sub-r_0) are paired sub-r_0 structural
+      readings — symmetry-breaking pre-state + complex-phase
+      consequence.
+    why_forced: |
+      Sub-r_0 phenomena cross-linked by N_NoSeparatePieces.
+
 nodes:
 
   - id: N_MapTerritoryObserverIdentity
