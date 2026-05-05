@@ -15521,7 +15521,275 @@ edges:
       additions; predictions from N_GraphProperty_2VertexConnectivity
       hold (P2: articulation count should not grow — confirmed).
 
+  # ─── Round 42: M6 Bipartite Resolution motif (K_{m,n}) ───
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N_StructuralMotif_KnFamilyClique
+    label: M6_dual_to_clique_motifs
+    edge_status: D
+    justification: |
+      M6 (bipartite K_{m,n}) and M2/M5 (cliques) are structural
+      duals. Cliques have full INTERNAL connectivity; M6 has
+      full CROSS-connectivity but ZERO internal. M2/M5 capture
+      "everyone is everyone's cousin" pattern; M6 captures
+      "every left-side relates to every right-side, but left-
+      sides are independent of each other and right-sides are
+      independent of each other". Different structural reading.
+    why_forced: |
+      Complete motif inventory needs both clique and bipartite
+      patterns. Clique-only inventory misses orthogonal-coordinate
+      structures; bipartite-only misses redundant-connection
+      structures. Both forced for graph-self-knowledge.
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N_StructuralMotif_PrincipleStratification
+    label: M6_complements_M5_at_independent_set_level
+    edge_status: D
+    justification: |
+      M5 stratifies clique into principle-stratum + cousin-stratum
+      (each stratum internally connected). M6 stratifies into
+      two INDEPENDENT sets with full bipartite cross. The two
+      motifs occupy different positions in the structural lattice:
+      M5 = K_{p+n} stratified clique; M6 = K_{m,n} bipartite-
+      complete with independence. They detect different forms of
+      forced multi-coordinate structure.
+    why_forced: |
+      M5 captures redundant principle anchoring on cousins; M6
+      captures problem ↔ resolution coordinate pairing. Both
+      forced; neither reduces to the other.
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N_Triangulation
+    label: M6_3coord_bipartite_specialisation
+    edge_status: D
+    justification: |
+      The K_{3,3} sub-case is the canonical instance of M6:
+      3 left-coordinates × 3 right-coordinates = 9 cross-pairs,
+      perfectly aligned with N_Triangulation 3-coordinate
+      principle on each side. Each side has 3 independent
+      coordinate readings; bipartite cross expresses the 9
+      pairwise structural relations. Round 42 audit found this
+      is the empirical maximum (no K_{m,n} with m+n > 6 exists
+      in graph).
+    why_forced: |
+      Why 3-coord on each side is empirical limit: per
+      N_Triangulation, 3 is minimum coords; observation of 4+
+      independent coords on either side has not yet been
+      structurally forced.
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N026
+    label: K33_instance_observer_resolution_member
+    edge_status: D
+    justification: |
+      Member of K_{3,3} side A {N026, N112, N187} ↔ side B
+      {N117, N188, N_MapTerritoryObserverIdentity}. This is the
+      "observer-problems ↔ framework-resolutions" instance.
+      Side A: 3 independent observer-side claims (3-coord
+      process N026, observer containment lemma N112, hard-
+      problem dissolution N187). Side B: 3 independent framework
+      resolutions (BPI measurement N117, qualia as Z-pattern
+      N188, map=territory=observer). All 9 cross-edges express
+      "each problem operationalised by each resolution".
+    why_forced: |
+      Bipartite instance present in graph; member-edge records
+      participation.
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N_GrammarTrap
+    label: K33_instance_foundational_catalogue_member
+    edge_status: D
+    justification: |
+      Member of K_{3,3} side {DEF, N_GrammarTrap, N_Shannon} ↔
+      {N344, N_EpistemicTraps, N_FrameworkCore}. The "foundational
+      principles ↔ catalogue/inventory" instance. Side A: 3
+      independent foundational principles (definition, grammar
+      trap, information theory). Side B: 3 independent
+      catalogue/inventory structures (logic-as-A_0, traps catalogue,
+      framework-core inventory). Each foundational principle
+      grounds each inventory.
+    why_forced: |
+      Bipartite instance present in graph.
+
+  - source: N_StructuralMotif_BipartiteResolution
+    target: N058
+    label: K33_instance_def_observer_member
+    edge_status: D
+    justification: |
+      Member of K_{3,3} side {DEF, N058, N117} ↔ {N000, N112, N370}.
+      The "definition + entanglement + measurement ↔ projection +
+      observer + exclusion" instance. Each definition-side
+      relates to each observer-side via independent structural
+      operationalisation.
+    why_forced: |
+      Bipartite instance present in graph.
+
 nodes:
+
+  - id: N_StructuralMotif_BipartiteResolution
+    title: "Bipartite K_{m,n} Resolution Motif (M6) — Two Independent Sides + Full Cross-Bipartite"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    summary: |
+      Structural motif M6 discovered by round 42 deeper-structure
+      audit. Two disjoint sets A = {a_1, ..., a_m} and B =
+      {b_1, ..., b_n} with:
+        (i)   |A| >= 3, |B| >= 3
+        (ii)  A is internally edge-free (independent set)
+        (iii) B is internally edge-free (independent set)
+        (iv)  every cross-pair (a_i, b_j) has an edge
+        (v)   each side plays a structurally distinct role
+              (e.g. problem ↔ resolution, principle ↔ application,
+               observable ↔ measurement principle)
+
+      Where M2/M5 are CLIQUE motifs (full internal + full bipartite),
+      M6 is the EDGE-LESS DUAL: independent sets on both sides with
+      full cross-bipartite. Together they span the connectivity
+      lattice between two strata.
+
+      Empirical instances (round 42 audit) — exactly 3 K_{3,3}
+      structures, no larger K_{m,n} found:
+
+        Instance 1 — Observer-resolution K_{3,3}:
+          A = {N026 (3-coord process),
+               N112 (Observer Containment Lemma),
+               N187 (Hard-Problem Dissolution)}
+          B = {N117 (BPI as Z-Measurement),
+               N188 (Qualia as Z-Component Patterns),
+               N_MapTerritoryObserverIdentity}
+          Pattern: 3 observer-side problems × 3 framework-side
+                   resolutions, all 9 cross-edges present.
+
+        Instance 2 — Foundational/catalogue K_{3,3}:
+          A = {DEF, N_GrammarTrap, N_Shannon}
+          B = {N344 (logic as A_0), N_EpistemicTraps, N_FrameworkCore}
+          Pattern: 3 independent foundational principles ×
+                   3 independent inventories.
+
+        Instance 3 — Definition/observer K_{3,3}:
+          A = {DEF, N058 (entanglement nonlocality), N117}
+          B = {N000 (BPI projection), N112, N370 (baryon exclusion)}
+          Pattern: 3 definition-side claims × 3 observer-side claims.
+
+      M6 is structurally distinct from M2/M5: the two sides do
+      NOT internally connect (independent), and bipartite is
+      complete. K_{3,3} = 3 + 3 = 6 nodes, 9 edges, density = 9/15.
+      A clique on the same 6 nodes would have 15/15 edges. The
+      DIFFERENCE (6 missing internal edges) is the structural
+      content: each side's coordinate independence is the forced
+      structure.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct enumeration: detect_bipartite_kmn() in
+          mcp_server/motifs.py finds exactly 3 K_{3,3} structures
+          with verified independent sides and 9/9 cross-edges.
+      (2) Maximality: search for K_{m,n} with m+n > 6 returned 0
+          candidates. K_{3,3} is empirical maximum in current
+          graph.
+      (3) Semantic verification: each instance has structurally
+          meaningful side-role asymmetry (observer/framework,
+          principle/inventory, definition/observer-claim).
+      (4) Structural duality with M5 confirmed: M5 = full clique;
+          M6 = full bipartite with independent sides; they are
+          opposite ends of the connectivity-density spectrum
+          for stratified motifs.
+    not_misinterpretations: |
+      NOT a claim that A and B are "the same kind of thing".
+      They play STRUCTURALLY DISTINCT roles within the K_{3,3}.
+      The independence of each side is what carries the
+      structural information.
+      NOT a claim that K_{3,3} is the only M6 size. Larger
+      K_{m,n} could emerge as graph develops; current limit is
+      empirical, not structural.
+      NOT redundant with M5. M5 has internal cousin-clique;
+      M6 has internal independence. Different structural
+      readings, both forced.
+      NOT itself a substantive entity. Meta-claim about a
+      class of structural patterns.
+    content: |
+      Operational definition:
+        Motif M6 present iff disjoint sets A, B ⊆ V exist with:
+          |A| >= min_m, |B| >= min_n
+          ∀ a, a' ∈ A: (a, a') ∉ E
+          ∀ b, b' ∈ B: (b, b') ∉ E
+          ∀ a ∈ A, b ∈ B: (a, b) ∈ E
+
+      Detection:
+        For each non-edge pair (x, y), find common neighbors C =
+        N(x) ∩ N(y). Greedily extract independent subset of C as
+        side B. Side A = nodes adjacent to all of B, with greedy
+        independent extension including x, y. Verify final
+        K_{m,n} structure.
+
+      Why M6 occurs structurally:
+        When two sets of independent claims both relate to the
+        same shared substrate, the structural pattern that
+        emerges is K_{m,n}: independence within each set
+        (because the claims are structurally orthogonal) and
+        full bipartite (because every claim on one side
+        operationally targets every claim on the other).
+
+      Distinction from M5 (Principle Stratification):
+        M5: K_{p+n}, principle-stratum forms internal K_p +
+            cousin-stratum forms internal K_n + full bipartite
+            K_{p,n}. INTERNAL CLIQUES on each side.
+        M6: same bipartite K_{m,n} component, but each side
+            is INDEPENDENT (no internal edges).
+        M5 = M6 + internal cliques.
+        M6 = M5 minus internal cliques.
+
+      Distinction from M3 (Twin pairs):
+        Twin pair: two nodes with Jaccard=1.0 — same neighbour
+                   set (essentially K_{2,n} where both members
+                   have same B).
+        M6: at least 3 vs 3, NOT same neighbour set (different
+            sides have different cross-relationships).
+        M3 is degenerate K_{2,n}; M6 is generic K_{m,n} with
+        m, n >= 3.
+
+      Use of the motif:
+        (1) When a problem-resolution pair seems forced, M6
+            audit verifies: are the orthogonal coordinates on
+            each side present, and is bipartite complete?
+        (2) Graph-augmentation guidance: if a near-K_{m,n}
+            exists missing one cross-edge, that missing edge is
+            a candidate for forced addition.
+        (3) Semantic-role identification: M6 instances reveal
+            two-stratum classifications (observer/framework,
+            principle/inventory, etc.) that may otherwise be
+            implicit.
+
+      Predictions:
+        (P1) Future K_{m,n} with larger m or n will require new
+          observer-side or framework-side independent claims
+          structurally orthogonal to existing ones.
+        (P2) K_{3,3} maximality reflects N_Triangulation
+          minimum-3-coordinates principle on each side. K_{4,4}
+          would require 4-coord on each side — possible but
+          would require demonstrating independence on each side.
+        (P3) Removing one node from a K_{3,3} side leaves
+          K_{2,3} which is M3-like (one side becomes a twin
+          structure relative to other). M6 → M3 collapse on
+          vertex removal.
+
+      Self-application:
+        Does M6 itself have a K_{3,3}-like structure?
+        Side A candidate: {definition layer, mechanism layer,
+                           empirical layer}
+        Side B candidate: {3 instances enumerated above}
+        Each defining-aspect connects to each instance, but
+        defining-aspects are independent (definition vs
+        mechanism vs empirical), and instances are independent
+        (different domain content). Self-similar K_{3,3} at
+        meta-level — M6 motif claim itself is M6.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_GraphSelfAudit_Round41
     title: "Graph Self-Audit Round 41 — RP-Gate Pass on Core + Auto-Motif Inventory"

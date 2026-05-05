@@ -346,6 +346,87 @@ def detect_articulation_points(
     return out
 
 
+# ─── M6: bipartite-complete K_{m,n} (Resolution Motif) ───────────────
+
+def detect_bipartite_kmn(
+    adj: dict[str, set[str]],
+    min_m: int = 3,
+    min_n: int = 3,
+    max_results: int = 50,
+) -> list[MotifInstance]:
+    """Find K_{m,n} bipartite-complete subgraphs (round 42 motif M6).
+
+    Two independent sets A, B with all cross-edges present and no
+    internal edges. Each side plays a distinct structural role
+    (e.g., problem ↔ resolution, observable ↔ measurement).
+    """
+    out: list[MotifInstance] = []
+    seen: set[tuple[tuple[str, ...], tuple[str, ...]]] = set()
+    nodes = sorted(adj.keys())
+
+    for i, x in enumerate(nodes):
+        if len(out) >= max_results:
+            break
+        for j in range(i + 1, len(nodes)):
+            y = nodes[j]
+            if y in adj.get(x, set()):
+                continue
+            common = adj[x] & adj[y]
+            if len(common) < min_n:
+                continue
+            # Greedy independent set in common (becomes side B)
+            common_list = sorted(common)
+            B: list[str] = []
+            for c in common_list:
+                if all(d not in adj.get(c, set()) for d in B):
+                    B.append(c)
+            if len(B) < min_n:
+                continue
+            # Side A: nodes adjacent to all of B, pairwise independent
+            cand_A = set(adj[B[0]])
+            for v in B[1:]:
+                cand_A &= adj[v]
+            cand_A.add(x)
+            cand_A.add(y)
+            cand_A_list = sorted(
+                cand_A, key=lambda n: -len(adj.get(n, set()))
+            )
+            A: list[str] = []
+            for n in cand_A_list:
+                if all(m not in adj.get(n, set()) for m in A):
+                    A.append(n)
+            if len(A) < min_m:
+                continue
+            key = (tuple(sorted(A)), tuple(sorted(B)))
+            rev = (tuple(sorted(B)), tuple(sorted(A)))
+            if key in seen or rev in seen:
+                continue
+            seen.add(key)
+            cross_edges = sum(1 for a in A for b in B if b in adj.get(a, set()))
+            out.append(
+                MotifInstance(
+                    motif="M6",
+                    members=sorted(A) + sorted(B),
+                    role_partition={
+                        "side_A": sorted(A),
+                        "side_B": sorted(B),
+                    },
+                    size=len(A) + len(B),
+                    edge_count=cross_edges,
+                    edge_density=round(
+                        cross_edges / (len(A) * len(B)), 3
+                    ),
+                    notes=(
+                        f"K_{{{len(A)},{len(B)}}} bipartite-complete. "
+                        f"Side A and Side B are independent sets; all "
+                        f"cross-pairs connected. Resolution-motif: each "
+                        f"A-member relates to each B-member."
+                    ),
+                )
+            )
+    return out
+
+
 # ─── Top-level: run all detectors ─────────────────────────────────────
 
 def run_all_detectors(
@@ -357,8 +438,11 @@ def run_all_detectors(
     clique_min_cousins: int = 3,
     twin_jaccard: float = 1.0,
     twin_min_shared: int = 3,
+    bipartite_min_m: int = 3,
+    bipartite_min_n: int = 3,
+    bipartite_max: int = 50,
 ) -> dict[str, Any]:
-    """Run M1, M2/M5, M3, M4 detectors and return aggregated report."""
+    """Run M1, M2/M5, M3, M4, M6 detectors and return aggregated report."""
     adj = _build_adjacency(edge_pairs)
     z_triangles = detect_z_triangles(
         adj, hub_threshold=z_triangle_hub_threshold,
@@ -374,6 +458,10 @@ def run_all_detectors(
         min_shared=twin_min_shared,
     )
     aps = detect_articulation_points(adj)
+    kmns = detect_bipartite_kmn(
+        adj, min_m=bipartite_min_m, min_n=bipartite_min_n,
+        max_results=bipartite_max,
+    )
 
     return {
         "graph_stats": {
@@ -387,6 +475,7 @@ def run_all_detectors(
             "M2_orphan_cliques": sum(1 for m in clique_motifs if m.motif == "M2_orphan"),
             "M3_twin_pairs": len(twins),
             "M4_articulation_points": len(aps),
+            "M6_bipartite_kmn": len(kmns),
         },
         "M1_z_triangles": [asdict(m) for m in z_triangles],
         "M5_stratifications": [
@@ -400,6 +489,7 @@ def run_all_detectors(
         ],
         "M3_twin_pairs": [asdict(m) for m in twins],
         "M4_articulation_points": [asdict(m) for m in aps],
+        "M6_bipartite_kmn": [asdict(m) for m in kmns],
     }
 
 
@@ -462,6 +552,18 @@ def format_motif_report(report: dict[str, Any]) -> str:
             lines.append(f"- `{ap_id}` (deg={m['edge_count']}): {m['notes']}")
             for comp in isolated[:3]:
                 lines.append(f"  - isolates: `{comp}`")
+
+    if report.get("M6_bipartite_kmn"):
+        lines.append(f"\n## M6 — Bipartite K_{{m,n}} "
+                     f"({len(report['M6_bipartite_kmn'])})\n")
+        for m in report["M6_bipartite_kmn"][:10]:
+            A = m["role_partition"]["side_A"]
+            B = m["role_partition"]["side_B"]
+            lines.append(f"### K_{{{len(A)},{len(B)}}}")
+            lines.append(f"- Side A: "
+                         f"{', '.join('`'+x+'`' for x in A)}")
+            lines.append(f"- Side B: "
+                         f"{', '.join('`'+x+'`' for x in B)}\n")
 
     if report["M1_z_triangles"]:
         lines.append(f"\n## M1 — Z-triangles ({len(report['M1_z_triangles'])} "
