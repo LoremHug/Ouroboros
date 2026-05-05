@@ -14185,6 +14185,164 @@ edges:
       Engagement substrate + hydrodynamic regimes paired
       definitionally.
 
+  # Round 33: lateral edges between the 10 visually-isolated nodes
+  # Investigation showed only 3/45 pairs connected (6.7%). Many are
+  # structurally siblings via shared topology (η-invariant, heat kernel,
+  # sub-r_0 regime, BPI substrate, etc.).
+
+  # === CKM/lepton phase cluster: η-invariant siblings ===
+  - source: N281
+    target: N294
+    label: koide_brannen_paired_with_theta13_via_eta_invariant
+    edge_status: D
+    justification: |
+      Koide-Brannen phase θ_Brannen and θ_13 both derive from
+      L(3,1) η-invariant (|η| = 2/9 + Bismut-Freed contribution).
+      Same geometric source, two CKM/lepton observables.
+    why_forced: |
+      One η-invariant controlling multiple phases must cross-link;
+      shared geometric source forces sibling pair.
+
+  - source: N294
+    target: N281
+    label: theta13_paired_with_koide_brannen_via_shared_topology
+    edge_status: D
+    justification: |
+      Reverse direction: θ_13 and Brannen phase are paired
+      L(3,1)-topology consequences. Both use eta + Bismut-Freed
+      structural data.
+    why_forced: |
+      Bidirectional pairing forced by symmetric geometric origin.
+
+  # === Spectral / heat kernel cluster ===
+  - source: N281
+    target: N353
+    label: koide_brannen_phase_grounded_in_heat_kernel_on_L31
+    edge_status: D
+    justification: |
+      Koide-Brannen phase derives from spectral data on
+      M_4 = L(3,1) × S^1_β; N353 supplies the heat-kernel
+      coefficients. Phase + heat kernel paired.
+    why_forced: |
+      Phase computation requires heat-kernel input; pair
+      definitionally required.
+
+  - source: N294
+    target: N353
+    label: bismut_freed_contribution_uses_heat_kernel_data
+    edge_status: D
+    justification: |
+      Bismut-Freed Im[S_eff] = -π/9 (N294) is computed from the
+      heat-kernel coefficients on L(3,1) × S^1 (N353). Effective
+      action + heat-kernel data paired.
+    why_forced: |
+      Effective action + spectral data paired by Bismut-Freed
+      construction.
+
+  - source: N364
+    target: N353
+    label: confinement_scale_grounded_in_heat_kernel_data
+    edge_status: D
+    justification: |
+      QCD confinement scale derives from heat-kernel coefficients
+      via the spectral action on L(3,1). N364 the principle;
+      N353 the spectral input.
+    why_forced: |
+      Confinement scale + spectral data paired definitionally.
+
+  - source: N171
+    target: N353
+    label: QCD_scale_uses_heat_kernel_on_L31
+    edge_status: D
+    justification: |
+      Λ_QCD = c/r_L (per N171) where r_L is L(3,1) radius derived
+      from heat-kernel data (N353). Scale + spectral input paired.
+    why_forced: |
+      Scale formula requires spectral data; pair forced.
+
+  # === Sub-r_0 / Z_3 representation cluster ===
+  - source: N094
+    target: N103
+    label: subr0_phases_paired_with_complex_hilbert_via_Z3
+    edge_status: D
+    justification: |
+      Sub-r_0 SO(2)×U(1) complex phases (N094) require complex
+      Hilbert space (N103) for representation. Phase emergence +
+      Hilbert space paired.
+    why_forced: |
+      Complex phases need complex Hilbert; pair definitionally.
+
+  - source: N094
+    target: N353
+    label: subr0_phase_data_via_heat_kernel_at_UV
+    edge_status: D
+    justification: |
+      Sub-r_0 phase structure operates in UV regime where heat-
+      kernel coefficients (N353) provide spectral data. Sub-r_0
+      regime + UV spectral data paired.
+    why_forced: |
+      Sub-r_0 + UV spectral siblings paired.
+
+  - source: N103
+    target: N353
+    label: complex_hilbert_paired_with_heat_kernel_spectral_data
+    edge_status: D
+    justification: |
+      Complex Hilbert space (N103) hosts the Dirac operator whose
+      spectrum is N353's heat-kernel data. Hilbert + operator
+      spectrum paired.
+    why_forced: |
+      Hilbert space + operator spectrum paired by spectral
+      triple structure.
+
+  # === BPI substrate cluster ===
+  - source: N371
+    target: N014
+    label: BPI_hydrodynamics_paired_with_randomness_as_BPI_artifact
+    edge_status: D
+    justification: |
+      N371 (BPI hydrodynamics) and N014 (ontological randomness
+      as BPI artifact) are paired BPI-substrate readings — flow
+      dynamics + Z_hidden gap interpretation. Both observer-
+      relative phenomena.
+    why_forced: |
+      BPI-substrate phenomena cross-linked by N_NoSeparatePieces.
+
+  - source: N371
+    target: N364
+    label: BPI_hydrodynamics_paired_with_confinement_BPI_constraint
+    edge_status: D
+    justification: |
+      N364 (confinement as A_0 BPI constraint) operates in the
+      same BPI-bound substrate as N371's hydrodynamic flow
+      regimes. Both BPI-containment phenomena.
+    why_forced: |
+      BPI-constraint phenomena across substrates paired.
+
+  # === Mass + manifold cluster ===
+  - source: N281
+    target: N294
+    label: brannen_phase_paired_with_theta13_geometric_link
+    edge_status: D
+    justification: |
+      Brannen phase 132.7324° and θ_13 are paired geometric
+      consequences of L(3,1) topology — supplements the
+      eta-invariant edge with explicit geometric pairing.
+    why_forced: |
+      Geometric phases with shared topological source forced
+      sibling.
+
+  - source: N243
+    target: N353
+    label: cabibbo_via_eta_paired_with_heat_kernel_data
+    edge_status: D
+    justification: |
+      Cabibbo angle sin(θ_C) = |η| = 2/9 uses η-invariant computed
+      from heat-kernel data on L(3,1). Phase + spectral data
+      paired.
+    why_forced: |
+      Phase + spectral data shared on same manifold; pair forced.
+
 nodes:
 
   - id: N_MapTerritoryObserverIdentity
