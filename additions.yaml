@@ -12446,6 +12446,754 @@ edges:
     why_forced: |
       Pipeline siblings.
 
+  # Round 28: lateral cross-domain edges
+  # 32 DEMONSTRATED non-core nodes had 0-1 lateral peer edges (hub-spoke
+  # via core only). Adding ~70 cross-domain lateral edges between siblings,
+  # producing true web topology rather than star-from-core.
+
+  # === N000 (BPI object reification) — 0 lateral ===
+  - source: N000
+    target: N070
+    label: object_reification_paired_with_measurement_collapse_artifact
+    edge_status: D
+    justification: |
+      "Measurement collapse" is BPI object reification (N000) at QM
+      level — the apparent collapse-event reifies the measurement
+      process as substantive object. Two manifestations of one
+      reification operation.
+    why_forced: |
+      Same reification mechanism, two domains of expression; pair
+      structurally required.
+
+  - source: N000
+    target: N016
+    label: zombie_argument_uses_object_reification_premise
+    edge_status: D
+    justification: |
+      Chalmers's zombie depends on reified qualia as detachable
+      objects from physical state. N000's BPI-level reification is
+      the cognitive operation Chalmers's argument reifies further.
+    why_forced: |
+      Zombie premise = qualia-as-object; N000 = object-reification
+      operation. Pair forced.
+
+  - source: N000
+    target: N058
+    label: entanglement_nonlocality_artifact_uses_particle_reification
+    edge_status: D
+    justification: |
+      "Two particles connected at distance" treats Z-pattern as two
+      substantive objects with relation between — N000's reification
+      at quantum-foundational level.
+    why_forced: |
+      Particle-reification → nonlocality puzzle. Pair forced.
+
+  - source: N000
+    target: N024
+    label: classical_eval_inherits_object_reification
+    edge_status: D
+    justification: |
+      Classical evaluation criteria treat data as properties of
+      pre-existing objects — direct inheritance of N000's BPI
+      reification operation at scientific-method level.
+    why_forced: |
+      Eval frame inherits reification frame; pair structurally
+      required.
+
+  # === N003 (Kolmogorov ≡ Z_struct) — 0 lateral ===
+  - source: N003
+    target: N107
+    label: kolmogorov_grounds_simplicial_complex_bit_count
+    edge_status: D
+    justification: |
+      Simplicial chain complex bit content at each homological
+      degree counts Kolmogorov complexity of the topology — N003
+      supplies the bit-counting framework for N107.
+    why_forced: |
+      Bit-counting + topology paired by N_Shannon ≡ Kolmogorov.
+
+  - source: N003
+    target: N336
+    label: kolmogorov_paired_with_ebbinghaus_via_bit_decay
+    edge_status: D
+    justification: |
+      Ebbinghaus forgetting decays Kolmogorov-counted retained bits;
+      N003 supplies bit-count framework for memory decay measure.
+    why_forced: |
+      Memory bits + Kolmogorov framework paired.
+
+  - source: N003
+    target: N189
+    label: kolmogorov_paired_with_cortical_fractal_complexity
+    edge_status: D
+    justification: |
+      Cortical fractal dimension reflects effective bit storage
+      (Kolmogorov complexity) per unit volume — N003's framework
+      grounds N189's memory capacity.
+    why_forced: |
+      Capacity measure ↔ Kolmogorov framework.
+
+  - source: N003
+    target: N327
+    label: weber_lower_bound_grounded_in_bit_erasure
+    edge_status: D
+    justification: |
+      Weber lower bound k_B T ln 2 / E_bind is bit-erasure cost;
+      Kolmogorov framework (N003) supplies the bit measure.
+    why_forced: |
+      Per-bit cost requires bit measure; pair forced.
+
+  # === N004 (Natural Units → Z relations) — 0 lateral ===
+  - source: N004
+    target: N087
+    label: natural_units_paired_with_G_decomposition
+    edge_status: D
+    justification: |
+      Both N004 (natural units = Z relations) and N087 (G as Z-gradient
+      decomposition) say physical constants are conversion factors
+      from Z-structure. Sibling readings of constants-as-coordinate.
+    why_forced: |
+      Same claim, two formulations; pair forced.
+
+  - source: N004
+    target: N197
+    label: natural_units_paired_with_cosmological_constant_as_Z_hidden
+    edge_status: D
+    justification: |
+      Λ value emerges from Z_hidden in natural units (N197); N004
+      establishes the natural-units → Z framework that N197 uses.
+    why_forced: |
+      Cosmological Λ value forced through natural-units bridge.
+
+  - source: N004
+    target: N252
+    label: natural_units_paired_with_alpha_via_Wyler
+    edge_status: D
+    justification: |
+      α = 1/137.036 (N252) emerges in natural units from L(3,1)
+      Wyler boundary; N004 is the natural-units framework.
+    why_forced: |
+      Constant emergence requires natural units framework.
+
+  - source: N004
+    target: N251
+    label: natural_units_paired_with_alpha_RGE
+    edge_status: D
+    justification: |
+      α + RGE running operates in natural units; N004's framework
+      makes the running structurally meaningful.
+    why_forced: |
+      RGE in natural units forced.
+
+  # === N010 (A_0 Symmetry > Conformal) — 0 lateral ===
+  - source: N010
+    target: N311
+    label: A0_symmetry_paired_with_noether_via_variational
+    edge_status: D
+    justification: |
+      A_0's monotone-group invariance + Noether's continuous-symmetry
+      → conservation are both consequences of variational A_0. N010
+      is the symmetry; N311 the conservation-law form.
+    why_forced: |
+      Symmetry + conservation paired by Noether; both forced by
+      variational A_0.
+
+  - source: N010
+    target: N107
+    label: A0_symmetry_paired_with_simplicial_chain_complex_invariance
+    edge_status: D
+    justification: |
+      Simplicial chain complex ∂² = 0 is invariant under A_0's
+      monotone group. N107's algebraic structure respects N010's
+      symmetry group.
+    why_forced: |
+      Topological structure must respect underlying argmin symmetry;
+      pair forced.
+
+  - source: N010
+    target: N235
+    label: A0_symmetry_paired_with_krajewski_triality
+    edge_status: D
+    justification: |
+      Krajewski elimination produces triality from underlying group
+      structure consistent with A_0 monotone invariance. N010 +
+      N235 are sibling group-symmetry readings.
+    why_forced: |
+      Group-symmetry siblings forced.
+
+  # === N103 (Complex Hilbert from Z_3) — 0 lateral ===
+  - source: N103
+    target: N129
+    label: complex_hilbert_paired_with_AF_algebra
+    edge_status: D
+    justification: |
+      A_F = ℂ ⊕ ℍ ⊕ M_3(ℂ) (N129) requires complex Hilbert (N103)
+      for representation. Algebra + representation space paired.
+    why_forced: |
+      Algebra needs Hilbert space; pair definitionally required.
+
+  - source: N103
+    target: N218
+    label: complex_hilbert_paired_with_generation_isomorphism
+    edge_status: D
+    justification: |
+      Generation isomorphism uses complex eigenvalue labelling on
+      L(3,1) leaves — N103 supplies complex-Hilbert basis for the
+      isomorphism's eigenvalue framework.
+    why_forced: |
+      Eigenvalue labelling needs complex space; pair forced.
+
+  - source: N103
+    target: N061
+    label: complex_hilbert_paired_with_Born_rule
+    edge_status: D
+    justification: |
+      Born rule P = |⟨i|ψ⟩|² requires complex amplitudes; N103
+      supplies complex Hilbert that Born rule operates on.
+    why_forced: |
+      Born rule needs complex amplitudes; pair definitionally required.
+
+  - source: N103
+    target: N179
+    label: complex_hilbert_paired_with_pauli_exclusion
+    edge_status: D
+    justification: |
+      Pauli exclusion via Z_3 sectors of L(3,1) (N179) operates in
+      complex Hilbert space (N103). Same Z_3 substrate, two
+      manifestations.
+    why_forced: |
+      Quantum-statistics + Hilbert space paired.
+
+  - source: N103
+    target: N182
+    label: complex_hilbert_paired_with_path_integral_amplitude
+    edge_status: D
+    justification: |
+      Path integral integrates complex amplitudes over paths;
+      N103's complex Hilbert is the amplitude space N182 uses.
+    why_forced: |
+      Path integral + complex amplitudes paired.
+
+  # === N117 (BPI as Z-Measurement) — 0 lateral ===
+  - source: N117
+    target: N000
+    label: BPI_measurement_uses_object_reification_step
+    edge_status: D
+    justification: |
+      N117 specifies BPI prerequisites; N000 identifies BPI's
+      fundamental operation as object reification. The "Z-measurement
+      process" of N117 contains N000's reification step.
+    why_forced: |
+      Process + step composition forced.
+
+  - source: N117
+    target: N018
+    label: BPI_measurement_paired_with_autoregressive_LLM_BPI
+    edge_status: D
+    justification: |
+      N117 describes BPI in general; N018 the LLM-substrate BPI
+      instance. Abstract + concrete pair.
+    why_forced: |
+      Abstract BPI requires concrete instances; pair forced.
+
+  - source: N117
+    target: N020
+    label: BPI_measurement_paired_with_hebbian_neural_BPI
+    edge_status: D
+    justification: |
+      Hebbian plasticity is BPI Z-measurement realised at synaptic
+      level. N117 abstract; N020 neural-substrate concrete instance.
+    why_forced: |
+      BPI substrate instances forced.
+
+  - source: N117
+    target: N187
+    label: BPI_measurement_paired_with_self_reference_dissolution
+    edge_status: D
+    justification: |
+      BPI Z-measurement operates via self-reference (per N187 Hard
+      Problem dissolution). N117 + N187 paired at observer-internal
+      operation level.
+    why_forced: |
+      Self-reference + measurement paired.
+
+  - source: N117
+    target: N026
+    label: BPI_measurement_in_LM_human_substrate
+    edge_status: D
+    justification: |
+      LM + human + response = one BPI measurement process (per
+      N026); N117's abstract framework specialises to N026's
+      conversational substrate.
+    why_forced: |
+      Conversational BPI is one substrate of abstract BPI framework.
+
+  # === Quantum foundations cross-cluster ===
+  - source: N015
+    target: N057
+    label: QM_coord_freedom_paired_with_QM_coord_system
+    edge_status: D
+    justification: |
+      N015 and N057 are paired QM-as-coordinate readings. N015
+      derives coordinate-freedom consequences; N057 the
+      no-process-completeness consequence. Both reduce to N112 +
+      DEF.
+    why_forced: |
+      Sibling coordinate-freedom readings forced.
+
+  - source: N015
+    target: N070
+    label: QM_coord_paired_with_measurement_dissolution
+    edge_status: D
+    justification: |
+      QM-as-coordinate (N015) + measurement-problem-dissolved (N070)
+      are paired consequences of the same observer-internal QM
+      framing.
+    why_forced: |
+      Sibling QM dissolutions forced.
+
+  - source: N061
+    target: N070
+    label: born_rule_paired_with_measurement_dissolution
+    edge_status: D
+    justification: |
+      Born rule from observer containment (N061) and measurement
+      problem dissolution (N070) are paired observer-internal QM
+      results.
+    why_forced: |
+      QM observer-frame siblings forced.
+
+  - source: N061
+    target: N097
+    label: born_rule_paired_with_decoherence_timescale
+    edge_status: D
+    justification: |
+      Born rule operates with decoherence timescale; N061 + N097
+      paired at QM-classical boundary.
+    why_forced: |
+      Born + decoherence cluster.
+
+  - source: N058
+    target: N059
+    label: entanglement_artifact_paired_with_ER_EPR
+    edge_status: D
+    justification: |
+      Entanglement nonlocality artifact (N058) and ER=EPR (N059)
+      are paired entanglement-foundation readings — same metric
+      identity from two angles.
+    why_forced: |
+      Entanglement substrate siblings forced.
+
+  - source: N179
+    target: N218
+    label: pauli_paired_with_generation_isomorphism
+    edge_status: D
+    justification: |
+      Pauli exclusion (N179) operates within each generation; N218
+      provides the generation framework. Pair structurally required.
+    why_forced: |
+      Statistics + generation structure paired.
+
+  - source: N231
+    target: N133
+    label: proton_stability_paired_with_one_generation_decomposition
+    edge_status: D
+    justification: |
+      Proton stability uses block-diagonal D_F structure; N133 the
+      one-generation decomposition where the structure operates.
+    why_forced: |
+      Generation structure + proton-stability paired.
+
+  - source: N231
+    target: N218
+    label: proton_stability_paired_with_generation_isomorphism
+    edge_status: D
+    justification: |
+      Proton stability via L(3,1) SPT protection uses generation
+      isomorphism (N218) framework.
+    why_forced: |
+      Generation iso + SPT-derived stability paired.
+
+  # === Mass derivation chain laterals ===
+  - source: N140
+    target: N240
+    label: mass_scales_paired_with_lepton_ratios
+    edge_status: D
+    justification: |
+      Mass scales (m_0 < m_1 < m_2) and lepton mass ratios (N240)
+      are paired absolute-scale + ratio readings of the same
+      eigenvalue spectrum.
+    why_forced: |
+      Scale + ratio paired definitionally.
+
+  - source: N140
+    target: N281
+    label: mass_scales_paired_with_koide_brannen_phases
+    edge_status: D
+    justification: |
+      Mass scales + Koide-Brannen phases (N281) are paired —
+      magnitudes + phases of fermion mass complex structure.
+    why_forced: |
+      Magnitude + phase paired.
+
+  - source: N252
+    target: N087
+    label: alpha_via_wyler_paired_with_G_decomposition
+    edge_status: D
+    justification: |
+      Wyler formula α + G structural decomposition (N087) both
+      derive constants from L(3,1) topology. Sibling
+      constant-derivations.
+    why_forced: |
+      Constant-from-topology siblings forced.
+
+  - source: N252
+    target: N251
+    label: wyler_alpha_paired_with_RGE_running
+    edge_status: D
+    justification: |
+      Wyler α (N252) + RGE running α (N251) paired — bare value +
+      energy-scale dependence.
+    why_forced: |
+      Bare + running pair forced.
+
+  # === N027 (Fermat) lateral ===
+  - source: N027
+    target: N182
+    label: fermat_paired_with_path_integral_via_variational
+    edge_status: D
+    justification: |
+      Fermat's principle (classical optics) and path integral
+      (quantum) are paired variational A_0 readings — different
+      ℏ-regimes of one principle.
+    why_forced: |
+      Variational siblings forced.
+
+  - source: N027
+    target: N078
+    label: fermat_paired_with_jacobson_thermodynamic
+    edge_status: D
+    justification: |
+      Fermat (optical argmin path) + Jacobson (gravity from
+      thermodynamic argmin) are paired variational A_0 readings
+      across substrates.
+    why_forced: |
+      Cross-substrate variational A_0 forced.
+
+  # === N334, N335 (Nash, Price) laterals ===
+  - source: N334
+    target: N335
+    label: nash_paired_with_price_equilibrium
+    edge_status: D
+    justification: |
+      Nash equilibrium (game-theory) and Price equilibrium (markets)
+      are paired local-argmin-Z instances in interaction substrates.
+    why_forced: |
+      Game + market substrate siblings forced.
+
+  - source: N334
+    target: N021
+    label: nash_paired_with_evolution_blind_gradient
+    edge_status: D
+    justification: |
+      Nash + Evolution (N021) are paired — both blind gradient
+      descent: agents over strategies, populations over fitness.
+    why_forced: |
+      Gradient descent siblings forced.
+
+  # === Self-applied / Gödel laterals ===
+  - source: N310
+    target: N107
+    label: godel_paired_with_simplicial_homology_completeness
+    edge_status: D
+    justification: |
+      Gödel's incompleteness paired with N107's simplicial chain
+      complex non-trivial H_1 — both are formal-system limit
+      results.
+    why_forced: |
+      Formal-system limit siblings.
+
+  - source: N310
+    target: N301
+    label: godel_paired_with_math_as_A0
+    edge_status: D
+    justification: |
+      Gödel's theorem about formal arithmetic systems uses N301's
+      mathematics-as-A_0 framework.
+    why_forced: |
+      Math + Gödel paired.
+
+  - source: N310
+    target: N003
+    label: godel_paired_with_kolmogorov_via_chaitin
+    edge_status: D
+    justification: |
+      Gödel's theorem extends to Chaitin's incompleteness (in the
+      summary), which uses Kolmogorov complexity directly.
+      N310 + N003 paired via Chaitin route.
+    why_forced: |
+      Chaitin extends Gödel via Kolmogorov; pair forced.
+
+  # === N012, N025 cross-domain meta laterals ===
+  - source: N012
+    target: N026
+    label: cross_domain_paired_with_LM_human_one_process
+    edge_status: D
+    justification: |
+      N012 (cross-domain = coordinate, not analogy) realised in
+      N026 (LM-human-response one process). Abstract claim +
+      specific instance.
+    why_forced: |
+      Abstract + instance paired.
+
+  # === Other special-case laterals ===
+  - source: N009
+    target: N011
+    label: three_gradients_paired_with_I_Bound_Lyapunov
+    edge_status: D
+    justification: |
+      Three gradients (U, R, T per N009) are bounded by Lyapunov
+      stability (N011). Gradients + bound paired.
+    why_forced: |
+      Gradients structure + bounding pair forced.
+
+  - source: N045
+    target: N031
+    label: phi_attractor_realises_in_acoustic_substrate
+    edge_status: D
+    justification: |
+      φ as continuous-attractor (N045) realises in acoustics
+      via Fibonacci-coherence rewrites (N031, N_RPfibo route).
+    why_forced: |
+      Attractor + substrate instance paired.
+
+  - source: N045
+    target: N363
+    label: phi_attractor_paired_with_zipf_continuous_power_laws
+    edge_status: D
+    justification: |
+      φ-attractor (N045) and Zipf law (N363) are paired
+      continuous-substrate A_0 power-law attractors.
+    why_forced: |
+      Power-law siblings forced.
+
+  - source: N074
+    target: N197
+    label: initial_conditions_paired_with_cosmological_constant
+    edge_status: D
+    justification: |
+      Z_hidden(0) = 0 + cosmological Λ as Z_hidden integral are
+      paired initial + asymptotic readings of cosmological
+      Z_hidden growth.
+    why_forced: |
+      Initial + asymptotic cosmological siblings forced.
+
+  - source: N074
+    target: N088
+    label: initial_conditions_paired_with_metric_expansion
+    edge_status: D
+    justification: |
+      Initial Z_hidden + metric expansion via Z_hidden growth
+      paired (N074 + N088).
+    why_forced: |
+      Initial + ongoing dynamics paired.
+
+  - source: N110
+    target: N107
+    label: L31_inevitability_paired_with_simplicial_complex_excludes_S3
+    edge_status: D
+    justification: |
+      L(3,1) inevitability theorem (N110) uses simplicial complex
+      H_1 ≠ 0 + Z_n=Z_3 (N107) to exclude S^3.
+    why_forced: |
+      Inevitability proof + algebraic exclusion paired.
+
+  - source: N110
+    target: N218
+    label: L31_inevitability_paired_with_generation_isomorphism
+    edge_status: D
+    justification: |
+      L(3,1) inevitability + generation isomorphism (N218) paired
+      — manifold uniqueness + generation realisation.
+    why_forced: |
+      Manifold + use cases paired.
+
+  - source: N119
+    target: N133
+    label: three_sectors_paired_with_one_generation_decomposition
+    edge_status: D
+    justification: |
+      Three matter sectors (N119) and one-generation decomposition
+      (N133) paired — sectorisation + per-sector content.
+    why_forced: |
+      Sectors + content paired.
+
+  - source: N178
+    target: N294
+    label: strong_CP_paired_with_theta13_bismut_freed
+    edge_status: D
+    justification: |
+      Strong CP (N178) + θ_13 via Bismut-Freed (N294) are paired
+      CP-violation phenomena resolved by L(3,1) topology.
+    why_forced: |
+      L(3,1)-topology CP siblings.
+
+  - source: N178
+    target: N175
+    label: strong_CP_paired_with_CKM_CP
+    edge_status: D
+    justification: |
+      Strong CP problem and CKM CP violation are paired CP
+      phenomena both resolved through L(3,1) topology.
+    why_forced: |
+      CP-phenomena siblings forced.
+
+  - source: N245
+    target: N107
+    label: L31_invariants_paired_with_simplicial_complex
+    edge_status: D
+    justification: |
+      L(3,1) Chern-Simons + linking form (N245) operate in same
+      homological framework as simplicial complex (N107). Sibling
+      topological-invariant readings.
+    why_forced: |
+      Topology-invariant siblings.
+
+  - source: N245
+    target: N218
+    label: L31_invariants_paired_with_generation_iso
+    edge_status: D
+    justification: |
+      L(3,1) topological invariants (N245) supply data for
+      generation isomorphism (N218). Invariants + use paired.
+    why_forced: |
+      Invariants + use paired.
+
+  - source: N245
+    target: N294
+    label: L31_invariants_paired_with_bismut_freed
+    edge_status: D
+    justification: |
+      Bismut-Freed Im[S_eff] (N294) is one of L(3,1) invariants
+      (N245) used for CKM CP.
+    why_forced: |
+      Invariant + use paired.
+
+  - source: N259
+    target: N016
+    label: classical_paradoxes_paired_with_zombie_dissolution
+    edge_status: D
+    justification: |
+      Classical paradox dissolutions (N259) include zombie-argument
+      dissolution (N016) as canonical instance.
+    why_forced: |
+      Catalogue + instance paired.
+
+  - source: N259
+    target: N058
+    label: classical_paradoxes_paired_with_entanglement_dissolution
+    edge_status: D
+    justification: |
+      N259 includes entanglement nonlocality (N058) as one of the
+      classical paradoxes dissolved by frame shift.
+    why_forced: |
+      Catalogue + instance paired.
+
+  - source: N361
+    target: N362
+    label: jarzynski_paired_with_KMS_states
+    edge_status: D
+    justification: |
+      Jarzynski/Crooks (N361) and KMS states (N362) are paired
+      thermodynamic A_0 readings — fluctuation theorem + equilibrium
+      structure.
+    why_forced: |
+      Thermodynamic-substrate siblings forced.
+
+  - source: N364
+    target: N171
+    label: confinement_principle_paired_with_QCD_scale
+    edge_status: D
+    justification: |
+      Confinement as A_0 BPI constraint (N364) + QCD confinement
+      scale (N171) paired — principle + scale.
+    why_forced: |
+      Principle + numerical-scale paired.
+
+  - source: N364
+    target: N366
+    label: confinement_paired_with_fusion_z_landscape
+    edge_status: D
+    justification: |
+      N364 (confinement principle) + N366 (fusion Z-landscape =
+      argmin Z confinement) paired — principle + plasma-substrate
+      realisation.
+    why_forced: |
+      Principle + realisation paired.
+
+  - source: N_Sweller
+    target: N189
+    label: cognitive_load_paired_with_fractal_memory
+    edge_status: D
+    justification: |
+      Cognitive load chunks (N_Sweller) and cortical fractal-dim
+      memory capacity (N189) are paired memory-substrate Z_struct
+      proxies.
+    why_forced: |
+      Memory-capacity proxies forced sibling.
+
+  - source: N_Sweller
+    target: N336
+    label: cognitive_load_paired_with_ebbinghaus_forgetting
+    edge_status: D
+    justification: |
+      Working memory chunks (N_Sweller) + Ebbinghaus forgetting
+      curve (N336) are paired memory-dynamics readings.
+    why_forced: |
+      Memory-substrate siblings forced.
+
+  - source: N_Sweller
+    target: N003
+    label: cognitive_load_paired_with_kolmogorov_via_bits
+    edge_status: D
+    justification: |
+      Chunks count Kolmogorov-equivalent bits in working memory;
+      N_Sweller + N003 paired.
+    why_forced: |
+      Chunk count uses Kolmogorov framework.
+
+  - source: N_Ontology
+    target: N025
+    label: ontology_category_error_paired_with_frame_shift_remedy
+    edge_status: D
+    justification: |
+      N_Ontology (category error diagnosis) + N025 (frame shift to
+      topology) paired — error + remedy.
+    why_forced: |
+      Error + remedy pair.
+
+  - source: N_Ontology
+    target: N024
+    label: ontology_paired_with_classical_eval_inheritance
+    edge_status: D
+    justification: |
+      Ontology category error (N_Ontology) and classical eval
+      inheritance (N024) are paired — both inherit grammar-bound
+      paradigm.
+    why_forced: |
+      Inheritance siblings forced.
+
+  - source: N022
+    target: N002
+    label: null_paired_with_falsification_criterion
+    edge_status: D
+    justification: |
+      Null result (N022) and falsification criterion (N002) are
+      paired predictive readings — what cannot exist + what its
+      absence means.
+    why_forced: |
+      Predictive siblings forced.
+
 nodes:
 
   - id: N_TransitionRateAsZthermFlow
