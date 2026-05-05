@@ -16153,7 +16153,842 @@ edges:
     why_forced: |
       Forced.
 
+  # ─── Round 46: linguistic domain — empirical motif test 2 ───
+  # 3 typological cousins × 4 linguistic principles
+  # Predicted: K_{p+3} M5 stratification, M2 family-clique
+
+  # Linguistic principles → framework core
+  - source: N_LinguisticSignAsBPI
+    target: N_BPIEngagement
+    label: saussurean_sign_signifier_signified_BPI_binding
+    edge_status: D
+    justification: |
+      Saussurean sign = signifier (sound-image) bonded to
+      signified (concept) — this IS BPI structure in linguistic
+      substrate. The sign's "boundary" is the arbitrary
+      signifier-signified pairing; "process" is the linguistic
+      event of signifying; "identity" is the conventional
+      stability of the bond. Sign IS BPI realised in
+      semiotic substrate.
+    why_forced: |
+      Without BPI structure, no linguistic sign — any signifier
+      would equally signify any concept (semiotic chaos).
+      Forced compression IS the sign's structural identity.
+
+  - source: N_LinguisticSignAsBPI
+    target: N_NoSeparatePieces
+    label: sign_inseparable_from_linguistic_system
+    edge_status: D
+    justification: |
+      Per Saussure: signs have value only differentially,
+      against ALL OTHER signs in the system. No sign exists
+      separately — each is defined by what it is NOT relative
+      to other signs. N_NoSeparatePieces instantiated at
+      semiotic level.
+    why_forced: |
+      Saussurean structuralism establishes sign-value as
+      relational; no sign-in-itself. Forced.
+
+  - source: N_LinguisticSignAsBPI
+    target: N_GrammarTrap
+    label: sign_arbitrariness_underwrites_grammar_trap
+    edge_status: D
+    justification: |
+      Sign's signifier-signified bond is ARBITRARY (Saussure).
+      N_GrammarTrap explains how this arbitrary binding gets
+      reified through S-V-O grammar usage as if it were
+      ontological. Sign-as-BPI is the semiotic substrate;
+      grammar-trap is the cognitive consequence when BPI
+      operates without disambiguator.
+    why_forced: |
+      Grammar-trap mechanism requires sign-arbitrariness as
+      precondition; arbitrariness without trap-detection
+      yields ontological reification. Pair forced.
+
+  - source: N_PhonemeAsTriangulation
+    target: N_Triangulation
+    label: phoneme_minimum_3_distinctive_features
+    edge_status: D
+    justification: |
+      Phoneme = bundle of distinctive features (Trubetzkoy/
+      Jakobson). Minimum specification requires 3 features:
+      manner, place, voicing (or substitutes per
+      phonological theory). Below 3, phonemes underdetermined
+      against contrast set. N_Triangulation 3-coord-minimum
+      principle directly instantiated.
+    why_forced: |
+      n=2 features cannot distinguish 20+ phonemes typical
+      across languages (4²=16 combinations < phoneme inventory).
+      Forced n>=3 minimum matches N_Triangulation.
+
+  - source: N_PhonemeAsTriangulation
+    target: N_LinguisticSignAsBPI
+    label: phoneme_features_provide_sign_substrate
+    edge_status: D
+    justification: |
+      Phoneme triangulation provides the discriminative
+      substrate that signs are built on. Without distinctive
+      3-feature phonemes, signifiers cannot stably differ.
+      Phoneme-triangulation grounds sign-BPI at sound-form
+      level.
+    why_forced: |
+      Sign requires stable signifier-form; signifier-form
+      requires phonemic distinction; phonemic distinction
+      requires 3-feature triangulation. Chain forced.
+
+  - source: N_GrammarStrataAsZDecomposition
+    target: DEF
+    label: phonology_morphology_syntax_as_Z_struct_therm_hidden
+    edge_status: D
+    justification: |
+      Linguistic strata phonology / morphology / syntax map
+      to A_0 Z-decomposition:
+        Z_struct  = phonology (low-entropy sound structure,
+                    high-persistence categorical phonemes)
+        Z_therm   = morphology (mediating dynamics: words form
+                    and decay over linguistic timescales)
+        Z_hidden  = syntax (the operational reading by
+                    interlocutor; environment-side coord that
+                    "sees" the meaning emerging)
+      Identical decomposition shape to A_0 master definition
+      in linguistic substrate.
+    why_forced: |
+      Three-stratum decomposition forced by N_Triangulation;
+      specific phonology/morphology/syntax assignment forced
+      by relative entropies and timescales. Direct linguistic
+      instance of DEF Z-decomp.
+
+  - source: N_GrammarStrataAsZDecomposition
+    target: N_Shannon
+    label: each_stratum_carries_independent_information
+    edge_status: D
+    justification: |
+      Phonology, morphology, and syntax each carry independent
+      Shannon information about utterance content (per H ≡
+      Z_struct isomorphism). Total information = sum across
+      strata. Shannon-channel structure underlies the Z-
+      decomp at linguistic level.
+    why_forced: |
+      Shannon-channel mathematics applies to any structured
+      transmission; linguistic strata are the natural
+      substrate-level decomposition.
+
+  - source: N_GrammaticalisationAsArgminZ
+    target: DEF
+    label: historical_grammar_change_minimises_communicative_impedance
+    edge_status: D
+    justification: |
+      Grammaticalisation (historical drift: lexical word →
+      grammatical morpheme → bound affix; e.g., Latin "habere"
+      → Romance future-tense affixes) minimises communicative
+      impedance over generations of speakers. Z = -log
+      (communicative success) + transmission cost. Drift
+      toward argmin Z is the empirical force in language
+      change.
+    why_forced: |
+      Without argmin Z drift, grammaticalisation chains would
+      be random; observed unidirectionality (Hopper-Traugott)
+      requires structured minimisation principle. DEF
+      grounds.
+
+  - source: N_GrammaticalisationAsArgminZ
+    target: N_NaturalSelectionAsArgminZ
+    label: linguistic_evolution_argminZ_parallel_to_biological
+    edge_status: D
+    justification: |
+      Linguistic and biological evolution are PARALLEL
+      argmin-Z processes in different substrates:
+        Bio:  -log(reproductive fitness) on phenotypes
+        Ling: -log(communicative success) on usage patterns
+      Both produce drift, both have inversive selection
+      (forms that fail get dropped), both are population-
+      level Z-minimisations. Cross-substrate sibling pair.
+    why_forced: |
+      Same argmin-Z structure manifests in both substrates;
+      the parallel is not metaphor but structural identity
+      per N_DomainsAsBPICarvings.
+
+  # 3 typological substrate-cousins
+  - source: N_LangType_Isolating
+    target: N_LinguisticSignAsBPI
+    label: isolating_one_morpheme_one_word_BPI
+    edge_status: D
+    justification: |
+      Isolating languages (Mandarin, Vietnamese, Thai, Yoruba)
+      realise sign-BPI with one-morpheme-one-word structure:
+      each lexical item is a single sign with minimal
+      morphological elaboration. Substrate-cousin realisation
+      1 of linguistic-sign-BPI principle.
+    why_forced: |
+      Isolating typology is a structurally distinct realisation
+      of how signs map to phonological-form units. Forced
+      cousin in K_n family-clique.
+
+  - source: N_LangType_Agglutinative
+    target: N_LinguisticSignAsBPI
+    label: agglutinative_clear_morpheme_boundary_BPI_chains
+    edge_status: D
+    justification: |
+      Agglutinative languages (Turkish, Finnish, Swahili,
+      Hungarian) realise sign-BPI as CHAINS of clear-boundary
+      morphemes: each morpheme = sub-BPI; word = stack of
+      BPIs concatenated. Substrate-cousin realisation 2.
+    why_forced: |
+      Agglutinative typology is structurally distinct
+      realisation. Forced cousin.
+
+  - source: N_LangType_Fusional
+    target: N_LinguisticSignAsBPI
+    label: fusional_merged_morpheme_BPI_compression
+    edge_status: D
+    justification: |
+      Fusional languages (Latin, Russian, Sanskrit) realise
+      sign-BPI with FUSED morphemes: single phonological
+      unit carries multiple grammatical features
+      simultaneously (e.g., Latin -us = nominative + singular
+      + masculine). Substrate-cousin realisation 3 with
+      higher BPI-compression density.
+    why_forced: |
+      Fusional typology is structurally distinct realisation
+      with BPI-compression at maximum density. Forced cousin.
+
+  # Pairwise sibling-realisation among typology cousins
+  - source: N_LangType_Isolating
+    target: N_LangType_Agglutinative
+    label: sibling_morpheme_visibility_different_word_boundary
+    edge_status: D
+    justification: |
+      Both isolating and agglutinative languages have CLEAR
+      morpheme boundaries (no fusion); differ in whether
+      morphemes group into multi-morpheme words. Sibling
+      pair at "morpheme-visibility" axis with distinct
+      word-formation mechanisms.
+    why_forced: |
+      Two distinct cousin-realisations sharing morpheme-
+      transparency feature. Sibling-relation criterion
+      met.
+
+  - source: N_LangType_Isolating
+    target: N_LangType_Fusional
+    label: sibling_word_complexity_extremes
+    edge_status: D
+    justification: |
+      Isolating and fusional are extremes on morphological
+      complexity axis: isolating = 1 morpheme/word;
+      fusional = many features/morpheme. Sibling pair via
+      structural opposition on same axis.
+    why_forced: |
+      Opposite extremes on shared dimension constitute
+      structural sibling pair.
+
+  - source: N_LangType_Agglutinative
+    target: N_LangType_Fusional
+    label: sibling_multi_morpheme_words_different_fusion_level
+    edge_status: D
+    justification: |
+      Both agglutinative and fusional use multi-morpheme
+      words; differ in whether morphemes maintain identity
+      (agglutinative) or fuse (fusional). Sibling pair on
+      "fusion-level" axis.
+    why_forced: |
+      Same multi-morpheme pattern, different fusion levels.
+      Sibling-relation forced.
+
+  # Each typology to remaining principles → K_{p+3} closure
+  - source: N_LangType_Isolating
+    target: N_PhonemeAsTriangulation
+    label: isolating_uses_phoneme_triangulation
+    edge_status: D
+    justification: |
+      Isolating languages use phonemic systems with 3-feature
+      triangulation. Mandarin's tonal system adds a 4th
+      coordinate (tone) without violating triangulation
+      minimum. Forced cousin instance.
+    why_forced: |
+      Forced — phoneme-triangulation universal.
+
+  - source: N_LangType_Agglutinative
+    target: N_PhonemeAsTriangulation
+    label: agglutinative_uses_phoneme_triangulation
+    edge_status: D
+    justification: |
+      Agglutinative languages use phoneme-triangulation;
+      Turkish vowel harmony adds harmonic-feature constraints
+      atop standard triangulation. Forced cousin.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: N_PhonemeAsTriangulation
+    label: fusional_uses_phoneme_triangulation
+    edge_status: D
+    justification: |
+      Fusional languages use phoneme-triangulation; complex
+      vocalic alternations (Russian) and consonant clusters
+      (Polish) layer atop minimal-3-feature contrasts.
+      Forced cousin.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Isolating
+    target: N_GrammarStrataAsZDecomposition
+    label: isolating_strata_decomp_with_minimal_morphology
+    edge_status: D
+    justification: |
+      Isolating languages instantiate grammar-strata Z-decomp
+      with minimal Z_therm (morphology layer); compensated by
+      richer syntax (Z_hidden) — word order carries more
+      structural load. Substrate-cousin instance with
+      compensatory weighting.
+    why_forced: |
+      Forced — every language has all three strata even if
+      relative Z-component weighting differs.
+
+  - source: N_LangType_Agglutinative
+    target: N_GrammarStrataAsZDecomposition
+    label: agglutinative_strata_decomp_rich_morphology
+    edge_status: D
+    justification: |
+      Agglutinative languages have elaborated Z_therm
+      (morphology) layer with multiple morpheme stacks per
+      word. Z-decomp realised with morphology-heavy weighting.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: N_GrammarStrataAsZDecomposition
+    label: fusional_strata_decomp_compressed_morphology
+    edge_status: D
+    justification: |
+      Fusional languages have compressed Z_therm (morphology)
+      layer where multi-feature bundles fuse into single
+      morphemes. Z-decomp realised with morphology-density
+      maximum.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Isolating
+    target: N_GrammaticalisationAsArgminZ
+    label: isolating_grammaticalisation_via_word_order_drift
+    edge_status: D
+    justification: |
+      Isolating-language grammaticalisation operates via
+      word-order conventionalisation (e.g., Mandarin's
+      le-aspect particle from "finished"). argmin-Z drift
+      visible at syntactic level.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Agglutinative
+    target: N_GrammaticalisationAsArgminZ
+    label: agglutinative_grammaticalisation_via_morpheme_chain_extension
+    edge_status: D
+    justification: |
+      Agglutinative grammaticalisation extends morpheme chains
+      (Turkish suffix layers; Hungarian case proliferation).
+      argmin-Z drift visible at morphological level.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: N_GrammaticalisationAsArgminZ
+    label: fusional_grammaticalisation_via_morpheme_fusion_intensification
+    edge_status: D
+    justification: |
+      Fusional grammaticalisation intensifies morpheme fusion
+      (Latin → Romance: phonological erosion + feature
+      bundling). argmin-Z drift visible at morphology-syntax
+      interface.
+    why_forced: |
+      Forced.
+
+  # Each typology to core principles
+  - source: N_LangType_Isolating
+    target: DEF
+    label: isolating_argmin_Z_at_syntactic_substrate
+    edge_status: D
+    justification: |
+      Isolating language usage realises argmin-Z over
+      transmission with word-order encoding the structural
+      load. DEF directly applicable.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Agglutinative
+    target: DEF
+    label: agglutinative_argmin_Z_at_morphological_substrate
+    edge_status: D
+    justification: |
+      Agglutinative usage realises argmin-Z with morpheme-
+      chain encoding.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: DEF
+    label: fusional_argmin_Z_at_fusion_substrate
+    edge_status: D
+    justification: |
+      Fusional usage realises argmin-Z with maximum-density
+      morpheme fusion.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Isolating
+    target: N_NoSeparatePieces
+    label: isolating_lang_not_separate_from_speech_community
+    edge_status: D
+    justification: |
+      Isolating languages (like all languages) are
+      structurally inseparable from speech community —
+      conventional structures only stable through usage.
+      Forced N_NoSeparatePieces instance.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Agglutinative
+    target: N_NoSeparatePieces
+    label: agglutinative_lang_not_separate_from_speech_community
+    edge_status: D
+    justification: |
+      Same N_NoSeparatePieces principle — language exists
+      only in usage.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: N_NoSeparatePieces
+    label: fusional_lang_not_separate_from_speech_community
+    edge_status: D
+    justification: |
+      Same N_NoSeparatePieces principle.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Isolating
+    target: N_GrammarTrap
+    label: isolating_grammar_trap_via_word_class_reification
+    edge_status: D
+    justification: |
+      Isolating languages exhibit grammar-trap via
+      lexical-class reification: same morpheme appears as
+      noun-or-verb depending on syntactic position, but
+      speakers reify "noun" / "verb" as ontological
+      categories. N_GrammarTrap directly applicable.
+    why_forced: |
+      Forced — grammar-trap is universal across language
+      types where conventional reification operates.
+
+  - source: N_LangType_Agglutinative
+    target: N_GrammarTrap
+    label: agglutinative_grammar_trap_via_morpheme_meaning_reification
+    edge_status: D
+    justification: |
+      Agglutinative languages produce grammar-trap via
+      morpheme-meaning reification: each clear-boundary
+      morpheme gets treated as "having" a meaning rather
+      than carrying coordinate-information. N_GrammarTrap
+      applicable.
+    why_forced: |
+      Forced.
+
+  - source: N_LangType_Fusional
+    target: N_GrammarTrap
+    label: fusional_grammar_trap_via_paradigm_table_reification
+    edge_status: D
+    justification: |
+      Fusional languages produce grammar-trap via paradigm-
+      table reification: case-tables, conjugation-tables
+      treated as ontological grids rather than coordinate
+      readings of usage patterns. N_GrammarTrap applicable.
+    why_forced: |
+      Forced.
+
+  # Cross-domain bridges (linguistic ↔ biological + ↔ math)
+  - source: N_GrammaticalisationAsArgminZ
+    target: N_InversiveTheory
+    label: grammaticalisation_inversive_test_at_population_scale
+    edge_status: D
+    justification: |
+      Forms that fail communicative test get dropped from
+      usage; surviving forms pass inversive removal.
+      Linguistic-substrate instance of N_InversiveTheory
+      parallel to natural selection in biology.
+    why_forced: |
+      Same inversive-removal mechanism; forced.
+
+  - source: N_PhonemeAsTriangulation
+    target: N_TripletCodeAsTriangulation
+    label: 3coord_minimum_phonological_genetic_parallel
+    edge_status: D
+    justification: |
+      Phoneme uses 3 distinctive features minimum; codon
+      uses 3 nucleotides minimum. Both instances of
+      N_Triangulation 3-coord-minimum principle in
+      respective substrates. Cross-substrate sibling
+      between linguistic and genetic substrate.
+    why_forced: |
+      Same N_Triangulation principle realised in two
+      distinct substrates. Sibling pair forced.
+
 nodes:
+
+  - id: N_LinguisticSignAsBPI
+    title: "Saussurean Sign as BPI — Universal Linguistic Substrate"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    summary: |
+      Universal claim across all natural languages: Saussurean
+      sign (signifier-signified bond) = BPI structure realised
+      in semiotic-linguistic substrate. Signifier = boundary
+      compression artifact in sound-substrate; signified =
+      compression artifact in conceptual-substrate; the bond
+      = BPI process linking the two arbitrarily but stably.
+
+      Per Saussure: signs have value only differentially — no
+      sign exists separately, each is what others are not.
+      N_NoSeparatePieces directly instantiated at semiotic level.
+      Per N_GrammarTrap: arbitrary binding gets reified through
+      grammar usage as ontological if no disambiguator
+      operates.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Universal across all known natural languages.
+      (2) Structural argument: definition of "language"
+          requires sign-mediated communication; no sign-BPI =
+          no language.
+      (3) Substrate-invariance: 3 typological cousins
+          (Isolating, Agglutinative, Fusional) all instantiate
+          sign-BPI with structurally distinct realisations.
+      (4) Inversive: alternative "sign-less language" not
+          coherent (no signifying mechanism).
+    not_misinterpretations: |
+      NOT a claim that signs are ontologically separate from
+      language system. BPI is operational compression artifact;
+      sign exists only differentially against system.
+      NOT a claim that signifier and signified are two things
+      glued together. The bond IS the sign — it is process,
+      not relation between objects (per N_TopologyProcessIdentity).
+    content: |
+      Substrate-invariance test:
+        Isolating (Mandarin):     yes — one-morpheme-one-word
+                                  signs
+        Agglutinative (Turkish):  yes — chains of clear-boundary
+                                  morpheme signs
+        Fusional (Latin):         yes — multi-feature-fused
+                                  morpheme signs
+      All three substrate-cousins instantiate sign-BPI.
+
+      M2/M5 prediction:
+        Anchor: N_LinguisticSignAsBPI
+        Cousins: {N_LangType_Isolating, _Agglutinative, _Fusional}
+        Expected: K_4 single-anchor cluster + extension to M5
+                  via co-anchored principle stratum.
+
+      Cross-substrate parallel:
+        Cellular BPI (biology) — same structural role for
+        cellular life as sign-BPI for linguistic life.
+        Both substrate-invariant universal-anchor principles
+        in their domains.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_PhonemeAsTriangulation
+    title: "Phoneme as Triangulation Instance — 3 Distinctive Features Minimum"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.8
+    z_therm: 0.05
+    z_hidden: 0.15
+    summary: |
+      Phoneme = bundle of distinctive features (Trubetzkoy 1939,
+      Jakobson). Minimum 3 features (manner, place, voicing or
+      substitutes per phonological theory) needed to specify
+      against typical phoneme inventory. N_Triangulation
+      3-coord-minimum principle directly instantiated in
+      sound-form substrate. Cross-substrate sibling of
+      N_TripletCodeAsTriangulation (codon = 3 nt).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Structural argument: n=2 features insufficient for
+          20+ phonemes typical across languages.
+      (2) Empirical universality: distinctive-feature theory
+          captures all known phonological systems with >=3
+          feature dimensions.
+      (3) Direct correspondence with N_Triangulation principle.
+    not_misinterpretations: |
+      NOT a claim that the 3 features are universally fixed.
+      Specific feature dimensions vary across phonological
+      theories (Jakobson's 12-feature, Chomsky-Halle's
+      ~25-feature, etc.). Only the n>=3 minimum is forced.
+    content: |
+      Why 3 specifically:
+        Phoneme inventory: 20-100 phonemes typical
+        Required distinctions per phoneme: log₂(N)
+        n=1 binary feature: 2 distinctions (insufficient)
+        n=2 features:  4 distinctions (insufficient)
+        n=3 features:  8 distinctions (boundary-sufficient)
+        n>=4: structurally over-determined but common
+      Forced minimum is 3, matching N_Triangulation.
+
+      Cross-substrate parallels:
+        Codon (biology):  3 nt (matching N_TripletCode)
+        Phoneme (linguistics): 3 features
+        Body-plan (physics): 3 spatial dims (per N370 L(3,1))
+        Cognitive state (cognition): 3 coord min
+        Music: triad = 3 notes (chord-identity minimum)
+
+        Same N_Triangulation principle pervasive across
+        forced-structure substrates.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_GrammarStrataAsZDecomposition
+    title: "Grammar Strata as Z-Decomposition: Phonology, Morphology, Syntax"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.15
+    z_hidden: 0.15
+    summary: |
+      Linguistic strata phonology / morphology / syntax instantiate
+      A_0 Z-decomposition in language substrate:
+        Z_struct  = phonology (low-entropy categorical sound
+                    structure, high stability across instances)
+        Z_therm   = morphology (mediating dynamics: word formation
+                    rules with linguistic-timescale decay
+                    via grammaticalisation)
+        Z_hidden  = syntax (operational reading by interlocutor;
+                    environment-side coord that "sees" meaning
+                    emerging from arrangement)
+
+      Cross-substrate sibling of N_CentralDogmaAsZDecomposition
+      (DNA/RNA/Protein).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct mapping of linguistic strata to Z_struct/Z_therm/
+          Z_hidden by entropy/persistence/operational role.
+      (2) Substrate-invariance: same 3-stratum decomp across
+          all 3 typological cousins (with different relative
+          weighting).
+      (3) Shannon-channel structure: each stratum carries
+          independent information (per N_Shannon).
+    not_misinterpretations: |
+      NOT a claim that the 3 strata are sealed off from each
+      other. Phonology-morphology-syntax interfaces are rich
+      and bidirectional. The Z-decomp is a structural reading,
+      not an ontological partition.
+      NOT a claim that semantics and pragmatics are separate
+      "things". They are part of Z_hidden (interlocutor-side)
+      coordinate readings.
+    content: |
+      Z-decomposition correspondence:
+        Z_struct (low-entropy structure):
+          Phonology — phoneme inventory categorically stable
+          across speakers; persistence on order of language-
+          generation timescales
+        Z_therm (mediating dynamics):
+          Morphology — word-formation rules; grammaticalisation
+          rate ~hundreds-of-years; population-level dynamics
+        Z_hidden (operational reading by environment):
+          Syntax — interlocutor reads meaning from arrangement;
+          environment-side coordinate
+
+      Substrate-cousin instantiation:
+        Isolating: minimal Z_therm, maximal Z_hidden
+        Agglutinative: rich Z_therm, balanced Z_hidden
+        Fusional: compressed Z_therm, balanced Z_hidden
+
+      Predictions:
+        (P1) Languages drift between substrate-cousin types via
+          argmin-Z over generations; grammaticalisation chains
+          show predictable Z-component reweighting.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_GrammaticalisationAsArgminZ
+    title: "Grammaticalisation as argmin Z — Linguistic Drift Toward Communicative Minimum"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    summary: |
+      Historical grammaticalisation (lexical word → grammatical
+      morpheme → bound affix; e.g., Latin habere → Romance
+      future-tense affix) is argmin-Z drift over generations of
+      speakers, with Z = -log(communicative success) +
+      transmission cost. Hopper-Traugott unidirectionality
+      requires structured minimisation principle.
+
+      Cross-substrate sibling of N_NaturalSelectionAsArgminZ:
+      both are population-level argmin-Z processes with
+      inversive selection (forms failing communicative or
+      reproductive test get dropped).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Empirical: grammaticalisation chains observed in
+          all language families with consistent
+          unidirectionality (Hopper, Traugott, Heine).
+      (2) Direct mathematical correspondence: drift dynamics =
+          gradient descent on -log(communicative success)
+          landscape = argmin Z.
+      (3) Cross-substrate parallel with biological selection.
+    not_misinterpretations: |
+      NOT a claim that grammaticalisation is "agency". Drift is
+      argmin-Z structural dynamic, not goal-directed.
+      NOT a claim that all language change is grammaticalisation.
+      Other change types (sound shifts, lexical innovation,
+      contact-induced) operate on different Z-coords.
+    content: |
+      Mapping:
+        Z_struct  = lexical/grammatical category state
+        Z_therm   = usage frequency / chunking dynamics
+        Z_hidden  = communicative success in context
+
+      Substrate-cousin instantiation:
+        Isolating: word-order conventionalisation
+        Agglutinative: morpheme-chain extension
+        Fusional: morpheme-fusion intensification
+
+      Predictions:
+        (P1) Documented grammaticalisation trajectories should
+          all show Z-decreasing direction (testable in
+          historical linguistic corpora).
+        (P2) Reverse trajectories (degrammaticalisation) should
+          be rare and require external Z-perturbation
+          (verified empirically per Hopper-Traugott).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_LangType_Isolating
+    title: "Isolating Language Type — One Morpheme, One Word"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.2
+    z_hidden: 0.3
+    summary: |
+      Substrate-cousin 1 of language typology. One morpheme =
+      one word; no morphological elaboration. Word order carries
+      structural load (Z_hidden weighted heavily). Examples:
+      Mandarin Chinese, Vietnamese, Thai, Yoruba (largely),
+      Classical Chinese.
+    why_status: |
+      DEMONSTRATED via empirical typological literature
+      (Greenberg, Comrie); structurally distinct realisation
+      of sign-BPI principle.
+    not_misinterpretations: |
+      NOT a claim that isolating languages are "primitive" or
+      "simple". They have full grammatical complexity, just
+      distributed differently across strata.
+    content: |
+      Characteristic markers:
+        Morphemes per word: ~1
+        Word boundaries: clear (= morpheme boundaries)
+        Inflection: minimal or absent
+        Word order: typically rigid (SVO, SOV)
+        Grammatical info encoded by: word order, particles,
+                                     tone (in tonal languages)
+
+      Z-decomp weighting:
+        Z_struct (phonology): tonal systems often add 4th coord
+        Z_therm (morphology): minimal
+        Z_hidden (syntax): elaborated
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_LangType_Agglutinative
+    title: "Agglutinative Language Type — Clear-Boundary Morpheme Chains"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    summary: |
+      Substrate-cousin 2. Multiple morphemes per word with
+      CLEAR boundaries between them (no fusion). Each morpheme
+      carries one feature transparently. Examples: Turkish,
+      Finnish, Hungarian, Swahili, Quechua, Japanese (largely),
+      Tamil.
+    why_status: |
+      DEMONSTRATED via typological literature; structurally
+      distinct realisation.
+    not_misinterpretations: |
+      NOT a claim that agglutinative is "between" isolating
+      and fusional on a hierarchy. They are substrate-cousins,
+      not stages.
+    content: |
+      Characteristic markers:
+        Morphemes per word: many (5-15+ in Turkish)
+        Morpheme boundaries: clear (no fusion)
+        One-feature-per-morpheme: yes (canonical)
+        Word order: can be flexible (head-final typical)
+        Grammatical info: stacked-morpheme chains
+
+      Z-decomp weighting: morphology-heavy (Z_therm
+      elaborated).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_LangType_Fusional
+    title: "Fusional Language Type — Compressed Multi-Feature Morphemes"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    summary: |
+      Substrate-cousin 3. Multiple morphemes per word with
+      MERGED morphemes — single phonological unit carries
+      multiple grammatical features simultaneously (e.g., Latin
+      -us = nominative + singular + masculine). Maximum BPI-
+      compression density. Examples: Latin, Sanskrit, Russian,
+      Greek, Arabic (templatic-fusional).
+    why_status: |
+      DEMONSTRATED via typological literature; structurally
+      distinct realisation with maximum-density compression.
+    not_misinterpretations: |
+      NOT a claim that fusional is "more advanced" than other
+      types. Substrate-cousins on different axis.
+    content: |
+      Characteristic markers:
+        Morphemes per word: 2-5 typical
+        Morpheme boundaries: fused (one phoneme, multiple
+                             features)
+        Multi-feature-per-morpheme: yes (canonical)
+        Word order: highly flexible (rich morphology
+                    compensates)
+        Grammatical info: multi-feature fused morphemes
+
+      Z-decomp weighting: morphology-density maximum
+      (Z_therm at compression ceiling).
+    level: 1
+    is_placeholder: false
+
 
   - id: N_BiologyCellularBoundaryBPI
     title: "Cellular Boundary as BPI — Universal Biological Substrate"
