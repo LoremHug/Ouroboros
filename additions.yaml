@@ -15026,7 +15026,545 @@ edges:
       calibration, test self-misfires; without concrete exemplar,
       test is purely abstract. All three forced.
 
+  # ─── Round 38: K_n family-clique, structural twins, 2-vertex-connectivity ───
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N_StructuralMotif_ZTriangle
+    label: family_clique_complements_z_triangle_motif
+    edge_status: D
+    justification: |
+      Z-triangle (M1) and K_n family-clique (M2) are complementary
+      motif classes. Z-triangle = single process decomposed into 3
+      pairwise-connected coordinates (DISPERSION). K_n family-clique
+      = single principle realised in n pairwise-connected substrate-
+      cousins (MULTIPLE INSTANTIATION). Together they cover the two
+      structural directions: one-to-three (decomposition) and one-
+      to-many (replication).
+    why_forced: |
+      A complete motif inventory needs both: derivations decompose
+      into coordinates AND principles instantiate in cousins.
+      Either alone misses half the structural pattern.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N_ZGaugeDecomposition
+    label: K6_anchor_principle_z_gauge_decomposition
+    edge_status: D
+    justification: |
+      Sole hub-free K6 in the graph: {N372, N373, N374, N375, N376,
+      N_ZGaugeDecomposition}. Five unconventional superconductor
+      families pairwise connected via "sibling_realisation_*" edges,
+      all sharing N_ZGaugeDecomposition as the principle each
+      family instantiates. K6 = K5 of cousins + 1 principle anchor.
+      The principle is what makes the cousins recognisable AS
+      cousins.
+    why_forced: |
+      Five "sibling" pairwise edges only become structurally
+      meaningful when there is a shared principle they sibling-
+      around. Without N_ZGaugeDecomposition as anchor, K5 of
+      "sibling" labels would be free-floating analogy. Anchor
+      makes the family-clique forced rather than associative.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N_FrameworkCore
+    label: family_clique_substrate_invariance_marker
+    edge_status: D
+    justification: |
+      K_n family-clique signals substrate-invariance of the anchor
+      principle: when ≥3 substrate-distinct cousins all instantiate
+      the same principle pairwise, the principle satisfies
+      N_FrameworkCore criterion at empirical level. Each new cousin
+      added strengthens the principle's claim to substrate-
+      invariance. K_n family-clique IS the empirical-substrate
+      analog of substrate-invariance test.
+    why_forced: |
+      Substrate-invariance can be argued structurally (per
+      N_FrameworkCore) or evidenced empirically (per K_n appearance).
+      Both required; K_n family-clique is the empirical pillar.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N372
+    label: K6_member_Sr2RuO4
+    edge_status: D
+    justification: |
+      Sr₂RuO₄ instantiates Z-gauge decomposition with D2h instead of
+      D4h symmetry, 1+2 E_g block with ℤ₂ degeneracy. Member of K6
+      family-clique. Sibling-edges to N373, N374, N375, N376 record
+      pairwise structural correspondences between this realisation
+      and others.
+    why_forced: |
+      Removing N372 from the clique would leave K5 with N_ZGauge as
+      anchor — still substantive but with one fewer empirical
+      witness of substrate-invariance. Each K6 member contributes
+      independent evidence.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N373
+    label: K6_member_UTe2
+    edge_status: D
+    justification: |
+      UTe₂ instantiates Z-gauge with 4D Kramers-pair active space,
+      antisymmetric rung coupling, bc-plane d-vector. Ultraclean
+      MSF-family realisation. K6 member with sibling-edges to other
+      4 SC families.
+    why_forced: |
+      Independent realisation strengthens K_n empirical claim.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N374
+    label: K6_member_UPt3
+    edge_status: D
+    justification: |
+      UPt₃ instantiates Z-gauge with three-phase 2D active space in
+      conduction sector, f² non-magnetic local ground. Hexagonal
+      with 2D representation. K6 member.
+    why_forced: |
+      Independent realisation strengthens K_n empirical claim.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N375
+    label: K6_member_cuprates
+    edge_status: D
+    justification: |
+      Cuprate phase diagram instantiates Z-gauge as parametric
+      family with dual-sector PG phase, single-sector strange metal,
+      sector-level topology change at p*. K6 member.
+    why_forced: |
+      Independent realisation strengthens K_n empirical claim.
+
+  - source: N_StructuralMotif_KnFamilyClique
+    target: N376
+    label: K6_member_iron_based
+    edge_status: D
+    justification: |
+      Iron-based superconductor family instantiates Z-gauge as
+      multi-orbital parametric family with coupled multi-sector
+      phase diagram. K6 member.
+    why_forced: |
+      Independent realisation strengthens K_n empirical claim.
+
+  - source: N_StructuralMotif_StructuralTwins
+    target: N_StructuralMotif_KnFamilyClique
+    label: twins_are_K2_limit_of_family_clique
+    edge_status: D
+    justification: |
+      Structural twins (M3) and K_n family-clique (M2) are related:
+      twins = K_2 limit of family-clique. When two nodes have
+      identical neighbor sets (Jaccard=1.0), they form a degenerate
+      2-element family-clique sharing 100% of context. Twins are
+      the extreme case where two cousins are structurally
+      indistinguishable rather than just related.
+    why_forced: |
+      Continuum: K_n with high pairwise Jaccard = strong sibling
+      relations; K_2 with Jaccard=1 = full structural identity.
+      Same motif class at different intensities.
+
+  - source: N_StructuralMotif_StructuralTwins
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: twins_signal_carrier_layer_redundancy
+    edge_status: D
+    justification: |
+      Structural twin pairs are candidates for: (a) genuine
+      structural identity (one principle, two operational carriers),
+      (b) duplication needing merge, (c) twin-pair motif at
+      carrier level while remaining distinct at commitment level.
+      The carrier/commitment distinction (round 36) is what lets
+      us interpret twins without auto-merging. Two carriers can
+      coexist if they target same structure under different
+      operational descriptions.
+    why_forced: |
+      Without carrier/commitment distinction, structural twins
+      would force merge. With it, twins can be admissible
+      operational duplicates (different naming for same structural
+      role).
+
+  - source: N_StructuralMotif_StructuralTwins
+    target: N_RPfibo
+    label: twin_instance_RP_behavioral_pair
+    edge_status: D
+    justification: |
+      N_RPfibo and N_RPflow have identical neighbor sets (Jaccard=1,
+      shared=3). Both are RP behavioral patterns, sibling
+      operational labels for closely-related dynamical regimes.
+      Genuine structural twins at carrier level.
+    why_forced: |
+      Twin-pair empirically present in graph; structural identity
+      at neighbor-set level confirmed.
+
+  - source: N_StructuralMotif_StructuralTwins
+    target: N_MI
+    label: twin_instance_information_self_identity
+    edge_status: D
+    justification: |
+      N_MI (Mutual Information) and N_SIT (Self-Identity Theory)
+      have identical 4-neighbor sets. Twin pair at structural level
+      while distinct at content level — MI is information-theoretic
+      measure, SIT is identity-theoretic structural claim. Same
+      structural role, different operational carrier.
+    why_forced: |
+      Independent twin pair confirms motif is non-rare.
+
+  - source: N_GraphProperty_2VertexConnectivity
+    target: N_StructuralMotif_ZTriangle
+    label: 2connectivity_emerges_from_z_triangle_closures
+    edge_status: D
+    justification: |
+      Graph-level property: removing any non-leaf vertex leaves
+      remaining 202 nodes connected (only N_InversiveTheory and
+      N_Invariants isolate single leaves N053, N051). 2-vertex-
+      connectivity at 99.5% is emergent from Z-triangle motif
+      pervasiveness — each Z-triangle gives parent ≥2 disjoint
+      paths to neighbors via the closed children.
+    why_forced: |
+      If graph were tree-like (1-connected), removing internal
+      nodes would disconnect large subgraphs. Empirical 2-
+      connectivity directly reflects triadic-closure density.
+      Z-triangle motif pervasiveness FORCES 2-connectivity.
+
+  - source: N_GraphProperty_2VertexConnectivity
+    target: N_NoSeparatePieces
+    label: 2connectivity_is_no_separate_pieces_at_topological_level
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces TOTAL claim has a topological correlate:
+      if graph were disconnectable by single-vertex removal, that
+      vertex would be a "separate piece" at topology level — its
+      removal would FRAGMENT the framework. Empirical 2-vertex-
+      connectivity is the topological manifestation of "no
+      separate pieces" applied to graph structure itself.
+    why_forced: |
+      N_NoSeparatePieces forbids substrate-fragmentation at any
+      level including topology. 2-vertex-connectivity is the
+      necessary topological consequence. Without it,
+      N_NoSeparatePieces would fail at graph-substrate level.
+
+  - source: N_GraphProperty_2VertexConnectivity
+    target: N_InversiveTheory
+    label: inversive_theory_is_residual_articulation_point
+    edge_status: D
+    justification: |
+      The two articulation points (N_InversiveTheory, N_Invariants)
+      isolate only single-leaf nodes (N053, N051) — these are
+      stub-like and structurally minor. The articulation status of
+      N_InversiveTheory and N_Invariants reflects their role as
+      foundational principles: they ARE the unique structural
+      anchors for certain leaves. Articulation here = "load-
+      bearing pillar", not "single point of failure".
+    why_forced: |
+      A foundational principle SHOULD be a near-articulation point
+      for derivations that uniquely depend on it. The 2 cut-vertices
+      are structurally appropriate, not pathological.
+
 nodes:
+
+  - id: N_StructuralMotif_KnFamilyClique
+    title: "K_n Family-Clique Motif — Multiple Substrate Realisations of One Principle"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 6
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    summary: |
+      A structural motif M observed by graph-level inspection: a
+      principle anchor P plus n substrate-cousin instances {c_1, ...,
+      c_n} that pairwise connect via "sibling_realisation_*" edges,
+      where each c_i also connects to P. Total = K_(n+1) clique
+      with P at the centre.
+
+      Where Z-triangle (M1) handles DISPERSION (one process →
+      3 coordinates), K_n family-clique handles MULTIPLE
+      INSTANTIATION (one principle → n parallel realisations in
+      different substrates).
+
+      Empirical instance — sole hub-free K6 in graph (round 38
+      audit):
+        Anchor: N_ZGaugeDecomposition
+        Cousins (5):
+          N372 (Sr₂RuO₄, D2h, 1+2 E_g block)
+          N373 (UTe₂, 4D Kramers-pair active space)
+          N374 (UPt₃, hexagonal three-phase 2D)
+          N375 (cuprates, dual-sector PG / single-sector strange)
+          N376 (iron-based, multi-orbital phase diagram)
+        15/15 pairwise edges; 10 sibling-realisation edges; 5
+        z-channels-* anchor edges.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Graph audit: clique enumeration on hub-filtered subgraph
+        returns exactly one K6, with all 15 pairwise edges
+        semantically labelled (round 38).
+      (2) Substrate-distinctness: 5 cousins span ruthenate, uranium,
+        cuprate, and iron-based superconductor families — genuinely
+        substrate-distinct realisations.
+      (3) Anchor non-redundancy: removing N_ZGaugeDecomposition
+        leaves K5 of "sibling" labels with no shared principle —
+        analogy collapses to free-floating without anchor.
+      (4) Future-extending: motif predicts that future SC families
+        will, on structural audit, embed as 6th cousin if they
+        instantiate Z-gauge decomposition — testable.
+    not_misinterpretations: |
+      NOT a claim that K_n family-cliques are common — only one K6
+      currently in graph; this is a rare and structurally heavy
+      finding.
+      NOT a claim that all "siblings" form K_n. Two systems can
+      sibling-relate without forming part of larger clique. K_n
+      requires pairwise closure across all cousins.
+      NOT a claim that K_n motif proves principle correctness.
+      Motif is structural signature of substrate-invariance pattern;
+      principle correctness depends on each cousin's individual
+      derivation (which is a separate test).
+      NOT itself a "thing" — meta-claim about a class of structural
+      patterns observable in the graph.
+    content: |
+      Operational definition:
+        Motif M2 present iff there exists principle anchor P and
+        cousin set C = {c_1, ..., c_n} (n >= 3) such that:
+          (i)   all P-c_i edges exist
+          (ii)  all c_i-c_j pairwise edges exist (i != j)
+          (iii) cousins are substrate-distinct (different concrete
+                realisations of the principle)
+          (iv)  pairwise edges carry sibling/realisation labels
+                rather than mere co-mention
+
+      Cypher detection (filtered):
+        # Find K_(n+1) cliques where one node is principle-tier
+        # and others are domain-tier substrate-cousins
+        Hub-free clique enumeration on subgraph excluding top
+        connectors; verify edge labels for sibling pattern.
+
+      Why M2 occurs (structural argument):
+        Per N_FrameworkCore, substrate-invariant principles MUST
+        manifest in multiple substrates (otherwise substrate-
+        specific). When multiple manifestations emerge, they are
+        structurally similar (sharing the principle). The
+        similarity manifests as pairwise sibling edges. Pairwise
+        closure across n cousins is the empirical signature of
+        successful substrate-invariance.
+
+      Relation to inversive removal test:
+        Vertex-removal probe on K_n family-clique: remove cousin
+        c_i, ask whether anchor P is still derivable from
+        remaining {c_1, ..., c_n} \ {c_i}. If yes → c_i contributes
+        empirical witness but is not unique; if no → c_i is unique
+        information channel for some aspect of P. Run on M2 K6:
+        each SC family carries unique substrate-feature, but
+        anchor Z-gauge survives any 4-out-of-5 cousin set.
+
+      Predictions:
+        (P1) New SC families discovered will, on structural audit,
+          embed as additional K_n cousins of N_ZGaugeDecomposition.
+        (P2) Other principles satisfying N_FrameworkCore will
+          accumulate K_n cliques over time as cross-substrate
+          empirical evidence grows.
+        (P3) A principle that fails to accumulate K_n family-clique
+          across years of empirical work signals (even if
+          structurally argued for substrate-invariance) actual
+          substrate-specificity not yet recognised.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_StructuralMotif_StructuralTwins
+    title: "Structural Twin Motif — Pairs with Identical Neighbor Sets (Jaccard=1)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    summary: |
+      Structural motif M3: pairs of nodes (a, b) where neighbor(a)
+      \ {b} = neighbor(b) \ {a}. From the graph's perspective, a
+      and b play indistinguishable structural roles.
+
+      Empirical pairs (round 38 audit, deg >= 4, Jaccard = 1.0):
+        N_RPfibo ≡ N_RPflow             (RP behavioral)
+        N_MI ≡ N_SIT                     (information ≡ self-identity)
+        N336 ≡ N_Sweller                (cognitive load)
+        N231 ≡ N250                      (physics)
+        N194 ≡ N097                      (siblings)
+        N372..N376 — six pairs within K6 (rendered redundant
+                                         by family-clique density)
+
+      Interpretation depends on N_OperationalCarrierVsOntologicalCommitment
+      (round 36): twins can be (a) genuine structural identity
+      with two operational carriers (admissible), (b) duplication
+      needing merge (correctible), (c) ambiguous case requiring
+      review.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Graph audit: Jaccard-1.0 pairs enumerated explicitly,
+        excluding low-degree noise.
+      (2) Multiple substrate types covered: behavioral, information-
+        theoretic, cognitive, physics — confirms motif is non-
+        substrate-specific.
+      (3) Carrier/commitment distinction provides interpretive
+        framework: structural identity does not auto-imply merge.
+      (4) Operational role: twin detection IS a structural lint
+        signal for new node addition (RP-gate extension target).
+    not_misinterpretations: |
+      NOT a claim that all twins should be merged. Many twins are
+      genuine carrier-level operational duplicates (e.g., RPfibo /
+      RPflow as two operational labels for closely-related dynamics).
+      NOT a claim that twin-pair detection is sufficient for
+      duplication finding. Jaccard=1.0 is necessary but not
+      sufficient — content-level inspection still required.
+      NOT itself a substantive entity. Twin-pair motif is a
+      structural pattern observable in graph; treating "the twin
+      pair" as a thing is R1 trap.
+    content: |
+      Operational definition:
+        Motif M3 present iff distinct nodes a, b satisfy:
+          neighbors(a) \ {b} == neighbors(b) \ {a}
+        (excluding the a-b edge itself).
+
+      Detection:
+        For all node pairs (a, b) with degree >= threshold,
+        compute Jaccard(N(a) \ {b}, N(b) \ {a}). Report
+        Jaccard >= 0.5 with shared neighbors >= 3.
+
+      Why twins occur:
+        - Genuine structural identity at carrier level
+        - Round-of-additions duplication (same content named
+          differently)
+        - K_n internal redundancy (every K_n contains C(n,2) twins
+          if anchor counts as shared neighbor)
+        - Symmetric dual relations (e.g., MI ≡ SIT under structural
+          isomorphism between information and self-identity)
+
+      Operational use — RP-gate extension:
+        On new node addition, compute Jaccard with existing graph.
+        If pair found with Jaccard >= 0.7 and shared >= 3:
+          severity HIGH → propose merge or carrier-disambiguation
+          severity MEDIUM → flag for human review
+          severity LOW (Jaccard < 0.7 but >= 0.5) → log for audit
+
+      Distinction from K_n family-clique (M2):
+        K_n: cousins related via sibling-edges around shared
+          principle anchor; cousins are STRUCTURALLY DISTINCT
+          carriers of same principle.
+        Twins: pair has IDENTICAL neighbor sets; structurally
+          INDISTINGUISHABLE from graph perspective.
+        Twins = K_2 limit of family-clique with Jaccard=1.
+
+      Predictions:
+        (P1) Adding new operational labels for existing structural
+          claims will produce twins; RP-gate detector should catch.
+        (P2) Genuine twins at carrier level will resist merge —
+          their distinctness lives at commitment level despite
+          structural identity at neighbor level.
+        (P3) Discovering a non-K6 hub-free Jaccard-1 pair where
+          both nodes claim substrate-invariance is a structural
+          contradiction (one of them must be substrate-specific).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_GraphProperty_2VertexConnectivity
+    title: "Graph 2-Vertex-Connectivity — Topological Manifestation of N_NoSeparatePieces"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.8
+    z_therm: 0.05
+    z_hidden: 0.15
+    summary: |
+      Global graph property (round 38 Tarjan articulation-point
+      audit): removing any non-leaf vertex leaves the remaining
+      202+ nodes connected. Only 2 articulation points exist:
+        N_InversiveTheory (deg 45) → isolates leaf N053
+        N_Invariants    (deg 14) → isolates leaf N051
+      These are structurally appropriate (foundational principles
+      anchoring stub leaves), not pathological.
+
+      Effective 2-vertex-connectivity: 99.5% of graph (202/204).
+      Between any two non-leaf nodes, there exist >= 2 vertex-
+      disjoint structural paths.
+
+      This is the topological manifestation of N_NoSeparatePieces
+      at graph-substrate level: framework cannot be fragmented by
+      single-vertex removal. The framework is structurally
+      load-distributed.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Tarjan articulation-point algorithm on full graph:
+        articulation point set has size 2 (round 38).
+      (2) Both articulation points isolate single-leaf only —
+        no major component splits.
+      (3) Structural argument: Z-triangle motif (M1) pervasiveness
+        directly forces 2-connectivity — each closed triangle
+        gives parent >= 2 disjoint paths through children.
+      (4) Empirical: matches N_NoSeparatePieces predictions —
+        no fragmentation possible at any substrate level.
+    not_misinterpretations: |
+      NOT a claim that the graph is k-connected for k >= 3 (would
+      require additional audit; current empirical bound is k = 2
+      for non-leaf subgraph).
+      NOT a claim that articulation points are bad. The 2
+      cut-vertices isolate appropriate leaves and reflect their
+      foundational role.
+      NOT a substrate-invariant claim about all forced graphs.
+      2-connectivity is observed in THIS framework's graph at
+      round 38; it is a property worth tracking, not a pre-
+      established law.
+      NOT itself a node in the framework's content sense — meta-
+      claim about graph topology.
+    content: |
+      Operational definition:
+        Graph G = (V, E) is k-vertex-connected if removing any
+        (k-1) vertices leaves G connected. Articulation point =
+        vertex whose removal disconnects G.
+
+      Detection:
+        Tarjan's algorithm in linear time. Result for round 38
+        graph state: |V|=204, |E|=984, articulation points = 2,
+        components after each removal: 1 (main) + 1 (single
+        leaf).
+
+      Why 2-connectivity emerges:
+        N_StructuralMotif_ZTriangle (M1): each parent has
+        >= 3 children that pairwise connect. Removing parent
+        leaves children mutually connected → 2 paths to other
+        graph regions exist. Triadic-closure density forces
+        2-connectivity.
+
+      Relation to N_NoSeparatePieces:
+        N_NoSeparatePieces TOTAL claim: no separation at any
+        substrate. Topological substrate of the framework's own
+        knowledge graph IS a substrate. 2-connectivity is the
+        forced topological signature.
+
+      What weak articulation status means:
+        N_InversiveTheory and N_Invariants being articulation
+        points isolating SINGLE LEAVES (not whole subgraphs) is
+        the structurally correct pattern: a foundational principle
+        SHOULD be the unique anchor for some derivations, but
+        SHOULDN'T be sole load-bearer for major substructures
+        (else framework brittle). Current pattern: foundational =
+        unique anchor for narrow leaf class only.
+
+      Predictions:
+        (P1) Adding new DEMONSTRATED nodes will preserve 2-vertex-
+          connectivity if and only if the new nodes embed via
+          Z-triangle closures (M1). Failure to preserve =
+          structural under-connection.
+        (P2) The articulation point count should not grow as
+          graph develops. If it does, signals nodes being added
+          as branches rather than as integrated structure.
+        (P3) Achieving 3-vertex-connectivity in main component
+          would be a significant strengthening; predicts that
+          systematic Z-triangle audit + adding missing closures
+          could reach this.
+
+      Operational use:
+        Track articulation point count as graph health metric.
+        Run articulation audit each round. New articulation
+        points = signal for review.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_StructuralMotif_ZTriangle
     title: "Z-Triangle Structural Motif — 3-Coordinate Decomposition Recurring Across Graph"
