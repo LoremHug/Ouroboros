@@ -315,6 +315,107 @@ def graph_stats() -> str:
     return json.dumps(out, ensure_ascii=False, default=str)
 
 
+# ────────────────────────────────────────────────────── ANALYSIS TOOLS
+
+@mcp.tool()
+def find_path(source: str, target: str, max_hops: int = 6, directed: bool = True) -> str:
+    """Find the shortest path between two nodes through Edge relationships.
+
+    directed=True: follow edges in their natural source→target direction.
+    directed=False: treat edges as undirected.
+
+    Returns the shortest path as an ordered list of {id, title, layer} plus
+    the edge labels traversed. If no path within max_hops, returns empty.
+    Uses Kuzu's variable-length path matching.
+    """
+    conn = _conn()
+    arrow = "->" if directed else "-"
+    cypher = f"""
+        MATCH p = (a:Node {{id: $src}})-[:Edge*1..{max_hops}]{arrow}(b:Node {{id: $tgt}})
+        RETURN nodes(p), rels(p)
+        ORDER BY length(p)
+        LIMIT 1
+    """
+    try:
+        res = conn.execute(cypher, {"src": source, "tgt": target})
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+    if not res.has_next():
+        return json.dumps({"path": [], "hops": 0,
+                           "note": f"no path within {max_hops} hops"},
+                          ensure_ascii=False)
+    row = res.get_next()
+    nodes_data, rels_data = row[0], row[1]
+    path_nodes = [{"id": n.get("id"), "title": n.get("title"),
+                   "layer": n.get("layer")} for n in nodes_data]
+    edge_labels = [r.get("label") for r in rels_data]
+    return json.dumps({
+        "path": path_nodes, "edge_labels": edge_labels,
+        "hops": len(edge_labels),
+    }, ensure_ascii=False, default=str)
+
+
+@mcp.tool()
+def common_ancestors(node_a: str, node_b: str, max_hops: int = 4) -> str:
+    """Find nodes that are ancestors (incoming-direction sources) of BOTH
+    node_a and node_b within max_hops. These are shared structural grounds
+    — useful for verifying that two nodes share a forced derivation path
+    or for finding the closest common foundation in the graph.
+
+    Returns sorted by combined path length (shorter = closer ancestor).
+    """
+    conn = _conn()
+    cypher = f"""
+        MATCH (anc:Node)-[:Edge*1..{max_hops}]->(a:Node {{id: $a}}),
+              (anc)-[:Edge*1..{max_hops}]->(b:Node {{id: $b}})
+        WHERE anc.id <> $a AND anc.id <> $b
+        RETURN DISTINCT anc.id, anc.title, anc.layer
+        LIMIT 50
+    """
+    try:
+        res = conn.execute(cypher, {"a": node_a, "b": node_b})
+    except Exception as e:
+        return json.dumps({"error": str(e)}, ensure_ascii=False)
+    out = []
+    for r in _rows(res):
+        out.append({"id": r[0], "title": r[1], "layer": r[2]})
+    return json.dumps({"ancestors": out, "count": len(out)},
+                      ensure_ascii=False, default=str)
+
+
+@mcp.tool()
+def node_centrality(top_k: int = 25) -> str:
+    """Rank nodes by degree centrality (in + out edges). Identifies the
+    structural hubs of the manifold.
+
+    Returns top_k nodes with in-degree, out-degree, total, plus layer/status.
+    Useful for prioritising bespoke justification work, Z-vector assignment,
+    and stub-resolution targets.
+    """
+    conn = _conn()
+    res = conn.execute(
+        """
+        MATCH (n:Node)
+        OPTIONAL MATCH (n)-[out:Edge]->()
+        WITH n, count(out) AS out_deg
+        OPTIONAL MATCH ()-[in_edge:Edge]->(n)
+        WITH n, out_deg, count(in_edge) AS in_deg
+        RETURN n.id, n.title, n.layer, n.status, in_deg, out_deg,
+               in_deg + out_deg AS total
+        ORDER BY total DESC
+        LIMIT $k
+        """,
+        {"k": top_k},
+    )
+    out = []
+    for r in _rows(res):
+        out.append({
+            "id": r[0], "title": r[1], "layer": r[2], "status": r[3],
+            "in_degree": r[4], "out_degree": r[5], "total_degree": r[6],
+        })
+    return json.dumps(out, ensure_ascii=False, default=str)
+
+
 # ────────────────────────────────────────────────────── WRITE TOOLS
 
 @mcp.tool()
