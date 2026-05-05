@@ -9776,6 +9776,1039 @@ edges:
       Wyler without L(3,1) grounding is ad-hoc; with grounding,
       α value is forced topological consequence.
 
+  # Round 23: web-up batch 3 — cognition, biology, social, paradoxes
+  # Closes forced edges for ~25 nodes in cognition/biology/social-info substrates
+  # plus key paradox-dissolution and structural-foundation nodes.
+
+  # === N000: BPI Fundamental Op = Object Reification ===
+
+  - source: N000
+    target: N_GrammarTrap
+    label: object_reification_IS_the_grammar_trap_root
+    edge_status: D
+    justification: |
+      N000's "conversion of process stream into stable labelled entity"
+      IS the operational definition of N_GrammarTrap's S-V-O reification.
+      Object-reification at BPI level produces the grammar trap at
+      linguistic level — same operation, two coordinate readings.
+    why_forced: |
+      Without identification, N000 is BPI-internal observation; with
+      identification, it is the structural source of grammar's
+      ontological imposition. Required pair.
+
+  - source: N000
+    target: N_OntologyParadigmGrammarBound
+    label: BPI_object_reification_is_paradigm_root_mechanism
+    edge_status: D
+    justification: |
+      The paradigm-level wall (N_OntologyParadigmGrammarBound) operates
+      because grammar inherits BPI-level object reification (N000).
+      N000 is the cognitive mechanism; the paradigm is the cumulative
+      consequence at descriptive substrate.
+    why_forced: |
+      Paradigm without cognitive root is unanchored; cognitive operation
+      without paradigm-level consequence is local-only. Pair structurally
+      required.
+
+  - source: N000
+    target: N_TopologyProcessIdentity
+    label: BPI_reification_as_negation_of_topology_process_identity
+    edge_status: D
+    justification: |
+      N000's reification operation produces objects from processes —
+      directly negating N_TopologyProcessIdentity's "one process,
+      many coordinate readings" principle. The trap fires when reification
+      replaces coordinate reading with substantive object.
+    why_forced: |
+      Topology-process identity without a documented violation operation
+      lacks empirical force; reification operation without identification
+      target is unanchored. Pair required.
+
+  # === N001: Multi-Observer Dissolution ===
+
+  - source: N001
+    target: N_NoSeparatePieces
+    label: multi_observer_dissolution_via_unity
+    edge_status: D
+    justification: |
+      The multi-observer problem presupposes separate observers each
+      with independent measurements. N_NoSeparatePieces denies this —
+      observers are coordinate readings of one A_0 process. Dissolution
+      = applying unity at observer level.
+    why_forced: |
+      Without N_NoSeparatePieces grounding, dissolution requires ad-hoc
+      argument; with it, dissolution is structural corollary.
+
+  - source: N001
+    target: N002
+    label: multi_observer_paired_with_falsification_criterion
+    edge_status: D
+    justification: |
+      The same structural argument (no two distinct processes
+      topologically identical) dissolves multi-observer AND generates
+      falsification criterion N002. Two consequences of one structural
+      claim.
+    why_forced: |
+      Dissolution and criterion are not independent — they are paired
+      consequences of the same uniqueness-of-Z-trajectory principle.
+
+  # === N007: Self-Referential Closure ===
+
+  - source: N007
+    target: N_Triangulation
+    label: self_ref_closure_IS_triangulation_self_applied
+    edge_status: D
+    justification: |
+      N007 establishes A_0 as triangulation of its own gradients
+      (Wheeler identities U/R/T as three independent saddle points).
+      This IS N_Triangulation self-applied — triangulation operating
+      on itself as object.
+    why_forced: |
+      Triangulation without self-application is incomplete (it must
+      apply universally including to itself); self-ref closure without
+      triangulation lacks structural form. Pair required.
+
+  - source: N007
+    target: N009
+    label: self_ref_closure_uses_three_gradients_definition
+    edge_status: D
+    justification: |
+      The three Wheeler identities (Surprisal, Landauer, Kolmogorov)
+      that form A_0's saddle point are exactly the three gradients
+      U, R, T from N009. N007 = self-ref form; N009 = the gradients
+      themselves.
+    why_forced: |
+      Self-ref form requires gradient content; gradients require
+      saddle-point realisation. Pair structurally required.
+
+  # === N014: Ontological Randomness as BPI Artifact ===
+
+  - source: N014
+    target: N112
+    label: randomness_is_Z_hidden_compression_artifact
+    edge_status: D
+    justification: |
+      Ontological randomness = Z_hidden = K(F) - K(O), per N112.
+      Probability is observer's compression artifact for the
+      structurally-deterministic but observationally-inaccessible
+      K(F) content. N014 is N112 read as "what randomness actually is".
+    why_forced: |
+      Without N112's containment, randomness lacks structural source;
+      with it, randomness IS Z_hidden definitionally.
+
+  - source: N014
+    target: N_OntologyParadigmGrammarBound
+    label: ontological_randomness_is_paradigm_R3_artifact
+    edge_status: D
+    justification: |
+      "Ontological randomness" treats observer's hidden information as
+      property of reality itself — classic R3 (free alternative) at
+      the foundational level. N014's diagnosis is the paradigm-level
+      grammar trap producing ontological randomness as concept.
+    why_forced: |
+      Without paradigm-level diagnosis, N014's claim is local; with
+      it, N014 is the canonical R3 case at foundation level.
+
+  # === N015: QM Status under Coordinate Freedom ===
+
+  - source: N015
+    target: N070
+    label: QM_coordinate_status_paired_with_measurement_dissolution
+    edge_status: D
+    justification: |
+      QM as coordinate system (N015) and measurement-problem dissolution
+      (N070) are two readings of the same fact: QM is observer-relative
+      coordinate, not physical-substrate property. The two together
+      complete the dissolution.
+    why_forced: |
+      N015 without N070 leaves measurement as "still a problem";
+      N070 without N015 lacks coordinate-freedom grounding. Pair required.
+
+  - source: N015
+    target: N_NoSeparatePieces
+    label: QM_is_one_substrate_coord_not_separate_layer
+    edge_status: D
+    justification: |
+      QM is not a separate layer of reality "below" classical — it is
+      the coordinate system at scales where Z_hidden dominates. Same
+      A_0, different coord regime. N_NoSeparatePieces at QM-classical
+      relationship level.
+    why_forced: |
+      Two-layer ontology violates unity; coordinate-regime reading
+      respects it. Forced.
+
+  # === N019: Erosion as Z_struct Accumulation ===
+
+  - source: N019
+    target: DEF
+    label: erosion_grounds_in_Z_struct_argmin
+    edge_status: D
+    justification: |
+      Erosion = energy gradient driving Z_struct accumulation in
+      geological substrate. The mechanism is DEF's argmin Z applied
+      with structural coordinates dominant. Without DEF, erosion is
+      empirical; with it, structural.
+    why_forced: |
+      DEF substrate-generality requires geological substrate inclusion;
+      erosion is its canonical instance.
+
+  - source: N019
+    target: N078
+    label: erosion_paired_with_jacobson_thermodynamic_substrate
+    edge_status: D
+    justification: |
+      Erosion (geological dissipation) and Jacobson gravity (gravitational
+      dissipation) share thermodynamic substrate. N078 + N019 are
+      siblings in Z_therm domain.
+    why_forced: |
+      Cross-substrate thermodynamic readings require linkage by
+      N_NoSeparatePieces; siblings are forced.
+
+  - source: N019
+    target: N021
+    label: erosion_evolution_share_blind_gradient_descent
+    edge_status: D
+    justification: |
+      Erosion (geological) and evolution (biological) are both blind
+      gradient descent over Z-landscape — same structure in different
+      substrates. N019 + N021 are siblings.
+    why_forced: |
+      Substrate-different but structure-identical processes must be
+      linked; siblings forced by N_NoSeparatePieces.
+
+  # === N020: Hebbian Plasticity ===
+
+  - source: N020
+    target: DEF
+    label: hebbian_grounds_in_argmin_Z_struct_neural
+    edge_status: D
+    justification: |
+      Hebbian potentiation = argmin Z_struct along established
+      activation paths. The literal mechanism is DEF's argmin operating
+      in synaptic substrate, with topological hysteresis encoding
+      Z-history.
+    why_forced: |
+      Hebbian without DEF grounding is empirical neuroscience; with
+      DEF, it is forced consequence in neural substrate.
+
+  - source: N020
+    target: N371
+    label: hebbian_neural_dynamics_in_BPI_hydrodynamics_substrate
+    edge_status: D
+    justification: |
+      N371's BPI hydrodynamics describes Z-flow regimes; Hebbian
+      plasticity is the neural-substrate manifestation of the
+      laminar-flow stable-attractor regime. Cognitive A_0 reads
+      out as Hebbian rule.
+    why_forced: |
+      Cognitive A_0 instances must localise to specific neural
+      operations; Hebbian is the canonical such operation. Pair
+      structurally required.
+
+  # === N021: Evolution as A_0 ===
+
+  - source: N021
+    target: DEF
+    label: evolution_is_argmin_Z_in_biological_substrate
+    edge_status: D
+    justification: |
+      Evolution = blind gradient descent over Z_env = argmin Z in
+      biological substrate. Mutation provides exploration; selection
+      provides argmin. N021 is DEF specialised to biological substrate.
+    why_forced: |
+      DEF substrate-generality requires biological substrate inclusion;
+      evolution is the canonical evolutionary-biology A_0 instance.
+
+  - source: N021
+    target: N341
+    label: evolution_paired_with_ecology_population_dynamics
+    edge_status: D
+    justification: |
+      Evolution (selection on individuals) and ecology (population-level
+      dynamics) are nested A_0 instances — individual gradient descent
+      composes into population-level argmin. N021 + N341 are
+      multi-scale siblings.
+    why_forced: |
+      Evolution and ecology share substrate (biology) and structure
+      (Z-landscape navigation); pair forced by structural identity.
+
+  # === N031: Acoustics and Harmony ===
+
+  - source: N031
+    target: N_PhiAttractor
+    label: musical_harmony_realises_phi_attractor
+    edge_status: D
+    justification: |
+      Musical harmony's golden-ratio interval relationships and
+      Fibonacci-coherence rewrites (per N_RPfibo) are realisations
+      of N_PhiAttractor's continuous-angular A_0 attractor in the
+      acoustic substrate.
+    why_forced: |
+      Music's φ scaling without N_PhiAttractor is acoustic-specific;
+      with N_PhiAttractor, it is one attractor instance among continuous
+      substrates.
+
+  - source: N031
+    target: N_AestheticEngagement
+    label: harmony_is_aesthetic_engagement_in_acoustic_substrate
+    edge_status: D
+    justification: |
+      Musical harmony is aesthetic engagement (N_AestheticEngagement)
+      operating in acoustic-temporal substrate. Berezovsky's free-energy
+      formulation = FEP-like minimisation that engagement structurally
+      requires.
+    why_forced: |
+      Cross-substrate aesthetic engagement requires substrate-specific
+      instances; music is one canonical such instance.
+
+  - source: N031
+    target: N_EngagementArchitecture
+    label: harmony_at_wundt_apex_acoustic_substrate
+    edge_status: D
+    justification: |
+      Musical harmony operates near the Wundt-apex engagement balance —
+      sufficient predictability (consonance) plus sufficient surprise
+      (dissonance/resolution). N031 is N_EngagementArchitecture in
+      acoustic substrate.
+    why_forced: |
+      Wundt-apex engagement principle requires substrate-specific
+      tunings; musical harmony provides one of the cleanest empirical
+      instances.
+
+  # === N035: Psychophysics ===
+
+  - source: N035
+    target: DEF
+    label: weber_fechner_grounds_in_argmin_Z_perception
+    edge_status: D
+    justification: |
+      Weber-Fechner S = k log I emerges from BPI argmin Z under
+      thermodynamic budget — DEF in perceptual substrate. Logarithmic
+      law is forced by optimal information extraction, not empirical
+      generalisation.
+    why_forced: |
+      Without DEF grounding, Weber-Fechner is descriptive law; with
+      grounding, it is forced consequence of argmin under budget.
+
+  - source: N035
+    target: N327
+    label: psychophysics_paired_with_weber_lower_bound
+    edge_status: D
+    justification: |
+      Weber's logarithmic law (N035) and Weber's lower bound from
+      thermodynamics (N327) are two coordinate readings of the same
+      psychophysical limit — bound and law from one substrate.
+    why_forced: |
+      Law without bound is incomplete; bound without law is unmotivated.
+      Pair structurally required.
+
+  - source: N035
+    target: N189
+    label: psychophysics_paired_with_forgetting_curve
+    edge_status: D
+    justification: |
+      Weber-Fechner (perception) and Ebbinghaus forgetting (memory)
+      are two A_0 manifestations in perceptual-cognitive substrate
+      under Z-budget constraint. Sibling psychophysical results.
+    why_forced: |
+      Psychophysical A_0 readings under shared substrate must be
+      cross-linked; siblings forced.
+
+  # === N043: Information Laws (Benford, Zipf) ===
+
+  - source: N043
+    target: N363
+    label: zipf_benford_consolidate_into_A0_power_laws
+    edge_status: D
+    justification: |
+      Benford's law and Zipf's law share 1/x prior structure (per N043);
+      N363 establishes Zipf as A_0 power law from logarithmic BPI.
+      N043 + N363 = full information-law consolidation.
+    why_forced: |
+      Sibling information laws must be cross-linked; pair forced.
+
+  - source: N043
+    target: N_Shannon
+    label: information_laws_are_shannon_substrate_specific
+    edge_status: D
+    justification: |
+      Benford and Zipf are Z_struct-axis (informational) regularities,
+      with H values determining the 1/x prior strength. N_Shannon
+      supplies the Z_struct framework that produces the laws.
+    why_forced: |
+      Information-theoretic laws require Shannon framework as ground;
+      without it, they are empirical generalisations. With it, structural.
+
+  # === N045: Golden Ratio φ ===
+
+  - source: N045
+    target: N_PhiAttractor
+    label: phi_unique_attractor_grounds_phi_attractor_node
+    edge_status: D
+    justification: |
+      N045 = the formal mathematical proof that φ is the unique A_0
+      attractor for continuous min-memory branching processes;
+      N_PhiAttractor = the framework-level claim. N045 = proof; N_PhiAttractor = claim.
+    why_forced: |
+      Claim without proof is asserted; proof without claim is unconnected.
+      Pair structurally required.
+
+  - source: N045
+    target: DEF
+    label: phi_attractor_realises_argmin_Z_continuous
+    edge_status: D
+    justification: |
+      φ as attractor is DEF's argmin Z applied to continuous
+      branching substrate with minimum-memory constraint. Same A_0,
+      coordinate-restricted.
+    why_forced: |
+      Continuous-substrate A_0 must have realised attractor; φ is
+      the unique such realisation.
+
+  # === N058, N059: Entanglement / ER=EPR ===
+
+  - source: N058
+    target: N_OntologyParadigmGrammarBound
+    label: entanglement_nonlocality_is_paradigm_grammar_artifact
+    edge_status: D
+    justification: |
+      "Two particles connected at a distance" is paradigm-level grammar
+      forming: subject (particle) + verb (connected at distance) +
+      object (other particle). N058's "BPI artifact" identification
+      IS the paradigm-grammar diagnosis at quantum-foundation level.
+    why_forced: |
+      Without paradigm-level diagnosis, N058 is QM-specific puzzle
+      dissolution; with it, N058 is canonical paradigm-grammar
+      instance in foundations.
+
+  - source: N058
+    target: N070
+    label: entanglement_dissolution_paired_with_measurement_dissolution
+    edge_status: D
+    justification: |
+      Both dissolutions (entanglement nonlocality, measurement collapse)
+      operate by removing observer/observed reification — same
+      structural mechanism, two QM-puzzle applications.
+    why_forced: |
+      Sibling QM dissolutions share mechanism; cross-link is structural.
+
+  - source: N059
+    target: N_NoSeparatePieces
+    label: ER_EPR_is_no_separate_pieces_in_spacetime_substrate
+    edge_status: D
+    justification: |
+      Van Raamsdonk: removing entanglement destroys spacetime
+      connectivity → entanglement IS metric, not connection between
+      separate pieces. N059 is N_NoSeparatePieces at spacetime-foundation
+      level: spacetime not separate from its quantum content.
+    why_forced: |
+      Without unity grounding, ER=EPR is suggestive correspondence;
+      with it, it is forced consequence — spacetime IS its information
+      content.
+
+  - source: N059
+    target: N058
+    label: ER_EPR_paired_with_entanglement_dissolution
+    edge_status: D
+    justification: |
+      ER=EPR (geometry from entanglement) and entanglement-as-BPI-artifact
+      (N058) are dual readings: entanglement is metric is information
+      compression. Paired QM-foundation dissolutions.
+    why_forced: |
+      Paired structural dissolutions cross-linked; required.
+
+  # === N074: Initial Conditions ===
+
+  - source: N074
+    target: N112
+    label: initial_Z_hidden_zero_via_observer_containment
+    edge_status: D
+    justification: |
+      Z_hidden(0) = 0 because Z_hidden is integral of Landauer costs
+      over prior transitions; with no prior, integral is zero.
+      N112's containment definition makes the tautology rigorous.
+    why_forced: |
+      Without N112's structural form, the tautology is verbal; with
+      it, it is forced.
+
+  # === N088: Metric Expansion ===
+
+  - source: N088
+    target: N078
+    label: metric_expansion_via_Landauer_at_each_transition
+    edge_status: D
+    justification: |
+      Metric expansion = global d_Z growth from Z_hidden accumulation;
+      Z_hidden grows because Landauer erasure occurs at every transition
+      (per N078 thermodynamic substrate). N088 + N078 paired.
+    why_forced: |
+      Landauer mechanism without expansion consequence is local-only;
+      expansion without Landauer mechanism is unmotivated. Pair forced.
+
+  - source: N088
+    target: N197
+    label: metric_expansion_paired_with_cosmological_constant
+    edge_status: D
+    justification: |
+      Metric expansion (N088) and cosmological constant (N197) are
+      coordinate readings of the same Z_hidden cosmological growth.
+      Λ value derives from expansion rate.
+    why_forced: |
+      Cosmological observable pairs require linkage by unity; required.
+
+  # === N098: Diffusion Metric IR/UV ===
+
+  - source: N098
+    target: N067
+    label: diffusion_metric_transition_at_r0_is_spectral_dim_transition
+    edge_status: D
+    justification: |
+      g^(Z) Riemannian at IR vs quantum-walk at UV with crossover at
+      r_0 IS the same r_0 that controls d_s(r) transition (N067).
+      N098 + N067 are paired metric-level and dimension-level readings.
+    why_forced: |
+      Same r_0 governs both transitions; the metric and dimension
+      consequences must be linked. Pair forced.
+
+  # === N103: Complex Hilbert from Z_3 ===
+
+  - source: N103
+    target: N370
+    label: complex_hilbert_grounds_in_Z3_of_L31
+    edge_status: D
+    justification: |
+      Z_3 has no irreducible real representation of degree 3 → complex
+      coefficients forced. N370 (L(3,1) inevitability) supplies the
+      Z_3 structure that mandates complex Hilbert space.
+    why_forced: |
+      QM's complex structure as postulate violates A_0 derivation;
+      Z_3-derived complex Hilbert respects substrate-generality.
+
+  - source: N103
+    target: N_Triangulation
+    label: complex_hilbert_three_irreducible_categories_triangulation
+    edge_status: D
+    justification: |
+      The impedance trichotomy (Z = Z_struct + Z_therm + Z_hidden)
+      requires exactly 3 irreducible epistemic categories — the
+      triangulation principle at Hilbert-space-irrep level.
+    why_forced: |
+      Three is forced by triangulation; complex Hilbert manifests
+      this requirement at Z_3 representation level.
+
+  # === N117: BPI as Z-Measurement Process ===
+
+  - source: N117
+    target: N112
+    label: BPI_measurement_grounds_in_observer_containment
+    edge_status: D
+    justification: |
+      "BPI measures Z via spectral triple" presupposes K(O) < K(F)
+      (per N112) — measurement is the operation that turns the
+      structural gap into observed Z-reading.
+    why_forced: |
+      BPI without containment grounding lacks structural anchor;
+      containment without measurement consequence is abstract.
+      Pair required.
+
+  - source: N117
+    target: N370
+    label: BPI_uses_L31_via_H1_Z3_constraint
+    edge_status: D
+    justification: |
+      "Geometric constraint H_1(L(3,1)) = Z_3 strictly determines
+      BPI structure" — N117 explicitly uses N370's manifold.
+    why_forced: |
+      BPI structural constraint must reference the manifold; pair
+      definitional.
+
+  # === N119, N123, N250: Generation structure ===
+
+  - source: N119
+    target: N370
+    label: three_matter_sectors_via_L31_Z3_winding
+    edge_status: D
+    justification: |
+      Three topologically distinct sectors with identical gauge numbers
+      via winding w = 3 ≡ 0 (mod 3). N370 supplies L(3,1); N119 the
+      sectorisation.
+    why_forced: |
+      Sector count from manifold is forced; without N370, sector count
+      is empirical.
+
+  - source: N119
+    target: N123
+    label: three_sectors_paired_with_generation_problem_resolution
+    edge_status: D
+    justification: |
+      Three matter sectors (N119) and generation count = 3 (N123) are
+      identical structural fact at sector- vs generation-level naming.
+    why_forced: |
+      Same forced fact in two formulations must be linked; required.
+
+  - source: N123
+    target: N370
+    label: generation_count_forced_by_L31_pi1
+    edge_status: D
+    justification: |
+      Generation count = π_1(L(3,1)) = Z_3. N370 supplies the
+      manifold; N123 the generation-problem resolution.
+    why_forced: |
+      Generation count without manifold grounding is empirical; with
+      grounding, structurally forced.
+
+  - source: N250
+    target: N133
+    label: right_handed_neutrino_via_one_generation_decomposition
+    edge_status: D
+    justification: |
+      One SM generation decomposes 16 = 15 + 1 with the singlet
+      being ν_R. N133 establishes the representation; N250 identifies
+      the singlet specifically as right-handed neutrino.
+    why_forced: |
+      Decomposition requires identification of singlet content; pair
+      structurally required.
+
+  # === N150: Shore-Johnson ===
+
+  - source: N150
+    target: DEF
+    label: shore_johnson_grounds_BPI_to_gibbs_inference
+    edge_status: D
+    justification: |
+      Shore-Johnson proves max-entropy is unique inference under four
+      consistency conditions — closing the BPI + Z_hidden > 0 → Gibbs
+      derivation. The four conditions IS DEF's argmin Z applied at
+      inference level.
+    why_forced: |
+      Without Shore-Johnson, BPI → Gibbs has gap; with it, the inference
+      step is mathematically closed.
+
+  - source: N150
+    target: N_FEP
+    label: shore_johnson_grounds_FEP_max_entropy_foundation
+    edge_status: D
+    justification: |
+      FEP's variational form rests on max-entropy posterior; Shore-Johnson
+      gives this its uniqueness theorem. N150 is FEP's mathematical
+      foundation at the inference layer.
+    why_forced: |
+      FEP without uniqueness foundation is one method among many;
+      with Shore-Johnson, FEP is forced. Pair required.
+
+  # === N165: Ergodicity ===
+
+  - source: N165
+    target: DEF
+    label: ergodicity_grounds_in_argmin_Z_chain_structure
+    edge_status: D
+    justification: |
+      Reality Protocol = ergodic Markov chain on Z-graph converging
+      to unique Gibbs stationary distribution. The argmin Z structure
+      determines the chain's transition probabilities — ergodicity
+      is DEF's long-time consequence.
+    why_forced: |
+      Markov chain without DEF grounding is empirical model; with
+      DEF, the chain is forced.
+
+  - source: N165
+    target: N007
+    label: ergodicity_realises_self_referential_closure_dynamically
+    edge_status: D
+    justification: |
+      Ergodic convergence to unique stationary state IS the dynamical
+      realisation of N007's self-referential closure. N007 = static
+      structural form; N165 = dynamic ergodic form.
+    why_forced: |
+      Static and dynamic readings of same closure must be linked.
+
+  # === N189, N194, N197 ===
+
+  - source: N189
+    target: N067
+    label: cortical_fractal_dim_grounds_in_spectral_dim_formula
+    edge_status: D
+    justification: |
+      Cortical fractal dimension d_f ≈ 2.73-2.79 inverts spectral
+      dimension formula d_s(r) = 2 + 2r/(r+r_0). N067 supplies the
+      formula; N189 the empirical match.
+    why_forced: |
+      Fractal-spectral dimension match without formula link is
+      coincidence; with it, structural.
+
+  - source: N194
+    target: N067
+    label: classical_limit_via_d_s_to_4_at_large_r
+    edge_status: D
+    justification: |
+      At r >> r_0, d_s → 4 forces inverse-square law (classical limit).
+      N067 supplies the d_s formula; N194 the classical-limit reading.
+    why_forced: |
+      Classical limit derivation requires d_s asymptotic behaviour;
+      forced pair.
+
+  - source: N197
+    target: N078
+    label: cosmological_constant_grounds_in_jacobson_thermodynamics
+    edge_status: D
+    justification: |
+      Cosmological constant + graviton non-detection = Z_hidden as
+      cosmological Landauer debt. N078's Jacobson thermodynamics
+      supplies the dissipation framework; N197 the cosmological value.
+    why_forced: |
+      Cosmological Λ without thermodynamic grounding requires fine-tuning;
+      with grounding, forced.
+
+  # === N232, N243: CKM derivation chain ===
+
+  - source: N232
+    target: N240
+    label: eta_invariant_grounds_lepton_mass_phase
+    edge_status: D
+    justification: |
+      δ = |η(L(3,1))| = 2/9 from APS eta-invariant supplies the
+      Koide circulant phase Brannen fitted empirically. N232 supplies
+      the geometric derivation; N240 uses it for mass ratios.
+    why_forced: |
+      Geometric phase without empirical use is abstract; mass ratios
+      without geometric phase are empirical only.
+
+  - source: N243
+    target: N175
+    label: cabibbo_angle_paired_with_CKM_CP
+    edge_status: D
+    justification: |
+      sin(θ_Cabibbo) = |η(L(3,1))| = 2/9 ties Cabibbo angle to same
+      η that controls CKM CP phase (N175). One geometric invariant,
+      two CKM observables.
+    why_forced: |
+      One invariant controlling multiple observables forces the link.
+
+  # === N327, N328, N332: thermodynamic / social ===
+
+  - source: N327
+    target: N078
+    label: weber_fraction_lower_bound_grounds_in_thermodynamics
+    edge_status: D
+    justification: |
+      w_min = k_B T ln 2 / E_bind is Landauer-type thermodynamic floor
+      on perception. N078 (gravity-as-thermodynamics) shares the
+      Landauer foundation that N327 uses for sensory threshold.
+    why_forced: |
+      Thermodynamic-floor results across substrates must be linked;
+      shared substrate forces sibling pairing.
+
+  - source: N328
+    target: N067
+    label: casimir_correction_via_d_s_at_subnano
+    edge_status: D
+    justification: |
+      Casimir force F/A ∝ d^(-d_s(d)) corrections come from N067's
+      d_s(d) formula at nm scale near r_0. Standard QM uses d_s = 4;
+      N328 uses the scale-dependent value.
+    why_forced: |
+      d_s formula application across substrates structurally forced;
+      Casimir is one canonical case.
+
+  - source: N332
+    target: N078
+    label: trust_asymmetry_realises_second_law_in_social_substrate
+    edge_status: D
+    justification: |
+      Trust-building reduces entropy (work cost); trust-destruction
+      increases entropy (free) — direct realisation of the second
+      law in social-information substrate. N078's thermodynamic
+      framework supplies the second-law substrate.
+    why_forced: |
+      Second-law instances across substrates must be linked; required.
+
+  - source: N332
+    target: N330
+    label: trust_asymmetry_paired_with_polarisation_social_dynamics
+    edge_status: D
+    justification: |
+      Trust asymmetry (N332) and polarisation (N330) are two
+      Z_hidden-driven dynamics in social substrate. Sibling
+      social-network A_0 instances.
+    why_forced: |
+      Same-substrate Z_hidden phenomena cross-linked.
+
+  # === N334, N335: Game theory / economics ===
+
+  - source: N334
+    target: DEF
+    label: nash_equilibrium_IS_local_argmin_Z
+    edge_status: D
+    justification: |
+      Z_i(s) = -u_i(s) makes Nash equilibrium ≡ local argmin Z. N334
+      = DEF in game-theoretic substrate.
+    why_forced: |
+      Without DEF identification, Nash is one solution concept;
+      with it, Nash is forced consequence in game substrate.
+
+  - source: N334
+    target: N335
+    label: nash_paired_with_price_equilibrium_economics
+    edge_status: D
+    justification: |
+      Nash equilibrium (N334) and price equilibrium (N335) are sibling
+      A_0-as-local-Z-min instances in game/market substrates. Both
+      are DEF specialised to economic interaction.
+    why_forced: |
+      Sibling A_0 instances forced.
+
+  - source: N335
+    target: DEF
+    label: price_equilibrium_IS_argmin_Z_struct_market
+    edge_status: D
+    justification: |
+      Price equilibrium = argmin Z_struct in transaction substrate.
+      Market friction = Z_struct of transaction topology. Bubbles =
+      local Z_struct minima ignoring Z_hidden. DEF + Z-decomposition
+      directly applied.
+    why_forced: |
+      Economic A_0 substrate must include market mechanism; price
+      equilibrium is canonical instance.
+
+  # === N341, N349, N353 ===
+
+  - source: N341
+    target: N021
+    label: ecology_paired_with_evolution_multiscale_A0
+    edge_status: D
+    justification: |
+      Ecology (population-level) and evolution (individual-level) are
+      multi-scale siblings in biological A_0 substrate. N341 + N021
+      paired by substrate identity.
+    why_forced: |
+      Multi-scale biological A_0 must be cross-linked.
+
+  - source: N349
+    target: N370
+    label: hopf_fibration_grounds_L31_Z3_via_Z3_in_U1
+    edge_status: D
+    justification: |
+      Z_3 deck of L(3,1) = Hopf Z_3 from S^1 ↪ S^3 → S^2 with c_1=1.
+      N349 supplies the Hopf-fibration derivation; N370 uses the
+      result (L(3,1) inevitability).
+    why_forced: |
+      Manifold uniqueness + Hopf derivation paired by definition.
+
+  - source: N349
+    target: N107
+    label: hopf_fibration_paired_with_simplicial_chain_complex
+    edge_status: D
+    justification: |
+      Hopf fibration n=3 derivation (N349) and simplicial chain
+      complex H_1 ≠ 0 (N107) are two homological-substrate readings
+      forcing the same n=3 outcome.
+    why_forced: |
+      Same outcome from two routes must be linked; pair required.
+
+  - source: N353
+    target: N370
+    label: heat_kernel_coefficients_on_L31_via_manifold
+    edge_status: D
+    justification: |
+      Seeley-DeWitt coefficients computed for Dirac on M_4 = L(3,1) × S^1_β
+      use N370's manifold directly. N353 supplies the spectral data
+      that mass-derivation (N240) and other physics use.
+    why_forced: |
+      Heat-kernel computation on specific manifold forced by manifold
+      identification.
+
+  - source: N353
+    target: N_Bar
+    label: heat_kernel_paired_with_Bar_dirac_spectrum
+    edge_status: D
+    justification: |
+      N_Bar (Bär+Vassilevich Dirac spectrum on L(3,1)) and N353 (heat
+      kernel coefficients on same manifold) are paired spectral
+      computations — eigenvalues + heat-trace from same operator.
+    why_forced: |
+      Same operator, two spectral consequences; pair forced.
+
+  # === N_BrownLev, N_SDT, N_Sweller: operational proxies ===
+
+  - source: N_BrownLev
+    target: DEF
+    label: politeness_FTA_realises_Z_therm_operationalisation
+    edge_status: D
+    justification: |
+      W(FTA) = D + P + R operationalises Z_therm in interpersonal
+      communication substrate. N_BrownLev IS DEF's Z_therm coordinate
+      in social-comm substrate.
+    why_forced: |
+      Z_therm operationalisation across substrates forced; FTA is
+      canonical interpersonal proxy.
+
+  - source: N_BrownLev
+    target: N_SDT
+    label: brownlev_paired_with_sdt_two_Z_therm_proxies
+    edge_status: D
+    justification: |
+      N_BrownLev (FTA) and N_SDT (autonomy) are two Z_therm proxies
+      for different communication-context emphasis: face-threat vs
+      autonomy-support. Sibling Z_therm operationalisations.
+    why_forced: |
+      Same axis (Z_therm), two proxy substrates; pair forced.
+
+  - source: N_SDT
+    target: DEF
+    label: SDT_autonomy_realises_Z_therm_motivational_substrate
+    edge_status: D
+    justification: |
+      Autonomy-supportive formulations reduce Z_therm in motivational
+      substrate — DEF's Z_therm coordinate read at agency level.
+    why_forced: |
+      Motivational A_0 substrate requires autonomy operationalisation;
+      SDT canonical.
+
+  - source: N_Sweller
+    target: N_Shannon
+    label: cognitive_load_chunks_paired_with_shannon_information
+    edge_status: D
+    justification: |
+      Working memory capacity (4±1 chunks) is Z_struct proxy.
+      N_Shannon supplies the H ≡ Z_struct framework that N_Sweller
+      operationalises with chunks.
+    why_forced: |
+      Z_struct proxy without information-theoretic grounding is
+      empirical; with N_Shannon, structural.
+
+  - source: N_Sweller
+    target: DEF
+    label: cognitive_load_realises_Z_struct_pedagogical_substrate
+    edge_status: D
+    justification: |
+      Cognitive load = Z_struct in pedagogical substrate; DEF directly
+      applied to instructional design.
+    why_forced: |
+      Pedagogical substrate Z_struct realisation forced.
+
+  # === N_Ontology ===
+
+  - source: N_Ontology
+    target: N_OntologyParadigmGrammarBound
+    label: ontology_category_error_paired_with_paradigm_grammar_diagnosis
+    edge_status: D
+    justification: |
+      "Ontology as category error" (N_Ontology) is the local-claim
+      version of the paradigm-level grammar-bound diagnosis
+      (N_OntologyParadigmGrammarBound). Local + global readings
+      of same diagnosis.
+    why_forced: |
+      Local without global grounding is observation; global without
+      local instance is abstract. Pair structurally required.
+
+  - source: N_Ontology
+    target: N_GrammarTrap
+    label: ontology_error_grounds_in_grammar_trap
+    edge_status: D
+    justification: |
+      Ontology's category error (treating processes as objects) operates
+      via S-V-O grammar (N_GrammarTrap). Same trap, two manifestations.
+    why_forced: |
+      Mechanism without manifestation is abstract; manifestation without
+      mechanism is empirical. Pair forced.
+
+  - source: N_Ontology
+    target: N_TopologyProcessIdentity
+    label: ontology_error_corrected_by_topology_process_identity
+    edge_status: D
+    justification: |
+      Ontology's category error fails N_TopologyProcessIdentity's
+      "process not object" principle. The principle IS the corrective
+      to the category error.
+    why_forced: |
+      Error and correction paired by definition.
+
+  - source: N_Ontology
+    target: N_TranslationLayer
+    label: ontology_error_repaired_via_translation_to_topology
+    edge_status: D
+    justification: |
+      N_TranslationLayer codifies the operational repair of ontology's
+      category error: rewrite ontological claim in topological terms.
+      Error + repair pair.
+    why_forced: |
+      Operational repair without error to repair is unmotivated; pair
+      structurally required.
+
+  # === N259: Dissolution of Classical Paradoxes ===
+
+  - source: N259
+    target: N_OntologyParadigmGrammarBound
+    label: classical_paradoxes_dissolve_via_paradigm_grammar_diagnosis
+    edge_status: D
+    justification: |
+      Matter/antimatter asymmetry, Fermi paradox, "why these constants",
+      "why something rather than nothing" all dissolve under
+      paradigm-level grammar-bound diagnosis: each presupposes
+      separate-pieces ontology that does not survive A_0 unification.
+    why_forced: |
+      Paradox dissolution catalogue without paradigm-level diagnosis
+      is enumeration; with diagnosis, it is forced consequence.
+
+  - source: N259
+    target: N070
+    label: classical_paradox_dissolution_paired_with_QM_dissolutions
+    edge_status: D
+    justification: |
+      Classical paradoxes (N259) and QM measurement-problem dissolution
+      (N070) operate by same mechanism — removal of separate-pieces
+      reification. Sibling dissolutions across foundations.
+    why_forced: |
+      Sibling foundational dissolutions cross-linked.
+
+  # === N006: Time Direction ===
+
+  - source: N006
+    target: N078
+    label: time_arrow_grounds_in_thermodynamic_substrate
+    edge_status: D
+    justification: |
+      Physical time direction ≡ second-law thermodynamic arrow,
+      operating in the Z_therm sector of A_0. N078 supplies the
+      thermodynamic substrate; N006 uses it for the arrow.
+    why_forced: |
+      Time arrow without thermodynamic grounding is conventional;
+      with grounding, structural.
+
+  - source: N006
+    target: N011
+    label: time_arrow_paired_with_lyapunov_stability
+    edge_status: D
+    justification: |
+      Time direction's irreversibility paired with Lyapunov-stability
+      forcing of bounded attractors (N011). Both express the dissipative
+      structure in different aspect.
+    why_forced: |
+      Sibling consequences of dissipative substrate.
+
+  - source: N007
+    target: DEF
+    label: self_referential_closure_grounds_directly_in_DEF
+    edge_status: D
+    justification: |
+      A_0 as triangulation of its own gradients = DEF self-applied.
+      N007 IS the self-application form of DEF — argmin Z over the
+      argmin Z structure itself.
+    why_forced: |
+      DEF without self-application is abstract; self-application
+      without DEF is unanchored. Pair required.
+
+  - source: N189
+    target: N336
+    label: forgetting_curve_paired_with_ebbinghaus_node
+    edge_status: D
+    justification: |
+      N189 derives Ebbinghaus forgetting from A_0; N336 establishes
+      Ebbinghaus as Z_struct decay node. N189 = derivation; N336 =
+      operational claim.
+    why_forced: |
+      Same empirical phenomenon, two structural framings; pair forced.
+
 nodes:
 
   - id: N_OntologyParadigmGrammarBound
