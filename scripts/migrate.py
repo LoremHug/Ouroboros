@@ -481,15 +481,35 @@ def apply_additions(conn) -> tuple[int, int]:
             if "edge_status" in espec:
                 sets.append("e.edge_status = $st")
                 params["st"] = espec["edge_status"]
-            # Only overwrite justification/why_forced if yaml version is longer
+            # Get full existing content to detect template signature
+            r2 = conn.execute(
+                """
+                MATCH (a:Node {id: $src})-[e:Edge]->(b:Node {id: $tgt})
+                WHERE e.label = $lbl
+                RETURN e.justification, e.why_forced
+                """,
+                {"src": espec["source"], "tgt": espec["target"], "lbl": espec.get("label", "")},
+            )
+            ej, ew = "", ""
+            if r2.has_next():
+                erow = r2.get_next()
+                ej, ew = erow[0] or "", erow[1] or ""
             new_j = espec.get("justification", "") or ""
             new_w = espec.get("why_forced", "") or ""
-            if new_j and len(new_j) > existing_j_size:
-                sets.append("e.justification = $j")
-                params["j"] = new_j
-            if new_w and len(new_w) > existing_w_size:
-                sets.append("e.why_forced = $w")
-                params["w"] = new_w
+            # Template signature: round-9 generic phrases
+            TEMPLATE_SIG = ("specialised manifestation", "encoded as \"", "encoded as '")
+            def is_template(s: str) -> bool:
+                return any(sig in s for sig in TEMPLATE_SIG)
+            # Update justification if: yaml is non-template AND existing is template,
+            # OR yaml is longer than existing.
+            if new_j:
+                if (is_template(ej) and not is_template(new_j)) or len(new_j) > len(ej):
+                    sets.append("e.justification = $j")
+                    params["j"] = new_j
+            if new_w:
+                if (is_template(ew) and not is_template(new_w)) or len(new_w) > len(ew):
+                    sets.append("e.why_forced = $w")
+                    params["w"] = new_w
             if sets:
                 conn.execute(
                     f"""

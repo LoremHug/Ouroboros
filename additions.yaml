@@ -5000,6 +5000,241 @@ edges:
       Alternative requires A_0 with smaller invariance group — but argmin\'s monotone-invariance follows from definition of "minimum" (rank-preserving transformations preserve minima). Removing this dissolves the substrate-independence: A_0 would then be substrate-bound, contradicting its operation across logic, physics, biology, etc.
 
 
+
+  - source: DEF
+    target: N310
+    label: definition_self-references
+    edge_status: D
+    justification: >-
+      DEF self-applies: A_0(A_0) = A_0. The definition is the only operation that produces itself when applied to its own specification. Gödel's theorem (N310) is a corollary: the self-referential closure K(O) < K(F) means any system describing itself cannot fully contain its own description — DEF is both the structure and the meta-structure that limits self-description.
+    why_forced: >-
+      Alternative requires a definition that does NOT self-apply — but any operation specifying 'what is stable transitioning' must itself be a stable transition (otherwise the specification is meaningless). DEF's self-reference is forced by what 'definition of stability' means.
+
+  - source: DEF
+    target: N_ForcedId
+    label: definition_closes_on_itself
+    edge_status: D
+    justification: >-
+      DEF is the closure under removal: any structure surviving systematic removal of all postulates IS DEF. N_ForcedId names this closure operationally — forced identification = the surviving structure when alternatives are eliminated. DEF and N_ForcedId are two notations for the same fixed point: DEF as constructive (argmin), N_ForcedId as eliminative (what survives).
+    why_forced: >-
+      Alternative requires DEF without closure under self-application — but applying DEF to its own specification yields DEF (the argmin selecting the stable definition is itself stable). The closure is built into 'stable transitioning'. N_ForcedId names this without adding new content.
+
+  - source: DEF
+    target: N_Triangulation
+    label: A0_requires_triangulation_for_Z
+    edge_status: D
+    justification: >-
+      DEF requires Z to be specifiable; specification needs coordinates; minimum complete coordinate count is 3 (per N_Triangulation). The bidirectional pair definition_requires_three_gradients ↔ A0_requires_triangulation_for_Z reflects that DEF and N_Triangulation are coordinate views of one structural fact: A_0 self-applied to its meta-question.
+    why_forced: >-
+      Alternative requires A_0 with non-triangulated Z — but pairs/quintuples each fail the unique-localisation test. Three is forced. Bidirectional identity: removing either dissolves the other.
+
+  - source: N370
+    target: N_Triangulation
+    label: baryon_exclusion_confirms_triangulation
+    edge_status: D
+    justification: >-
+      N370 establishes p=3 from baryon number conservation (independent route). N_Triangulation establishes 3 from minimum complete Z-coordinate count (different route, same answer). Two routes converging on integer 3 confirm that triangulation is forced — convergence is the structural signature.
+    why_forced: >-
+      Alternative requires p ≠ 3 in baryon constraint OR Z-coordinates ≠ 3 in transition-space. Both routes are independently DEMONSTRATED. Their agreement on 3 is the inversive signature: forced structure has the same value across all routes.
+
+  - source: N_InversiveTheory
+    target: DEF
+    label: same_fixed_point_eliminative_face
+    edge_status: D
+    justification: >-
+      N_InversiveTheory and DEF are one fixed point in two notations: DEF = constructive face (argmin operator), N_InversiveTheory = eliminative face (no alternatives). The reverse-direction edge (matching DEF → N_InversiveTheory same_fixed_point_constructive_face) reflects bidirectional structural identity.
+    why_forced: >-
+      Same forcing as forward edge: argmin Z (DEF) presupposes alternatives reduce to A_0 or are unstable (inversive); inversive presupposes the argmin operation defines stability. Notational separation only.
+
+  - source: N_InversiveTheory
+    target: N_NoSeparatePieces
+    label: no_pieces_follows_from_inevitability
+    edge_status: D
+    justification: >-
+      If structure is inevitable (N_InversiveTheory: no alternatives), then 'discovered structures' in different domains cannot be separate pieces — they must be coordinate expressions of the inevitable structure (N_NoSeparatePieces). Inversive principle DIRECTLY implies no-separate-pieces: 'no alternative' means coordinate variants of one structure, not separate pieces.
+    why_forced: >-
+      Alternative requires inversive without coordinate-unification — but inversive's 'no alternatives' formulation assumes a single underlying structure that domains express in their own coordinates. Without coordinate-unification, 'alternatives' become separate things, breaking the inversive argument.
+
+  - source: N_InversiveTheory
+    target: N_Triangulation
+    label: triangulation_is_local_expression
+    edge_status: D
+    justification: >-
+      N_Triangulation is N_InversiveTheory in coordinate-count substrate: applied to 'how many Z components', inversive eliminates alternatives (1, 2, 4, 5, ...) and what remains is 3. Triangulation IS inversive specialised to coordinate-counting. Reverse direction: triangulation provides one of the local coordinate manifestations of the inversive structure.
+    why_forced: >-
+      Alternative requires inversive without producing 3 in coordinate-counting — but applying inversive's elimination to coordinate counts yields exactly 3 by triangulation argument. Inversive at this level IS triangulation.
+
+  - source: N_InversiveTheory
+    target: N_ZGaugeDecomposition
+    label: gauge_decomposition_is_local_expression
+    edge_status: D
+    justification: >-
+      N_ZGaugeDecomposition is N_InversiveTheory in gauge-structure substrate: applied to 'what gauge symmetry decomposes Z', inversive eliminates alternatives; what remains is Z_3 covering action on L(3,1). Gauge decomposition IS inversive specialised to gauge-counting.
+    why_forced: >-
+      Alternative requires inversive without producing Z_3 in gauge substrate — but the only consistent gauge decomposition matching three Z components and L(3,1) topology is Z_3 covering. Inversive at gauge level IS Z-gauge decomposition.
+
+  - source: N_Logic
+    target: N_Triangulation
+    label: three_term_logic_confirms_triangulation
+    edge_status: D
+    justification: >-
+      Classical logic has three-term structure: premise-rule-conclusion (modus ponens), thesis-antithesis-synthesis (dialectic), object-relation-context (predicate logic). The 3-fold structure of valid inference confirms triangulation as A_0 in symbolic substrate. Independent confirmation: logic developed before A_0 framework ALSO converges on 3.
+    why_forced: >-
+      Alternative requires logic with different fundamental structure (2-term reduction or 4-term lattice) — but all such variants either reduce to 3-term (becoming triangulation) or are not stable (unprovable consistency). Logic's 3-fold structure is forced.
+
+  - source: N_NoSeparatePieces
+    target: DEF
+    label: no_pieces_is_what_DEF_means
+    edge_status: D
+    justification: >-
+      N_NoSeparatePieces and DEF are bidirectional: DEF's 'single A_0 process' ↔ N_NoSeparatePieces' 'no separate structures, only coordinate views'. The reverse edge confirms that N_NoSeparatePieces is what DEF MEANS at the level of cross-domain unification, not just one of its consequences.
+    why_forced: >-
+      Same forcing as forward: definition_implies_unity. Bidirectional reflects that the two are notations for one structural fact.
+
+  - source: N_NoSeparatePieces
+    target: N_ForcedId
+    label: coordinate_invariance
+    edge_status: D
+    justification: >-
+      No-separate-pieces (N_NoSeparatePieces) implies forced-identification (N_ForcedId): if all 'structures' are coordinate views of one A_0, then the forced-identification principle (what survives systematic removal) is the unique coordinate-invariant content. Coordinate invariance IS what makes identification 'forced' rather than 'chosen'.
+    why_forced: >-
+      Alternative requires no-separate-pieces without coordinate invariance — but the principle that domains are coordinate views REQUIRES that the underlying structure be invariant under coordinate change. Without invariance, 'coordinate views' loses meaning.
+
+  - source: N_NoSeparatePieces
+    target: N_InversiveTheory
+    label: not_a_theory_among_theories
+    edge_status: D
+    justification: >-
+      N_NoSeparatePieces explicitly states the framework is 'not a theory among theories' — coordinate-unification means the framework operates at a different level from theories that propose alternatives. This IS the inversive position (no alternatives at the structural level). The two are co-implications of one stance: structure is forced, not chosen among alternatives.
+    why_forced: >-
+      Alternative requires no-separate-pieces compatible with theory-among-theories framing — but coordinate-unification at the structural level dissolves the very notion of 'competing theories' at that level. Inversive consequence is forced.
+
+  - source: N_NoSeparatePieces
+    target: N_InversiveTheory
+    label: no_alternatives_is_inversive_property
+    edge_status: D
+    justification: >-
+      Bidirectional with the previous edge. 'No alternatives at structural level' (inversive content) IS the property that makes 'not a theory among theories' true. Two coordinate readings of one fact.
+    why_forced: >-
+      Bidirectional structural identity, same forcing as paired edge.
+
+  - source: N_NoSeparatePieces
+    target: N_TopologyProcessIdentity
+    label: one_object_many_coordinates
+    edge_status: D
+    justification: >-
+      No-separate-pieces specialised to object/process distinction yields topology-process identity: the apparent duality of 'topology of process' or 'process on topology' dissolves into one structure in two coordinates. Both views describe the same A_0 dynamic.
+    why_forced: >-
+      Alternative requires object/process duality preserved while no-separate-pieces holds — but duality IS what no-separate-pieces eliminates at this specific coordinate level. The implication is forced.
+
+  - source: N_TopologyProcessIdentity
+    target: DEF
+    label: definition_not_enumeration
+    edge_status: D
+    justification: >-
+      N_TopologyProcessIdentity's 'topology IS process, not topology OF process' reverses to: DEF is the operation, not enumeration of processes. The reverse edge expresses that the object/process identification confirms DEF's status as operational (not catalogue).
+    why_forced: >-
+      Alternative requires DEF as enumeration of A_0-instances — but topology-process identity dissolves this; DEF is the operation that all instances perform, not a list of them.
+
+  - source: N_TopologyProcessIdentity
+    target: N_ForcedId
+    label: forced_identification_principle
+    edge_status: D
+    justification: >-
+      Topology-process identity IS one specific instance of forced identification: applying RP gate to 'topology vs process' eliminates the artifact (R1 reification) and what remains is the identity. N_TopologyProcessIdentity grounds N_ForcedId by providing its first non-trivial application.
+    why_forced: >-
+      Alternative requires topology-process identity without invoking forced-identification — but the elimination of object/process duality follows the same RP gate logic that defines forced identification. Same operation in specific substrate.
+
+  - source: N_Triangulation
+    target: DEF
+    label: triangulation_is_self-referential_closure
+    edge_status: D
+    justification: >-
+      N_Triangulation reverse-edge to DEF: the three-coordinate structure IS A_0's self-referential closure. Applying A_0 to 'what coordinates does Z need' produces 3, and the resulting triangulation is a stable fixed point of A_0(A_0) = A_0. Reverse edge confirms that triangulation grounds DEF's well-definedness.
+    why_forced: >-
+      Bidirectional with definition_requires_three_gradients. Removing triangulation makes DEF's argmin operation un-localizable; removing DEF dissolves what makes 3 the right answer.
+
+  - source: N_Triangulation
+    target: DEF
+    label: triangulation_grounds_Z_decomposition
+    edge_status: D
+    justification: >-
+      Second N_Triangulation → DEF edge captures specifically that triangulation grounds Z = Z_struct + Z_therm + Z_hidden — the decomposition itself is forced by triangulation, not chosen. DEF's Z is well-defined ONLY because triangulation gives it three components.
+    why_forced: >-
+      Alternative requires Z without triangulated decomposition — but Z must be coordinatised for argmin to operate; minimum decomposition is 3 (triangulation forces it). Without triangulated Z, DEF has nothing to minimise.
+
+  - source: N_Triangulation
+    target: N370
+    label: triangulation_is_primary_Z2_exclusion
+    edge_status: D
+    justification: >-
+      N_Triangulation provides the primary argument why Z_2 is excluded: pairs cannot uniquely localise transitions in the relevant transition-space (would leave one degree ambiguous). N370's spin-structure uniqueness is a SECONDARY confirmation — both arguments converge on excluding Z_2 in favour of Z_3.
+    why_forced: >-
+      Alternative requires Z_2 sufficiency — but pairs of coordinates fail unique-localisation test; the triangulation principle directly excludes Z_2 by the same argument that excludes 1, 4, 5+. Z_3 is first non-trivial.
+
+  - source: N_Triangulation
+    target: N_Invariants
+    label: triangulation_forces_three_invariant_types
+    edge_status: D
+    justification: >-
+      N_Triangulation's 3-fold structure forces N_Invariants to have exactly 3 substantive invariants beyond the trivial: I_Sym (preservation), I_Bound (containment), I_Quant + I_Null (discrete + unique zero, which combine into one quantization-with-uniqueness invariant). The 3+1 structure mirrors triangulation's 3 Z-components plus existence-domain.
+    why_forced: >-
+      Alternative requires fewer or more invariants — but each is forced: removing I_Sym dissolves identity preservation; removing I_Bound dissolves stability; removing I_Quant or I_Null dissolves discrete unique selection. The four jointly are minimum complete invariant set, paralleling Z's triangulation.
+
+  - source: N_Triangulation
+    target: N_InversiveTheory
+    label: triangulation_confirms_no_alternative
+    edge_status: D
+    justification: >-
+      N_Triangulation reverse-confirms N_InversiveTheory: the three-coordinate structure has no alternative (less = ambiguous; more = redundant). Triangulation IS a specific demonstration of no-alternatives at the coordinate-count level. Reverse edge ensures bidirectional confirmation.
+    why_forced: >-
+      Bidirectional with triangulation_is_local_expression. Each grounds the other: inversive provides general principle; triangulation provides specific instantiation.
+
+  - source: N_Triangulation
+    target: N_Logic
+    label: triangulation_grounds_three_term_structure
+    edge_status: D
+    justification: >-
+      N_Triangulation grounds the 3-fold structure of valid inference in N_Logic. Modus ponens has 3 terms (major, minor, conclusion). Predicate logic has 3 terms (subject, relation, object). All forced through triangulation principle: minimum complete coordinate system in any logical/transition substrate is 3.
+    why_forced: >-
+      Alternative requires logic with different term-structure — but reduction to 2 loses inferential structure; expansion to 4+ either reduces to 3-with-context or introduces R3 artifact. Three-term is forced through same triangulation argument as Z-decomposition.
+
+  - source: N_Triangulation
+    target: N_ZGaugeDecomposition
+    label: triangulation_grounds_three_gauge_types
+    edge_status: D
+    justification: >-
+      N_Triangulation grounds the 3-fold gauge-decomposition in N_ZGaugeDecomposition: three gauge sectors correspond to three Z-components (Z_struct → SU(3) colour, Z_therm → SU(2) weak, Z_hidden → U(1) hypercharge). Triangulation's 3-fold structure forces the SM gauge group structure when Z-components are gauge-coordinatised.
+    why_forced: >-
+      Alternative requires gauge structure with different number of factors — but SM has exactly 3 fundamental forces (excluding gravity which is thermodynamics per N078); coincidence with triangulation is structural, not coincidence. Both are forced 3-fold.
+
+  - source: N_ZGaugeDecomposition
+    target: DEF
+    label: Z_decomposition_is_covering_structure
+    edge_status: D
+    justification: >-
+      N_ZGaugeDecomposition reverse-grounds DEF: the Z-decomposition of A_0 = argmin Z is realised geometrically as Z_3 covering action on L(3,1). The reverse edge confirms that covering structure IS what makes Z-decomposition concrete, not abstract.
+    why_forced: >-
+      Alternative requires Z-decomposition without covering structure — but the three Z components have no geometric realisation without the deck-action eigenspaces. Covering grounds the specific decomposition.
+
+  - source: N_ZGaugeDecomposition
+    target: N370
+    label: Z3_action_grounds_both_Z_and_gauge
+    edge_status: D
+    justification: >-
+      N_ZGaugeDecomposition reverse-grounds N370: the Z_3 covering action that produces Z-decomposition IS the π_1(L(3,1)) = Z_3 that N370 establishes. Same Z_3 group from two angles: gauge structure (N_ZGaugeDecomposition) and topological invariant (N370).
+    why_forced: >-
+      Alternative requires distinct Z_3 instances — but L(3,1)'s π_1 IS the deck-transformation group of its universal cover; gauge Z_3 IS the eigenspace decomposition under this same action. One Z_3, two coordinates.
+
+  - source: N_ZGaugeDecomposition
+    target: N_Triangulation
+    label: three_sheets_three_Z_components_one_fact
+    edge_status: D
+    justification: >-
+      N_ZGaugeDecomposition reverse-edge explicitly: three sheets of L(3,1) covering = three Z-components of decomposition = three eigenspaces of deck-action. Three counts in geometry, structure, and gauge are not coincidence but one fact (per triangulation grounding).
+    why_forced: >-
+      Bidirectional with triangulation_grounds_three_gauge_types. Three from triangulation matches three from covering matches three Z-components. Forced co-occurrence.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
