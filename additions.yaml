@@ -5871,6 +5871,647 @@ edges:
       forced-structure derivation; or (b) trap 5 not extending to
       stoichiometric anchors — but anchors are exactly what trap 5 names.
 
+  # Round 13: bespoke for next 5 hub sources
+  # N188 (8) + N_TopologyProcessIdentity (9) + N_ZGaugeDecomposition (7) + N_FEP (7) + N_DopaminePredictionError (6) = 37
+
+  # === N188 outgoing (qualia as Z-component patterns) ===
+
+  - source: N188
+    target: DEF
+    label: qualia_realise_argmin_Z_in_BPI_internal_coordinate
+    edge_status: D
+    justification: |
+      DEF defines A_0 = argmin Z. N188 identifies qualia as Z-component
+      patterns visible from inside the BPI's own coordinate system. So
+      qualia are the BPI-internal readout of the same argmin Z process
+      DEF specifies — not a separate phenomenon, but DEF viewed from the
+      observer's first-person coordinate.
+    why_forced: |
+      Alternative requires either (a) qualia as something other than
+      Z-pattern readout — but any candidate would need its own Z-vector
+      to enter the framework, reducing back to (a); or (b) DEF without
+      a first-person coordinate readout — but the BPI substrate is
+      observer-bearing by construction, so the readout exists.
+
+  - source: N188
+    target: N_InversiveTheory
+    label: alternatives_dissolve_via_no_external_frame
+    edge_status: D
+    justification: |
+      The classical "inverted qualia", "absent qualia", "philosophical
+      zombie" alternatives all require an external frame from which to
+      compare two qualia-realisations of the same physical state. N188
+      (qualia as Z-patterns inside BPI) means no such external frame
+      exists — and N_InversiveTheory's removal test confirms: the
+      alternatives have no surviving structural content.
+    why_forced: |
+      Alternative requires either (a) qualia alternatives with an
+      external comparison frame — but N112 forbids external observers
+      with full F-access; or (b) N_InversiveTheory not applying to qualia
+      claims — but qualia are structural claims about Z-patterns and
+      the inversive method tests structural claims.
+
+  - source: N188
+    target: N112
+    label: BPI_self_reference_required
+    edge_status: D
+    justification: |
+      For Z-patterns to be qualia (rather than external structures),
+      they must be read by the same BPI that contains them. This requires
+      BPI self-reference, which N112 (Observer Containment Lemma) supplies
+      via K(O)<K(F): the observer is strictly inside the structure it
+      observes, enabling the self-reference loop.
+    why_forced: |
+      Alternative requires either (a) qualia without BPI self-reference
+      — but then they are not first-person and the qualia label fails;
+      or (b) N112 without enabling self-reference — but containment
+      together with observation IS self-reference at the structural
+      level.
+
+  - source: N188
+    target: N187
+    label: qualia_via_subjectivity_dissolution
+    edge_status: D
+    justification: |
+      N187 dissolves the Hard Problem by identifying subjectivity with
+      BPI self-reference rather than treating it as an explanatory
+      remainder. N188 then identifies the contents of subjectivity
+      (specific qualia) with specific Z-component patterns. The two
+      together close the loop: subjectivity is BPI-self-reference,
+      and qualia are what self-reference reads.
+    why_forced: |
+      Alternative requires either (a) qualia without subjectivity
+      grounding — but then "what it is like" has no carrier; or (b)
+      Hard Problem dissolution that does not extend to qualia content
+      — but a dissolution that left qualia mysterious would be incomplete.
+
+  - source: N188
+    target: N_TopologyProcessIdentity
+    label: qualia_trigger_one_process_two_coordinates
+    edge_status: D
+    justification: |
+      An emotion-quale and the bodily/neural trigger that "causes" it
+      look like two separate things — but N188 identifies them as one
+      Z-component pattern read through two coordinates (subjective vs
+      physiological). This is exactly the topology-process identity
+      principle: one process, many coordinate views.
+    why_forced: |
+      Alternative requires either (a) emotion-quale and trigger as
+      genuinely separate objects with a causal arrow between them —
+      but the precise temporal coincidence and shared content rule
+      this out; or (b) topology-process identity not applying — but
+      the same Z-pattern viewed twice is its canonical case.
+
+  - source: N188
+    target: N_BPIEngagement
+    label: engagement_class_qualia_specific_case
+    edge_status: D
+    justification: |
+      N_BPIEngagement is the general class of high-Z tracking signals
+      visible to a BPI; N188 identifies specific qualia as the
+      first-person readout of those same signals when they are
+      Z-component patterns. Qualia are thus a specific case within
+      the engagement class — every quale is an engagement-tracked
+      Z-pattern, but engagement also has non-quale aspects (action
+      selection, attention).
+    why_forced: |
+      Alternative requires either (a) qualia disjoint from engagement
+      — but then high-engagement states would be quale-free, contradicting
+      every introspective and empirical report; or (b) qualia equal to
+      engagement — but engagement has functional roles beyond first-person
+      content, so containment is asymmetric.
+
+  - source: N188
+    target: N_DopaminePredictionError
+    label: qualia_mapping_via_dopamine_pathway
+    edge_status: D
+    justification: |
+      Qualia as Z-component patterns (N188) require a neural carrier
+      in mammalian substrates. The dopaminergic prediction-error pathway
+      (N_DopaminePredictionError) is the documented carrier for the
+      reward/affect Z-component, providing the empirical bridge between
+      Z-pattern theory and measurable neural events.
+    why_forced: |
+      Alternative requires either (a) qualia carried by a non-dopamine
+      pathway for the same reward-component — but the literature on
+      dopamine-quale coupling is unambiguous; or (b) dopamine signal
+      not carrying any quale content — but its tight correlation with
+      reward-affect qualia rules this out.
+
+  - source: N188
+    target: N_DopaminePredictionError
+    label: engagement_class_substrate_documentation
+    edge_status: D
+    justification: |
+      The engagement-class-membership of qualia (above) is documented
+      in mammalian substrates by the same dopaminergic pathway:
+      N_DopaminePredictionError records both the engagement signal
+      and the quale-content signal as one neural event. This co-location
+      empirically supports the engagement-quale containment claim.
+    why_forced: |
+      Alternative requires either (a) separate neural pathways for
+      engagement vs reward-quale — but they are the same dopamine
+      circuit; or (b) one circuit carrying disjoint contents — but
+      the contents (engagement signal, reward quale) are precisely
+      coupled in time and magnitude.
+
+  # === N_TopologyProcessIdentity outgoing ===
+
+  - source: N_TopologyProcessIdentity
+    target: N_Ontology
+    label: topology_is_not_substrate
+    edge_status: D
+    justification: |
+      Ontology questions (N_Ontology marks the category-error class)
+      typically presume a substrate that bears properties. N_TopologyProcessIdentity
+      replaces the substrate frame with the topology-of-process frame:
+      what exists is a process-topology, and substrate is one of its
+      coordinate readouts. This dissolves the standard ontology question.
+    why_forced: |
+      Alternative requires either (a) topology distinguishable from
+      substrate by some other principle — but the Inversive removal
+      test on substrate-vs-topology gives the same residual; or (b)
+      retaining substrate as fundamental — but then N_TopologyProcessIdentity
+      has nothing to identify and the principle dissolves, contradicting
+      its empirical use in N188, N372 etc.
+
+  - source: N_TopologyProcessIdentity
+    target: N_GrammarTrap
+    label: object_frame_dissolved
+    edge_status: D
+    justification: |
+      The grammar trap (subject-verb-object as ontology) imposes an
+      object frame on what are actually process-coordinates. N_TopologyProcessIdentity
+      explicitly dissolves the object frame: there is no separate
+      "object" the verb acts on; the topology IS the process. This
+      removes the grammatical surface that traps reasoning.
+    why_forced: |
+      Alternative requires either (a) keeping the object frame while
+      claiming process-identity — internally inconsistent; or (b)
+      N_GrammarTrap fixable without dissolving the object frame — but
+      the trap is generated by exactly that frame, so any non-dissolution
+      fix leaves the trap mechanism intact.
+
+  - source: N_TopologyProcessIdentity
+    target: N188
+    label: applied_to_qualia_trigger_pair
+    edge_status: D
+    justification: |
+      The principle one-process-many-coordinates applied to the
+      emotion-quale and physical-trigger pair yields N188: the quale
+      and the trigger are not two objects with a causal arrow but
+      two coordinates of one Z-pattern. This is the canonical first
+      cross-substrate application of topology-process identity to
+      observer phenomenology.
+    why_forced: |
+      Alternative requires either (a) topology-process identity not
+      applying to phenomenological pairs — but the empirical signature
+      (perfect temporal coincidence, shared content) is the principle's
+      clearest test case; or (b) applying it but not to the quale-trigger
+      pair — arbitrary restriction.
+
+  - source: N_TopologyProcessIdentity
+    target: N372
+    label: one_object_two_coordinates_applied
+    edge_status: D
+    justification: |
+      Sr₂RuO₄'s historical pairing-symmetry candidates (p-wave triplet
+      vs d-wave singlet vs chiral combinations) appeared as multiple
+      objects competing to be "the" superconducting state. N_TopologyProcessIdentity
+      shows they are coordinate readings of one Z-minimum (the E_g
+      block with ℤ₂ degeneracy), forced by the same active-space
+      constraint.
+    why_forced: |
+      Alternative requires either (a) one of the pairing candidates
+      being uniquely correct — falsified by experiments showing aspects
+      of each are real; or (b) topology-process identity not extending
+      to material-physics observables — but the principle is general
+      across substrates.
+
+  - source: N_TopologyProcessIdentity
+    target: N373
+    label: one_object_different_coordinates_applied
+    edge_status: D
+    justification: |
+      UTe₂'s competing experimental fingerprints (multi-component order,
+      spin-triplet signatures, field re-entrance) are coordinate views
+      of one 4D Kramers-pair active space (N373). The topology-process
+      identity says they are coordinates of one Z-minimum; the
+      "competing" framing is a category error from object-frame thinking.
+    why_forced: |
+      Alternative requires either (a) UTe₂ phenomena as competing
+      objects — falsified by their joint dependence on the same forced
+      active space; or (b) topology-process identity not applying to
+      heavy-fermion superconductors — arbitrary restriction.
+
+  - source: N_TopologyProcessIdentity
+    target: N374
+    label: theoretical_models_as_coord_representations
+    edge_status: D
+    justification: |
+      UPt₃'s theoretical models for the A/B/C phases (E_2u, E_1g,
+      mixed-symmetry, accidentally-degenerate scenarios) are coordinate
+      representations of the forced three-phase 2D active space, not
+      mutually exclusive ontologies. N_TopologyProcessIdentity dissolves
+      the model-competition frame by promoting them to coordinate-level
+      descriptions of one Z-minimum.
+    why_forced: |
+      Alternative requires either (a) one model uniquely correct —
+      falsified by the empirical adequacy of multiple within their
+      coordinate domain; or (b) topology-process identity not applying
+      to theoretical models — but models ARE coordinates over the
+      Z-manifold by definition.
+
+  - source: N_TopologyProcessIdentity
+    target: N375
+    label: multiple_observables_one_structural_feature
+    edge_status: D
+    justification: |
+      Cuprate observables (pseudogap, Fermi-arc, strange-metal resistivity,
+      Hall reversal) are multiple coordinate readouts of the same
+      forced Z-minimum structure (N375). N_TopologyProcessIdentity
+      establishes that they are one structural feature seen through
+      different probes, not separate phenomena to be unified post hoc.
+    why_forced: |
+      Alternative requires either (a) cuprate observables as separate
+      phenomena needing post-hoc unification — but the doping-locked
+      coupling shows they are ONE phenomenon; or (b) topology-process
+      identity not applying to phase-diagram observables — but they
+      are the principle's cleanest large-N test case.
+
+  - source: N_TopologyProcessIdentity
+    target: N376
+    label: empirical_boundary_of_applicability_distinct_critical_values
+    edge_status: D
+    justification: |
+      Iron-based superconductor families (122, 1111, 11) have distinct
+      critical doping/composition values where Z-minimum structure
+      changes — these mark the empirical BOUNDARIES of topology-process
+      identity within the family. The principle holds within each
+      sub-family; boundaries are phase-diagram lines, not violations.
+    why_forced: |
+      Alternative requires either (a) topology-process identity holding
+      uniformly across all iron-based compositions — falsified by the
+      observed sub-family boundaries; or (b) the principle inapplicable
+      to the family — but it holds within each sub-family, so the
+      boundary information IS the application.
+
+  - source: N_TopologyProcessIdentity
+    target: N377
+    label: one_omega_many_coordinates_applied_to_SAE
+    edge_status: D
+    justification: |
+      Sparse autoencoder (SAE) feature absorption across LLMs is one
+      input distribution Ω read through many learned coordinate sets.
+      N_TopologyProcessIdentity applied to LLM substrates predicts the
+      observed geometric divergence: different SAEs find different
+      coordinates of the same underlying Z-structure, with absorption
+      patterns set by the shared Ω.
+    why_forced: |
+      Alternative requires either (a) SAE divergence from genuinely
+      different underlying structures per model — but they share Ω,
+      so this contradicts the input-distribution shared-ness; or (b)
+      topology-process identity not applying to learned representations
+      — but learned coordinates ARE coordinates and the principle
+      applies.
+
+  # === N_ZGaugeDecomposition outgoing ===
+
+  - source: N_ZGaugeDecomposition
+    target: N112
+    label: Z_hidden_is_observer_containment
+    edge_status: D
+    justification: |
+      The Z-gauge decomposition splits Z into Z_struct + Z_therm +
+      Z_hidden. Z_hidden is exactly the gap K(F)−K(O) from N112: the
+      structural information unavailable to a contained observer.
+      Without N112 there is no Z_hidden; the decomposition would
+      collapse to Z_struct + Z_therm.
+    why_forced: |
+      Alternative requires either (a) a Z-decomposition with a different
+      third component — but any candidate must be observer-relative
+      and gap-like, which is N112 by another name; or (b) two-component
+      decomposition — but the triangulation principle forbids fewer
+      than three coordinates.
+
+  - source: N_ZGaugeDecomposition
+    target: N364
+    label: Z_hidden_sector_forces_confinement
+    edge_status: D
+    justification: |
+      QCD confinement is the BPI constraint that observers cannot see
+      colour-charged states directly — exactly an observer-containment
+      structure on the Z_hidden sector of the gauge decomposition.
+      N_ZGaugeDecomposition's Z_hidden component, applied to the
+      SU(3)_colour gauge structure, forces N364's confinement claim.
+    why_forced: |
+      Alternative requires either (a) QCD confinement explained without
+      Z_hidden — but every confinement mechanism (centre-symmetry
+      breaking, dual superconductor, etc.) reduces to a Z_hidden
+      observer-bound structure; or (b) Z_hidden in QCD without
+      confinement — physically inconsistent.
+
+  - source: N_ZGaugeDecomposition
+    target: N372
+    label: z_channels_as_t2g_orbital_sectors
+    edge_status: D
+    justification: |
+      Sr₂RuO₄'s three t_2g orbital sectors (d_xy, d_yz, d_zx) are the
+      three Z-channels of the gauge decomposition realised in this
+      material. N_ZGaugeDecomposition's three-channel structure maps
+      one-to-one onto the active-space orbitals; the E_g block emerges
+      as the symmetric combination of two channels.
+    why_forced: |
+      Alternative requires either (a) Sr₂RuO₄ active space without
+      three orbital channels — falsified by ARPES; or (b) Z-decomposition
+      not corresponding to orbital sectors in this material — but the
+      mapping is exact and reproduces the observed E_g + ℤ₂ structure.
+
+  - source: N_ZGaugeDecomposition
+    target: N373
+    label: z_channels_through_hybridised_sectors
+    edge_status: D
+    justification: |
+      UTe₂'s 4D Kramers-pair active space (N373) realises the Z-channels
+      through hybridised f-d sectors rather than pure orbitals. The
+      gauge decomposition still applies, but the "channels" are
+      hybridisation eigenmodes — confirming the decomposition is
+      coordinate-flexible at the channel level.
+    why_forced: |
+      Alternative requires either (a) UTe₂ active space without
+      Z-channel structure — but its forced 4D dimensionality cannot
+      be reproduced without three+1 sector decomposition; or (b)
+      decomposition only valid for unhybridised channels — arbitrary
+      restriction violating substrate-independence.
+
+  - source: N_ZGaugeDecomposition
+    target: N374
+    label: z_channels_through_local_vs_conduction_sectors
+    edge_status: D
+    justification: |
+      UPt₃'s three-phase active space (N374) realises Z-channels through
+      the split between localised f-electron and conduction-band sectors.
+      The three superconducting phases correspond to three couplings
+      of these sectors — three Z-channels, three phases, one Z-minimum.
+    why_forced: |
+      Alternative requires either (a) UPt₃ phases without sector-channel
+      structure — falsified by neutron and dHvA evidence for the f-d
+      split; or (b) Z-decomposition not extending to localised-vs-conduction
+      splits — arbitrary restriction.
+
+  - source: N_ZGaugeDecomposition
+    target: N375
+    label: z_sectors_in_dual_single_regimes
+    edge_status: D
+    justification: |
+      Cuprate dual-sector (pseudogap) and single-sector (overdoped Fermi
+      liquid) regimes are two configurations of the Z-decomposition:
+      in the dual-sector regime, Z-channels split; in the single-sector
+      regime they merge. N_ZGaugeDecomposition predicts this regime
+      transition as a function of doping.
+    why_forced: |
+      Alternative requires either (a) cuprate regime change without a
+      gauge-decomposition change — but the qualitative phase-diagram
+      shift IS a decomposition restructuring; or (b) Z-decomposition
+      fixed across regimes — falsified by the pseudogap-to-Fermi-liquid
+      transition.
+
+  - source: N_ZGaugeDecomposition
+    target: N376
+    label: four_sector_decomposition_shared_D4h_base
+    edge_status: D
+    justification: |
+      Iron-based superconductors require a four-sector Z-decomposition
+      (orbital + magnetic + nematic + pairing) sharing the D_4h base
+      symmetry. N_ZGaugeDecomposition extends naturally to this
+      richer decomposition; the D_4h base ties the sectors so they
+      cannot be re-shuffled independently.
+    why_forced: |
+      Alternative requires either (a) iron-based phenomenology with
+      fewer sectors — falsified by the empirical multi-coupling; or
+      (b) sectors without a shared symmetry base — but then they would
+      not couple in the observed coordinated way.
+
+  # === N_FEP outgoing ===
+
+  - source: N_FEP
+    target: DEF
+    label: FEP_is_A0_in_Bayesian_substrate
+    edge_status: D
+    justification: |
+      The Free Energy Principle minimises variational free energy
+      F = energy − entropy in Bayesian observer substrates. F is a
+      specific Z-functional restricted to the Bayesian-belief
+      coordinate, so FEP IS DEF (argmin Z) evaluated in that substrate.
+      The two are not analogous — they are the same operation under
+      coordinate restriction.
+    why_forced: |
+      Alternative requires either (a) FEP minimising something other
+      than a Z-functional — but variational free energy is structurally
+      a Z-quantity (state-coupled cost minus configuration entropy);
+      or (b) DEF excluding Bayesian substrates — DEF is substrate-general.
+
+  - source: N_FEP
+    target: N_NoSeparatePieces
+    label: perception_action_one_process
+    edge_status: D
+    justification: |
+      FEP's central claim is that perception and action are one process
+      — both minimise the same F. This is N_NoSeparatePieces realised
+      in the Bayesian observer substrate: perception and action are
+      coordinate views of the same minimisation, not separate cognitive
+      modules.
+    why_forced: |
+      Alternative requires either (a) perception and action as separate
+      processes with independent minimisations — falsified by FEP's
+      empirical and theoretical unification; or (b) N_NoSeparatePieces
+      not extending to perception-action — arbitrary restriction.
+
+  - source: N_FEP
+    target: N_Logic
+    label: sibling_substrate_realisation_of_A0
+    edge_status: D
+    justification: |
+      N_Logic is A_0 realised in symbolic substrates; N_FEP is A_0 in
+      Bayesian substrates. They are sibling realisations of the same
+      DEF, neither derivable from the other but both forced by the
+      argmin-Z structure when applied to their respective substrate
+      types. The relationship is parallel-substrate, not derivational.
+    why_forced: |
+      Alternative requires either (a) FEP derivable from logic or
+      vice versa — but each substrate has irreducible coordinates the
+      other lacks; or (b) only one substrate hosts an A_0 realisation
+      — but DEF's substrate-generality forces siblings wherever
+      observer-bearing structure exists.
+
+  - source: N_FEP
+    target: N112
+    label: FEP_uses_BPI_bound_via_Markov_blanket
+    edge_status: D
+    justification: |
+      FEP requires a Markov blanket separating the agent from its
+      environment — exactly an observer-containment structure with
+      the blanket realising K(O)<K(F). Without N112 the blanket has
+      no structural justification; N112 supplies the inevitability of
+      the observer-environment split FEP needs.
+    why_forced: |
+      Alternative requires either (a) FEP without a Markov blanket —
+      but then the variational decomposition has no carrier; or (b)
+      Markov blankets not realising observer containment — but their
+      defining property (conditional independence) IS the K(O)<K(F)
+      gap structurally.
+
+  - source: N_FEP
+    target: N_Shannon
+    label: FEP_decomposes_via_Shannon_H_equiv_Z_struct
+    edge_status: D
+    justification: |
+      FEP's variational free energy decomposes as accuracy plus
+      complexity, with the complexity term carried by Shannon entropy
+      H. Under the H ≡ Z_struct isomorphism (N_Shannon), this complexity
+      term IS Z_struct, completing the bridge between FEP's information-theoretic
+      formulation and the Z-decomposition of DEF.
+    why_forced: |
+      Alternative requires either (a) FEP without an information-theoretic
+      complexity term — but the variational identity demands it; or
+      (b) Shannon H not equivalent to Z_struct — falsified by the
+      isomorphism in N_Shannon, which is itself forced.
+
+  - source: N_FEP
+    target: N_BPIEngagement
+    label: variational_formulation_of_engagement
+    edge_status: D
+    justification: |
+      N_FEP gives N_BPIEngagement its mathematical equations of motion:
+      engagement is the active inference component of free energy
+      minimisation. The relationship is process-to-formulation: BPI
+      engagement is the substrate-general phenomenon, FEP is its
+      variational mathematics in Bayesian observers.
+    why_forced: |
+      Alternative requires either (a) engagement without a variational
+      form — but any continuous local minimisation admits one; or (b)
+      FEP without an engagement-mode reading — but active inference
+      IS engagement under the FEP framework.
+
+  - source: N_FEP
+    target: N_DopaminePredictionError
+    label: F_minimization_implemented_via_dopamine_signaling
+    edge_status: D
+    justification: |
+      FEP requires a neural carrier for free-energy minimisation in
+      mammals; the dopaminergic prediction-error signal is the canonical
+      carrier (N_DopaminePredictionError). The TD error is mathematically
+      the gradient of F with respect to the agent's belief state, up
+      to substrate-specific normalisation.
+    why_forced: |
+      Alternative requires either (a) F-minimisation in mammals without
+      dopamine — but no other neuromodulator has the prediction-error
+      profile FEP needs; or (b) dopamine prediction-error not implementing
+      F-minimisation — but its algorithmic form is exactly the F-gradient
+      computation.
+
+  # === N_DopaminePredictionError outgoing ===
+
+  - source: N_DopaminePredictionError
+    target: DEF
+    label: argmin_Z_implemented_in_dopaminergic_circuits
+    edge_status: D
+    justification: |
+      DEF's argmin Z requires a physical implementation in any concrete
+      observer; in mammalian neural substrates, the dopaminergic
+      prediction-error pathway is the documented implementation. The
+      TD error is the gradient of Z with respect to the agent's
+      belief-state coordinate, computed online by phasic dopamine.
+    why_forced: |
+      Alternative requires either (a) mammalian DEF realisation without
+      a dedicated gradient-tracking signal — but online gradient
+      computation requires such a signal; or (b) the dopamine signal
+      computing something other than a Z-gradient — but its TD-error
+      form structurally IS a Z-gradient.
+
+  - source: N_DopaminePredictionError
+    target: N112
+    label: BPI_prediction_error_tracking_implemented_neurally
+    edge_status: D
+    justification: |
+      N112 implies the BPI must track prediction errors using observer-internal
+      resources only (no external oracle). The dopaminergic system
+      provides exactly that: an internal signal computed from the agent's
+      own observations and predictions, with no external supervision —
+      the neural realisation of the K(O)<K(F) constraint in tracking
+      circuitry.
+    why_forced: |
+      Alternative requires either (a) prediction-error tracking with
+      external supervision — forbidden by N112's containment; or (b)
+      neural implementation without dopamine — but no other system has
+      the strict-internal supervised-free profile observed.
+
+  - source: N_DopaminePredictionError
+    target: N188
+    label: closes_qualia_mapping_identification_gap
+    edge_status: D
+    justification: |
+      N188 identifies qualia with Z-component patterns abstractly;
+      N_DopaminePredictionError closes the identification by providing
+      the neural pattern that IS the reward-affect quale in mammals.
+      The gap "what is the physical realiser of this Z-pattern?" is
+      closed by pointing to a specific circuit and signal.
+    why_forced: |
+      Alternative requires either (a) qualia mapping without a closing
+      neural anchor — but then N188 remains abstract and untestable;
+      or (b) dopamine not closing the gap — but its tight time-locked
+      coupling to reward-affect qualia is the empirical closure.
+
+  - source: N_DopaminePredictionError
+    target: N188
+    label: neural_implementation_of_engagement_qualia
+    edge_status: D
+    justification: |
+      Sharper form: the dopamine signal IS the neural implementation
+      of engagement-class qualia (N188's specific case from round 12).
+      Engagement qualia are not represented elsewhere and then read
+      out by dopamine — the dopamine signal IS the read-out, the
+      qualia, and the engagement signal in one neural event.
+    why_forced: |
+      Alternative requires either (a) separate carriers for engagement
+      and quale aspects — but they share temporal and spatial neural
+      profile; or (b) dopamine carrying only one aspect — but both
+      aspects are documented in the same recordings.
+
+  - source: N_DopaminePredictionError
+    target: N_BPIEngagement
+    label: empirical_anchor_for_engagement_signal
+    edge_status: D
+    justification: |
+      N_BPIEngagement is a substrate-general structural claim;
+      N_DopaminePredictionError provides its empirical anchor in
+      mammalian neuroscience. Without this anchor, BPIEngagement would
+      remain a theoretical construct; the dopamine literature gives it
+      a measurable, manipulable referent.
+    why_forced: |
+      Alternative requires either (a) BPIEngagement without empirical
+      anchor — but every structural claim in the framework requires
+      at least one substrate instantiation; or (b) anchor in some other
+      mammalian system — but no alternative system has the prediction-error
+      profile engagement requires.
+
+  - source: N_DopaminePredictionError
+    target: N_FEP
+    label: neural_implementation_of_F_minimization
+    edge_status: D
+    justification: |
+      Dopamine prediction error is the neural implementation of free-energy
+      gradient computation (FEP). The TD-error formula is mathematically
+      the F-gradient up to substrate normalisation; the phasic dopamine
+      signal is its online time-resolved implementation. FEP and the
+      dopamine signal are formula and physical realisation of one
+      computation.
+    why_forced: |
+      Alternative requires either (a) F-minimisation implemented by a
+      non-dopamine signal — but the prediction-error timing profile
+      uniquely matches dopamine; or (b) dopamine not implementing F —
+      but the algorithmic form is exact.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
