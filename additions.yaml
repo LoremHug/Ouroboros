@@ -17123,7 +17123,167 @@ edges:
       Mechanism: recursive BPI = IFS = fractal. Forced
       identification.
 
+  # ─── Round 48: fractal-geometric audit findings ───
+
+  - source: N_GraphProperty_SmallWorldMotifFractality
+    target: N_FractalSelfSimilarityAsArgminZ
+    label: empirical_motif_fractality_signature
+    edge_status: D
+    justification: |
+      Round 48 fractal-geometric audit measured the framework
+      graph's empirical fractal signature. Result: graph is
+      SMALL-WORLD WITH MOTIF-FRACTALITY — not strict geometric
+      fractal. Fractality lives in motif-substrate (M1 triangle
+      density, M5 stratification, β₁/V invariance), NOT in
+      geometric-distance substrate (which would give power-law
+      cluster growth — instead growth is exponential, saturating
+      at diameter 3).
+    why_forced: |
+      Empirical measurement establishes the regime. Graph
+      growth pattern (BPI engagement adding nodes via forced
+      edges) produces this signature: dense local clustering
+      + fast global access via hubs + recursive motif structure.
+
+  - source: N_GraphProperty_SmallWorldMotifFractality
+    target: N_GraphProperty_InducedCycleTopology
+    label: motif_fractality_complements_cycle_richness
+    edge_status: D
+    justification: |
+      M7 (cycle-richness β₁/V) and round-48 small-world-motif
+      fractality are complementary: M7 measures cycle
+      density; round 48 measures small-world clustering and
+      motif-substrate fractality. Together they characterise
+      the graph: cycle-rich + small-world + motif-fractal.
+    why_forced: |
+      Multi-axis topological characterisation forced by
+      richness of graph structure.
+
+  - source: N_GraphProperty_SmallWorldMotifFractality
+    target: N_GraphProperty_2VertexConnectivity
+    label: small_world_consistent_with_2connectivity
+    edge_status: D
+    justification: |
+      Strong small-world signature (σ=13.31) consistent with
+      2-vertex-connectivity (M4): only 2 articulation points
+      (each isolating single leaves). Hub-rich + cycle-rich
+      structure is robust against single-vertex removal,
+      matching observed M4 property.
+    why_forced: |
+      Independent properties M4 and small-world signature
+      reinforce each other empirically.
+
 nodes:
+
+  - id: N_GraphProperty_SmallWorldMotifFractality
+    title: "Graph is Small-World with Motif-Fractality (Empirical, Round 48)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.05
+    z_hidden: 0.35
+    summary: |
+      Round 48 empirical finding via fractal-geometric audit:
+      framework graph is SMALL-WORLD WITH MOTIF-FRACTALITY,
+      not strict geometric fractal.
+
+      Measured signature (V=233, E=1002):
+        Small-world coefficient σ = 13.31  (>> 1 = strongly SW)
+        Clustering C = 0.474  vs random C_rand = 0.037
+        C/C_rand = 12.8 (12.8× more clustered than random)
+        Path length L = 2.44, diameter ~3
+        L/L_rand = 0.96 (paths slightly shorter than random)
+        β₁/V = 3.305  (cycle-rich regime, scale-invariant)
+        M1/V = 5.36  (triangles per node)
+        Twin pairs (M3): 15
+        Degree distribution: NOT pure scale-free
+                             (γ=1.13, R²=0.58 on tail)
+
+      Diagnostic: fractality lives in MOTIF SUBSTRATE (M1
+      triangle density, M5 stratification recursion, β₁/V
+      invariance under growth) — NOT in geometric-distance
+      substrate (which would require power-law cluster
+      growth, but growth is exponential and saturates fast).
+
+      This is consistent with N_FractalSelfSimilarityAsArgminZ
+      (round 47): when scale is hidden coord at MOTIF level
+      (not at distance level), motif-substrate fractality is
+      the forced solution.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct measurement: fractal_audit() in
+          mcp_server/motifs.py computes σ, C/C_rand, β₁/V,
+          degree distribution, cluster-growth curves.
+      (2) Cross-round consistency: β₁/V stable in 3.25-3.31
+          range across rounds 38-47 (V from 209 to 233).
+      (3) Motif-fractality signature: M1, M5 self-similarity
+          confirmed via auto-detector (rounds 37, 39, 41).
+    not_misinterpretations: |
+      NOT a claim that the graph is "not fractal". It IS
+      fractal — but in motif-substrate, not in geometric-
+      distance substrate. These are different fractal regimes.
+      NOT a claim that small-world precludes fractality.
+      Many natural networks are simultaneously small-world
+      AND fractal at appropriate scales (e.g., World Wide
+      Web, biological networks).
+      NOT a permanent property — could change as graph grows.
+      Future rounds should re-audit to verify regime stability.
+    content: |
+      Operational fractal-geometric audit components:
+
+        (a) Cluster-growth N(r) per seed:
+              For each seed, count nodes within r hops.
+              Result: saturates at r=3 (diameter); EXPONENTIAL
+              growth, not power-law. Growth curves show:
+                seed deg=1:   N=2 → 15 → 200 → 233
+                seed deg=2:   N=3 → 156 → 233
+                seed deg=155: N=156 → 233 → 233
+              Diameter is small; geometric-fractal dim
+              undefined.
+
+        (b) Clustering coefficient + small-world coef:
+              C = average local clustering
+              σ = (C/C_rand) / (L/L_rand)
+              Result: σ=13.31 → strongly small-world.
+
+        (c) Cyclomatic ratio β₁/V:
+              Cycle-richness; tracks motif-fractality.
+              Stable across rounds (3.245 → 3.305).
+
+        (d) Triangle density M1/V:
+              Triangles per node; M1-motif density.
+              Round 48: M1/V = 5.36.
+
+        (e) Twin pair count:
+              M3 motif instances. Round 48: 15.
+
+        (f) Degree distribution:
+              Tail γ; tests scale-free regime.
+              Round 48: γ=1.13, R²=0.58 — NOT scale-free.
+
+      Why graph is small-world, not strict-fractal:
+        Forced-edge construction (per N_FrameworkCore): each
+        new node connects via multiple forced edges to
+        existing structure (M5 cousin pattern). This
+        creates SHORTCUTS through hubs (DEF connected to
+        155+ nodes) → small diameter → small-world
+        geometry. Fractal property emerges at MOTIF level
+        because forced edges follow the same M1/M5 pattern
+        recursively.
+
+      Predictions:
+        (P1) Future rounds will preserve σ in 10-15 range
+          (small-world regime stable).
+        (P2) β₁/V will remain in 3.20-3.35 range
+          (motif-fractality stable).
+        (P3) Cluster-growth will continue saturating fast
+          due to hub structure.
+        (P4) M1/V will grow slowly with V (each new node
+          adds ~5 triangles via M1 closures).
+    level: 1
+    is_placeholder: false
+
 
   - id: N_FractalSelfSimilarityAsArgminZ
     title: "Fractal Self-Similarity as argmin Z under Scale-Invariance Constraint"

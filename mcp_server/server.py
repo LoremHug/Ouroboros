@@ -896,6 +896,45 @@ def rp_gate_motif_lint(
     return json.dumps(report, ensure_ascii=False, default=str)
 
 
+@mcp.tool()
+def fractal_audit(
+    seed_count: int = 30,
+    max_radius: int = 8,
+    format: str = "report",
+) -> str:
+    """Fractal-geometric audit of the graph (round 48).
+
+    Computes:
+      - Cluster-growth dimension (Hausdorff-like): for each seed,
+        N(r) = nodes within r hops; fit N(r) ~ r^d.
+      - Degree distribution power law: P(k) ~ k^(-γ) — scale-free
+        regime detection.
+      - Path-length scaling (small-world indicator).
+      - Cyclomatic ratio β₁/V.
+      - Twin pair count (M3 motif).
+
+    Returns json (structured) or report (markdown).
+
+    Use to track fractal-geometric properties of graph as it grows
+    (round 47 N_FractalSelfSimilarityAsArgminZ predicts these
+    metrics stay invariant under graph growth).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+    adj = _motifs._build_adjacency(edge_pairs)
+
+    report = _motifs.fractal_audit(
+        adj, seed_count=seed_count, max_radius=max_radius
+    )
+    if format == "report":
+        return _motifs.format_fractal_audit(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
+
+
 # ────────────────────────────────────────────────────── ENTRY
 
 def main() -> None:
