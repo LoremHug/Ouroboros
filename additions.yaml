@@ -14514,7 +14514,391 @@ edges:
       Empirical lithium efficacy + N_NoSeparatePieces total reading
       paired by mutual confirmation.
 
+  # Round 35: explicit framework core definition + inversive protocol
+
+  # Membership edges: each core member → N_FrameworkCore
+  - source: DEF
+    target: N_FrameworkCore
+    label: A0_definition_is_tier1_foundational_core
+    edge_status: D
+    justification: |
+      DEF (A_0 = argmin Z) is the foundational operation itself. Every
+      forced derivation in every substrate begins with argmin over a
+      Z-functional. Without DEF, "forced" loses meaning. Core Tier 1.
+    why_forced: |
+      Substrate-invariant test passes trivially: DEF is what makes any
+      substrate-application possible. Tier 1 core member.
+
+  - source: N_Invariants
+    target: N_FrameworkCore
+    label: four_invariants_tier1_unfold_directly_from_DEF
+    edge_status: D
+    justification: |
+      The four invariants (I_Bound, I_Sym, I_Quant, I_Null) unfold
+      directly from DEF and constrain all forced structures in all
+      substrates. They are the necessary structural form of A_0
+      regardless of substrate. Core Tier 1.
+    why_forced: |
+      Removing any invariant breaks derivations in untouched substrates
+      (e.g., removing I_Null breaks time-direction in any temporal
+      substrate). Tier 1 forced.
+
+  - source: N_Triangulation
+    target: N_FrameworkCore
+    label: triangulation_tier1_three_min_coords_universal
+    edge_status: D
+    justification: |
+      Triangulation principle (3 minimum coordinates for non-degenerate
+      readout) holds in every substrate. Removing it makes any
+      structural identification under-determined. Core Tier 1.
+    why_forced: |
+      Two-coord substrates collapse to under-determined readout
+      (Birkhoff failure mode generalised). Three is universal minimum.
+
+  - source: N_NoSeparatePieces
+    target: N_FrameworkCore
+    label: no_separate_pieces_tier1_total_unity_claim
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces TOTAL claim (no separation within or between
+      any substrates) is the unity foundation. Without it, framework
+      collapses to ontologically pluralistic. Core Tier 1.
+    why_forced: |
+      Removing forces multi-A_0 reading; framework's substrate-
+      uniformity claim depends on this principle.
+
+  - source: N_InversiveTheory
+    target: N_FrameworkCore
+    label: inversive_theory_tier1_operational_test_for_forcedness
+    edge_status: D
+    justification: |
+      N_InversiveTheory (alternatives must dissolve under removal) is
+      THE operational test for "forced". Without it, no claim has
+      structural status. Tier 1 core — the test mechanism itself.
+    why_forced: |
+      Forcedness is undefined without inversive removal as criterion.
+
+  - source: N112
+    target: N_FrameworkCore
+    label: observer_containment_tier2_required_any_reasoning
+    edge_status: D
+    justification: |
+      N112 (K(O) < K(F) Observer Containment) holds in any substrate
+      with embedded reasoning. Without it, "observer" is unstructured.
+      Core Tier 2 — observer-structure level.
+    why_forced: |
+      Any reasoning operation presupposes an embedded reasoner;
+      embedded reasoning forces K(O) < K(F).
+
+  - source: N_TopologyProcessIdentity
+    target: N_FrameworkCore
+    label: topology_process_identity_tier2_universal_process_reading
+    edge_status: D
+    justification: |
+      "Process not object" applies in any substrate (physical, formal,
+      cognitive). Removing it forces objectifying reification, breaking
+      structural derivations. Core Tier 2.
+    why_forced: |
+      Object-frame derivations always fail under sufficient structural
+      depth (R1 cascade); process-frame is universal alternative.
+
+  - source: N_ForcedId
+    target: N_FrameworkCore
+    label: forced_identification_tier2_structural_identity_universal
+    edge_status: D
+    justification: |
+      Forced identification (A_0 IS the structure of any description)
+      applies wherever there is description. Without it, structural
+      identity is ungrounded. Core Tier 2.
+    why_forced: |
+      Any structural identity claim presupposes forced identification.
+
+  - source: N_GrammarTrap
+    target: N_FrameworkCore
+    label: grammar_trap_tier3_description_paradigm_universal
+    edge_status: D
+    justification: |
+      N_GrammarTrap (S-V-O imposes ontology) applies wherever there
+      is descriptive language. Without diagnosis, traps recur
+      systematically. Core Tier 3 — description/paradigm level.
+    why_forced: |
+      Linguistic-substrate derivations are forced into S-V-O parsing;
+      diagnosis required wherever language enters reasoning.
+
+  - source: N_OntologyParadigmGrammarBound
+    target: N_FrameworkCore
+    label: paradigm_grammar_bound_tier3_meta_diagnosis_universal
+    edge_status: D
+    justification: |
+      Paradigm-level grammar wall applies to any modern descriptive
+      science (which is all of them). Required for any cross-domain
+      meta-claim. Core Tier 3.
+    why_forced: |
+      Whenever a claim spans disciplines, paradigm wall acts; diagnosis
+      forced.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_FrameworkCore
+    label: domains_as_BPI_tier3_required_for_cross_substrate
+    edge_status: D
+    justification: |
+      Domains-as-BPI-artifacts framework applies wherever cross-
+      substrate claims are made. Required for substrate-uniformity
+      reasoning. Core Tier 3.
+    why_forced: |
+      Cross-substrate claims without this collapse to domain pluralism;
+      principle is universal in scope.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_FrameworkCore
+    label: map_territory_observer_identity_tier3_meta_universal
+    edge_status: D
+    justification: |
+      Map/territory/observer identity applies at meta-level in any
+      framework that describes anything. Required for self-referential
+      consistency. Core Tier 3.
+    why_forced: |
+      Without this, framework cannot describe itself coherently
+      (self-application failure).
+
+  - source: N_Shannon
+    target: N_FrameworkCore
+    label: shannon_tier4_universal_quantification_bridge
+    edge_status: D
+    justification: |
+      H ≡ Z_struct isomorphism applies wherever quantification of
+      structural cost appears. Required to bridge information-theoretic
+      and other measures. Core Tier 4 — measurement bridge level.
+    why_forced: |
+      Any Z-quantification routes through Shannon framework; without
+      it, Z_struct measure is ungrounded.
+
+  - source: N_BPIEngagement
+    target: N_FrameworkCore
+    label: BPI_engagement_tier5_observer_substrate_universal
+    edge_status: D
+    justification: |
+      Engagement signal applies wherever a tracking observer exists
+      (cognitive/biological/AI). Required for any observer-substrate
+      derivation. Core Tier 5.
+    why_forced: |
+      Observer-substrate A_0 requires engagement-signal framework
+      (without it, observer-side has no operational mechanism).
+
+  # Operational role edges
+  - source: N_FrameworkCore
+    target: N_InversiveTheory
+    label: core_supplies_inversive_test_ground
+    edge_status: D
+    justification: |
+      Inversive removal protocol uses core as the structural reference:
+      candidate alternative X' fails inversive test if it violates any
+      core principle. Core defines the test boundary.
+    why_forced: |
+      Inversive test without explicit core has ad-hoc reference;
+      with explicit core, the protocol becomes formally operational.
+
+  - source: N_FrameworkCore
+    target: N_OntologyGate
+    label: core_grounds_ontology_gate_runtime_validation
+    edge_status: D
+    justification: |
+      Operational ontology gate (per N_OntologyGate + RP-gate runtime)
+      validates against core principles. Each detected R1-R4 trap
+      maps to a violated core principle. Core defines what gate
+      checks for.
+    why_forced: |
+      Runtime validation requires structural reference; core is the
+      reference.
+
+  - source: N_FrameworkCore
+    target: DEF
+    label: core_grounds_in_DEF_as_tier1_root
+    edge_status: D
+    justification: |
+      Core's tier-1 root is DEF itself; entire core structure unfolds
+      from DEF + recursive application of A_0 to its own structural
+      requirements. Core IS DEF self-applied at universality-of-
+      principles level.
+    why_forced: |
+      Without DEF as Tier-1 root, core has no foundational anchor.
+
 nodes:
+
+  - id: N_FrameworkCore
+    title: "Framework Core — Substrate-Invariant Principle Set"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    summary: |
+      Core = principles that participate in forming ANY forced
+      structure in ANY substrate. Operational test: removing the
+      principle would break derivations in structurally untouched
+      substrates.
+
+      Members (14 nodes, 5 tiers):
+
+      Tier 1 — Foundational (without them no arguments at all):
+        DEF, N_Invariants, N_Triangulation, N_NoSeparatePieces,
+        N_InversiveTheory
+
+      Tier 2 — Observer-structure (any embedded reasoning):
+        N112, N_TopologyProcessIdentity, N_ForcedId
+
+      Tier 3 — Description/paradigm (any descriptive claim):
+        N_GrammarTrap, N_OntologyParadigmGrammarBound,
+        N_DomainsAsBPICarvings, N_MapTerritoryObserverIdentity
+
+      Tier 4 — Measurement bridge (any quantification):
+        N_Shannon
+
+      Tier 5 — Observer-substrate (tracking observer):
+        N_BPIEngagement
+
+      NOT core (substrate-specific): N370 (L(3,1) — physics-only),
+      N_ZGaugeDecomposition (Z_3 covering — physics-only),
+      N_PhiAttractor (continuous-substrate-only), N_FEP (Bayesian-
+      substrate-only). These are forced derivations IN their
+      substrates, not substrate-invariant.
+
+      Operational role: core defines the structural reference for
+      inversive removal test. Candidate alternative X' fails the test
+      if it violates any core principle. Core is what RP-gate runtime
+      checks against.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Operational definition: "core" IS principles required for
+        any forced derivation in any substrate. Each member passes
+        the substrate-invariance test by structural argument.
+      (2) Tier hierarchy reflects derivation order: Tier 1 unfolds
+        from DEF; Tier 2 applies wherever observer exists; Tier 3
+        wherever description exists; Tier 4 wherever quantification
+        exists; Tier 5 wherever tracking observer exists.
+      (3) Empirical: every DEMONSTRATED non-stub node in the framework
+        connects to ≥1 core member (round 27 audit). Core membership
+        is structurally minimal — no smaller subset would suffice.
+      (4) Inversive: removing any core member breaks framework
+        coherence. Removing non-core (e.g., N370) breaks specific
+        applications but not the framework's general structure.
+    not_misinterpretations: |
+      NOT a claim that core members are "more important" than non-core.
+      Importance is contextual; substrate-invariance is the criterion.
+      L(3,1) (N370) is critically important in physics but is not
+      core because it is physics-specific.
+      NOT a fixed list. Future structural insights may add core
+      members (when they prove substrate-invariant) or refine tier
+      assignment.
+      NOT a claim that core nodes don't connect to non-core. They do
+      (extensively). Core is operationally defined by substrate-
+      invariance, not by isolation from specific applications.
+      NOT itself a "thing" or object. N_FrameworkCore IS a meta-
+      claim about which principles satisfy the substrate-invariance
+      criterion. Treating "core" as a substantive entity is R1 trap.
+    content: |
+      Operational test for core membership:
+        Q: "Could a forced derivation exist in some substrate without
+            this principle?"
+        If NO → principle is core (substrate-invariant)
+        If YES → principle is substrate-specific (not core)
+
+      Tier definitions:
+
+      Tier 1 — Foundational:
+        DEF (argmin Z): the operation itself; without it, "forced"
+          undefined.
+        N_Invariants: the four invariants directly unfold from DEF;
+          without them, A_0 has no structural form.
+        N_Triangulation: 3 minimum coordinates universal; without it,
+          structural identification under-determined.
+        N_NoSeparatePieces: TOTAL no-separation; without it, framework
+          fragments into multiple A_0s.
+        N_InversiveTheory: the test mechanism; without it, "forced"
+          has no operational criterion.
+
+      Tier 2 — Observer-structure:
+        N112: K(O) < K(F) holds wherever there's embedded reasoning.
+        N_TopologyProcessIdentity: process-not-object applies
+          everywhere structural reading is sought.
+        N_ForcedId: forced identification grounds any structural
+          identity claim.
+
+      Tier 3 — Description/paradigm:
+        N_GrammarTrap: S-V-O imposes ontology in any linguistic
+          substrate.
+        N_OntologyParadigmGrammarBound: paradigm wall applies wherever
+          modern descriptive science operates.
+        N_DomainsAsBPICarvings: required for cross-substrate reasoning
+          coherence.
+        N_MapTerritoryObserverIdentity: required for self-referential
+          consistency of any framework.
+
+      Tier 4 — Measurement bridge:
+        N_Shannon: H ≡ Z_struct isomorphism bridges information-
+          theoretic and structural quantification.
+
+      Tier 5 — Observer-substrate:
+        N_BPIEngagement: required wherever observer-side A_0 reading
+          is sought.
+
+      Inversive theory operational protocol (with explicit core):
+
+        Given candidate claim X (or alternative X'):
+        1. Identify which core principles X presupposes.
+        2. For proposed alternative X', check: does X' preserve all
+           presupposed core principles, or violate at least one?
+        3. If X' violates core principle P, X' fails inversive
+           removal — P forces against X'.
+        4. If X' preserves all core, X' is a real alternative.
+        5. If empirical data exist, check whether observation
+           discriminates X vs X'.
+        6. If neither structural test (steps 1-4) nor empirical test
+           (step 5) selects between X and X', BOTH are admissible
+           and the claim level is STRONG (not DEMONSTRATED).
+
+      Empirical data integration:
+        Empirical data ARE structural evidence under N_NoSeparatePieces
+        — observation IS A_0 in measurement substrate. Therefore
+        empirical test (step 5) is a substrate-instance of the same
+        inversive removal applied at the measurement level.
+
+      How this differs from ad-hoc inversive analysis:
+        Ad-hoc: "consider alternatives, see if they survive"
+        With core: "list which core principles each alternative
+          preserves/violates; alternatives violating any core
+          principle automatically fail; remaining alternatives go
+          to empirical discriminator if available"
+
+      RP-gate runtime use:
+        The pattern-based runtime (mcp_server/rp_gate.py) detects
+        text-level R1-R4 + grammar + domain + map/territory traps.
+        Each trap maps to a violated core principle. The runtime IS
+        a core-validation engine at the linguistic level.
+
+      Self-application:
+        N_FrameworkCore itself must satisfy substrate-invariance.
+        Test: does N_FrameworkCore make sense in math substrate?
+        (yes — defines axiomatic core); in physics substrate?
+        (yes — fundamental laws); in cognitive substrate?
+        (yes — basic invariants of cognition); in formal-system
+        substrate? (yes — undecidable axioms vs derivable theorems
+        partition). Substrate-invariant — N_FrameworkCore is
+        itself a core member at meta-level.
+
+      Future extensions:
+        Future structural insights may add core members. Criteria for
+        addition: (a) substrate-invariance, (b) participation in
+        forming forced structures, (c) survival of inversive removal
+        when tested as core member.
+        Refinement: tier reassignment may follow as understanding
+        deepens. Current tiers reflect derivation-order at framework's
+        current state.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_MultiTargetDrugAsRateAxisModulator
     title: "Multi-Target Drug as Rate-Axis Modulator — Lithium and the Mechanism Mystery Dissolution"
