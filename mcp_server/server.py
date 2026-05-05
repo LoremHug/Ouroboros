@@ -9,6 +9,7 @@ Tools exposed:
   list_stubs        — STUB-status nodes
   find_jaccard_pairs — common-neighbor candidates for missing edges
   graph_stats       — counts by status / layer / placeholders / unjustified edges
+  rp_gate           — runtime structural validator (R1-R4 + grammar + domain traps)
 """
 from __future__ import annotations
 import json
@@ -24,6 +25,7 @@ from mcp.server.fastmcp import FastMCP  # noqa: E402
 from schema import Status, Layer, EdgeStatus, layer_of  # noqa: E402
 from scripts.db import connect  # noqa: E402
 from scripts import additions as additions_io  # noqa: E402
+from mcp_server import rp_gate as _rp_gate  # noqa: E402
 
 mcp = FastMCP("ouroboros")
 
@@ -570,6 +572,35 @@ def add_or_update_edge(
         "edge": f"{source} → {target} : {label} [{edge_status}]",
         "note": "additions.yaml updated — commit it",
     }, ensure_ascii=False)
+
+
+# ────────────────────────────────────────────────────── RP GATE RUNTIME
+
+@mcp.tool()
+def rp_gate(text: str, format: str = "json") -> str:
+    """Run text through the RP gate: detect R1-R4 traps, grammar trap,
+    domain carving, map/territory reification. Estimate Shannon overhead
+    (interpretive plaster proxy).
+
+    R1 = process reified as object (N_TopologyProcessIdentity root)
+    R2 = external evaluation position fabricated (N112 root)
+    R3 = free parameter masquerading as forced (N_InversiveTheory root)
+    R4 = state-change agency claim (N187 root)
+    grammar = S-V-O on processes/totalities (N_GrammarTrap root)
+    domain = BPI taxonomy reified as ontological partition (N_DomainsAsBPICarvings)
+    map_territory = Korzybski distinction reified (N_MapTerritoryObserverIdentity)
+
+    Args:
+        text: input text to validate
+        format: "json" (structured) or "report" (markdown for humans)
+
+    Returns:
+        json: full structured report with flags, severity, framework_node refs
+        report: human-readable markdown summary
+    """
+    if format == "report":
+        return _rp_gate.format_report(text)
+    return json.dumps(_rp_gate.summarise(text), ensure_ascii=False, default=str)
 
 
 # ────────────────────────────────────────────────────── ENTRY
