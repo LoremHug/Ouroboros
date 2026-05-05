@@ -1,19 +1,9 @@
 name: Build and deploy map to GitHub Pages
 
+# Auto-deploy disabled — map is generated locally and reviewed there.
+# To run manually: GitHub Actions tab → "Build and deploy map to GitHub Pages"
+# → "Run workflow".
 on:
-  push:
-    branches:
-      - main
-      - "claude/**"
-    paths:
-      - "manifold_graph.txt"
-      - "THE_IMPEDANCE_MANIFOLD_v3_6.tex"
-      - "additions.yaml"
-      - "schema/**"
-      - "scripts/**"
-      - "web/.nojekyll"
-      - "requirements.txt"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
