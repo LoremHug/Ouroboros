@@ -2,7 +2,7 @@
 from __future__ import annotations
 from enum import Enum
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, Field
 
 
 class Status(str, Enum):
@@ -40,6 +40,7 @@ class Node(BaseModel):
     z_hidden: float = 0.0
     level: int = -1
     is_placeholder: bool = False
+    aliases: list[str] = Field(default_factory=list)
 
 
 class EdgeStatus(str, Enum):
@@ -71,6 +72,7 @@ LAYER_MAP: dict[str, Layer] = {
     "N_TopologyProcessIdentity": Layer.STRUCTURE,
     "N_Logic": Layer.STRUCTURE,
     "N_Math": Layer.STRUCTURE,
+    "N_PhiAttractor": Layer.STRUCTURE,
     "N067": Layer.STRUCTURE,
     "N370": Layer.STRUCTURE,
     # epistemics
@@ -83,8 +85,9 @@ LAYER_MAP: dict[str, Layer] = {
     "N_BPIEngagement": Layer.OBSERVERS,
     "N_DopaminePredictionError": Layer.OBSERVERS,
     "N_FEP": Layer.OBSERVERS,
+    "N_EngagementArchitecture": Layer.OBSERVERS,
     "N188": Layer.OBSERVERS,
-    "N183": Layer.OBSERVERS,
+    "N183": Layer.OBSERVERS,  # Topology of Cognitive States — neurosis/meditation
     "N187": Layer.OBSERVERS,
     "N112": Layer.OBSERVERS,
     # physics
@@ -101,7 +104,10 @@ LAYER_MAP: dict[str, Layer] = {
     "N354": Layer.PHYSICS,
     "N304": Layer.PHYSICS,
     "N000": Layer.PHYSICS,
-    "N165": Layer.PHYSICS,
+    "N078": Layer.PHYSICS,  # Gravity as Thermodynamics — Jacobson identity
+    "N110": Layer.STRUCTURE,  # Inevitability Theorem for L(3,1)
+    "N129": Layer.PHYSICS,  # SM Spectral Triple Algebra derivation
+    "N165": Layer.STRUCTURE,  # Ergodicity theorem — Reality Protocol Markov dynamics
     # comms / operations
     "N_CommThm": Layer.COMMS,
     "N_RPfibo": Layer.COMMS,
@@ -117,8 +123,9 @@ LAYER_MAP: dict[str, Layer] = {
     "N_AestheticEngagement": Layer.COMMS,
     "N048": Layer.COMMS,
     "N001": Layer.COMMS,
-    "N078": Layer.COMMS,
     "N336": Layer.COMMS,
+    "N330": Layer.COMMS,  # Polarisation as A₀ Binary Compression
+    "N332": Layer.COMMS,  # Trust Asymmetry as Second Law in Social Graphs
 }
 
 

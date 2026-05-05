@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ouroboros": {
+      "command": "${PWD}/.venv/bin/python",
+      "args": ["-m", "mcp_server"],
+      "cwd": "${PWD}",
+      "env": {
+        "PYTHONPATH": "${PWD}"
+      }
+    }
+  }
+}
