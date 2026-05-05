@@ -3736,3 +3736,186 @@ nodes:
   - id: N206
     title: "Global Symmetries Inexact in UV-Complete Quantum Gravity"
 
+
+# ─── Round 8: Z-vectors for top 30 hubs (partial node updates) ───
+
+  - id: DEF
+    z_struct: 0.33
+    z_therm: 0.33
+    z_hidden: 0.34
+    # A_0 = argmin Z balances all three Z components by definition
+
+  - id: N_InversiveTheory
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # no-alternatives is a structural-stability argument; mostly Z_struct
+
+  - id: N_NoSeparatePieces
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # coordinate unification is structural
+
+  - id: N_Invariants
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # 4 invariants combine structural symmetry/quantization with thermal direction
+
+  - id: N_Triangulation
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    # 3-component decomposition itself is structural; Z_hidden encoded in ergodic claim
+
+  - id: N_TopologyProcessIdentity
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # object/process identity is mostly structural
+
+  - id: N_Logic
+    z_struct: 0.9
+    z_therm: 0.05
+    z_hidden: 0.05
+    # pure symbolic substrate; Z_struct dominant
+
+  - id: N_BPIEngagement
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+    # triangulation in time-indexed substrate balances all three
+
+  - id: N188
+    z_struct: 0.3
+    z_therm: 0.2
+    z_hidden: 0.5
+    # qualia opacity is Z_hidden dominant (BPI internal access)
+
+  - id: N_FEP
+    z_struct: 0.4
+    z_therm: 0.4
+    z_hidden: 0.2
+    # free energy F = accuracy + complexity = Z_struct + Z_therm
+
+  - id: N112
+    z_struct: 0.1
+    z_therm: 0.1
+    z_hidden: 0.8
+    # Observer Containment Lemma — pure Z_hidden definition
+
+  - id: N_DopaminePredictionError
+    z_struct: 0.2
+    z_therm: 0.5
+    z_hidden: 0.3
+    # prediction error signal is irreversible Z_therm event
+
+  - id: N371
+    z_struct: 0.3
+    z_therm: 0.4
+    z_hidden: 0.3
+    # BPI hydrodynamics — Z_therm flow with structure
+
+  - id: N370
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # L(3,1) topology is structural inevitability
+
+  - id: N_ZGaugeDecomposition
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    # Z gauge decomposition via Z_3 covering — structural
+
+  - id: N067
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    # spectral dim scale-bridge — Z_struct + Z_hidden (UV cutoff)
+
+  - id: N078
+    z_struct: 0.2
+    z_therm: 0.6
+    z_hidden: 0.2
+    # gravity = thermodynamics — Z_therm dominant (entropic)
+
+  - id: N375
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # cuprate phase diagram — Z_struct (bands) + Z_therm (T-dependence)
+
+  - id: N376
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # iron-based — same pattern as cuprates
+
+  - id: N374
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # UPt_3 three-phase — same pattern
+
+  - id: N372
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # Sr_2RuO_4 — same pattern
+
+  - id: N373
+    z_struct: 0.5
+    z_therm: 0.4
+    z_hidden: 0.1
+    # UTe_2 — same pattern
+
+  - id: N377
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # SAE feature absorption — structural divergence in activation space
+
+  - id: N145
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    # Koide K=2/3 — algebraic structural identity
+
+  - id: N_LeptonMassScale
+    z_struct: 0.6
+    z_therm: 0.3
+    z_hidden: 0.1
+    # mass scale via QCD string tension — Z_struct + Z_therm
+
+  - id: N129
+    z_struct: 0.8
+    z_therm: 0.1
+    z_hidden: 0.1
+    # SM algebra ℂ⊕ℍ⊕M_3(ℂ) — pure Z_struct (algebraic derivation)
+
+  - id: N_PhiAttractor
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    # phi-attractor — number-theoretic structural
+
+  - id: N_CommThm
+    z_struct: 0.2
+    z_therm: 0.2
+    z_hidden: 0.6
+    # optimal communication uses Z_hidden as primary cost
+
+  - id: N_AestheticEngagement
+    z_struct: 0.4
+    z_therm: 0.3
+    z_hidden: 0.3
+    # aesthetic engagement balanced like BPI engagement
+
+  - id: N_EpistemicTraps
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    # catalogue of failure modes — Z_hidden dominant (observer-side)
+
