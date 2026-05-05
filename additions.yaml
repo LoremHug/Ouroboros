@@ -15700,7 +15700,900 @@ edges:
       element; M7 captures cycles longer than 4 that don't
       reduce to bipartite-complete.
 
+  # ─── Round 44: biology domain — empirical motif test ───
+  # 3 substrate-cousins (domains of life) × principle anchors
+  # Predicted: K_{4+3} = K7 stratification (M5)
+
+  # Biology principles → framework core
+  - source: N_BiologyCellularBoundaryBPI
+    target: N_BPIEngagement
+    label: cell_membrane_is_BPI_in_biological_substrate
+    edge_status: D
+    justification: |
+      Every cell has a membrane separating internal/external
+      compartments — this IS the BPI structure (boundary,
+      process internal/external, projection-as-readout) realised
+      in physical-biological substrate. Membrane = BPI substrate;
+      cytoplasm = process; sensory-effector chains = projection
+      coordinates. N_BPIEngagement principle directly instantiated.
+    why_forced: |
+      Definition of "life" structurally requires bounded
+      compartment with metabolism inside vs environment outside.
+      Without BPI structure, no cellular life. Forced.
+
+  - source: N_BiologyCellularBoundaryBPI
+    target: DEF
+    label: cellular_metabolism_minimises_Z_via_bounded_dissipation
+    edge_status: D
+    justification: |
+      Living cells maintain dissipative-state structure
+      (Schrödinger 1944, Prigogine). The bounded-compartment
+      argmin Z = bounded thermodynamic equilibrium displaced
+      from environment by membrane gradient. Cellular metabolism
+      IS argmin Z under bounded conditions (membrane thermodynamics).
+    why_forced: |
+      Without argmin Z minimisation by cell, dissipation would
+      uncouple from boundary — ceases to be cell. DEF directly
+      grounds biological cell.
+
+  - source: N_NaturalSelectionAsArgminZ
+    target: DEF
+    label: selection_is_argmin_Z_on_fitness_landscape
+    edge_status: D
+    justification: |
+      Natural selection minimises -log(fitness) over reproductive
+      transitions, equivalent to argmin Z where Z = -log(fitness)
+      in evolutionary substrate. Replicator dynamics IS the
+      transition-cost minimisation A_0 specifies. Population-level
+      Z-minimisation is exact analog of single-system Z-min.
+    why_forced: |
+      Without argmin-Z dynamics, population trajectories cannot
+      converge on adapted form. Selection mechanism IS argmin Z
+      in generation-substrate.
+
+  - source: N_NaturalSelectionAsArgminZ
+    target: N_InversiveTheory
+    label: selection_is_inversive_test_on_phenotypic_alternatives
+    edge_status: D
+    justification: |
+      Natural selection IS the inversive test mechanism in
+      biological substrate: alternative phenotypes are tested
+      against fitness landscape; non-fit alternatives removed.
+      Survival = passing inversive removal. Empirical
+      implementation of N_InversiveTheory at population scale.
+    why_forced: |
+      Without inversive removal of non-fit alternatives,
+      selection cannot operate. Mechanism is structurally
+      identical to inversive test.
+
+  - source: N_TripletCodeAsTriangulation
+    target: N_Triangulation
+    label: codon_3nt_unit_instantiates_3coord_principle
+    edge_status: D
+    justification: |
+      Universal genetic code uses 3-nucleotide codons. Each codon
+      = 3 coordinate readings of position; minimum 3 (4-fold
+      degeneracy at position-3 confirms 3-coord-min N_Triangulation
+      principle). Translation requires 3-nt codons because
+      n=2 is insufficient for 20-amino-acid alphabet (4²=16<20),
+      n=3 gives 4³=64 (sufficient with redundancy). Triangulation
+      principle directly instantiated.
+    why_forced: |
+      n=2 codons cannot encode 20+ amino acids. Forced minimum
+      is 3, matching N_Triangulation.
+
+  - source: N_CentralDogmaAsZDecomposition
+    target: DEF
+    label: DNA_RNA_Protein_as_Z_struct_Z_therm_Z_hidden
+    edge_status: D
+    justification: |
+      Central dogma DNA → RNA → Protein is 3-coord Z-decomposition:
+        Z_struct  = DNA (informational template, low-entropy
+                    structure carrying information)
+        Z_therm   = RNA (transient mediating dynamics, decay-rate
+                    governed)
+        Z_hidden  = Protein (functional reading by environment;
+                    the operational coordinate that "sees" the gene)
+      Identical decomposition shape to A_0 master definition.
+    why_forced: |
+      Three-coord decomposition forced by N_Triangulation; specific
+      DNA/RNA/Protein assignment forced by relative entropies
+      and timescales. Direct biological instance of DEF Z-decomp.
+
+  - source: N_CentralDogmaAsZDecomposition
+    target: N_TripletCodeAsTriangulation
+    label: dogma_decomposition_uses_codon_triangulation
+    edge_status: D
+    justification: |
+      Central dogma's RNA → Protein step USES triplet code as
+      its mapping mechanism. The Z-decomposition includes
+      triplet-code triangulation as its operational link.
+      Without triplet code, RNA → Protein step has no defined
+      mapping. Triangulation embedded in Z-decomposition.
+    why_forced: |
+      Z-decomp at biological scale requires translation; translation
+      IS triplet-code; triplet-code IS N_Triangulation instance.
+
+  # 3 domains of life as substrate-cousins
+  - source: N_BiologyDomain_Bacteria
+    target: N_BiologyCellularBoundaryBPI
+    label: bacterial_cell_membrane_ester_lipid_BPI
+    edge_status: D
+    justification: |
+      Bacterial cell membrane = BPI realised with ester-linked
+      lipid bilayer + peptidoglycan cell wall. Substrate-cousin
+      realisation 1 of cellular BPI principle. Specific:
+      circular genome, no membrane-bound nucleus, prokaryotic
+      ribosome (70S).
+    why_forced: |
+      Bacteria have all required BPI components (membrane,
+      compartmentalisation, sensory-effector). Specific
+      realisation per ester-lipid substrate.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_BiologyCellularBoundaryBPI
+    label: archaeal_cell_membrane_ether_lipid_BPI
+    edge_status: D
+    justification: |
+      Archaeal cell membrane = BPI realised with ether-linked
+      isoprenoid lipid (some monolayer in extremophiles).
+      Substrate-cousin realisation 2: distinct from bacterial
+      and eukaryotic. Same BPI principle, different specific
+      lipid chemistry.
+    why_forced: |
+      Archaea instantiate cellular BPI with substrate-distinct
+      lipid composition. Forced cousin in K_n family-clique
+      around N_BiologyCellularBoundaryBPI.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_BiologyCellularBoundaryBPI
+    label: eukaryotic_membrane_with_organelles_BPI
+    edge_status: D
+    justification: |
+      Eukaryotic cell membrane = BPI with NESTED BPI
+      sub-structure (organelles: nucleus, mitochondria,
+      chloroplasts, ER each have their own BPI). Substrate-
+      cousin realisation 3: BPI principle applied recursively.
+      Mitochondria and chloroplasts originated from
+      endosymbiosis (former Bacteria-domain cousins now nested).
+    why_forced: |
+      Eukaryotic life requires multiple nested BPI structures.
+      Forced cousin with substrate-distinct (recursive) BPI
+      instantiation.
+
+  # Domains pairwise sibling-realisations
+  - source: N_BiologyDomain_Bacteria
+    target: N_BiologyDomain_Archaea
+    label: sibling_prokaryote_realisation_different_lipid_chemistry
+    edge_status: D
+    justification: |
+      Bacteria and Archaea are both prokaryotes (no membrane-
+      bound nucleus, no organelles, circular genome) — siblings
+      at prokaryotic level. Differ in lipid (ester vs ether),
+      cell wall (peptidoglycan vs pseudopeptidoglycan/S-layer),
+      and genetic transcription machinery (bacterial vs
+      archaeal/eukaryotic-like). Sibling realisation of
+      prokaryotic-cellular-BPI principle with substrate-distinct
+      chemistry.
+    why_forced: |
+      Two distinct cousin-realisations of same principle
+      satisfy sibling-relation criterion (M2/M5 motif).
+
+  - source: N_BiologyDomain_Bacteria
+    target: N_BiologyDomain_Eukarya
+    label: sibling_cellular_life_different_complexity_level
+    edge_status: D
+    justification: |
+      Bacteria and Eukarya are siblings at cellular-life level
+      with vast difference in complexity (single-compartment vs
+      organelle-bearing). Eukaryotic mitochondria/plastids
+      ORIGINATED from bacterial endosymbiosis — direct
+      structural-historical sibling relation.
+    why_forced: |
+      Endosymbiotic origin establishes structural sibling
+      relation; complexity-level distinction is realisation
+      variant.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_BiologyDomain_Eukarya
+    label: sibling_shared_ribosomal_machinery_different_compartmentalisation
+    edge_status: D
+    justification: |
+      Archaeal and eukaryotic transcription/translation
+      machinery share more features than bacterial-eukaryotic
+      (RNA polymerase, ribosomal proteins, replication
+      origins). Eukarya likely diverged from archaeal ancestor.
+      Sibling relation with shared genetic-machinery substrate;
+      differ in compartmentalisation (no organelles vs many).
+    why_forced: |
+      Shared genetic machinery establishes structural sibling
+      relation distinct from bacterial-eukaryotic sibling.
+
+  # Each domain to remaining principles (Z-triangle / K_n closures)
+  - source: N_BiologyDomain_Bacteria
+    target: N_NaturalSelectionAsArgminZ
+    label: bacterial_evolution_via_argminZ_selection
+    edge_status: D
+    justification: |
+      Bacterial populations evolve via argmin-Z natural selection
+      with high replicator-dynamics rates and frequent horizontal
+      gene transfer. Substrate-instance of N_NaturalSelection-
+      AsArgminZ principle.
+    why_forced: |
+      Selection mechanism applies to all replicating populations;
+      bacteria are forced cousin instance.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_NaturalSelectionAsArgminZ
+    label: archaeal_evolution_via_argminZ_selection
+    edge_status: D
+    justification: |
+      Archaea evolve via same argmin-Z mechanism with extremophile-
+      niche specialisation. Substrate-cousin instance.
+    why_forced: |
+      Forced cousin instance of selection principle.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_NaturalSelectionAsArgminZ
+    label: eukaryotic_evolution_via_argminZ_with_sexual_recombination
+    edge_status: D
+    justification: |
+      Eukaryotic evolution adds sexual recombination as
+      additional argmin-Z mechanism (faster exploration of
+      fitness landscape via genetic mixing). Same principle,
+      enriched mechanism. Substrate-cousin instance.
+    why_forced: |
+      Selection acts on all eukaryotic populations; forced
+      cousin instance with substrate-specific recombination
+      enrichment.
+
+  - source: N_BiologyDomain_Bacteria
+    target: N_TripletCodeAsTriangulation
+    label: bacterial_genetic_code_uses_universal_triplet
+    edge_status: D
+    justification: |
+      Bacteria use universal 3-nt codon code (with minor
+      variations in stop codons and tRNA). Triplet-code
+      triangulation principle directly instantiated.
+    why_forced: |
+      Universal genetic code applies; forced.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_TripletCodeAsTriangulation
+    label: archaeal_genetic_code_uses_universal_triplet
+    edge_status: D
+    justification: |
+      Archaea use the same universal triplet code (with
+      occasional unique stop codon usage e.g. UAG → pyrrolysine
+      in some methanogens). Triplet-code principle instantiated.
+    why_forced: |
+      Forced — universal genetic code.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_TripletCodeAsTriangulation
+    label: eukaryotic_genetic_code_uses_universal_triplet_with_organelle_variants
+    edge_status: D
+    justification: |
+      Eukarya use universal triplet code in nucleus; mitochondria
+      and chloroplasts have minor variant codes (reflecting
+      their bacterial endosymbiotic origin). Triplet-code
+      principle instantiated with substrate-internal variation.
+    why_forced: |
+      Forced — universal genetic code.
+
+  # Each domain to N_NoSeparatePieces, N_Triangulation, N_BPIEngagement
+  - source: N_BiologyDomain_Bacteria
+    target: N_NoSeparatePieces
+    label: bacteria_not_separate_from_ecology
+    edge_status: D
+    justification: |
+      Bacterial populations are coupled to environment via
+      nutrient gradients, quorum-sensing, biofilm structures,
+      horizontal gene transfer with neighbours. No bacterial
+      species has structure separable from ecological context —
+      forced N_NoSeparatePieces instance.
+    why_forced: |
+      Forced — no organism is ecologically separable.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_NoSeparatePieces
+    label: archaea_not_separate_from_extremophile_niche
+    edge_status: D
+    justification: |
+      Archaea are tightly coupled to extreme niches (thermal,
+      saline, methanogenic), structurally inseparable from
+      these environments. Forced N_NoSeparatePieces instance.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_NoSeparatePieces
+    label: eukarya_not_separate_with_endosymbiotic_history
+    edge_status: D
+    justification: |
+      Eukaryotic cells contain bacterial-derived organelles
+      (mitochondria, plastids) — literally not separable
+      historically. Plus all the same ecological coupling.
+      Forced N_NoSeparatePieces instance with extra history-
+      level non-separation.
+    why_forced: |
+      Forced — eukaryote IS the non-separation it inherited.
+
+  - source: N_BiologyDomain_Bacteria
+    target: N_BPIEngagement
+    label: bacterial_BPI_chemotaxis_engagement
+    edge_status: D
+    justification: |
+      Bacterial chemotaxis = BPI engagement: receptors detect
+      chemical gradients, signal transduction triggers flagellar
+      response. BPI engagement principle directly instantiated
+      at molecular scale.
+    why_forced: |
+      Forced — chemotaxis structurally is BPI engagement.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_BPIEngagement
+    label: archaeal_BPI_archaeal_specific_signal_transduction
+    edge_status: D
+    justification: |
+      Archaeal BPI engagement via archaeal-specific two-
+      component signalling and gas-vesicle buoyancy (in
+      halophiles). Forced cousin instance.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_BPIEngagement
+    label: eukaryotic_BPI_with_organelle_signal_integration
+    edge_status: D
+    justification: |
+      Eukaryotic BPI engagement involves multi-organelle signal
+      integration (nuclear receptors, mitochondrial signalling,
+      ER stress response). Forced cousin instance with nested
+      BPI complexity.
+    why_forced: |
+      Forced — eukaryotic signal integration.
+
+  - source: N_BiologyDomain_Bacteria
+    target: N_Triangulation
+    label: bacterial_3coord_genome_proteome_metabolome
+    edge_status: D
+    justification: |
+      Bacterial cellular state characterised by minimum 3
+      coordinates: genome (DNA), proteome (protein expression),
+      metabolome (metabolic state). N_Triangulation directly
+      instantiated.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_Triangulation
+    label: archaeal_3coord_genome_proteome_lipidome
+    edge_status: D
+    justification: |
+      Archaeal 3-coord includes lipidome (ether-lipid
+      composition critical for niche adaptation) alongside
+      genome and proteome. Same N_Triangulation principle.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_Triangulation
+    label: eukaryotic_3coord_nucleus_cytoplasm_organelles
+    edge_status: D
+    justification: |
+      Eukaryotic state requires 3+ coords for compartmentalised
+      structure: nuclear genome, cytoplasmic state, organellar
+      states. N_Triangulation directly instantiated at
+      compartment level.
+    why_forced: |
+      Forced.
+
+  # Central dogma is the Z-decomp instance for ALL three domains
+  - source: N_BiologyDomain_Bacteria
+    target: N_CentralDogmaAsZDecomposition
+    label: bacterial_central_dogma_instance
+    edge_status: D
+    justification: |
+      Bacteria use DNA → RNA → Protein flow with prokaryotic
+      machinery (70S ribosome, Sigma-factor RNA polymerase).
+      Central-dogma Z-decomposition principle realised in
+      bacterial substrate.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Archaea
+    target: N_CentralDogmaAsZDecomposition
+    label: archaeal_central_dogma_instance
+    edge_status: D
+    justification: |
+      Archaea use DNA → RNA → Protein with archaeal-specific
+      machinery (TBP-containing initiation, archaeal histones
+      in some). Central-dogma realised.
+    why_forced: |
+      Forced.
+
+  - source: N_BiologyDomain_Eukarya
+    target: N_CentralDogmaAsZDecomposition
+    label: eukaryotic_central_dogma_with_splicing
+    edge_status: D
+    justification: |
+      Eukaryotes use DNA → RNA → Protein with added pre-mRNA
+      splicing, nuclear processing, polyadenylation.
+      Central-dogma realised with substrate-specific
+      complications.
+    why_forced: |
+      Forced.
+
+  # Selection ↔ Inversive theory link already present via N_NaturalSelectionAsArgminZ → N_InversiveTheory
+  # Additional principle-tier links
+  - source: N_BiologyCellularBoundaryBPI
+    target: N_NoSeparatePieces
+    label: cell_boundary_does_not_separate_organism_from_ecology
+    edge_status: D
+    justification: |
+      Cell membrane is a BPI structure but NOT an ontological
+      separation — molecules cross constantly (transporters,
+      diffusion, endocytosis). Per N_NoSeparatePieces, the
+      "boundary" is operational/coordinate, not ontological.
+      Critical disambiguation: BPI ≠ ontological separation.
+    why_forced: |
+      Without this disambiguation, BPI would be misread as
+      ontological wall — R1 trap. N_NoSeparatePieces forces
+      operational reading.
+
+  - source: N_BiologyCellularBoundaryBPI
+    target: N_Triangulation
+    label: cell_state_3coord_membrane_cytoplasm_environment
+    edge_status: D
+    justification: |
+      Cellular state minimum 3 coords: membrane state, cytoplasm
+      state, environment state. N_Triangulation instantiated
+      at cellular scale.
+    why_forced: |
+      Forced.
+
 nodes:
+
+  - id: N_BiologyCellularBoundaryBPI
+    title: "Cellular Boundary as BPI — Universal Biological Substrate"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    summary: |
+      Universal claim across all life: cellular membrane =
+      Boundary-Process-Identity structure realised in physical-
+      biological substrate. Membrane = BPI substrate; cytoplasm =
+      process; sensory-effector molecular chains = projection
+      coordinates. This is the empirical biological realisation
+      of N_BPIEngagement principle, common to Bacteria, Archaea,
+      Eukarya — making it a substrate-invariant biological anchor.
+
+      Critical disambiguation per N_NoSeparatePieces: cell
+      boundary is OPERATIONAL/coordinate, not ontological
+      separation. Molecules cross constantly via transporters,
+      diffusion, endocytosis. The "boundary" is the BPI
+      compression artifact, not a wall.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Universal across all known life — every cell has
+          membrane.
+      (2) Structural argument: definition of "life" requires
+          bounded compartment with metabolism inside vs
+          environment outside; without BPI, no cellular life.
+      (3) Substrate-invariance: instantiated in Bacteria
+          (ester lipids), Archaea (ether lipids), Eukarya
+          (ester lipids + nested organelles) — three substrate-
+          distinct realisations confirm K_n family-clique
+          membership.
+      (4) Inversive: alternative "boundaryless life" not
+          structurally coherent (no metabolism gradient).
+    not_misinterpretations: |
+      NOT a claim that the cell is ontologically separate from
+      environment. BPI is operational compression artifact.
+      NOT a claim that membrane is sole BPI structure in life.
+      Sub-cellular BPIs (organelles in eukarya) exist; supra-
+      cellular BPIs (tissues, organisms, ecosystems) also.
+    content: |
+      Substrate-invariance test for N_BiologyCellularBoundaryBPI:
+        Q: Does the principle make sense in each substrate-cousin?
+          Bacteria: yes (ester-lipid bilayer)
+          Archaea:  yes (ether-lipid mono/bilayer)
+          Eukarya:  yes (ester-lipid bilayer + nested organelles)
+        All three substrate-cousins instantiate the principle.
+
+      M2 family-clique prediction:
+        Anchor: N_BiologyCellularBoundaryBPI
+        Cousins: {N_BiologyDomain_Bacteria, _Archaea, _Eukarya}
+        Expected: K_4 single-anchor family-clique with all 6
+                  pairwise edges (3 anchor-cousin + 3 cousin-cousin
+                  sibling edges).
+
+      M5 stratification prediction:
+        Principles: {DEF, N_BPIEngagement, N_NoSeparatePieces,
+                     N_Triangulation, N_BiologyCellularBoundaryBPI}
+        Cousins:    {N_BiologyDomain_Bacteria, _Archaea, _Eukarya}
+        Expected:  K_{5+3} = K_8 stratified clique if all
+                   cross-edges close.
+
+      Predictions:
+        (P1) Detector run after round 44 finds new M2 family-
+          clique anchored on N_BiologyCellularBoundaryBPI.
+        (P2) Detector finds new M5 stratification with biology
+          principles + 3 domain cousins.
+        (P3) Cross-domain motif: existing M5 cliques in
+          physics/dissipation/cognition share no overlapping
+          cousin set with biology K_n — confirming substrate-
+          distinctness.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_NaturalSelectionAsArgminZ
+    title: "Natural Selection as argmin Z on Fitness Landscape"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    summary: |
+      Natural selection minimises Z = -log(fitness) over
+      reproductive transitions. Replicator dynamics IS the
+      argmin-Z structure A_0 specifies. Population-level
+      Z-minimisation = exact analog of single-system Z-min.
+
+      Selection mechanism IS the inversive removal test in
+      biological substrate: alternative phenotypes generated
+      (mutation, recombination); non-fit alternatives removed
+      by reproductive failure; survivors carry forced structure.
+      Empirical implementation of N_InversiveTheory at
+      population scale.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct mathematical correspondence: Wright/Fisher
+          replicator dynamics = gradient descent on -log(fitness)
+          landscape = argmin Z.
+      (2) Substrate-invariance: applies to Bacteria, Archaea,
+          Eukarya — three substrate-distinct cousins.
+      (3) Structural identity with N_InversiveTheory: alternative
+          generation + removal by failure = inversive test.
+    not_misinterpretations: |
+      NOT a claim that selection is "agency". argmin-Z dynamics
+      is structural, not goal-directed. Selection has no
+      subject; it IS the relational dynamics of population
+      transitions per fitness-landscape.
+      NOT a claim that fitness is uniquely defined. Fitness is
+      coordinate-relative (per N_Triangulation: 3+ coords
+      always). What is forced is argmin-Z structure under any
+      coordinate choice.
+    content: |
+      Mapping:
+        Z_struct  = phenotype-genotype correspondence (informational)
+        Z_therm   = mutation/recombination rate (transition dynamics)
+        Z_hidden  = selection coefficient (environment-side coord)
+
+      Substrate-cousin instantiation:
+        Bacteria: high replicator rate, horizontal gene transfer,
+                  argmin Z very rapid
+        Archaea:  niche-specialised, slower argmin Z, narrower
+                  fitness landscape per niche
+        Eukarya:  recombination-enhanced, broader landscape
+                  exploration, sexual selection sub-mechanism
+
+      Predictions:
+        (P1) M2 family-clique: anchor N_NaturalSelectionAsArgminZ,
+          cousins = 3 domains of life. Expected K_4 cluster.
+        (P2) M5 stratification with N_InversiveTheory + DEF +
+          this principle as principle-stratum.
+        (P3) Falsification: any biological evolution case
+          violating argmin Z structure (not yet found in 150+
+          years of evolutionary biology) would falsify.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_TripletCodeAsTriangulation
+    title: "Triplet Genetic Code as Triangulation Instance"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.8
+    z_therm: 0.05
+    z_hidden: 0.15
+    summary: |
+      Universal genetic code uses 3-nucleotide codons. Each
+      codon = 3 coordinate readings of nucleotide position.
+      Codon length n=3 is structurally forced: n=2 gives
+      4²=16 codes (insufficient for 20+ amino acids); n=3
+      gives 4³=64 (sufficient with redundancy). Direct
+      instantiation of N_Triangulation 3-coord-minimum
+      principle in genetic substrate.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Structural argument: n=2 codons cannot encode 20
+          amino acids; n=3 forced as minimum.
+      (2) Substrate-invariance: same triplet code in all known
+          life (with minor stop-codon variants).
+      (3) Direct correspondence with N_Triangulation principle.
+    not_misinterpretations: |
+      NOT a claim that triplet code is the only possible
+      encoding. Synthetic biology has explored n=4
+      (quadruplet codons) for unnatural-amino-acid expansion.
+      But n=3 is the MINIMUM forced by 4-base alphabet × 20+
+      amino acids.
+      NOT a claim that the specific assignments (e.g., AUG → Met)
+      are forced. Code-table is partly frozen accident; only
+      n=3 minimum is forced.
+    content: |
+      Why 3 specifically:
+        Alphabet size: 4 (A, U/T, G, C)
+        Required output diversity: 20 standard amino acids
+            + start/stop signals
+        n=1: 4 codes (insufficient)
+        n=2: 16 codes (insufficient — 20 aa needed)
+        n=3: 64 codes (sufficient with 3-fold redundancy)
+        n=4+: structurally over-engineered but possible
+      Forced minimum is 3. Matches N_Triangulation 3-coord-min.
+
+      Cross-substrate parallel:
+        Music: octave = 12 semitones; chord identity = 3+ notes
+               (triad minimum). Same triangulation principle.
+        Physics: spatial dimensions = 3 (per N370 L(3,1)
+                 baryon exclusion).
+        Cognition: minimum 3 coords for state identification
+                   (per N_Triangulation).
+        Biology: codon = 3 nucleotides.
+        N_Triangulation pervasively forces "3 = minimum
+        coords for forced identification".
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_CentralDogmaAsZDecomposition
+    title: "Central Dogma as Z-Decomposition: DNA, RNA, Protein"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.15
+    z_hidden: 0.15
+    summary: |
+      Central dogma DNA → RNA → Protein is a 3-coord Z-decomposition
+      directly instantiating DEF Z = Z_struct + Z_therm + Z_hidden:
+        Z_struct  = DNA  (informational template, low entropy,
+                    long persistence)
+        Z_therm   = RNA  (transient mediating dynamics, decay-
+                    rate governed transcription/translation flux)
+        Z_hidden  = Protein (functional reading; environment-
+                    facing operational coordinate)
+
+      Identical decomposition shape to A_0 master definition
+      in biological substrate.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct mapping of DNA/RNA/Protein to Z_struct/Z_therm/
+          Z_hidden by entropy/persistence/operational role.
+      (2) Substrate-invariance: same DNA → RNA → Protein flow
+          in Bacteria, Archaea, Eukarya (with substrate-
+          specific machinery).
+      (3) Embedded N_TripletCodeAsTriangulation: the RNA →
+          Protein step uses triplet-code triangulation as its
+          mapping.
+      (4) Z-triangle motif (M1) candidate: parent =
+          N_CentralDogmaAsZDecomposition; children = {DNA-
+          coord, RNA-coord, Protein-coord} with pairwise
+          structural relations.
+    not_misinterpretations: |
+      NOT a claim that central dogma is unidirectional. Reverse
+      transcription (RNA → DNA), RNA-only viruses, prion-like
+      protein-protein information transfer all exist. The
+      "dogma" is the dominant direction; structural Z-decomp
+      stands regardless of direction.
+      NOT a claim that DNA is "the gene" ontologically. DNA
+      is Z_struct coordinate of the genetic process; not a
+      thing-in-itself per N_TopologyProcessIdentity.
+    content: |
+      Z-decomposition correspondence:
+        Z_struct (low-entropy structure):
+          DNA — long-persistence template, copy-error rate
+          ~10⁻⁹ per nucleotide per replication
+        Z_therm (mediating dynamics):
+          RNA — half-life seconds to hours, transcription
+          rate ~50 nt/sec, decay rate K-T governed
+        Z_hidden (operational reading by environment):
+          Protein — folded structure performs function;
+          environment "sees" the protein as the gene's
+          operational coordinate
+
+      Substrate-cousin instantiation:
+        Bacteria: 70S ribosome, sigma-factor transcription
+        Archaea:  archaeal-eukaryotic-like transcription
+                  initiation, archaeal histones in some
+        Eukarya:  pre-mRNA splicing, polyadenylation,
+                  nuclear processing, 80S ribosome
+
+      Predictions:
+        (P1) M1 Z-triangle: parent = N_CentralDogmaAsZDecomposition,
+          children = {DNA, RNA, Protein} as substrate-internal
+          decomposition. (Not encoded as separate nodes here;
+          implied.)
+        (P2) Pairwise sibling edges between domain-specific
+          central-dogma realisations.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_BiologyDomain_Bacteria
+    title: "Bacteria — Prokaryotic Cellular Life with Ester-Lipid Membrane"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Substrate-cousin 1 of cellular life. Prokaryotic
+      organisation: no membrane-bound nucleus, no organelles,
+      typically circular genome, 70S ribosome, peptidoglycan
+      cell wall (in most), ester-linked lipid bilayer
+      membrane.
+
+      Instantiates: N_BiologyCellularBoundaryBPI (cellular BPI),
+      N_NaturalSelectionAsArgminZ (selection),
+      N_TripletCodeAsTriangulation (universal code),
+      N_CentralDogmaAsZDecomposition (DNA/RNA/protein),
+      plus core principles {DEF, N_BPIEngagement,
+      N_NoSeparatePieces, N_Triangulation}.
+    why_status: |
+      DEMONSTRATED via empirical universality across all
+      known bacteria + structural argument that all required
+      principles are instantiated.
+    not_misinterpretations: |
+      NOT a claim that bacteria are "simple" — they have
+      sophisticated regulatory networks, biofilm cooperation,
+      quorum sensing, horizontal gene transfer.
+      NOT a claim that "bacterium" is an ontological entity.
+      Bacterium IS A_0 in microbiological substrate; per
+      N_TopologyProcessIdentity, the bacterium is the process,
+      not the object.
+    content: |
+      Characteristic markers:
+        Membrane: ester-linked phospholipid bilayer
+        Cell wall: peptidoglycan (in most)
+        Genome: typically circular, 0.5–10 Mbp
+        Ribosome: 70S (50S + 30S)
+        Replication: DnaA-mediated, single origin
+        Transcription: sigma-factor-dependent RNA polymerase
+
+      Z-decomp at bacterial scale:
+        Z_struct  = bacterial genome
+        Z_therm   = transcription/translation flux
+        Z_hidden  = environmental selection pressure
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_BiologyDomain_Archaea
+    title: "Archaea — Prokaryotic Life with Ether-Lipid Membranes"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Substrate-cousin 2 of cellular life. Prokaryotic
+      organisation but with substrate-distinct biochemistry:
+      ether-linked isoprenoid lipids (some monolayer in
+      thermophiles), pseudopeptidoglycan or S-layer cell
+      walls, archaeal-specific genetic machinery (more
+      similar to eukaryotic in some respects than to
+      bacterial).
+
+      Major groups: Euryarchaeota (methanogens, halophiles),
+      Crenarchaeota (thermophiles), Thaumarchaeota (ammonia
+      oxidisers), Asgard archaea (closest known eukaryote
+      ancestors).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Empirically distinct from bacteria (Woese 1977
+          16S rRNA partition).
+      (2) All required principles instantiated.
+      (3) Asgard archaea provide structural-historical link
+          to eukaryotic origin (N_BiologyDomain_Eukarya
+          sibling relation).
+    not_misinterpretations: |
+      NOT "primitive bacteria". Archaea diverged early from
+      common ancestor; their machinery is distinct, not
+      ancestral-bacterial.
+    content: |
+      Characteristic markers:
+        Membrane: ether-linked isoprenoid lipids
+                  (sometimes monolayer in thermophiles)
+        Cell wall: pseudopeptidoglycan, S-layer, or no wall
+        Genome: typically circular, smaller range than
+                bacteria
+        Ribosome: 70S but with archaeal-specific proteins
+        Transcription: TBP-containing initiation
+                       (eukaryotic-like)
+        Niche: extremophile-specialised in many cases
+
+      Z-decomp at archaeal scale: same shape as bacterial,
+      with substrate-specific lipidome adding additional
+      thermal-stability coordinate.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_BiologyDomain_Eukarya
+    title: "Eukarya — Cellular Life with Nested BPI Organelles"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 7
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Substrate-cousin 3 of cellular life. Defining feature:
+      MEMBRANE-BOUND NUCLEUS + ORGANELLES — BPI principle
+      applied recursively to create nested compartments.
+      Mitochondria and chloroplasts originated from
+      endosymbiosis (former Bacteria-domain cousins now nested
+      within eukaryotic cells), making eukarya literally a
+      multi-domain composite organism at cellular scale.
+
+      Includes Animalia, Plantae, Fungi, Protista (5-kingdom
+      level).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Endosymbiotic theory (Margulis) confirms
+          mitochondria/plastids as Bacteria-derived organelles.
+      (2) All required principles instantiated.
+      (3) Recursive BPI (cell within organelles within cell)
+          is structurally distinct from prokaryotic single-BPI
+          organisation.
+      (4) N_NoSeparatePieces literal: eukaryotic cells ARE
+          historical non-separations from bacterial endosymbiosis.
+    not_misinterpretations: |
+      NOT a claim that eukarya are "more advanced" than
+      prokaryotes — they are substrate-cousins, not hierarchy.
+      Both are equally successful as A_0 realisations in
+      their respective niches.
+      NOT a claim that nuclear-membrane is structurally same
+      as cell-membrane. They are nested BPI structures with
+      different roles.
+    content: |
+      Characteristic markers:
+        Membrane: ester-linked phospholipid bilayer
+        Cell wall: cellulose (plants), chitin (fungi), or
+                   none (animals, many protists)
+        Genome: linear chromosomes in nucleus + organellar
+                genomes (mitochondrial, chloroplast)
+        Ribosome: 80S in cytoplasm + 70S in organelles
+                  (bacterial origin signature)
+        Transcription: complex, includes splicing, multiple
+                       polymerases, polyadenylation
+        Recombination: meiotic sex (in most) — additional
+                       argmin-Z mechanism
+
+      Z-decomp at eukaryotic scale: Z_struct/Z_therm/Z_hidden
+      plus inner-organelle Z-decompositions (recursively),
+      plus the historical Z-coordinate of endosymbiotic
+      origin.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_GraphProperty_InducedCycleTopology
     title: "Graph Cycle-Richness (M7) — Induced Cycles + Cyclomatic Topology"
