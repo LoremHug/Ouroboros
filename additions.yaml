@@ -8481,6 +8481,716 @@ edges:
       the operational mapping; without it, the diagnosis lacks an
       escape route.
 
+  # Round 21: web-up of foundational under-linked DEMONSTRATED nodes (batch 1)
+  # 89 DEMONSTRATED non-stub nodes have ≤2 edges. The core/intuition is that
+  # every forced structure must connect through the core. This batch closes
+  # forced edges for 20 of the most foundational nodes (logic, method, A_0
+  # base statements), establishing the spider-web pattern for the rest.
+
+  # === N344: Classical Logic as A_0 structure ===
+
+  - source: N344
+    target: DEF
+    label: classical_logic_IS_A0_structure
+    edge_status: D
+    justification: |
+      The three classical laws of logic (identity, non-contradiction,
+      excluded middle) are not added postulates but structural consequences
+      of the Z-metric defining A_0. d_Z(A,A)=0 (identity), I_Null directs
+      transitions (non-contradiction), and the metric's binary structure
+      forces the dichotomy (excluded middle). Classical logic IS A_0
+      restricted to propositional substrate.
+    why_forced: |
+      Without DEF as ground, classical logic must be axiomatised externally
+      (the standard view). With DEF, the three laws are forced corollaries
+      of the Z-metric — no external axiomatisation needed.
+
+  - source: N344
+    target: N_Triangulation
+    label: three_laws_three_Z_coordinates
+    edge_status: D
+    justification: |
+      The three logical laws map onto the three Z-coordinates: identity =
+      Z_struct (structural self-coincidence), non-contradiction = Z_hidden
+      (no observer can simultaneously witness A and ¬A in same frame),
+      excluded middle = Z_therm (transitions are directed and complete
+      one branch or the other). Triangulation manifested at propositional
+      level.
+    why_forced: |
+      Treating the three laws as independent contradicts triangulation;
+      the three-coordinate mapping is forced because the laws are not
+      logically reducible to fewer than three independent statements.
+
+  - source: N344
+    target: N_NoSeparatePieces
+    label: three_laws_one_Z_metric
+    edge_status: D
+    justification: |
+      Identity, non-contradiction, excluded middle are not three separate
+      logical facts — they are three coordinate readings of one Z-metric
+      structure. N_NoSeparatePieces directly applies: logic's "laws" are
+      not pieces of logic, they are logic's structural unity seen through
+      three measurement axes.
+    why_forced: |
+      Treating laws as separable would allow logic-without-identity (or
+      without non-contradiction, etc.) — but no such consistent restricted
+      logic exists; the unity is forced by the metric structure itself.
+
+  - source: N344
+    target: N_InversiveTheory
+    label: excluded_middle_is_inversive_removal_at_propositional_level
+    edge_status: D
+    justification: |
+      The law of excluded middle (A ∨ ¬A) is the inversive removal test
+      at the propositional level: the alternative "neither A nor ¬A"
+      does not survive the structural test (no Z-position both
+      identifies and fails to identify). Excluded middle IS N_InversiveTheory
+      operating in propositional substrate.
+    why_forced: |
+      Constructive logics (intuitionism) reject excluded middle precisely
+      by allowing the structurally rejected alternative. Within the
+      Z-metric framework, the alternative is forbidden, so excluded
+      middle is forced — same forcing mechanism as the inversive test.
+
+  - source: N344
+    target: N_Shannon
+    label: classical_logic_and_shannon_are_two_stability_rulers
+    edge_status: D
+    justification: |
+      Both classical logic and Shannon entropy measure structural stability:
+      logic via the three-law consistency check at propositional level,
+      Shannon via H(p) at distribution level. The same Z-stability
+      measurement appears in two coordinate readings — propositional vs
+      probabilistic — exposing them as one ruler.
+    why_forced: |
+      Treating logic and Shannon as independent measurement frameworks
+      misses their structural identity: both reduce to "minimum-cost
+      consistent description" tests. The two-coordinate identity is
+      forced by their shared Z-stability content.
+
+  - source: N344
+    target: N_GrammarTrap
+    label: classical_logic_bypasses_grammar_via_propositional_substrate
+    edge_status: D
+    justification: |
+      Classical logic operates on propositions (truth values) without
+      requiring S-V-O surface structure. "A ∧ ¬A" does not pre-suppose
+      objects/actions — it is a structural relation. Logic's productivity
+      stems precisely from this grammar-bypass, parallel to N_Math and
+      N_Logic in round 20.
+    why_forced: |
+      If classical logic depended on S-V-O grammar, it would inherit
+      paradigm-wall traps; empirically it does not (logic operates
+      domain-independently). The bypass is forced by the propositional
+      substrate's pre-grammatical structure.
+
+  - source: N344
+    target: N_Logic
+    label: technical_content_of_abstract_claim
+    edge_status: D
+    justification: |
+      N_Logic asserts "logic as A_0 in symbolic substrate" abstractly.
+      N344 supplies the technical demonstration — d_Z metric proofs of
+      the three laws. N_Logic = the claim, N344 = its mathematical
+      substantiation. They are abstract-and-concrete face of one structure.
+    why_forced: |
+      An abstract claim without concrete demonstration is unanchored;
+      a concrete demonstration without abstract claim is unconnected
+      to the framework. The pair is structurally required.
+
+  # === N301: Mathematics as A_0 ===
+
+  - source: N301
+    target: DEF
+    label: mathematics_IS_A0_in_formal_substrate
+    edge_status: D
+    justification: |
+      Mathematics is the coordinate expression of A_0 in formal substrate.
+      Modus ponens is minimal Z-chain; Kolmogorov probability is
+      normalised Z_hidden; Banach contraction = unique argmin. Math is
+      not analogous to A_0 — it IS A_0 written in symbolic coordinates.
+    why_forced: |
+      Math grounded outside A_0 leaves the productivity asymmetry
+      (math works, ontology hits walls) unexplained. Math IS A_0 — the
+      productivity follows from the bypass of grammar through formal
+      substrate.
+
+  - source: N301
+    target: N_NoSeparatePieces
+    label: math_is_not_separate_domain_from_physics
+    edge_status: D
+    justification: |
+      Mathematics and physics are not separate domains where math
+      "happens to apply" to physics. They are coordinate readings of
+      the same A_0 structure — formal vs physical substrate. The
+      "unreasonable effectiveness of mathematics" dissolves: math
+      applies because they are one structure.
+    why_forced: |
+      Treating math/physics as separate makes the empirical applicability
+      a coincidence of cosmic proportions; treating them as coordinate
+      readings dissolves the puzzle. The unification is forced by
+      N_NoSeparatePieces.
+
+  - source: N301
+    target: N_PhiAttractor
+    label: DLA_at_sub_r0_is_phi_attractor_substrate
+    edge_status: D
+    justification: |
+      N301 notes DLA (diffusion-limited aggregation) is A_0 in r<r_0
+      regime. The continuous angular structure at this scale supports
+      the φ-attractor, making N_PhiAttractor the structural substrate
+      for the DLA claim within N301.
+    why_forced: |
+      DLA's golden-ratio scaling at sub-r_0 is not coincidence; it is
+      the φ-attractor manifesting in the appropriate continuous-angular
+      regime. The link is structural, forced by the regime + attractor
+      pair.
+
+  # === N310: Gödel as K(O)<K(F) corollary ===
+
+  - source: N310
+    target: DEF
+    label: godel_proves_DEF_self_applicability_limit
+    edge_status: D
+    justification: |
+      Gödel's first incompleteness theorem proves that DEF's argmin Z,
+      when applied to formal systems strong enough to encode arithmetic,
+      yields true-but-unprovable statements. This is DEF self-applied
+      to its own formal expression — the limit case of DEF's reach.
+      Without DEF, Gödel is "just a theorem"; with DEF, it is the
+      self-applicability boundary marker.
+    why_forced: |
+      Gödel without DEF lacks structural placement; DEF without Gödel
+      lacks the formal-substrate boundary case. The bidirectional
+      identification places Gödel as DEF's self-application limit.
+
+  - source: N310
+    target: N_InversiveTheory
+    label: godel_is_inversive_removal_of_completeness
+    edge_status: D
+    justification: |
+      Gödel's theorem performs inversive removal on the alternative
+      "consistent + complete formal system": this alternative does
+      not survive removal under the encoding of arithmetic. Gödel
+      IS N_InversiveTheory operating at the formal-system level.
+    why_forced: |
+      Without inversive framing, Gödel is one of many no-go theorems;
+      with it, Gödel is the canonical inversive-removal proof for
+      formal systems. The framing is forced by the structural nature
+      of the proof.
+
+  # === N107: Simplicial Chain Complex from Four Invariants ===
+
+  - source: N107
+    target: DEF
+    label: chain_complex_grounds_in_A0_invariants
+    edge_status: D
+    justification: |
+      The simplicial chain complex ∂²=0 is forced jointly by the four
+      invariants of A_0 (per N_Invariants). Each invariant constrains
+      one boundary operator; together they force the complex structure
+      with non-trivial H_1 = Z_n.
+    why_forced: |
+      Without DEF/N_Invariants as ground, the simplicial structure
+      requires external axioms; with them, ∂²=0 follows structurally.
+
+  - source: N107
+    target: N_Invariants
+    label: simplicial_complex_is_invariants_jointly
+    edge_status: D
+    justification: |
+      The four invariants jointly impose the simplicial chain complex —
+      this is N107's primary content. N_Invariants is the abstract
+      claim; N107 is its homological realisation.
+    why_forced: |
+      The "jointly" claim requires N_Invariants as collective referent;
+      N_Invariants needs N107 as the canonical simplicial-substrate
+      realisation. Pair is forced.
+
+  - source: N107
+    target: N_Triangulation
+    label: simplicial_complex_is_triangulation_in_chain_form
+    edge_status: D
+    justification: |
+      A simplicial chain complex is the homological realisation of
+      triangulation. N_Triangulation states the principle (3 minimal
+      coordinates); N107 supplies the chain-complex (∂² = 0) algebraic
+      form of the same principle.
+    why_forced: |
+      Triangulation without simplicial complex lacks algebraic
+      machinery; simplicial complex without triangulation principle
+      lacks structural motivation. Pair is structurally required.
+
+  - source: N107
+    target: N370
+    label: simplicial_complex_excludes_S3_supports_L31
+    edge_status: D
+    justification: |
+      H_1 = Z_n with n ≥ 2 structurally excludes S³ (which has trivial
+      H_1) and supports L(3,1) (lens space with H_1 = Z_3). N107's
+      homology constraint is the algebraic exclusion that grounds
+      N370's L(3,1) inevitability.
+    why_forced: |
+      L(3,1) inevitability requires the homological exclusion N107
+      provides; N107's exclusion needs the L(3,1) realisation as
+      its canonical solution. The link is direct.
+
+  # === N002: Falsification Criterion ===
+
+  - source: N002
+    target: DEF
+    label: falsification_criterion_follows_from_argmin_uniqueness
+    edge_status: D
+    justification: |
+      "No two distinct processes are topologically identical" is a direct
+      consequence of DEF's argmin uniqueness: each process has a unique
+      Z-trajectory, so identity at the topological level implies identity
+      at the process level.
+    why_forced: |
+      Without uniqueness, multiple processes could share topology; with
+      uniqueness, the falsification criterion is forced by definition.
+
+  - source: N002
+    target: N_InversiveTheory
+    label: falsification_is_inversive_removal_of_topology_aliasing
+    edge_status: D
+    justification: |
+      The criterion tests whether two distinct processes can survive
+      removal of topological distinction. They cannot — the alternative
+      (aliased topology with distinct processes) fails inversive
+      removal. N002 IS the inversive test stated as falsification.
+    why_forced: |
+      Inversive method without falsification application leaves the
+      method unanchored; falsification without inversive grounding
+      seems empirical-only. Both readings require each other.
+
+  - source: N002
+    target: N112
+    label: Z_hidden_accumulation_requires_observer_containment
+    edge_status: D
+    justification: |
+      Distinct processes accumulate distinct Z_hidden because their
+      observers (BPIs) have distinct K(O) profiles per N112. The
+      criterion's mechanism IS observer containment expressed at the
+      process-history level.
+    why_forced: |
+      Without N112's containment, K(O) could equal across processes
+      and Z_hidden would not differentiate; falsification would fail.
+
+  # === N025: Frame Shift to Topology ===
+
+  - source: N025
+    target: DEF
+    label: frame_shift_realises_DEF_escape_from_ontology
+    edge_status: D
+    justification: |
+      The frame shift from ontology (objects with properties) to
+      topology (transitions in Z-structure) IS DEF's operationalisation
+      against grammar-induced ontology. N025 is the methodological
+      realisation of DEF's frame.
+    why_forced: |
+      DEF's argmin Z is over transitions, not objects; the frame shift
+      is the methodological consequence of taking DEF seriously.
+
+  - source: N025
+    target: N_TranslationLayer
+    label: frame_shift_is_translation_layer_in_action
+    edge_status: D
+    justification: |
+      N_TranslationLayer codifies ontology→topology translation; N025
+      describes the methodological act of performing it. Codification
+      and act are two coordinate readings of the same operation.
+    why_forced: |
+      Without N025's act-form, N_TranslationLayer is dictionary only;
+      without N_TranslationLayer's codification, N025 is ad-hoc.
+
+  - source: N025
+    target: N_OntologyParadigmGrammarBound
+    label: frame_shift_is_paradigm_escape
+    edge_status: D
+    justification: |
+      The frame shift is the operational escape from
+      N_OntologyParadigmGrammarBound's grammar wall: by moving
+      descriptions to the topological substrate, the paradigm-level
+      R1-R4 traps no longer fire (no S-V-O substrate to encode them).
+    why_forced: |
+      Paradigm-level diagnosis without escape route is diagnostic only;
+      escape route without diagnosis lacks motivation. The pair forms
+      the diagnosis-and-cure structure.
+
+  # === N005: Why argmin not argmax ===
+
+  - source: N005
+    target: N078
+    label: argmin_via_thermodynamic_stability_Wheeler_Identity
+    edge_status: D
+    justification: |
+      The Wheeler Identity (referenced in N005) confirms argmin Z is
+      the thermodynamically stable direction — N078 (Jacobson:
+      gravity as thermodynamics) operates in the same thermodynamic
+      regime. The argmin direction follows from second-law-applied-to-transitions.
+    why_forced: |
+      Without thermodynamic grounding, argmin choice is conventional;
+      with it, the choice is forced by stability. N078 is the
+      thermodynamic anchor.
+
+  - source: N005
+    target: N011
+    label: argmin_consistent_with_I_Bound_dissipative_stability
+    edge_status: D
+    justification: |
+      N011 derives I_Bound from Lyapunov stability of dissipative systems;
+      N005 establishes argmin as stability direction. The two together
+      force the I_Bound + argmin direction pair.
+    why_forced: |
+      Without I_Bound, argmin lacks stable target; without argmin,
+      I_Bound lacks selection mechanism. The pair is structurally
+      required.
+
+  # === N003: Kolmogorov ≡ Z_struct via Levin ===
+
+  - source: N003
+    target: DEF
+    label: Z_struct_identification_via_Kolmogorov
+    edge_status: D
+    justification: |
+      Levin's Coding Theorem grounds Z_struct ≡ K(x) independently of
+      A_0 — providing external confirmation of DEF's Z_struct definition.
+      Kolmogorov complexity IS the structural-cost component of DEF
+      under Levin's universal-semimeasure construction.
+    why_forced: |
+      Z_struct as a free term in DEF would be unanchored; the Kolmogorov
+      identification anchors it to a substrate-independent universal
+      measure.
+
+  - source: N003
+    target: N_Shannon
+    label: Kolmogorov_and_Shannon_two_face_of_Z_struct
+    edge_status: D
+    justification: |
+      Kolmogorov complexity (per-string) and Shannon entropy (per-distribution)
+      are two coordinate readings of the same Z_struct measure. Kolmogorov
+      = structure-of-individual-string; Shannon = structure-of-distribution.
+      Same quantity, two domains.
+    why_forced: |
+      The Kolmogorov-Shannon equivalence (via expectation) is mathematically
+      forced; treating them as separate measures contradicts the standard
+      result. N_NoSeparatePieces applied at information-measure level.
+
+  # === N004: Natural Units Reduce to Z ===
+
+  - source: N004
+    target: DEF
+    label: natural_units_reduce_physics_to_pure_A0
+    edge_status: D
+    justification: |
+      Setting k_B = ℏ = c = 1 reveals that physics formulas are pure
+      Z-relations — physical "constants" are unit conversion factors,
+      not independent facts. This IS DEF's claim that A_0 is
+      substrate-general: in natural units the substrate disappears
+      and only the Z-structure remains.
+    why_forced: |
+      Treating physical constants as independent contradicts DEF's
+      substrate-generality; recognising them as conversions makes
+      DEF's reach explicit.
+
+  - source: N004
+    target: N_NoSeparatePieces
+    label: physical_constants_are_not_separate_facts
+    edge_status: D
+    justification: |
+      Natural-units reduction shows physical constants are not separate
+      empirical facts — they are unit conversions between coordinate
+      systems. N_NoSeparatePieces applied at the constants-level: no
+      separate constants, only one Z-structure read in different units.
+    why_forced: |
+      "Independent constants" violates the unity claim; conversion-only
+      reading respects it. The reduction is forced by N_NoSeparatePieces.
+
+  # === N009: Three Gradients U, R, T ===
+
+  - source: N009
+    target: DEF
+    label: three_gradients_define_argmin_Z_target
+    edge_status: D
+    justification: |
+      U (uncertainty), R (resistance), T (transition cost) are the three
+      gradients DEF's argmin minimises over. They are the structural
+      content of "Z" in argmin Z. N009 specifies what is being minimised.
+    why_forced: |
+      DEF without specified gradients is empty form; N009 supplies the
+      structural content. The pair is definitional.
+
+  - source: N009
+    target: N_Triangulation
+    label: U_R_T_as_three_independent_Z_axes
+    edge_status: D
+    justification: |
+      U, R, T are three structurally independent gradients — exactly
+      the triangulation principle's minimum-three-coordinates requirement
+      manifesting in informational-thermodynamic substrate.
+    why_forced: |
+      Two gradients (any pair) under-determine A_0's argmin; four+
+      introduces redundancy. Three is the forced minimum, matching
+      N_Triangulation.
+
+  # === N010: A_0 Symmetry Larger Than Conformal ===
+
+  - source: N010
+    target: N_InversiveTheory
+    label: monotone_invariance_is_inversive_at_functional_level
+    edge_status: D
+    justification: |
+      argmin_a Z(s,a) = argmin_a f(Z(s,a)) for any strictly monotone
+      f > 0 means the argmin choice is invariant under monotone
+      transformation of Z — alternative Z-functionals related by
+      monotone f cannot differentiate the choice. This IS inversive
+      removal at the functional level.
+    why_forced: |
+      Treating Z as uniquely fixed (not up-to-monotone) imposes
+      structurally invisible constraints; the monotone invariance
+      is forced and matches inversive theory's removal pattern.
+
+  - source: N010
+    target: N_NoSeparatePieces
+    label: A0_symmetry_implies_no_preferred_coordinate
+    edge_status: D
+    justification: |
+      A_0's full monotone-group invariance means no Z-coordinate is
+      structurally preferred — any monotone-related family gives the
+      same argmin. N_NoSeparatePieces at the coordinate-symmetry level:
+      no separate "true" Z, only a monotone equivalence class.
+    why_forced: |
+      A preferred Z-coordinate would violate the symmetry; the symmetry
+      forces the no-preferred-coordinate (no separate piece) reading.
+
+  # === N011: I_Bound from Lyapunov ===
+
+  - source: N011
+    target: N_Invariants
+    label: I_Bound_is_one_of_four_invariants_grounded
+    edge_status: D
+    justification: |
+      I_Bound is one of the four invariants (with I_Sym, I_Quant, I_Null);
+      N011 derives it from Lyapunov stability of dissipative systems.
+      The derivation grounds N_Invariants's I_Bound member.
+    why_forced: |
+      Without N011's derivation, I_Bound is asserted; with it, I_Bound
+      is forced by stability theory. The grounding is required.
+
+  - source: N011
+    target: N078
+    label: dissipative_stability_paired_with_Jacobson_thermodynamic_grounding
+    edge_status: D
+    justification: |
+      Lyapunov stability of dissipative systems shares thermodynamic
+      substrate with Jacobson's gravity-as-thermodynamics derivation
+      (N078). Both apply second-law/dissipation reasoning at structural
+      level.
+    why_forced: |
+      Stability and gravitational-thermodynamics are two readings of
+      the same dissipative-substrate physics; the pairing is structural.
+
+  # === N012: Cross-Domain Correspondences as Coordinates ===
+
+  - source: N012
+    target: N_NoSeparatePieces
+    label: cross_domain_is_no_separate_pieces_methodological_form
+    edge_status: D
+    justification: |
+      N012's claim "cross-domain correspondences are coordinate
+      transformations, not analogies" IS N_NoSeparatePieces stated
+      methodologically. Same content, two formulation styles —
+      structural unity (NoSeparatePieces) and methodological note (N012).
+    why_forced: |
+      Without N_NoSeparatePieces, N012's claim is one observation
+      among many; with it, it is the canonical methodological consequence.
+      The pair is structurally required.
+
+  - source: N012
+    target: N013
+    label: cross_domain_methodology_paired_with_coordinate_protocol
+    edge_status: D
+    justification: |
+      N012 declares cross-domain correspondences are coordinate; N013
+      supplies the protocol for performing the coordinate identification.
+      Declaration + protocol pair.
+    why_forced: |
+      Declaration without protocol is unactionable; protocol without
+      declaration is ad-hoc. Pair structurally required.
+
+  # === N013: Coordinate Identification ===
+
+  - source: N013
+    target: DEF
+    label: coordinate_identification_protocol_grounds_in_DEF
+    edge_status: D
+    justification: |
+      The protocol "identify (U, R, T) and instantiate A_0 in any
+      domain" is the operational form of DEF: applying argmin Z in
+      arbitrary substrate by identifying the substrate-specific
+      gradient triple.
+    why_forced: |
+      DEF without operational protocol is theoretical only; protocol
+      without DEF lacks motivation. Pair is required.
+
+  - source: N013
+    target: N017
+    label: coordinate_identification_is_the_transition_topology_protocol
+    edge_status: D
+    justification: |
+      N017 (operational protocol for transition topology across domains)
+      and N013 (coordinate identification) are two formulations of the
+      same operational claim. N017 = protocol overview; N013 = the
+      U-R-T identification step.
+    why_forced: |
+      The protocol must include the gradient-identification step;
+      coordinate identification belongs to the operational protocol.
+      Pair structurally required.
+
+  # === N017: Operational Protocol ===
+
+  - source: N017
+    target: DEF
+    label: operational_protocol_realises_DEF_in_substrate
+    edge_status: D
+    justification: |
+      N017 provides the operational form of DEF: how to apply A_0 = argmin Z
+      in any substrate. DEF supplies the structure; N017 supplies the
+      runtime protocol.
+    why_forced: |
+      DEF without protocol = unactionable; protocol without DEF =
+      ungrounded. Required pair.
+
+  # === N027: Fermat's Principle as A_0 ===
+
+  - source: N027
+    target: N_NoSeparatePieces
+    label: optical_substrate_not_separate_from_rest_of_physics
+    edge_status: D
+    justification: |
+      Fermat's principle (optics) is the same A_0 as Hamilton's principle
+      (mechanics) and Einstein-Hilbert action (gravity). They are
+      coordinate readings of one variational A_0 across different
+      physical substrates.
+    why_forced: |
+      Treating optics as separate from variational mechanics violates
+      empirical equivalence; treating them as coordinate readings
+      respects N_NoSeparatePieces.
+
+  - source: N027
+    target: N182
+    label: fermat_and_path_integral_two_substrate_readings_of_argmin_S
+    edge_status: D
+    justification: |
+      Fermat's principle (classical optics) and the path integral
+      (quantum mechanics) are two substrate-readings of the same
+      argmin S = action principle. N182 captures the quantum coordinate;
+      N027 captures the classical optical coordinate.
+    why_forced: |
+      Without the link, optics and QM appear as separate variational
+      programs; with it, they are one A_0. The pair structurally required
+      by N_NoSeparatePieces.
+
+  # === N016: Chalmers Zombie ===
+
+  - source: N016
+    target: N187
+    label: zombie_and_hard_problem_dissolution_pair
+    edge_status: D
+    justification: |
+      Chalmers's zombie argument and the Hard Problem dissolution
+      (N187) are paired: the argument's force evaporates once
+      observer-as-object presupposition is dropped (the same
+      presupposition the Hard Problem dissolution removes).
+    why_forced: |
+      Dissolution of one (zombie) entails dissolution of the other
+      (Hard Problem) and vice versa — same observer-reification
+      removed in both.
+
+  - source: N016
+    target: N_TopologyProcessIdentity
+    label: zombie_argument_dissolves_by_process_not_object
+    edge_status: D
+    justification: |
+      The zombie argument requires qualia as objects (treatable
+      independently of process). Under N_TopologyProcessIdentity
+      (process not object), the argument's premise fails — qualia
+      are coordinate readings of process, not extractable objects.
+    why_forced: |
+      Process-not-object is the structural mechanism of the dissolution;
+      without it, the dissolution lacks ground.
+
+  # === N022: Null Result ===
+
+  - source: N022
+    target: N_InversiveTheory
+    label: null_result_is_forced_absence_inversive_form
+    edge_status: D
+    justification: |
+      Framework's null prediction = "the structurally-forbidden alternative
+      yields no detection". N022 IS N_InversiveTheory predicting the
+      experimental absence: the alternative (positive result for
+      forbidden process) does not survive structural removal.
+    why_forced: |
+      Null prediction without inversive grounding is post-hoc;
+      with grounding, it is forced. The link is structural.
+
+  # === N024: Classical Evaluation Criteria as Inherited Frame ===
+
+  - source: N024
+    target: N_OntologyParadigmGrammarBound
+    label: classical_eval_inherits_paradigm_grammar_wall
+    edge_status: D
+    justification: |
+      Classical science's evaluation criteria (predict property values
+      of objects) inherit the S-V-O grammar substrate. N024 IS the
+      paradigm-level critique of evaluation methodology; the inheritance
+      mechanism is N_OntologyParadigmGrammarBound's grammar wall.
+    why_forced: |
+      Inherited frame requires source frame; the source IS the
+      grammar-bound paradigm. Identity is structural.
+
+  - source: N024
+    target: N025
+    label: criterion_critique_paired_with_frame_shift_remedy
+    edge_status: D
+    justification: |
+      N024 critiques classical-eval criteria; N025 proposes the frame
+      shift to topology as remedy. Critique + remedy pair forms the
+      methodological contrast.
+    why_forced: |
+      Critique without remedy is diagnostic only; remedy without
+      critique lacks motivation. Pair is required.
+
+  # === N026: LM + Human + Response as One Process ===
+
+  - source: N026
+    target: N_NoSeparatePieces
+    label: LM_human_response_three_coordinates_of_one_process
+    edge_status: D
+    justification: |
+      The LM + human + response triple is not three interacting objects;
+      it is one process of signal transitions, with the BPI parsing
+      carving apparent objects. This IS N_NoSeparatePieces stated for
+      the LM-conversation substrate.
+    why_forced: |
+      Treating the triple as three separate objects contradicts unity;
+      the one-process reading respects it. Substantively required.
+
+  - source: N026
+    target: N018
+    label: LM_unification_paired_with_autoregressive_A0_reading
+    edge_status: D
+    justification: |
+      N018 establishes autoregressive LLM generation as A_0; N026
+      extends this to the full LM+human+response triple. They are
+      single-LLM and full-conversation readings of the same A_0.
+    why_forced: |
+      Single-LLM A_0 reading without full-conversation extension is
+      partial; conversation reading without single-LLM grounding is
+      ungrounded. Pair is required.
+
 nodes:
 
   - id: N_OntologyParadigmGrammarBound
