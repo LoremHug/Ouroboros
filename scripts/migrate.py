@@ -366,17 +366,50 @@ def apply_additions(conn) -> tuple[int, int]:
     e_added = 0
 
     import json as _json
+    # Field name → (param key, type coercion)
+    FIELD_MAP = {
+        "title":                  ("title",     str),
+        "layer":                  ("layer",     str),
+        "status":                 ("status",    str),
+        "anchors":                ("anchors",   int),
+        "a_infinity":             ("a_inf",     bool),
+        "summary":                ("summary",   str),
+        "why_status":             ("why",       str),
+        "not_misinterpretations": ("not_m",     str),
+        "content":                ("content",   str),
+        "z_struct":               ("zs",        float),
+        "z_therm":                ("zt",        float),
+        "z_hidden":               ("zh",        float),
+        "level":                  ("lvl",       int),
+        "is_placeholder":         ("ph",        bool),
+    }
+
     for nspec in data.get("nodes") or []:
         nid = nspec["id"]
-        # Preserve existing aliases unless yaml explicitly provides them
-        existing_aliases = "[]"
-        try:
-            r = conn.execute("MATCH (n:Node {id: $id}) RETURN n.aliases", {"id": nid})
-            if r.has_next():
-                existing_aliases = r.get_next()[0] or "[]"
-        except Exception:
-            pass
-        conn.execute("MATCH (n:Node {id: $id}) DETACH DELETE n", {"id": nid})
+        r = conn.execute("MATCH (n:Node {id: $id}) RETURN count(n)", {"id": nid})
+        exists = r.get_next()[0] > 0
+
+        if exists:
+            # Partial update: SET only fields explicitly provided in yaml.
+            # Preserves all other fields AND existing edges.
+            sets = []
+            params: dict = {"id": nid}
+            for yaml_field, (param_key, coerce) in FIELD_MAP.items():
+                if yaml_field in nspec:
+                    sets.append(f"n.{yaml_field} = ${param_key}")
+                    params[param_key] = coerce(nspec[yaml_field])
+            if "aliases" in nspec:
+                sets.append("n.aliases = $aliases")
+                params["aliases"] = _json.dumps(nspec["aliases"], ensure_ascii=False)
+            if sets:
+                conn.execute(
+                    f"MATCH (n:Node {{id: $id}}) SET {', '.join(sets)}",
+                    params,
+                )
+            n_added += 1
+            continue
+
+        # New node: CREATE with defaults + yaml overrides
         layer_value = nspec.get("layer") or layer_of(nid).value
         params = {
             "id": nid,
@@ -394,7 +427,7 @@ def apply_additions(conn) -> tuple[int, int]:
             "zh": float(nspec.get("z_hidden", 0.0)),
             "lvl": int(nspec.get("level", -1)),
             "ph": bool(nspec.get("is_placeholder", False)),
-            "aliases": _json.dumps(nspec["aliases"], ensure_ascii=False) if "aliases" in nspec else existing_aliases,
+            "aliases": _json.dumps(nspec.get("aliases", []), ensure_ascii=False),
         }
         conn.execute(
             """
