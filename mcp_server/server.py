@@ -603,6 +603,94 @@ def rp_gate(text: str, format: str = "json") -> str:
     return json.dumps(_rp_gate.summarise(text), ensure_ascii=False, default=str)
 
 
+@mcp.tool()
+def rp_gate_twin_check(
+    node_id: str = "",
+    neighbors_csv: str = "",
+    jaccard_high: float = 0.7,
+    jaccard_med: float = 0.5,
+    min_shared: int = 3,
+    format: str = "json",
+) -> str:
+    """Structural twin detector — round 38 M3 motif application.
+
+    Detects whether a candidate node has identical or near-identical
+    neighbour set to existing graph nodes (Jaccard >= jaccard_med).
+    Twins can be (a) genuine carrier-level identity, (b) duplication
+    candidate, (c) family-cousin in K_n motif, (d) low-overlap noise.
+
+    Two modes:
+      1. Existing-node mode: pass node_id of an existing graph node to
+         lint it against the rest of the graph.
+      2. Candidate-neighbours mode: pass neighbors_csv = "id1,id2,..."
+         of a hypothetical new node's connections; reports potential
+         twins before insertion.
+
+    Severity:
+      HIGH (Jaccard >= jaccard_high): MERGE_CANDIDATE / CARRIER_DUPLICATE
+      MEDIUM (>= jaccard_med):         FAMILY_COUSIN (M2/M5 cousin pattern)
+      LOW:                              LOW_OVERLAP (incidental)
+
+    Returns json (structured) or report (markdown).
+    """
+    conn = _conn()
+    res = conn.execute("MATCH (n:Node) RETURN n.id ORDER BY n.id")
+    ids = [r[0] for r in _rows(res)]
+    nbrs: dict[str, set[str]] = {}
+    for nid in ids:
+        res = conn.execute(
+            "MATCH (a:Node {id: $id})-[:Edge]-(b:Node) RETURN DISTINCT b.id",
+            {"id": nid},
+        )
+        nbrs[nid] = {r[0] for r in _rows(res)}
+
+    direct_edge_labels: dict[str, list[str]] = {}
+    if node_id:
+        if node_id not in nbrs:
+            err = {"error": f"node_id '{node_id}' not found in graph"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+        candidate_neighbors = nbrs[node_id]
+        candidate_id = node_id
+        # Collect edge labels between candidate_id and each direct neighbour
+        for nbr in candidate_neighbors:
+            res = conn.execute(
+                "MATCH (a:Node {id: $a})-[e:Edge]-(b:Node {id: $b}) "
+                "RETURN e.label",
+                {"a": candidate_id, "b": nbr},
+            )
+            labels = [r[0] for r in _rows(res) if r[0]]
+            if labels:
+                direct_edge_labels[nbr] = labels
+    elif neighbors_csv:
+        candidate_neighbors = {
+            x.strip() for x in neighbors_csv.split(",") if x.strip()
+        }
+        unknown = candidate_neighbors - set(ids)
+        if unknown:
+            err = {"error": f"unknown neighbours: {sorted(unknown)}"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+        candidate_id = None
+    else:
+        err = {"error": "must provide either node_id or neighbors_csv"}
+        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+
+    flags = _rp_gate.detect_structural_twins(
+        candidate_neighbors=candidate_neighbors,
+        existing_node_neighbors=nbrs,
+        candidate_id=candidate_id,
+        jaccard_high=jaccard_high,
+        jaccard_med=jaccard_med,
+        min_shared=min_shared,
+        direct_edge_labels=direct_edge_labels or None,
+    )
+    if format == "report":
+        return _rp_gate.format_twin_report(flags, candidate_id=candidate_id)
+    summary = _rp_gate.summarise_twins(flags)
+    summary["candidate_id"] = candidate_id
+    summary["candidate_neighbor_count"] = len(candidate_neighbors)
+    return json.dumps(summary, ensure_ascii=False, default=str)
+
+
 # ────────────────────────────────────────────────────── ENTRY
 
 def main() -> None:
