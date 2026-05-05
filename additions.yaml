@@ -7892,6 +7892,195 @@ edges:
       costs, all three coordinates are active. FEP is the corresponding
       argmin over the full simplex.
 
+  # Round 18: critical missing direct edges in the core
+  # The 19 core nodes are 100% reachable in ≤3 hops, but 34% direct density
+  # is too sparse for the framework's "one structure" claim.
+  # This round closes the most structurally critical direct-edge gaps.
+
+  # === Tier 1: DEF direct missing (5 edges) ===
+
+  - source: DEF
+    target: N_TopologyProcessIdentity
+    label: definition_generates_topology_process_identity
+    edge_status: D
+    justification: |
+      DEF defines A_0 as argmin Z over transitions (processes), not over
+      objects. The "process not object" reading is the immediate corollary:
+      A_0 is a topology of process, with object-frame removable. This IS
+      N_TopologyProcessIdentity, derived from DEF in one structural step.
+      Currently the relation routes through N_InversiveTheory and
+      N_NoSeparatePieces; the direct edge makes the corollary explicit.
+    why_forced: |
+      Alternative requires DEF without process-not-object content — but
+      argmin Z is defined over transitions, so process is primary by
+      construction. Or N_TopologyProcessIdentity grounded by something
+      other than DEF — but every grounding route reduces to "A_0 is
+      process, not object", which is DEF directly.
+
+  - source: DEF
+    target: N_EpistemicTraps
+    label: definition_grounds_failure_mode_catalog
+    edge_status: D
+    justification: |
+      The trap catalogue (R1-R4) catalogs failures of A_0 application.
+      Each trap is a specific way reasoning departs from the structural
+      consequences of DEF. Without DEF as the canonical reference, the
+      traps have no shared root; with it, they are coordinate readings
+      of one departure pattern (frame fabrication outside A_0).
+    why_forced: |
+      Alternative requires the trap catalogue grounded by an empirical
+      enumeration unrelated to DEF — but every trap test reduces to
+      "did this reasoning step depart from argmin Z?", which is DEF
+      directly. The catalogue's coherence requires DEF as root.
+
+  - source: DEF
+    target: N_OntologyGate
+    label: definition_grounds_operational_interception
+    edge_status: D
+    justification: |
+      N_OntologyGate is the operational protocol for intercepting
+      ontology-trap moves during reasoning. DEF specifies what counts
+      as a valid A_0 move; the gate fires when a candidate move violates
+      DEF's structural commitments. The gate is DEF's runtime expression.
+    why_forced: |
+      Alternative requires the gate grounded by some other principle —
+      but the gate's correctness criterion is precisely "does this
+      move respect argmin Z?", which is DEF directly. Without DEF, the
+      gate has no decision criterion.
+
+  - source: DEF
+    target: N187
+    label: definition_grounds_hard_problem_dissolution
+    edge_status: D
+    justification: |
+      DEF's argmin Z requires an embedded BPI to evaluate (per N112).
+      The BPI's self-reference is the BPI evaluating its own argmin
+      operation; this self-reference IS subjectivity per N187. The Hard
+      Problem dissolves because the BPI does not have separate "what
+      it is like" content — its self-reference IS the content.
+    why_forced: |
+      Alternative requires N187's dissolution from a non-DEF ground —
+      but every consistent dissolution route reduces to "subjectivity
+      = BPI self-reference in argmin Z", which is DEF self-applied.
+
+  - source: DEF
+    target: N188
+    label: definition_grounds_qualia_as_Z_patterns
+    edge_status: D
+    justification: |
+      Qualia as Z-component patterns (N188) are the BPI-internal readout
+      of the same Z-functional that DEF defines. Specific qualia content
+      = specific (Z_struct, Z_therm, Z_hidden) pattern read from inside
+      the BPI's own coordinate system. Direct corollary of DEF + N112.
+    why_forced: |
+      Alternative requires qualia as something other than Z-patterns —
+      any candidate would need its own Z-vector to enter the framework,
+      reducing to qualia = Z-patterns by another name. DEF is the
+      canonical source.
+
+  # === Tier 2: horizontal core edges (5 edges) ===
+
+  - source: N_Triangulation
+    target: N_NoSeparatePieces
+    label: triangulation_is_no_pieces_at_coordinate_level
+    edge_status: D
+    justification: |
+      Triangulation says: minimum 3 independent coordinates needed to
+      pin one structure. N_NoSeparatePieces says: there is one structure
+      across all domains. Triangulation IS no-separate-pieces at the
+      coordinate level — the three coordinates are not pieces of the
+      structure but coordinate readings of the same one. Same principle,
+      coordinate-level vs domain-level reading.
+    why_forced: |
+      Treating triangulation and no-pieces as separate principles
+      contradicts both: triangulation's three coordinates ARE the
+      "no pieces" structure unfolded as readouts. Without this direct
+      identification, the framework hides its central structural unity.
+
+  - source: N_Triangulation
+    target: N_TopologyProcessIdentity
+    label: triangulation_supplies_min_coords_for_identity
+    edge_status: D
+    justification: |
+      For N_TopologyProcessIdentity to operate (one process, many
+      coordinates), there must be at least three independent coordinates
+      to triangulate the process — fewer give degenerate readout.
+      Triangulation supplies the minimum-dimensionality precondition;
+      topology-process identity supplies the unification across them.
+      Two faces of one structural requirement.
+    why_forced: |
+      Identity without triangulation = under-determined coordinate
+      readout (Birkhoff failure mode); triangulation without identity
+      = three coordinates without unified ground. Both are needed
+      simultaneously, forcing the direct relationship.
+
+  - source: N370
+    target: N_NoSeparatePieces
+    label: L31_is_no_pieces_in_topology
+    edge_status: D
+    justification: |
+      L(3,1) inevitability (N370): there is exactly one Riemannian
+      manifold consistent with vertex-transitive baryon-exclusion + Z₃
+      action. "Exactly one" IS no-separate-pieces in the topology
+      substrate: the manifold is not a piece among possible manifolds,
+      it IS the unique structure forced. Same principle of unity,
+      manifested as topological uniqueness.
+    why_forced: |
+      Treating L(3,1) as one option among admissible manifolds
+      contradicts both N370's inevitability proof and N_NoSeparatePieces.
+      The unique-manifold result IS no-pieces in topological substrate;
+      the direct edge makes this concrete.
+
+  - source: N_FEP
+    target: N_InversiveTheory
+    label: variational_inference_is_inversive_at_distribution_level
+    edge_status: D
+    justification: |
+      FEP's variational free-energy minimisation tests candidate
+      posteriors q against the true posterior p, accepting only the
+      one that survives the variational comparison. This IS the
+      inversive removal test (alternatives must dissolve) operating
+      at the level of probability distributions. FEP is N_InversiveTheory
+      in Bayesian-substrate.
+    why_forced: |
+      Variational inference without inversive testing = accept any
+      posterior (no selection); inversive testing without variational
+      machinery = no candidate-evaluation procedure. The two are one
+      operation under coordinate restriction to distribution space.
+
+  # === Tier 3: N_ForcedId outgoing closure (2 edges) ===
+
+  - source: N_ForcedId
+    target: DEF
+    label: forced_identification_is_what_DEF_names
+    edge_status: D
+    justification: |
+      N_ForcedId's principle ("A_0 is the structure of any description,
+      not a description of something") IS DEF stated from inside the
+      principle's own perspective. The two are coordinate readings
+      of the same identity: DEF as outward formula, N_ForcedId as
+      inward self-statement.
+    why_forced: |
+      N_ForcedId without grounding in DEF leaves it as a free-standing
+      claim with no canonical reference; DEF without N_ForcedId leaves
+      its self-reference structure unstated. The bidirectional
+      identification closes both gaps.
+
+  - source: N_ForcedId
+    target: N_NoSeparatePieces
+    label: forced_identification_implies_unity
+    edge_status: D
+    justification: |
+      If A_0 is forcibly identified with the structure of any description
+      (N_ForcedId), then there is no description outside A_0 — i.e.,
+      no separate pieces. The unity claim of N_NoSeparatePieces follows
+      directly from N_ForcedId's identification.
+    why_forced: |
+      ForcedId without unity implication leaves the question "are
+      there multiple A_0s?" open — but ForcedId says A_0 is THE
+      structure (singular), forcing unity. The edge makes the
+      single-A_0 reading structural, not contingent.
+
 nodes:
   # Round 17: new structural node N_ZSimplexProjections
   - id: N_ZSimplexProjections
