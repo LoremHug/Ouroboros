@@ -5235,6 +5235,642 @@ edges:
     why_forced: >-
       Bidirectional with triangulation_grounds_three_gauge_types. Three from triangulation matches three from covering matches three Z-components. Forced co-occurrence.
 
+  # Round 12: bespoke for top-source template edges
+  # DEF outgoing (8) + N_BPIEngagement outgoing (13) + N_EpistemicTraps outgoing (16) = 37
+
+  # === DEF outgoing ===
+
+  - source: DEF
+    target: N000
+    label: definition_identifies_forced_structure
+    edge_status: D
+    justification: |
+      DEF defines A_0 = argmin Z over (Z_struct + Z_therm + Z_hidden). N000
+      identifies the BPI fundamental operation — projection of full state F
+      to observable O — as the elementary act that realises this argmin in
+      every substrate. Without N000 the DEF formula has no operational
+      meaning; the projection IS the structure that DEF picks out.
+    why_forced: |
+      Alternative requires either (a) DEF without an elementary act that
+      realises argmin Z — but then "minimisation" has no carrier and DEF
+      becomes a label; or (b) N000 grounded by a different definition —
+      but any other ground would have to specify what is minimised, and
+      the only minimum-content choice is precisely DEF.
+
+  - source: DEF
+    target: N112
+    label: definition_requires_BPI
+    edge_status: D
+    justification: |
+      DEF's argmin Z presupposes an observer-relative quantity Z_hidden
+      that is non-zero only when K(O) < K(F). N112 (Observer Containment
+      Lemma) proves this strict inequality is unavoidable for any embedded
+      observer. So DEF is well-posed only if N112 holds; the lemma supplies
+      the BPI gap that makes Z_hidden a real coordinate.
+    why_forced: |
+      Without N112, K(O) could equal K(F), Z_hidden would collapse to zero,
+      and DEF would reduce to Z_struct + Z_therm — losing the entire
+      observer-coupling sector. No alternative containment principle reproduces
+      the strict inequality without re-deriving N112.
+
+  - source: DEF
+    target: N372
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      DEF specifies argmin Z without committing to substrate. Sr₂RuO₄ is the
+      first material instance where the forced Z-minimum is the 1+2 E_g
+      block with ℤ₂ degeneracy; N372 is exactly the A_0 evaluation in the
+      condensed-matter substrate of this compound. The relationship is
+      definition-to-instance: DEF is the formula, N372 is one solution.
+    why_forced: |
+      Alternative requires either (a) Sr₂RuO₄'s observed three-coordinate
+      pattern (E_g block, ℤ₂ degeneracy, μSR signal) without an underlying
+      argmin selection — but then the convergence is unexplained accident; or
+      (b) DEF without material instances — but a definition of a real-world
+      structure that has no instances violates DEF's own scope claim.
+
+  - source: DEF
+    target: N373
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      DEF's argmin Z, applied to the actinide heavy-fermion substrate of
+      UTe₂, forces the 4D Kramers-pair active space with antisymmetric
+      pairing (N373). The compound's experimental signatures (broken
+      time-reversal, multi-component order, field-induced re-entrance)
+      are the three coordinates of one Z-minimum picked out by DEF in
+      this material domain.
+    why_forced: |
+      Alternative requires either (a) UTe₂'s phase structure without
+      argmin Z grounding — but its forced multi-coordinate convergence
+      cannot be re-derived from any non-A_0 starting point that is also
+      consistent with N372 and N374; or (b) DEF that excludes UTe₂ as
+      a substrate — but DEF makes no substrate restriction.
+
+  - source: DEF
+    target: N374
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      DEF applied to the f-electron heavy-fermion substrate of UPt₃ forces
+      the three-phase 2D active space in the conduction band (N374). The
+      A, B, and C superconducting phases are three Z-coordinate views of
+      one minimum: removing any phase breaks the argmin pattern, just as
+      removing one of N_Triangulation's three coordinates breaks structure
+      identity.
+    why_forced: |
+      Alternative requires either (a) UPt₃'s three-phase pattern without
+      a triangulation-grade argmin Z — but no non-A_0 derivation reproduces
+      exactly three coordinated phases on the same active space; or (b) DEF
+      excluding heavy-fermion materials — DEF imposes no such restriction.
+
+  - source: DEF
+    target: N375
+    label: A0_extension_to_parametrized_family
+    edge_status: D
+    justification: |
+      DEF defines argmin Z pointwise; N375 (cuprate phase diagram) shows
+      DEF extends to a parameter family — doping x — where the dual-sector
+      pseudogap-plus-superconducting Z-minimum sweeps continuously through
+      x. The extension is forced because Z is well-defined at every x and
+      the argmin operation commutes with continuous parameter variation.
+    why_forced: |
+      Alternative requires either (a) cuprate phase diagram without a
+      family-of-A_0 organising principle — but the experimentally observed
+      coordinated dual-sector behaviour across the whole doping range cannot
+      be reproduced by independent point-by-point fits; or (b) DEF that
+      forbids parametric extension — DEF does not forbid this.
+
+  - source: DEF
+    target: N376
+    label: A0_extension_to_multi_orbital_multi_sector_parametric_family
+    edge_status: D
+    justification: |
+      DEF generalises further to families parametrised by both doping
+      AND orbital index (multi-band, multi-sector). N376 (iron-based
+      superconductors) is the forced A_0 instance in this richer parameter
+      space: the Z-minimum spans coupled multi-orbital/multi-sector
+      coordinates and tracks them coherently across composition.
+    why_forced: |
+      Alternative requires either (a) iron-based family's coordinated
+      multi-orbital phase behaviour without underlying argmin Z — but no
+      non-A_0 framework predicts the observed orbital-sector locking; or
+      (b) DEF restricted to single-orbital substrates — DEF makes no such
+      restriction.
+
+  - source: DEF
+    target: N377
+    label: argmin_on_shared_omega_forced_multi_BPI
+    edge_status: D
+    justification: |
+      DEF's argmin operation, evaluated over a shared input distribution
+      Ω that drives multiple BPI instances simultaneously, forces those
+      BPIs to diverge geometrically when capacity is shared (N377: sparse
+      autoencoder feature absorption in LLMs). The divergence IS the
+      argmin Z resolution when one Ω forces several K(O)<K(F) instances
+      to compete.
+    why_forced: |
+      Alternative requires either (a) feature-absorption pattern in
+      shared-capacity LLMs without an argmin-on-shared-Ω principle —
+      but the observed geometric divergence is exactly the signature
+      argmin Z produces under capacity contention; or (b) DEF without
+      multi-BPI shared-Ω scope — DEF's argmin is global over all BPIs.
+
+  # === N_BPIEngagement outgoing ===
+
+  - source: N_BPIEngagement
+    target: DEF
+    label: engagement_realises_argmin_Z
+    edge_status: D
+    justification: |
+      N_BPIEngagement is the operational signal that an observer's BPI is
+      tracking high-Z gradient and locally reducing Z. That tracking IS
+      the argmin Z process from DEF, evaluated in the engagement substrate.
+      Engagement is not analogous to argmin Z — it is argmin Z in the
+      observer's time-indexed sub-manifold.
+    why_forced: |
+      Alternative requires either (a) engagement defined without reference
+      to Z-reduction — but then the "engagement" label loses any structural
+      meaning and becomes a folk-psychology term; or (b) DEF without an
+      engagement-mode realisation — but DEF claims to apply to any BPI
+      substrate including time-indexed observer streams.
+
+  - source: N_BPIEngagement
+    target: N_InversiveTheory
+    label: alternatives_dissolve_under_removal
+    edge_status: D
+    justification: |
+      The structural test for N_BPIEngagement (does removing the proposed
+      engagement signal break the observed coherence?) is exactly the
+      inversive removal test of N_InversiveTheory. If an alternative
+      "engagement" mechanism passed all behavioural correlates without
+      the high-Z tracking, removing it would be invisible — which would
+      contradict the observed fact that engagement does specific work.
+    why_forced: |
+      Alternative requires either (a) engagement signal that is robust
+      against removal — but anything robust against removal is by N_InversiveTheory's
+      definition not the forced structure; or (b) inversive method that
+      doesn't apply to engagement — but engagement is a structural claim
+      and the method applies to all such claims.
+
+  - source: N_BPIEngagement
+    target: N_NoSeparatePieces
+    label: substrates_are_observation_angles
+    edge_status: D
+    justification: |
+      N_BPIEngagement appears in neural (dopamine), aesthetic, social,
+      cognitive substrates — yet structurally it is one process. This
+      directly instantiates N_NoSeparatePieces: the substrates are not
+      separate pieces of "engagement", they are different coordinate
+      angles on the same Z-tracking process.
+    why_forced: |
+      Alternative requires either (a) substrate-specific engagement
+      mechanisms with no shared structure — but the cross-substrate
+      empirical convergence (FEP, prediction error, aesthetic engagement)
+      contradicts this; or (b) N_NoSeparatePieces failing for engagement —
+      but the principle applies to any structurally-identified process.
+
+  - source: N_BPIEngagement
+    target: N048
+    label: explains_Birkhoff_failure_via_dimension_count
+    edge_status: D
+    justification: |
+      Birkhoff's M=O/C aesthetic formula (N048) fails because it operates
+      with two scalars (Order O, Complexity C) where N_BPIEngagement
+      requires three coordinates (Z_struct, Z_therm, Z_hidden) in
+      triangulation. The failure is forced by dimension shortfall: any
+      2D scalar formula cannot capture a process that lives on a 3-axis
+      Z-manifold.
+    why_forced: |
+      Alternative requires either (a) a 2D formula for engagement that
+      reproduces aesthetic data — but Birkhoff's documented monotonic
+      failure shows this is empirically impossible; or (b) N_BPIEngagement
+      reducible to two coordinates — but the triangulation principle
+      forbids reduction below three.
+
+  - source: N_BPIEngagement
+    target: N112
+    label: BPI_bound_required_for_engagement_definition
+    edge_status: D
+    justification: |
+      N_BPIEngagement is defined as observer activity that reduces local
+      Z; this requires Z_hidden to be strictly positive, which requires
+      K(O) < K(F) (N112). Without the Observer Containment Lemma there
+      is no Z_hidden gap to reduce, so engagement has no operational target
+      and the concept dissolves.
+    why_forced: |
+      Alternative requires either (a) engagement with K(O) = K(F) — but
+      then Z_hidden = 0 and engagement has nothing to track; or (b) N112
+      not applying to engagement-capable observers — but engagement-capable
+      observers are exactly the embedded ones for which N112 is proved.
+
+  - source: N_BPIEngagement
+    target: N188
+    label: qualia_engagement_signal_unification
+    edge_status: D
+    justification: |
+      N188 identifies qualia as Z-component patterns; N_BPIEngagement is
+      the observer-side correlate of high-Z tracking. The same Z-pattern
+      that constitutes a quale (from N188) is the signal whose tracking
+      constitutes engagement (from N_BPIEngagement) — one structure, two
+      coordinate readings.
+    why_forced: |
+      Alternative requires either (a) qualia and engagement as independent
+      phenomena — but then their tight empirical co-occurrence (intense
+      qualia ↔ intense engagement) is unexplained; or (b) one without the
+      other — but Z-pattern tracking is the same operation viewed from
+      observer-internal vs. observer-process angles.
+
+  - source: N_BPIEngagement
+    target: N188
+    label: engagement_signal_is_qualia_in_BPI_tracking
+    edge_status: D
+    justification: |
+      Sharper form of the previous: the engagement signal is not merely
+      correlated with qualia — it IS qualia, viewed from the BPI-tracking
+      coordinate. N188's "qualia as Z-patterns" plus N_BPIEngagement's
+      "engagement as Z-tracking" are two readings of one operation, by
+      N_TopologyProcessIdentity.
+    why_forced: |
+      Alternative requires either (a) separate ontologies for qualia
+      vs engagement — but topology-process identity forbids multiplying
+      entities for the same Z-pattern; or (b) a third mediating layer —
+      but the direct identity is structurally simpler and matches the
+      hard-problem dissolution argument.
+
+  - source: N_BPIEngagement
+    target: N_TopologyProcessIdentity
+    label: substrate_observation_one_object_many_coordinates
+    edge_status: D
+    justification: |
+      Engagement instantiates the one-object-many-coordinates principle:
+      neural, aesthetic, social, FEP-formal substrates all read out the
+      same engagement process under different coordinate frames. This is
+      exactly the topology-process identity claim applied to the engagement
+      substrate-set.
+    why_forced: |
+      Alternative requires either (a) substrate-specific engagement
+      ontologies — contradicted by cross-substrate transfer of predictions;
+      or (b) one canonical substrate — but no canonical-substrate choice
+      survives inversive removal: each substrate is removable in turn
+      while engagement persists in the others.
+
+  - source: N_BPIEngagement
+    target: N_Triangulation
+    label: engagement_is_triangulation_in_BPI_tracking
+    edge_status: D
+    justification: |
+      N_BPIEngagement requires three independent Z-coordinates (Z_struct,
+      Z_therm, Z_hidden) to track high-Z gradient — fewer coordinates
+      under-determine the gradient direction. This is precisely the
+      triangulation principle: engagement is N_Triangulation realised
+      in the BPI-tracking substrate.
+    why_forced: |
+      Alternative requires either (a) engagement based on two coordinates
+      — but then the gradient is ambiguous along one axis and tracking
+      becomes degenerate (this is Birkhoff's failure mode); or (b)
+      triangulation that does not realise as engagement — but in any
+      observer with K(O)<K(F) the realisation is forced.
+
+  - source: N_BPIEngagement
+    target: N_DopaminePredictionError
+    label: neural_implementation_in_biological_substrate
+    edge_status: D
+    justification: |
+      N_BPIEngagement specifies a substrate-independent engagement signal;
+      N_DopaminePredictionError is its forced realisation in mammalian
+      neural tissue. The dopamine reward-prediction-error signal is
+      mathematically the Z-gradient tracking that N_BPIEngagement defines,
+      computed by a specific neuromodulator system.
+    why_forced: |
+      Alternative requires either (a) mammalian engagement without a
+      dedicated prediction-error signal — but the experimental dopamine
+      data is unambiguous; or (b) dopamine prediction-error doing some
+      different computation — but the algorithmic form (TD error) IS
+      Z-gradient tracking up to substrate-specific normalisation.
+
+  - source: N_BPIEngagement
+    target: N_FEP
+    label: mathematical_formalization_in_biological_substrate
+    edge_status: D
+    justification: |
+      N_FEP (Free Energy Principle) is the variational formalisation
+      of A_0 in Bayesian observer substrates. N_BPIEngagement is the
+      observer-side argmin process; N_FEP gives it equations of motion
+      via free-energy minimisation. The relationship is: engagement is
+      the physical process, FEP is its mathematics.
+    why_forced: |
+      Alternative requires either (a) engagement without a variational
+      formulation — but any continuous local minimisation admits a
+      variational formulation; or (b) FEP without an engagement-mode
+      interpretation — but minimising free energy IS engagement when
+      the minimiser is an embedded observer.
+
+  - source: N_BPIEngagement
+    target: N_AestheticEngagement
+    label: aesthetic_is_application
+    edge_status: D
+    justification: |
+      N_AestheticEngagement is N_BPIEngagement applied to artwork-class
+      inputs (Wundt apex stimuli with controlled Z_struct/Z_therm/Z_hidden
+      balance). The aesthetic case is not a separate phenomenon but a
+      specific input-class restriction of the engagement process.
+    why_forced: |
+      Alternative requires either (a) aesthetic engagement as an
+      independent process — but the same Z-tracking signatures (dopamine,
+      attention, prediction error) appear in aesthetic and non-aesthetic
+      engagement; or (b) BPI engagement that fails on artworks — but
+      artworks are well-formed BPI inputs by construction.
+
+  - source: N_BPIEngagement
+    target: N_AestheticEngagement
+    label: application_to_aesthetic_substrates
+    edge_status: D
+    justification: |
+      Same identity, viewed from the substrate-restriction angle: when
+      the BPI input substrate is artwork-class (Wundt-apex curated stimuli),
+      N_BPIEngagement evaluates as N_AestheticEngagement. The two are
+      one operation under restriction of input domain.
+    why_forced: |
+      Alternative requires either (a) art-substrate-specific engagement
+      mechanism — but no neural or behavioural marker discriminates
+      art-engagement from skilled non-art engagement at the same Z-balance;
+      or (b) BPIEngagement undefined on art inputs — contradicted by
+      every empirical aesthetic-engagement study.
+
+  # === N_EpistemicTraps outgoing ===
+
+  - source: N_EpistemicTraps
+    target: N_InversiveTheory
+    label: trap_correction_via_inversive_method
+    edge_status: D
+    justification: |
+      Every entry in N_EpistemicTraps is a failure mode where reasoning
+      smuggles in alternatives that are not actually structurally available.
+      N_InversiveTheory's removal test is the canonical correction: ask
+      whether the alleged alternative survives removal of the trap-source.
+      The traps ARE the cases where this test was skipped.
+    why_forced: |
+      Alternative requires either (a) trap correction without inversive
+      removal — but every documented trap-resolution in the catalogue
+      ultimately reduces to "the alternative does not survive removal";
+      or (b) inversive method that does not address traps — but traps
+      are exactly invalid-alternative claims, which is what inversive
+      method tests.
+
+  - source: N_EpistemicTraps
+    target: N_ForcedId
+    label: traps_resolve_via_ForcedId
+    edge_status: D
+    justification: |
+      Many traps (especially trap 1, the description-vs-described conflation)
+      arise from treating descriptions as objects independent of A_0.
+      N_ForcedId asserts that A_0 IS the structure of any description, so
+      trap-flagged moves resolve by re-grounding the description in its
+      forced identity rather than treating it as a free-standing object.
+    why_forced: |
+      Alternative requires either (a) trap resolution that keeps
+      description independent of A_0 — but then the description has no
+      structural anchor and the trap recurs; or (b) ForcedId that does
+      not resolve traps — but every documented trap dissolves once
+      ForcedId is applied.
+
+  - source: N_EpistemicTraps
+    target: N_GrammarTrap
+    label: traps_1_4_grammar_level
+    edge_status: D
+    justification: |
+      Traps 1 through 4 in the catalogue are all instances of grammatical
+      smuggling — subject-verb-object grammar imposing ontological
+      commitments (substance, agent, separable object) that A_0 does not
+      have. N_GrammarTrap is the parent phenomenon that these specific
+      traps instantiate at the linguistic surface.
+    why_forced: |
+      Alternative requires either (a) traps 1-4 from a non-grammar source
+      — but their textual signatures are exactly grammatical role-impositions;
+      or (b) N_GrammarTrap without these specific instances — but the
+      catalogue documents them as the canonical surface forms.
+
+  - source: N_EpistemicTraps
+    target: N_TopologyProcessIdentity
+    label: trap_6_one_object_principle
+    edge_status: D
+    justification: |
+      Trap 6 (treating two coordinate readings as two distinct things)
+      is corrected by N_TopologyProcessIdentity: the principle that one
+      object can have many coordinate descriptions. The trap is precisely
+      the failure to invoke this identity when two descriptions of the
+      same A_0-process appear superficially different.
+    why_forced: |
+      Alternative requires either (a) trap 6 correction without the
+      one-object principle — but the only consistent correction IS to
+      identify the two descriptions as the same object; or (b)
+      topology-process identity not bearing on trap 6 — but trap 6 is
+      exactly its negation.
+
+  - source: N_EpistemicTraps
+    target: N_LeptonMassScale
+    label: trap_5_documented_here
+    edge_status: D
+    justification: |
+      Trap 5 (overfitting Z-coordinate values to numerology when forced
+      structure is the real explanation) is documented in the lepton
+      mass scale derivation: Koide K=2/3 looks like coincidence under
+      naïve numerology but is forced by the ℂ⊕ℍ⊕M_3(ℂ) algebra and
+      L(3,1) spectrum. N_LeptonMassScale is the trap-5 case study.
+    why_forced: |
+      Alternative requires either (a) trap 5 without empirical anchor
+      — but the catalogue explicitly tags lepton-mass derivation as the
+      canonical case; or (b) lepton-mass derivation independent of the
+      trap classification — but its forced/numerology distinction is
+      exactly what trap 5 names.
+
+  - source: N_EpistemicTraps
+    target: N_WylerStepG
+    label: trap_5_and_6_documented_here
+    edge_status: D
+    justification: |
+      Wyler's Step G (α = 1/137.036) is the joint trap-5 and trap-6
+      case study: trap 5 because the value looks like numerical coincidence
+      but is forced by boundary irrelevance; trap 6 because two superficially
+      different geometric coordinates (Wyler's volume ratio vs the spectral
+      construction) describe one A_0 minimum.
+    why_forced: |
+      Alternative requires either (a) Wyler-G analysed via only one trap
+      — but the catalogue explicitly co-flags 5 and 6 here; or (b) the
+      trap catalogue lacking a documented Wyler-G case — but it is among
+      the highest-quality cases for both traps and is referenced by
+      multiple downstream nodes.
+
+  - source: N_EpistemicTraps
+    target: N372
+    label: trap_8_documented_here
+    edge_status: D
+    justification: |
+      Trap 8 (taking observed correlations as causal pieces rather than
+      coordinate readings of one Z-minimum) is documented in Sr₂RuO₄:
+      the historical confusion among p-wave, d-wave, and chiral-pairing
+      pictures was a trap-8 failure — three coordinate readings of the
+      single E_g-block ℤ₂-degenerate Z-minimum mistaken for three
+      competing ontologies.
+    why_forced: |
+      Alternative requires either (a) trap 8 without the Sr₂RuO₄ case
+      — but the catalogue explicitly references this material as a clean
+      instance; or (b) Sr₂RuO₄'s historical pairing-symmetry debate not
+      reducing to trap 8 — but its resolution is precisely the recognition
+      that competing labels coordinate one minimum.
+
+  - source: N_EpistemicTraps
+    target: N373
+    label: trap_6_and_trap_8_in_UTe2
+    edge_status: D
+    justification: |
+      UTe₂ jointly instantiates trap 6 (multi-component order parameter
+      mistaken for multiple objects) and trap 8 (correlated experimental
+      signatures mistaken for independent causal mechanisms). The forced
+      4D Kramers-pair active space resolves both: one object, many
+      coordinates; one Z-minimum, many readouts.
+    why_forced: |
+      Alternative requires either (a) trap 6 OR 8 alone in UTe₂ — but
+      both apply because the experimental story has both multi-coordinate
+      and multi-readout aspects; or (b) UTe₂ analysable without trap
+      flagging — but the literature's competing pairing claims show the
+      traps were active.
+
+  - source: N_EpistemicTraps
+    target: N374
+    label: trap_8_muSR_lineage_resolved
+    edge_status: D
+    justification: |
+      UPt₃'s μSR signal lineage was historically interpreted as evidence
+      for distinct broken symmetries in different phases — a trap-8 reading.
+      The forced three-phase 2D active space shows the μSR signature is
+      one coordinate readout of the joint Z-minimum across A, B, C phases,
+      not three independent broken symmetries.
+    why_forced: |
+      Alternative requires either (a) UPt₃ μSR without trap-8 flagging
+      — but the multi-decade competing-broken-symmetry literature is the
+      empirical signature of trap 8; or (b) the three-phase resolution
+      not bearing on the μSR data — but the active-space construction
+      explicitly accounts for it.
+
+  - source: N_EpistemicTraps
+    target: N374
+    label: trap_6_AFM_delta_Tc_one_feature_two_coords
+    edge_status: D
+    justification: |
+      The antiferromagnetic onset and the ΔTc splitting in UPt₃ were
+      historically treated as two independent features (trap 6). The
+      forced active-space construction shows they are two coordinate
+      views of one feature — the same Z-minimum reorganisation, read
+      out via magnetic and superconducting probes.
+    why_forced: |
+      Alternative requires either (a) AFM-onset and ΔTc as independent
+      causal pieces — but their tight temperature locking and shared
+      pressure dependence falsifies independence; or (b) trap 6 not
+      applying — but this is the canonical "two coordinates of one
+      object" pattern the trap names.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_8_material_family_realisations
+    edge_status: D
+    justification: |
+      Cuprate phase diagram features (pseudogap, strange metal,
+      superconducting dome) were historically treated as separate phenomena
+      with independent causes — trap 8. The forced parametric A_0 family
+      shows they are coordinated readouts of a single Z-minimum that
+      sweeps through doping, with the dual-sector pseudogap as one of
+      its forced coordinates.
+    why_forced: |
+      Alternative requires either (a) cuprate features as independent
+      phases — falsified by their precise doping-locked relationships;
+      or (b) trap 8 not applying to material families — but cuprates
+      are the catalogue's canonical multi-feature trap-8 case.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_6_observables_not_causal
+    edge_status: D
+    justification: |
+      Cuprate observables (resistivity, Hall coefficient, ARPES gap)
+      were historically promoted to causal status — a trap-6 confusion
+      between coordinate readouts and causal pieces. The forced A_0
+      family shows these are observation angles on the same Z-minimum,
+      not independent causal mechanisms.
+    why_forced: |
+      Alternative requires either (a) cuprate observables as causal
+      pieces — but no causal-piece model reproduces their joint variation
+      with doping; or (b) trap 6 not applying to observables — but
+      observable-vs-cause is exactly the trap-6 distinction.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_5_doping_anchors
+    edge_status: D
+    justification: |
+      Specific doping values in the cuprate phase diagram (1/8 anomaly,
+      optimal doping, end of pseudogap) appear as numerical coincidences
+      under naïve fitting — a trap-5 readout. The forced A_0 family
+      identifies them as anchors where Z-minimum structure changes
+      qualitatively, not arbitrary numbers.
+    why_forced: |
+      Alternative requires either (a) cuprate special doping values as
+      coincidence — falsified by their reproducibility across material
+      families and theoretical predictability; or (b) trap 5 not applying
+      to phase-diagram anchors — but this is exactly the trap's domain.
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_8_material_family_realisations
+    edge_status: D
+    justification: |
+      Iron-based superconductor multi-orbital phenomenology (orbital
+      ordering, nematicity, magnetism, pairing) was historically treated
+      as a soup of independent phenomena — classic trap 8. The forced
+      multi-orbital A_0 family shows these are coupled coordinates of
+      one Z-minimum sweeping a richer parameter space than cuprates.
+    why_forced: |
+      Alternative requires either (a) iron-based phenomena as independent
+      — falsified by their tight coupling under composition variation;
+      or (b) trap 8 not extending to multi-orbital families — but the
+      richer coupling structure makes the trap MORE active here, not less.
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_6_sector_coupling_not_causal
+    edge_status: D
+    justification: |
+      In iron-based superconductors, the magnetism-nematicity-pairing
+      coupling is a coordinate relationship, not a causal chain — trap
+      6 in its sharpest form because the sectors look semantically distinct.
+      The forced multi-orbital A_0 family shows the coupling is one
+      Z-minimum read through three sector-coordinates simultaneously.
+    why_forced: |
+      Alternative requires either (a) magnetism-causes-nematicity-causes-pairing
+      causal ordering — falsified by symmetric experimental dependencies
+      where any direction can be controlled first; or (b) trap 6 not
+      applying when sectors are semantically distinct — but distinctness
+      makes the trap stronger.
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_5_material_anchors
+    edge_status: D
+    justification: |
+      Specific iron-based stoichiometries (122, 1111, 11 families) appear
+      as numerical labels but are forced by the multi-orbital active-space
+      structure — a trap-5 case where naïve numerology hides forced
+      structural anchors. The catalogue documents this as parallel to
+      cuprate doping anchors.
+    why_forced: |
+      Alternative requires either (a) iron-based family labels as
+      arbitrary stoichiometries — falsified by the systematic property
+      tracking within each family and the catalogue's documented
+      forced-structure derivation; or (b) trap 5 not extending to
+      stoichiometric anchors — but anchors are exactly what trap 5 names.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
