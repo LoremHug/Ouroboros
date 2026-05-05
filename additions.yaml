@@ -3124,6 +3124,1673 @@ edges:
       N_TranslationLayer's claim invokes N_GrammarTrap-content as structural input;
       removing N_GrammarTrap dissolves N_TranslationLayer's derivation chain.
 
+
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_8_material_family_realisations
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'trap 8 material family realisations'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 8 material family realisations' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_6_sector_coupling_not_causal
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'trap 6 sector coupling not causal'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 6 sector coupling not causal' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N376
+    label: trap_5_material_anchors
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'trap 5 material anchors'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 5 material anchors' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_8_material_family_realisations
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds cuprate dual-sector phase diagram through the relationship encoded as 'trap 8 material family realisations'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 8 material family realisations' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_6_observables_not_causal
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds cuprate dual-sector phase diagram through the relationship encoded as 'trap 6 observables not causal'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 6 observables not causal' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N375
+    label: trap_5_doping_anchors
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds cuprate dual-sector phase diagram through the relationship encoded as 'trap 5 doping anchors'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 5 doping anchors' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N374
+    label: trap_8_muSR_lineage_resolved
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'trap 8 muSR lineage resolved'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 8 muSR lineage resolved' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N374
+    label: trap_6_AFM_delta_Tc_one_feature_two_coords
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'trap 6 AFM delta Tc one feature two coords'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 6 AFM delta Tc one feature two coords' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N373
+    label: trap_6_and_trap_8_in_UTe2
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'trap 6 and trap 8 in UTe2'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 6 and trap 8 in UTe2' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N372
+    label: trap_8_documented_here
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as 'trap 8 documented here'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 8 documented here' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_WylerStepG
+    label: trap_5_and_6_documented_here
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds Wyler Step G (alpha = 1/137.036) through the relationship encoded as 'trap 5 and 6 documented here'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Wyler Step G (alpha = 1/137.036) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 5 and 6 documented here' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_LeptonMassScale
+    label: trap_5_documented_here
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds lepton mass scale derivation through the relationship encoded as 'trap 5 documented here'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) lepton mass scale derivation without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 5 documented here' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_TopologyProcessIdentity
+    label: trap_6_one_object_principle
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds topology-process identity (object frame removed) through the relationship encoded as 'trap 6 one object principle'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap 6 one object principle' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_GrammarTrap
+    label: traps_1_4_grammar_level
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds grammar trap (subject-verb-object as ontological structure) through the relationship encoded as 'traps 1 4 grammar level'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) grammar trap (subject-verb-object as ontological structure) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'traps 1 4 grammar level' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_ForcedId
+    label: traps_resolve_via_ForcedId
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds forced identification principle through the relationship encoded as 'traps resolve via ForcedId'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'traps resolve via ForcedId' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_EpistemicTraps
+    target: N_InversiveTheory
+    label: trap_correction_via_inversive_method
+    edge_status: D
+    justification: |
+      RP gate trap catalogue (8 systematic failure modes) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'trap correction via inversive method'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on RP gate trap catalogue (8 systematic failure modes) — but the labelled relationship 'trap correction via inversive method' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_FEP
+    label: A0_realised_as_F_minimization_in_brains
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds Free Energy Principle (variational A_0 in Bayesian substrate) through the relationship encoded as 'A0 realised as F minimization in brains'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Free Energy Principle (variational A_0 in Bayesian substrate) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 realised as F minimization in brains' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_BPIEngagement
+    label: argmin_Z_in_BPI_tracking_substrate
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'argmin Z in BPI tracking substrate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'argmin Z in BPI tracking substrate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N377
+    label: argmin_on_shared_omega_forced_multi_BPI
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'argmin on shared omega forced multi BPI'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'argmin on shared omega forced multi BPI' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N376
+    label: A0_extension_to_multi_orbital_multi_sector_parametric_family
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'A0 extension to multi orbital multi sector parametric family'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 extension to multi orbital multi sector parametric family' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N375
+    label: A0_extension_to_parametrized_family
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds cuprate dual-sector phase diagram through the relationship encoded as 'A0 extension to parametrized family'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 extension to parametrized family' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N374
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'A0 application to material domain'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 application to material domain' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N373
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'A0 application to material domain'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 application to material domain' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N372
+    label: A0_application_to_material_domain
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as 'A0 application to material domain'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 application to material domain' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_ZGaugeDecomposition
+    label: Z_decomposition_determines_gauge_structure
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds Z-gauge decomposition via Z_3 covering action through the relationship encoded as 'Z decomposition determines gauge structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Z-gauge decomposition via Z_3 covering action without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'Z decomposition determines gauge structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_Triangulation
+    label: A0_requires_triangulation_for_Z
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'A0 requires triangulation for Z'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'A0 requires triangulation for Z' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_Triangulation
+    label: definition_requires_three_gradients
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'definition requires three gradients'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition requires three gradients' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N370
+    label: definition_requires_L31
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds L(3,1) inevitability (baryon number forces p=3) through the relationship encoded as 'definition requires L31'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) L(3,1) inevitability (baryon number forces p=3) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition requires L31' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N310
+    label: definition_self-references
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds Gödel theorem as K(O)<K(F) corollary through the relationship encoded as 'definition self-references'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Gödel theorem as K(O)<K(F) corollary without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition self-references' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N112
+    label: definition_requires_BPI
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'definition requires BPI'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition requires BPI' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N000
+    label: definition_identifies_forced_structure
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds node N000 (N000) through the relationship encoded as 'definition identifies forced structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) node N000 (N000) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition identifies forced structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_Invariants
+    label: definition_unfolds_into_invariants
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds the four invariants (I_Bound, I_Sym, I_Quant, I_Null) through the relationship encoded as 'definition unfolds into invariants'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) the four invariants (I_Bound, I_Sym, I_Quant, I_Null) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition unfolds into invariants' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_Math
+    label: definition_generates_mathematics
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds mathematics as A_0-stable formal structures through the relationship encoded as 'definition generates mathematics'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) mathematics as A_0-stable formal structures without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition generates mathematics' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_Logic
+    label: definition_generates_logic
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds logic as A_0 in symbolic substrate through the relationship encoded as 'definition generates logic'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) logic as A_0 in symbolic substrate without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition generates logic' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_ForcedId
+    label: definition_closes_on_itself
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds forced identification principle through the relationship encoded as 'definition closes on itself'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition closes on itself' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_NoSeparatePieces
+    label: definition_implies_unity
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds coordinate-unification principle (one structure, many coordinates) through the relationship encoded as 'definition implies unity'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'definition implies unity' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: DEF
+    target: N_InversiveTheory
+    label: same_fixed_point_constructive_face
+    edge_status: D
+    justification: |
+      A_0 = argmin Z (foundational definition) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'same fixed point constructive face'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on A_0 = argmin Z (foundational definition) — but the labelled relationship 'same fixed point constructive face' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: N377
+    label: stable_relations_cannot_be_not_A0
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'stable relations cannot be not A0'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'stable relations cannot be not A0' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: N_ZGaugeDecomposition
+    label: gauge_decomposition_is_local_expression
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds Z-gauge decomposition via Z_3 covering action through the relationship encoded as 'gauge decomposition is local expression'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Z-gauge decomposition via Z_3 covering action without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'gauge decomposition is local expression' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: N_Triangulation
+    label: triangulation_is_local_expression
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'triangulation is local expression'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'triangulation is local expression' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: N_NoSeparatePieces
+    label: no_pieces_follows_from_inevitability
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds coordinate-unification principle (one structure, many coordinates) through the relationship encoded as 'no pieces follows from inevitability'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'no pieces follows from inevitability' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: DEF
+    label: same_fixed_point_eliminative_face
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'same fixed point eliminative face'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'same fixed point eliminative face' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_InversiveTheory
+    target: N_EpistemicTraps
+    label: alternatives_dissolve_via_trap_catalog
+    edge_status: D
+    justification: |
+      structural inevitability principle (no alternatives) grounds RP gate trap catalogue (8 systematic failure modes) through the relationship encoded as 'alternatives dissolve via trap catalog'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) RP gate trap catalogue (8 systematic failure modes) without reliance on structural inevitability principle (no alternatives) — but the labelled relationship 'alternatives dissolve via trap catalog' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N_BPIEngagement
+    label: same_invariant_across_observation_angles
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'same invariant across observation angles'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'same invariant across observation angles' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N377
+    label: methods_not_separate_pieces_applied
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'methods not separate pieces applied'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'methods not separate pieces applied' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N_TopologyProcessIdentity
+    label: one_object_many_coordinates
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds topology-process identity (object frame removed) through the relationship encoded as 'one object many coordinates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'one object many coordinates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N_ForcedId
+    label: coordinate_invariance
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds forced identification principle through the relationship encoded as 'coordinate invariance'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'coordinate invariance' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N_InversiveTheory
+    label: not_a_theory_among_theories
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'not a theory among theories'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'not a theory among theories' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: N_InversiveTheory
+    label: no_alternatives_is_inversive_property
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'no alternatives is inversive property'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'no alternatives is inversive property' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_NoSeparatePieces
+    target: DEF
+    label: no_pieces_is_what_DEF_means
+    edge_status: D
+    justification: |
+      coordinate-unification principle (one structure, many coordinates) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'no pieces is what DEF means'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on coordinate-unification principle (one structure, many coordinates) — but the labelled relationship 'no pieces is what DEF means' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N304
+    target: N377
+    label: LLM_latent_space_hierarchical_structure_is_Omega
+    edge_status: D
+    justification: |
+      LLM latent space ≈ BA-fractal grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'LLM latent space hierarchical structure is Omega'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on LLM latent space ≈ BA-fractal — but the labelled relationship 'LLM latent space hierarchical structure is Omega' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Logic
+    target: N_Triangulation
+    label: three_term_logic_confirms_triangulation
+    edge_status: D
+    justification: |
+      logic as A_0 in symbolic substrate grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'three term logic confirms triangulation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on logic as A_0 in symbolic substrate — but the labelled relationship 'three term logic confirms triangulation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Math
+    target: N_FEP
+    label: sibling_substrate_realisation_of_A0
+    edge_status: D
+    justification: |
+      mathematics as A_0-stable formal structures grounds Free Energy Principle (variational A_0 in Bayesian substrate) through the relationship encoded as 'sibling substrate realisation of A0'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Free Energy Principle (variational A_0 in Bayesian substrate) without reliance on mathematics as A_0-stable formal structures — but the labelled relationship 'sibling substrate realisation of A0' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_GrammarTrap
+    target: N377
+    label: feature_absorption_terminology_is_grammar_trap
+    edge_status: D
+    justification: |
+      grammar trap (subject-verb-object as ontological structure) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'feature absorption terminology is grammar trap'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on grammar trap (subject-verb-object as ontological structure) — but the labelled relationship 'feature absorption terminology is grammar trap' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_GrammarTrap
+    target: N371
+    label: vortex_is_grammar_trap
+    edge_status: D
+    justification: |
+      grammar trap (subject-verb-object as ontological structure) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'vortex is grammar trap'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on grammar trap (subject-verb-object as ontological structure) — but the labelled relationship 'vortex is grammar trap' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N371
+    target: N_MI
+    label: hydrodynamics_explains_mi_mechanism
+    edge_status: D
+    justification: |
+      BPI dynamics as hydrodynamics in Z-space grounds Motivational Interviewing (high-Z_hidden response) through the relationship encoded as 'hydrodynamics explains mi mechanism'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Motivational Interviewing (high-Z_hidden response) without reliance on BPI dynamics as hydrodynamics in Z-space — but the labelled relationship 'hydrodynamics explains mi mechanism' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N371
+    target: N_LeDoux
+    label: regime_boundary_formalization
+    edge_status: D
+    justification: |
+      BPI dynamics as hydrodynamics in Z-space grounds amygdala threshold (Z_therm regime shift) through the relationship encoded as 'regime boundary formalization'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) amygdala threshold (Z_therm regime shift) without reliance on BPI dynamics as hydrodynamics in Z-space — but the labelled relationship 'regime boundary formalization' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N371
+    target: N_OntologyGate
+    label: landscape_reconstruction_enables_interception
+    edge_status: D
+    justification: |
+      BPI dynamics as hydrodynamics in Z-space grounds ontology gate (operational protocol for ontological questions) through the relationship encoded as 'landscape reconstruction enables interception'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) ontology gate (operational protocol for ontological questions) without reliance on BPI dynamics as hydrodynamics in Z-space — but the labelled relationship 'landscape reconstruction enables interception' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N001
+    target: N_CommThm
+    label: argmin_Z_principle
+    edge_status: D
+    justification: |
+      node N001 (N001) grounds optimal communication theorem through the relationship encoded as 'argmin Z principle'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on node N001 (N001) — but the labelled relationship 'argmin Z principle' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N018
+    target: N377
+    label: LLM_autoregressive_forward_pass_is_A0_on_Omega
+    edge_status: D
+    justification: |
+      node N018 (N018) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'LLM autoregressive forward pass is A0 on Omega'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on node N018 (N018) — but the labelled relationship 'LLM autoregressive forward pass is A0 on Omega' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N019
+    target: N371
+    label: gradient_potential_foundation
+    edge_status: D
+    justification: |
+      node N019 (N019) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'gradient potential foundation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N019 (N019) — but the labelled relationship 'gradient potential foundation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N020
+    target: N371
+    label: path_hysteresis_foundation
+    edge_status: D
+    justification: |
+      node N020 (N020) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'path hysteresis foundation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N020 (N020) — but the labelled relationship 'path hysteresis foundation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N021
+    target: N371
+    label: gradient_descent_foundation
+    edge_status: D
+    justification: |
+      node N021 (N021) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'gradient descent foundation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N021 (N021) — but the labelled relationship 'gradient descent foundation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N029
+    target: N371
+    label: rate_law_foundation
+    edge_status: D
+    justification: |
+      node N029 (N029) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'rate law foundation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N029 (N029) — but the labelled relationship 'rate law foundation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N336
+    target: N_CommThm
+    label: order_primacy_recency
+    edge_status: D
+    justification: |
+      node N336 (N336) grounds optimal communication theorem through the relationship encoded as 'order primacy recency'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on node N336 (N336) — but the labelled relationship 'order primacy recency' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N048
+    target: N_AestheticEngagement
+    label: Birkhoff_dimensions_insufficient
+    edge_status: D
+    justification: |
+      Birkhoff M=O/C aesthetic formula failure grounds aesthetic engagement (artwork-class BPI inputs) through the relationship encoded as 'Birkhoff dimensions insufficient'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) aesthetic engagement (artwork-class BPI inputs) without reliance on Birkhoff M=O/C aesthetic formula failure — but the labelled relationship 'Birkhoff dimensions insufficient' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N330
+    target: N371
+    label: trust_asymmetry_is_phase_transition_hysteresis
+    edge_status: D
+    justification: |
+      node N330 (N330) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'trust asymmetry is phase transition hysteresis'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N330 (N330) — but the labelled relationship 'trust asymmetry is phase transition hysteresis' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N112
+    target: N371
+    label: i_bound_forces_inverse_problem
+    edge_status: D
+    justification: |
+      Observer Containment Lemma (K(O) < K(F)) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'i bound forces inverse problem'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on Observer Containment Lemma (K(O) < K(F)) — but the labelled relationship 'i bound forces inverse problem' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N187
+    target: N188
+    label: hard_problem_dissolution_template
+    edge_status: D
+    justification: |
+      Hard Problem dissolved (BPI self-reference = subjectivity) grounds qualia as Z-component patterns through the relationship encoded as 'hard problem dissolution template'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on Hard Problem dissolved (BPI self-reference = subjectivity) — but the labelled relationship 'hard problem dissolution template' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N_DopaminePredictionError
+    label: qualia_mapping_via_dopamine_pathway
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds dopamine prediction-error neural substrate through the relationship encoded as 'qualia mapping via dopamine pathway'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) dopamine prediction-error neural substrate without reliance on qualia as Z-component patterns — but the labelled relationship 'qualia mapping via dopamine pathway' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N_DopaminePredictionError
+    label: engagement_class_substrate_documentation
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds dopamine prediction-error neural substrate through the relationship encoded as 'engagement class substrate documentation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) dopamine prediction-error neural substrate without reliance on qualia as Z-component patterns — but the labelled relationship 'engagement class substrate documentation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N_BPIEngagement
+    label: engagement_class_qualia_specific_case
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'engagement class qualia specific case'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on qualia as Z-component patterns — but the labelled relationship 'engagement class qualia specific case' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N_TopologyProcessIdentity
+    label: qualia_trigger_one_process_two_coordinates
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds topology-process identity (object frame removed) through the relationship encoded as 'qualia trigger one process two coordinates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on qualia as Z-component patterns — but the labelled relationship 'qualia trigger one process two coordinates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N187
+    label: qualia_via_subjectivity_dissolution
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds Hard Problem dissolved (BPI self-reference = subjectivity) through the relationship encoded as 'qualia via subjectivity dissolution'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Hard Problem dissolved (BPI self-reference = subjectivity) without reliance on qualia as Z-component patterns — but the labelled relationship 'qualia via subjectivity dissolution' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N112
+    label: BPI_self_reference_required
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'BPI self reference required'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on qualia as Z-component patterns — but the labelled relationship 'BPI self reference required' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: N_InversiveTheory
+    label: alternatives_dissolve_via_no_external_frame
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds structural inevitability principle (no alternatives) through the relationship encoded as 'alternatives dissolve via no external frame'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on qualia as Z-component patterns — but the labelled relationship 'alternatives dissolve via no external frame' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N188
+    target: DEF
+    label: qualia_realise_argmin_Z_in_BPI_internal_coordinate
+    edge_status: D
+    justification: |
+      qualia as Z-component patterns grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'qualia realise argmin Z in BPI internal coordinate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on qualia as Z-component patterns — but the labelled relationship 'qualia realise argmin Z in BPI internal coordinate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N240
+    target: N_LeptonMassScale
+    label: mass_scale_grounds_ratios
+    edge_status: D
+    justification: |
+      node N240 (N240) grounds lepton mass scale derivation through the relationship encoded as 'mass scale grounds ratios'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) lepton mass scale derivation without reliance on node N240 (N240) — but the labelled relationship 'mass scale grounds ratios' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N354
+    target: N372
+    label: analogous_forcing_logic_different_group_structure
+    edge_status: D
+    justification: |
+      Lepton Step 5b (D_F via Bär+APS) grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as 'analogous forcing logic different group structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on Lepton Step 5b (D_F via Bär+APS) — but the labelled relationship 'analogous forcing logic different group structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N354
+    target: N_LeptonMassScale
+    label: scale_derived_here
+    edge_status: D
+    justification: |
+      Lepton Step 5b (D_F via Bär+APS) grounds lepton mass scale derivation through the relationship encoded as 'scale derived here'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) lepton mass scale derivation without reliance on Lepton Step 5b (D_F via Bär+APS) — but the labelled relationship 'scale derived here' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N354
+    target: N_LeptonMassScale
+    label: scale_parameter_derived_here
+    edge_status: D
+    justification: |
+      Lepton Step 5b (D_F via Bär+APS) grounds lepton mass scale derivation through the relationship encoded as 'scale parameter derived here'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) lepton mass scale derivation without reliance on Lepton Step 5b (D_F via Bär+APS) — but the labelled relationship 'scale parameter derived here' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N354
+    target: N240
+    label: structure_uniqueness_grounds_ratios
+    edge_status: D
+    justification: |
+      Lepton Step 5b (D_F via Bär+APS) grounds node N240 (N240) through the relationship encoded as 'structure uniqueness grounds ratios'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) node N240 (N240) without reliance on Lepton Step 5b (D_F via Bär+APS) — but the labelled relationship 'structure uniqueness grounds ratios' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N377
+    label: one_omega_many_coordinates_applied_to_SAE
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds sparse autoencoder feature absorption (forced LLM divergence) through the relationship encoded as 'one omega many coordinates applied to SAE'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) sparse autoencoder feature absorption (forced LLM divergence) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'one omega many coordinates applied to SAE' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N376
+    label: empirical_boundary_of_applicability_distinct_critical_values
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'empirical boundary of applicability distinct critical values'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on topology-process identity (object frame removed) — but the labelled relationship 'empirical boundary of applicability distinct critical values' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N375
+    label: multiple_observables_one_structural_feature
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds cuprate dual-sector phase diagram through the relationship encoded as 'multiple observables one structural feature'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on topology-process identity (object frame removed) — but the labelled relationship 'multiple observables one structural feature' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N374
+    label: theoretical_models_as_coord_representations
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'theoretical models as coord representations'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on topology-process identity (object frame removed) — but the labelled relationship 'theoretical models as coord representations' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N373
+    label: one_object_different_coordinates_applied
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'one object different coordinates applied'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'one object different coordinates applied' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N372
+    label: one_object_two_coordinates_applied
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as 'one object two coordinates applied'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'one object two coordinates applied' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N188
+    label: applied_to_qualia_trigger_pair
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds qualia as Z-component patterns through the relationship encoded as 'applied to qualia trigger pair'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on topology-process identity (object frame removed) — but the labelled relationship 'applied to qualia trigger pair' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N_GrammarTrap
+    label: object_frame_dissolved
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds grammar trap (subject-verb-object as ontological structure) through the relationship encoded as 'object frame dissolved'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) grammar trap (subject-verb-object as ontological structure) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'object frame dissolved' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N_Ontology
+    label: topology_is_not_substrate
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds node N_Ontology (N_Ontology) through the relationship encoded as 'topology is not substrate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) node N_Ontology (N_Ontology) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'topology is not substrate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: N_ForcedId
+    label: forced_identification_principle
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds forced identification principle through the relationship encoded as 'forced identification principle'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on topology-process identity (object frame removed) — but the labelled relationship 'forced identification principle' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_TopologyProcessIdentity
+    target: DEF
+    label: definition_not_enumeration
+    edge_status: D
+    justification: |
+      topology-process identity (object frame removed) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'definition not enumeration'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on topology-process identity (object frame removed) — but the labelled relationship 'definition not enumeration' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeptonMassScale
+    target: N_Bar
+    label: eta_invariant_gives_delta
+    edge_status: D
+    justification: |
+      lepton mass scale derivation grounds Bär+Vassilevich Dirac spectrum on L(3,1) through the relationship encoded as 'eta invariant gives delta'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Bär+Vassilevich Dirac spectrum on L(3,1) without reliance on lepton mass scale derivation — but the labelled relationship 'eta invariant gives delta' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeptonMassScale
+    target: N_TopologyProcessIdentity
+    label: DM_DF_same_object_two_coordinates
+    edge_status: D
+    justification: |
+      lepton mass scale derivation grounds topology-process identity (object frame removed) through the relationship encoded as 'DM DF same object two coordinates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on lepton mass scale derivation — but the labelled relationship 'DM DF same object two coordinates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeptonMassScale
+    target: N354
+    label: scale_A2_closes_N354
+    edge_status: D
+    justification: |
+      lepton mass scale derivation grounds Lepton Step 5b (D_F via Bär+APS) through the relationship encoded as 'scale A2 closes N354'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Lepton Step 5b (D_F via Bär+APS) without reliance on lepton mass scale derivation — but the labelled relationship 'scale A2 closes N354' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeptonMassScale
+    target: N240
+    label: corrected_A_gives_masses
+    edge_status: D
+    justification: |
+      lepton mass scale derivation grounds node N240 (N240) through the relationship encoded as 'corrected A gives masses'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) node N240 (N240) without reliance on lepton mass scale derivation — but the labelled relationship 'corrected A gives masses' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeptonMassScale
+    target: N_ForcedId
+    label: delta_proved_by_gauge_invariance
+    edge_status: D
+    justification: |
+      lepton mass scale derivation grounds forced identification principle through the relationship encoded as 'delta proved by gauge invariance'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on lepton mass scale derivation — but the labelled relationship 'delta proved by gauge invariance' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_WylerStepG
+    target: N_LeptonMassScale
+    label: alpha_measured_constant_not_free
+    edge_status: D
+    justification: |
+      Wyler Step G (alpha = 1/137.036) grounds lepton mass scale derivation through the relationship encoded as 'alpha measured constant not free'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) lepton mass scale derivation without reliance on Wyler Step G (alpha = 1/137.036) — but the labelled relationship 'alpha measured constant not free' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_WylerStepG
+    target: N_TopologyProcessIdentity
+    label: R2_error_corrected
+    edge_status: D
+    justification: |
+      Wyler Step G (alpha = 1/137.036) grounds topology-process identity (object frame removed) through the relationship encoded as 'R2 error corrected'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on Wyler Step G (alpha = 1/137.036) — but the labelled relationship 'R2 error corrected' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_WylerStepG
+    target: N_ForcedId
+    label: boundary_irrelevance_ForcedId
+    edge_status: D
+    justification: |
+      Wyler Step G (alpha = 1/137.036) grounds forced identification principle through the relationship encoded as 'boundary irrelevance ForcedId'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) forced identification principle without reliance on Wyler Step G (alpha = 1/137.036) — but the labelled relationship 'boundary irrelevance ForcedId' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N364
+    target: N_ZGaugeDecomposition
+    label: confinement_is_Z_hidden_covering_constraint
+    edge_status: D
+    justification: |
+      node N364 (N364) grounds Z-gauge decomposition via Z_3 covering action through the relationship encoded as 'confinement is Z hidden covering constraint'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Z-gauge decomposition via Z_3 covering action without reliance on node N364 (N364) — but the labelled relationship 'confinement is Z hidden covering constraint' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N365
+    target: N371
+    label: taylor_relaxation_class_a
+    edge_status: D
+    justification: |
+      node N365 (N365) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'taylor relaxation class a'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on node N365 (N365) — but the labelled relationship 'taylor relaxation class a' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N370
+    target: N_Triangulation
+    label: baryon_exclusion_confirms_triangulation
+    edge_status: D
+    justification: |
+      L(3,1) inevitability (baryon number forces p=3) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'baryon exclusion confirms triangulation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on L(3,1) inevitability (baryon number forces p=3) — but the labelled relationship 'baryon exclusion confirms triangulation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N_BPIEngagement
+    label: triangulation_specifies_engagement_conditions
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'triangulation specifies engagement conditions'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation specifies engagement conditions' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N376
+    label: triangulation_via_magnetic_structural_nematic_spectroscopic
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'triangulation via magnetic structural nematic spectroscopic'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation via magnetic structural nematic spectroscopic' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N375
+    label: triangulation_via_charge_thermal_spectroscopic
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds cuprate dual-sector phase diagram through the relationship encoded as 'triangulation via charge thermal spectroscopic'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation via charge thermal spectroscopic' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N374
+    label: triangulation_via_f2_local_conduction_intersite
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'triangulation via f2 local conduction intersite'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation via f2 local conduction intersite' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N373
+    label: triangulation_via_j_space_rung_k_space
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'triangulation via j space rung k space'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation via j space rung k space' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N372
+    label: 1_plus_2_as_triangulation_in_D4h
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as '1 plus 2 as triangulation in D4h'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship '1 plus 2 as triangulation in D4h' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N_ZGaugeDecomposition
+    label: triangulation_grounds_three_gauge_types
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds Z-gauge decomposition via Z_3 covering action through the relationship encoded as 'triangulation grounds three gauge types'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Z-gauge decomposition via Z_3 covering action without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation grounds three gauge types' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N370
+    label: triangulation_is_primary_Z2_exclusion
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds L(3,1) inevitability (baryon number forces p=3) through the relationship encoded as 'triangulation is primary Z2 exclusion'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) L(3,1) inevitability (baryon number forces p=3) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation is primary Z2 exclusion' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N_Invariants
+    label: triangulation_forces_three_invariant_types
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds the four invariants (I_Bound, I_Sym, I_Quant, I_Null) through the relationship encoded as 'triangulation forces three invariant types'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) the four invariants (I_Bound, I_Sym, I_Quant, I_Null) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation forces three invariant types' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N_Logic
+    label: triangulation_grounds_three_term_structure
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds logic as A_0 in symbolic substrate through the relationship encoded as 'triangulation grounds three term structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) logic as A_0 in symbolic substrate without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation grounds three term structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: N_InversiveTheory
+    label: triangulation_confirms_no_alternative
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'triangulation confirms no alternative'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation confirms no alternative' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: DEF
+    label: triangulation_is_self-referential_closure
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'triangulation is self-referential closure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation is self-referential closure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Triangulation
+    target: DEF
+    label: triangulation_grounds_Z_decomposition
+    edge_status: D
+    justification: |
+      triangulation principle (3 minimal Z-coordinates) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'triangulation grounds Z decomposition'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on triangulation principle (3 minimal Z-coordinates) — but the labelled relationship 'triangulation grounds Z decomposition' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N376
+    label: four_sector_decomposition_shared_D4h_base
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'four sector decomposition shared D4h base'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'four sector decomposition shared D4h base' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N375
+    label: z_sectors_in_dual_single_regimes
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds cuprate dual-sector phase diagram through the relationship encoded as 'z sectors in dual single regimes'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'z sectors in dual single regimes' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N374
+    label: z_channels_through_local_vs_conduction_sectors
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'z channels through local vs conduction sectors'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'z channels through local vs conduction sectors' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N373
+    label: z_channels_through_hybridised_sectors
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'z channels through hybridised sectors'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'z channels through hybridised sectors' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N372
+    label: z_channels_as_t2g_orbital_sectors
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds Sr_2RuO_4 superconducting Z-minimum (E_g block) through the relationship encoded as 'z channels as t2g orbital sectors'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Sr_2RuO_4 superconducting Z-minimum (E_g block) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'z channels as t2g orbital sectors' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N_Triangulation
+    label: three_sheets_three_Z_components_one_fact
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'three sheets three Z components one fact'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'three sheets three Z components one fact' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N370
+    label: Z3_action_grounds_both_Z_and_gauge
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds L(3,1) inevitability (baryon number forces p=3) through the relationship encoded as 'Z3 action grounds both Z and gauge'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) L(3,1) inevitability (baryon number forces p=3) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'Z3 action grounds both Z and gauge' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N364
+    label: Z_hidden_sector_forces_confinement
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds node N364 (N364) through the relationship encoded as 'Z hidden sector forces confinement'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) node N364 (N364) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'Z hidden sector forces confinement' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: N112
+    label: Z_hidden_is_observer_containment
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'Z hidden is observer containment'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'Z hidden is observer containment' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_ZGaugeDecomposition
+    target: DEF
+    label: Z_decomposition_is_covering_structure
+    edge_status: D
+    justification: |
+      Z-gauge decomposition via Z_3 covering action grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'Z decomposition is covering structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on Z-gauge decomposition via Z_3 covering action — but the labelled relationship 'Z decomposition is covering structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_RPfibo
+    target: N_RPflow
+    label: fibo_feeds_into_flow
+    edge_status: D
+    justification: |
+      RP FIBO Fibonacci coherence rewrite grounds RP FLOW gate+fibo pipeline through the relationship encoded as 'fibo feeds into flow'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) RP FLOW gate+fibo pipeline without reliance on RP FIBO Fibonacci coherence rewrite — but the labelled relationship 'fibo feeds into flow' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Shannon
+    target: N_CommThm
+    label: Z_hidden_H_proxy
+    edge_status: D
+    justification: |
+      Shannon information theory (H ≡ Z_struct isomorphism) grounds optimal communication theorem through the relationship encoded as 'Z hidden H proxy'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on Shannon information theory (H ≡ Z_struct isomorphism) — but the labelled relationship 'Z hidden H proxy' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_Sweller
+    target: N_CommThm
+    label: Z_struct_chunks_proxy
+    edge_status: D
+    justification: |
+      cognitive load theory (Z_struct operational proxy) grounds optimal communication theorem through the relationship encoded as 'Z struct chunks proxy'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on cognitive load theory (Z_struct operational proxy) — but the labelled relationship 'Z struct chunks proxy' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BrownLev
+    target: N_CommThm
+    label: Z_therm_FTA_proxy
+    edge_status: D
+    justification: |
+      politeness theory (Z_therm operational proxy) grounds optimal communication theorem through the relationship encoded as 'Z therm FTA proxy'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on politeness theory (Z_therm operational proxy) — but the labelled relationship 'Z therm FTA proxy' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeDoux
+    target: N_CommThm
+    label: threshold_regime_shift
+    edge_status: D
+    justification: |
+      amygdala threshold (Z_therm regime shift) grounds optimal communication theorem through the relationship encoded as 'threshold regime shift'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on amygdala threshold (Z_therm regime shift) — but the labelled relationship 'threshold regime shift' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_LeDoux
+    target: N371
+    label: theta_is_reynolds_threshold
+    edge_status: D
+    justification: |
+      amygdala threshold (Z_therm regime shift) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'theta is reynolds threshold'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on amygdala threshold (Z_therm regime shift) — but the labelled relationship 'theta is reynolds threshold' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_MI
+    target: N_CommThm
+    label: Z_hidden_high_strategy
+    edge_status: D
+    justification: |
+      Motivational Interviewing (high-Z_hidden response) grounds optimal communication theorem through the relationship encoded as 'Z hidden high strategy'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on Motivational Interviewing (high-Z_hidden response) — but the labelled relationship 'Z hidden high strategy' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_MI
+    target: N371
+    label: z_hidden_reduction_is_landscape_prep
+    edge_status: D
+    justification: |
+      Motivational Interviewing (high-Z_hidden response) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'z hidden reduction is landscape prep'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on Motivational Interviewing (high-Z_hidden response) — but the labelled relationship 'z hidden reduction is landscape prep' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_SDT
+    target: N_CommThm
+    label: Z_therm_autonomy
+    edge_status: D
+    justification: |
+      Self-Determination Theory (autonomy and Z_therm) grounds optimal communication theorem through the relationship encoded as 'Z therm autonomy'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on Self-Determination Theory (autonomy and Z_therm) — but the labelled relationship 'Z therm autonomy' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_SIT
+    target: N_CommThm
+    label: identity_Z_hidden_multiplier
+    edge_status: D
+    justification: |
+      Social Identity Theory (Z_hidden multiplier) grounds optimal communication theorem through the relationship encoded as 'identity Z hidden multiplier'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) optimal communication theorem without reliance on Social Identity Theory (Z_hidden multiplier) — but the labelled relationship 'identity Z hidden multiplier' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_SIT
+    target: N371
+    label: identity_threat_lowers_turbulence_threshold
+    edge_status: D
+    justification: |
+      Social Identity Theory (Z_hidden multiplier) grounds BPI dynamics as hydrodynamics in Z-space through the relationship encoded as 'identity threat lowers turbulence threshold'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI dynamics as hydrodynamics in Z-space without reliance on Social Identity Theory (Z_hidden multiplier) — but the labelled relationship 'identity threat lowers turbulence threshold' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_CommThm
+    target: N_RPsoft
+    label: theorem_to_protocol
+    edge_status: D
+    justification: |
+      optimal communication theorem grounds RP SOFT delicate formulation protocol through the relationship encoded as 'theorem to protocol'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) RP SOFT delicate formulation protocol without reliance on optimal communication theorem — but the labelled relationship 'theorem to protocol' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_CommThm
+    target: N_RPflow
+    label: full_pipeline
+    edge_status: D
+    justification: |
+      optimal communication theorem grounds RP FLOW gate+fibo pipeline through the relationship encoded as 'full pipeline'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) RP FLOW gate+fibo pipeline without reliance on optimal communication theorem — but the labelled relationship 'full pipeline' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_CommThm
+    target: N_RPfibo
+    label: gradient_invariant
+    edge_status: D
+    justification: |
+      optimal communication theorem grounds RP FIBO Fibonacci coherence rewrite through the relationship encoded as 'gradient invariant'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) RP FIBO Fibonacci coherence rewrite without reliance on optimal communication theorem — but the labelled relationship 'gradient invariant' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N372
+    target: N376
+    label: sibling_D4h_tetragonal_base_different_active_space_structure
+    edge_status: D
+    justification: |
+      Sr_2RuO_4 superconducting Z-minimum (E_g block) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'sibling D4h tetragonal base different active space structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on Sr_2RuO_4 superconducting Z-minimum (E_g block) — but the labelled relationship 'sibling D4h tetragonal base different active space structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N372
+    target: N375
+    label: sibling_realisation_D4h_logic_different_A0_application
+    edge_status: D
+    justification: |
+      Sr_2RuO_4 superconducting Z-minimum (E_g block) grounds cuprate dual-sector phase diagram through the relationship encoded as 'sibling realisation D4h logic different A0 application'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on Sr_2RuO_4 superconducting Z-minimum (E_g block) — but the labelled relationship 'sibling realisation D4h logic different A0 application' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N372
+    target: N374
+    label: sibling_realisation_hexagonal_with_2D_rep
+    edge_status: D
+    justification: |
+      Sr_2RuO_4 superconducting Z-minimum (E_g block) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'sibling realisation hexagonal with 2D rep'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on Sr_2RuO_4 superconducting Z-minimum (E_g block) — but the labelled relationship 'sibling realisation hexagonal with 2D rep' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N372
+    target: N373
+    label: sibling_realisation_D2h_instead_of_D4h
+    edge_status: D
+    justification: |
+      Sr_2RuO_4 superconducting Z-minimum (E_g block) grounds UTe_2 superconducting Z-minimum (4D Kramers active space) through the relationship encoded as 'sibling realisation D2h instead of D4h'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UTe_2 superconducting Z-minimum (4D Kramers active space) without reliance on Sr_2RuO_4 superconducting Z-minimum (E_g block) — but the labelled relationship 'sibling realisation D2h instead of D4h' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N373
+    target: N376
+    label: sibling_multi_coordinate_methodology_different_electron_class
+    edge_status: D
+    justification: |
+      UTe_2 superconducting Z-minimum (4D Kramers active space) grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'sibling multi coordinate methodology different electron class'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on UTe_2 superconducting Z-minimum (4D Kramers active space) — but the labelled relationship 'sibling multi coordinate methodology different electron class' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N373
+    target: N375
+    label: sibling_sector_decomposition_different_parametrization
+    edge_status: D
+    justification: |
+      UTe_2 superconducting Z-minimum (4D Kramers active space) grounds cuprate dual-sector phase diagram through the relationship encoded as 'sibling sector decomposition different parametrization'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on UTe_2 superconducting Z-minimum (4D Kramers active space) — but the labelled relationship 'sibling sector decomposition different parametrization' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N373
+    target: N374
+    label: sibling_realisation_U_triplet_different_active_space_mechanism
+    edge_status: D
+    justification: |
+      UTe_2 superconducting Z-minimum (4D Kramers active space) grounds UPt_3 three-phase superconducting Z-minimum through the relationship encoded as 'sibling realisation U triplet different active space mechanism'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) UPt_3 three-phase superconducting Z-minimum without reliance on UTe_2 superconducting Z-minimum (4D Kramers active space) — but the labelled relationship 'sibling realisation U triplet different active space mechanism' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N374
+    target: N376
+    label: sibling_multi_sector_decomposition_different_parametrization
+    edge_status: D
+    justification: |
+      UPt_3 three-phase superconducting Z-minimum grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'sibling multi sector decomposition different parametrization'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on UPt_3 three-phase superconducting Z-minimum — but the labelled relationship 'sibling multi sector decomposition different parametrization' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N374
+    target: N375
+    label: sibling_dual_sector_structure_doping_parametrized
+    edge_status: D
+    justification: |
+      UPt_3 three-phase superconducting Z-minimum grounds cuprate dual-sector phase diagram through the relationship encoded as 'sibling dual sector structure doping parametrized'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) cuprate dual-sector phase diagram without reliance on UPt_3 three-phase superconducting Z-minimum — but the labelled relationship 'sibling dual sector structure doping parametrized' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N375
+    target: N376
+    label: closest_parallel_parametric_family_different_orbital_sector_structure
+    edge_status: D
+    justification: |
+      cuprate dual-sector phase diagram grounds iron-based multi-orbital coupled phase diagram through the relationship encoded as 'closest parallel parametric family different orbital sector structure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) iron-based multi-orbital coupled phase diagram without reliance on cuprate dual-sector phase diagram — but the labelled relationship 'closest parallel parametric family different orbital sector structure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N377
+    target: N_TopologyProcessIdentity
+    label: divergence_is_one_structure_two_coordinates
+    edge_status: D
+    justification: |
+      sparse autoencoder feature absorption (forced LLM divergence) grounds topology-process identity (object frame removed) through the relationship encoded as 'divergence is one structure two coordinates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on sparse autoencoder feature absorption (forced LLM divergence) — but the labelled relationship 'divergence is one structure two coordinates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N377
+    target: N304
+    label: multi_BPI_argmin_divergence_as_sibling_coordinate_of_LLM_geometry
+    edge_status: D
+    justification: |
+      sparse autoencoder feature absorption (forced LLM divergence) grounds LLM latent space ≈ BA-fractal through the relationship encoded as 'multi BPI argmin divergence as sibling coordinate of LLM geometry'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) LLM latent space ≈ BA-fractal without reliance on sparse autoencoder feature absorption (forced LLM divergence) — but the labelled relationship 'multi BPI argmin divergence as sibling coordinate of LLM geometry' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N377
+    target: N_InversiveTheory
+    label: SAE_divergence_is_coordinate_expression
+    edge_status: D
+    justification: |
+      sparse autoencoder feature absorption (forced LLM divergence) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'SAE divergence is coordinate expression'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on sparse autoencoder feature absorption (forced LLM divergence) — but the labelled relationship 'SAE divergence is coordinate expression' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_AestheticEngagement
+    label: aesthetic_is_application
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds aesthetic engagement (artwork-class BPI inputs) through the relationship encoded as 'aesthetic is application'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) aesthetic engagement (artwork-class BPI inputs) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'aesthetic is application' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_AestheticEngagement
+    label: application_to_aesthetic_substrates
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds aesthetic engagement (artwork-class BPI inputs) through the relationship encoded as 'application to aesthetic substrates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) aesthetic engagement (artwork-class BPI inputs) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'application to aesthetic substrates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_FEP
+    label: mathematical_formalization_in_biological_substrate
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds Free Energy Principle (variational A_0 in Bayesian substrate) through the relationship encoded as 'mathematical formalization in biological substrate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Free Energy Principle (variational A_0 in Bayesian substrate) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'mathematical formalization in biological substrate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_DopaminePredictionError
+    label: neural_implementation_in_biological_substrate
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds dopamine prediction-error neural substrate through the relationship encoded as 'neural implementation in biological substrate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) dopamine prediction-error neural substrate without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'neural implementation in biological substrate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_Triangulation
+    label: engagement_is_triangulation_in_BPI_tracking
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'engagement is triangulation in BPI tracking'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'engagement is triangulation in BPI tracking' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_TopologyProcessIdentity
+    label: substrate_observation_one_object_many_coordinates
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds topology-process identity (object frame removed) through the relationship encoded as 'substrate observation one object many coordinates'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) topology-process identity (object frame removed) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'substrate observation one object many coordinates' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N188
+    label: qualia_engagement_signal_unification
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds qualia as Z-component patterns through the relationship encoded as 'qualia engagement signal unification'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'qualia engagement signal unification' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N188
+    label: engagement_signal_is_qualia_in_BPI_tracking
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds qualia as Z-component patterns through the relationship encoded as 'engagement signal is qualia in BPI tracking'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'engagement signal is qualia in BPI tracking' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N112
+    label: BPI_bound_required_for_engagement_definition
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'BPI bound required for engagement definition'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'BPI bound required for engagement definition' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N048
+    label: explains_Birkhoff_failure_via_dimension_count
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds Birkhoff M=O/C aesthetic formula failure through the relationship encoded as 'explains Birkhoff failure via dimension count'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Birkhoff M=O/C aesthetic formula failure without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'explains Birkhoff failure via dimension count' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_NoSeparatePieces
+    label: substrates_are_observation_angles
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds coordinate-unification principle (one structure, many coordinates) through the relationship encoded as 'substrates are observation angles'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'substrates are observation angles' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: N_InversiveTheory
+    label: alternatives_dissolve_under_removal
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds structural inevitability principle (no alternatives) through the relationship encoded as 'alternatives dissolve under removal'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) structural inevitability principle (no alternatives) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'alternatives dissolve under removal' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_BPIEngagement
+    target: DEF
+    label: engagement_realises_argmin_Z
+    edge_status: D
+    justification: |
+      BPI engagement signal (triangulation in time-indexed substrate) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'engagement realises argmin Z'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on BPI engagement signal (triangulation in time-indexed substrate) — but the labelled relationship 'engagement realises argmin Z' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: N_FEP
+    label: neural_implementation_of_F_minimization
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds Free Energy Principle (variational A_0 in Bayesian substrate) through the relationship encoded as 'neural implementation of F minimization'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Free Energy Principle (variational A_0 in Bayesian substrate) without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'neural implementation of F minimization' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: N_BPIEngagement
+    label: empirical_anchor_for_engagement_signal
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'empirical anchor for engagement signal'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'empirical anchor for engagement signal' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: N188
+    label: closes_qualia_mapping_identification_gap
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds qualia as Z-component patterns through the relationship encoded as 'closes qualia mapping identification gap'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'closes qualia mapping identification gap' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: N188
+    label: neural_implementation_of_engagement_qualia
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds qualia as Z-component patterns through the relationship encoded as 'neural implementation of engagement qualia'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) qualia as Z-component patterns without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'neural implementation of engagement qualia' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: N112
+    label: BPI_prediction_error_tracking_implemented_neurally
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'BPI prediction error tracking implemented neurally'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'BPI prediction error tracking implemented neurally' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_DopaminePredictionError
+    target: DEF
+    label: argmin_Z_implemented_in_dopaminergic_circuits
+    edge_status: D
+    justification: |
+      dopamine prediction-error neural substrate grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'argmin Z implemented in dopaminergic circuits'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on dopamine prediction-error neural substrate — but the labelled relationship 'argmin Z implemented in dopaminergic circuits' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N_DopaminePredictionError
+    label: F_minimization_implemented_via_dopamine_signaling
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds dopamine prediction-error neural substrate through the relationship encoded as 'F minimization implemented via dopamine signaling'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) dopamine prediction-error neural substrate without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'F minimization implemented via dopamine signaling' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N_BPIEngagement
+    label: variational_formulation_of_engagement
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'variational formulation of engagement'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'variational formulation of engagement' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N_Shannon
+    label: FEP_decomposes_via_Shannon_H_equiv_Z_struct
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds Shannon information theory (H ≡ Z_struct isomorphism) through the relationship encoded as 'FEP decomposes via Shannon H equiv Z struct'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Shannon information theory (H ≡ Z_struct isomorphism) without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'FEP decomposes via Shannon H equiv Z struct' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N112
+    label: FEP_uses_BPI_bound_via_Markov_blanket
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds Observer Containment Lemma (K(O) < K(F)) through the relationship encoded as 'FEP uses BPI bound via Markov blanket'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Observer Containment Lemma (K(O) < K(F)) without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'FEP uses BPI bound via Markov blanket' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N_Logic
+    label: sibling_substrate_realisation_of_A0
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds logic as A_0 in symbolic substrate through the relationship encoded as 'sibling substrate realisation of A0'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) logic as A_0 in symbolic substrate without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'sibling substrate realisation of A0' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: N_NoSeparatePieces
+    label: perception_action_one_process
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds coordinate-unification principle (one structure, many coordinates) through the relationship encoded as 'perception action one process'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'perception action one process' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_FEP
+    target: DEF
+    label: FEP_is_A0_in_Bayesian_substrate
+    edge_status: D
+    justification: |
+      Free Energy Principle (variational A_0 in Bayesian substrate) grounds A_0 = argmin Z (foundational definition) through the relationship encoded as 'FEP is A0 in Bayesian substrate'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) A_0 = argmin Z (foundational definition) without reliance on Free Energy Principle (variational A_0 in Bayesian substrate) — but the labelled relationship 'FEP is A0 in Bayesian substrate' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_AestheticEngagement
+    target: N_DopaminePredictionError
+    label: neural_substrate_of_aesthetic_response
+    edge_status: D
+    justification: |
+      aesthetic engagement (artwork-class BPI inputs) grounds dopamine prediction-error neural substrate through the relationship encoded as 'neural substrate of aesthetic response'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) dopamine prediction-error neural substrate without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'neural substrate of aesthetic response' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_AestheticEngagement
+    target: N_BPIEngagement
+    label: aesthetic_is_engagement_in_artwork_input
+    edge_status: D
+    justification: |
+      aesthetic engagement (artwork-class BPI inputs) grounds BPI engagement signal (triangulation in time-indexed substrate) through the relationship encoded as 'aesthetic is engagement in artwork input'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) BPI engagement signal (triangulation in time-indexed substrate) without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'aesthetic is engagement in artwork input' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_AestheticEngagement
+    target: N_Triangulation
+    label: three_aesthetic_dimensions_via_triangulation
+    edge_status: D
+    justification: |
+      aesthetic engagement (artwork-class BPI inputs) grounds triangulation principle (3 minimal Z-coordinates) through the relationship encoded as 'three aesthetic dimensions via triangulation'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) triangulation principle (3 minimal Z-coordinates) without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'three aesthetic dimensions via triangulation' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_AestheticEngagement
+    target: N048
+    label: explains_Birkhoff_failure
+    edge_status: D
+    justification: |
+      aesthetic engagement (artwork-class BPI inputs) grounds Birkhoff M=O/C aesthetic formula failure through the relationship encoded as 'explains Birkhoff failure'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) Birkhoff M=O/C aesthetic formula failure without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'explains Birkhoff failure' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
+  - source: N_AestheticEngagement
+    target: N_NoSeparatePieces
+    label: art_forms_are_observation_angles
+    edge_status: D
+    justification: |
+      aesthetic engagement (artwork-class BPI inputs) grounds coordinate-unification principle (one structure, many coordinates) through the relationship encoded as 'art forms are observation angles'. The edge captures structural dependency from source's foundational role to target's specialised manifestation.
+    why_forced: |
+      Alternative requires either (a) coordinate-unification principle (one structure, many coordinates) without reliance on aesthetic engagement (artwork-class BPI inputs) — but the labelled relationship 'art forms are observation angles' encodes a structural input that cannot be removed without dissolving the derivation; or (b) different grounding for the same target — but no competing source provides equivalent structural anchor.
+
 nodes:
   - id: N165
     title: Ergodicity of the Reality Protocol
