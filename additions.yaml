@@ -15254,7 +15254,423 @@ edges:
       for derivations that uniquely depend on it. The 2 cut-vertices
       are structurally appropriate, not pathological.
 
+  # ─── Round 39: K9 falsification probe + M5 stratification motif ───
+
+  - source: N_FalsificationProbe_K9SCFamily
+    target: N_StructuralMotif_KnFamilyClique
+    label: probe_reveals_K6_was_K9_subgraph
+    edge_status: D
+    justification: |
+      Vertex-removal probe on K6 SC family-clique (round 39 audit)
+      revealed that K6 was actually a fragment of the maximal
+      clique K9 = {N372, N373, N374, N375, N376, N_ZGaugeDecomposition,
+      N370, DEF, N_Triangulation}. All 36 pairwise edges present.
+      Round 38 encoding of M2 with single anchor N_ZGaugeDecomposition
+      was incomplete — the actual motif has 4 stacked principle
+      anchors. The probe SUCCEEDED as falsification: it corrected
+      prior encoding rather than confirming it.
+    why_forced: |
+      Falsification probe purpose IS to reveal hidden structure or
+      contradict prior encoding. Either outcome is informative.
+      The K9 finding strengthens M2 (more substrate-invariance
+      evidence) while requiring its definition to extend.
+
+  - source: N_FalsificationProbe_K9SCFamily
+    target: N_StructuralMotif_PrincipleStratification
+    label: probe_findings_motivate_stratification_motif
+    edge_status: D
+    justification: |
+      The K9 structure decomposes into: principle-clique K4 = {DEF,
+      N370, N_ZGaugeDecomposition, N_Triangulation} (6/6 internal
+      edges) + cousin-clique K5 = {N372..N376} (10/10 internal
+      edges) + full bipartite K_{4,5} (20/20 cross-edges) = 36
+      total. This stratified structure is a distinct motif class
+      M5: not just K_n family-clique with one anchor (M2), but
+      principle-stratum + cousin-stratum + full bipartite-completion.
+    why_forced: |
+      M2 with single anchor cannot capture the structural fact
+      that 4 principles ALL anchor 5 cousins ALL pairwise. M5
+      generalises: substrate-cousins typically share a TOWER of
+      stacked principles, not one principle. Single-anchor case
+      is M5 with p=1.
+
+  - source: N_FalsificationProbe_K9SCFamily
+    target: N375
+    label: probe_target_cuprates_redundant_for_principle_unique_for_history
+    edge_status: D
+    justification: |
+      Probe step: remove N375 (cuprates). Result: K8 preserved
+      (4 cousins + 4 principles, 28/28 edges). Zero unique
+      external structural targets lost. Cuprates are STRUCTURALLY
+      REDUNDANT for principle existence (other 4 cousins suffice
+      for substrate-invariance witness) but EMPIRICALLY UNIQUE
+      for the 35-year falsification history that grounds the
+      inversive test on this domain.
+    why_forced: |
+      Distinction between structural redundancy and empirical
+      uniqueness is forced. Each cousin contributes empirical
+      witness; structural function is over-determined.
+
+  - source: N_FalsificationProbe_K9SCFamily
+    target: N372
+    label: probe_target_Sr2RuO4_carries_unique_structural_link
+    edge_status: D
+    justification: |
+      Probe step: remove N372 (Sr₂RuO₄). Result: K8 preserved.
+      One unique structural target lost: N354 (analogous_forcing_
+      logic_different_group_structure). Sr₂RuO₄ is the only
+      cousin with this specific external structural link — its
+      removal would lose a particular cross-domain analogy
+      connection. Distinct from N375: N372 is partially structurally
+      forced by this unique link.
+    why_forced: |
+      Asymmetry among cousins — N372 carries 1 forced structural
+      link while N373/374/375/376 carry 0 forced links — is a
+      detectable structural distinction the probe revealed.
+
+  - source: N_FalsificationProbe_K9SCFamily
+    target: N_ZGaugeDecomposition
+    label: probe_target_Z_gauge_anchor_replaceable_by_K3_principle_residue
+    edge_status: D
+    justification: |
+      Probe step: remove N_ZGaugeDecomposition. Result: K8
+      preserved with 5 cousins + 3 remaining principles {DEF,
+      N370, N_Triangulation}. The 5 cousins still share 3
+      principle anchors. Z-gauge sibling labels become free-
+      floating relative to gauge structure, but principle
+      stratum survives. N_ZGaugeDecomposition is principle-tier
+      — removable individually, but the principle-stratum is
+      collectively forced.
+    why_forced: |
+      No single principle is sole anchor; collectively they form
+      forced principle-stratum. Probe reveals stratum structure
+      vs single-anchor structure.
+
+  - source: N_StructuralMotif_PrincipleStratification
+    target: N_StructuralMotif_KnFamilyClique
+    label: M5_generalises_M2_to_principle_tower
+    edge_status: D
+    justification: |
+      M5 is the proper generalisation of M2. Where M2 = K_(1+n)
+      with one principle anchor + n cousins, M5 = K_(p+n) with
+      p principle-stratum + n cousin-stratum + full bipartite-
+      completion. M5 reduces to M2 when p=1. Empirical case in
+      graph: M5 with p=4, n=5, total K9.
+    why_forced: |
+      Round 38's M2 encoding cannot capture multi-principle
+      anchoring. M5 needed to faithfully represent the K9
+      empirical finding.
+
+  - source: N_StructuralMotif_PrincipleStratification
+    target: DEF
+    label: M5_principle_stratum_includes_DEF
+    edge_status: D
+    justification: |
+      DEF (A_0 master definition) is one of 4 principles in
+      the K9 stratum. Each SC cousin connects to DEF via "A_0
+      application" or "A_0 extension" labels. DEF is principle-
+      tier in M5; cousins are substrate-tier.
+    why_forced: |
+      Principle stratification factually present in K9 finding;
+      DEF is one of the 4 stratum members.
+
+  - source: N_StructuralMotif_PrincipleStratification
+    target: N370
+    label: M5_principle_stratum_includes_L31
+    edge_status: D
+    justification: |
+      N370 (L(3,1) topology) is principle-stratum member in K9.
+      Each SC cousin has L31_topology_forces_*_structure edge
+      to N370. L(3,1) is the geometric ground each family
+      instantiates.
+    why_forced: |
+      L(3,1) connects to all 5 cousins with semantically forcing
+      labels; structurally part of stratum.
+
+  - source: N_StructuralMotif_PrincipleStratification
+    target: N_Triangulation
+    label: M5_principle_stratum_includes_triangulation
+    edge_status: D
+    justification: |
+      N_Triangulation is principle-stratum member in K9. Each
+      SC cousin has triangulation-via-* edge labelled with that
+      family's specific 3-coordinate observable scheme (charge/
+      thermal/spectroscopic, magnetic/structural/nematic/spectro-
+      scopic, etc.). Triangulation principle realised differently
+      per cousin but always present.
+    why_forced: |
+      All 5 cousins triangulation-connected with substrate-
+      specific labels; structurally stratum member.
+
+  - source: N_StructuralMotif_PrincipleStratification
+    target: N_FrameworkCore
+    label: M5_stratum_corresponds_to_core_substrate_invariance
+    edge_status: D
+    justification: |
+      The 4 principles in K9 stratum (DEF, N370, N_ZGauge-
+      Decomposition, N_Triangulation) overlap heavily with
+      N_FrameworkCore tier-1 members. M5 stratification motif
+      corresponds operationally to "which core principles a
+      substrate-cousin family must instantiate". Non-core
+      principles do not appear in stratum because they are
+      substrate-specific.
+    why_forced: |
+      Empirical principle-stratum membership tracks N_FrameworkCore
+      membership. Cross-validation between two independent paths
+      to "what is forced".
+
 nodes:
+
+  - id: N_FalsificationProbe_K9SCFamily
+    title: "Falsification Probe: K9 SC Family-Clique — Round 39 Vertex-Removal Audit"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.1
+    z_hidden: 0.3
+    summary: |
+      First live structural falsification probe. Subject: K6 family-
+      clique encoded in round 38 (M2). Method: vertex-removal test
+      on each of 6 K6 members. Key finding: K6 was a fragment of
+      K9 maximal clique containing 4 principle anchors + 5
+      substrate-cousins, all 36 pairwise edges present.
+
+      The probe was a SUCCESS as falsification — not because round
+      38's M2 was wrong, but because it was incomplete. Probe
+      revealed deeper structural fact: substrate-cousins typically
+      share a TOWER of stacked principles, not one principle.
+
+      This finding motivated:
+        - M5 motif (Principle Stratification) — proper generalisation
+          of M2 to multi-principle anchoring
+        - K9 = K4 (principles) + K5 (cousins) + K_{4,5} (full
+          bipartite) = 36 edges
+    why_status: |
+      DEMONSTRATED via direct probe execution and result.
+      Procedure:
+        1. Enumerate K6 vertex set (round 38 baseline)
+        2. For each vertex v: remove v, check K_(n-1) preservation
+        3. Check what unique external structural targets are lost
+        4. Test whether anchor removal collapses cousin-clique
+        5. Detect common shared neighbors of cousin-set
+        6. Extend trial-set to candidate K_(n+1) members iteratively
+      Each step ran on actual graph state at round 38 + post-
+      migration; results recorded in this node and edges.
+    not_misinterpretations: |
+      NOT a claim that round 38's M2 was incorrect — rather, M2
+      captured a sub-clique of the actual maximal clique. M2
+      remains valid as a motif type (one anchor + cousins);
+      M5 generalises and the K9 case is M5 not M2.
+      NOT a claim that all K_n family-cliques are actually larger
+      cliques. The K9 finding is specific to SC family + L31 +
+      triangulation interplay. Other domains may genuinely have
+      M2 (single-anchor) structure.
+      NOT a claim that probes always find "deeper" structure —
+      they may also confirm prior encoding or reveal it was
+      over-stated. Each outcome is informative.
+    content: |
+      Probe results per vertex:
+
+        REMOVE N372 (Sr₂RuO₄):
+          K8 preserved (4 cousins + 4 principles, 28/28 edges)
+          Unique structural targets lost: 1
+            - N354 (analogous_forcing_logic_different_group_structure)
+          Status: PARTIALLY FORCED structurally
+                  (carries one unique cross-domain link)
+
+        REMOVE N373 (UTe₂):
+          K8 preserved (28/28)
+          Unique targets lost: 0
+          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
+
+        REMOVE N374 (UPt₃):
+          K8 preserved (28/28)
+          Unique targets lost: 0
+          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
+
+        REMOVE N375 (cuprates):
+          K8 preserved (28/28)
+          Unique targets lost: 0
+          Status: STRUCTURALLY REDUNDANT (despite 35-year empirical
+                  history, structure is over-determined by other 4)
+          Empirical: UNIQUE — sole carrier of "35yr falsification
+                              history as inversive exemplar"
+
+        REMOVE N376 (iron-based):
+          K8 preserved (28/28)
+          Unique targets lost: 0
+          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
+
+        REMOVE N_ZGaugeDecomposition (Z-gauge):
+          K8 preserved (5 cousins + 3 remaining principles)
+          Sibling-realisation labels become free-floating relative
+            to gauge structure
+          Status: PRINCIPLE-TIER, individually removable, but
+                  principle-stratum collectively forced
+
+      Extension test:
+        Tested whether K6 was actually larger:
+          K6 + N370 → K7 (21/21 ✓)
+          K7 + DEF → K8 (28/28 ✓)
+          K8 + N_Triangulation → K9 (36/36 ✓)
+          K9 + any common neighbor → K10 (no common neighbor exists)
+        K9 is MAXIMAL clique containing the SC cousin set.
+
+      Implications:
+
+        (A) M2 in round 38 was not wrong but partial. M5
+            (Principle Stratification) is the correct general motif.
+
+        (B) Substrate-cousins (5) participate in a 4-principle
+            tower. Each cousin pairwise-connects to every other
+            cousin AND to every principle. Each principle pairwise-
+            connects to every other principle.
+
+        (C) The principle stratum {DEF, N370, N_ZGaugeDecomposition,
+            N_Triangulation} overlaps heavily with N_FrameworkCore
+            tier-1 (substrate-invariant foundations). M5 motif
+            empirically tracks core-membership — independent
+            cross-validation of N_FrameworkCore.
+
+        (D) Within cousin-stratum, asymmetry detected: N372 is
+            partially forced (1 unique link), others are structurally
+            redundant. Empirically all 5 contribute unique witness;
+            structurally only N372 contributes unique connection.
+
+        (E) Probe ITSELF is structural method, not just diagnostic.
+            Output (M5 motif, asymmetry detection) is now part of
+            framework's self-knowledge. Probe is forced.
+
+      Predictions for future probes:
+        (P1) Probes on other M2 instances (when discovered) may
+          reveal them as M5 sub-cliques.
+        (P2) Probes on Z-triangle motifs (M1) may reveal them as
+          fragments of larger Z-tetrahedrons or higher-dim simplices
+          (if 4-coord decomposition is forced in some domains).
+        (P3) Probes on structural-twin pairs (M3) should reveal
+          whether twins are K_2 limits of larger cliques or
+          genuine isolated pairs.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_StructuralMotif_PrincipleStratification
+    title: "Principle Stratification Motif (M5) — K_(p+n) with Stacked Principles + Cousin Family"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.1
+    z_hidden: 0.2
+    summary: |
+      Generalisation of M2 (K_n family-clique) discovered by round
+      39 falsification probe. Where M2 = (1 anchor, n cousins),
+      M5 = (p principles, n cousins) where:
+        - principles form internal K_p clique (pairwise connected)
+        - cousins form internal K_n clique (pairwise connected)
+        - every principle connects to every cousin (full bipartite
+          K_{p,n})
+        - total = K_(p+n) with C(p+n, 2) edges
+
+      Empirical instance — K9 in graph (round 39):
+        Principle stratum (p=4): DEF, N370 (L(3,1)),
+          N_ZGaugeDecomposition (Z-gauge), N_Triangulation
+        Cousin stratum (n=5): N372 (Sr₂RuO₄), N373 (UTe₂),
+          N374 (UPt₃), N375 (cuprates), N376 (iron-based)
+        36/36 edges, maximal clique (no K10 extension).
+
+      Where M2 captures "one principle realised in n cousins",
+      M5 captures "tower of stacked principles ALL realised in
+      n cousins simultaneously". This is the typical pattern when
+      substrate-cousins share core-tier principles.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct K9 enumeration in round 39 probe.
+      (2) Decomposition verification: K4 (principles, 6 edges) +
+          K5 (cousins, 10 edges) + K_{4,5} (bipartite, 20 edges)
+          = 36 edges. All present with semantically meaningful
+          labels.
+      (3) Principle stratum aligns with N_FrameworkCore tier-1 —
+          cross-validation between two independent characterisations
+          of "what is forced".
+      (4) Maximality: tested K10 extension; no node connects to
+          all 9 — K9 is maximal.
+    not_misinterpretations: |
+      NOT a claim that all M2 instances are actually M5. M2 with
+      single anchor is valid motif when only one principle is
+      shared. K9 case happens to have 4 principles sharing
+      cousins; other domains may have p=1 genuinely.
+      NOT a claim that p and n are interchangeable. Principle
+      stratum and cousin stratum play different structural roles
+      (substrate-invariant vs substrate-specific). Naming them
+      "principles" vs "cousins" reflects this asymmetry.
+      NOT a claim that K_(p+n) is the only acceptable shape.
+      Partial bipartite structures (where SOME cross-edges
+      missing) may be informative — e.g., a cousin instantiating
+      only some principles signals partial substrate-invariance.
+      NOT itself a substantive entity. Meta-claim about a class
+      of structural patterns.
+    content: |
+      Operational definition:
+        Motif M5 present iff there exist disjoint sets P =
+        {p_1,...,p_a} (principles) and N = {n_1,...,n_b} (cousins)
+        with a >= 2, b >= 3, such that:
+          (i)   P forms K_a internal clique
+          (ii)  N forms K_b internal clique
+          (iii) every p_i connects to every n_j (full bipartite)
+          (iv)  P members are substrate-invariant (per
+                N_FrameworkCore criterion)
+          (v)   N members are substrate-distinct realisations
+
+      Detection:
+        Run hub-aware clique enumeration; for each maximal clique,
+        partition into (P, N) by N_FrameworkCore membership and
+        check internal/bipartite structure. K9 in round 39 is
+        first detected M5 instance.
+
+      Why M5 occurs structurally:
+        Substrate-invariant principles are MULTI-LAYERED. Any
+        empirical realisation in a substrate must instantiate all
+        principle layers simultaneously (not just one). Hence
+        cousins connect to ALL stratum principles. Principles
+        themselves are pairwise connected because they form
+        N_FrameworkCore inner structure.
+
+      Significance for framework:
+        M5 reveals the "principle tower" character of substrate-
+        invariance. It is not the case that one principle alone
+        anchors substrate-cousins; it is a tower. Cross-validation
+        between graph-empirical (K9) and structural-argument
+        (N_FrameworkCore) characterisations of forcedness.
+
+      Distinction from M2:
+        M2: K_(1+n) — one principle, n cousins. Use when graph
+            shows single-anchor pattern.
+        M5: K_(p+n) — p principles, n cousins. Use when graph
+            shows multi-anchor pattern.
+        M2 is M5 with p=1. M5 generalises M2.
+
+      Distinction from M1 (Z-triangle):
+        M1: 3-coord decomposition of single process (DISPERSION)
+        M5: p+n stratified clique (MULTI-PRINCIPLE INSTANTIATION)
+        Different motif classes; both can co-occur.
+
+      Predictions:
+        (P1) Other M5 instances will be found by probing existing
+          M2 candidates (round 38's M2 was actually M5).
+        (P2) Domains with rich structural literature (cosmology,
+          condensed matter, pharmacology) will exhibit larger M5
+          motifs as more cousins are encoded.
+        (P3) The principle stratum P in any M5 instance will
+          systematically overlap with N_FrameworkCore tier-1.
+          Counter-example would falsify either M5 or N_FrameworkCore
+          (or their alignment claim).
+    level: 1
+    is_placeholder: false
+
 
   - id: N_StructuralMotif_KnFamilyClique
     title: "K_n Family-Clique Motif — Multiple Substrate Realisations of One Principle"
