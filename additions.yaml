@@ -8340,7 +8340,255 @@ edges:
       respects it. The formula's continuous interpolation between
       d_s=2 (UV) and d_s=4 (IR) is what makes the unity manifest.
 
+  # Round 20: meta-claim — modern ontological paradigm as grammar-bound
+  # The R1-R4 traps are not bugs of specific theories. They are systematic
+  # symptoms of S-V-O grammar applied to A_0 phenomena. Math and topology
+  # survive precisely because they bypass grammar via intensional/structural
+  # form. This round encodes that diagnostic at the paradigm level.
+
+  - source: DEF
+    target: N_OntologyParadigmGrammarBound
+    label: A0_diagnosis_at_paradigm_level
+    edge_status: D
+    justification: |
+      DEF defines A_0 as the structure of any description; modern
+      ontological paradigm is one specific kind of description (S-V-O
+      grammatical). Applying DEF at the paradigm level shows the
+      paradigm IS forced into R1-R4 by its grammatical substrate.
+      The diagnosis is A_0 self-applied to the paradigm itself.
+    why_forced: |
+      Without DEF as reference, the paradigm-level diagnosis has no
+      structural anchor; with DEF, it follows directly because grammar
+      has Z_struct = 0 for "subject-verb-object" pattern (per
+      N_GrammarTrap's tautology), forcing the paradigm into the
+      pattern.
+
+  - source: N_GrammarTrap
+    target: N_OntologyParadigmGrammarBound
+    label: grammar_trap_is_paradigm_wall_mechanism
+    edge_status: D
+    justification: |
+      N_GrammarTrap establishes that S-V-O grammar postulates persistent
+      objects + state-change actions before any physical claim is made.
+      N_OntologyParadigmGrammarBound is the corollary: a paradigm whose
+      descriptions are grammatically structured is forced to inherit
+      the postulates. Grammar is the mechanism; paradigm-wall is the
+      consequence.
+    why_forced: |
+      Without grammar as mechanism, the paradigm-level wall has no
+      explanation; with grammar, the wall is structurally inevitable
+      wherever descriptions are S-V-O encoded. The mechanism IS the
+      explanation.
+
+  - source: N_EpistemicTraps
+    target: N_OntologyParadigmGrammarBound
+    label: R1_R4_are_symptoms_paradigm_is_patient
+    edge_status: D
+    justification: |
+      The R1-R4 trap catalogue (N_EpistemicTraps) catalogues observed
+      symptoms; N_OntologyParadigmGrammarBound names the systemic
+      cause. The same trap recurs across string theory, IIT, multiverse,
+      LQG, etc. — not because each theory is independently flawed,
+      but because all are written in S-V-O grammar applied to A_0
+      content.
+    why_forced: |
+      Without the systemic-cause framing, the trap catalogue looks
+      like an enumeration of independent failures; with it, the
+      catalogue is one symptom-set with one root cause. Theory-level
+      vs paradigm-level explanation.
+
+  - source: N_NoSeparatePieces
+    target: N_OntologyParadigmGrammarBound
+    label: paradigm_fragmentation_is_grammar_induced
+    edge_status: D
+    justification: |
+      Modern paradigm's domain fragmentation (separate physics, biology,
+      cognition, etc.) is grammar-induced: each domain has its own
+      S-V-O lexicon, encoding distinct "objects" and "actions". By
+      N_NoSeparatePieces these are coordinate readings of one A_0,
+      but grammar masks the unity. Paradigm sees pieces because
+      grammar pre-supposes them.
+    why_forced: |
+      Without grammar-induction explanation, domain fragmentation
+      seems empirical; with it, fragmentation is forced by the
+      descriptive substrate, regardless of underlying structure.
+      N_NoSeparatePieces + N_GrammarTrap together force this corollary.
+
+  # === Bypass pattern: math/topology bypass grammar ===
+
+  - source: N_Math
+    target: N_GrammarTrap
+    label: math_bypasses_grammar_via_intensional_structure
+    edge_status: D
+    justification: |
+      Mathematics defines its objects intensionally (by structure-preserving
+      properties), not extensionally (as named referents in S-V-O
+      sentences). "A group is a set with a binary operation satisfying..."
+      does not reify the group as object; it specifies a structural
+      pattern. Math therefore bypasses N_GrammarTrap's S-V-O imposition
+      and operates directly on A_0 structure.
+    why_forced: |
+      Without the intensional/extensional distinction, math would suffer
+      the same grammar wall as ontology — but it doesn't, as the
+      productivity asymmetry shows. The bypass mechanism IS the
+      intensional definition mode.
+
+  - source: N_Logic
+    target: N_GrammarTrap
+    label: logic_bypasses_grammar_via_symbolic_substrate
+    edge_status: D
+    justification: |
+      Symbolic logic operates on relations between propositions without
+      requiring S-V-O surface structure. Inference rules (modus ponens,
+      etc.) act on logical forms directly. The symbolic substrate is
+      pre-grammatical: it can be expressed in S-V-O for human reading,
+      but the structure itself is grammar-independent.
+    why_forced: |
+      Without grammar-bypass, logic would inherit the same paradigm wall
+      as ontology — but logical proofs are domain-independent and
+      paradigm-independent, demonstrating the bypass empirically. The
+      symbolic substrate IS the bypass mechanism.
+
+  - source: N_OntologyParadigmGrammarBound
+    target: N_OntologyGate
+    label: gate_is_operational_fix_for_paradigm_wall
+    edge_status: D
+    justification: |
+      N_OntologyGate intercepts grammar-induced trap moves during
+      reasoning, providing an operational layer that compensates for
+      the paradigm's grammatical substrate. The gate IS the runtime
+      correction for the paradigm-level structural failure.
+    why_forced: |
+      Without an operational corrector, the paradigm-level wall is
+      diagnostic only; with the gate, it becomes actionable. The fix
+      requires the diagnosis (this node), and the diagnosis requires
+      a fix to be useful — they are diagnostic-and-operational pair.
+
+  - source: N_OntologyParadigmGrammarBound
+    target: N_TranslationLayer
+    label: translation_layer_provides_grammar_independent_form
+    edge_status: D
+    justification: |
+      N_TranslationLayer (ontology→topology translation) is the
+      paradigm's escape route from grammar-binding: re-express ontological
+      claims in topological/structural form, where R1-R4 cannot fire
+      because there is no S-V-O substrate to encode them. The
+      translation layer IS the structural exit from the paradigm wall.
+    why_forced: |
+      The exit from grammar-bound paradigm requires moving descriptions
+      to a non-grammatical substrate; topology is the canonical such
+      substrate (math/structural form). N_TranslationLayer specifies
+      the operational mapping; without it, the diagnosis lacks an
+      escape route.
+
 nodes:
+
+  - id: N_OntologyParadigmGrammarBound
+    title: "Modern Ontological Paradigm as Grammar-Bound — R1-R4 are Symptoms, Grammar is the Wall"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    summary: |
+      The R1-R4 traps catalogued in N_EpistemicTraps are not theory-specific
+      bugs (string theory, IIT, multiverse, LQG, Wolfram physics, etc.).
+      They are systematic symptoms of one paradigm-level structural failure:
+      modern ontological description operates in S-V-O grammar, which
+      pre-supposes objects + actions before any structural claim is made.
+      Applied to A_0 content (which is processes, not objects), grammar
+      automatically produces R1 (reification) + R2 (external view) + R3
+      (free alternatives) + R4 (state-change agency). The wall of modern
+      ontology IS the grammar wall.
+
+      Math and topology yield results where ontology hits walls because
+      they bypass grammar: math via intensional structure (defining
+      objects by their structural properties, not as named referents),
+      topology via relational/identity language (transformations,
+      equivalences, embeddings).
+    why_status: |
+      DEMONSTRATED via tautological argument inherited from N_GrammarTrap:
+      ontological-paradigm descriptions ⊆ natural language ⊆ S-V-O ⊆
+      ontological structure, with each containment forced by A_0 applied
+      to the descriptive substrate. Z_struct = 0 for the inference (zero
+      degrees of freedom). Empirically corroborated by the productivity
+      asymmetry: math/topology produce structurally-stable results across
+      centuries; ontological theories generate large numbers of failed
+      candidates (string landscape, MWI multiverse, IIT Φ formulas, etc.)
+      — exactly the high-Shannon-entropy signature of grammar-induced
+      R3 traps (per N_Shannon → N_EpistemicTraps).
+    not_misinterpretations: |
+      NOT a critique of any specific theory. Each theory may be locally
+      well-formed; the paradigm-level claim is about systemic susceptibility,
+      not individual error. NOT a claim that grammar is fixable through
+      better wording — the trap is structural in S-V-O parsing itself.
+      NOT a claim that math/topology are "above" ontology; they are
+      structurally distinct substrates that don't carry grammar's
+      ontological pre-postulates. NOT inconsistent with science yielding
+      results — it does, precisely in the math/topology-aligned regions
+      (relativity's geometry, QM's algebraic structure, statistical
+      mechanics' entropy formalism).
+    content: |
+      Mechanism (from N_GrammarTrap):
+        S-V-O grammar postulates persistent S, state-change V, and
+        optional persistent O. This is the ontological substrate of
+        every grammatical sentence — present BEFORE any physical claim.
+
+      Application to A_0 content:
+        A_0 = argmin Z over transitions = process, no object substrate.
+        Grammar applied to A_0 forces:
+          - subject (S) = some "thing" doing argmin    → R1 (reification)
+          - verb (V) = the "doing" as an event         → R4 (state-change)
+          - object (O) = what is acted on              → R1 (reification)
+          - external speaker = who describes           → R2 (external frame)
+          - alternative descriptions                   → R3 (free alternatives)
+
+      All four R-traps follow mechanically. The traps are not separable
+      from the grammatical substrate.
+
+      Asymmetry diagnosis (math/topology vs ontology):
+        - "A group is a set with binary op satisfying associativity, identity, inverse"
+            ↑ no grammatical reification: 'group' is the structural pattern,
+              not an object the sentence is "about"
+        - "An electron has charge -1"
+            ↑ S-V-O reified: electron as object, possession as relation,
+              charge as substantive property — three R1 events in one sentence
+
+      The first is intensional — it specifies what counts as a group
+      by structure. The second is extensional — it names an object
+      and predicates a property of it.
+
+      Math/topology operate primarily intensionally; ontology operates
+      primarily extensionally. The productivity asymmetry follows.
+
+      Paradigm-level corollary:
+        Modern science's "ontological progress" stalls at the wall
+        wherever it tries to extend extensionally beyond what
+        intensional math/topology already covers. String theory's
+        landscape, IIT's Φ, MWI's worlds, Wolfram's rules — all are
+        attempts to extensionally name what intensionally defined
+        structures already specify, generating R3-traps (free
+        alternatives) and R1-traps (theory's named entities reified).
+
+      Operational consequence:
+        N_OntologyGate intercepts at runtime; N_TranslationLayer
+        translates from grammatical to topological form; N_Math and
+        N_Logic supply the bypass-pattern for new structural work.
+        Together they constitute the framework's escape from the
+        paradigm wall.
+
+      Shannon-entropy quantification:
+        Theory's parameter-space H = quantitative measure of
+        interpretive plaster vs structural core. Per round 17
+        (N_Shannon → N_EpistemicTraps), high H = trap-prone.
+        String theory ≈ log(10^500) ≈ 1660 nats. A_0 = 0 nats
+        (one structure). Each bit of theory's H = bit of distance
+        from A_0 core, equivalently, bit of grammar-induced plaster.
+    level: 1
+    is_placeholder: false
+
   # Round 17: new structural node N_ZSimplexProjections
   - id: N_ZSimplexProjections
     title: "Shannon, Thermodynamics, and FEP as Z-Simplex Projections of One A_0"
