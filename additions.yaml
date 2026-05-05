@@ -8081,6 +8081,265 @@ edges:
       structure (singular), forcing unity. The edge makes the
       single-A_0 reading structural, not contingent.
 
+  # Round 19: QM/gravity/dark-matter/spectral nodes — explicit BPI-limit linkage
+  # These nodes are BPI-limit phenomena (their content says so) but graph
+  # connections to core principles are sparse. This round closes 16 forced edges.
+
+  # === Measurement problem & contextuality — explicit trap linkage ===
+
+  - source: N070
+    target: N_OntologyGate
+    label: measurement_collapse_narrative_is_gate_intercept
+    edge_status: D
+    justification: |
+      The measurement problem "dissolution" of N070 IS what the
+      N_OntologyGate intercepts when reasoning produces collapse-narrative
+      ("the wavefunction collapsed", "measurement caused state change").
+      The collapse story reifies a process (Z-readout) as an object event,
+      which is exactly the trap the gate is designed to catch.
+    why_forced: |
+      Without the gate, the collapse narrative re-enters reasoning as
+      apparent physical event; with the gate, it is correctly classified
+      as ontology-trap output and replaced by the observer/observed
+      coordinate reading. N070's dissolution operationalises through
+      the gate.
+
+  - source: N070
+    target: N_EpistemicTraps
+    label: collapse_is_R1_reification_canonical_case
+    edge_status: D
+    justification: |
+      The "collapse" framing is the canonical R1 trap case (process
+      reified as object event). N070 documents the dissolution; the
+      trap catalogue documents the failure pattern that the dissolution
+      corrects. They are dissolution-and-failure-mode pair.
+    why_forced: |
+      Without R1 cataloguing, dissolution lacks operational traceability;
+      without dissolution, R1 lacks its canonical resolution. Each
+      requires the other as structural reference.
+
+  - source: N063
+    target: N_EpistemicTraps
+    label: KS_demonstrates_R3_no_hidden_variable_alternatives
+    edge_status: D
+    justification: |
+      Kochen-Specker (N063) is the experimental/theorem-level demonstration
+      of R3: there are no hidden-variable alternatives to standard QM
+      that survive the contextuality constraints. KS IS the inversive
+      removal test passed with empirical force — alternatives dissolve
+      under the no-hidden-variable theorem.
+    why_forced: |
+      KS without the R3 trap framing leaves contextuality as an isolated
+      mathematical curiosity; with R3, it is the canonical proof that
+      "alternatives to QM" fail the inversive test. The trap catalogue
+      requires KS as anchor; KS requires R3 as interpretation.
+
+  - source: N063
+    target: N_InversiveTheory
+    label: KS_is_inversive_removal_proof_at_quantum_level
+    edge_status: D
+    justification: |
+      Kochen-Specker proves: any non-contextual hidden-variable assignment
+      to QM observables is impossible. This is the inversive removal
+      test executed mathematically — the alternative (hidden variables)
+      does not survive removal. KS is N_InversiveTheory in the quantum-
+      contextuality substrate.
+    why_forced: |
+      Inversive theory without empirical-mathematical instantiation in
+      QM lacks one of its strongest demonstrations; KS without inversive
+      framing is "just a no-go theorem". The structural identification
+      ties them.
+
+  # === Cosmological observables — N_NoSeparatePieces unification ===
+
+  - source: N071
+    target: N112
+    label: dark_energy_at_observer_containment_limit
+    edge_status: D
+    justification: |
+      Dark energy (N071) is the cosmological-scale residual that BPI
+      observers cannot explain via local matter — i.e., it sits in the
+      Z_hidden sector at large scales. By N112, K(O) < K(F) is strict;
+      dark energy is one large-scale manifestation of this gap, not a
+      separate substance.
+    why_forced: |
+      Treating dark energy as a separate "substance" in addition to BPI
+      structure violates N112's containment (would need an external
+      observer to verify substancehood). The gap interpretation is
+      forced by containment.
+
+  - source: N071
+    target: N_NoSeparatePieces
+    label: dark_energy_is_coord_readout_not_separate_substance
+    edge_status: D
+    justification: |
+      Dark energy is one coordinate readout of cosmological Z-structure,
+      not a separate substance among observable pieces. Treating it as
+      a piece (alongside matter, radiation, dark matter) violates
+      N_NoSeparatePieces; treating it as a coordinate reading respects it.
+    why_forced: |
+      The "separate piece" reading predicts dark-energy detection
+      independent of cosmological-structure observation — but every
+      detection IS a cosmological-structure observation. Coordinate-
+      reading interpretation is forced by the empirical inseparability.
+
+  - source: N085
+    target: N_NoSeparatePieces
+    label: G_variation_Hubble_tension_is_coord_inconsistency_not_separate_anomaly
+    edge_status: D
+    justification: |
+      The Hubble tension (early-vs-late-universe H_0 disagreement)
+      reads as a coordinate-frame inconsistency in the cosmological
+      Z-structure, not two separate physical Hubble values. Treating
+      it as separate values fragments the structure; treating it as
+      coord-frame mismatch respects N_NoSeparatePieces.
+    why_forced: |
+      Two separate H_0 values would imply two separate cosmological
+      structures — directly contradicting N_NoSeparatePieces. The
+      coord-mismatch reading is the only one consistent with unity.
+
+  - source: N088
+    target: N_NoSeparatePieces
+    label: metric_expansion_is_coordinate_unfolding
+    edge_status: D
+    justification: |
+      Metric expansion is the coordinate-level unfolding of one
+      cosmological Z-structure across time, not a separate phenomenon
+      from the structure itself. Space and its expansion are one
+      coordinate, not two pieces.
+    why_forced: |
+      Treating expansion as a separate process from space contradicts
+      N_NoSeparatePieces. The coordinate-unfolding reading is forced
+      by the structural unity of metric and its variation.
+
+  - source: N197
+    target: N_NoSeparatePieces
+    label: cosmological_constant_is_one_coord_of_unified_cosmology
+    edge_status: D
+    justification: |
+      The cosmological constant Λ is one coordinate readout of the
+      unified cosmological Z-structure, alongside H_0, dark energy,
+      and matter density. They are not separate parameters but
+      coordinate readings of one structure.
+    why_forced: |
+      Treating Λ as an independent parameter beyond cosmological
+      structure violates the unity claim; coordinate-reading
+      interpretation is the only consistent framing.
+
+  - source: N201
+    target: N_NoSeparatePieces
+    label: CMB_G_variation_is_one_face_of_cosmological_structure
+    edge_status: D
+    justification: |
+      Early-universe G variation imprinted in CMB (N201) is one
+      coordinate face of the cosmological Z-structure, alongside
+      late-universe G variation. One structure, two epoch-coordinate
+      readings — not two separate G-variation facts.
+    why_forced: |
+      Treating early- and late-universe G as independent quantities
+      contradicts cosmological unity (N_NoSeparatePieces). The
+      single-structure reading is forced by the constraint that
+      CMB anisotropies and current expansion derive from one Z-history.
+
+  # === Dark matter as Z_hidden ===
+
+  - source: N329
+    target: N112
+    label: dark_matter_is_Z_hidden_grad_requires_observer_containment
+    edge_status: D
+    justification: |
+      Dark matter as ∇Z_hidden (Verlinde MOND derivation) requires
+      Z_hidden > 0 at galactic scales. Z_hidden = K(F) - K(O) is
+      defined by N112. Without N112's strict inequality, Z_hidden = 0
+      and the ∇Z_hidden gravity correction vanishes — DM phenomenon
+      cannot exist without observer containment.
+    why_forced: |
+      The DM = ∇Z_hidden derivation is structurally dependent on N112;
+      no alternative grounding for Z_hidden exists in the framework.
+      The relationship is definitional, not derivative.
+
+  - source: N329
+    target: N_NoSeparatePieces
+    label: dark_matter_is_not_separate_substance
+    edge_status: D
+    justification: |
+      Dark matter as ∇Z_hidden is not a separate substance from
+      ordinary matter — it is the gradient readout of the same Z-functional
+      seen from a different scale. N_NoSeparatePieces demands this:
+      DM and OM are coordinate-scale readings of one Z-structure.
+    why_forced: |
+      Treating DM as a separate substance (a new particle type)
+      violates N_NoSeparatePieces; the gradient-of-Z_hidden reading
+      respects it. Verlinde's derivation goes through precisely
+      because the substances are not separate.
+
+  # === Pauli exclusion as inversive removal ===
+
+  - source: N179
+    target: N_InversiveTheory
+    label: pauli_exclusion_is_inversive_removal_at_quantum_statistics
+    edge_status: D
+    justification: |
+      Pauli exclusion: two fermions cannot occupy the same quantum
+      state. This IS the inversive removal test at the level of
+      quantum statistics — alternatives (two particles, same state)
+      are removed by structural impossibility. Exclusion IS inversive.
+    why_forced: |
+      Pauli without inversive framing leaves it as an empirical rule;
+      with inversive framing, it is the canonical quantum-statistics
+      instance of the inversive removal principle. Both readings
+      require each other for full structural placement.
+
+  # === Spectral dimension transition scale ===
+
+  - source: N094
+    target: N067
+    label: subr0_phase_at_spectral_dim_transition
+    edge_status: D
+    justification: |
+      N094's SO(2)×U(1) phase structure at sub-r_0 scales corresponds
+      precisely to the d_s(r) transition documented in N067 (spectral
+      dimension d_s = 2 + 2r/(r+r_0)). At r << r_0, d_s → 2 forces
+      complex-phase structure (N094); at r >> r_0, d_s → 4 forces
+      classical 4D structure. Same transition, two coordinate readouts.
+    why_forced: |
+      N094's complex-phase emergence and N067's d_s=2 limit are the
+      same scale-transition phenomenon. Without the explicit edge,
+      they appear as independent phenomena; with it, they are one
+      structural transition.
+
+  - source: N094
+    target: N_Triangulation
+    label: r0_is_triangulation_transition_scale
+    edge_status: D
+    justification: |
+      r_0 is the scale where d_s passes through 3 (the triangulation
+      minimum). At r > r_0 the structure has > 3 effective dimensions
+      (classical regime); at r < r_0 the structure compresses below 3
+      dimensions (sub-triangulation regime where N094's complex-phase
+      structure emerges). r_0 is the triangulation transition.
+    why_forced: |
+      Without N_Triangulation as the dimensional reference, r_0 has
+      no structural significance; with it, r_0 marks the scale where
+      triangulation can be maintained vs. where it cannot. The
+      relationship is structural, not coincidental.
+
+  - source: N067
+    target: N_NoSeparatePieces
+    label: spectral_dim_scale_is_coord_not_piece
+    edge_status: D
+    justification: |
+      d_s(r) = 2 + 2r/(r+r_0) shows dimension as scale-coordinate, not
+      a fixed property of "the geometry as a piece". Different scales
+      have different effective dimensions — but it is one structure
+      read at different coordinates, not different geometric pieces.
+      This is N_NoSeparatePieces in the spectral-geometry substrate.
+    why_forced: |
+      Treating d_s at different scales as different geometries
+      contradicts N_NoSeparatePieces; the scale-coordinate reading
+      respects it. The formula's continuous interpolation between
+      d_s=2 (UV) and d_s=4 (IR) is what makes the unity manifest.
+
 nodes:
   # Round 17: new structural node N_ZSimplexProjections
   - id: N_ZSimplexProjections
