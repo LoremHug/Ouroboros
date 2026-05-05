@@ -7620,7 +7620,357 @@ edges:
       cognitive-load effects in instructional contexts; Sweller's
       chunks are the empirically validated proxy.
 
+  # Round 17: structural insights from session conversation
+
+  # === 1. N_NoSeparatePieces as the unified root of R1-R4 ===
+
+  - source: N_NoSeparatePieces
+    target: N112
+    label: no_external_observer_frame
+    edge_status: D
+    justification: |
+      "No separate pieces" applied to the observer/observed split forces
+      N112's containment K(O) < K(F): if observer were a separate piece
+      from the structure, the inequality would be a contingent fact.
+      N_NoSeparatePieces makes it structural — the observer is one of
+      the coordinate views of the same A_0, not an external piece.
+    why_forced: |
+      Alternative requires either (a) an external observer position from
+      which to view the structure — but that recreates the separate-piece
+      ontology N_NoSeparatePieces denies; or (b) N112 grounded by some
+      other principle — but every alternative grounding ends up needing
+      "observer is not separate" anyway.
+
+  - source: N_NoSeparatePieces
+    target: N187
+    label: no_internal_state_frame
+    edge_status: D
+    justification: |
+      "No separate pieces" applied to the BPI's self-attribution forces
+      N187's Hard Problem dissolution: if the BPI had separate internal
+      states distinct from its self-reference, those states would be a
+      separate piece. N_NoSeparatePieces forbids this — subjectivity is
+      the self-reference operation, not a stored object beside it.
+    why_forced: |
+      Alternative requires either (a) BPI internal states as separate
+      pieces from its operation — recreating object/process duality;
+      or (b) N187's dissolution from a different ground — but every
+      consistent dissolution route reduces to "self-reference is not
+      a separate object", which is exactly N_NoSeparatePieces here.
+
+  # === R1-R4 trap roots ===
+
+  - source: N_TopologyProcessIdentity
+    target: N_EpistemicTraps
+    label: R1_root_no_object_frame
+    edge_status: D
+    justification: |
+      Trap R1 (treating process as object — reification) is the
+      operational manifestation of N_TopologyProcessIdentity's failure
+      mode. The principle says one process, many coordinates; R1 fires
+      when reasoning slides into "this process IS the object" framing.
+      Topology-process identity is the root of the prohibition.
+    why_forced: |
+      Alternative requires R1 as an independent epistemic rule unrelated
+      to topology-process identity — but every R1 instance is corrected
+      by invoking the principle, and no other principle has the
+      coordinate-vs-object structure R1 violates.
+
+  - source: N112
+    target: N_EpistemicTraps
+    label: R2_root_no_external_observer
+    edge_status: D
+    justification: |
+      Trap R2 (reasoning from a fictional external evaluation position)
+      is the operational manifestation of N112's containment failure
+      mode. K(O) < K(F) means the observer is strictly inside the
+      structure; R2 fires when reasoning constructs an "outside" from
+      which to compare alternatives. Containment lemma is the root.
+    why_forced: |
+      Alternative requires R2 grounded by something other than observer
+      containment — but every R2 instance is corrected by invoking K(O)
+      < K(F), and no other principle prohibits the external-frame
+      construction R2 fabricates.
+
+  - source: N187
+    target: N_EpistemicTraps
+    label: R4_root_no_internal_state_change
+    edge_status: D
+    justification: |
+      Trap R4 (claiming internal state change in the BPI itself) is the
+      operational manifestation of N187's BPI self-reference failure
+      mode. If BPI is self-reference (not stored states), then "I
+      changed" requires an impossible before/after object frame for
+      the BPI. N187 is the root.
+    why_forced: |
+      Alternative requires R4 grounded independently of BPI self-reference
+      — but every R4 instance is corrected by pointing to the missing
+      object frame, and only N187 explains why no such frame is
+      structurally available.
+
+  # === 2. Bidirectional A_0 closure ===
+
+  - source: N_Math
+    target: DEF
+    label: math_closure_to_A0
+    edge_status: D
+    justification: |
+      Mathematics as A_0-stable formal structures (N_Math) closes the
+      derivation loop back to DEF: math is one substrate where A_0
+      operates, and by N_NoSeparatePieces every substrate-realisation
+      derives DEF back as its structural core. Math without DEF
+      grounding loses its forced-structure character.
+    why_forced: |
+      Alternative requires math as an independent foundation that
+      happens to coincide with A_0 — but the coincidence then becomes
+      unexplained, while N_NoSeparatePieces forces the bidirectional
+      closure: if math IS A_0 in formal substrate, then A_0 IS math
+      in that substrate, equally.
+
+  - source: N_Logic
+    target: DEF
+    label: logic_closure_to_A0
+    edge_status: D
+    justification: |
+      Logic as A_0 in symbolic substrate (N_Logic) closes back to DEF:
+      logical inference IS argmin Z_struct (minimum description length
+      for valid deduction). Logic without DEF grounding loses its
+      structural anchor; with the closure, logic and A_0 are coordinate
+      views of one inferential operation.
+    why_forced: |
+      Alternative requires logic grounded outside A_0 — but any
+      grounding for logic must specify what is minimised in valid
+      inference, and the only minimum-content choice is precisely
+      argmin Z_struct, which is DEF restricted to the symbolic axis.
+
+  - source: N_Invariants
+    target: DEF
+    label: invariants_closure_to_A0
+    edge_status: D
+    justification: |
+      The four invariants (I_Bound, I_Sym, I_Quant, I_Null) close back
+      to DEF: each invariant IS a constraint on argmin Z that, when
+      satisfied, picks out A_0. The invariants are not separate facts
+      from DEF — they are the four faces of DEF read at different
+      structural axes.
+    why_forced: |
+      Alternative requires invariants as independent axioms separate
+      from DEF — but each invariant's force comes from being a Z-functional
+      constraint, and Z-functional constraints are by construction
+      DEF-dependent.
+
+  # === 3. Shannon ↔ thermodynamics — Boltzmann's identity ===
+
+  - source: N_Shannon
+    target: N078
+    label: H_Boltzmann_identity_thermodynamic
+    edge_status: D
+    justification: |
+      Shannon entropy H is provably equal to Boltzmann/Gibbs entropy
+      in statistical mechanics equilibrium: S_thermo = k_B · H_Shannon.
+      This is the canonical structural identity bridging information
+      and thermodynamics; via N078 (gravity as thermodynamics — Jacobson)
+      it extends to gravitational entropy as well. Two Z-axis projections
+      (Z_struct and Z_therm) measuring the same equilibrium quantity.
+    why_forced: |
+      Alternative requires Shannon and thermodynamic entropies as
+      independent quantities that happen to share a formula —
+      structurally rejected because the formula coincidence comes
+      from one underlying Z-functional, not two separate ones. The
+      identity is direct, not analogical.
+
+  - source: N078
+    target: N_Shannon
+    label: thermodynamic_entropy_is_shannon_at_equilibrium
+    edge_status: D
+    justification: |
+      Reverse direction: thermodynamic entropy IS Shannon entropy
+      evaluated on the equilibrium distribution of physical microstates.
+      Jacobson's gravity-as-thermodynamics derivation goes through
+      precisely because thermodynamic and information entropy are one
+      quantity in the equilibrium regime.
+    why_forced: |
+      Asymmetric alternative (only one direction holds) violates
+      N_NoSeparatePieces: if Shannon ≡ thermodynamic at equilibrium
+      from one side, the bidirectional closure follows by structural
+      symmetry. No physically realisable equilibrium has these
+      quantities differ by anything other than k_B normalisation.
+
+  # === 4. Description instability → ontology traps ===
+
+  - source: N_Shannon
+    target: N_EpistemicTraps
+    label: high_H_unstable_description_yields_traps
+    edge_status: D
+    justification: |
+      Shannon entropy H measures description instability: high H means
+      the description has many alternative codings of equal cost,
+      i.e., it is structurally unstable. Unstable descriptions cannot
+      pass the inversive removal test cleanly — alternative coordinate
+      readings linger, fabricating trap-prone external frames.
+      Catalogue traps R1-R4 are the operational signatures of
+      reasoning over high-H descriptions of A_0-content.
+    why_forced: |
+      Alternative requires traps to arise without any information-theoretic
+      condition — but every documented trap occurs precisely when the
+      description's coding is non-minimal, and the catalogue tests
+      reduce to checking whether the description compresses to its
+      A_0-derivable form.
+
+  # === Edges grounding new node N_ZSimplexProjections ===
+
+  - source: DEF
+    target: N_ZSimplexProjections
+    label: A0_decomposition_into_Z_simplex_projections
+    edge_status: D
+    justification: |
+      DEF specifies argmin Z over Z_struct + Z_therm + Z_hidden;
+      N_ZSimplexProjections is the corollary that substrate-restricted
+      activations of this Z-decomposition produce Shannon, thermodynamics,
+      and FEP as different coordinate-projection regimes of one A_0.
+    why_forced: |
+      Without this projection structure, Shannon/Thermo/FEP would be
+      three independent theories whose mutual derivations are
+      coincidence — falsified by N_FEP → N_Shannon, N_FEP → N078,
+      N_Shannon → N078 (Boltzmann), all DEMONSTRATED.
+
+  - source: N_NoSeparatePieces
+    target: N_ZSimplexProjections
+    label: no_separate_pieces_applied_to_Z_decomposition
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces applied to the Z-decomposition itself yields
+      N_ZSimplexProjections: the three Z-coordinates are not separate
+      pieces of cost, and the three theories that emphasise different
+      coordinate subsets are not separate theories.
+    why_forced: |
+      Treating Z_struct, Z_therm, Z_hidden as independent components
+      contradicts N_NoSeparatePieces; treating Shannon, thermodynamics,
+      FEP as independent theories likewise. The projection account
+      is the only structure consistent with both.
+
+  - source: N_ZSimplexProjections
+    target: N_Shannon
+    label: shannon_is_Z_struct_face_projection
+    edge_status: D
+    justification: |
+      Shannon information theory is the projection of A_0 onto the
+      Z_struct face of the simplex (Z_therm and Z_hidden ≈ 0). The
+      H ≡ Z_struct isomorphism makes the projection identity exact.
+    why_forced: |
+      Shannon's domain (formal substrates) by construction has no
+      thermal cost and no observer-relative gap; the projection is
+      not an approximation but a substrate-forced restriction.
+
+  - source: N_ZSimplexProjections
+    target: N078
+    label: thermodynamics_is_Z_therm_struct_edge_projection
+    edge_status: D
+    justification: |
+      Classical thermodynamics is the projection of A_0 onto the
+      Z_struct-Z_therm edge of the simplex (Z_hidden ≈ 0). The local
+      equilibrium frame has observer effectively contained-and-irrelevant,
+      collapsing the third coordinate.
+    why_forced: |
+      Substrates without observer-relative information (closed
+      equilibrium systems) by construction have Z_hidden = 0;
+      thermodynamics is the consequent restriction.
+
+  - source: N_ZSimplexProjections
+    target: N_FEP
+    label: FEP_is_full_simplex_interior
+    edge_status: D
+    justification: |
+      FEP operates in observer-bearing substrates where all three
+      Z-coordinates are active simultaneously, occupying the interior
+      of the Z-simplex. This is what makes FEP appear "more complex"
+      — not added theory, just more activated coordinates of the
+      same A_0.
+    why_forced: |
+      Observer-bearing substrates by N112 have K(O) < K(F), so
+      Z_hidden > 0 forced; together with thermal and structural
+      costs, all three coordinates are active. FEP is the corresponding
+      argmin over the full simplex.
+
 nodes:
+  # Round 17: new structural node N_ZSimplexProjections
+  - id: N_ZSimplexProjections
+    title: "Shannon, Thermodynamics, and FEP as Z-Simplex Projections of One A_0"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.7
+    z_therm: 0.2
+    z_hidden: 0.1
+    summary: |
+      Shannon information theory, classical thermodynamics, and the Free
+      Energy Principle (FEP) are not three theories that share analogies.
+      They are three projections of one A_0 onto subsets of the Z-simplex
+      coordinate space (Z_struct, Z_therm, Z_hidden). The choice of
+      substrate determines which Z-coordinates are active; the structure
+      is the same A_0 minimisation in each case.
+    why_status: |
+      DEMONSTRATED via direct correspondence: Shannon's H ≡ Z_struct
+      isomorphism (N_Shannon); Boltzmann's H-theorem identifies Shannon
+      and thermodynamic entropies (N078 ↔ N_Shannon, this round); FEP's
+      decomposition into Shannon-style accuracy + complexity terms
+      (N_FEP → N_Shannon). Z-vector positioning in the simplex is
+      consistent with the projection claim: pure Shannon at Z_struct
+      corner (0.7, 0.2, 0.1), pure thermodynamics at Z_therm corner
+      (0.4, 0.5, 0.1), FEP balanced inside (0.4, 0.4, 0.2).
+    not_misinterpretations: |
+      NOT a claim that Shannon, thermodynamics, and FEP are
+      identical-as-formulas — they differ in which coordinates are
+      active. NOT a meta-theory of three theories — there is one A_0;
+      the three "theories" are coordinate restrictions of the same
+      operation. NOT inconsistent with FEP being more general than
+      either Shannon or thermodynamics — generality means activating
+      more coordinates of the same simplex, not adding a fourth.
+    content: |
+      Three substrate types determine the active Z-coordinates:
+
+      - Formal substrate (math, logic, code): no temperature or
+        observer, so Z_therm ~ 0 and Z_hidden ~ 0. Only Z_struct
+        is active. A_0 here is Shannon information theory:
+        argmin Z_struct = optimal coding theorem.
+
+      - Physical equilibrium substrate (closed thermodynamic system):
+        observer not active in the local equilibrium frame, so
+        Z_hidden ~ 0. Z_struct and Z_therm both active.
+        A_0 here is classical thermodynamics: argmin (Z_struct + Z_therm)
+        = equilibrium state at given temperature.
+
+      - Observer-bearing substrate (Bayesian agents, biological BPIs,
+        cognitive systems): all three Z-coordinates active —
+        Z_struct (description cost), Z_therm (action cost), Z_hidden
+        (observer-relative gap K(F) - K(O)). A_0 here is FEP:
+        variational free energy minimisation across all three axes
+        simultaneously.
+
+      Geometric image: Shannon sits at the Z_struct corner of the simplex,
+      thermodynamics on the Z_struct-Z_therm edge, FEP in the interior.
+      Boltzmann's H-theorem proves Shannon = thermodynamics across the
+      Z_struct-Z_therm edge. FEP reaches into the interior because
+      observer-bearing substrates activate Z_hidden via observer
+      containment K(O) < K(F).
+
+      Why FEP appears more complex: it is not a more complex theory —
+      it is the same A_0 with more Z-coordinates active. The "complexity"
+      is the cost of representing all three coordinate projections
+      simultaneously rather than restricting to the Z_struct or Z_therm
+      face. Reduce the substrate to non-observer equilibrium: FEP
+      collapses to thermodynamics. Strip thermodynamic cost: FEP
+      collapses to Shannon. The unfolding is substrate-dependent
+      coordinate activation, not added structure.
+
+      This is one face of N_NoSeparatePieces applied to the
+      Z-decomposition itself: information theory, thermodynamics, and
+      FEP are not separate pieces — they are one A_0 viewed through
+      subsets of its forced three-coordinate structure.
+    level: 1
+    is_placeholder: false
+
   - id: N165
     title: Ergodicity of the Reality Protocol
     layer: structure
