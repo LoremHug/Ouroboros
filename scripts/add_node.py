@@ -6,7 +6,6 @@ Usage:
         --title "Some Forced Identification" \\
         --summary "One-line claim" \\
         --why-status "Why DEMONSTRATED/STRONG/CONDITIONAL applies" \\
-        --not-misinterpretations "Common misreadings" \\
         --content "Full structural argument..."
 """
 from __future__ import annotations
@@ -30,7 +29,6 @@ def main() -> None:
     p.add_argument("--a-infinity", action="store_true", default=None)
     p.add_argument("--summary")
     p.add_argument("--why-status")
-    p.add_argument("--not-misinterpretations")
     p.add_argument("--content")
     p.add_argument("--z-struct", type=float)
     p.add_argument("--z-therm", type=float)
@@ -44,7 +42,6 @@ def main() -> None:
         "title": args.title, "layer": args.layer, "status": args.status,
         "anchors": args.anchors, "a_infinity": args.a_infinity,
         "summary": args.summary, "why_status": args.why_status,
-        "not_misinterpretations": args.not_misinterpretations,
         "content": args.content,
         "z_struct": args.z_struct, "z_therm": args.z_therm,
         "z_hidden": args.z_hidden, "level": args.level,
@@ -81,7 +78,7 @@ def main() -> None:
         defaults = {
             "title": "", "layer": layer_of(args.id).value, "status": Status.STUB.value,
             "anchors": 0, "a_infinity": False, "summary": "", "why_status": "",
-            "not_misinterpretations": "", "content": "",
+            "content": "",
             "z_struct": 0.0, "z_therm": 0.0, "z_hidden": 0.0, "level": -1,
             "is_placeholder": False,
         }
@@ -93,7 +90,6 @@ def main() -> None:
                 id: $id, title: $title, layer: $layer, status: $status,
                 anchors: $anchors, a_infinity: $a_infinity,
                 summary: $summary, why_status: $why_status,
-                not_misinterpretations: $not_misinterpretations,
                 content: $content,
                 z_struct: $z_struct, z_therm: $z_therm, z_hidden: $z_hidden,
                 level: $level, is_placeholder: $is_placeholder

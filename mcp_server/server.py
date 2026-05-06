@@ -87,7 +87,7 @@ def get_node(node_id: str) -> str:
         """
         MATCH (n:Node {id: $id})
         RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
-               n.summary, n.why_status, n.not_misinterpretations, n.content,
+               n.summary, n.why_status, n.content,
                n.z_struct, n.z_therm, n.z_hidden, n.level, n.is_placeholder, n.aliases
         """,
         {"id": node_id},
@@ -107,7 +107,7 @@ def get_node(node_id: str) -> str:
             """
             MATCH (n:Node {id: $id})
             RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
-                   n.summary, n.why_status, n.not_misinterpretations, n.content,
+                   n.summary, n.why_status, n.content,
                    n.z_struct, n.z_therm, n.z_hidden, n.level, n.is_placeholder, n.aliases
             """,
             {"id": canonical},
@@ -120,10 +120,9 @@ def get_node(node_id: str) -> str:
     node = {
         "id": row[0], "title": row[1], "layer": row[2], "status": row[3],
         "anchors": row[4], "a_infinity": row[5],
-        "summary": row[6], "why_status": row[7],
-        "not_misinterpretations": row[8], "content": row[9],
-        "z_struct": row[10], "z_therm": row[11], "z_hidden": row[12],
-        "level": row[13], "is_placeholder": row[14],
+        "summary": row[6], "why_status": row[7], "content": row[8],
+        "z_struct": row[9], "z_therm": row[10], "z_hidden": row[11],
+        "level": row[12], "is_placeholder": row[13],
         "aliases": aliases,
     }
     if resolved_from:
@@ -438,7 +437,6 @@ def add_or_update_node(
     a_infinity: bool | None = None,
     summary: str | None = None,
     why_status: str | None = None,
-    not_misinterpretations: str | None = None,
     content: str | None = None,
     z_struct: float | None = None,
     z_therm: float | None = None,
@@ -459,7 +457,6 @@ def add_or_update_node(
         "title": title, "layer": layer, "status": status,
         "anchors": anchors, "a_infinity": a_infinity,
         "summary": summary, "why_status": why_status,
-        "not_misinterpretations": not_misinterpretations,
         "content": content,
         "z_struct": z_struct, "z_therm": z_therm, "z_hidden": z_hidden,
         "level": level, "is_placeholder": is_placeholder,
@@ -495,7 +492,7 @@ def add_or_update_node(
     defaults = {
         "title": "", "layer": layer_of(id).value, "status": Status.STUB.value,
         "anchors": 0, "a_infinity": False, "summary": "", "why_status": "",
-        "not_misinterpretations": "", "content": "",
+        "content": "",
         "z_struct": 0.0, "z_therm": 0.0, "z_hidden": 0.0, "level": -1,
         "is_placeholder": False,
     }
@@ -507,7 +504,6 @@ def add_or_update_node(
             id: $id, title: $title, layer: $layer, status: $status,
             anchors: $anchors, a_infinity: $a_infinity,
             summary: $summary, why_status: $why_status,
-            not_misinterpretations: $not_misinterpretations,
             content: $content,
             z_struct: $z_struct, z_therm: $z_therm, z_hidden: $z_hidden,
             level: $level, is_placeholder: $is_placeholder
