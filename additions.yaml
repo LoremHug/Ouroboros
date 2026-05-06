@@ -23160,3 +23160,32 @@ nodes:
       (2) DEMONSTRATED: phase-charge identity θ_f = |Q_partner| × |η| connects gauge charges to mass spectral phases — derivable from L(3,1) invariant structure.
       (3) STRONG: neutrino phase formula θ_ν = |η| + π/(4q) — π/(4q) factor is proposed, not yet derived from standard Pancharatnam-Berry 2π/(3q); identification step pending.
       (4) Inversive: alternative phase formulas inconsistent with empirical CKM CP phase (PDG); θ_Brannen identification structurally forced by L(3,1) δ.
+
+  # ─── Stub nodes: descriptive titles per structural role ───
+
+  - id: N028
+    title: "Scale-Free Topology Trajectory — N316 Output"
+
+  - id: N114
+    title: "L(3,1) Chain Input to N313a"
+
+  - id: N228
+    title: "Critical Transitions Input to N313a"
+
+  - id: N273
+    title: "Scale-Free Topology — N314 Output"
+
+  - id: N274
+    title: "UV Spectral Dimension d_s=2 at r→0 (L(3,1) UV Limit)"
+
+  - id: N275
+    title: "CP Structure as ℤ₃ Coordinate Reflection — N313b Output"
+
+  - id: N276
+    title: "Antimatter as ℤ₃ Inversion x→-x — N313b Output"
+
+  - id: N278
+    title: "Gödel Incompleteness Chain Input to N310"
+
+  - id: N280
+    title: "Path A of Gödel Argument Chain — Input to N312"
