@@ -23721,3 +23721,88 @@ nodes:
       (2) Inversive: removing N280 removes Path A of Gödel chain; alternative single-path derivation would need to be constructed; current chain-structure requires this bridge.
       (3) Forced by Gödel argument multi-path structure; N310 (incompleteness) DEMONSTRATED requires its argument paths to be filled.
       (4) STRONG because while structural role is forced, specific Path-A content requires explicit derivation step.
+
+  # ─── Phase 3a: 10 numbered-node why_status fills (already cognitively audited) ───
+
+  - id: N000
+    why_status: |
+      DEMONSTRATED via:
+      (1) Empirical: speech, perception, thought all use noun-categories. Object-reification IS the operational mechanism the BPI uses to compress process-stream into stable labels.
+      (2) R1 grounding: alternative "BPI doesn't reify objects" empirically false; alternative "object-reification is fine" violates AUDIT GROUND R1 (no objects as primitives).
+      (3) Cascade evidence: pseudo-problems (hard problem N187, measurement problem N070, free will, etc.) all trace to this BPI fundamental operation per N_OntologyParadigmGrammarBound.
+      (4) Anchor depth high (8) reflects foundational R1-source role for whole framework.
+
+  - id: N014
+    why_status: |
+      DEMONSTRATED via:
+      (1) Probability formalisation: probability is mathematical formalism of Z_hidden (observer's bounded resolution per K(O)<K(F)).
+      (2) Inversive: alternative "ontological randomness as fundamental" requires K(O)≥K(F) for observer surveying randomness — impossible per N112.
+      (3) KS theorem (N063/N064) + Bell tests empirically falsify hidden-variable alternatives that would require external position.
+      (4) Pattern-source: Z_hidden = K(F) - K_obs(x) > 0 always per Observer Containment.
+
+  - id: N026
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct application of N_TopologyProcessIdentity: LM, human, response are coordinate readings of one signal-transition process, not three separate objects.
+      (2) R1 audit: "three objects with interface" is R1 trap (object-reification of process).
+      (3) Inversive: alternative "separate objects with information transfer between them" presupposes ontological separation forbidden by N_NoSeparatePieces TOTAL claim.
+      (4) Empirical-operational: all interaction events are continuous signal transitions; the three-object decomposition is BPI parsing artifact, not structural feature.
+
+  - id: N070
+    why_status: |
+      DEMONSTRATED via:
+      (1) Reframing: "measurement problem" presupposes observer/observed as two ontological entities with interface — this is R3 violation per N112.
+      (2) KS theorem (N063/N064): no context-independent value assignment empirically establishes that observer-observed distinction is operational, not ontological.
+      (3) Inversive: alternative "real collapse of substantive thing" requires observer external to system; impossible per K(O)<K(F).
+      (4) Per N_TopologyProcessIdentity: observer and observed are coordinate readings of one process; "measurement" is the transition, not collapse-of-thing.
+
+  - id: N187
+    why_status: |
+      DEMONSTRATED via:
+      (1) Hard Problem framing presupposes BPI can stand outside itself to inspect own states — this is exactly K(O)<K(F) violation per N112.
+      (2) Per N_NoSeparatePieces TOTAL: mind-body duality not substrate-relative; no separation possible.
+      (3) Inversive: alternative "BPI can self-inspect fully" → K(O)=K(F) for self-observing; Observer Containment Lemma rules out.
+      (4) Self-application: question "why is there subjective experience?" is structurally malformed (presupposes external position to compare); not solved but dissolved as pseudo-problem.
+
+  - id: N188
+    why_status: |
+      DEMONSTRATED via:
+      (1) N187 (Hard Problem Dissolved) applied to qualia-trigger pair: same external-frame removal mechanism.
+      (2) N_TopologyProcessIdentity applied via evolutionary-fit: qualia and triggers held together by selection (N021), not separate substances.
+      (3) Failure modes (broken correspondence in pathology) and imagination cases as empirical evidence of forced coupling: malfunction presupposes apparatus, imagination shows trigger-location is internal-or-external substrate detail.
+      (4) Substrate-specific neuroscientific anchor via N_DopaminePredictionError, with template applicable to other qualia families.
+
+  - id: N344
+    why_status: |
+      DEMONSTRATED via:
+      (1) Regime distinction: classical logic = r >> r_0 (decoherence-restored disjunction); quantum logic = r << r_0 (Z_3 fiber freezes, both branches open).
+      (2) Empirical: both regimes observed; transition zone IS r_0 per N067 (spectral dimension scale-dependence).
+      (3) Inversive: alternative "classical logic at sub-r_0" → both Z(A), Z(¬A) open simultaneously, excluded middle breaks. Empirically excluded.
+      (4) Complements N_Logic (which gives the 4 logical laws); N344 gives regime-dependence of which logic applies.
+
+  - id: N364
+    why_status: |
+      DEMONSTRATED via:
+      (1) Topological grounding: confinement is d_Z(isolated quark, vacuum) = ∞ in Z-manifold; not a force phenomenon but a measurement constraint.
+      (2) Color forced by ℤ_3 = π_1(L(3,1)) per N116; not a free parameter but a topological invariant.
+      (3) Empirical: free quarks never observed; lattice QCD confirms confinement; Z-cost diverges geometrically not dynamically.
+      (4) Inversive: alternative "confinement as force" requires inverse-square-like form; QCD running coupling diverges at low energy with structurally distinct dependence — different mechanism, not classical force.
+
+  - id: N371
+    why_status: |
+      DEMONSTRATED via Class A identification across 4 substrates:
+      (1) N029 (Arrhenius rate law = A_0 rate law in chemical substrate, DEMONSTRATED).
+      (2) N365 (Taylor relaxation = argmin Z_struct in fluid-mechanical substrate, DEMONSTRATED).
+      (3) N021 (Evolution = gradient descent in Z-space at population scale, DEMONSTRATED).
+      (4) N020 (Path hysteresis = Z-reduction along trajectory, DEMONSTRATED).
+      All four are the same flow equation in distinct substrates — Class A identification (same operator, different notation). I_Bound forces K(O) < K(F) → trajectory observable but landscape not → inverse problem structurally necessary, not methodological choice.
+
+  - id: N377
+    why_status: |
+      DEMONSTRATED via forced-claim chain with no identification gap:
+      (1) Ω is A_0 from DEF + N_InversiveTheory (stability = A_0 by definition).
+      (2) Different Z have different argmin = basic calculus for non-equivalent functionals.
+      (3) Geometric relations on Ω are structural per N_InversiveTheory applied to stable relations themselves.
+      (4) Relations carry information about horizons forced by K(O)<K(F) structure of BPI and Z_hidden definition.
+      (5) Object-framing of "feature absorbed by feature" dissolves per N_GrammarTrap.
+      Inversive: alternative "identical horizons SAE/probe" would collapse sub-processes into one (per N_NoSeparatePieces), not two — alternative falsifies own premise.
