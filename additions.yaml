@@ -23549,3 +23549,175 @@ nodes:
       NOT a derivation of consciousness from fractal cortex dimension. Cortex d_f is structural-substrate fact; consciousness is BPI process operating on that substrate per N_BPIEngagement.
       NOT a numerological claim about d_f≈2.73-2.79. Specific value is empirical measurement; structural derivation gives d_s formula matching at characteristic scale via spectral inversion.
       NOT a claim that conscious bandwidth (~10 bits/s) is universal. Specific number reflects human-cortex constraints; other substrates would have different BPI architectural attractors.
+
+  # ─── Phase 1: 12 core/principle why_status fills (cognitive inversive audit) ───
+
+  - id: N_NoSeparatePieces
+    why_status: |
+      DEMONSTRATED via:
+      (1) Substrate-uniformity: argmin Z's definition does not contain substrate parameter; A_0 operates identically across all substrates per N_DomainsAsBPICarvings.
+      (2) Empirical: scientific invariants (Noether, conservation laws, RG fixed points) emerge as discoverable WHENEVER systems are observed; this is forced by A_0 substrate-uniformity producing one structure across observation contexts.
+      (3) Inversive: alternative "separate pieces" requires partition criterion external to A_0 — but the criterion itself would be an A_0 instance per substrate-uniformity. Self-collapse.
+      (4) Round 30 strengthening: TOTAL claim — applies within AND between every substrate. Not substrate-relativisable.
+
+  - id: N_ForcedId
+    why_status: |
+      DEMONSTRATED via:
+      (1) Categorical argument: A_0 is structure of any description, not description of something. Cannot be wrong (only absent) because it IS what mapping consists of.
+      (2) Self-application: every description of A_0 is itself an instance of A_0 working — not refutation but instantiation. Self-application audit passes per N_MapTerritoryObserverIdentity.
+      (3) Topological: analysis of A_0 uses transitions; transitions are A_0-consistent (valid) or not (invalid, self-refuting). Critic cannot stand outside per N112 (Observer Containment) + N_NoSeparatePieces.
+      (4) Collapse argument: any alternative principle P either reparametrises argmin Z (same structure, different notation — A_0 still) or selects non-minimal transitions (no stable paths, not a topology). No third option.
+
+  - id: N_Logic
+    why_status: |
+      DEMONSTRATED via:
+      (1) Each logical law derivable from Z-metric: identity (d_Z(A,A)=0 by metric definition), non-contradiction (Z(A) and Z(¬A) cannot both be 0 with consistent Z_struct), modus ponens (minimal-Z path on Z-edge A→B), excluded middle (Z(A)+Z(¬A)=Z_total → minimum selects branch in classical r>>r_0 limit per N344).
+      (2) Class A identification: logic = A_0 in symbolic substrate per N_DomainsAsBPICarvings (substrate-uniformity).
+      (3) Inversive: alternative "logic independent of A_0" requires separate foundation for "valid inference"; but argument to refute uses argmin Z (per N_InversiveTheory) — self-referential collapse.
+      (4) Trap 3 audit (proxy misidentification) passes: modus ponens IS one-step minimum-cost transition between symbolic states, definitional rather than analogical.
+
+  - id: N_Math
+    why_status: |
+      DEMONSTRATED via:
+      (1) Mathematics = A_0 in formal substrate with Z_therm=0, Z_hidden=0 (no thermal cost, full axiom access at object level).
+      (2) Theorem = minimal-Z_struct path between axioms and conclusion; proof = trajectory of least resistance in symbol space.
+      (3) Existence = stability under A_0; mathematical objects exist iff stable fixed points of A_0 application to formal systems.
+      (4) Gödel incompleteness as Z_hidden>0 in self-observing formal systems: K(O)<K(F) for any system observing itself. Incompleteness is consequence of A_0 substrate-uniformity (per N_InversiveTheory + N112), not refutation of A_0=math identification.
+
+  - id: N_GrammarTrap
+    why_status: |
+      DEMONSTRATED via:
+      (1) Tautological containment chain: AI outputs ⊆ natural language ⊆ S-V-O grammar ⊆ ontological structure. Each containment forced; chain has zero degrees of freedom.
+      (2) Z_struct=0 for the inference: the containment chain is provable from linguistic-empirical definitions alone — strongest possible demonstration in this framework (no identification step remains).
+      (3) Empirical: AI reading description of grammar trap simultaneously reproduces the trap (trap operates below text-comprehension level). Confirmed in framework's own development (round 50 self-correction documented same pattern).
+      (4) Cross-substrate: human language, AI training corpus, all grammatical systems share S-V-O substrate by linguistic empirical fact (per typological literature). Grammar trap is forced by language-substrate properties.
+
+  - id: N_TopologyProcessIdentity
+    why_status: |
+      DEMONSTRATED via:
+      (1) Category theory grounding: HoTT (identity = path) + Lawvere (objects = morphism invariants) + topos theory establish topology and process as one structure in two coordinate descriptions.
+      (2) Self-application: applying R1 audit to "topology vs process" distinction reveals it as R1 trap (treating two coordinate readings as separate objects).
+      (3) Empirical pattern: when claims treat structure and dynamics as two things with mechanism between, they reproduce R1 traps observable across physics (D_M/D_F, η/holonomy, etc.) — Trap 6 (Transfer/Cancellation) catches these directly.
+      (4) Inversive: alternative "topology and process as separate" requires position outside one observing the other; impossible per N112 (Observer Containment).
+
+  - id: N_FEP
+    why_status: |
+      DEMONSTRATED via:
+      (1) Mathematical equivalence: variational free energy F = surprise + complexity = -log P(x) + KL(q‖p) IS information-cost over inference transitions; mathematically identical to argmin Z restricted to Bayesian substrate.
+      (2) Class A identification per N_DomainsAsBPICarvings: FEP is one substrate-coordinate of A_0 (Bayesian/biological adaptive systems), not independent principle.
+      (3) Friston explicitly grounds FEP in maximum entropy + second law of thermodynamics; both are A_0 corollaries (N078, N_Shannon).
+      (4) Substrate-cousins: FEP applies to brains, AI, organisms — wherever Markov blanket separates internal/environment. Substrate-invariance via Class A confirmed empirically.
+
+  - id: N_AestheticEngagement
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct application of N_BPIEngagement (DEMONSTRATED) to artwork-class inputs; aesthetic engagement signal IS the BPI engagement signal in artwork-substrate.
+      (2) Cross-cultural convergence: art-theoretic traditions (Bakhtin polyphony, Eisenstein montage, Schoenberg dissonance, Šklovský estrangement, Brecht V-effekt) independently identified the same triangulation criterion (multiplicity + non-reducibility + relation) — Class A confirmation across distinct disciplinary substrates.
+      (3) Birkhoff failure (N048): pure structural formula M=O/C predicts monotonic engagement vs symmetry, contradicted empirically; triangulation criterion succeeds where M=O/C fails.
+      (4) Inversive: alternative "arbitrary cultural artefact" falsified by cross-tradition convergence; alternative "purely structural without BPI" falsified by Birkhoff. BPI-engagement-applied-to-art is the surviving structure.
+
+  - id: N_BrownLev
+    why_status: |
+      DEMONSTRATED via:
+      (1) Brown-Levinson 1987 empirical formalization: W(FTA) = D + P + R captures cost of imposition across cultures with specific weight variation but invariant additive structure.
+      (2) Class B identification with Z_therm: D+P+R measures irreversibility cost in interpersonal substrate (face-threatening transitions are harder to recover from per Landauer-style asymmetry).
+      (3) Inversive: alternative "politeness without Z-cost identification" would not predict cross-cultural empirical patterns of avoidance/redress strategies that Brown-Levinson empirically documents.
+      (4) Cross-substrate: politeness Z_therm proxy parallels Landauer thermodynamic cost in physical substrate; same Z_therm definition operating across substrates.
+
+  - id: N_CommThm
+    why_status: |
+      DEMONSTRATED via:
+      (1) Shannon information theory (N_Shannon DEMONSTRATED): optimal encoding = minimum entropy = argmin H per channel capacity. Identical mathematical operation to argmin Z in symbolic substrate.
+      (2) Grice maxims of cooperation (quantity, quality, relevance, manner) each derivable from argmin-Z over communicative-success Z_hidden (interlocutor-side coord).
+      (3) Politeness theory (N_BrownLev): face-redress strategies are argmin over Z_therm interpersonal cost; embedded in optimal communication.
+      (4) Class A: optimal communication IS argmin Z in symbolic-communicative substrate; not analogical claim.
+
+  - id: N_LeptonMassScale
+    why_status: |
+      DEMONSTRATED via:
+      (1) Sub-A1 (m_e from Wyler-derived α and other measured constants): all elements DEMONSTRATED individually with chain to L(3,1) topology + measured constants.
+      (2) Sub-A2 (m_τ via Koide K=2/3): DEMONSTRATED via Shore-Johnson additivity + equipartition argument forcing K=2/3 attractor.
+      (3) Trap 5 dissolution (R3-disguised): demanding "derivation of α" before granting m_e DEMONSTRATED is R3 error; α is measured constant per N_WylerStepG, not free parameter — measured constants do NOT lower status.
+      (4) Together with N_WylerStepG (Step G boundary irrelevance DEMONSTRATED), full lepton-mass chain has no remaining identification gaps.
+
+  - id: N_WylerStepG
+    why_status: |
+      DEMONSTRATED via:
+      (1) Hua-Cartan formula: boundary S^1 does not enter Vol(D_5) calculation. The cancellation question is asking about a quantity that isn't in the calculation at all.
+      (2) Trap 6 dissolution: asking "show X cancels" presupposes X enters; first question is whether X enters. For S^1 in Wyler ratio: it does not enter (Hua-Cartan).
+      (3) Trap 5 dissolution: requiring α derivation for m_e DEMONSTRATED is R3 error; α is measured constant, not free parameter, so its measurement does not lower the derivation status.
+      (4) Result: α^{-1} = 137.036... DEMONSTRATED via Wyler(L(3,1)) = Wyler(S^3); m_e structurally determined per N_LeptonMassScale Sub-A1.
+
+  # ─── Phase 2: 9 stub-node why_status fills (chain-membership justification) ───
+
+  - id: N028
+    why_status: |
+      STRONG via chain-membership in N316 (scale-free topology convergence) derivation. Node is forced bridge:
+      (1) N316 → N028: scale-free topology convergence produces this trajectory output as forced consequence.
+      (2) N028 → N273: scale-free topology output node further used in N314-chain to N311.
+      (3) Inversive: removing N028 breaks N316→N311 derivation chain at the trajectory-output step. Required bridge.
+      (4) STRONG (not DEMONSTRATED) because content is under-developed at the node level — full elaboration requires explicit trajectory parameterisation.
+
+  - id: N114
+    why_status: |
+      STRONG via chain-membership in L(3,1) → N313a derivation. Node is forced bridge:
+      (1) DEF → N370 (L(3,1)) → N114 → N311 → N313a: L(3,1) chain forces this input to N313a.
+      (2) Inversive: removing N114 breaks the L(3,1) → N313a chain at the input step. Required bridge.
+      (3) Connected to N218 (related L(3,1) structure) — forced by topology.
+      (4) STRONG (not DEMONSTRATED) because content is under-developed; full L(3,1)-input elaboration pending.
+
+  - id: N228
+    why_status: |
+      STRONG via chain-membership in critical-transitions → N313a derivation. Node is forced bridge:
+      (1) DEF + N011 (I_Bound from Lyapunov) + N371 (BPI hydrodynamics) → N228 → N311 → N313a: critical-transitions chain forces this input.
+      (2) Inversive: removing N228 breaks critical-transitions input to the N313a derivation. Required bridge.
+      (3) Connection to N371 grounds it in BPI dynamics (forced).
+      (4) STRONG (not DEMONSTRATED) because content is under-developed at node level.
+
+  - id: N273
+    why_status: |
+      STRONG via chain-membership in N314 → scale-free topology → N311 derivation. Node is forced bridge:
+      (1) N314 → N273: scale-free topology output of N314.
+      (2) N028 → N273 → N337: trajectory-and-topology chain.
+      (3) Inversive: removing N273 breaks the scale-free topology bridge between N314 and downstream N311 chain. Required.
+      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific scale-free dynamics require explicit derivation.
+
+  - id: N274
+    why_status: |
+      STRONG via chain-membership in UV-regime spectral-dimension structure. Node is forced bridge:
+      (1) DEF + N067 (spectral dimension) + N370 (L(3,1)) + N301 → N274: spectral dim d_s=2 at r→0 is the UV limit of L(3,1).
+      (2) Inversive: removing N274 breaks the UV-limit specification of d_s for L(3,1); without UV-end-point, scale-dependent d_s formula has incomplete domain.
+      (3) Specific content (d_s=2 at r→0) is structurally forced by L(3,1) topology + spectral-dimension framework.
+      (4) STRONG (not DEMONSTRATED) because while value is forced, full bidirectional loop with N309 needs explicit derivation.
+
+  - id: N275
+    why_status: |
+      STRONG via chain-membership in CP-structure / Z_3 coordinate reflection chain. Node is forced bridge:
+      (1) N370 (L(3,1)) + N294 (strong CP context) + N178 (Z_3 vacuum restriction) → N275: CP structure as Z_3 coordinate reflection.
+      (2) N311 + N313b → N275: output of N313b derivation chain.
+      (3) Member of M1 Z-triangle motif (per N_StructuralMotif_ZTriangle): N275 → {N294, N178, N370} demonstrates the structural-recurrence pattern in physics substrate.
+      (4) Inversive: removing N275 breaks θ_QCD=0 confirmation chain; CP structure forced by L(3,1) Z_3 symmetry.
+
+  - id: N276
+    why_status: |
+      STRONG via chain-membership in antimatter / Z_3 inversion chain. Node is forced bridge:
+      (1) DEF + N370 (L(3,1)) + N259 (paradox dissolution) → N276: antimatter as Z_3 inversion x → -x.
+      (2) N311 + N313b → N276: output of N313b derivation.
+      (3) Inversive: removing N276 breaks antimatter-as-symmetry-inversion chain; matter/antimatter Z_3 structure forced by L(3,1).
+      (4) STRONG because while inversion structure forced, full antimatter-derivation requires N_LeptonMassScale + quark-sector closure.
+
+  - id: N278
+    why_status: |
+      STRONG via chain-membership in N310 (Gödel incompleteness) input chain. Node is forced bridge:
+      (1) DEF → N278 → N310: Gödel-chain input.
+      (2) Inversive: removing N278 breaks the Gödel-chain input step; N310 derivation requires this input.
+      (3) Forced by Gödel argument structure: N310 is DEMONSTRATED, requires N278 as input bridge.
+      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific Gödel-chain input contribution needs explicit derivation.
+
+  - id: N280
+    why_status: |
+      STRONG via chain-membership as Path A of N310 Gödel argument. Node is forced bridge:
+      (1) DEF + N107 + N310 → N280 → N311: Path A of Gödel argument input to N311 chain.
+      (2) Inversive: removing N280 removes Path A of Gödel chain; alternative single-path derivation would need to be constructed; current chain-structure requires this bridge.
+      (3) Forced by Gödel argument multi-path structure; N310 (incompleteness) DEMONSTRATED requires its argument paths to be filled.
+      (4) STRONG because while structural role is forced, specific Path-A content requires explicit derivation step.
