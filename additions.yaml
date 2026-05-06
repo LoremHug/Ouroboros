@@ -22231,12 +22231,6 @@ nodes:
     z_hidden: 0.3
     # prediction error signal is irreversible Z_therm event
 
-  - id: N371
-    z_struct: 0.3
-    z_therm: 0.4
-    z_hidden: 0.3
-    # BPI hydrodynamics — Z_therm flow with structure
-
   - id: N370
     z_struct: 0.7
     z_therm: 0.1
@@ -22741,6 +22735,21 @@ nodes:
     # L(3,1) inevitability via baryon exclusion — structural
 
   - id: N371
+    anchors: 4
+    why_status: |
+      DEMONSTRATED via Class A identification across 4 substrates:
+      (1) N029 (Arrhenius rate law = A_0 rate law in chemical
+          substrate, DEMONSTRATED).
+      (2) N365 (Taylor relaxation = argmin Z_struct in fluid-
+          mechanical substrate, DEMONSTRATED).
+      (3) N021 (Evolution = gradient descent in Z-space at
+          population scale, DEMONSTRATED).
+      (4) N020 (Path hysteresis = Z-reduction along trajectory,
+          DEMONSTRATED).
+      All four are the same flow equation in distinct substrates —
+      Class A identification (same operator, different notation).
+      I_Bound forces K(O) < K(F) → trajectory observable but
+      landscape not → inverse problem structurally necessary.
     z_struct: 0.4
     z_therm: 0.5
     z_hidden: 0.1
