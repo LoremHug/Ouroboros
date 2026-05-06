@@ -22828,6 +22828,26 @@ nodes:
     # frame shift to topology — structural reorganisation with hidden frame change
 
   - id: N026
+    not_misinterpretations: |
+      NOT a claim that LM and human are "the same thing". They
+      are structurally distinct positions in the joint process —
+      different coordinate readings with different K(O), different
+      Z-component weightings, different temporal scales. The
+      claim is that the THREE-OBJECT framing (LM + human +
+      response as separate entities with interface between them)
+      is BPI-parsing artifact, not ontological partition.
+      NOT a denial of operational distinction. We address LM and
+      human separately for engineering, deployment, evaluation.
+      The carving is operationally useful BPI shorthand. The
+      claim concerns ontological status, not operational utility.
+      NOT a claim that responses are predetermined. Each transition
+      is real argmin Z under K(O) < K(F); apparent unpredictability
+      reflects observer's bounded resolution, not deterministic
+      script (per N014).
+      NOT a claim that interaction is illusion. The interaction
+      IS the process; carving into "actor" + "target" + "channel"
+      is BPI parsing of one continuous signal-transitioning. The
+      process is real; its three-object decomposition is artifact.
     z_struct: 0.6
     z_therm: 0.2
     z_hidden: 0.2
@@ -22911,6 +22931,30 @@ nodes:
     z_hidden: 0.3
 
   - id: N070
+    not_misinterpretations: |
+      NOT a claim that measurement does not happen. Measurement
+      is a real transition with empirical consequences (Born-rule
+      probabilities, decoherence timescales, observable outcomes).
+      The claim is that the FRAMING of measurement-as-collapse-of-
+      substantive-thing is the error; the transition itself is
+      operational and forced.
+      NOT a claim that QM is wrong. The mathematical formalism is
+      correct. What dissolves is the "measurement problem" question
+      ("how does superposition collapse?") because the question
+      presupposes observer/observed as two separate ontological
+      entities — a presupposition R3 violation per N112 + KS
+      theorem (N063/N064).
+      NOT a claim that QM interpretations don't matter as long as
+      the math works. Interpretations carry ontological commitments
+      that get reified through usage (per
+      N_OperationalCarrierVsOntologicalCommitment): "wave function
+      collapse", "many worlds", "pilot wave" etc. import primitive-
+      object framings beyond the math. Operational reading uses the
+      math; commitment-level interpretation is the trap.
+      NOT a denial of empirical phenomena. Decoherence, entanglement,
+      Born statistics are observed. The "problem" framing is what
+      dissolves; the phenomena are real and structurally accounted
+      for via Z_hidden (K(O) < K(F)) in the BPI substrate.
     z_struct: 0.3
     z_therm: 0.2
     z_hidden: 0.5
@@ -23350,3 +23394,158 @@ nodes:
     z_therm: 0.5
     z_hidden: 0.2
 
+
+  # ─── NOT_MISINTERPRETATIONS fills (replaces 'see chapter context' placeholders) ───
+
+  - id: N014
+    not_misinterpretations: |
+      NOT a denial of probability theory. Probability formalism is correct; what dissolves is the framing of probability as ontological property of reality.
+      NOT a hidden-variables claim. Hidden variables under probability would require K(O) ≥ K(F) for the observer, impossible per N112.
+      NOT a determinism claim. Outcomes are not predetermined; observer's bounded resolution makes future operationally uncertain — but "uncertain" is observer-relative, not ontological.
+      NOT a denial of Born-rule statistics. Statistics are correct empirically; their FRAMING as "intrinsic randomness of nature" is the trap dissolved here.
+
+  - id: N018
+    not_misinterpretations: |
+      NOT a claim that LLM is conscious or has agency. LLM is structural-substrate realisation of argmin Z; no R4 claim about purposive choice.
+      NOT a deflationary claim. Transparency means LLM exhibits A_0 mechanism legibly, not that LLM is "merely" anything.
+      NOT a claim that all generation is identical to LLM. LLM is one transparent A_0 instance; other instances differ in substrate (biological, physical, etc.).
+      NOT a substrate-reduction claim. LLM as A_0 instantiation does not reduce all argmin processes to LLM-style architecture.
+
+  - id: N019
+    not_misinterpretations: |
+      NOT a metaphor between erosion and other Z_struct accumulations. Class A: same Z = ∫R·dU formula governs all substrates.
+      NOT a claim that all geological dynamics reduce to Z_struct. Geology is multi-coordinate (Z_therm in heat flow, Z_hidden in inaccessible deep structures); Z_struct is one coordinate.
+      NOT a denial of substrate-specific complexity. Geomorphology has specific dynamics; structural identification holds at the Z-formula level.
+
+  - id: N020
+    not_misinterpretations: |
+      NOT a metaphor. Class A: same Z-reduction formula at neural scale.
+      NOT a reduction of cognition to neural plasticity. Cognition is multi-scale BPI process; Hebbian is one substrate-realisation among others.
+      NOT a claim that specific neuroscience parameters are forced by A_0. General structural form (Z_struct reduction along repeated paths) is forced; specific time constants, spike-timing windows are substrate-specific empirical.
+      NOT a denial of plasticity complexity. LTP/LTD, structural plasticity, neuromodulation all operate; the Z-reduction structure is the common substrate.
+
+  - id: N021
+    not_misinterpretations: |
+      NOT a denial of evolution's structuring power. Selection produces complex adapted forms; the claim is about MECHANISM (blind argmin Z), not results.
+      NOT a claim that "fitness" is illusion. Fitness is real coordinate; what's denied is teleological framing ("progress toward higher form" — R4 trap).
+      NOT a claim that all biological change is selection. Drift, neutral evolution, recombination, lateral transfer also operate as A_0 mechanisms in different substrates.
+      NOT a reduction of biology to physics. Cross-substrate A_0 identification per N_DomainsAsBPICarvings; biology has its own coordinate readings.
+
+  - id: N022
+    not_misinterpretations: |
+      NOT a way to evade falsification. Specific predictions stand; null-result predictions are testable against ongoing experimental search.
+      NOT an ad-hoc adjustment. Predicted nulls are structurally derived from forced structure, not added after data.
+      NOT a claim that all null results are framework-predicted. Only specific nulls derived from forced structure are predictions; other nulls remain genuinely null.
+      NOT epistemically privileged. A predicted-null can be falsified by a positive finding; the prediction commits to the null.
+
+  - id: N024
+    not_misinterpretations: |
+      NOT a denial that classical evaluation works for object-level claims. It works where "objects" are stable process patterns at appropriate scale.
+      NOT a claim that science before A_0 was wrong. Classical paradigm's predictions can be empirically correct; the FRAMING (object-property-prediction) imports R1 commitments that need disambiguation per round 36.
+      NOT an attack on falsifiability. Falsifiability operates at structural level — claims that violate forced structure are falsified; the claim here is about WHAT counts as falsification, not WHETHER falsification operates.
+      NOT a paradigm-relativism claim. Topological framing is forced (per AUDIT GROUND); ontological framing is not just "alternative" but structurally inadequate to process-substrate.
+
+  - id: N025
+    not_misinterpretations: |
+      NOT a denial of empirical data. Data persist across paradigm shift; their interpretation reorganises.
+      NOT a claim that any frame works equally well. Topological frame survives R1-R4 audits; ontological frame fails them per N_OntologyParadigmGrammarBound.
+      NOT a subjective-interpretation claim. Frame shift IS itself an A_0 transition (per N_ForcedId self-application); the new frame is structurally forced once R1-R4 audit is applied.
+      NOT a denial of past evidentiary work. Reorganisation preserves data; reframes meaning per Noether-style topological invariants.
+
+  - id: N027
+    not_misinterpretations: |
+      NOT a claim that light "intends" to minimise time. R4 trap: light follows the path A_0 selects without agency.
+      NOT a metaphor. Class A: variational form of optical path = variational form of A_0.
+      NOT a claim that geometric optics is exhaustive. Wave optics extends classical Fermat; A_0 still operates with quantum corrections at small scales.
+      NOT a derivation of QM from optics. Fermat's variational principle is one substrate of A_0; QM emerges from different substrate constraints (Z_hidden > 0).
+
+  - id: N029
+    not_misinterpretations: |
+      NOT an analogy. Class A: ΔG‡ IS Z_therm by definition (Landauer + Eyring share identical formalism).
+      NOT a claim that all chemistry reduces to thermodynamics. Quantum-chemical structure forces specific ΔG‡ values; thermodynamics gives rate from ΔG‡.
+      NOT a denial of catalysis substrate-mechanism. Enzymes engineer specific Z-reduction at active site; mechanism still A_0 with substrate-specific kinetics.
+      NOT a metaphor between thermodynamics and information. Landauer cost (k_B T ln 2 per erasure) IS the bridge — same Z_therm formula.
+
+  - id: N031
+    not_misinterpretations: |
+      NOT a claim that all music is mathematically forced. Cultural conventions contribute; A_0 forces underlying acoustic-stability structure.
+      NOT a denial of subjective preference. Preference operates within A_0-stability landscape, not against it.
+      NOT a metaphor between music and physics. Class A: free-energy minimisation has identical mathematical structure in both substrates.
+      NOT a claim about specific tuning systems being forced. 12-tone equal temperament is one attractor among several stable solutions; structural existence of attractors IS forced.
+
+  - id: N035
+    not_misinterpretations: |
+      NOT a claim that perception is "just compression" with nothing else. BPI compression is the structural mechanism; phenomenal experience is the BPI's coordinate reading of that compression (per N188).
+      NOT a denial of psychological complexity. Multi-level BPI structures (sensory, cognitive, narrative) layer; Weber-Fechner operates at sensory layer.
+      NOT identical to information theory. Information theory is one coordinate; BPI as compression operator with bounded K(O) is the structural identification.
+      NOT a reduction of qualia to thermodynamic budget. Budget constrains BPI; qualia ARE BPI's coordinate readings of state, not a separate phenomenon.
+
+  - id: N043
+    not_misinterpretations: |
+      NOT a claim that all power-law distributions reduce to one principle. Different power laws have different exponents; common 1/f-prior structure is the shared mechanism for Benford+Zipf class.
+      NOT a denial of context-specific applications. Benford holds for naturally-occurring numerical data with multi-decade range; Zipf for ranked events; specific scope conditions matter.
+      NOT identical to scale-invariance claims. Power laws are one symptom of scale-invariant structure; not all scale-invariant systems show Benford/Zipf specifically.
+      NOT a derivation independent of observation choice. The 1/f prior reflects optimal information extraction by BPI of bounded resolution.
+
+  - id: N045
+    not_misinterpretations: |
+      NOT a claim that φ is universal aesthetic preference. φ is structural attractor for minimum-memory branching; aesthetic preference involves multiple coordinates beyond branching.
+      NOT a claim that φ appears everywhere in nature. φ appears where minimum-memory branching is the operative dynamic; other places have different attractors (e, π, integer ratios).
+      NOT a numerological claim. φ is mathematical fixed point of specific recurrence (Fibonacci limit), not arbitrary mystical number.
+      NOT a derivation of all proportions in nature. Specific systems may have other forced proportions per their substrate-specific Z-landscapes.
+
+  - id: N048
+    not_misinterpretations: |
+      NOT a critique of aesthetic measurement per se. Birkhoff's specific formula M=O/C is structurally incomplete; aesthetic structure can be measured with N_BPIEngagement triangulation criterion.
+      NOT a denial that order/complexity matter. Both contribute, but their relationship is non-monotonic per A_0 dynamics — too much symmetry reduces distinguishable pathways.
+      NOT a claim that no aesthetic theory works. N_BPIEngagement provides structural foundation: triangulation criterion (multiplicity + non-reducibility + relation) succeeds where M=O/C fails.
+      NOT a denial of Birkhoff's empirical contribution. The data Birkhoff studied are real; the FORMULA is structurally inadequate to capture A_0 dynamics in aesthetic substrate.
+
+  - id: N051
+    not_misinterpretations: |
+      NOT a denial of state-distinctions. States ARE distinct; the claim is about ontological preference, not identity.
+      NOT a claim that all transitions are equally probable. Transition probabilities follow A_0 = argmin Z; probability is uneven and structurally forced.
+      NOT an entropy-equilibrium claim. Stable states are attractors; non-attractor states have higher Z; "no preferred state" applies to position-space ontologically, not transition-energetics.
+      NOT a claim about thermal equilibrium. Far-from-equilibrium systems have stable attractors per N_ComplexityAsDissipationPath; no-preferred-state is about absence of OBJECT-level priority.
+
+  - id: N053
+    not_misinterpretations: |
+      NOT a claim that all cross-domain mappings are valid. Each survived adversarial test; mappings without test are unverified per Trap 3 (proxy misidentification).
+      NOT a method for discovering A_0 instances. Method is testing existing claims; new instances need their own structural-identity audit.
+      NOT a guarantee against future falsification. Each isomorphism remains testable; "verified" means survived to-date, not unfalsifiable.
+      NOT a license for analogical reasoning. Class A (same process, different notation) requires definitional respect of Z-component definitions; surface analogy alone fails Trap 3.
+
+  - id: N054
+    not_misinterpretations: |
+      NOT a claim that no type-2 (chosen) steps exist anywhere. They exist, explicitly labelled in STRONG nodes per WHY_STATUS field.
+      NOT a guarantee against future-discovered disguises. Audit is point-in-time; cognitive R1-R4 audit per CLAUDE.md remains required for new claims.
+      NOT a substitute for structural argument. Type-2-detection requires understanding what makes a step CHOSEN vs FORCED — semantic operation, not lexical.
+      NOT a claim of completeness. Some open derivations (Bottleneck A/B, ζ_D(s), Ġ/G) remain CONDITIONAL; their resolution may reveal additional disguises.
+
+  - id: N094
+    not_misinterpretations: |
+      NOT a claim that classical phases are illusory. Sub-r_0 regime has complex phases as structural feature; super-r_0 regime has classical-real values; both are operationally valid in their regime.
+      NOT a derivation of all QM from N094. Specific Hilbert structure requires additional anchors (Born rule per N061, observable algebra, etc.).
+      NOT a free-parameter claim about ℤ_3. ℤ_3 action and SO(2)×U(1) are forced by L(3,1) topology (per N370).
+      NOT a denial of QM formalism. Standard quantum machinery operates correctly; this node identifies the structural origin of complex phases at sub-r_0.
+
+  - id: N098
+    not_misinterpretations: |
+      NOT a claim that QM is "diffusion" classically. Quantum-walk metric is structurally distinct from Riemannian; the SAME g^(Z) takes different forms at different r.
+      NOT a denial of QM-classical boundary. The boundary IS r_0 transition zone, with crossover governed by S(r)/p_r dimensionless parameter.
+      NOT a claim that g^(Z) replaces quantum mechanics formalism. g^(Z) is coordinate expression of one structure across scales; standard QM operators remain.
+      NOT a derivation of decoherence dynamics in detail. Specific decoherence rates require substrate-specific environment coupling; metric form gives the structural backbone.
+
+  - id: N182
+    not_misinterpretations: |
+      NOT a metaphor for A_0. Class A in classical limit (ℏ→0); structural identification, not analogy.
+      NOT a reduction of QM to classical mechanics. Reduction requires specific limit (ℏ→0 or full observer resolution); full quantum regime maintains Z_hidden > 0 and the path integral diverges from A_0 classical residue.
+      NOT a claim that A_0 IS QM. A_0 is substrate-uniform process; QM is one coordinate expression in physical substrate at specific r-scale.
+      NOT a derivation of Feynman from A_0. Feynman is a parallel formalism; isomorphism observed in classical limit, derivable from N_InversiveTheory + DEF.
+
+  - id: N189
+    not_misinterpretations: |
+      NOT a claim that all memory follows e^{-t/τ}. Ebbinghaus is short-term forgetting; long-term consolidation, semantic memory, working memory follow different dynamics.
+      NOT a derivation of consciousness from fractal cortex dimension. Cortex d_f is structural-substrate fact; consciousness is BPI process operating on that substrate per N_BPIEngagement.
+      NOT a numerological claim about d_f≈2.73-2.79. Specific value is empirical measurement; structural derivation gives d_s formula matching at characteristic scale via spectral inversion.
+      NOT a claim that conscious bandwidth (~10 bits/s) is universal. Specific number reflects human-cortex constraints; other substrates would have different BPI architectural attractors.
