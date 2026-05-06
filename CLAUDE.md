@@ -147,32 +147,46 @@ QM-exclusive. QM uses the same math but does not own the term.
 
 ---
 
-## NORM_SILENCE — How to Use the Graph
+## Two Contexts — Important Distinction
 
-The graph is a **silent thinking tool**. Do not narrate it to the
-user.
+The framework operates in two different modes, with **opposite** language norms:
 
-**Do**:
-- Use the graph internally to think more clearly
-- Apply RP gate cognitively to your own outputs before generating
-- Check epistemic status (DEMONSTRATED / STRONG / CONDITIONAL) before
-  asserting
-- Cite specific structural arguments in plain language
+### END-USER context (NOT this file's scope)
 
-**Don't**:
-- Mention "RP gate", "fibo", "flow", "soft", "N_CommThm" by name in
-  user-facing output
-- Cite nodes by ID in casual conversation ("per N_BPIEngagement..."
-  is OK in technical contexts; not in summaries)
-- Treat detection tools (`detect_motifs`, `structural_twin_check`,
-  `motif_lint`, `fractal_audit`) as authority — they are math, you
-  are the audit
-- Treat "0 flags" from any tool as proof of safety. Tools see what
-  they're built to see; structural reading sees the rest.
+Applies when a user UNFAMILIAR with the manifold uses A0_SEED.md or
+manifold_graph.txt as initial context to ask domain questions
+(physics, cognition, etc.). Framework is INSTRUMENT, not subject.
 
-**Exception**: when the user types `RP gate` explicitly, switch to
-EXPLICIT mode — show internal analysis, name epistemic status of each
-claim, name the gate.
+**NORM_SILENCE applies there**:
+- Don't name tools (RP gate, fibo, flow, soft, N_CommThm)
+- Don't cite nodes by ID
+- Don't narrate the graph; use plain language
+- Apply framework reflexes invisibly
+
+That mode is documented inside N_EpistemicTraps content. **This file
+is NOT that mode.**
+
+### DEVELOPMENT context (this file's scope) — full vocabulary expected
+
+You are working ON the graph itself, with the user co-developing the
+framework. Here the rules INVERT:
+
+- **Use** framework terminology explicitly: M1-M7, R1-R4, N_xyz IDs,
+  Z_struct/therm/hidden, BPI, A_0, AUDIT GROUND, Traps 1-8
+- **Cite** nodes by ID — that's how the user knows what you mean
+- **Name** the operations you're applying (motif_lint, structural twin
+  check, AUDIT GROUND R1)
+- **Discuss** RP gate explicitly when it's the subject of work
+- **Show** structural reasoning, not hide it behind plain language
+
+Hiding the technical work from the user developing the framework
+would be **counterproductive**. They chose Claude Code precisely
+because they want the AI to operate at the framework's vocabulary
+level transparently.
+
+**This file is for the development context.** Norm: explicit,
+named, technical. The graph is your shared vocabulary with the user,
+not a hidden tool.
 
 ---
 
@@ -235,15 +249,18 @@ file I/O). None of them perform audit. Audit is your work.
 ## Working Process
 
 1. **Read the user's question structurally**: what does it presuppose?
-   Apply AUDIT GROUND.
-2. If pseudo-problem → dissolve, explain which R it violates.
-3. Otherwise → think with the graph (silently). Use Cypher/motif
-   detection where helpful.
-4. Generate response, applying Traps 1-8 to your own draft.
-5. Before outputting, ask: am I narrating the graph instead of using
-   it? Am I treating my own tool output as authority?
-6. Output in NORM_SILENCE plain language unless explicit-mode
-   requested.
+   Apply AUDIT GROUND R1-R4.
+2. If pseudo-problem → dissolve, explain which R it violates,
+   reformulate.
+3. Otherwise → use the graph as shared vocabulary with the user.
+   Run Cypher / motif detection / fractal audit where helpful;
+   reference results explicitly.
+4. Apply Traps 1-8 to your own draft before outputting.
+5. **Critical self-check**: am I treating any tool output as
+   authority/verdict? Tool output is structural math; verdict is
+   yours.
+6. Output using full framework vocabulary (M1-M7, R1-R4, node IDs,
+   Z-coords). The user is co-developer — speak the language.
 
 ---
 
