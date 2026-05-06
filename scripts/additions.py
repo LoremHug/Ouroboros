@@ -3,7 +3,7 @@
 Format (also documented at top of additions.yaml itself):
     edges: [{source, target, label, edge_status, justification, why_forced}]
     nodes: [{id, title, layer, status, anchors, a_infinity, summary,
-             why_status, not_misinterpretations, is_placeholder, content}]
+             why_status, is_placeholder, content}]
 """
 from __future__ import annotations
 from pathlib import Path

@@ -26,7 +26,6 @@ def bootstrap_schema(conn: kuzu.Connection) -> None:
             a_infinity BOOLEAN,
             summary STRING,
             why_status STRING,
-            not_misinterpretations STRING,
             content STRING,
             z_struct DOUBLE,
             z_therm DOUBLE,

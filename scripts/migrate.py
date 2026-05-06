@@ -46,7 +46,6 @@ FIELD_MARKERS = {
     "WHY OPERATIONAL": "why_status",
     "WHY NOT DEMONSTRATED": "why_status",
     "WHY NOT PURE DEMONSTRATED": "why_status",
-    "NOT": "not_misinterpretations",
 }
 FIELD_RE = re.compile(
     r"^(" + "|".join(re.escape(k) for k in FIELD_MARKERS) + r"):\s*(.*)$"
@@ -155,7 +154,6 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
             a_infinity=cur.get("a_infinity", False),
             summary=cur.get("summary", "")[:1000],
             why_status=cur.get("why_status", ""),
-            not_misinterpretations=cur.get("not_misinterpretations", ""),
             content="\n".join(cur.get("content_lines", [])).strip(),
             is_placeholder=is_placeholder,
             aliases=aliases,
@@ -207,7 +205,7 @@ def parse_graph(text: str) -> tuple[dict[str, Node], list[Edge]]:
                 i += 1
                 continue
 
-            # New field marker (CLAIM:, WHY *:, NOT:)
+            # New field marker (CLAIM:, WHY *:)
             fm = FIELD_RE.match(stripped)
             if fm:
                 commit_field()
@@ -316,7 +314,6 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
                 id: $id, title: $title, layer: $layer, status: $status,
                 anchors: $anchors, a_infinity: $a_inf,
                 summary: $summary, why_status: $why,
-                not_misinterpretations: $not_m,
                 content: $content,
                 z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
                 is_placeholder: $ph,
@@ -329,7 +326,6 @@ def write_to_kuzu(nodes: dict[str, Node], edges: list[Edge]) -> None:
                 "a_inf": n.a_infinity,
                 "summary": n.summary,
                 "why": n.why_status,
-                "not_m": n.not_misinterpretations,
                 "content": n.content,
                 "zs": n.z_struct, "zt": n.z_therm, "zh": n.z_hidden,
                 "lvl": n.level, "ph": n.is_placeholder,
@@ -375,7 +371,6 @@ def apply_additions(conn) -> tuple[int, int]:
         "a_infinity":             ("a_inf",     bool),
         "summary":                ("summary",   str),
         "why_status":             ("why",       str),
-        "not_misinterpretations": ("not_m",     str),
         "content":                ("content",   str),
         "z_struct":               ("zs",        float),
         "z_therm":                ("zt",        float),
@@ -420,7 +415,6 @@ def apply_additions(conn) -> tuple[int, int]:
             "a_inf": bool(nspec.get("a_infinity", False)),
             "summary": nspec.get("summary", ""),
             "why": nspec.get("why_status", ""),
-            "not_m": nspec.get("not_misinterpretations", ""),
             "content": nspec.get("content", ""),
             "zs": float(nspec.get("z_struct", 0.0)),
             "zt": float(nspec.get("z_therm", 0.0)),
@@ -435,7 +429,7 @@ def apply_additions(conn) -> tuple[int, int]:
                 id: $id, title: $title, layer: $layer, status: $status,
                 anchors: $anchors, a_infinity: $a_inf,
                 summary: $summary, why_status: $why,
-                not_misinterpretations: $not_m, content: $content,
+                content: $content,
                 z_struct: $zs, z_therm: $zt, z_hidden: $zh, level: $lvl,
                 is_placeholder: $ph,
                 aliases: $aliases
@@ -553,7 +547,6 @@ def main() -> None:
     by_layer: dict[str, int] = {}
     placeholders = 0
     has_why = 0
-    has_not = 0
     for n in nodes.values():
         by_status[n.status.value] = by_status.get(n.status.value, 0) + 1
         by_layer[n.layer.value] = by_layer.get(n.layer.value, 0) + 1
@@ -561,13 +554,10 @@ def main() -> None:
             placeholders += 1
         if n.why_status:
             has_why += 1
-        if n.not_misinterpretations:
-            has_not += 1
     print("status     :", by_status)
     print("layer      :", by_layer)
     print(f"placeholders: {placeholders}")
     print(f"with why_status: {has_why}")
-    print(f"with NOT field : {has_not}")
 
     write_to_kuzu(nodes, edges)
     print(f"wrote → {DB_PATH}")

@@ -22,7 +22,7 @@ def fetch_data() -> dict:
     res = conn.execute("""
         MATCH (n:Node)
         RETURN n.id, n.title, n.layer, n.status, n.anchors, n.a_infinity,
-               n.summary, n.why_status, n.not_misinterpretations,
+               n.summary, n.why_status,
                n.content, n.z_struct, n.z_therm, n.z_hidden, n.level,
                n.is_placeholder, n.aliases
     """)
@@ -37,10 +37,9 @@ def fetch_data() -> dict:
             "status": row[3], "anchors": row[4], "a_infinity": row[5],
             "summary": row[6],
             "why_status": row[7],
-            "not_misinterpretations": row[8],
-            "content": row[9],
-            "z_struct": row[10], "z_therm": row[11], "z_hidden": row[12],
-            "level": row[13], "is_placeholder": row[14],
+            "content": row[8],
+            "z_struct": row[9], "z_therm": row[10], "z_hidden": row[11],
+            "level": row[12], "is_placeholder": row[13],
             "aliases": aliases,
         })
 
@@ -472,7 +471,6 @@ function openNodePanel(d) {
     ${renderZBar(d)}
     ${d.summary ? `<div class="section"><div class="section-title">Claim</div><div class="content">${escapeHtml(d.summary)}</div></div>` : ''}
     ${d.why_status ? `<div class="section"><div class="section-title">Why ${escapeHtml(d.status)}</div><div class="content">${escapeHtml(d.why_status)}</div></div>` : ''}
-    ${d.not_misinterpretations ? `<div class="section"><div class="section-title">NOT (common misinterpretations)</div><div class="content">${escapeHtml(d.not_misinterpretations)}</div></div>` : ''}
     ${out.length ? `<div class="section"><div class="section-title">Outgoing → (${out.length})</div><div class="edge-list">${out.map(e => renderEdgeItem(e, 'out')).join('')}</div></div>` : ''}
     ${inE.length ? `<div class="section"><div class="section-title">← Incoming (${inE.length})</div><div class="edge-list">${inE.map(e => renderEdgeItem(e, 'in')).join('')}</div></div>` : ''}
     ${d.sections && d.sections.length ? `<div class="section"><div class="section-title">.tex sections (${d.sections.length})</div><div class="edge-list">${d.sections.map(s => `<div class="edge-item" onclick='openSectionPanel(${JSON.stringify(s.label)})'><span class="edge-arrow">§</span><span>${escapeHtml(s.title)}</span><span class="edge-label">${escapeHtml(s.label)}</span></div>`).join('')}</div></div>` : ''}

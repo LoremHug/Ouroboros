@@ -23,7 +23,6 @@ Format:
         a_infinity: false
         summary: One-line CLAIM.
         why_status: Why this status holds.
-        not_misinterpretations: Misreadings to reject.
         is_placeholder: false
 
 Edits here are committed and become the canonical source of post-migration work.
@@ -17717,21 +17716,6 @@ nodes:
       (4) Framework consistency: N_EpistemicTraps NORM_SILENCE
         specifies graph used silently as cognitive tool, not as
         named-tool-call. Pattern-script-as-audit violates this.
-    not_misinterpretations: |
-      NOT a claim that pattern-detection has zero value. As a
-      surface reminder/checklist, regex patterns surface specific
-      phrases that COMMONLY indicate traps. Useful as cognitive
-      cue. NOT useful as verdict.
-      NOT a claim that all script-based tooling is wrong. Graph
-      algorithms (Bron-Kerbosch clique enumeration, Tarjan
-      articulation, Jaccard set comparison, BFS path lengths) are
-      legitimate structural math operating on adjacency, not text
-      audit.
-      NOT a claim that AI-cognitive audit is infallible. It is
-      what AUDIT GROUND IS by design — best available, not
-      guaranteed correct on every claim. Failures are themselves
-      structural data (e.g. when AI surfaces a trap it failed to
-      catch in an earlier output).
     content: |
       Why pattern detection cannot perform audit:
 
@@ -17830,13 +17814,6 @@ nodes:
       (4) 3 substrate-cousins (Williamson coordination modes)
           all instantiate money-BPI with different reliance
           weights.
-    not_misinterpretations: |
-      NOT a claim that money is "ontologically real". Money is
-      BPI compression artifact stabilised by institutional
-      convention.
-      NOT a claim that all economic value requires money.
-      Network coordination uses money minimally; gift economies
-      use it sparingly.
     content: |
       Substrate-cousin instantiation:
         Market:    money primary signal
@@ -17881,12 +17858,6 @@ nodes:
       (2) Triple cross-substrate sibling identity confirmed
           structurally.
       (3) N335 (Price Equilibrium) is the steady-state output.
-    not_misinterpretations: |
-      NOT a claim that markets are "agency". argmin-Z dynamics
-      is structural, not goal-directed.
-      NOT a claim that markets always reach equilibrium.
-      Bubbles, crashes, manipulation are local Z minima
-      (per N335) that ignore Z_hidden.
     content: |
       Mapping:
         Z_struct = institutional structure (property rights,
@@ -17977,10 +17948,6 @@ nodes:
           operational role.
       (2) Triple cross-substrate sibling identity: bio + ling +
           fin all use 3-stratum Z-decomp.
-    not_misinterpretations: |
-      NOT a claim that derivatives are "less real" than equity.
-      They are different coords of same financial process,
-      not hierarchy.
     content: |
       Mapping:
         Z_struct (low-entropy):
@@ -18015,10 +17982,6 @@ nodes:
     why_status: |
       DEMONSTRATED via Smith/Hayek/Friedman literature;
       structurally distinct realisation of coordination problem.
-    not_misinterpretations: |
-      NOT a claim that pure markets exist. All real markets are
-      embedded in institutions (Polanyi, North). Coordination
-      MODE is the distinct feature, not isolation.
     content: |
       Characteristic markers:
         Signal: price (Z_hidden coord readout)
@@ -18052,10 +18015,6 @@ nodes:
     why_status: |
       DEMONSTRATED via Coase/Williamson transaction-cost theory;
       structurally distinct from market.
-    not_misinterpretations: |
-      NOT a claim that hierarchy is "authoritarian" in pejorative
-      sense. Coordination MODE; can be benign (well-run firm)
-      or pathological (Soviet planning).
     content: |
       Characteristic markers:
         Signal: authority command + budget allocation
@@ -18089,11 +18048,6 @@ nodes:
     why_status: |
       DEMONSTRATED via Mauss/Polanyi/Bourdieu/Ostrom literature;
       structurally distinct from market and hierarchy.
-    not_misinterpretations: |
-      NOT a claim that networks are "primitive" or "pre-economic".
-      Modern networks (open-source, scientific peer review) are
-      sophisticated coordination systems competitive with markets
-      and hierarchies in their domains.
     content: |
       Characteristic markers:
         Signal: reciprocity tracking + reputation
@@ -18158,21 +18112,6 @@ nodes:
         N(r) saturates near r=3 (diameter); power-law fit fails.
         Geometric-fractal dim is undefined for small-world graphs.
         Motif-fractality is the forced regime here.
-    not_misinterpretations: |
-      NOT a claim that the graph is not fractal. It IS fractal
-      — in motif-substrate, not in geometric-distance substrate.
-      Different fractal regimes; both real.
-      NOT a claim that small-world precludes fractality.
-      Many natural networks (web, biological) are
-      simultaneously small-world AND fractal at appropriate
-      scales.
-      NOT a static property. The regime is preserved by the
-      forced-edge construction protocol; if construction
-      changed (e.g., adding leaf-only connections without
-      M1/M5 closures), the regime could shift. Live measurement
-      via fractal_audit() is how the regime is checked.
-      NOT itself a substantive entity — meta-claim about
-      observable graph topology.
     content: |
       Operational measurement components:
 
@@ -18284,17 +18223,6 @@ nodes:
       (4) Substrate-cousins: 3 fractal types (deterministic
           IFS, escape-time nonlinear, stochastic random) all
           instantiate self-similarity via different mechanisms.
-    not_misinterpretations: |
-      NOT a claim that "everything is fractal". Self-similarity
-      is the forced structure WHEN scale is hidden coord.
-      Single-scale processes don't need fractal structure.
-      NOT a claim that fractals are random or "infinite detail
-      forever". Mathematical fractals have infinite detail;
-      empirical fractals are scale-invariant within finite
-      range.
-      NOT a substantive entity. Fractal-self-similarity is a
-      structural pattern observable when scale is part of the
-      problem. Treating "fractality" as a thing is R1 trap.
     content: |
       Operational claim:
         Given a structure S whose function or stability must
@@ -18368,13 +18296,6 @@ nodes:
     why_status: |
       DEMONSTRATED via direct mathematical definition;
       substrate-cousins all have measurable d_H.
-    not_misinterpretations: |
-      NOT a claim that integer-dim structures are "bad" or
-      non-fractal. Integer dim = reducible (smooth manifold);
-      non-integer dim = irreducibly fractal.
-      NOT identification of d_H with framework Z_hidden as
-      a number. d_H is the EXISTENCE of Z_hidden in scale-
-      substrate; specific value is substrate-internal.
     content: |
       Examples:
         Cantor set:          d_H = log(2)/log(3) ≈ 0.631
@@ -18418,12 +18339,6 @@ nodes:
       (2) M5 motif self-application is IFS in motif-substrate.
       (3) Cross-substrate: biological nested BPI, linguistic
           stratum BPI, all are IFS-like recursive structures.
-    not_misinterpretations: |
-      NOT a claim that all engagement is IFS. Single-scale
-      engagement is not IFS — only RECURSIVE engagement is.
-      Recursion is the key.
-      NOT identification of IFS with "thing". IFS is a process-
-      class, not an object.
     content: |
       Mechanism:
         Step 1: Define BPI substrate Ω₀ at scale s₀
@@ -18479,15 +18394,6 @@ nodes:
       (2) Empirical β₁/V invariance across 8+ rounds.
       (3) Substrate-cousins (3 fractal types) all exhibit
           scale-invariance in their respective form.
-    not_misinterpretations: |
-      NOT a claim that all systems are scale-invariant. Many
-      systems have preferred scale (cell scale ~10 µm,
-      atom scale ~10⁻¹⁰ m). What's forced is: when scale is
-      hidden coord (= no preferred scale specified), scale-
-      invariance emerges.
-      NOT a claim that scale is "another dimension". Scale
-      is a coordinate axis on which N_NoSeparatePieces
-      operates.
     content: |
       Substrate-cousin instantiations:
         Deterministic IFS: exact scale-invariance
@@ -18536,10 +18442,6 @@ nodes:
     why_status: |
       DEMONSTRATED via classical mathematical literature
       (Mandelbrot 1982, Barnsley 1988, Falconer 1990).
-    not_misinterpretations: |
-      NOT a claim that IFS fractals are "more fundamental"
-      than other types. They are substrate-cousins — different
-      mechanism, same self-similarity principle.
     content: |
       Characteristic markers:
         Generation: linear affine contraction maps {T₁, ..., Tₙ}
@@ -18577,10 +18479,6 @@ nodes:
       DEMONSTRATED via mathematical literature (Mandelbrot
       1980, Devaney 1989); structurally distinct from linear
       IFS via nonlinearity.
-    not_misinterpretations: |
-      NOT a claim that escape-time fractals have "more
-      structure" than IFS. They have RICHER variation between
-      scales but same self-similarity principle.
     content: |
       Characteristic markers:
         Generation: nonlinear iterative map (e.g., z² + c)
@@ -18616,11 +18514,6 @@ nodes:
     why_status: |
       DEMONSTRATED via stochastic process literature
       (Mandelbrot/Van Ness 1968; Falconer 1990).
-    not_misinterpretations: |
-      NOT a claim that stochastic = random noise. Stochastic
-      fractals have STRUCTURED randomness with self-similar
-      distribution — distinct from white noise (which has
-      no self-similarity beyond trivial scale).
     content: |
       Characteristic markers:
         Generation: random walk, Brownian motion, stable
@@ -18672,13 +18565,6 @@ nodes:
           sign-BPI with structurally distinct realisations.
       (4) Inversive: alternative "sign-less language" not
           coherent (no signifying mechanism).
-    not_misinterpretations: |
-      NOT a claim that signs are ontologically separate from
-      language system. BPI is operational compression artifact;
-      sign exists only differentially against system.
-      NOT a claim that signifier and signified are two things
-      glued together. The bond IS the sign — it is process,
-      not relation between objects (per N_TopologyProcessIdentity).
     content: |
       Substrate-invariance test:
         Isolating (Mandarin):     yes — one-morpheme-one-word
@@ -18729,11 +18615,6 @@ nodes:
           captures all known phonological systems with >=3
           feature dimensions.
       (3) Direct correspondence with N_Triangulation principle.
-    not_misinterpretations: |
-      NOT a claim that the 3 features are universally fixed.
-      Specific feature dimensions vary across phonological
-      theories (Jakobson's 12-feature, Chomsky-Halle's
-      ~25-feature, etc.). Only the n>=3 minimum is forced.
     content: |
       Why 3 specifically:
         Phoneme inventory: 20-100 phonemes typical
@@ -18789,14 +18670,6 @@ nodes:
           weighting).
       (3) Shannon-channel structure: each stratum carries
           independent information (per N_Shannon).
-    not_misinterpretations: |
-      NOT a claim that the 3 strata are sealed off from each
-      other. Phonology-morphology-syntax interfaces are rich
-      and bidirectional. The Z-decomp is a structural reading,
-      not an ontological partition.
-      NOT a claim that semantics and pragmatics are separate
-      "things". They are part of Z_hidden (interlocutor-side)
-      coordinate readings.
     content: |
       Z-decomposition correspondence:
         Z_struct (low-entropy structure):
@@ -18853,12 +18726,6 @@ nodes:
           gradient descent on -log(communicative success)
           landscape = argmin Z.
       (3) Cross-substrate parallel with biological selection.
-    not_misinterpretations: |
-      NOT a claim that grammaticalisation is "agency". Drift is
-      argmin-Z structural dynamic, not goal-directed.
-      NOT a claim that all language change is grammaticalisation.
-      Other change types (sound shifts, lexical innovation,
-      contact-induced) operate on different Z-coords.
     content: |
       Mapping:
         Z_struct  = lexical/grammatical category state
@@ -18900,10 +18767,6 @@ nodes:
       DEMONSTRATED via empirical typological literature
       (Greenberg, Comrie); structurally distinct realisation
       of sign-BPI principle.
-    not_misinterpretations: |
-      NOT a claim that isolating languages are "primitive" or
-      "simple". They have full grammatical complexity, just
-      distributed differently across strata.
     content: |
       Characteristic markers:
         Morphemes per word: ~1
@@ -18939,10 +18802,6 @@ nodes:
     why_status: |
       DEMONSTRATED via typological literature; structurally
       distinct realisation.
-    not_misinterpretations: |
-      NOT a claim that agglutinative is "between" isolating
-      and fusional on a hierarchy. They are substrate-cousins,
-      not stages.
     content: |
       Characteristic markers:
         Morphemes per word: many (5-15+ in Turkish)
@@ -18976,9 +18835,6 @@ nodes:
     why_status: |
       DEMONSTRATED via typological literature; structurally
       distinct realisation with maximum-density compression.
-    not_misinterpretations: |
-      NOT a claim that fusional is "more advanced" than other
-      types. Substrate-cousins on different axis.
     content: |
       Characteristic markers:
         Morphemes per word: 2-5 typical
@@ -19032,12 +18888,6 @@ nodes:
           membership.
       (4) Inversive: alternative "boundaryless life" not
           structurally coherent (no metabolism gradient).
-    not_misinterpretations: |
-      NOT a claim that the cell is ontologically separate from
-      environment. BPI is operational compression artifact.
-      NOT a claim that membrane is sole BPI structure in life.
-      Sub-cellular BPIs (organelles in eukarya) exist; supra-
-      cellular BPIs (tissues, organisms, ecosystems) also.
     content: |
       Substrate-invariance test for N_BiologyCellularBoundaryBPI:
         Q: Does the principle make sense in each substrate-cousin?
@@ -19103,15 +18953,6 @@ nodes:
           Eukarya — three substrate-distinct cousins.
       (3) Structural identity with N_InversiveTheory: alternative
           generation + removal by failure = inversive test.
-    not_misinterpretations: |
-      NOT a claim that selection is "agency". argmin-Z dynamics
-      is structural, not goal-directed. Selection has no
-      subject; it IS the relational dynamics of population
-      transitions per fitness-landscape.
-      NOT a claim that fitness is uniquely defined. Fitness is
-      coordinate-relative (per N_Triangulation: 3+ coords
-      always). What is forced is argmin-Z structure under any
-      coordinate choice.
     content: |
       Mapping:
         Z_struct  = phenotype-genotype correspondence (informational)
@@ -19162,15 +19003,6 @@ nodes:
       (2) Substrate-invariance: same triplet code in all known
           life (with minor stop-codon variants).
       (3) Direct correspondence with N_Triangulation principle.
-    not_misinterpretations: |
-      NOT a claim that triplet code is the only possible
-      encoding. Synthetic biology has explored n=4
-      (quadruplet codons) for unnatural-amino-acid expansion.
-      But n=3 is the MINIMUM forced by 4-base alphabet × 20+
-      amino acids.
-      NOT a claim that the specific assignments (e.g., AUG → Met)
-      are forced. Code-table is partly frozen accident; only
-      n=3 minimum is forced.
     content: |
       Why 3 specifically:
         Alphabet size: 4 (A, U/T, G, C)
@@ -19231,15 +19063,6 @@ nodes:
           N_CentralDogmaAsZDecomposition; children = {DNA-
           coord, RNA-coord, Protein-coord} with pairwise
           structural relations.
-    not_misinterpretations: |
-      NOT a claim that central dogma is unidirectional. Reverse
-      transcription (RNA → DNA), RNA-only viruses, prion-like
-      protein-protein information transfer all exist. The
-      "dogma" is the dominant direction; structural Z-decomp
-      stands regardless of direction.
-      NOT a claim that DNA is "the gene" ontologically. DNA
-      is Z_struct coordinate of the genetic process; not a
-      thing-in-itself per N_TopologyProcessIdentity.
     content: |
       Z-decomposition correspondence:
         Z_struct (low-entropy structure):
@@ -19297,14 +19120,6 @@ nodes:
       DEMONSTRATED via empirical universality across all
       known bacteria + structural argument that all required
       principles are instantiated.
-    not_misinterpretations: |
-      NOT a claim that bacteria are "simple" — they have
-      sophisticated regulatory networks, biofilm cooperation,
-      quorum sensing, horizontal gene transfer.
-      NOT a claim that "bacterium" is an ontological entity.
-      Bacterium IS A_0 in microbiological substrate; per
-      N_TopologyProcessIdentity, the bacterium is the process,
-      not the object.
     content: |
       Characteristic markers:
         Membrane: ester-linked phospholipid bilayer
@@ -19352,10 +19167,6 @@ nodes:
       (3) Asgard archaea provide structural-historical link
           to eukaryotic origin (N_BiologyDomain_Eukarya
           sibling relation).
-    not_misinterpretations: |
-      NOT "primitive bacteria". Archaea diverged early from
-      common ancestor; their machinery is distinct, not
-      ancestral-bacterial.
     content: |
       Characteristic markers:
         Membrane: ether-linked isoprenoid lipids
@@ -19405,14 +19216,6 @@ nodes:
           organisation.
       (4) N_NoSeparatePieces literal: eukaryotic cells ARE
           historical non-separations from bacterial endosymbiosis.
-    not_misinterpretations: |
-      NOT a claim that eukarya are "more advanced" than
-      prokaryotes — they are substrate-cousins, not hierarchy.
-      Both are equally successful as A_0 realisations in
-      their respective niches.
-      NOT a claim that nuclear-membrane is structurally same
-      as cell-membrane. They are nested BPI structures with
-      different roles.
     content: |
       Characteristic markers:
         Membrane: ester-linked phospholipid bilayer
@@ -19480,19 +19283,6 @@ nodes:
       (4) Comparison reference points: tree β₁/V = 0; sparse
           graph < 1; cycle-rich ≥ 2; cliques higher. Framework
           remains in cycle-rich regime.
-    not_misinterpretations: |
-      NOT a claim that all induced cycles are "structural holes"
-      requiring filling. Many cycles are forced — the graph's
-      topology genuinely has these loops, and chord-completion
-      would over-determine the structure.
-      NOT a claim that high cycle count is good per se. The
-      relevant signal is irreducibility (cycles persist despite
-      M1 triangulation), not raw count.
-      NOT itself a substantive entity. Meta-claim about graph-
-      level cycle topology.
-      NOT replaceable by M1 audit. M1 closes triples; M7 records
-      what triple-closure does NOT eliminate. Different scales of
-      structural readout.
     content: |
       Operational definitions:
 
@@ -19664,19 +19454,6 @@ nodes:
           M6 = full bipartite with independent sides; they are
           opposite ends of the connectivity-density spectrum
           for stratified motifs.
-    not_misinterpretations: |
-      NOT a claim that A and B are "the same kind of thing".
-      They play STRUCTURALLY DISTINCT roles within the K_{3,3}.
-      The independence of each side is what carries the
-      structural information.
-      NOT a claim that K_{3,3} is the only M6 size. Larger
-      K_{m,n} could emerge as graph develops; current limit is
-      empirical, not structural.
-      NOT redundant with M5. M5 has internal cousin-clique;
-      M6 has internal independence. Different structural
-      readings, both forced.
-      NOT itself a substantive entity. Meta-claim about a
-      class of structural patterns.
     content: |
       Operational definition:
         Motif M6 present iff disjoint sets A, B ⊆ V exist with:
@@ -19799,21 +19576,6 @@ nodes:
           of "what is forced".
       (4) Maximality: tested K10 extension; no node connects to
           all 9 — K9 is maximal.
-    not_misinterpretations: |
-      NOT a claim that all M2 instances are actually M5. M2 with
-      single anchor is valid motif when only one principle is
-      shared. K9 case happens to have 4 principles sharing
-      cousins; other domains may have p=1 genuinely.
-      NOT a claim that p and n are interchangeable. Principle
-      stratum and cousin stratum play different structural roles
-      (substrate-invariant vs substrate-specific). Naming them
-      "principles" vs "cousins" reflects this asymmetry.
-      NOT a claim that K_(p+n) is the only acceptable shape.
-      Partial bipartite structures (where SOME cross-edges
-      missing) may be informative — e.g., a cousin instantiating
-      only some principles signals partial substrate-invariance.
-      NOT itself a substantive entity. Meta-claim about a class
-      of structural patterns.
     content: |
       Operational definition:
         Motif M5 present iff there exist disjoint sets P =
@@ -19924,19 +19686,6 @@ nodes:
         from a M2 clique leaves cousins with sibling-labels but
         no shared structural ground — analogy collapses without
         anchor.
-    not_misinterpretations: |
-      NOT a claim that all clique-with-cousins structures are M2.
-      Multi-anchor cases (p ≥ 2) are M5. Distinguishing requires
-      counting principle-stratum membership.
-      NOT a claim that all "siblings" form K_n. Two systems can
-      sibling-relate without forming part of larger clique. K_n
-      requires pairwise closure across all cousins.
-      NOT a claim that K_n motif proves principle correctness.
-      Motif is structural signature of substrate-invariance
-      pattern; principle correctness depends on each cousin's
-      individual derivation.
-      NOT itself a "thing" — meta-claim about a class of structural
-      patterns observable in the graph.
     content: |
       Operational definition:
         Motif M2 present iff there exists principle anchor P and
@@ -20024,16 +19773,6 @@ nodes:
         framework: structural identity does not auto-imply merge.
       (4) K_n connection: M3 = K_2 limit of family-clique with
         Jaccard=1; same structural-equivalence class.
-    not_misinterpretations: |
-      NOT a claim that all twins should be merged. Many twins are
-      genuine carrier-level operational duplicates (e.g., RPfibo /
-      RPflow as two operational labels for closely-related dynamics).
-      NOT a claim that twin-pair detection is sufficient for
-      duplication finding. Jaccard=1.0 is necessary but not
-      sufficient — content-level inspection still required.
-      NOT itself a substantive entity. Twin-pair motif is a
-      structural pattern observable in graph; treating "the twin
-      pair" as a thing is R1 trap.
     content: |
       Operational definition:
         Motif M3 present iff distinct nodes a, b satisfy:
@@ -20122,19 +19861,6 @@ nodes:
       (4) Compatible with N_NoSeparatePieces: total no-separation
         applies at graph topology level too. Single-vertex
         removal cannot fragment the framework.
-    not_misinterpretations: |
-      NOT a claim that the graph is k-connected for k >= 3.
-      Current bound is k = 2 for non-leaf subgraph; higher
-      connectivity not demonstrated.
-      NOT a claim that articulation points are pathological. The
-      cut-vertices isolating single leaves reflect foundational
-      principles' role as unique anchors for narrow derivations.
-      NOT a substrate-invariant claim about all forced graphs.
-      2-connectivity is a property of this framework graph
-      preserved by its forced-edge construction protocol; it
-      is empirically tracked, not pre-established law.
-      NOT itself a node in the framework's content sense — meta-
-      claim about graph topology.
     content: |
       Operational definition:
         Graph G = (V, E) is k-vertex-connected if removing any
@@ -20251,19 +19977,6 @@ nodes:
         triangle {DEF (prototype), N_Triangulation (3-coord
         principle), N_FrameworkCore (substrate-invariance criterion)}.
         Self-similar at meta-level.
-    not_misinterpretations: |
-      NOT a claim that the graph is a fractal in geometric sense —
-      it is a claim about repeated triadic decomposition pattern.
-      NOT a claim that every parent forms a Z-triangle — only that
-      the motif is non-rare and substrate-invariant. Many parents
-      have other shapes (linear chains, hub-spoke, twin-pairs).
-      NOT a substantive object. The motif is a structural pattern;
-      treating it as a "thing" is R1 trap. It is what happens when
-      you look at the graph and notice triadic closure recurring.
-      NOT a claim that finding a Z-triangle proves a parent claim
-      is correct. The motif is a STRUCTURAL signature, not a truth
-      criterion. False claims can also exhibit triadic closure if
-      well-structured internally.
     content: |
       Operational definition:
         Given parent node P with neighbours, motif M is present
@@ -20417,20 +20130,6 @@ nodes:
         ("argmin Z", "BPI", etc.) extensively. If noun-use were
         trap, framework would self-refute. Distinction preserves
         coherence.
-    not_misinterpretations: |
-      NOT a relaxation of N_GrammarTrap. Grammar trap remains; this
-      sharpens it. The trap is COMMITMENT, not nouns themselves.
-      NOT a license for sloppy language. Operational nouning still
-      requires awareness — speaker/writer must know they are using
-      descriptive label, not ontological commitment. Lazy use slips
-      into commitment.
-      NOT contextual nihilism. Some patterns ARE ontological
-      commitment regardless of context (e.g., "X causes Y" with X
-      a process is almost always trap). Distinction is precise, not
-      arbitrary.
-      NOT escape route from RP-gate. Distinction sharpens the gate;
-      it does not bypass it. False-positive reduction, not trap
-      avoidance.
     content: |
       Distinguishing markers (heuristic):
 
@@ -20567,20 +20266,6 @@ nodes:
       (4) Inversive: removing any core member breaks framework
         coherence. Removing non-core (e.g., N370) breaks specific
         applications but not the framework's general structure.
-    not_misinterpretations: |
-      NOT a claim that core members are "more important" than non-core.
-      Importance is contextual; substrate-invariance is the criterion.
-      L(3,1) (N370) is critically important in physics but is not
-      core because it is physics-specific.
-      NOT a fixed list. Future structural insights may add core
-      members (when they prove substrate-invariant) or refine tier
-      assignment.
-      NOT a claim that core nodes don't connect to non-core. They do
-      (extensively). Core is operationally defined by substrate-
-      invariance, not by isolation from specific applications.
-      NOT itself a "thing" or object. N_FrameworkCore IS a meta-
-      claim about which principles satisfy the substrate-invariance
-      criterion. Treating "core" as a substantive entity is R1 trap.
     content: |
       Operational test for core membership:
         Q: "Could a forced derivation exist in some substrate without
@@ -20731,23 +20416,6 @@ nodes:
         valproate, lamotrigine all have similar
         "non-specific" profiles with similar broad efficacy —
         sibling rate-axis modulators in different chemistry.
-    not_misinterpretations: |
-      NOT a denial of single-target pharmacology. Most drugs ARE
-      single-target (N340 case): antibiotics binding specific
-      enzymes, beta-blockers binding specific receptors. The
-      claim is that pharmacology has TWO modes (single-target
-      and rate-axis), not one.
-      NOT a claim that "non-specific = magic". Rate-axis
-      modulation requires specific physico-chemistry (Li+ ionic
-      radius, charge density, etc.) that enables binding at
-      multiple sites sharing a common rate-determining role.
-      NOT a claim that all multi-target drugs work for all
-      network disorders. The match between drug's rate-axis
-      profile and disorder's rate-dysregulation pattern matters.
-      Lithium for bipolar works; lithium for diabetes does not.
-      NOT vindication of "throw everything at the wall". The
-      structural account specifies WHICH multi-target profiles
-      are predicted to work for which network disorders.
     content: |
       Mechanism (structural):
         Drug acts as rate-axis modulator when:
@@ -20895,25 +20563,6 @@ nodes:
       (4) Empirical: translation between framings (ontological →
         topological) succeeds without information loss, which is
         impossible if framings represented separate ontologies.
-    not_misinterpretations: |
-      NOT a denial that map/territory/observer is operationally useful.
-      The triple is a valuable BPI working framework for describing
-      reality; the claim is about ontological status, not operational
-      utility.
-      NOT a claim that any specific framework's taxonomy (e.g., this
-      framework's N0-N370+ partition) is uniquely correct. The
-      partitioning is BPI choice; the structural content (forced
-      DEMONSTRATED derivations) tracks A_0.
-      NOT a claim that scale doesn't matter. Scale is real BPI
-      coordinate; "no separation" is not about scales but about
-      ontological partitions.
-      NOT subjectivism or idealism. A_0 has structure; the structure
-      is observer-invariant. Cognitive substrate is one substrate
-      among others, not source.
-      MOST IMPORTANT: N_NoSeparatePieces is NOT
-      substrate-relativisable. It is not "no separate pieces within
-      this domain" — it is total. There is nothing separated at any
-      level, and no level is separated from any other level.
     content: |
       The full N_NoSeparatePieces is total:
 
@@ -21054,22 +20703,6 @@ nodes:
         N_GrammarTrap at disciplinary scope, plus
         N_OntologyParadigmGrammarBound at paradigm scope, all
         converge on this claim.
-    not_misinterpretations: |
-      NOT a denial that disciplinary specialisation is useful.
-      Specialised vocabularies and methods are operationally
-      valuable BPI conveniences; the claim is about their
-      ontological status, not their utility.
-      NOT a claim that "physics = biology = music" in any literal
-      sense. The claim is that the underlying A_0 substrate has no
-      partition; the disciplinary partition is observer-imposed.
-      NOT a claim that scale doesn't matter. Scale (atomic /
-      molecular / cellular / organism / ecosystem) is a real BPI
-      coordinate; "domains" are different — they are taxonomic
-      categories, not scale ranges.
-      NOT subjectivism. Reality has structure (A_0 = argmin Z);
-      the structure is invariant under BPI choice. What is
-      observer-relative is the carving into named categories,
-      not the underlying transitions themselves.
     content: |
       The strong reading of N_NoSeparatePieces:
 
@@ -21184,19 +20817,6 @@ nodes:
       Status DEMONSTRATED rather than STRONG because the two-factor
       decomposition is mathematically forced by trajectory argmin —
       no empirical fitting required.
-    not_misinterpretations: |
-      NOT a claim that "speed = energy". Energy is per-transition
-      cost (magnitude axis); speed is rate (frequency axis). Their
-      product is power.
-      NOT a claim that high-rate always means high dissipation.
-      A high-rate substrate with very low per-transition complexity
-      (e.g., trivial gas) has low dissipation. Both factors needed.
-      NOT identical to "kinetic energy of constituents". A plasma's
-      kinetic energy is one component; the structural reconfiguration
-      rate is what matters for Z_therm flow.
-      NOT inconsistent with crystals having complexity. Crystals
-      have high static Z_struct; the rate axis says they have low
-      ν, hence low dissipation power despite the structure.
     content: |
       Mathematical form:
         Power dissipated = ν · ΔK · k_B T ln 2
@@ -21287,18 +20907,6 @@ nodes:
         pair shows complexity and heat are coordinate readings of
         one dissipation, with Landauer interface as the coordinate-
         link.
-    not_misinterpretations: |
-      NOT a claim that all complexity is dissipative. Static complex
-      structures (crystals, frozen configurations) are NOT
-      complexity-as-dissipation — they require energy throughput.
-      NOT a violation of second law; the framework respects the
-      second law and explains complexity as its consequence in
-      open systems.
-      NOT identical to MEPP (Maximum Entropy Production Principle);
-      MEPP is one corollary, not the full claim.
-      NOT a teleological claim. There is no "purpose" of complexity
-      — A_0 is blind argmin; the appearance of purpose is BPI
-      pattern-matching on the dissipation outcome.
     content: |
       Mechanism (Landauer interface):
         Each bit-erasure costs k_B T ln 2 of heat. A transition
@@ -21397,17 +21005,6 @@ nodes:
       candidates (string landscape, MWI multiverse, IIT Φ formulas, etc.)
       — exactly the high-Shannon-entropy signature of grammar-induced
       R3 traps (per N_Shannon → N_EpistemicTraps).
-    not_misinterpretations: |
-      NOT a critique of any specific theory. Each theory may be locally
-      well-formed; the paradigm-level claim is about systemic susceptibility,
-      not individual error. NOT a claim that grammar is fixable through
-      better wording — the trap is structural in S-V-O parsing itself.
-      NOT a claim that math/topology are "above" ontology; they are
-      structurally distinct substrates that don't carry grammar's
-      ontological pre-postulates. NOT inconsistent with science yielding
-      results — it does, precisely in the math/topology-aligned regions
-      (relativity's geometry, QM's algebraic structure, statistical
-      mechanics' entropy formalism).
     content: |
       Mechanism (from N_GrammarTrap):
         S-V-O grammar postulates persistent S, state-change V, and
@@ -21493,14 +21090,6 @@ nodes:
       consistent with the projection claim: pure Shannon at Z_struct
       corner (0.7, 0.2, 0.1), pure thermodynamics at Z_therm corner
       (0.4, 0.5, 0.1), FEP balanced inside (0.4, 0.4, 0.2).
-    not_misinterpretations: |
-      NOT a claim that Shannon, thermodynamics, and FEP are
-      identical-as-formulas — they differ in which coordinates are
-      active. NOT a meta-theory of three theories — there is one A_0;
-      the three "theories" are coordinate restrictions of the same
-      operation. NOT inconsistent with FEP being more general than
-      either Shannon or thermodynamics — generality means activating
-      more coordinates of the same simplex, not adding a fourth.
     content: |
       Three substrate types determine the active Z-coordinates:
 
@@ -21571,19 +21160,6 @@ nodes:
       DEMONSTRATED, carried by the identification step L^2(L(3,1)) = physical
       Hilbert space; consequences (1) and (2) are full DEMONSTRATED given
       ergodicity.
-    not_misinterpretations: |
-      this is Boltzmann ergodicity of single-trajectory coverage (it is
-      Jaynes ergodicity — convergence to maximum-entropy distribution on
-      the accessible phase space, like water reaching hydrostatic
-      equilibrium without every molecule visiting every point) ·
-      complex Hilbert space follows from ergodicity alone (it follows
-      from Z3 representation theory; ergodicity establishes the Gibbs
-      state over which L^2 is defined, but the complex structure comes
-      from the fact that Z3 has no irreducible real representation of
-      degree 3) · real or quaternionic alternatives are possible for
-      the Hilbert space on L(3,1) (the Z3 spectrum excludes them by
-      character theory; complex coefficients are structurally necessary)
-
   - id: N067
     title: Spectral Dimension d_s(r) and the Half-Transition Scale
     layer: structure
@@ -21614,17 +21190,6 @@ nodes:
       in three separate quantum gravity programmes — convergence on the
       same UV reduction without coordination, evidence the Z₃ fibre-freezing
       mechanism is universal.
-    not_misinterpretations: |
-      d_s(r) = 2 + 2r/(r + r_0) is fitted to data (it is RG fixed-point
-      determined by η = 0 exactness; no fit) · η ≠ 0 might apply (η = 0
-      identically for argmin of a linear functional — no non-Gaussian
-      vertices to generate anomalous dimension) · d_s(0) = 2 is borrowed
-      from CDT/ASG/LQG (it is structurally derived from Z₃ fibre-freezing
-      on the Hopf base S²; CDT/ASG/LQG independently capture the same
-      mechanism, which is why their convergence is evidence not assumption)
-      · the value 3 at r_0 is approximate (it is exact substitution into
-      the RG formula at the half-transition scale)
-
   - id: N129
     title: Spectral Triple Algebra A_F = ℂ ⊕ ℍ ⊕ M_3(ℂ) Derived from L(3,1)
     layer: physics
@@ -21658,17 +21223,6 @@ nodes:
       Step 6 (full SM Lagrangian via spectral action including exact Higgs
       mass at higher order) remains STRONG conditional on Steps 1-4 — open
       identification, not open chain.
-    not_misinterpretations: |
-      L(3,1) is still postulated (no — DEMONSTRATED via N370: baryon number
-      constraint forces p=3, Poincaré-Perelman forces S³) · 3 generations is
-      a free parameter (no — follows from |π_1| = p = 3) · the algebra is
-      one option among many (Krajewski + Wedderburn + KO-dim 6 + minimality
-      jointly force ℂ ⊕ ℍ ⊕ M_3(ℂ) uniquely; alternative algebras either
-      violate Poincaré duality or introduce redundant representations) ·
-      KO-dimension 6 is conventional (it follows from L(3,1) compact oriented
-      Riemannian 3-manifold contributing 3 + Z_3 deck adding 3, confirmed
-      independently by Connes' fermion-doubling J²=-1 argument)
-
   - id: N330
     title: Polarisation as A₀ Binary Compression Under Information Overload
     layer: comms
@@ -21694,19 +21248,6 @@ nodes:
       mathematically two — any 1-partition is trivial, any n-partition
       with n>2 requires more than budget-K(O) bits to maintain
       distinctions.
-    not_misinterpretations: |
-      polarisation is irrational mass behaviour (it is the structurally
-      forced asymptote of BPI compression under overload — argmin Z, not
-      irrationality) · this requires modelling group dynamics (the binary
-      collapse is per-BPI; collective polarisation is the aggregate of
-      individual A_0-forced compressions) · diversity-promotion can
-      reverse polarisation (it can only succeed if it reduces K(F)
-      below the K(O) saturation threshold; otherwise the compression
-      remains forced) · this is descriptive, not predictive (it predicts
-      that any information environment with K(F) >> K(O) will produce
-      polarisation in connected BPI networks — observationally
-      consistent with social-media polarisation studies)
-
   - id: N332
     title: Trust Asymmetry as Second Law in Social Graphs
     layer: comms
@@ -21736,19 +21277,6 @@ nodes:
       (3) phenomenological observation across social systems (no
       society spontaneously increases trust; trust collapse is generic
       and rapid).
-    not_misinterpretations: |
-      this is a moral observation about human nature (it is a Second-Law
-      corollary in the social substrate — same equation as physical
-      entropy direction) · trust can be rebuilt symmetrically with
-      enough effort (the asymmetry is in spontaneous direction; rebuilding
-      requires sustained work input, exactly as predicted) · this is
-      pessimistic / depressing (it is structurally precise; it identifies
-      the work required to maintain trust, which enables interventions)
-      · this contradicts examples of rapid trust development (rapid trust
-      = rapid Z_hidden reduction, possible when channel capacity matches
-      work input; the asymmetry is in spontaneous baseline, not in
-      maximum achievable rate)
-
   - id: N183
     title: Topology of Cognitive States — Neurosis as Metastable Vortex, Meditation as Z_narr → 0
     layer: observers
@@ -21787,24 +21315,6 @@ nodes:
       states (full mapping requires domain-specific Z-component
       identification); CONDITIONAL for specific qualia mappings
       (which quale to which precise neural substrate — needs fMRI).
-    not_misinterpretations: |
-      neurosis is "weakness" or "moral failure" (it is topological
-      fragmentation, a thermodynamic regime of the BPI hydrodynamic
-      flow; suffering is thermodynamic telemetry, not punishment) ·
-      meditation produces "altered consciousness" as a separate
-      experience (it produces zero-resistance configuration of the
-      narrative loop — the same A_0 dynamics, with one Z-component
-      reduced) · "dissolution of self" is mystical or unscientific
-      (it is structurally describable as Z_narr → 0; consistent with
-      Reduction 4 in Observer Containment chain) · cell vs vortex is
-      analogy (it is structural identity — both are dissipative
-      topological anomalies; "living" vs "non-living" is a gradient,
-      not a categorical distinction) · DNA "wants" to reproduce (it
-      is a minimal-description compression of a successful
-      low-impedance configuration; reproduction is solving the
-      engineering problem of preserving structure across thermal
-      death of substrate, no agent involved)
-
   - id: N078
     title: Gravity as Thermodynamics — Jacobson Identity, Graviton as Category Error
     layer: physics
@@ -21838,23 +21348,6 @@ nodes:
       convergent independent confirmation. The Bullet Cluster lensing-vs-
       gas separation is direct empirical evidence for Z_hidden as the
       gravitational source rather than a particle.
-    not_misinterpretations: |
-      gravity is a force (it is the Z-field topology; objects follow
-      minimum-Z paths, not paths bent by a force) · the graviton just
-      hasn't been found yet (no — there is no field to quantise; gravity
-      IS the background, not an excitation of it; quantising the
-      background is a category error) · dark matter is undetected particles
-      (it is Z_hidden density, the inaccessible entropic content of the
-      manifold; Bullet Cluster behaviour is forced by Z_hidden following
-      A_0-geodesics without electromagnetic coupling, not by collisionless
-      particles) · Verlinde and Jacobson are alternative theories (they
-      are the same A_0 structure in different coordinate languages; their
-      convergence is N_InversiveTheory manifesting) · the cosmological
-      constant requires fine-tuning (Z_hidden(0) = 0 is forced by the
-      compactness of L(3,1); fine-tuning dissolves) · this contradicts
-      observational gravitation (it reproduces all GR predictions; it
-      reframes their substrate, not their content)
-
   - id: N_EngagementArchitecture
     title: Engagement Architecture as A₀ at Wundt Apex
     layer: observers
@@ -21896,23 +21389,6 @@ nodes:
       / smallest Pisot / two-memory recurrence (sec:fibonacci) — the
       quantitative match (Bartók climax at φ⁻¹ ≈ 0.618) excludes
       coincidence.
-    not_misinterpretations: |
-      one option among many (no — alternative configurations either land
-      in chaos quadrant or triviality quadrant per Cheung 2019 saddle;
-      apex-landing requires this specific architecture) · music-only (no
-      — generalises to all engagement-driven substrates: story, drama,
-      games, video pacing; music is one instance) · the engineered break
-      is arbitrary design choice (no — break itself is forced because
-      pure fractal yields zero prediction error, no signal; Wundt-apex
-      magnitude is forced by dopamine mechanism; only the timing /
-      material content is choice) · this duplicates ADAP framework (no —
-      ADAP is a corpus-validated test for this architecture; the
-      structural claim is what ADAP verifies) · convergence with φ-route
-      is coincidence (no — independent derivations on the same substrate
-      class necessarily reach the same A_0 attractor; quantitative
-      Bartók-Markov match excludes coincidence by ruling out alternative
-      irrationals)
-
   - id: N_PhiAttractor
     title: Golden Ratio φ as A₀ Attractor on Continuous Angular Substrates
     layer: structure
@@ -21948,22 +21424,6 @@ nodes:
       on Markov spectrum); secondary noble-number attractors (Lucas,
       multijugate) coexist within the same dynamical system but with
       smaller basins, related to φ by SL(2,Z) orbit equivalence.
-    not_misinterpretations: |
-      φ is a coincidental approximation in nature (no — it is structurally
-      forced for any substrate satisfying C1-C5; counter-instances enumerated
-      in .tex verify each condition is individually necessary) · φ-emergence
-      requires biological intent (no — it appears in Penrose tilings without
-      sequential growth, in atomic quasicrystals with 5-fold symmetry, in
-      cortex without conscious selection; substrate satisfaction is the only
-      requirement) · this contradicts the L(3,1) Z_3 result (no — the two
-      occupy disjoint substrate classes selected by C4: continuous angular
-      vs discrete spin sector; both are A_0-forced attractors in their
-      respective classes) · 137.5° golden angle is empirical fitting (it
-      follows analytically from 360°/φ² with no free parameter) · six
-      derivations are six independent confirmations (they are six coordinate
-      expressions of one number-theoretic singularity, not six unrelated
-      witnesses; the convergence is the structural fact)
-
   - id: N110
     title: Inevitability Theorem for L(3,1) — From BPI Vertex-Transitivity to S³/Z₃
     layer: structure
@@ -22000,19 +21460,6 @@ nodes:
       Independent confirmation from N370: baryon number conservation forces
       p = 3 from physics, recovering the same manifold from a completely
       independent argument.
-    not_misinterpretations: |
-      n = 3 is selected empirically (no — forced by I_Sym + closed orientable
-      + finite non-trivial π_1; only Z_3 satisfies BPI requirements at
-      critical dimension; N370 confirms via baryon number) · L(3,1) was an
-      assumed input (no — derived here from BPI vertex-transitivity and
-      independently in N370 from baryon number) · the KO-dim filter alone
-      suffices (it does not — Z_5 also passes KO-dim 6; uniqueness requires
-      either the I_Sym argument here or N370's odd-prime exclusion) · this
-      requires postulating "BPI at critical dimension" (no — BPI is the
-      observer-as-subprocess of the manifold, K(O)<K(F), defined in N112;
-      "critical dimension" means the spectral dimension boundary derived
-      in N067, not a free parameter)
-
 # ─── Round 7: titles for 47 untitled nodes (partial node updates) ───
 
   - id: N000
@@ -22828,26 +22275,6 @@ nodes:
     # frame shift to topology — structural reorganisation with hidden frame change
 
   - id: N026
-    not_misinterpretations: |
-      NOT a claim that LM and human are "the same thing". They
-      are structurally distinct positions in the joint process —
-      different coordinate readings with different K(O), different
-      Z-component weightings, different temporal scales. The
-      claim is that the THREE-OBJECT framing (LM + human +
-      response as separate entities with interface between them)
-      is BPI-parsing artifact, not ontological partition.
-      NOT a denial of operational distinction. We address LM and
-      human separately for engineering, deployment, evaluation.
-      The carving is operationally useful BPI shorthand. The
-      claim concerns ontological status, not operational utility.
-      NOT a claim that responses are predetermined. Each transition
-      is real argmin Z under K(O) < K(F); apparent unpredictability
-      reflects observer's bounded resolution, not deterministic
-      script (per N014).
-      NOT a claim that interaction is illusion. The interaction
-      IS the process; carving into "actor" + "target" + "channel"
-      is BPI parsing of one continuous signal-transitioning. The
-      process is real; its three-object decomposition is artifact.
     z_struct: 0.6
     z_therm: 0.2
     z_hidden: 0.2
@@ -22931,30 +22358,6 @@ nodes:
     z_hidden: 0.3
 
   - id: N070
-    not_misinterpretations: |
-      NOT a claim that measurement does not happen. Measurement
-      is a real transition with empirical consequences (Born-rule
-      probabilities, decoherence timescales, observable outcomes).
-      The claim is that the FRAMING of measurement-as-collapse-of-
-      substantive-thing is the error; the transition itself is
-      operational and forced.
-      NOT a claim that QM is wrong. The mathematical formalism is
-      correct. What dissolves is the "measurement problem" question
-      ("how does superposition collapse?") because the question
-      presupposes observer/observed as two separate ontological
-      entities — a presupposition R3 violation per N112 + KS
-      theorem (N063/N064).
-      NOT a claim that QM interpretations don't matter as long as
-      the math works. Interpretations carry ontological commitments
-      that get reified through usage (per
-      N_OperationalCarrierVsOntologicalCommitment): "wave function
-      collapse", "many worlds", "pilot wave" etc. import primitive-
-      object framings beyond the math. Operational reading uses the
-      math; commitment-level interpretation is the trap.
-      NOT a denial of empirical phenomena. Decoherence, entanglement,
-      Born statistics are observed. The "problem" framing is what
-      dissolves; the phenomena are real and structurally accounted
-      for via Z_hidden (K(O) < K(F)) in the BPI substrate.
     z_struct: 0.3
     z_therm: 0.2
     z_hidden: 0.5
@@ -23398,158 +22801,27 @@ nodes:
   # ─── NOT_MISINTERPRETATIONS fills (replaces 'see chapter context' placeholders) ───
 
   - id: N014
-    not_misinterpretations: |
-      NOT a denial of probability theory. Probability formalism is correct; what dissolves is the framing of probability as ontological property of reality.
-      NOT a hidden-variables claim. Hidden variables under probability would require K(O) ≥ K(F) for the observer, impossible per N112.
-      NOT a determinism claim. Outcomes are not predetermined; observer's bounded resolution makes future operationally uncertain — but "uncertain" is observer-relative, not ontological.
-      NOT a denial of Born-rule statistics. Statistics are correct empirically; their FRAMING as "intrinsic randomness of nature" is the trap dissolved here.
-
   - id: N018
-    not_misinterpretations: |
-      NOT a claim that LLM is conscious or has agency. LLM is structural-substrate realisation of argmin Z; no R4 claim about purposive choice.
-      NOT a deflationary claim. Transparency means LLM exhibits A_0 mechanism legibly, not that LLM is "merely" anything.
-      NOT a claim that all generation is identical to LLM. LLM is one transparent A_0 instance; other instances differ in substrate (biological, physical, etc.).
-      NOT a substrate-reduction claim. LLM as A_0 instantiation does not reduce all argmin processes to LLM-style architecture.
-
   - id: N019
-    not_misinterpretations: |
-      NOT a metaphor between erosion and other Z_struct accumulations. Class A: same Z = ∫R·dU formula governs all substrates.
-      NOT a claim that all geological dynamics reduce to Z_struct. Geology is multi-coordinate (Z_therm in heat flow, Z_hidden in inaccessible deep structures); Z_struct is one coordinate.
-      NOT a denial of substrate-specific complexity. Geomorphology has specific dynamics; structural identification holds at the Z-formula level.
-
   - id: N020
-    not_misinterpretations: |
-      NOT a metaphor. Class A: same Z-reduction formula at neural scale.
-      NOT a reduction of cognition to neural plasticity. Cognition is multi-scale BPI process; Hebbian is one substrate-realisation among others.
-      NOT a claim that specific neuroscience parameters are forced by A_0. General structural form (Z_struct reduction along repeated paths) is forced; specific time constants, spike-timing windows are substrate-specific empirical.
-      NOT a denial of plasticity complexity. LTP/LTD, structural plasticity, neuromodulation all operate; the Z-reduction structure is the common substrate.
-
   - id: N021
-    not_misinterpretations: |
-      NOT a denial of evolution's structuring power. Selection produces complex adapted forms; the claim is about MECHANISM (blind argmin Z), not results.
-      NOT a claim that "fitness" is illusion. Fitness is real coordinate; what's denied is teleological framing ("progress toward higher form" — R4 trap).
-      NOT a claim that all biological change is selection. Drift, neutral evolution, recombination, lateral transfer also operate as A_0 mechanisms in different substrates.
-      NOT a reduction of biology to physics. Cross-substrate A_0 identification per N_DomainsAsBPICarvings; biology has its own coordinate readings.
-
   - id: N022
-    not_misinterpretations: |
-      NOT a way to evade falsification. Specific predictions stand; null-result predictions are testable against ongoing experimental search.
-      NOT an ad-hoc adjustment. Predicted nulls are structurally derived from forced structure, not added after data.
-      NOT a claim that all null results are framework-predicted. Only specific nulls derived from forced structure are predictions; other nulls remain genuinely null.
-      NOT epistemically privileged. A predicted-null can be falsified by a positive finding; the prediction commits to the null.
-
   - id: N024
-    not_misinterpretations: |
-      NOT a denial that classical evaluation works for object-level claims. It works where "objects" are stable process patterns at appropriate scale.
-      NOT a claim that science before A_0 was wrong. Classical paradigm's predictions can be empirically correct; the FRAMING (object-property-prediction) imports R1 commitments that need disambiguation per round 36.
-      NOT an attack on falsifiability. Falsifiability operates at structural level — claims that violate forced structure are falsified; the claim here is about WHAT counts as falsification, not WHETHER falsification operates.
-      NOT a paradigm-relativism claim. Topological framing is forced (per AUDIT GROUND); ontological framing is not just "alternative" but structurally inadequate to process-substrate.
-
   - id: N025
-    not_misinterpretations: |
-      NOT a denial of empirical data. Data persist across paradigm shift; their interpretation reorganises.
-      NOT a claim that any frame works equally well. Topological frame survives R1-R4 audits; ontological frame fails them per N_OntologyParadigmGrammarBound.
-      NOT a subjective-interpretation claim. Frame shift IS itself an A_0 transition (per N_ForcedId self-application); the new frame is structurally forced once R1-R4 audit is applied.
-      NOT a denial of past evidentiary work. Reorganisation preserves data; reframes meaning per Noether-style topological invariants.
-
   - id: N027
-    not_misinterpretations: |
-      NOT a claim that light "intends" to minimise time. R4 trap: light follows the path A_0 selects without agency.
-      NOT a metaphor. Class A: variational form of optical path = variational form of A_0.
-      NOT a claim that geometric optics is exhaustive. Wave optics extends classical Fermat; A_0 still operates with quantum corrections at small scales.
-      NOT a derivation of QM from optics. Fermat's variational principle is one substrate of A_0; QM emerges from different substrate constraints (Z_hidden > 0).
-
   - id: N029
-    not_misinterpretations: |
-      NOT an analogy. Class A: ΔG‡ IS Z_therm by definition (Landauer + Eyring share identical formalism).
-      NOT a claim that all chemistry reduces to thermodynamics. Quantum-chemical structure forces specific ΔG‡ values; thermodynamics gives rate from ΔG‡.
-      NOT a denial of catalysis substrate-mechanism. Enzymes engineer specific Z-reduction at active site; mechanism still A_0 with substrate-specific kinetics.
-      NOT a metaphor between thermodynamics and information. Landauer cost (k_B T ln 2 per erasure) IS the bridge — same Z_therm formula.
-
   - id: N031
-    not_misinterpretations: |
-      NOT a claim that all music is mathematically forced. Cultural conventions contribute; A_0 forces underlying acoustic-stability structure.
-      NOT a denial of subjective preference. Preference operates within A_0-stability landscape, not against it.
-      NOT a metaphor between music and physics. Class A: free-energy minimisation has identical mathematical structure in both substrates.
-      NOT a claim about specific tuning systems being forced. 12-tone equal temperament is one attractor among several stable solutions; structural existence of attractors IS forced.
-
   - id: N035
-    not_misinterpretations: |
-      NOT a claim that perception is "just compression" with nothing else. BPI compression is the structural mechanism; phenomenal experience is the BPI's coordinate reading of that compression (per N188).
-      NOT a denial of psychological complexity. Multi-level BPI structures (sensory, cognitive, narrative) layer; Weber-Fechner operates at sensory layer.
-      NOT identical to information theory. Information theory is one coordinate; BPI as compression operator with bounded K(O) is the structural identification.
-      NOT a reduction of qualia to thermodynamic budget. Budget constrains BPI; qualia ARE BPI's coordinate readings of state, not a separate phenomenon.
-
   - id: N043
-    not_misinterpretations: |
-      NOT a claim that all power-law distributions reduce to one principle. Different power laws have different exponents; common 1/f-prior structure is the shared mechanism for Benford+Zipf class.
-      NOT a denial of context-specific applications. Benford holds for naturally-occurring numerical data with multi-decade range; Zipf for ranked events; specific scope conditions matter.
-      NOT identical to scale-invariance claims. Power laws are one symptom of scale-invariant structure; not all scale-invariant systems show Benford/Zipf specifically.
-      NOT a derivation independent of observation choice. The 1/f prior reflects optimal information extraction by BPI of bounded resolution.
-
   - id: N045
-    not_misinterpretations: |
-      NOT a claim that φ is universal aesthetic preference. φ is structural attractor for minimum-memory branching; aesthetic preference involves multiple coordinates beyond branching.
-      NOT a claim that φ appears everywhere in nature. φ appears where minimum-memory branching is the operative dynamic; other places have different attractors (e, π, integer ratios).
-      NOT a numerological claim. φ is mathematical fixed point of specific recurrence (Fibonacci limit), not arbitrary mystical number.
-      NOT a derivation of all proportions in nature. Specific systems may have other forced proportions per their substrate-specific Z-landscapes.
-
   - id: N048
-    not_misinterpretations: |
-      NOT a critique of aesthetic measurement per se. Birkhoff's specific formula M=O/C is structurally incomplete; aesthetic structure can be measured with N_BPIEngagement triangulation criterion.
-      NOT a denial that order/complexity matter. Both contribute, but their relationship is non-monotonic per A_0 dynamics — too much symmetry reduces distinguishable pathways.
-      NOT a claim that no aesthetic theory works. N_BPIEngagement provides structural foundation: triangulation criterion (multiplicity + non-reducibility + relation) succeeds where M=O/C fails.
-      NOT a denial of Birkhoff's empirical contribution. The data Birkhoff studied are real; the FORMULA is structurally inadequate to capture A_0 dynamics in aesthetic substrate.
-
   - id: N051
-    not_misinterpretations: |
-      NOT a denial of state-distinctions. States ARE distinct; the claim is about ontological preference, not identity.
-      NOT a claim that all transitions are equally probable. Transition probabilities follow A_0 = argmin Z; probability is uneven and structurally forced.
-      NOT an entropy-equilibrium claim. Stable states are attractors; non-attractor states have higher Z; "no preferred state" applies to position-space ontologically, not transition-energetics.
-      NOT a claim about thermal equilibrium. Far-from-equilibrium systems have stable attractors per N_ComplexityAsDissipationPath; no-preferred-state is about absence of OBJECT-level priority.
-
   - id: N053
-    not_misinterpretations: |
-      NOT a claim that all cross-domain mappings are valid. Each survived adversarial test; mappings without test are unverified per Trap 3 (proxy misidentification).
-      NOT a method for discovering A_0 instances. Method is testing existing claims; new instances need their own structural-identity audit.
-      NOT a guarantee against future falsification. Each isomorphism remains testable; "verified" means survived to-date, not unfalsifiable.
-      NOT a license for analogical reasoning. Class A (same process, different notation) requires definitional respect of Z-component definitions; surface analogy alone fails Trap 3.
-
   - id: N054
-    not_misinterpretations: |
-      NOT a claim that no type-2 (chosen) steps exist anywhere. They exist, explicitly labelled in STRONG nodes per WHY_STATUS field.
-      NOT a guarantee against future-discovered disguises. Audit is point-in-time; cognitive R1-R4 audit per CLAUDE.md remains required for new claims.
-      NOT a substitute for structural argument. Type-2-detection requires understanding what makes a step CHOSEN vs FORCED — semantic operation, not lexical.
-      NOT a claim of completeness. Some open derivations (Bottleneck A/B, ζ_D(s), Ġ/G) remain CONDITIONAL; their resolution may reveal additional disguises.
-
   - id: N094
-    not_misinterpretations: |
-      NOT a claim that classical phases are illusory. Sub-r_0 regime has complex phases as structural feature; super-r_0 regime has classical-real values; both are operationally valid in their regime.
-      NOT a derivation of all QM from N094. Specific Hilbert structure requires additional anchors (Born rule per N061, observable algebra, etc.).
-      NOT a free-parameter claim about ℤ_3. ℤ_3 action and SO(2)×U(1) are forced by L(3,1) topology (per N370).
-      NOT a denial of QM formalism. Standard quantum machinery operates correctly; this node identifies the structural origin of complex phases at sub-r_0.
-
   - id: N098
-    not_misinterpretations: |
-      NOT a claim that QM is "diffusion" classically. Quantum-walk metric is structurally distinct from Riemannian; the SAME g^(Z) takes different forms at different r.
-      NOT a denial of QM-classical boundary. The boundary IS r_0 transition zone, with crossover governed by S(r)/p_r dimensionless parameter.
-      NOT a claim that g^(Z) replaces quantum mechanics formalism. g^(Z) is coordinate expression of one structure across scales; standard QM operators remain.
-      NOT a derivation of decoherence dynamics in detail. Specific decoherence rates require substrate-specific environment coupling; metric form gives the structural backbone.
-
   - id: N182
-    not_misinterpretations: |
-      NOT a metaphor for A_0. Class A in classical limit (ℏ→0); structural identification, not analogy.
-      NOT a reduction of QM to classical mechanics. Reduction requires specific limit (ℏ→0 or full observer resolution); full quantum regime maintains Z_hidden > 0 and the path integral diverges from A_0 classical residue.
-      NOT a claim that A_0 IS QM. A_0 is substrate-uniform process; QM is one coordinate expression in physical substrate at specific r-scale.
-      NOT a derivation of Feynman from A_0. Feynman is a parallel formalism; isomorphism observed in classical limit, derivable from N_InversiveTheory + DEF.
-
   - id: N189
-    not_misinterpretations: |
-      NOT a claim that all memory follows e^{-t/τ}. Ebbinghaus is short-term forgetting; long-term consolidation, semantic memory, working memory follow different dynamics.
-      NOT a derivation of consciousness from fractal cortex dimension. Cortex d_f is structural-substrate fact; consciousness is BPI process operating on that substrate per N_BPIEngagement.
-      NOT a numerological claim about d_f≈2.73-2.79. Specific value is empirical measurement; structural derivation gives d_s formula matching at characteristic scale via spectral inversion.
-      NOT a claim that conscious bandwidth (~10 bits/s) is universal. Specific number reflects human-cortex constraints; other substrates would have different BPI architectural attractors.
-
   # ─── Phase 1: 12 core/principle why_status fills (cognitive inversive audit) ───
 
   - id: N_NoSeparatePieces
