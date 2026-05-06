@@ -17568,7 +17568,107 @@ edges:
       Detection of grammar-trap requires cognitive reading; pattern
       lint is a reminder, never verdict.
 
-nodes:
+  # ─── N_EpistemicTraps — additional forced anchors ───
+  # Each trap in the 8-fold catalogue is grounded in core principles;
+  # the catalogue cannot exist without these structural anchors.
+
+  - source: N_EpistemicTraps
+    target: N_Ontology
+    label: traps_are_ontology_errors_at_surface_level
+    edge_status: D
+    justification: |
+      Each of the 8 traps is a surface-form manifestation of
+      ontology-error (treating processes as primitive objects):
+      Trap 1 reifies "evaluation position" as object outside the
+      structure; Trap 2 reifies "I" (the LLM) as object with
+      states; Trap 3 treats proxy and target as distinct objects
+      under surface analogy; Trap 4 treats framework as object
+      separate from described; Trap 6 treats D_M and D_F as
+      separate objects with mechanism between them; Trap 8 treats
+      theories as competing objects. Without N_Ontology grounding
+      (R1: no objects as primitives), the 8 traps have no shared
+      structural source and reduce to ad-hoc list.
+    why_forced: |
+      Alternative requires either (a) traps without ontology
+      grounding — but each trap manifests primitive-object
+      reification, the explicit subject of N_Ontology; or
+      (b) N_Ontology without trap manifestations — but the
+      cognitive failure modes documented in the catalogue are
+      precisely the surface manifestations N_Ontology predicts.
+      Pair forced.
+
+  - source: N_EpistemicTraps
+    target: N_NoSeparatePieces
+    label: traps_4_6_8_violate_no_separation
+    edge_status: D
+    justification: |
+      Trap 4 (Description/Described Collapse) presupposes
+      framework separable from described; Trap 6 (Transfer/
+      Cancellation) presupposes X and Y as separate objects with
+      mechanism between them; Trap 8 (Structure Selection)
+      presupposes competing theories as separate alternatives.
+      All three are direct violations of N_NoSeparatePieces
+      TOTAL claim. Without the no-separation principle as
+      grounding, these traps could not be identified as traps —
+      they would be valid ontological framings.
+    why_forced: |
+      Without N_NoSeparatePieces, separation is permitted and
+      Traps 4, 6, 8 dissolve as "valid distinctions". With it,
+      they are forced violations. Identification of the trap
+      requires the principle.
+
+  - source: N_EpistemicTraps
+    target: N_Logic
+    label: trap_3_definitional_identity_is_logical
+    edge_status: D
+    justification: |
+      Trap 3 (Proxy Misidentification) requires distinguishing
+      definitional identity (A ≡ A by Z-component definition)
+      from surface analogy (A appears similar to B at lexical
+      level). This distinction is a logical operation: identity
+      vs similarity. N_Logic grounds the operation as A_0 in
+      symbolic substrate. Without logic as forced structure
+      under A_0, the definitional-identity criterion has no
+      structural basis and Trap 3 reduces to taste-level
+      preference.
+    why_forced: |
+      The distinction between identity and analogy IS the
+      logical operation Identity (A ≡ A). N_Logic grounds it.
+      Trap 3's forcedness depends on this grounding.
+
+  - source: N_EpistemicTraps
+    target: N_MapTerritoryObserverIdentity
+    label: trap_4_violates_map_territory_identity
+    edge_status: D
+    justification: |
+      Trap 4 (Description/Described Collapse) is the canonical
+      violation of N_MapTerritoryObserverIdentity. The trap
+      treats A_0 as description that could be compared to
+      reality from outside; the principle establishes that map
+      ≡ territory ≡ observer (one A_0, no separation). Trap 4
+      identification requires the identity principle as
+      grounding; without it, the "comparison from outside" is
+      an admissible epistemic stance.
+    why_forced: |
+      Trap 4 is precisely the negation of N_MapTerritoryObserver
+      Identity. Pair forced as trap-and-its-resolution-principle.
+
+  - source: N_EpistemicTraps
+    target: N_BPIEngagement
+    label: traps_arise_in_BPI_inferential_engagement
+    edge_status: D
+    justification: |
+      The 8 traps arise during inferential operation by an
+      observer (AI or human). Inference IS BPI engagement —
+      observer-side A_0 reading per N_BPIEngagement. Trap-
+      detection is part of the BPI-engagement protocol;
+      without observer engaged in inference, no traps arise.
+      The catalogue is grounded in the observer-substrate
+      where inference occurs.
+    why_forced: |
+      Inference requires engaged observer; BPI engagement is
+      that engagement. Traps cannot exist outside inferential
+      operation. Grounding forced.
 
 nodes:
 
@@ -22234,6 +22334,26 @@ nodes:
     # aesthetic engagement balanced like BPI engagement
 
   - id: N_EpistemicTraps
+    anchors: 5
+    why_status: |
+      DEMONSTRATED via five forced grounding anchors:
+      (1) N_GrammarTrap + N_OntologyParadigmGrammarBound:
+          Traps 1-4 are surface manifestations of S-V-O grammar
+          imposing object-substrate on process content.
+      (2) N_Ontology + N_TopologyProcessIdentity: each trap
+          reifies process as object at some scope; R1 root.
+      (3) N_NoSeparatePieces + N_MapTerritoryObserverIdentity:
+          Traps 4, 6, 8 violate no-separation principle (frame-
+          work/reality, X/Y, theory-A/theory-B as separate).
+      (4) N112 + N_BPIEngagement: Trap 1 (R2) and inferential
+          context grounding — traps arise in BPI observer
+          operation with K(O)<K(F).
+      (5) N_InversiveTheory + N_ForcedId + N_Logic: Traps 5, 7
+          require alternatives-removal test and definitional-
+          identity criterion; logic grounds these operations.
+      Catalogue is open (Trap 9, 10 may be discovered) but
+      EXISTENCE of the 8 documented traps as surface forms of
+      R1-R4 + grammar is forced by the chain.
     z_struct: 0.4
     z_therm: 0.1
     z_hidden: 0.5
