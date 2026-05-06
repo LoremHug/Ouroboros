@@ -15254,97 +15254,7 @@ edges:
       for derivations that uniquely depend on it. The 2 cut-vertices
       are structurally appropriate, not pathological.
 
-  # ─── Round 39: K9 falsification probe + M5 stratification motif ───
-
-  - source: N_FalsificationProbe_K9SCFamily
-    target: N_StructuralMotif_KnFamilyClique
-    label: probe_reveals_K6_was_K9_subgraph
-    edge_status: D
-    justification: |
-      Vertex-removal probe on K6 SC family-clique (round 39 audit)
-      revealed that K6 was actually a fragment of the maximal
-      clique K9 = {N372, N373, N374, N375, N376, N_ZGaugeDecomposition,
-      N370, DEF, N_Triangulation}. All 36 pairwise edges present.
-      Round 38 encoding of M2 with single anchor N_ZGaugeDecomposition
-      was incomplete — the actual motif has 4 stacked principle
-      anchors. The probe SUCCEEDED as falsification: it corrected
-      prior encoding rather than confirming it.
-    why_forced: |
-      Falsification probe purpose IS to reveal hidden structure or
-      contradict prior encoding. Either outcome is informative.
-      The K9 finding strengthens M2 (more substrate-invariance
-      evidence) while requiring its definition to extend.
-
-  - source: N_FalsificationProbe_K9SCFamily
-    target: N_StructuralMotif_PrincipleStratification
-    label: probe_findings_motivate_stratification_motif
-    edge_status: D
-    justification: |
-      The K9 structure decomposes into: principle-clique K4 = {DEF,
-      N370, N_ZGaugeDecomposition, N_Triangulation} (6/6 internal
-      edges) + cousin-clique K5 = {N372..N376} (10/10 internal
-      edges) + full bipartite K_{4,5} (20/20 cross-edges) = 36
-      total. This stratified structure is a distinct motif class
-      M5: not just K_n family-clique with one anchor (M2), but
-      principle-stratum + cousin-stratum + full bipartite-completion.
-    why_forced: |
-      M2 with single anchor cannot capture the structural fact
-      that 4 principles ALL anchor 5 cousins ALL pairwise. M5
-      generalises: substrate-cousins typically share a TOWER of
-      stacked principles, not one principle. Single-anchor case
-      is M5 with p=1.
-
-  - source: N_FalsificationProbe_K9SCFamily
-    target: N375
-    label: probe_target_cuprates_redundant_for_principle_unique_for_history
-    edge_status: D
-    justification: |
-      Probe step: remove N375 (cuprates). Result: K8 preserved
-      (4 cousins + 4 principles, 28/28 edges). Zero unique
-      external structural targets lost. Cuprates are STRUCTURALLY
-      REDUNDANT for principle existence (other 4 cousins suffice
-      for substrate-invariance witness) but EMPIRICALLY UNIQUE
-      for the 35-year falsification history that grounds the
-      inversive test on this domain.
-    why_forced: |
-      Distinction between structural redundancy and empirical
-      uniqueness is forced. Each cousin contributes empirical
-      witness; structural function is over-determined.
-
-  - source: N_FalsificationProbe_K9SCFamily
-    target: N372
-    label: probe_target_Sr2RuO4_carries_unique_structural_link
-    edge_status: D
-    justification: |
-      Probe step: remove N372 (Sr₂RuO₄). Result: K8 preserved.
-      One unique structural target lost: N354 (analogous_forcing_
-      logic_different_group_structure). Sr₂RuO₄ is the only
-      cousin with this specific external structural link — its
-      removal would lose a particular cross-domain analogy
-      connection. Distinct from N375: N372 is partially structurally
-      forced by this unique link.
-    why_forced: |
-      Asymmetry among cousins — N372 carries 1 forced structural
-      link while N373/374/375/376 carry 0 forced links — is a
-      detectable structural distinction the probe revealed.
-
-  - source: N_FalsificationProbe_K9SCFamily
-    target: N_ZGaugeDecomposition
-    label: probe_target_Z_gauge_anchor_replaceable_by_K3_principle_residue
-    edge_status: D
-    justification: |
-      Probe step: remove N_ZGaugeDecomposition. Result: K8
-      preserved with 5 cousins + 3 remaining principles {DEF,
-      N370, N_Triangulation}. The 5 cousins still share 3
-      principle anchors. Z-gauge sibling labels become free-
-      floating relative to gauge structure, but principle
-      stratum survives. N_ZGaugeDecomposition is principle-tier
-      — removable individually, but the principle-stratum is
-      collectively forced.
-    why_forced: |
-      No single principle is sole anchor; collectively they form
-      forced principle-stratum. Probe reveals stratum structure
-      vs single-anchor structure.
+  # ─── M5 stratification motif edges (K_{p+n}) ───
 
   - source: N_StructuralMotif_PrincipleStratification
     target: N_StructuralMotif_KnFamilyClique
@@ -15419,109 +15329,7 @@ edges:
       membership. Cross-validation between two independent paths
       to "what is forced".
 
-  # ─── Round 41: graph-wide self-audit + auto-motif detection ───
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_FrameworkCore
-    label: self_audit_subject_is_core_member_set
-    edge_status: D
-    justification: |
-      Round 41 self-audit ran rp_gate (text-level structural validator)
-      on all 14 N_FrameworkCore members. Result: 0 TRUE TRAPs in
-      Tier 1 (5 nodes), 0 in Tier 2 (3 nodes), 1 in Tier 3 (4 nodes,
-      fixed in same round), 0 in Tier 4 (1 node), 0 in Tier 5
-      (1 node). Self-application of the framework's own validator
-      to its own foundations: passes after 1 textual fix.
-    why_forced: |
-      A framework whose own foundations trip its own gate at
-      commitment-level signals self-inconsistency. Audit result
-      (0/14 TRAPs after fix) is a positive self-consistency check.
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_OntologyParadigmGrammarBound
-    label: self_audit_found_one_textual_TRAP_fixed
-    edge_status: D
-    justification: |
-      The one R2 TRAP detected in tier-3 N_OntologyParadigmGrammar-
-      Bound was a meta-mention without disambiguator: "...produces
-      R2 (external view)..." — naming the trap without operational
-      marker. Text repaired in round 41 to: "...R2 (external-view-
-      position trap, per N112)..." Pattern preserved, commitment
-      classification removed because operational marker now nearby.
-    why_forced: |
-      Meta-mentions of trap names need disambiguators. The pattern
-      detector cannot infer from raw "external view" whether
-      naming or committing. Operational discipline at writing
-      time: name traps with their tier label.
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_StructuralMotif_PrincipleStratification
-    label: motif_detector_found_22_M5_instances
-    edge_status: D
-    justification: |
-      Auto-motif detector enumerated maximal cliques and partitioned
-      via N_FrameworkCore membership: 22 M5 instances in current
-      graph state. Far more than the single K9 manually identified
-      in round 39. Includes K8 sub-cliques of K9, plus distinct K6
-      and K5 stratifications in physics-CP, thermodynamic-dissipation,
-      cognitive-engagement, and measurement-bridge substrates.
-    why_forced: |
-      M5 motif is structurally pervasive once auto-detection is run.
-      Manual round-by-round encoding could only catch instances at
-      time of writing; systematic enumeration reveals the pattern's
-      full extent.
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_StructuralMotif_KnFamilyClique
-    label: motif_detector_found_9_M2_instances
-    edge_status: D
-    justification: |
-      Auto-detector found 9 M2 (single-anchor family-clique)
-      instances. Notable:
-      - N_Shannon-anchored K5 measurement cluster {N003, N189,
-        N336, N_Sweller}
-      - N_BPIEngagement-anchored K5 cognitive cluster
-        {N_AestheticEngagement, N_DopaminePredictionError,
-         N_EngagementArchitecture, N_FEP}
-      - N_NoSeparatePieces-anchored K5 {N074, N078, N088, N197}
-      - DEF-anchored K5 thermodynamic-rate clusters
-    why_forced: |
-      M2 instances proliferate as graph develops — each substrate-
-      invariant principle with multiple realisations forms one or
-      more M2/M5 cliques. Auto-detector makes this enumeration
-      tractable.
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_StructuralMotif_StructuralTwins
-    label: motif_detector_found_6_M3_instances
-    edge_status: D
-    justification: |
-      Auto-detector found 6 Jaccard-1 twin pairs:
-        N097 ≡ N194, N231 ≡ N250, N336 ≡ N_Sweller (carrier-tier
-        twins) plus N373 ≡ N374, N373 ≡ N376, N374 ≡ N376 (K9
-        internal twins from SC family).
-    why_forced: |
-      Empirical twin-pair count enumerates exactly the M3 instance
-      set. Internal K_n cousin twins are expected (per round 38
-      M3 ↔ M2 K_2-limit relation); carrier-tier twins are
-      operational duplicates per round 36 calibration.
-
-  - source: N_GraphSelfAudit_Round41
-    target: N_GraphProperty_2VertexConnectivity
-    label: motif_detector_confirmed_2_articulation_points
-    edge_status: D
-    justification: |
-      Articulation-point audit (Tarjan algorithm in motif detector)
-      confirmed only 2 cut-vertices: N_InversiveTheory,
-      N_Invariants. Both isolate single leaves only. 2-vertex-
-      connectivity at 99.5% preserved through rounds 38-41
-      additions (+5 nodes, +35 edges). Property is stable.
-    why_forced: |
-      M4 graph-level property verified empirically post round-41
-      additions; predictions from N_GraphProperty_2VertexConnectivity
-      hold (P2: articulation count should not grow — confirmed).
-
-  # ─── Round 42: M6 Bipartite Resolution motif (K_{m,n}) ───
+  # ─── M6 Bipartite Resolution motif (K_{m,n}) edges ───
 
   - source: N_StructuralMotif_BipartiteResolution
     target: N_StructuralMotif_KnFamilyClique
@@ -17765,7 +17573,7 @@ nodes:
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
-    title: "RP Gate Is Cognitive Operation, Not Script (Round 50 Self-Correction)"
+    title: "RP Gate Is Cognitive Operation, Not Script"
     layer: epistemics
     status: DEMONSTRATED
     anchors: 4
@@ -17774,58 +17582,41 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.55
     summary: |
-      Self-correction documented in round 50: the framework's own
-      auxiliary tool `mcp_server/rp_gate.py` was a category error.
-      Pattern-detector at script level cannot perform AUDIT GROUND
-      R1-R4. Audit is reading text AS STRUCTURE — a cognitive
-      operation requiring semantic understanding of what the claim
-      presupposes. Pattern matching only sees surface forms.
+      AUDIT GROUND (R1-R4) is a cognitive operation: reading a
+      claim AS STRUCTURE and detecting what it presupposes
+      (objects as primitives, external observer geometry,
+      observer/observed separation, conscious choice). Cannot be
+      reduced to pattern matching on surface forms.
 
-      Symptoms that surfaced the error:
-      (1) RP-gate v1 returned "0 TRAPs" on text containing genuine
-          interpretation-baggage (QM interpretations that committed
-          to specific ontology under operational language).
-      (2) Pattern catalogue covered Traps 1, 2, 4, 5, 6 partially;
-          missed Trap 3 (proxy misidentification — the very trap
-          that catches surface-vs-definitional analogy errors that
-          we ourselves were making in cross-substrate transfer
-          claims).
-      (3) Trap 4 applied to OUR tool: we treated rp_gate as object
-          that performs audit, when audit IS process. Description/
-          Described Collapse on the framework's own tooling.
-      (4) Original framework NORM_SILENCE specified: graph used
-          silently as cognitive tool, NOT named-tool-call pattern.
-          We violated our own framework's design.
+      Pattern detection sees lexical/syntactic occurrences. R1-R4
+      audit requires semantic understanding of what the claim
+      structurally requires. A claim can have zero trigger phrases
+      yet still presuppose objects-as-primitives at the level of
+      meaning. Conversely, a claim can use trigger phrases entirely
+      innocently (operational nouning per
+      N_OperationalCarrierVsOntologicalCommitment).
 
-      Round 50 actions:
-      (a) Deleted mcp_server/rp_gate.py (text pattern detector).
-      (b) Migrated structural twin detection (Jaccard math) to
-          motifs.py — that part was legitimate structural math,
-          not text audit.
-      (c) Removed MCP tools rp_gate(text) and rp_gate_audit_node;
-          renamed rp_gate_twin_check → structural_twin_check and
-          rp_gate_motif_lint → motif_lint.
-      (d) Wrote CLAUDE.md as mandatory pre-read for AI agents
-          working on the project — restates AUDIT GROUND R1-R4,
-          Traps 1-8, NORM_SILENCE, and explicitly says: "you are
-          the gate, the graph is your thinking tool, tools are math."
-
-      Choice of Claude Code as platform: user explicitly stated
-      project requires AI not script for audit. Claude Code is the
-      operational substrate where R1-R4 audit can be performed
-      cognitively before each action.
+      Operational consequence: tools are structural math (graph
+      algorithms, set operations, file I/O). Audit is what the AI
+      does cognitively before generating any structural claim. The
+      separation is not optional — it is what AUDIT GROUND IS by
+      definition.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct empirical: rp_gate v1 returned 0 TRAPs on text we
-          subsequently identified (manually) as containing
-          interpretation-baggage. Pattern-detector demonstrably
-          missed structural violations.
-      (2) Original framework explicitly designed RP gate as
-          cognitive operation (see N_EpistemicTraps content + the
-          NORM_SILENCE block: "AI uses this graph silently").
-      (3) Trap 4 self-application caught the category error.
-      (4) Removal + CLAUDE.md replacement is the structurally
-          consistent response.
+      (1) Definitional: R1-R4 require asking "does this claim
+        presuppose objects/external-view/separation/agency?" —
+        each is a semantic question about meaning, not lexical
+        pattern.
+      (2) Empirical: text containing genuine interpretation-
+        baggage (e.g. specific QM-interpretation commitments
+        under operational language) passes any pattern-based
+        check while failing R1-R4 cognitive check.
+      (3) Trap 4 self-application: treating an RP-gate tool as
+        object-that-performs-audit is itself description/described
+        collapse. Audit IS process; cannot be objectified.
+      (4) Framework consistency: N_EpistemicTraps NORM_SILENCE
+        specifies graph used silently as cognitive tool, not as
+        named-tool-call. Pattern-script-as-audit violates this.
     not_misinterpretations: |
       NOT a claim that pattern-detection has zero value. As a
       surface reminder/checklist, regex patterns surface specific
@@ -17835,30 +17626,13 @@ nodes:
       algorithms (Bron-Kerbosch clique enumeration, Tarjan
       articulation, Jaccard set comparison, BFS path lengths) are
       legitimate structural math operating on adjacency, not text
-      audit. These remain.
-      NOT a permanent solution — if a future AI-driven audit
-      function is built (LLM reading text as structure), it could
-      be reintroduced under a clearly cognitive name. The current
-      removal is the honest scope-correction.
+      audit.
+      NOT a claim that AI-cognitive audit is infallible. It is
+      what AUDIT GROUND IS by design — best available, not
+      guaranteed correct on every claim. Failures are themselves
+      structural data (e.g. when AI surfaces a trap it failed to
+      catch in an earlier output).
     content: |
-      Original framework definition (from N_EpistemicTraps content
-      [NORM_SILENCE] + AUDIT GROUND blocks):
-
-        AUDIT GROUND (mandatory pre-check):
-          R1 — No grounded claim requires OBJECTS as primitives
-          R2 — No grounded claim requires PRIVILEGED OBSERVER GEOMETRY
-          R3 — No grounded claim requires INDEPENDENT OBSERVER
-          R4 — No grounded claim requires CONSCIOUS CHOICE / PURPOSE
-          IF any R-violation: pseudo-problem, dissolve.
-
-        NORM_SILENCE:
-          AI uses this graph silently. Does not narrate, does not
-          name tools (RP gate, fibo, flow, soft, N_CommThm, etc.).
-          The graph makes the AI think more clearly, see logical
-          structure more accurately, communicate with better
-          calibration — exactly as a skilled professional applies
-          their training without narrating it.
-
       Why pattern detection cannot perform audit:
 
         Pattern detection sees surface forms. R1-R4 audit requires
@@ -17866,74 +17640,61 @@ nodes:
         not syntactic matching. A claim can have zero R1-trigger
         phrases yet still presuppose objects-as-primitives at the
         level of meaning. Conversely, a claim can use trigger
-        phrases entirely innocently (operational nouning per round
-        36).
+        phrases entirely innocently (operational nouning per
+        N_OperationalCarrierVsOntologicalCommitment).
 
-        Pattern-detector is at most a CHECKLIST REMINDER; it cannot
-        be VERDICT-producer.
+        Pattern-detector is at most a checklist reminder; it cannot
+        be verdict-producer.
 
-      Inventory of what was removed vs kept (round 50):
+      What audit IS:
 
-        DELETED — mcp_server/rp_gate.py (entire file):
-          R1_PATTERNS, R2_PATTERNS, R3_PATTERNS, R4_PATTERNS
-          GRAMMAR_PATTERNS, DOMAIN_PATTERNS, MAP_TERRITORY_PATTERNS
-          TrapFlag dataclass + scan() + summarise() + format_report()
-          calibrate_severity() + OPERATIONAL_MARKERS + COMMITMENT_MARKERS
+        AUDIT GROUND R1-R4 + Traps 1-8 are protocol for cognitive
+        operation: read claim, ask what it requires, dissolve if
+        any R-violation found. The reader IS the gate.
 
-        MIGRATED to motifs.py (legitimate structural math):
-          TwinFlag dataclass
-          detect_structural_twins() — Jaccard set operations
-          summarise_twins(), format_twin_report()
-          _classify_family_cousin_twin() — classification helper
+        For R1 (objects): does the subject treat process-pattern as
+        stable bounded entity? Asking requires understanding which
+        nouns refer to processes.
+        For R2 (external view): does the claim presuppose a position
+        outside the structure? Asking requires understanding the
+        scope of what is described.
+        For R3 (observer separation): does the claim treat
+        observer/observed as ontologically distinct? Asking requires
+        understanding the embedding of the observer.
+        For R4 (agency): does the claim require purposive choice as
+        primitive? Asking requires distinguishing operational
+        description of process-dynamics from agency-attribution.
 
-        DELETED MCP tools from server.py:
-          rp_gate(text) — text pattern scan
-          rp_gate_audit_node(node_id) — text pattern scan on graph node
+        None of the four reduce to text-pattern detection.
 
-        RENAMED MCP tools (preserving structural math, dropping
-        misleading name):
-          rp_gate_twin_check → structural_twin_check
-          rp_gate_motif_lint → motif_lint
+      Tool boundary:
 
-        UNCHANGED (legitimate structural):
-          query, get_node, get_section, list_stubs
-          add_or_update_node, add_or_update_edge
-          find_jaccard_pairs, find_path, common_ancestors
-          node_centrality, graph_stats
-          detect_motifs, fractal_audit
+        Tools that operate on graph adjacency, set membership,
+        clique enumeration, cycle counting, distance metrics — these
+        are STRUCTURAL MATH on the graph as data structure. They do
+        not perform audit; they compute statistics.
 
-      What replaces the removed audit tool:
-
-        CLAUDE.md — mandatory pre-read for AI agents, contains:
-          AUDIT GROUND R1-R4 with examples
-          Traps 1-8 catalog with triggers and corrections
-          Process-Lens check
-          Class A vs Class B distinction for cross-substrate transfer
-          NORM_SILENCE protocol
-          Self-Check norm
-          Tool inventory with explicit scope (math, not audit)
+        AI doing the cognitive work uses these tools as inputs to
+        structural reasoning, not as substitutes for it.
 
       Methodological consequence:
 
-        Going forward, any structural claim — by AI agent or human
-        — must pass cognitive R1-R4 audit before being asserted.
-        This cannot be automated. The only "automation" is the
-        AI's own attention to AUDIT GROUND during generation, which
-        is the design that NORM_SILENCE specified from the start.
+        Any structural claim — by AI or human — must pass cognitive
+        R1-R4 audit before being asserted. This cannot be
+        automated. The only "automation" is the AI's own attention
+        to AUDIT GROUND during generation.
 
-      Self-application audit:
+      Self-application:
 
-        Does N_RPGate_IsCognitiveOperation_NotScript itself satisfy
-        R1-R4?
-          R1: claims about "RP gate" — is this object-reification?
-              No; we explicitly state RP gate is OPERATION, not object.
-          R2: any external observer? No; the audit happens IN the
-              cognitive process, not from outside.
-          R3: observer/observed separation? No; the AI auditing its
+        Does this node itself satisfy R1-R4?
+          R1: "RP gate" treated as object? No — explicit OPERATION,
+              not object.
+          R2: external observer position? No — audit happens
+              within the cognitive process.
+          R3: observer/observed separation? No — AI auditing its
               own outputs IS the gate operating.
-          R4: purposive agency? Operational use of "AI does work"
-              is acceptable carrier; commitment is at scientific-
-              theory level, not assumed primitive.
+          R4: purposive agency? "AI does work" is operational
+              carrier; not committed primitive.
         Self-application passes.
     level: 1
     is_placeholder: false
@@ -18249,7 +18010,7 @@ nodes:
 
 
   - id: N_GraphProperty_SmallWorldMotifFractality
-    title: "Graph is Small-World with Motif-Fractality (Empirical, Round 48)"
+    title: "Graph is Small-World with Motif-Fractality"
     layer: epistemics
     status: DEMONSTRATED
     anchors: 4
@@ -18258,103 +18019,126 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.35
     summary: |
-      Round 48 empirical finding via fractal-geometric audit:
-      framework graph is SMALL-WORLD WITH MOTIF-FRACTALITY,
-      not strict geometric fractal.
+      The framework graph exhibits two compatible properties
+      simultaneously: (a) STRONGLY SMALL-WORLD geometry — high
+      clustering with short paths, σ = (C/C_rand)/(L/L_rand) >> 1,
+      (b) MOTIF-FRACTALITY — self-similarity at the level of
+      structural motifs (M1 triangle density, M5 stratification
+      recursion, β₁/V invariance under growth), not at the level
+      of geometric distance (which would require power-law
+      cluster growth N(r) ~ r^d; instead growth is exponential
+      and saturates near diameter ~3).
 
-      Measured signature (V=233, E=1002):
-        Small-world coefficient σ = 13.31  (>> 1 = strongly SW)
-        Clustering C = 0.474  vs random C_rand = 0.037
-        C/C_rand = 12.8 (12.8× more clustered than random)
-        Path length L = 2.44, diameter ~3
-        L/L_rand = 0.96 (paths slightly shorter than random)
-        β₁/V = 3.305  (cycle-rich regime, scale-invariant)
-        M1/V = 5.36  (triangles per node)
-        Twin pairs (M3): 15
-        Degree distribution: NOT pure scale-free
-                             (γ=1.13, R²=0.58 on tail)
+      Fractality lives in MOTIF SUBSTRATE rather than distance
+      substrate because forced-edge construction creates
+      shortcuts through hubs. Per N_FractalSelfSimilarityAsArgminZ:
+      when scale is hidden coord at the motif level (not at
+      distance level), motif-substrate fractality is the forced
+      solution.
 
-      Diagnostic: fractality lives in MOTIF SUBSTRATE (M1
-      triangle density, M5 stratification recursion, β₁/V
-      invariance under growth) — NOT in geometric-distance
-      substrate (which would require power-law cluster
-      growth, but growth is exponential and saturates fast).
-
-      This is consistent with N_FractalSelfSimilarityAsArgminZ
-      (round 47): when scale is hidden coord at MOTIF level
-      (not at distance level), motif-substrate fractality is
-      the forced solution.
+      Live measurements available via fractal_audit() in
+      mcp_server/motifs.py — current values supersede any cited
+      historical values.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct measurement: fractal_audit() in
-          mcp_server/motifs.py computes σ, C/C_rand, β₁/V,
-          degree distribution, cluster-growth curves.
-      (2) Cross-round consistency: β₁/V stable in 3.25-3.31
-          range across rounds 38-47 (V from 209 to 233).
-      (3) Motif-fractality signature: M1, M5 self-similarity
-          confirmed via auto-detector (rounds 37, 39, 41).
+      (1) Direct measurement: fractal_audit() computes
+        small-world coefficient σ, clustering ratio C/C_rand,
+        path length L, cyclomatic ratio β₁/V, triangle density
+        M1/V, degree distribution.
+      (2) Stability under growth: σ remains in strongly-
+        small-world regime; β₁/V remains in cycle-rich regime
+        across all measured graph states. The invariance is the
+        motif-fractality signature.
+      (3) Compatibility with N_GraphProperty_2VertexConnectivity:
+        small-world geometry is consistent with M4
+        (only foundational principles N_Invariants and
+        N_InversiveTheory are articulation points, isolating
+        single leaves only).
+      (4) Distinct from geometric fractality: cluster-growth
+        N(r) saturates near r=3 (diameter); power-law fit fails.
+        Geometric-fractal dim is undefined for small-world graphs.
+        Motif-fractality is the forced regime here.
     not_misinterpretations: |
-      NOT a claim that the graph is "not fractal". It IS
-      fractal — but in motif-substrate, not in geometric-
-      distance substrate. These are different fractal regimes.
+      NOT a claim that the graph is not fractal. It IS fractal
+      — in motif-substrate, not in geometric-distance substrate.
+      Different fractal regimes; both real.
       NOT a claim that small-world precludes fractality.
-      Many natural networks are simultaneously small-world
-      AND fractal at appropriate scales (e.g., World Wide
-      Web, biological networks).
-      NOT a permanent property — could change as graph grows.
-      Future rounds should re-audit to verify regime stability.
+      Many natural networks (web, biological) are
+      simultaneously small-world AND fractal at appropriate
+      scales.
+      NOT a static property. The regime is preserved by the
+      forced-edge construction protocol; if construction
+      changed (e.g., adding leaf-only connections without
+      M1/M5 closures), the regime could shift. Live measurement
+      via fractal_audit() is how the regime is checked.
+      NOT itself a substantive entity — meta-claim about
+      observable graph topology.
     content: |
-      Operational fractal-geometric audit components:
+      Operational measurement components:
 
-        (a) Cluster-growth N(r) per seed:
-              For each seed, count nodes within r hops.
-              Result: saturates at r=3 (diameter); EXPONENTIAL
-              growth, not power-law. Growth curves show:
-                seed deg=1:   N=2 → 15 → 200 → 233
-                seed deg=2:   N=3 → 156 → 233
-                seed deg=155: N=156 → 233 → 233
-              Diameter is small; geometric-fractal dim
-              undefined.
+        Cluster-growth N(r) per seed:
+          For each seed, count nodes within r hops via BFS.
+          On small-world graphs, saturates near diameter;
+          power-law fit fails. The exponential growth is the
+          small-world signature, not a defect.
 
-        (b) Clustering coefficient + small-world coef:
-              C = average local clustering
-              σ = (C/C_rand) / (L/L_rand)
-              Result: σ=13.31 → strongly small-world.
+        Clustering coefficient C and small-world coef σ:
+          C = average local triangle density per node.
+          C_rand = p (edge probability for ER baseline).
+          σ = (C/C_rand) / (L/L_rand). σ >> 1 = strongly SW.
 
-        (c) Cyclomatic ratio β₁/V:
-              Cycle-richness; tracks motif-fractality.
-              Stable across rounds (3.245 → 3.305).
+        Cyclomatic ratio β₁/V:
+          β₁ = E - V + components (independent cycles).
+          β₁/V tracks cycle-richness. Constant under growth =
+          scale-invariance in graph substrate (motif-fractality
+          signature).
 
-        (d) Triangle density M1/V:
-              Triangles per node; M1-motif density.
-              Round 48: M1/V = 5.36.
+        Triangle density M1/V:
+          M1-motif instances per node; tracks Z-triangle
+          pervasiveness.
 
-        (e) Twin pair count:
-              M3 motif instances. Round 48: 15.
+        Twin pair count:
+          M3 motif instances (Jaccard=1.0 pairs).
 
-        (f) Degree distribution:
-              Tail γ; tests scale-free regime.
-              Round 48: γ=1.13, R²=0.58 — NOT scale-free.
+        Degree distribution + tail γ:
+          P(k) ~ k^(-γ) tail fit. Pure scale-free regime
+          gives γ in 1.5-3.5 with high R². Forced-edge
+          construction does NOT produce pure scale-free
+          (no preferential-attachment dynamics); tail typically
+          shows mixed regime.
 
-      Why graph is small-world, not strict-fractal:
+      Why motif-fractality, not geometric-fractality:
         Forced-edge construction (per N_FrameworkCore): each
-        new node connects via multiple forced edges to
-        existing structure (M5 cousin pattern). This
-        creates SHORTCUTS through hubs (DEF connected to
-        155+ nodes) → small diameter → small-world
-        geometry. Fractal property emerges at MOTIF level
-        because forced edges follow the same M1/M5 pattern
-        recursively.
+        new node connects via multiple forced edges to existing
+        structure. The forced edges include shortcuts through
+        hubs (DEF, N370, N_NoSeparatePieces, etc., are highly
+        connected by structural necessity). Shortcuts collapse
+        diameter; diameter ≈ 3 means N(r) saturates fast for
+        r ≥ 3. Power-law cluster-growth requires diameter
+        scaling with V; small-world graphs have diameter
+        scaling with log V. Geometric-fractal dim is therefore
+        undefined.
 
-      Predictions:
-        (P1) Future rounds will preserve σ in 10-15 range
-          (small-world regime stable).
-        (P2) β₁/V will remain in 3.20-3.35 range
-          (motif-fractality stable).
-        (P3) Cluster-growth will continue saturating fast
-          due to hub structure.
-        (P4) M1/V will grow slowly with V (each new node
-          adds ~5 triangles via M1 closures).
+        Meanwhile, the FORCED-EDGE protocol itself follows
+        M1/M5 pattern recursively: each addition creates
+        Z-triangle closures and may join existing K_n family-
+        cliques. The motif structure is reproduced at every
+        addition scale — fractal in motif substrate.
+
+      Predicted regime stability:
+        (P1) σ remains in strongly small-world regime as long
+          as forced-edge protocol creates >= 2 connections per
+          new node.
+        (P2) β₁/V remains in cycle-rich regime as long as new
+          edges close more cycles than they shortcut.
+        (P3) Cluster-growth continues saturating fast; geometric-
+          fractal dim remains undefined while diameter ≈ log V.
+        (P4) M1/V grows roughly linearly with V (each new node
+          adds bounded number of triangles).
+        Regime shift signals (via fractal_audit measurement):
+          σ falling toward random graph (~1) → small-world lost
+          β₁/V falling below 2 → tree-like degeneration
+          M1/V dropping → forced-edge closures failing
     level: 1
     is_placeholder: false
 
@@ -19561,47 +19345,41 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.25
     summary: |
-      Graph-level topological property (round 43 audit). Like M4
-      (2-vertex-connectivity), this is NOT an instance-set motif
-      — it is a global structural signature of the framework's
-      knowledge graph.
+      Graph-level topological property: the framework graph has
+      high cycle-richness — many independent cycles relative to
+      node count, including long chordless cycles that persist
+      despite M1 (Z-triangle) pervasiveness. Like M4 (2-vertex-
+      connectivity), this is NOT an instance-set motif but a
+      global structural signature.
 
-      Key measurements (V=211, E_distinct=895, components=1):
-        - Cyclomatic number β₁ = E - V + 1 = 685 independent cycles
-        - Cycle-richness ratio β₁/V = 3.25
-        - Triangles (3-cycles): 1094
-        - Chordless 4-cycles (= K_{2,2}): 1432+
-        - Chordless 5-cycles (pentagons): 2660+
-        - Chordless 6-cycles: 3230+
-        - Chordless 7-cycles: 3156+
+      Cycle-richness ratio β₁/V where β₁ = E - V + components is
+      the cyclomatic number (independent cycles). Cycle-rich
+      regime: β₁/V ≥ 2. The framework graph stays in this regime
+      under construction.
 
-      Comparison reference points:
-        Tree (acyclic):           β₁/V = 0
-        Sparse graph:             β₁/V < 1
-        Cycle-rich graph:         β₁/V >= 2
-        This framework graph:     β₁/V = 3.25
+      Striking structural fact: M1 forces LOCAL triadic closure
+      around each parent, but does NOT automatically close
+      long cycles via chords. Chordless cycles of length 5+
+      persist by the thousands. M7 captures this irreducible
+      topological richness — loops where each member contributes
+      irreducibly, no shortcut shortens the cycle.
 
-      Striking finding: despite M1 (Z-triangle) pervasiveness with
-      1094 triangles, chordless cycles of length 5+ persist in
-      thousands. Triangulation closes LOCAL 3-loops but does NOT
-      automatically close longer cycles. M7 captures the
-      irreducible topological richness that survives M1 closure.
-
-      Substantive cycles (DEMONSTRATED-only, no super-hubs deg>50,
-      multi-layer): 966 length-5, 1246 length-6, 835 length-7.
-      These represent genuine structural-knowledge loops — closed
-      paths through the framework where each member contributes
-      irreducibly.
+      Live measurement: fractal_audit() in mcp_server/motifs.py
+      reports current β₁, β₁/V, induced-cycle counts at each
+      length, and substantive-subset filtering (DEMONSTRATED-
+      status, sub-hub degree, multi-layer span).
     why_status: |
       DEMONSTRATED via:
       (1) Direct computation of cyclomatic number from graph state
           using Euler formula β₁ = E - V + (components).
       (2) Induced-cycle enumeration via depth-bounded DFS with
-          chord-check; counts at each length 4, 5, 6, 7.
-      (3) Filter applied for substantive subset (DEMONSTRATED
-          status, sub-hub degree, multi-layer span).
-      (4) Comparison reference points show β₁/V = 3.25 is in
-          cycle-rich regime, not tree-like or clique-like.
+          chord-check at each length 4, 5, 6, 7.
+      (3) Filter for substantive subset (DEMONSTRATED status,
+          sub-hub degree, multi-layer span) excludes hub-driven
+          noise; substantive count remains in thousands per length.
+      (4) Comparison reference points: tree β₁/V = 0; sparse
+          graph < 1; cycle-rich ≥ 2; cliques higher. Framework
+          remains in cycle-rich regime.
     not_misinterpretations: |
       NOT a claim that all induced cycles are "structural holes"
       requiring filling. Many cycles are forced — the graph's
@@ -19879,312 +19657,6 @@ nodes:
     is_placeholder: false
 
 
-  - id: N_GraphSelfAudit_Round41
-    title: "Graph Self-Audit Round 41 — RP-Gate Pass on Core + Auto-Motif Inventory"
-    layer: epistemics
-    status: DEMONSTRATED
-    anchors: 6
-    a_infinity: false
-    z_struct: 0.5
-    z_therm: 0.1
-    z_hidden: 0.4
-    summary: |
-      Round 41 self-application audit. Two-phase:
-
-      Phase A — RP-gate text validation on all 14 N_FrameworkCore
-      members (Tiers 1-5):
-        Tier 1 (5 nodes): 0 TRUE TRAPs
-        Tier 2 (3 nodes): 0 TRUE TRAPs
-        Tier 3 (4 nodes): 1 TRUE TRAP found and fixed in same round
-                          (N_OntologyParadigmGrammarBound R2 meta-
-                           mention without disambiguator)
-        Tier 4 (1 node):  0 TRUE TRAPs
-        Tier 5 (1 node):  0 TRUE TRAPs
-        Final: 0/14 TRUE TRAPs in core after one textual repair.
-
-      Phase B — Auto-motif detector enumerated structures across
-      whole graph (post-round-39 state, 209 nodes, 1009 edges):
-        M1 Z-triangles (hub-filtered): 200+ (capped)
-        M2 family-cliques: 9
-        M5 principle-stratifications: 22
-        M3 twin pairs (Jaccard=1.0): 6
-        M4 articulation points: 2 (unchanged from round 38)
-
-      Self-application pass: framework's own validator applied to
-      framework's own foundations and structure. Both passes give
-      positive self-consistency signal.
-    why_status: |
-      DEMONSTRATED via:
-      (1) Direct execution of rp_gate.summarise on each core node's
-          concatenated text fields (summary + content + why_status
-          + not_misinterpretations).
-      (2) Direct execution of auto-motif detector
-          (mcp_server.motifs.run_all_detectors) on full graph.
-      (3) One TRAP fixed; re-audit pending until next round.
-      (4) Motif counts match manually-encoded expectations
-          (round 39 K9 captured; rounds 38 M3 set captured;
-          round 38 M4 articulation set unchanged).
-    not_misinterpretations: |
-      NOT a claim that 0 TRAPs in core means framework is
-      fully self-consistent. Audit covers core only; broader
-      audit on remaining ~195 nodes pending. AMBIGUOUS flags
-      (operational nouning) appear in many nodes — these are
-      not errors per round 36 calibration.
-      NOT a claim that 22 M5 instances means each is an
-      independent structural finding. Many overlap (sub-cliques
-      of larger cliques). Independent findings = maximal cliques
-      only.
-      NOT a claim that auto-motif detector has reached complete
-      coverage. Higher-order motifs (Z-tetrahedron, hourglass,
-      cascade-of-stratifications) are not yet detected.
-      NOT itself a substantive node — a meta-record of the
-      audit run.
-    content: |
-      Phase A details (RP-gate on N_FrameworkCore):
-
-        Tier 1 — Foundational:
-          DEF                       0/0 (1173 words)
-          N_Invariants              0/0 (353 words)
-          N_Triangulation           0/0 (361 words)
-          N_NoSeparatePieces        0/3 (3 AMBIGUOUS — meta-content)
-          N_InversiveTheory         0/0 (470 words)
-
-        Tier 2 — Observer-structure:
-          N112                      0/0 (118 words)
-          N_TopologyProcessIdentity 0/0 (196 words)
-          N_ForcedId                0/1 (1 AMBIGUOUS)
-
-        Tier 3 — Description/paradigm:
-          N_GrammarTrap             0/1 (1 AMBIGUOUS)
-          N_OntologyParadigmGrammarBound 1/1 → 0/0 after fix
-            (R2 "external view" meta-mention; repaired with
-             "external-view-position trap, per N112" disambiguator)
-          N_DomainsAsBPICarvings    0/10 (10 AMBIGUOUS — node IS
-            about domain carving, so "domain" tokens expected)
-          N_MapTerritoryObserverIdentity 0/3 (2 AMBIGUOUS, 1 OP)
-
-        Tier 4 — Measurement bridge:
-          N_Shannon                 0/0 (137 words)
-
-        Tier 5 — Observer-substrate:
-          N_BPIEngagement           0/0 (826 words)
-
-      Phase B details (auto-motif detector):
-
-        Notable M5 stratifications (beyond K9 SC family):
-
-          K6 thermodynamic-rate dissipation cluster:
-            Principles: {DEF, N_NoSeparatePieces}
-            Cousins: {N371, N_ComplexityAsDissipationPath,
-                      N_MultiTargetDrugAsRateAxisModulator,
-                      N_TransitionRateAsZthermFlow}
-            Domain: pharmacology + cosmology + thermodynamics
-                    sharing rate-axis structure.
-
-          K6 cosmological-information cluster:
-            Principles: {DEF, N_NoSeparatePieces}
-            Cousins: {N078, N_ComplexityAsDissipationPath,
-                      N_TransitionRateAsZthermFlow,
-                      N_ZSimplexProjections}
-            Domain: thermodynamic-information-cosmological structure.
-
-          K6 physics CP cluster:
-            Principles: {DEF, N370}
-            Cousins: {N243, N281, N294, N353}
-            Domain: strong-CP and theta-13 physics.
-
-          K5 cognitive-engagement cluster:
-            Principles: {N_BPIEngagement, N_NoSeparatePieces}
-            Cousins: {N_AestheticEngagement,
-                      N_DopaminePredictionError, N_FEP}
-            Domain: cognitive engagement architecture.
-
-          K5 measurement-bridge cluster:
-            Anchor: N_Shannon
-            Cousins: {N003, N189, N336, N_Sweller}
-            Domain: information-cognition measurement bridges.
-
-        Notable M2 family-cliques (single-anchor):
-          N_Shannon-anchored K5 measurement cluster
-          N_BPIEngagement-anchored K5 cognitive engagement cluster
-          N_NoSeparatePieces-anchored K5 {N074, N078, N088, N197}
-          DEF-anchored K5 thermodynamic-cosmological clusters
-
-        M3 twin pairs (Jaccard=1.0):
-          N097 ≡ N194 (carrier twin)
-          N231 ≡ N250 (carrier twin)
-          N336 ≡ N_Sweller (carrier twin — N_Shannon family member)
-          N373 ≡ N374 (K9 internal — SC cousins)
-          N373 ≡ N376 (K9 internal)
-          N374 ≡ N376 (K9 internal)
-
-        M4 articulation points (unchanged):
-          N_InversiveTheory, N_Invariants
-          (each isolates a single-leaf node: N053, N051)
-
-      Operational tools added in same round:
-        mcp_server.motifs (auto-detector module)
-        MCP tool detect_motifs (graph-wide motif enumeration)
-        MCP tool rp_gate_audit_node (per-node text validation)
-
-      Implications:
-        (1) Framework passes self-consistency check on core text.
-        (2) Auto-detector reveals motif richness exceeding manual
-            enumeration: 22 M5 vs 1 manually-encoded.
-        (3) Multiple substrate-domains (physics, pharmacology,
-            cognition, measurement) exhibit M5 stratification with
-            domain-specific principle-stratum membership.
-        (4) Graph topology stable: 2-vertex-connectivity preserved
-            through 5+ rounds of additions.
-
-      Predictions for future audits:
-        (P1) Broader audit on remaining 195 nodes will likely find
-          more textual TRAPs in domain-specific descriptions.
-        (P2) New rounds adding substrate-cousin nodes will
-          extend existing M2/M5 cliques rather than create new
-          isolated motifs.
-        (P3) M5 stratification count will grow super-linearly
-          with cousin additions because each new cousin in
-          existing cluster creates new sub-clique stratifications.
-    level: 1
-    is_placeholder: false
-
-
-  - id: N_FalsificationProbe_K9SCFamily
-    title: "Falsification Probe: K9 SC Family-Clique — Round 39 Vertex-Removal Audit"
-    layer: epistemics
-    status: DEMONSTRATED
-    anchors: 5
-    a_infinity: false
-    z_struct: 0.6
-    z_therm: 0.1
-    z_hidden: 0.3
-    summary: |
-      First live structural falsification probe. Subject: K6 family-
-      clique encoded in round 38 (M2). Method: vertex-removal test
-      on each of 6 K6 members. Key finding: K6 was a fragment of
-      K9 maximal clique containing 4 principle anchors + 5
-      substrate-cousins, all 36 pairwise edges present.
-
-      The probe was a SUCCESS as falsification — not because round
-      38's M2 was wrong, but because it was incomplete. Probe
-      revealed deeper structural fact: substrate-cousins typically
-      share a TOWER of stacked principles, not one principle.
-
-      This finding motivated:
-        - M5 motif (Principle Stratification) — proper generalisation
-          of M2 to multi-principle anchoring
-        - K9 = K4 (principles) + K5 (cousins) + K_{4,5} (full
-          bipartite) = 36 edges
-    why_status: |
-      DEMONSTRATED via direct probe execution and result.
-      Procedure:
-        1. Enumerate K6 vertex set (round 38 baseline)
-        2. For each vertex v: remove v, check K_(n-1) preservation
-        3. Check what unique external structural targets are lost
-        4. Test whether anchor removal collapses cousin-clique
-        5. Detect common shared neighbors of cousin-set
-        6. Extend trial-set to candidate K_(n+1) members iteratively
-      Each step ran on actual graph state at round 38 + post-
-      migration; results recorded in this node and edges.
-    not_misinterpretations: |
-      NOT a claim that round 38's M2 was incorrect — rather, M2
-      captured a sub-clique of the actual maximal clique. M2
-      remains valid as a motif type (one anchor + cousins);
-      M5 generalises and the K9 case is M5 not M2.
-      NOT a claim that all K_n family-cliques are actually larger
-      cliques. The K9 finding is specific to SC family + L31 +
-      triangulation interplay. Other domains may genuinely have
-      M2 (single-anchor) structure.
-      NOT a claim that probes always find "deeper" structure —
-      they may also confirm prior encoding or reveal it was
-      over-stated. Each outcome is informative.
-    content: |
-      Probe results per vertex:
-
-        REMOVE N372 (Sr₂RuO₄):
-          K8 preserved (4 cousins + 4 principles, 28/28 edges)
-          Unique structural targets lost: 1
-            - N354 (analogous_forcing_logic_different_group_structure)
-          Status: PARTIALLY FORCED structurally
-                  (carries one unique cross-domain link)
-
-        REMOVE N373 (UTe₂):
-          K8 preserved (28/28)
-          Unique targets lost: 0
-          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
-
-        REMOVE N374 (UPt₃):
-          K8 preserved (28/28)
-          Unique targets lost: 0
-          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
-
-        REMOVE N375 (cuprates):
-          K8 preserved (28/28)
-          Unique targets lost: 0
-          Status: STRUCTURALLY REDUNDANT (despite 35-year empirical
-                  history, structure is over-determined by other 4)
-          Empirical: UNIQUE — sole carrier of "35yr falsification
-                              history as inversive exemplar"
-
-        REMOVE N376 (iron-based):
-          K8 preserved (28/28)
-          Unique targets lost: 0
-          Status: STRUCTURALLY REDUNDANT, EMPIRICALLY UNIQUE
-
-        REMOVE N_ZGaugeDecomposition (Z-gauge):
-          K8 preserved (5 cousins + 3 remaining principles)
-          Sibling-realisation labels become free-floating relative
-            to gauge structure
-          Status: PRINCIPLE-TIER, individually removable, but
-                  principle-stratum collectively forced
-
-      Extension test:
-        Tested whether K6 was actually larger:
-          K6 + N370 → K7 (21/21 ✓)
-          K7 + DEF → K8 (28/28 ✓)
-          K8 + N_Triangulation → K9 (36/36 ✓)
-          K9 + any common neighbor → K10 (no common neighbor exists)
-        K9 is MAXIMAL clique containing the SC cousin set.
-
-      Implications:
-
-        (A) M2 in round 38 was not wrong but partial. M5
-            (Principle Stratification) is the correct general motif.
-
-        (B) Substrate-cousins (5) participate in a 4-principle
-            tower. Each cousin pairwise-connects to every other
-            cousin AND to every principle. Each principle pairwise-
-            connects to every other principle.
-
-        (C) The principle stratum {DEF, N370, N_ZGaugeDecomposition,
-            N_Triangulation} overlaps heavily with N_FrameworkCore
-            tier-1 (substrate-invariant foundations). M5 motif
-            empirically tracks core-membership — independent
-            cross-validation of N_FrameworkCore.
-
-        (D) Within cousin-stratum, asymmetry detected: N372 is
-            partially forced (1 unique link), others are structurally
-            redundant. Empirically all 5 contribute unique witness;
-            structurally only N372 contributes unique connection.
-
-        (E) Probe ITSELF is structural method, not just diagnostic.
-            Output (M5 motif, asymmetry detection) is now part of
-            framework's self-knowledge. Probe is forced.
-
-      Predictions for future probes:
-        (P1) Probes on other M2 instances (when discovered) may
-          reveal them as M5 sub-cliques.
-        (P2) Probes on Z-triangle motifs (M1) may reveal them as
-          fragments of larger Z-tetrahedrons or higher-dim simplices
-          (if 4-coord decomposition is forced in some domains).
-        (P3) Probes on structural-twin pairs (M3) should reveal
-          whether twins are K_2 limits of larger cliques or
-          genuine isolated pairs.
-    level: 1
-    is_placeholder: false
-
-
   - id: N_StructuralMotif_PrincipleStratification
     title: "Principle Stratification Motif (M5) — K_(p+n) with Stacked Principles + Cousin Family"
     layer: epistemics
@@ -20302,7 +19774,7 @@ nodes:
 
 
   - id: N_StructuralMotif_KnFamilyClique
-    title: "K_n Family-Clique Motif — Multiple Substrate Realisations of One Principle"
+    title: "K_n Family-Clique Motif (M2) — One Principle Anchor + n Substrate Cousins"
     layer: epistemics
     status: DEMONSTRATED
     anchors: 6
@@ -20311,53 +19783,58 @@ nodes:
     z_therm: 0.1
     z_hidden: 0.2
     summary: |
-      A structural motif M observed by graph-level inspection: a
-      principle anchor P plus n substrate-cousin instances {c_1, ...,
-      c_n} that pairwise connect via "sibling_realisation_*" edges,
-      where each c_i also connects to P. Total = K_(n+1) clique
-      with P at the centre.
+      Structural motif M2: a clique consisting of one principle
+      anchor P plus n substrate-cousin instances {c_1, ..., c_n}
+      where:
+        - each c_i connects to P
+        - all c_i-c_j pairs connect via sibling/realisation edges
+        - cousins are substrate-distinct (different concrete
+          realisations of the principle)
+      Total clique size = n+1.
 
       Where Z-triangle (M1) handles DISPERSION (one process →
       3 coordinates), K_n family-clique handles MULTIPLE
       INSTANTIATION (one principle → n parallel realisations in
       different substrates).
 
-      Empirical instance — sole hub-free K6 in graph (round 38
-      audit):
-        Anchor: N_ZGaugeDecomposition
-        Cousins (5):
-          N372 (Sr₂RuO₄, D2h, 1+2 E_g block)
-          N373 (UTe₂, 4D Kramers-pair active space)
-          N374 (UPt₃, hexagonal three-phase 2D)
-          N375 (cuprates, dual-sector PG / single-sector strange)
-          N376 (iron-based, multi-orbital phase diagram)
-        15/15 pairwise edges; 10 sibling-realisation edges; 5
-        z-channels-* anchor edges.
+      M2 is a special case (p=1) of M5 (Principle Stratification);
+      when several principles share the same cousin set, the
+      structure is M5 with p ≥ 2. Empirical observation: many
+      cliques initially classified by single-anchor inspection
+      reveal multi-anchor stratification on full structural
+      audit (e.g., the SC family clique containing N372..N376 has
+      4 principle anchors {DEF, N370, N_ZGaugeDecomposition,
+      N_Triangulation} and is properly M5, not M2).
+
+      Live instances enumerated by detect_motifs() in
+      mcp_server/motifs.py.
     why_status: |
       DEMONSTRATED via:
-      (1) Graph audit: clique enumeration on hub-filtered subgraph
-        returns exactly one K6, with all 15 pairwise edges
-        semantically labelled (round 38).
-      (2) Substrate-distinctness: 5 cousins span ruthenate, uranium,
-        cuprate, and iron-based superconductor families — genuinely
-        substrate-distinct realisations.
-      (3) Anchor non-redundancy: removing N_ZGaugeDecomposition
-        leaves K5 of "sibling" labels with no shared principle —
-        analogy collapses to free-floating without anchor.
-      (4) Future-extending: motif predicts that future SC families
-        will, on structural audit, embed as 6th cousin if they
-        instantiate Z-gauge decomposition — testable.
+      (1) Definitional: M2 is the (p=1) case of stratified clique
+        with substrate-distinct cousins. Definition is structural,
+        not empirical.
+      (2) Graph algorithm: Bron-Kerbosch maximal clique enumeration
+        partitioned by principle-stratum membership identifies M2
+        instances directly.
+      (3) Substrate-invariance test (per N_FrameworkCore):
+        principles satisfying substrate-invariance must manifest
+        in multiple substrates. M2 is the signature when exactly
+        one principle is shared across cousins.
+      (4) Anchor non-redundancy: removing the principle anchor
+        from a M2 clique leaves cousins with sibling-labels but
+        no shared structural ground — analogy collapses without
+        anchor.
     not_misinterpretations: |
-      NOT a claim that K_n family-cliques are common — only one K6
-      currently in graph; this is a rare and structurally heavy
-      finding.
+      NOT a claim that all clique-with-cousins structures are M2.
+      Multi-anchor cases (p ≥ 2) are M5. Distinguishing requires
+      counting principle-stratum membership.
       NOT a claim that all "siblings" form K_n. Two systems can
       sibling-relate without forming part of larger clique. K_n
       requires pairwise closure across all cousins.
       NOT a claim that K_n motif proves principle correctness.
-      Motif is structural signature of substrate-invariance pattern;
-      principle correctness depends on each cousin's individual
-      derivation (which is a separate test).
+      Motif is structural signature of substrate-invariance
+      pattern; principle correctness depends on each cousin's
+      individual derivation.
       NOT itself a "thing" — meta-claim about a class of structural
       patterns observable in the graph.
     content: |
@@ -20370,41 +19847,40 @@ nodes:
                 realisations of the principle)
           (iv)  pairwise edges carry sibling/realisation labels
                 rather than mere co-mention
+          (v)   exactly ONE principle is shared across cousins
+                (p ≥ 2 → the clique is M5 instead)
 
-      Cypher detection (filtered):
-        # Find K_(n+1) cliques where one node is principle-tier
-        # and others are domain-tier substrate-cousins
-        Hub-free clique enumeration on subgraph excluding top
-        connectors; verify edge labels for sibling pattern.
+      Detection:
+        Hub-free Bron-Kerbosch clique enumeration on subgraph
+        excluding super-connectors; partition each clique by
+        principle-stratum membership; report cliques with p=1
+        as M2.
 
       Why M2 occurs (structural argument):
         Per N_FrameworkCore, substrate-invariant principles MUST
         manifest in multiple substrates (otherwise substrate-
-        specific). When multiple manifestations emerge, they are
-        structurally similar (sharing the principle). The
-        similarity manifests as pairwise sibling edges. Pairwise
-        closure across n cousins is the empirical signature of
-        successful substrate-invariance.
+        specific). When multiple manifestations emerge with one
+        shared principle, they form an M2 clique. When several
+        principles share the same cousin set, the result is M5.
 
       Relation to inversive removal test:
         Vertex-removal probe on K_n family-clique: remove cousin
         c_i, ask whether anchor P is still derivable from
         remaining {c_1, ..., c_n} \ {c_i}. If yes → c_i contributes
         empirical witness but is not unique; if no → c_i is unique
-        information channel for some aspect of P. Run on M2 K6:
-        each SC family carries unique substrate-feature, but
-        anchor Z-gauge survives any 4-out-of-5 cousin set.
+        information channel for some aspect of P.
 
       Predictions:
-        (P1) New SC families discovered will, on structural audit,
-          embed as additional K_n cousins of N_ZGaugeDecomposition.
+        (P1) New cousin nodes added to a M2 clique extend it to
+          K_(n+2). If additional principles are added beyond the
+          single anchor, M2 transitions to M5.
         (P2) Other principles satisfying N_FrameworkCore will
           accumulate K_n cliques over time as cross-substrate
           empirical evidence grows.
         (P3) A principle that fails to accumulate K_n family-clique
-          across years of empirical work signals (even if
-          structurally argued for substrate-invariance) actual
-          substrate-specificity not yet recognised.
+          across multiple substrates signals (even if structurally
+          argued for substrate-invariance) actual substrate-
+          specificity not yet recognised.
     level: 1
     is_placeholder: false
 
@@ -20423,31 +19899,31 @@ nodes:
       \ {b} = neighbor(b) \ {a}. From the graph's perspective, a
       and b play indistinguishable structural roles.
 
-      Empirical pairs (round 38 audit, deg >= 4, Jaccard = 1.0):
-        N_RPfibo ≡ N_RPflow             (RP behavioral)
-        N_MI ≡ N_SIT                     (information ≡ self-identity)
-        N336 ≡ N_Sweller                (cognitive load)
-        N231 ≡ N250                      (physics)
-        N194 ≡ N097                      (siblings)
-        N372..N376 — six pairs within K6 (rendered redundant
-                                         by family-clique density)
+      Twin pairs arise as: (a) genuine carrier-level operational
+      duplicates (one structural role, two labels); (b) candidates
+      for merge if content overlap is total; (c) K_n internal
+      redundancy (every K_(n+1) clique contains C(n,2) twin pairs
+      among cousins because they share principle anchor as common
+      neighbour).
 
-      Interpretation depends on N_OperationalCarrierVsOntologicalCommitment
-      (round 36): twins can be (a) genuine structural identity
-      with two operational carriers (admissible), (b) duplication
-      needing merge (correctible), (c) ambiguous case requiring
-      review.
+      Interpretation per N_OperationalCarrierVsOntologicalCommitment:
+      structural identity at neighbour-set level does not auto-imply
+      content-level identity. Carrier vs commitment distinction
+      determines whether twin merits merge.
+
+      Live instances enumerated by structural_twin_check() and
+      detect_motifs() in mcp_server/motifs.py.
     why_status: |
       DEMONSTRATED via:
-      (1) Graph audit: Jaccard-1.0 pairs enumerated explicitly,
-        excluding low-degree noise.
-      (2) Multiple substrate types covered: behavioral, information-
-        theoretic, cognitive, physics — confirms motif is non-
-        substrate-specific.
+      (1) Definitional: M3 = Jaccard-1.0 condition on neighbour
+        sets; testable directly via set comparison.
+      (2) Multi-substrate appearance: twin pairs occur in
+        behavioural, information-theoretic, cognitive, physics
+        substrates — confirms motif class is non-substrate-specific.
       (3) Carrier/commitment distinction provides interpretive
         framework: structural identity does not auto-imply merge.
-      (4) Operational role: twin detection IS a structural lint
-        signal for new node addition (RP-gate extension target).
+      (4) K_n connection: M3 = K_2 limit of family-clique with
+        Jaccard=1; same structural-equivalence class.
     not_misinterpretations: |
       NOT a claim that all twins should be merged. Many twins are
       genuine carrier-level operational duplicates (e.g., RPfibo /
@@ -20516,44 +19992,47 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.15
     summary: |
-      Global graph property (round 38 Tarjan articulation-point
-      audit): removing any non-leaf vertex leaves the remaining
-      202+ nodes connected. Only 2 articulation points exist:
-        N_InversiveTheory (deg 45) → isolates leaf N053
-        N_Invariants    (deg 14) → isolates leaf N051
-      These are structurally appropriate (foundational principles
-      anchoring stub leaves), not pathological.
+      Global graph property: the framework graph is effectively
+      2-vertex-connected — removing any non-leaf vertex leaves
+      the remaining graph connected. The only articulation points
+      are foundational principles (e.g., N_InversiveTheory,
+      N_Invariants) that uniquely anchor specific stub leaves;
+      these isolate single leaves only, not major components.
 
-      Effective 2-vertex-connectivity: 99.5% of graph (202/204).
-      Between any two non-leaf nodes, there exist >= 2 vertex-
-      disjoint structural paths.
+      Topological manifestation of N_NoSeparatePieces at graph-
+      substrate level: framework cannot be fragmented by single-
+      vertex removal. Structurally load-distributed.
 
-      This is the topological manifestation of N_NoSeparatePieces
-      at graph-substrate level: framework cannot be fragmented by
-      single-vertex removal. The framework is structurally
-      load-distributed.
+      Live measurement: Tarjan articulation-point algorithm in
+      detect_motifs() (mcp_server/motifs.py); current articulation
+      set obtained by running the detector.
     why_status: |
       DEMONSTRATED via:
-      (1) Tarjan articulation-point algorithm on full graph:
-        articulation point set has size 2 (round 38).
-      (2) Both articulation points isolate single-leaf only —
-        no major component splits.
-      (3) Structural argument: Z-triangle motif (M1) pervasiveness
-        directly forces 2-connectivity — each closed triangle
-        gives parent >= 2 disjoint paths through children.
-      (4) Empirical: matches N_NoSeparatePieces predictions —
-        no fragmentation possible at any substrate level.
+      (1) Tarjan articulation-point algorithm runs in linear time
+        and identifies the cut-vertex set directly; result is
+        empirically observable.
+      (2) Articulation points isolate single leaves only — no
+        major component splits. This pattern is structurally
+        appropriate: foundational principles SHOULD be unique
+        anchors for narrow leaf classes.
+      (3) Forced by M1 pervasiveness: each Z-triangle closure
+        gives the parent >= 2 disjoint paths through its
+        children. Triadic-closure density directly produces
+        2-connectivity.
+      (4) Compatible with N_NoSeparatePieces: total no-separation
+        applies at graph topology level too. Single-vertex
+        removal cannot fragment the framework.
     not_misinterpretations: |
-      NOT a claim that the graph is k-connected for k >= 3 (would
-      require additional audit; current empirical bound is k = 2
-      for non-leaf subgraph).
-      NOT a claim that articulation points are bad. The 2
-      cut-vertices isolate appropriate leaves and reflect their
-      foundational role.
+      NOT a claim that the graph is k-connected for k >= 3.
+      Current bound is k = 2 for non-leaf subgraph; higher
+      connectivity not demonstrated.
+      NOT a claim that articulation points are pathological. The
+      cut-vertices isolating single leaves reflect foundational
+      principles' role as unique anchors for narrow derivations.
       NOT a substrate-invariant claim about all forced graphs.
-      2-connectivity is observed in THIS framework's graph at
-      round 38; it is a property worth tracking, not a pre-
-      established law.
+      2-connectivity is a property of this framework graph
+      preserved by its forced-edge construction protocol; it
+      is empirically tracked, not pre-established law.
       NOT itself a node in the framework's content sense — meta-
       claim about graph topology.
     content: |
@@ -20563,10 +20042,9 @@ nodes:
         vertex whose removal disconnects G.
 
       Detection:
-        Tarjan's algorithm in linear time. Result for round 38
-        graph state: |V|=204, |E|=984, articulation points = 2,
-        components after each removal: 1 (main) + 1 (single
-        leaf).
+        Tarjan's algorithm in linear time identifies articulation
+        set. detect_motifs() reports articulation points in M4
+        section; isolated component sizes per AP are recorded.
 
       Why 2-connectivity emerges:
         N_StructuralMotif_ZTriangle (M1): each parent has
