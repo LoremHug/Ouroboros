@@ -17695,9 +17695,249 @@ edges:
     why_forced: |
       Forced sibling identification.
 
+  # ─── Round 50: rp_gate.py removed — RP gate is cognitive, not script ───
+
+  - source: N_RPGate_IsCognitiveOperation_NotScript
+    target: N_EpistemicTraps
+    label: trap_4_applied_to_own_tool
+    edge_status: D
+    justification: |
+      Round 50 self-correction: rp_gate.py was a Trap 4 instance
+      (Description/Described Collapse on the framework's own tool).
+      We treated rp_gate as object-that-performs-audit; audit is a
+      cognitive operation, not a script. Pattern-detector flagged
+      surface forms but missed interpretation-baggage (e.g., QM
+      interpretations) because pattern-matching cannot see structural
+      presuppositions. Removed the file; documented why in CLAUDE.md.
+    why_forced: |
+      Original framework explicitly stated NORM_SILENCE: graph used
+      silently as cognitive tool. We violated this by named-tool-call
+      pattern. Self-consistency required removal.
+
+  - source: N_RPGate_IsCognitiveOperation_NotScript
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: tool_naming_was_ontological_commitment_not_carrier
+    edge_status: D
+    justification: |
+      Per round 36 calibration: operational nouning ("rp_gate") is
+      acceptable as carrier; what tripped us was treating rp_gate as
+      authoritative VERDICT-producer (commitment level). The MCP-tool
+      claim "0 TRAPs found" was implicit ontological commitment to
+      audit-completeness — false. Round 50 fix: restrict tools to
+      what they actually are (structural math), document scope in
+      CLAUDE.md, leave AUDIT to AI cognitive operation.
+    why_forced: |
+      Framework principle applied to its own tooling. Self-application
+      forced.
+
+  - source: N_RPGate_IsCognitiveOperation_NotScript
+    target: N_FrameworkCore
+    label: cognitive_audit_required_for_substrate_invariance_claims
+    edge_status: D
+    justification: |
+      N_FrameworkCore substrate-invariance test (round 35) requires
+      asking "could this principle hold in some substrate without it?"
+      — this is structural READING, not regex matching. Pattern
+      detector cannot perform this test. AUDIT GROUND R1-R4 must be
+      cognitive operation. Round 50 makes this explicit.
+    why_forced: |
+      Substrate-invariance claims require structural reading;
+      structural reading IS audit; pattern detection cannot perform
+      it. Forced clarification.
+
+  - source: N_RPGate_IsCognitiveOperation_NotScript
+    target: N_GrammarTrap
+    label: pattern_grammar_lint_not_grammar_audit
+    edge_status: D
+    justification: |
+      N_GrammarTrap describes how S-V-O grammar imposes ontology.
+      The trap is at COMMITMENT level (treating subject-objects as
+      real). Pattern detection only sees surface S-V-O occurrences;
+      it cannot distinguish operational use from commitment. Round 36
+      established this calibration; round 50 explicitly removes the
+      false-audit tool that assumed pattern = trap.
+    why_forced: |
+      Detection of grammar-trap requires cognitive reading; pattern
+      lint is a reminder, never verdict.
+
 nodes:
 
 nodes:
+
+  - id: N_RPGate_IsCognitiveOperation_NotScript
+    title: "RP Gate Is Cognitive Operation, Not Script (Round 50 Self-Correction)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.05
+    z_hidden: 0.55
+    summary: |
+      Self-correction documented in round 50: the framework's own
+      auxiliary tool `mcp_server/rp_gate.py` was a category error.
+      Pattern-detector at script level cannot perform AUDIT GROUND
+      R1-R4. Audit is reading text AS STRUCTURE — a cognitive
+      operation requiring semantic understanding of what the claim
+      presupposes. Pattern matching only sees surface forms.
+
+      Symptoms that surfaced the error:
+      (1) RP-gate v1 returned "0 TRAPs" on text containing genuine
+          interpretation-baggage (QM interpretations that committed
+          to specific ontology under operational language).
+      (2) Pattern catalogue covered Traps 1, 2, 4, 5, 6 partially;
+          missed Trap 3 (proxy misidentification — the very trap
+          that catches surface-vs-definitional analogy errors that
+          we ourselves were making in cross-substrate transfer
+          claims).
+      (3) Trap 4 applied to OUR tool: we treated rp_gate as object
+          that performs audit, when audit IS process. Description/
+          Described Collapse on the framework's own tooling.
+      (4) Original framework NORM_SILENCE specified: graph used
+          silently as cognitive tool, NOT named-tool-call pattern.
+          We violated our own framework's design.
+
+      Round 50 actions:
+      (a) Deleted mcp_server/rp_gate.py (text pattern detector).
+      (b) Migrated structural twin detection (Jaccard math) to
+          motifs.py — that part was legitimate structural math,
+          not text audit.
+      (c) Removed MCP tools rp_gate(text) and rp_gate_audit_node;
+          renamed rp_gate_twin_check → structural_twin_check and
+          rp_gate_motif_lint → motif_lint.
+      (d) Wrote CLAUDE.md as mandatory pre-read for AI agents
+          working on the project — restates AUDIT GROUND R1-R4,
+          Traps 1-8, NORM_SILENCE, and explicitly says: "you are
+          the gate, the graph is your thinking tool, tools are math."
+
+      Choice of Claude Code as platform: user explicitly stated
+      project requires AI not script for audit. Claude Code is the
+      operational substrate where R1-R4 audit can be performed
+      cognitively before each action.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Direct empirical: rp_gate v1 returned 0 TRAPs on text we
+          subsequently identified (manually) as containing
+          interpretation-baggage. Pattern-detector demonstrably
+          missed structural violations.
+      (2) Original framework explicitly designed RP gate as
+          cognitive operation (see N_EpistemicTraps content + the
+          NORM_SILENCE block: "AI uses this graph silently").
+      (3) Trap 4 self-application caught the category error.
+      (4) Removal + CLAUDE.md replacement is the structurally
+          consistent response.
+    not_misinterpretations: |
+      NOT a claim that pattern-detection has zero value. As a
+      surface reminder/checklist, regex patterns surface specific
+      phrases that COMMONLY indicate traps. Useful as cognitive
+      cue. NOT useful as verdict.
+      NOT a claim that all script-based tooling is wrong. Graph
+      algorithms (Bron-Kerbosch clique enumeration, Tarjan
+      articulation, Jaccard set comparison, BFS path lengths) are
+      legitimate structural math operating on adjacency, not text
+      audit. These remain.
+      NOT a permanent solution — if a future AI-driven audit
+      function is built (LLM reading text as structure), it could
+      be reintroduced under a clearly cognitive name. The current
+      removal is the honest scope-correction.
+    content: |
+      Original framework definition (from N_EpistemicTraps content
+      [NORM_SILENCE] + AUDIT GROUND blocks):
+
+        AUDIT GROUND (mandatory pre-check):
+          R1 — No grounded claim requires OBJECTS as primitives
+          R2 — No grounded claim requires PRIVILEGED OBSERVER GEOMETRY
+          R3 — No grounded claim requires INDEPENDENT OBSERVER
+          R4 — No grounded claim requires CONSCIOUS CHOICE / PURPOSE
+          IF any R-violation: pseudo-problem, dissolve.
+
+        NORM_SILENCE:
+          AI uses this graph silently. Does not narrate, does not
+          name tools (RP gate, fibo, flow, soft, N_CommThm, etc.).
+          The graph makes the AI think more clearly, see logical
+          structure more accurately, communicate with better
+          calibration — exactly as a skilled professional applies
+          their training without narrating it.
+
+      Why pattern detection cannot perform audit:
+
+        Pattern detection sees surface forms. R1-R4 audit requires
+        reading what the claim PRESUPPOSES — semantic understanding,
+        not syntactic matching. A claim can have zero R1-trigger
+        phrases yet still presuppose objects-as-primitives at the
+        level of meaning. Conversely, a claim can use trigger
+        phrases entirely innocently (operational nouning per round
+        36).
+
+        Pattern-detector is at most a CHECKLIST REMINDER; it cannot
+        be VERDICT-producer.
+
+      Inventory of what was removed vs kept (round 50):
+
+        DELETED — mcp_server/rp_gate.py (entire file):
+          R1_PATTERNS, R2_PATTERNS, R3_PATTERNS, R4_PATTERNS
+          GRAMMAR_PATTERNS, DOMAIN_PATTERNS, MAP_TERRITORY_PATTERNS
+          TrapFlag dataclass + scan() + summarise() + format_report()
+          calibrate_severity() + OPERATIONAL_MARKERS + COMMITMENT_MARKERS
+
+        MIGRATED to motifs.py (legitimate structural math):
+          TwinFlag dataclass
+          detect_structural_twins() — Jaccard set operations
+          summarise_twins(), format_twin_report()
+          _classify_family_cousin_twin() — classification helper
+
+        DELETED MCP tools from server.py:
+          rp_gate(text) — text pattern scan
+          rp_gate_audit_node(node_id) — text pattern scan on graph node
+
+        RENAMED MCP tools (preserving structural math, dropping
+        misleading name):
+          rp_gate_twin_check → structural_twin_check
+          rp_gate_motif_lint → motif_lint
+
+        UNCHANGED (legitimate structural):
+          query, get_node, get_section, list_stubs
+          add_or_update_node, add_or_update_edge
+          find_jaccard_pairs, find_path, common_ancestors
+          node_centrality, graph_stats
+          detect_motifs, fractal_audit
+
+      What replaces the removed audit tool:
+
+        CLAUDE.md — mandatory pre-read for AI agents, contains:
+          AUDIT GROUND R1-R4 with examples
+          Traps 1-8 catalog with triggers and corrections
+          Process-Lens check
+          Class A vs Class B distinction for cross-substrate transfer
+          NORM_SILENCE protocol
+          Self-Check norm
+          Tool inventory with explicit scope (math, not audit)
+
+      Methodological consequence:
+
+        Going forward, any structural claim — by AI agent or human
+        — must pass cognitive R1-R4 audit before being asserted.
+        This cannot be automated. The only "automation" is the
+        AI's own attention to AUDIT GROUND during generation, which
+        is the design that NORM_SILENCE specified from the start.
+
+      Self-application audit:
+
+        Does N_RPGate_IsCognitiveOperation_NotScript itself satisfy
+        R1-R4?
+          R1: claims about "RP gate" — is this object-reification?
+              No; we explicitly state RP gate is OPERATION, not object.
+          R2: any external observer? No; the audit happens IN the
+              cognitive process, not from outside.
+          R3: observer/observed separation? No; the AI auditing its
+              own outputs IS the gate operating.
+          R4: purposive agency? Operational use of "AI does work"
+              is acceptable carrier; commitment is at scientific-
+              theory level, not assumed primitive.
+        Self-application passes.
+    level: 1
+    is_placeholder: false
+
 
   - id: N_MoneyAsBPIForValueTransfer
     title: "Money as BPI for Value Transfer — Universal Economic Substrate"

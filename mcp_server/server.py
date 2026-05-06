@@ -1,15 +1,23 @@
 """Ouroboros MCP server — direct tool access to the Kuzu manifold graph.
 
-Tools exposed:
-  query             — raw Cypher (read-only by convention; use *_node/*_edge for writes)
-  get_node          — node details + outgoing/incoming edges + linked .tex sections
-  get_section       — full body of a .tex section by label
+Tools exposed (all STRUCTURAL — graph queries, math algorithms, file I/O):
+  query              — raw Cypher (read-only by convention)
+  get_node           — node details + edges + linked .tex sections
+  get_section        — full body of a .tex section by label
   add_or_update_node — upsert via additions.yaml + DB
   add_or_update_edge — upsert via additions.yaml + DB
-  list_stubs        — STUB-status nodes
+  list_stubs         — STUB-status nodes
   find_jaccard_pairs — common-neighbor candidates for missing edges
-  graph_stats       — counts by status / layer / placeholders / unjustified edges
-  rp_gate           — runtime structural validator (R1-R4 + grammar + domain traps)
+  graph_stats        — counts by status / layer / placeholders / unjustified edges
+  detect_motifs      — M1/M2/M3/M5/M6 motif enumeration (graph algorithms)
+  structural_twin_check — Jaccard-based twin pair detection (set math)
+  motif_lint         — pre-add structural lint (motif math + Jaccard)
+  fractal_audit      — graph topology metrics (β₁/V, σ, M1/V, etc.)
+
+Round 50 — REMOVED:
+  rp_gate, rp_gate_audit_node — these were category errors. Pattern-based
+  text validation cannot perform R1-R4 audit; audit is a cognitive
+  operation done by the AI reading text as structure. See CLAUDE.md.
 """
 from __future__ import annotations
 import json
@@ -25,7 +33,6 @@ from mcp.server.fastmcp import FastMCP  # noqa: E402
 from schema import Status, Layer, EdgeStatus, layer_of  # noqa: E402
 from scripts.db import connect  # noqa: E402
 from scripts import additions as additions_io  # noqa: E402
-from mcp_server import rp_gate as _rp_gate  # noqa: E402
 from mcp_server import motifs as _motifs  # noqa: E402
 
 mcp = FastMCP("ouroboros")
@@ -575,37 +582,17 @@ def add_or_update_edge(
     }, ensure_ascii=False)
 
 
-# ────────────────────────────────────────────────────── RP GATE RUNTIME
+# ────────────────────────────────────────────────────── STRUCTURAL TWIN DETECTOR
+# Round 50 — removed: rp_gate (text pattern) and rp_gate_audit_node.
+# These were category errors. AUDIT GROUND (R1-R4) is a cognitive operation
+# the AI does by reading text as structure. See CLAUDE.md.
+#
+# What remains here is structural MATH (Jaccard, set operations on adjacency)
+# which is legitimate: it does not claim to audit text, only to compare
+# graph neighbour sets.
 
 @mcp.tool()
-def rp_gate(text: str, format: str = "json") -> str:
-    """Run text through the RP gate: detect R1-R4 traps, grammar trap,
-    domain carving, map/territory reification. Estimate Shannon overhead
-    (interpretive plaster proxy).
-
-    R1 = process reified as object (N_TopologyProcessIdentity root)
-    R2 = external evaluation position fabricated (N112 root)
-    R3 = free parameter masquerading as forced (N_InversiveTheory root)
-    R4 = state-change agency claim (N187 root)
-    grammar = S-V-O on processes/totalities (N_GrammarTrap root)
-    domain = BPI taxonomy reified as ontological partition (N_DomainsAsBPICarvings)
-    map_territory = Korzybski distinction reified (N_MapTerritoryObserverIdentity)
-
-    Args:
-        text: input text to validate
-        format: "json" (structured) or "report" (markdown for humans)
-
-    Returns:
-        json: full structured report with flags, severity, framework_node refs
-        report: human-readable markdown summary
-    """
-    if format == "report":
-        return _rp_gate.format_report(text)
-    return json.dumps(_rp_gate.summarise(text), ensure_ascii=False, default=str)
-
-
-@mcp.tool()
-def rp_gate_twin_check(
+def structural_twin_check(
     node_id: str = "",
     neighbors_csv: str = "",
     jaccard_high: float = 0.7,
@@ -613,7 +600,10 @@ def rp_gate_twin_check(
     min_shared: int = 3,
     format: str = "json",
 ) -> str:
-    """Structural twin detector — round 38 M3 motif application.
+    """Jaccard-based structural twin detector — M3 motif application.
+
+    STRUCTURAL: compares graph adjacency sets via Jaccard. Does NOT
+    audit text content. Audit is a cognitive operation; see CLAUDE.md.
 
     Detects whether a candidate node has identical or near-identical
     neighbour set to existing graph nodes (Jaccard >= jaccard_med).
@@ -622,7 +612,7 @@ def rp_gate_twin_check(
 
     Two modes:
       1. Existing-node mode: pass node_id of an existing graph node to
-         lint it against the rest of the graph.
+         compare against the rest of the graph.
       2. Candidate-neighbours mode: pass neighbors_csv = "id1,id2,..."
          of a hypothetical new node's connections; reports potential
          twins before insertion.
@@ -652,7 +642,6 @@ def rp_gate_twin_check(
             return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
         candidate_neighbors = nbrs[node_id]
         candidate_id = node_id
-        # Collect edge labels between candidate_id and each direct neighbour
         for nbr in candidate_neighbors:
             res = conn.execute(
                 "MATCH (a:Node {id: $a})-[e:Edge]-(b:Node {id: $b}) "
@@ -675,7 +664,7 @@ def rp_gate_twin_check(
         err = {"error": "must provide either node_id or neighbors_csv"}
         return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
 
-    flags = _rp_gate.detect_structural_twins(
+    flags = _motifs.detect_structural_twins(
         candidate_neighbors=candidate_neighbors,
         existing_node_neighbors=nbrs,
         candidate_id=candidate_id,
@@ -685,8 +674,8 @@ def rp_gate_twin_check(
         direct_edge_labels=direct_edge_labels or None,
     )
     if format == "report":
-        return _rp_gate.format_twin_report(flags, candidate_id=candidate_id)
-    summary = _rp_gate.summarise_twins(flags)
+        return _motifs.format_twin_report(flags, candidate_id=candidate_id)
+    summary = _motifs.summarise_twins(flags)
     summary["candidate_id"] = candidate_id
     summary["candidate_neighbor_count"] = len(candidate_neighbors)
     return json.dumps(summary, ensure_ascii=False, default=str)
@@ -783,41 +772,15 @@ def detect_motifs(
     return json.dumps(report, ensure_ascii=False, default=str)
 
 
-@mcp.tool()
-def rp_gate_audit_node(node_id: str, format: str = "json") -> str:
-    """Run rp_gate text scan on a graph node's content fields.
-
-    Concatenates summary + content + why_status + not_misinterpretations
-    and runs the trap detector. Useful for self-audit of framework
-    nodes — does the framework's own description of itself trip its
-    own gate?
-
-    Returns json or markdown report.
-    """
-    conn = _conn()
-    res = conn.execute(
-        "MATCH (n:Node {id: $id}) "
-        "RETURN n.summary, n.content, n.why_status, n.not_misinterpretations",
-        {"id": node_id},
-    )
-    if not res.has_next():
-        err = {"error": f"node '{node_id}' not found"}
-        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
-    s, c, w, nm = res.get_next()
-    parts = [p for p in [s, c, w, nm] if p]
-    if not parts:
-        msg = f"Node `{node_id}` has no text fields to audit."
-        return json.dumps({"warning": msg}) if format == "json" else msg
-    text = "\n\n".join(parts)
-    if format == "report":
-        return _rp_gate.format_report(text)
-    summary = _rp_gate.summarise(text)
-    summary["node_id"] = node_id
-    return json.dumps(summary, ensure_ascii=False, default=str)
+# Round 50 — REMOVED: rp_gate_audit_node.
+# That function ran text-pattern scan on node content fields and reported
+# "0 TRAPs" results that gave false confidence. Real audit of node text
+# requires reading the text AS STRUCTURE (R1-R4 audit ground), which is
+# a cognitive operation. See CLAUDE.md.
 
 
 @mcp.tool()
-def rp_gate_motif_lint(
+def motif_lint(
     node_id: str,
     proposed_neighbors_csv: str = "",
     extra_principle_ids_csv: str = "",
@@ -825,14 +788,14 @@ def rp_gate_motif_lint(
     twin_min_shared: int = 3,
     format: str = "report",
 ) -> str:
-    """Motif-aware structural lint for a candidate node addition or
+    """Motif-aware STRUCTURAL lint for a candidate node addition or
     existing node review.
 
-    Combines round-40 twin detector + round-41 motif inventory into a
-    single structural-lint call. Reports what motifs the candidate
-    extends (joins existing K_n / Z-triangle / etc.), what new motifs
-    it creates, twin/duplication warnings, topology delta (β₁, ΔE,
-    Δtriangles), and articulation concerns.
+    STRUCTURAL: combines twin detector (Jaccard math) + motif inventory
+    (graph algorithms). Does NOT audit text. Reports what motifs the
+    candidate extends (joins existing K_n / Z-triangle / etc.), what
+    new motifs it creates, twin/duplication warnings, topology delta
+    (β₁, ΔE, Δtriangles), and articulation concerns.
 
     Two modes:
       1. Hypothetical addition: pass node_id of NEW node + proposed_

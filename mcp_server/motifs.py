@@ -14,9 +14,16 @@ class. Reference framework nodes:
   M5 — N_StructuralMotif_PrincipleStratification (round 39)
        p principles + n cousins + full bipartite K_{p,n}
        (M2 generalisation, M2 = M5 with p=1)
+
+NOTE on scope (round 50): everything in this module is STRUCTURAL math
+(graph algorithms, Jaccard, clique enumeration, cycle counting, fractal
+metrics). It does not perform AUDIT — audit is a cognitive operation
+the AI does by reading text as structure, not a function call. See
+CLAUDE.md.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, asdict
 from typing import Any, Iterable
 import sys
@@ -1305,4 +1312,244 @@ def format_motif_report(report: dict[str, Any]) -> str:
         if len(report["M1_z_triangles"]) > 15:
             lines.append(f"  …and {len(report['M1_z_triangles']) - 15} more")
 
+    return "\n".join(lines)
+
+
+# ─── Structural twin detection (Jaccard math) — migrated from rp_gate.py round 50 ──
+
+@dataclass
+class TwinFlag:
+    """One structural-twin candidate (Jaccard-based)."""
+    candidate: str
+    jaccard: float
+    shared: list[str]
+    only_new: list[str]
+    only_candidate: list[str]
+    severity: str
+    classification: str
+    diagnosis: str
+    suggestion: str
+
+
+def _jaccard_set(a: set, b: set) -> float:
+    if not a and not b:
+        return 1.0
+    union = a | b
+    return len(a & b) / len(union) if union else 0.0
+
+
+_FAMILY_EDGE_RE = re.compile(
+    r"sibling|realisation|cousin|family|parallel|analog(ous|ue)?|"
+    r"sister[_ -]?node|paired",
+    re.IGNORECASE,
+)
+
+
+def _classify_family_cousin_twin(jac: float, shared_count: int) -> tuple[str, str, str, str]:
+    return (
+        "medium",
+        "FAMILY_COUSIN",
+        (
+            f"High neighbour overlap (Jaccard={jac:.2f}, "
+            f"{shared_count} shared) attributable to K_n family-clique "
+            f"membership (M2/M5 motif). Substrate-cousin pattern, not "
+            f"duplication."
+        ),
+        (
+            "Verify shared neighbours include a principle anchor (DEF, "
+            "N370, N_FrameworkCore tier-1, etc.). If yes — keep as K_n "
+            "cousin. The high Jaccard reflects principle-stratification, "
+            "not redundant content."
+        ),
+    )
+
+
+def detect_structural_twins(
+    candidate_neighbors: set[str],
+    existing_node_neighbors: dict[str, set[str]],
+    candidate_id: str | None = None,
+    jaccard_high: float = 0.7,
+    jaccard_med: float = 0.5,
+    min_shared: int = 3,
+    direct_edge_labels: dict[str, list[str]] | None = None,
+) -> list[TwinFlag]:
+    """Detect structural twins via Jaccard neighbour-set comparison.
+
+    This is STRUCTURAL math (set operations on graph adjacency), not
+    text audit. Per N_StructuralMotif_StructuralTwins (round 38 M3).
+    """
+    flags: list[TwinFlag] = []
+    cand_n = set(candidate_neighbors)
+    if candidate_id is not None:
+        cand_n = cand_n - {candidate_id}
+
+    for nid, nbrs in existing_node_neighbors.items():
+        if nid == candidate_id:
+            continue
+        a = cand_n - {nid}
+        b = nbrs - ({candidate_id} if candidate_id else set())
+        if not a or not b:
+            continue
+        shared = a & b
+        if len(shared) < min_shared:
+            continue
+        jac = _jaccard_set(a, b)
+        if jac < jaccard_med:
+            continue
+
+        only_new = sorted(a - b)
+        only_cand = sorted(b - a)
+
+        family_edge = False
+        if direct_edge_labels and nid in direct_edge_labels:
+            for lbl in direct_edge_labels[nid]:
+                if lbl and _FAMILY_EDGE_RE.search(lbl):
+                    family_edge = True
+                    break
+
+        if family_edge:
+            severity, classification, diagnosis, suggestion = (
+                _classify_family_cousin_twin(jac, len(shared))
+            )
+            flags.append(
+                TwinFlag(
+                    candidate=nid, jaccard=round(jac, 3),
+                    shared=sorted(shared),
+                    only_new=only_new[:8], only_candidate=only_cand[:8],
+                    severity=severity, classification=classification,
+                    diagnosis=diagnosis, suggestion=suggestion,
+                )
+            )
+            continue
+
+        if jac >= jaccard_high and not only_new and not only_cand:
+            severity = "high"; classification = "MERGE_CANDIDATE"
+            diagnosis = (
+                "Identical neighbour set — Jaccard=1.0. Graph treats them "
+                "as indistinguishable. Genuine structural identity OR "
+                "duplication (content inspection required to distinguish)."
+            )
+            suggestion = (
+                "Inspect content fields. Carrier-level twin (round 36) "
+                "→ admissible; duplicate content → merge; K_n cluster "
+                "internal → no action."
+            )
+        elif jac >= jaccard_high:
+            severity = "high"; classification = "CARRIER_DUPLICATE"
+            diagnosis = (
+                f"High Jaccard ({jac:.2f}) with small symmetric difference. "
+                f"Likely carrier-level twin (same structural role, different "
+                f"operational label per N_OperationalCarrierVsOntologicalCommitment)."
+            )
+            suggestion = (
+                "Verify carrier vs commitment distinction. Same role under "
+                "different names — admissible. Different commitments — keep separate."
+            )
+        elif jac >= jaccard_med and len(shared) >= min_shared:
+            severity = "medium"; classification = "FAMILY_COUSIN"
+            diagnosis = (
+                f"Medium Jaccard ({jac:.2f}) with {len(shared)} shared "
+                f"neighbours — candidate may be substrate-cousin in K_n "
+                f"family-clique (M2/M5 motif)."
+            )
+            suggestion = (
+                "Check whether shared neighbours include principle anchor. "
+                "If yes → K_n cousin; if no → drift candidate, review."
+            )
+        else:
+            severity = "low"; classification = "LOW_OVERLAP"
+            diagnosis = f"Low-but-present neighbour overlap (Jaccard={jac:.2f})."
+            suggestion = "Likely incidental co-citation. No action required."
+
+        flags.append(
+            TwinFlag(
+                candidate=nid, jaccard=round(jac, 3),
+                shared=sorted(shared),
+                only_new=only_new[:8], only_candidate=only_cand[:8],
+                severity=severity, classification=classification,
+                diagnosis=diagnosis, suggestion=suggestion,
+            )
+        )
+
+    # Cluster reclassification
+    high_ids = [f.candidate for f in flags if f.severity == "high"]
+    if len(high_ids) >= 3:
+        connected_count = sum(
+            1
+            for i, a in enumerate(high_ids)
+            for b in high_ids[i + 1:]
+            if b in existing_node_neighbors.get(a, set())
+        )
+        possible_pairs = len(high_ids) * (len(high_ids) - 1) // 2
+        if possible_pairs and connected_count / possible_pairs >= 0.5:
+            for f in flags:
+                if f.severity == "high" and f.classification in (
+                    "MERGE_CANDIDATE", "CARRIER_DUPLICATE",
+                ):
+                    sev, cls, diag, sug = _classify_family_cousin_twin(
+                        f.jaccard, len(f.shared)
+                    )
+                    f.severity = sev
+                    f.classification = cls
+                    f.diagnosis = (
+                        diag + f" Detected as cluster ({len(high_ids)} mutually "
+                        f"connected high-Jaccard candidates)."
+                    )
+                    f.suggestion = sug
+
+    flags.sort(key=lambda f: -f.jaccard)
+    return flags
+
+
+def summarise_twins(flags: list[TwinFlag]) -> dict[str, Any]:
+    by_severity = {"high": 0, "medium": 0, "low": 0}
+    by_classification: dict[str, int] = {}
+    for f in flags:
+        by_severity[f.severity] = by_severity.get(f.severity, 0) + 1
+        by_classification[f.classification] = (
+            by_classification.get(f.classification, 0) + 1
+        )
+    return {
+        "total_twins": len(flags),
+        "by_severity": by_severity,
+        "by_classification": by_classification,
+        "flags": [asdict(f) for f in flags],
+    }
+
+
+def format_twin_report(flags: list[TwinFlag], candidate_id: str | None = None) -> str:
+    summary = summarise_twins(flags)
+    lines = ["# Structural Twin Report (Jaccard-based)"]
+    if candidate_id:
+        lines.append(f"\n**Candidate node:** `{candidate_id}`")
+    lines.append(f"\n- **Twins detected:** {summary['total_twins']}")
+    if summary["by_severity"]:
+        for s in ("high", "medium", "low"):
+            n = summary["by_severity"].get(s, 0)
+            if n:
+                lines.append(f"  - **{s}**: {n}")
+    if not flags:
+        lines.append(
+            "\n_No structural twins detected. Candidate has distinct "
+            "neighbourhood pattern._"
+        )
+        return "\n".join(lines)
+    lines.append("\n## Twin candidates\n")
+    for i, f in enumerate(flags, 1):
+        lines.append(
+            f"### {i}. [{f.severity.upper()}] `{f.candidate}` "
+            f"(Jaccard={f.jaccard:.2f}, {f.classification})"
+        )
+        lines.append(f"- **Shared ({len(f.shared)}):** "
+                     f"{', '.join('`'+x+'`' for x in f.shared[:8])}"
+                     + (" …" if len(f.shared) > 8 else ""))
+        if f.only_new:
+            lines.append(f"- **Only candidate:** "
+                         f"{', '.join('`'+x+'`' for x in f.only_new)}")
+        if f.only_candidate:
+            lines.append(f"- **Only `{f.candidate}`:** "
+                         f"{', '.join('`'+x+'`' for x in f.only_candidate)}")
+        lines.append(f"- **Diagnosis:** {f.diagnosis}")
+        lines.append(f"- **Suggestion:** {f.suggestion}")
+        lines.append("")
     return "\n".join(lines)
