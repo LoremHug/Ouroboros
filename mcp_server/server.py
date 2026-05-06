@@ -1,14 +1,23 @@
 """Ouroboros MCP server — direct tool access to the Kuzu manifold graph.
 
-Tools exposed:
-  query             — raw Cypher (read-only by convention; use *_node/*_edge for writes)
-  get_node          — node details + outgoing/incoming edges + linked .tex sections
-  get_section       — full body of a .tex section by label
+Tools exposed (all STRUCTURAL — graph queries, math algorithms, file I/O):
+  query              — raw Cypher (read-only by convention)
+  get_node           — node details + edges + linked .tex sections
+  get_section        — full body of a .tex section by label
   add_or_update_node — upsert via additions.yaml + DB
   add_or_update_edge — upsert via additions.yaml + DB
-  list_stubs        — STUB-status nodes
+  list_stubs         — STUB-status nodes
   find_jaccard_pairs — common-neighbor candidates for missing edges
-  graph_stats       — counts by status / layer / placeholders / unjustified edges
+  graph_stats        — counts by status / layer / placeholders / unjustified edges
+  detect_motifs      — M1/M2/M3/M5/M6 motif enumeration (graph algorithms)
+  structural_twin_check — Jaccard-based twin pair detection (set math)
+  motif_lint         — pre-add structural lint (motif math + Jaccard)
+  fractal_audit      — graph topology metrics (β₁/V, σ, M1/V, etc.)
+
+Round 50 — REMOVED:
+  rp_gate, rp_gate_audit_node — these were category errors. Pattern-based
+  text validation cannot perform R1-R4 audit; audit is a cognitive
+  operation done by the AI reading text as structure. See CLAUDE.md.
 """
 from __future__ import annotations
 import json
@@ -24,6 +33,7 @@ from mcp.server.fastmcp import FastMCP  # noqa: E402
 from schema import Status, Layer, EdgeStatus, layer_of  # noqa: E402
 from scripts.db import connect  # noqa: E402
 from scripts import additions as additions_io  # noqa: E402
+from mcp_server import motifs as _motifs  # noqa: E402
 
 mcp = FastMCP("ouroboros")
 
@@ -570,6 +580,322 @@ def add_or_update_edge(
         "edge": f"{source} → {target} : {label} [{edge_status}]",
         "note": "additions.yaml updated — commit it",
     }, ensure_ascii=False)
+
+
+# ────────────────────────────────────────────────────── STRUCTURAL TWIN DETECTOR
+# Round 50 — removed: rp_gate (text pattern) and rp_gate_audit_node.
+# These were category errors. AUDIT GROUND (R1-R4) is a cognitive operation
+# the AI does by reading text as structure. See CLAUDE.md.
+#
+# What remains here is structural MATH (Jaccard, set operations on adjacency)
+# which is legitimate: it does not claim to audit text, only to compare
+# graph neighbour sets.
+
+@mcp.tool()
+def structural_twin_check(
+    node_id: str = "",
+    neighbors_csv: str = "",
+    jaccard_high: float = 0.7,
+    jaccard_med: float = 0.5,
+    min_shared: int = 3,
+    format: str = "json",
+) -> str:
+    """Jaccard-based structural twin detector — M3 motif application.
+
+    STRUCTURAL: compares graph adjacency sets via Jaccard. Does NOT
+    audit text content. Audit is a cognitive operation; see CLAUDE.md.
+
+    Detects whether a candidate node has identical or near-identical
+    neighbour set to existing graph nodes (Jaccard >= jaccard_med).
+    Twins can be (a) genuine carrier-level identity, (b) duplication
+    candidate, (c) family-cousin in K_n motif, (d) low-overlap noise.
+
+    Two modes:
+      1. Existing-node mode: pass node_id of an existing graph node to
+         compare against the rest of the graph.
+      2. Candidate-neighbours mode: pass neighbors_csv = "id1,id2,..."
+         of a hypothetical new node's connections; reports potential
+         twins before insertion.
+
+    Severity:
+      HIGH (Jaccard >= jaccard_high): MERGE_CANDIDATE / CARRIER_DUPLICATE
+      MEDIUM (>= jaccard_med):         FAMILY_COUSIN (M2/M5 cousin pattern)
+      LOW:                              LOW_OVERLAP (incidental)
+
+    Returns json (structured) or report (markdown).
+    """
+    conn = _conn()
+    res = conn.execute("MATCH (n:Node) RETURN n.id ORDER BY n.id")
+    ids = [r[0] for r in _rows(res)]
+    nbrs: dict[str, set[str]] = {}
+    for nid in ids:
+        res = conn.execute(
+            "MATCH (a:Node {id: $id})-[:Edge]-(b:Node) RETURN DISTINCT b.id",
+            {"id": nid},
+        )
+        nbrs[nid] = {r[0] for r in _rows(res)}
+
+    direct_edge_labels: dict[str, list[str]] = {}
+    if node_id:
+        if node_id not in nbrs:
+            err = {"error": f"node_id '{node_id}' not found in graph"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+        candidate_neighbors = nbrs[node_id]
+        candidate_id = node_id
+        for nbr in candidate_neighbors:
+            res = conn.execute(
+                "MATCH (a:Node {id: $a})-[e:Edge]-(b:Node {id: $b}) "
+                "RETURN e.label",
+                {"a": candidate_id, "b": nbr},
+            )
+            labels = [r[0] for r in _rows(res) if r[0]]
+            if labels:
+                direct_edge_labels[nbr] = labels
+    elif neighbors_csv:
+        candidate_neighbors = {
+            x.strip() for x in neighbors_csv.split(",") if x.strip()
+        }
+        unknown = candidate_neighbors - set(ids)
+        if unknown:
+            err = {"error": f"unknown neighbours: {sorted(unknown)}"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+        candidate_id = None
+    else:
+        err = {"error": "must provide either node_id or neighbors_csv"}
+        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+
+    flags = _motifs.detect_structural_twins(
+        candidate_neighbors=candidate_neighbors,
+        existing_node_neighbors=nbrs,
+        candidate_id=candidate_id,
+        jaccard_high=jaccard_high,
+        jaccard_med=jaccard_med,
+        min_shared=min_shared,
+        direct_edge_labels=direct_edge_labels or None,
+    )
+    if format == "report":
+        return _motifs.format_twin_report(flags, candidate_id=candidate_id)
+    summary = _motifs.summarise_twins(flags)
+    summary["candidate_id"] = candidate_id
+    summary["candidate_neighbor_count"] = len(candidate_neighbors)
+    return json.dumps(summary, ensure_ascii=False, default=str)
+
+
+# ────────────────────────────────────────────────────── MOTIF DETECTOR
+
+# N_FrameworkCore tier-1 + tier-2/3/4/5 (substrate-invariant principles).
+# These get treated as "principle stratum" candidates when partitioning
+# K_n cliques per round 39 finding.
+_CORE_PRINCIPLE_IDS = frozenset({
+    # Tier 1 (Foundational)
+    "DEF", "N_Invariants", "N_Triangulation", "N_NoSeparatePieces",
+    "N_InversiveTheory",
+    # Tier 2 (Observer-structure)
+    "N112", "N_TopologyProcessIdentity", "N_ForcedId",
+    # Tier 3 (Description/paradigm)
+    "N_GrammarTrap", "N_OntologyParadigmGrammarBound",
+    "N_DomainsAsBPICarvings", "N_MapTerritoryObserverIdentity",
+    # Tier 4 (Measurement bridge)
+    "N_Shannon",
+    # Tier 5 (Observer-substrate)
+    "N_BPIEngagement",
+    # Cross-cutting principles that participate in stratification
+    "N370", "N_ZGaugeDecomposition", "N_FrameworkCore",
+})
+
+
+@mcp.tool()
+def detect_motifs(
+    z_triangle_hub_threshold: int = 25,
+    z_triangle_max: int = 50,
+    clique_min_size: int = 5,
+    clique_min_cousins: int = 3,
+    twin_jaccard: float = 1.0,
+    twin_min_shared: int = 3,
+    extra_principle_ids_csv: str = "",
+    format: str = "report",
+) -> str:
+    """Run all structural-motif detectors over the graph.
+
+    Detects and tags:
+      M1 — Z-triangles (parent → 3 pairwise-connected children),
+           hub-filtered; per N_StructuralMotif_ZTriangle (round 37).
+      M2 — K_n family-clique (1 anchor + n cousins), per round 38.
+      M5 — Principle-stratification K_{p+n} (>= 2 anchors + cousins),
+           per round 39.
+      M3 — Structural twin pairs (Jaccard >= twin_jaccard),
+           per N_StructuralMotif_StructuralTwins.
+      M4 — Articulation points; 2-vertex-connectivity audit per
+           N_GraphProperty_2VertexConnectivity.
+
+    The principle-vs-cousin partition for M2/M5 uses N_FrameworkCore
+    member IDs as the principle stratum. extra_principle_ids_csv lets
+    caller add domain-specific principles temporarily.
+
+    Args:
+      z_triangle_hub_threshold: nodes with degree >= this excluded
+        from Z-triangle CHILD positions (still allowed as parents).
+      z_triangle_max: cap on Z-triangles returned (graph has many).
+      clique_min_size: minimum clique size to consider for M2/M5.
+      clique_min_cousins: minimum cousin count (cousins = clique
+        members not in principle stratum).
+      twin_jaccard: Jaccard threshold for twin pair detection.
+      twin_min_shared: minimum shared neighbours.
+      extra_principle_ids_csv: optional comma-separated extra IDs
+        to treat as principles for this run only.
+      format: "report" (markdown) or "json" (structured).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+
+    extras = {
+        x.strip() for x in extra_principle_ids_csv.split(",") if x.strip()
+    }
+    principle_ids = set(_CORE_PRINCIPLE_IDS) | extras
+
+    report = _motifs.run_all_detectors(
+        edge_pairs=edge_pairs,
+        core_principle_ids=principle_ids,
+        z_triangle_hub_threshold=z_triangle_hub_threshold,
+        z_triangle_max=z_triangle_max,
+        clique_min_size=clique_min_size,
+        clique_min_cousins=clique_min_cousins,
+        twin_jaccard=twin_jaccard,
+        twin_min_shared=twin_min_shared,
+    )
+    if format == "report":
+        return _motifs.format_motif_report(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
+
+
+# Round 50 — REMOVED: rp_gate_audit_node.
+# That function ran text-pattern scan on node content fields and reported
+# "0 TRAPs" results that gave false confidence. Real audit of node text
+# requires reading the text AS STRUCTURE (R1-R4 audit ground), which is
+# a cognitive operation. See CLAUDE.md.
+
+
+@mcp.tool()
+def motif_lint(
+    node_id: str,
+    proposed_neighbors_csv: str = "",
+    extra_principle_ids_csv: str = "",
+    twin_jaccard: float = 0.7,
+    twin_min_shared: int = 3,
+    format: str = "report",
+) -> str:
+    """Motif-aware STRUCTURAL lint for a candidate node addition or
+    existing node review.
+
+    STRUCTURAL: combines twin detector (Jaccard math) + motif inventory
+    (graph algorithms). Does NOT audit text. Reports what motifs the
+    candidate extends (joins existing K_n / Z-triangle / etc.), what
+    new motifs it creates, twin/duplication warnings, topology delta
+    (β₁, ΔE, Δtriangles), and articulation concerns.
+
+    Two modes:
+      1. Hypothetical addition: pass node_id of NEW node + proposed_
+         neighbors_csv. Report includes before/after delta.
+      2. Existing-node review: pass node_id of existing graph node;
+         neighbours are looked up from graph; reports current motif
+         participation.
+
+    Returns json (structured) or report (markdown).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+    adj = _motifs._build_adjacency(edge_pairs)
+
+    # Statuses + layers (used elsewhere; not needed for lint core)
+    statuses: dict[str, str] = {}
+    layers: dict[str, str] = {}
+    res = conn.execute("MATCH (n:Node) RETURN n.id, n.status, n.layer")
+    for r in _rows(res):
+        statuses[r[0]] = r[1] or ""
+        layers[r[0]] = r[2] or "unknown"
+
+    extras = {x.strip() for x in extra_principle_ids_csv.split(",") if x.strip()}
+    principle_ids = set(_CORE_PRINCIPLE_IDS) | extras
+
+    if node_id in adj and not proposed_neighbors_csv:
+        new_neighbors = adj[node_id]
+    elif proposed_neighbors_csv:
+        new_neighbors = {
+            x.strip() for x in proposed_neighbors_csv.split(",") if x.strip()
+        }
+        unknown = new_neighbors - set(adj.keys())
+        if unknown:
+            err = {"error": f"unknown neighbours: {sorted(unknown)}"}
+            return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+    else:
+        err = {
+            "error": (
+                "must provide either node_id of existing node, or "
+                "node_id + proposed_neighbors_csv for hypothetical addition"
+            )
+        }
+        return json.dumps(err) if format == "json" else f"# Error\n\n{err['error']}"
+
+    report = _motifs.lint_node_addition(
+        adj=adj,
+        new_id=node_id,
+        new_neighbors=new_neighbors,
+        core_principle_ids=principle_ids,
+        statuses=statuses,
+        layers=layers,
+        twin_jaccard=twin_jaccard,
+        twin_min_shared=twin_min_shared,
+    )
+    if format == "report":
+        return _motifs.format_lint_report(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
+
+
+@mcp.tool()
+def fractal_audit(
+    seed_count: int = 30,
+    max_radius: int = 8,
+    format: str = "report",
+) -> str:
+    """Fractal-geometric audit of the graph (round 48).
+
+    Computes:
+      - Cluster-growth dimension (Hausdorff-like): for each seed,
+        N(r) = nodes within r hops; fit N(r) ~ r^d.
+      - Degree distribution power law: P(k) ~ k^(-γ) — scale-free
+        regime detection.
+      - Path-length scaling (small-world indicator).
+      - Cyclomatic ratio β₁/V.
+      - Twin pair count (M3 motif).
+
+    Returns json (structured) or report (markdown).
+
+    Use to track fractal-geometric properties of graph as it grows
+    (round 47 N_FractalSelfSimilarityAsArgminZ predicts these
+    metrics stay invariant under graph growth).
+    """
+    conn = _conn()
+    res = conn.execute(
+        "MATCH (a:Node)-[:Edge]-(b:Node) WHERE a.id < b.id "
+        "RETURN DISTINCT a.id, b.id"
+    )
+    edge_pairs = [(r[0], r[1]) for r in _rows(res)]
+    adj = _motifs._build_adjacency(edge_pairs)
+
+    report = _motifs.fractal_audit(
+        adj, seed_count=seed_count, max_radius=max_radius
+    )
+    if format == "report":
+        return _motifs.format_fractal_audit(report)
+    return json.dumps(report, ensure_ascii=False, default=str)
 
 
 # ────────────────────────────────────────────────────── ENTRY
