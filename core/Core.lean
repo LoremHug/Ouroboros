@@ -192,6 +192,69 @@ theorem perturb_b_destabilizes : ¬ ∃ x, AddCoherence ⟨3, 2, 4⟩ x :=
 theorem perturb_i_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 2, 5⟩ x :=
   fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
 
+/-! ## Tautology vs structural transition
+
+    4 = 4 is structurally stable but NOT a structural transition —
+    it is the post-transition state, the fixed point already reached.
+    No movement is performed; what remains is the bare identity of
+    being-at-the-fixed-point.
+
+    Distinction made formal:
+
+      transition  — b, p materially constrain the unique i. Touching
+                    them destabilizes (see perturb_b/i_destabilizes).
+      tautology   — b, p play no constraining role; argmin Z determined
+                    by i alone.
+
+    Both are stable. Only one represents structural movement. The
+    framework's "argmin Z transition" is the transition case; tautology
+    is the achieved point that transition arrives at. -/
+
+/-- Tautological coherence: x is at argmin Z iff x equals the i-slot.
+    b and p slots are unused — this is the bare-identity case. -/
+def TautCoherence : Coherence Nat := fun t x => x = t.i
+
+/-- 4 = 4 holds tautologically. Structurally stable, but no transition
+    has been performed — we are already at the fixed point. -/
+theorem four_eq_four_tautological : IsArgminZ TautCoherence ⟨4, 4, 4⟩ 4 :=
+  ⟨rfl, fun _ h => h⟩
+
+/-- Tautology is unconstrained in b, p: any triangulation with i = 4
+    yields 4 as argmin Z. Contrast with `AddCoherence` where b, p must
+    be specific (perturb_b_destabilizes). This is the formal mark of
+    "transition already completed": the b/p slots have no work to do. -/
+theorem tautology_unconstrained : ∀ b p, IsArgminZ TautCoherence ⟨b, p, 4⟩ 4 :=
+  fun _ _ => ⟨rfl, fun _ h => h⟩
+
+/-! ## Modus ponens — logic substrate, same pattern
+
+    Given premise `p` of type α and rule `α → β`, the conclusion
+    `rule p : β` is the unique element of β satisfying `y = rule p`.
+    Three structural slots:
+
+      B (boundary) — α (premise type; where input lives)
+      P (process)  — rule : α → β (the inference operation)
+      I (identity) — β (conclusion type; with its equality)
+
+    Modus ponens IS function application — formally identical to
+    `function_application_is_unique_solution`, with slots renamed to
+    logic-substrate vocabulary (premise / rule / conclusion instead of
+    x / f / y). The same `IsUniqueSolution` pattern instantiates here
+    as in arithmetic (2 + 2 = 4): different substrates, one structural
+    shape. Logic and math share one A_0 pattern.
+
+    Note: at the Prop level (where premise/conclusion are proofs), the
+    Type-level pattern still applies — but uniqueness of the conclusion
+    proof additionally follows from proof irrelevance built into Prop.
+    The structural triangulation argument here works at the Type
+    level, capturing logic-as-tool independent of Prop-specific
+    proof-irrelevance. -/
+
+theorem modus_ponens_is_unique_solution {α β : Type u}
+    (premise : α) (rule : α → β) :
+    IsUniqueSolution (fun conclusion : β => conclusion = rule premise) (rule premise) :=
+  ⟨rfl, fun _ h => h⟩
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -211,3 +274,6 @@ end Core
 #print axioms Core.two_plus_two_is_argminZ
 #print axioms Core.perturb_b_destabilizes
 #print axioms Core.perturb_i_destabilizes
+#print axioms Core.four_eq_four_tautological
+#print axioms Core.tautology_unconstrained
+#print axioms Core.modus_ponens_is_unique_solution
