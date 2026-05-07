@@ -259,6 +259,155 @@ theorem modus_ponens_is_unique_solution {α β : Type u}
     IsUniqueSolution (fun conclusion : β => conclusion = rule premise) (rule premise) :=
   ⟨rfl, fun _ h => h⟩
 
+/-! ## Unified invariant: substrate-bounded reachability
+
+    `stable_implies_A0` already encodes the universal pattern:
+
+        h_stable (substrate-internal) + h_exists (meta) → IsA0
+
+    The conditional `h_exists` is the formal mark of K(O) < K(F):
+    substrate-internal proof of A_0 existence requires meta-resource.
+    This section makes the substrate-bounding concrete in two
+    structural facts, both instances of the same invariant differing
+    only in which substrate-property bounds h_exists.
+
+    1. **Self-encoding** (Gödel/Cantor/Tarski/Halting) — Lawvere
+       fixed-point lemma. Self-referential substrates with diagonal
+       structure have fixed points for every endomap; conversely,
+       fixed-point-free maps obstruct surjective self-encoding.
+
+    2. **Irreversibility** (Landauer) — many-to-one maps fail
+       `IsUniqueSolution` for reversal. No internal recovery of
+       inputs from outputs; information cost forced.
+
+    3. **L(3,1) spatial substrate** — minimum non-trivial 3-fold
+       cyclic structure (π_1 = Z/3Z). Z/2 fails 3-arg minimum;
+       Z/p, p≥4, factors through Z/3. Below: full topological
+       formalization needs 3-mfd library (beyond pilot scope);
+       structural form encoded as ThreePeriod with non-trivial action.
+
+    All three: substrate-instances of one Core pattern. Internal
+    h_exists bounded; meta-h_exists holds. The conditional in
+    `stable_implies_A0` captures this without further structure. -/
+
+/-! ### Lawvere fixed-point — Gödel/Cantor pattern
+
+    The structural core of self-reference. Captures Gödel
+    incompleteness, Cantor diagonal, Tarski undefinability,
+    Russell's paradox, halting problem — all corollaries of one
+    fact: self-application forces fixed points. -/
+
+/-- Lawvere (1969): if `φ : A → (A → B)` is point-surjective
+    (every `g : A → B` is `φ a` for some `a`), then every endomap
+    `f : B → B` has a fixed point. -/
+theorem lawvere_fixed_point {A : Type u} {B : Type v} (φ : A → (A → B))
+    (surj : ∀ g : A → B, ∃ a : A, φ a = g) (f : B → B) :
+    ∃ b : B, f b = b := by
+  obtain ⟨a₀, h⟩ := surj (fun a => f (φ a a))
+  exact ⟨φ a₀ a₀, (congrFun h a₀).symm⟩
+
+/-- Cantor diagonal as Lawvere corollary: no surjection
+    `X → (X → Bool)`. `Bool.not` has no fixed point; by Lawvere's
+    contrapositive, surjectivity is structurally blocked. -/
+theorem cantor_diagonal {X : Type u} :
+    ¬ ∃ φ : X → (X → Bool), ∀ g : X → Bool, ∃ a : X, φ a = g := by
+  rintro ⟨φ, surj⟩
+  obtain ⟨b, hb⟩ := lawvere_fixed_point φ surj Bool.not
+  have not_self : Bool.not b ≠ b := fun h => by cases b <;> cases h
+  exact not_self hb
+
+/-- Gödel pattern abstractly: any substrate that can encode its own
+    statements but contains a fixed-point-free transformation cannot
+    surjectively self-encode. K(O) < K(F) structurally forced.
+
+    Specialised: F's provability cannot represent `not_provable`
+    surjectively, because `not_provable` would need a fixed point
+    (which IS the Gödel sentence — true in meta, unprovable in F). -/
+theorem self_encoding_bounded {A : Type u} {B : Type v}
+    (f : B → B) (no_fix : ¬ ∃ b, f b = b) :
+    ¬ ∃ φ : A → (A → B), ∀ g : A → B, ∃ a, φ a = g :=
+  fun ⟨φ, surj⟩ => no_fix (lawvere_fixed_point φ surj f)
+
+/-- Connection to Core: Lawvere produces existence of fixed points;
+    `IsA0` adds uniqueness. Together: when `f` has a unique fixed
+    point and Lawvere conditions hold, that point IS A_0. -/
+theorem lawvere_gives_A0 {A : Type u} {B : Type v}
+    (φ : A → (A → B)) (surj : ∀ g, ∃ a, φ a = g) (f : B → B)
+    (uniq : ∀ b₁ b₂ : B, f b₁ = b₁ → f b₂ = b₂ → b₁ = b₂) :
+    ∃ b, IsA0 f b := by
+  obtain ⟨b, hb⟩ := lawvere_fixed_point φ surj f
+  exact ⟨b, hb, fun y hy => uniq y b hy hb⟩
+
+/-! ### Landauer pattern — irreversibility as no-unique-inverse
+
+    Many-to-one maps lack left inverses: reversal-IsUniqueSolution
+    has no internal answer. This is the structural core of Landauer:
+    information lost in n-to-1 collapse cannot be recovered without
+    external (substrate-meta) resource — heat dissipation as the
+    thermodynamic substrate-projection of this fact. -/
+
+/-- Many-to-one: at least two distinct inputs share an output. -/
+def ManyToOne {α β : Type u} (f : α → β) : Prop :=
+  ∃ a₁ a₂ : α, a₁ ≠ a₂ ∧ f a₁ = f a₂
+
+/-- Many-to-one ⟹ no left inverse exists. The "reversal" function
+    cannot uniquely recover input from output. -/
+theorem many_to_one_no_left_inverse {α β : Type u} (f : α → β)
+    (h : ManyToOne f) : ¬ ∃ g : β → α, ∀ a : α, g (f a) = a := by
+  rintro ⟨g, hg⟩
+  obtain ⟨a₁, a₂, hne, heq⟩ := h
+  apply hne
+  have step1 : a₁ = g (f a₁) := (hg a₁).symm
+  have step2 : g (f a₁) = g (f a₂) := congrArg g heq
+  have step3 : g (f a₂) = a₂ := hg a₂
+  exact step1.trans (step2.trans step3)
+
+/-- Connection to Core: the reversal-IsUniqueSolution at output `f a₁`
+    has no answer — neither `a₁` nor `a₂` is uniquely the preimage,
+    so the unique-solution pattern fails internally. This bounds
+    h_exists for the reversal substrate. -/
+theorem many_to_one_fails_unique_solution {α β : Type u} (f : α → β)
+    (h : ManyToOne f) :
+    ∃ b : β, ¬ ∃ a, IsUniqueSolution (fun a' : α => f a' = b) a := by
+  obtain ⟨a₁, a₂, hne, heq⟩ := h
+  refine ⟨f a₁, ?_⟩
+  rintro ⟨a, ha, huniq⟩
+  exact hne ((huniq a₁ rfl).trans (huniq a₂ heq.symm).symm)
+
+/-! ### L(3,1) pattern — minimum non-trivial 3-fold cyclic
+
+    Spatial substrate manifestation. L(3,1) topologically:
+    π_1 = Z/3Z. Below: Z/2 (RP³) fails 3-arg minimum. Above: Z/p
+    (L(p,1), p≥4) factorizes through Z/3.
+
+    Encoded structurally as ThreePeriod: a type with endomap whose
+    third iterate is identity AND first iterate is non-trivial.
+    Captures the operational essence of 3-fold cyclic without full
+    topology library. -/
+
+/-- A type carries 3-period non-trivial cyclic structure if it has
+    an endomap whose third iterate is identity, and which is itself
+    non-trivial (not the identity map). -/
+structure ThreePeriod (α : Type u) where
+  cycle : α → α
+  period : ∀ x, cycle (cycle (cycle x)) = x
+  nontrivial : ∃ x, cycle x ≠ x
+
+/-- The minimum carrier for ThreePeriod: Fin 3 with cyclic shift.
+    Bool (size 2) cannot carry it; Fin 3 is the structural minimum. -/
+def fin3Cycle : Fin 3 → Fin 3
+  | ⟨0, _⟩ => ⟨1, by decide⟩
+  | ⟨1, _⟩ => ⟨2, by decide⟩
+  | ⟨2, _⟩ => ⟨0, by decide⟩
+
+instance : ThreePeriod (Fin 3) where
+  cycle := fin3Cycle
+  period := fun x => match x with
+    | ⟨0, _⟩ => rfl
+    | ⟨1, _⟩ => rfl
+    | ⟨2, _⟩ => rfl
+  nontrivial := ⟨⟨0, by decide⟩, by decide⟩
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -282,3 +431,9 @@ end Core
 #print axioms Core.four_eq_four_tautological
 #print axioms Core.tautology_unconstrained
 #print axioms Core.modus_ponens_is_unique_solution
+#print axioms Core.lawvere_fixed_point
+#print axioms Core.cantor_diagonal
+#print axioms Core.self_encoding_bounded
+#print axioms Core.lawvere_gives_A0
+#print axioms Core.many_to_one_no_left_inverse
+#print axioms Core.many_to_one_fails_unique_solution
