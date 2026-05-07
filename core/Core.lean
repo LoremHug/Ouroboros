@@ -188,6 +188,10 @@ theorem two_plus_two_is_argminZ : IsArgminZ AddCoherence ⟨2, 2, 4⟩ 4 :=
 theorem perturb_b_destabilizes : ¬ ∃ x, AddCoherence ⟨3, 2, 4⟩ x :=
   fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
 
+/-- Perturbing the p slot (2 → 3): no candidate satisfies coherence. -/
+theorem perturb_p_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 3, 4⟩ x :=
+  fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
+
 /-- Perturbing the i slot (4 → 5): no candidate satisfies coherence. -/
 theorem perturb_i_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 2, 5⟩ x :=
   fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
@@ -273,6 +277,7 @@ end Core
 #print axioms Core.function_evaluation_unique
 #print axioms Core.two_plus_two_is_argminZ
 #print axioms Core.perturb_b_destabilizes
+#print axioms Core.perturb_p_destabilizes
 #print axioms Core.perturb_i_destabilizes
 #print axioms Core.four_eq_four_tautological
 #print axioms Core.tautology_unconstrained
