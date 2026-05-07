@@ -485,6 +485,101 @@ theorem unique_pattern_collapses_to_IsUniqueSolution {α : Type u}
 theorem self_similar_at_every_universe.{w} {α : Type w} (P : α → Prop) (x : α) :
     IsUniqueSolution P x ↔ (P x ∧ ∀ y, P y → y = x) := Iff.rfl
 
+/-! ## Universal property — morphism-level forcedness
+
+    Distinct from element-level forcedness (`IsUniqueSolution`).
+    Universal property captures: for every "test object" Y, there is
+    a unique morphism from/to the universal object. This is forcedness
+    at the **morphism level**, not the element level — a new
+    structural layer not previously formalized in the corpus.
+
+    Empty is initial: unique morphism Empty → α (the empty function
+    `Empty.elim`).
+    Unit is terminal: unique morphism α → Unit (the constant `()`).
+
+    Full functional uniqueness as `Eq` requires funext (which uses
+    propext); we work pointwise, which is axiom-clean and structurally
+    sufficient. -/
+
+/-- Empty is initial: any two functions Empty → α agree pointwise.
+    There is nothing to map FROM, so output is forced (vacuously). -/
+theorem empty_initial {α : Type u} (f g : Empty → α) (e : Empty) : f e = g e :=
+  Empty.elim e
+
+/-- Unit is terminal: any two functions α → Unit agree pointwise.
+    Unit has one element, so output is forced (constantly `()`). -/
+theorem unit_terminal {α : Type u} (f g : α → Unit) (a : α) : f a = g a := rfl
+
+/-! ## Class A identification — type-level isomorphism (N_ForcedId formal)
+
+    Forced identification at **type level**: two types with
+    structurally equivalent shape ARE isomorphic. Substrate-cousin
+    pairs in formal type-theory form.
+
+    `Bool ≅ Two`: both are 2-element types defined as inductives with
+    two distinct constructors. The isomorphism is forced — there is no
+    third option for mapping them respecting the 2-element structure
+    (up to swap, which is itself an isomorphism). Substrate-internal
+    demonstration of N_ForcedId: when two patterns have the same
+    structural shape, they ARE the same pattern.
+
+    Adds type-level forcedness, distinct from element-level
+    (`IsUniqueSolution`) and morphism-level (universal property).
+    Pure inductive types used to keep proofs axiom-clean. -/
+
+/-- A pure 2-element inductive type — substrate-cousin of Bool. -/
+inductive Two : Type where
+  | zero : Two
+  | one : Two
+
+def boolToTwo : Bool → Two
+  | false => Two.zero
+  | true => Two.one
+
+def twoToBool : Two → Bool
+  | Two.zero => false
+  | Two.one => true
+
+/-- Bool → Two → Bool is identity. -/
+theorem boolTwo_left_inv : ∀ b : Bool, twoToBool (boolToTwo b) = b
+  | false => rfl
+  | true => rfl
+
+/-- Two → Bool → Two is identity. Together with left-inverse,
+    establishes Bool ≅ Two as forced type-level identification. -/
+theorem boolTwo_right_inv : ∀ t : Two, boolToTwo (twoToBool t) = t
+  | Two.zero => rfl
+  | Two.one => rfl
+
+/-! ## Reflexive-transitive closure — operator-level forcedness
+
+    Smallest reflexive-transitive relation containing `R`. This is
+    a closure operator's universal property: among all reflexive-
+    transitive relations containing R, there is a smallest one,
+    forced uniquely by R alone.
+
+    Adds operator-level forcedness — distinct from element-level
+    (`IsUniqueSolution`), morphism-level (universal property), and
+    type-level (Class A iso). Four structural layers of forcedness
+    now formalized: element / morphism / type / operator. -/
+
+/-- Reflexive-transitive closure of a relation. -/
+inductive ReflTransClosure {α : Type u} (R : α → α → Prop) : α → α → Prop where
+  | refl (a : α) : ReflTransClosure R a a
+  | step {a b c : α} : R a b → ReflTransClosure R b c → ReflTransClosure R a c
+
+/-- Closure is minimal: any reflexive-transitive S containing R
+    contains the closure. The closure is forced as the minimum. -/
+theorem closure_minimal {α : Type u} {R S : α → α → Prop}
+    (refl_S : ∀ a, S a a)
+    (trans_S : ∀ a b c, S a b → S b c → S a c)
+    (contains_R : ∀ a b, R a b → S a b) :
+    ∀ a b, ReflTransClosure R a b → S a b := by
+  intro a b h
+  induction h with
+  | refl x => exact refl_S x
+  | step hR _ ih => exact trans_S _ _ _ (contains_R _ _ hR) ih
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -518,3 +613,8 @@ end Core
 #print axioms Core.no_alternative_within_pattern
 #print axioms Core.unique_pattern_collapses_to_IsUniqueSolution
 #print axioms Core.self_similar_at_every_universe
+#print axioms Core.empty_initial
+#print axioms Core.unit_terminal
+#print axioms Core.boolTwo_left_inv
+#print axioms Core.boolTwo_right_inv
+#print axioms Core.closure_minimal
