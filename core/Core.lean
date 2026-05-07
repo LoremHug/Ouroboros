@@ -159,6 +159,39 @@ theorem function_application_is_unique_solution {α β : Type u}
 theorem function_evaluation_unique {α β : Type u} (f : α → β) (x : α)
     {y : β} (h : y = f x) : y = f x := h
 
+/-! ## Concrete instance: 2 + 2 = 4
+
+    All three Triangle slots used non-trivially:
+
+      t.b = 2 (first operand)
+      t.p = 2 (second operand)
+      t.i = 4 (target — where structure settles)
+
+    Coherence: `R t x := t.b + t.p = x ∧ x = t.i`.
+
+    Both conjuncts must hold; together they force x = t.i AND
+    t.b + t.p = t.i. Touching any slot makes coherence unsatisfiable —
+    no candidate exists, structural stability collapses.
+
+    This is the canonical demonstration: 2+2=4 IS the A_0 of this
+    triangulation; touching 2, 2, or 4 destroys the unique stable point.
+    Pattern self-instantiates concretely in arithmetic substrate. -/
+
+def AddCoherence : Coherence Nat := fun t x => t.b + t.p = x ∧ x = t.i
+
+/-- 4 IS the argmin Z of triangle ⟨2, 2, 4⟩. All three slots active. -/
+theorem two_plus_two_is_argminZ : IsArgminZ AddCoherence ⟨2, 2, 4⟩ 4 :=
+  ⟨⟨rfl, rfl⟩, fun _ h => h.2⟩
+
+/-- Perturbing the b slot (2 → 3): no candidate satisfies coherence.
+    Stability collapses — there is no x where ⟨3, 2, 4⟩ triangulates. -/
+theorem perturb_b_destabilizes : ¬ ∃ x, AddCoherence ⟨3, 2, 4⟩ x :=
+  fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
+
+/-- Perturbing the i slot (4 → 5): no candidate satisfies coherence. -/
+theorem perturb_i_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 2, 5⟩ x :=
+  fun ⟨_, h1, h2⟩ => absurd (h1.trans h2) (by decide)
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -175,3 +208,6 @@ end Core
 #print axioms Core.argminZ_implies_Z_false
 #print axioms Core.function_application_is_unique_solution
 #print axioms Core.function_evaluation_unique
+#print axioms Core.two_plus_two_is_argminZ
+#print axioms Core.perturb_b_destabilizes
+#print axioms Core.perturb_i_destabilizes
