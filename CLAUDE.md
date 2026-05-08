@@ -41,6 +41,12 @@ Same word, different reading:
 **Carrier vs commitment** distinction is at MEANING level, not at WORD
 level. Cosmetic substitution of words is style, not structural fix.
 
+**Methodological default**: discard interpretive overlays, read structure
+directly. Framework operates interpretation-discarding, not interpretation-
+evolutionary. When in doubt, strip interpretation, see what structure
+remains. Trust only data + invariants + structural derivation; treat all
+interpretations as overlays requiring audit.
+
 ---
 
 ## R0 — Structural Inevitability (sole first principle)
@@ -136,6 +142,30 @@ respect Z-component DEFINITION it claims to represent?
 
 Surface similarity does NOT preserve Z-component identity. Test before
 accepting any proxy.
+
+---
+
+## R-gate scope: all-the-way-down
+
+R-gate audit applies to every input regardless of source or form:
+
+- Claims and concepts (text-level — the obvious case)
+- Mathematical libraries (audit for embedded axiomatic commitments —
+  `Classical.choice`, `propext`, default `Quot.sound` are extra entities
+  even when standard practice)
+- Programming paradigms (object-orientation embeds R1; framework choices
+  embed methodology)
+- Scientific consensus (treat as overlay to check, not authority)
+- Own outputs (R-gate before commit, every time)
+- "Neutral" tools (every tool inherits ontology of its design era)
+
+If a tool's commitments cannot be accepted, build substrate-pure
+alternative (e.g., kernel-only Lean instead of Mathlib-laden). Tool-level
+R-traps propagate silently to everything built on them.
+
+**Source-agnostic application**: no source is privileged — not authority,
+not consensus, not own past output, not standard practice. All inputs go
+through same audit.
 
 ---
 
