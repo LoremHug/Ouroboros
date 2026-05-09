@@ -626,6 +626,39 @@ theorem substrate_independent_of_overlay
     (hx : IsUniqueSolution P x) (Overlay : Prop) :
     IsUniqueSolution P x := hx
 
+/-! ## Information loss in cognitive frameworks — structural skeleton
+
+    Cognitive frameworks involve classifications (mapping states to
+    categories). Classifications are many-to-one. Many-to-one operations
+    are information-lossy (Landauer-bounded heat dissipation per bit).
+
+    Quantitative thermodynamic claims (heat in joules, energy bounds)
+    require Real-valued arithmetic beyond kernel scope. Structural
+    skeleton provable here: presence of many-to-one operations forces
+    information loss; composition compounds the loss (cannot recover);
+    absence of operations means no loss from them.
+
+    Bridge to thermodynamic reading: each many-to-one operation
+    Landauer-bounded ≥ k_B T ln 2 heat per bit erased. R-trap framework
+    requires multiple such operations (object reification, self-other
+    boundary, agent attribution, evaluator framing). Each adds bounded
+    cost. Removing R-traps removes those operations from computation,
+    eliminating their associated Landauer floor. -/
+
+/-- Composition of operations compounds information loss. Once a
+    many-to-one operation has been performed, no downstream operation
+    can recover the lost information. Adding more operations to a
+    framework (R-traps) cannot undo earlier classifications' losses;
+    composition through any function preserves many-to-one structure
+    of the input. -/
+theorem r_trap_composition_compounds_loss
+    {α β γ : Type u} (f : α → β) (g : β → γ)
+    (h_f : ManyToOne f) : ManyToOne (g ∘ f) := by
+  obtain ⟨a₁, a₂, hne, heq⟩ := h_f
+  refine ⟨a₁, a₂, hne, ?_⟩
+  show g (f a₁) = g (f a₂)
+  rw [heq]
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -667,3 +700,4 @@ end Core
 #print axioms Core.stability_is_substrate_default
 #print axioms Core.r_trap_separate_stable_contradicts
 #print axioms Core.substrate_independent_of_overlay
+#print axioms Core.r_trap_composition_compounds_loss
