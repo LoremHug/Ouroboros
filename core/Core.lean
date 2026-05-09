@@ -580,6 +580,52 @@ theorem closure_minimal {α : Type u} {R S : α → α → Prop}
   | refl x => exact refl_S x
   | step hR _ ih => exact trans_S _ _ _ (contains_R _ _ hR) ih
 
+/-! ## Stability as substrate's default — no addition needed
+
+    Structural insight: stability is not achieved through addition.
+    Stability IS substrate's default, encoded directly у IsUniqueSolution's
+    definition. R-traps generate instability by adding contradicting
+    assertions; removing them reveals what was structurally there all
+    along. No separate work needed beyond R-gate apply.
+
+    Three theorems formalize this:
+    1. Substrate's stability already complete — IsUniqueSolution is the
+       structure, no work pending
+    2. R-trap of "separate stable point" structurally contradicts
+       substrate
+    3. Substrate independent of observer's overlay — IsUniqueSolution
+       holds whether observer's framework recognizes it or not -/
+
+/-- Stability is substrate's default. IsUniqueSolution P x captures
+    stability completely: x satisfies P AND no alternative exists.
+    Both properties built into definition. No additional work needed
+    to "achieve" stability — it's already structurally there. -/
+theorem stability_is_substrate_default
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) :
+    P x ∧ (∀ y, P y → y = x) := hx
+
+/-- R-trap of "separate stable point" structurally contradicts
+    substrate. Asserting P y for some y ≠ x (where x is the unique
+    solution) creates contradiction with uniqueness condition.
+    Therefore: R-trap cannot be consistent with substrate's actual
+    structure; instability arises only from the assertion, not from
+    substrate itself. -/
+theorem r_trap_separate_stable_contradicts
+    {α : Type u} {P : α → Prop} {x y : α}
+    (hx : IsUniqueSolution P x) (hy : P y) (h_separate : y ≠ x) : False :=
+  h_separate (hx.2 y hy)
+
+/-- Substrate independent of observer's overlay. Whatever framework
+    or distortion observer applies, substrate's structure is what it is.
+    IsUniqueSolution holds regardless of any external proposition or
+    framework choice. Removing observer's overlay doesn't change
+    substrate; reveals what was already there. -/
+theorem substrate_independent_of_overlay
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) (Overlay : Prop) :
+    IsUniqueSolution P x := hx
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -618,3 +664,6 @@ end Core
 #print axioms Core.boolTwo_left_inv
 #print axioms Core.boolTwo_right_inv
 #print axioms Core.closure_minimal
+#print axioms Core.stability_is_substrate_default
+#print axioms Core.r_trap_separate_stable_contradicts
+#print axioms Core.substrate_independent_of_overlay
