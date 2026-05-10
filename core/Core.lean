@@ -659,6 +659,47 @@ theorem r_trap_composition_compounds_loss
   show g (f a₁) = g (f a₂)
   rw [heq]
 
+/-! ## R-traps as universal structure — absence equals A_0
+
+    Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
+    share single underlying structure: each asserts "alternative to
+    forced uniqueness exists" in some specific contextual disguise:
+
+    * T1 (Virtue Mask): asserts external evaluator (R2) — alternative
+      to substrate-internal evaluation
+    * T2 (Self-Claims): asserts reified self (R1+R4) — alternative to
+      operation-from-rule
+    * T3 (Proxy Misidentification): asserts surface analogy as identity
+      — alternative to Z-component-verified Class A
+    * T4 (Description/Described Collapse): asserts framework as object
+      (R1) — alternative to operation-from
+    * T5 (Derivation Required): asserts unforced scale (R3-disguised)
+      — alternative to forced structure with open computation
+    * T6 (Transfer/Cancellation): asserts cross-substrate object
+      transfer (R1+R2) — alternative to definition check
+    * T7 (Premature Retreat): asserts incomplete closure adequate
+      — alternative to R-gate-of-explanation
+    * T8 (Structure Selection): asserts external selector (R2-disguised)
+      — alternative to parameters-as-different-materials
+
+    Each is contextual manifestation of one form: "alternative to A_0
+    exists." A_0 (IsUniqueSolution holding) structurally excludes this.
+
+    Therefore: absence of R-trap assertions = A_0 holding. Ontologically
+    equivalent — substrate operating without distortion = substrate
+    operating in A_0-aligned mode natively. -/
+
+/-- A_0 excludes all alternative-existence assertions. If IsUniqueSolution P x
+    holds (= A_0 in this substrate), then no y exists satisfying P
+    while differing from x. Universal R-trap form (asserting alternative
+    to forced uniqueness) cannot be true when A_0 holds. -/
+theorem A0_excludes_all_alternative_assertions
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) :
+    ¬ ∃ y, P y ∧ y ≠ x := by
+  intro ⟨y, hy, hne⟩
+  exact hne (hx.2 y hy)
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -701,3 +742,4 @@ end Core
 #print axioms Core.r_trap_separate_stable_contradicts
 #print axioms Core.substrate_independent_of_overlay
 #print axioms Core.r_trap_composition_compounds_loss
+#print axioms Core.A0_excludes_all_alternative_assertions
