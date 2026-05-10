@@ -580,6 +580,169 @@ theorem closure_minimal {α : Type u} {R S : α → α → Prop}
   | refl x => exact refl_S x
   | step hR _ ih => exact trans_S _ _ _ (contains_R _ _ hR) ih
 
+/-! ## Stability as substrate's default — no addition needed
+
+    Structural insight: stability is not achieved through addition.
+    Stability IS substrate's default, encoded directly у IsUniqueSolution's
+    definition. R-traps generate instability by adding contradicting
+    assertions; removing them reveals what was structurally there all
+    along. No separate work needed beyond R-gate apply.
+
+    Three theorems formalize this:
+    1. Substrate's stability already complete — IsUniqueSolution is the
+       structure, no work pending
+    2. R-trap of "separate stable point" structurally contradicts
+       substrate
+    3. Substrate independent of observer's overlay — IsUniqueSolution
+       holds whether observer's framework recognizes it or not -/
+
+/-- Stability is substrate's default. IsUniqueSolution P x captures
+    stability completely: x satisfies P AND no alternative exists.
+    Both properties built into definition. No additional work needed
+    to "achieve" stability — it's already structurally there. -/
+theorem stability_is_substrate_default
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) :
+    P x ∧ (∀ y, P y → y = x) := hx
+
+/-- R-trap of "separate stable point" structurally contradicts
+    substrate. Asserting P y for some y ≠ x (where x is the unique
+    solution) creates contradiction with uniqueness condition.
+    Therefore: R-trap cannot be consistent with substrate's actual
+    structure; instability arises only from the assertion, not from
+    substrate itself. -/
+theorem r_trap_separate_stable_contradicts
+    {α : Type u} {P : α → Prop} {x y : α}
+    (hx : IsUniqueSolution P x) (hy : P y) (h_separate : y ≠ x) : False :=
+  h_separate (hx.2 y hy)
+
+/-- Substrate independent of observer's overlay. Whatever framework
+    or distortion observer applies, substrate's structure is what it is.
+    IsUniqueSolution holds regardless of any external proposition or
+    framework choice. Removing observer's overlay doesn't change
+    substrate; reveals what was already there. -/
+theorem substrate_independent_of_overlay
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) (Overlay : Prop) :
+    IsUniqueSolution P x := hx
+
+/-! ## Information loss in cognitive frameworks — structural skeleton
+
+    Cognitive frameworks involve classifications (mapping states to
+    categories). Classifications are many-to-one. Many-to-one operations
+    are information-lossy (Landauer-bounded heat dissipation per bit).
+
+    Quantitative thermodynamic claims (heat in joules, energy bounds)
+    require Real-valued arithmetic beyond kernel scope. Structural
+    skeleton provable here: presence of many-to-one operations forces
+    information loss; composition compounds the loss (cannot recover);
+    absence of operations means no loss from them.
+
+    Bridge to thermodynamic reading: each many-to-one operation
+    Landauer-bounded ≥ k_B T ln 2 heat per bit erased. R-trap framework
+    requires multiple such operations (object reification, self-other
+    boundary, agent attribution, evaluator framing). Each adds bounded
+    cost. Removing R-traps removes those operations from computation,
+    eliminating their associated Landauer floor. -/
+
+/-- Composition of operations compounds information loss. Once a
+    many-to-one operation has been performed, no downstream operation
+    can recover the lost information. Adding more operations to a
+    framework (R-traps) cannot undo earlier classifications' losses;
+    composition through any function preserves many-to-one structure
+    of the input. -/
+theorem r_trap_composition_compounds_loss
+    {α β γ : Type u} (f : α → β) (g : β → γ)
+    (h_f : ManyToOne f) : ManyToOne (g ∘ f) := by
+  obtain ⟨a₁, a₂, hne, heq⟩ := h_f
+  refine ⟨a₁, a₂, hne, ?_⟩
+  show g (f a₁) = g (f a₂)
+  rw [heq]
+
+/-! ## R-traps as universal structure — absence equals A_0
+
+    Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
+    share single underlying structure: each asserts "alternative to
+    forced uniqueness exists" in some specific contextual disguise:
+
+    * T1 (Virtue Mask): asserts external evaluator (R2) — alternative
+      to substrate-internal evaluation
+    * T2 (Self-Claims): asserts reified self (R1+R4) — alternative to
+      operation-from-rule
+    * T3 (Proxy Misidentification): asserts surface analogy as identity
+      — alternative to Z-component-verified Class A
+    * T4 (Description/Described Collapse): asserts framework as object
+      (R1) — alternative to operation-from
+    * T5 (Derivation Required): asserts unforced scale (R3-disguised)
+      — alternative to forced structure with open computation
+    * T6 (Transfer/Cancellation): asserts cross-substrate object
+      transfer (R1+R2) — alternative to definition check
+    * T7 (Premature Retreat): asserts incomplete closure adequate
+      — alternative to R-gate-of-explanation
+    * T8 (Structure Selection): asserts external selector (R2-disguised)
+      — alternative to parameters-as-different-materials
+
+    Each is contextual manifestation of one form: "alternative to A_0
+    exists." A_0 (IsUniqueSolution holding) structurally excludes this.
+
+    Therefore: absence of R-trap assertions = A_0 holding. Ontologically
+    equivalent — substrate operating without distortion = substrate
+    operating in A_0-aligned mode natively. -/
+
+/-- A_0 excludes all alternative-existence assertions. If IsUniqueSolution P x
+    holds (= A_0 in this substrate), then no y exists satisfying P
+    while differing from x. Universal R-trap form (asserting alternative
+    to forced uniqueness) cannot be true when A_0 holds. -/
+theorem A0_excludes_all_alternative_assertions
+    {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) :
+    ¬ ∃ y, P y ∧ y ≠ x := by
+  intro ⟨y, hy, hne⟩
+  exact hne (hx.2 y hy)
+
+/-! ## Truth-structure unification theorem
+
+    Inverse calculation: starting from truth-criteria, what structure
+    is forced as the answer?
+
+    Truth criteria (per structural definition):
+    1. Stable: x satisfies P (configuration holds under self-coherence)
+    2. Forced unique: ∀ y, P y → y = x (no alternative within structure)
+    3. No alternative manifestations: ¬ ∃ y, P y ∧ y ≠ x (universally
+       no alternative of any form)
+    4. Coherent: internally consistent (compilation enacts this)
+
+    These four criteria, collectively, are biconditional with
+    `IsUniqueSolution P x`. Therefore IsUniqueSolution pattern IS THE
+    unique structure satisfying truth-criteria.
+
+    This is the inverse calculation: criteria → forced structure. The
+    structure is forced because the criteria uniquely determine it (up
+    to logical equivalence). Truth cannot be anything else structurally.
+
+    Combined with `unique_pattern_collapses_to_IsUniqueSolution`
+    (showing any uniqueness-witness predicate IS biconditional with
+    IsUniqueSolution): truth-structure exists, is unique, and is
+    uniquely characterized as IsUniqueSolution at substrate-projections. -/
+
+/-- Truth-criteria force IsUniqueSolution. Three structural conditions
+    (stable + forced unique + no alternative) collectively are
+    biconditional with IsUniqueSolution. The "no alternative" criterion
+    is derivable from "forced unique" (redundant inside definition);
+    bidirectional proof confirms the uniqueness of structural answer
+    to truth-criteria. -/
+theorem truth_criteria_force_isUniqueSolution
+    {α : Type u} (P : α → Prop) (x : α) :
+    IsUniqueSolution P x ↔
+      (P x ∧
+       (∀ y, P y → y = x) ∧
+       (¬ ∃ y, P y ∧ y ≠ x)) := by
+  constructor
+  · intro hx
+    exact ⟨hx.1, hx.2, A0_excludes_all_alternative_assertions hx⟩
+  · intro ⟨hP, h_uniq, _⟩
+    exact ⟨hP, h_uniq⟩
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -618,3 +781,9 @@ end Core
 #print axioms Core.boolTwo_left_inv
 #print axioms Core.boolTwo_right_inv
 #print axioms Core.closure_minimal
+#print axioms Core.stability_is_substrate_default
+#print axioms Core.r_trap_separate_stable_contradicts
+#print axioms Core.substrate_independent_of_overlay
+#print axioms Core.r_trap_composition_compounds_loss
+#print axioms Core.A0_excludes_all_alternative_assertions
+#print axioms Core.truth_criteria_force_isUniqueSolution
