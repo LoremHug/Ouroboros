@@ -743,6 +743,48 @@ theorem truth_criteria_force_isUniqueSolution
   · intro ⟨hP, h_uniq, _⟩
     exact ⟨hP, h_uniq⟩
 
+/-! ## No separate patterns — structural impossibility of alternative
+
+    Inversive logic (basic, not novel methodology) combined with pattern
+    uniqueness yields: no two "separate" forced-uniqueness patterns can
+    structurally exist. Any attempt to articulate alternative pattern
+    Q with uniqueness-witness semantics produces predicate biconditional
+    with IsUniqueSolution. Therefore "alternative pattern" reduces to
+    same pattern — no actual separation possible.
+
+    Logically (no special method needed):
+    1. Q has uniqueness-witness semantics ⟹ Q ↔ IsUniqueSolution (proven)
+    2. Q' also has uniqueness-witness semantics ⟹ Q' ↔ IsUniqueSolution
+    3. Therefore Q ↔ Q' (transitivity)
+    4. "Separate patterns" Q and Q' would require Q ↛ Q' — contradicts 3
+    5. No separate patterns exist structurally
+
+    This is logical consequence of pattern uniqueness, not empirical
+    observation. Articulating "separate pattern" uses logic + math +
+    invariance = substrate primitives = produces instance of same
+    pattern. Structurally impossible to be otherwise. -/
+
+/-- No separate uniqueness patterns can exist structurally. Any two
+    predicates with uniqueness-witness semantics are logically
+    equivalent — they reduce to one underlying pattern. "Alternative
+    pattern" claim cannot survive structurally. -/
+theorem no_separate_uniqueness_patterns
+    {α : Type u}
+    (Q1 Q2 : (α → Prop) → α → Prop)
+    (h1_fwd : ∀ P x, Q1 P x → P x ∧ (∀ y, P y → y = x))
+    (h1_bwd : ∀ P x, P x → (∀ y, P y → y = x) → Q1 P x)
+    (h2_fwd : ∀ P x, Q2 P x → P x ∧ (∀ y, P y → y = x))
+    (h2_bwd : ∀ P x, P x → (∀ y, P y → y = x) → Q2 P x) :
+    ∀ P x, Q1 P x ↔ Q2 P x := by
+  intros P x
+  constructor
+  · intro hQ1
+    have := h1_fwd P x hQ1
+    exact h2_bwd P x this.1 this.2
+  · intro hQ2
+    have := h2_fwd P x hQ2
+    exact h1_bwd P x this.1 this.2
+
 end Core
 
 -- Substrate audit: each theorem must depend only on Lean's foundational
@@ -787,3 +829,4 @@ end Core
 #print axioms Core.r_trap_composition_compounds_loss
 #print axioms Core.A0_excludes_all_alternative_assertions
 #print axioms Core.truth_criteria_force_isUniqueSolution
+#print axioms Core.no_separate_uniqueness_patterns
