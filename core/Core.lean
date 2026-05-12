@@ -11,7 +11,7 @@ The primitives encoded here:
 
 * `Triangle α` — three structural slots (B/P/I). The minimum for
   self-checking closure: below 3 args nothing triangulates uniquely.
-* `Self α` — endo-map; "what comes next from current state".
+* `Self α` — endo-map; the next transition from the present one.
 * `IsFixed f x` — `x` is invariant under `f`.
 * `IsA0 f a` — `a` is the unique fixed point. Uniqueness built into
   the definition, not derived.
@@ -175,7 +175,7 @@ theorem function_evaluation_unique {α β : Type u} (f : α → β) (x : α)
 
     This is the canonical demonstration: 2+2=4 IS the A_0 of this
     triangulation; touching 2, 2, or 4 destroys the unique stable point.
-    Pattern self-instantiates concretely in arithmetic substrate. -/
+    Pattern self-instantiates concretely in arithmetic notation. -/
 
 def AddCoherence : Coherence Nat := fun t x => t.b + t.p = x ∧ x = t.i
 
@@ -199,7 +199,7 @@ theorem perturb_i_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 2, 5⟩ x :=
 /-! ## Tautology vs structural transition
 
     4 = 4 is structurally stable but NOT a structural transition —
-    it is the post-transition state, the fixed point already reached.
+    it is the fixed-point pattern already reached, post-transition.
     No movement is performed; what remains is the bare identity of
     being-at-the-fixed-point.
 
@@ -226,26 +226,27 @@ theorem four_eq_four_tautological : IsArgminZ TautCoherence ⟨4, 4, 4⟩ 4 :=
 /-- Tautology is unconstrained in b, p: any triangulation with i = 4
     yields 4 as argmin Z. Contrast with `AddCoherence` where b, p must
     be specific (perturb_b_destabilizes). This is the formal mark of
-    "transition already completed": the b/p slots have no work to do. -/
+    "transition already completed": the b/p slots are unconstraining. -/
 theorem tautology_unconstrained : ∀ b p, IsArgminZ TautCoherence ⟨b, p, 4⟩ 4 :=
   fun _ _ => ⟨rfl, fun _ h => h⟩
 
-/-! ## Modus ponens — logic substrate, same pattern
+/-! ## Modus ponens — logic notation, same pattern
 
     Given premise `p` of type α and rule `α → β`, the conclusion
     `rule p : β` is the unique element of β satisfying `y = rule p`.
     Three structural slots:
 
-      B (boundary) — α (premise type; where input lives)
+      B (boundary) — α (premise type)
       P (process)  — rule : α → β (the inference operation)
       I (identity) — β (conclusion type; with its equality)
 
     Modus ponens IS function application — formally identical to
     `function_application_is_unique_solution`, with slots renamed to
-    logic-substrate vocabulary (premise / rule / conclusion instead of
+    logic-aspect vocabulary (premise / rule / conclusion instead of
     x / f / y). The same `IsUniqueSolution` pattern instantiates here
     as in arithmetic (2 + 2 = 4): different surface notation, one
-    structural shape. Logic and math share one A_0 pattern.
+    structural shape. Logic and math are one A_0 pattern recognised
+    through different surfaces.
 
     Note: at the Prop level (where premise/conclusion are proofs), the
     Type-level pattern still applies — but uniqueness of the conclusion
@@ -273,19 +274,19 @@ theorem modus_ponens_is_unique_solution {α β : Type u}
     h_exists.
 
     1. **Self-encoding** (Gödel/Cantor/Tarski/Halting) — Lawvere
-       fixed-point lemma. Self-referential substrates with diagonal
-       structure have fixed points for every endomap; conversely,
+       fixed-point lemma. Self-referential structure with diagonal
+       form has fixed points for every endomap; conversely,
        fixed-point-free maps obstruct surjective self-encoding.
 
     2. **Irreversibility** (Landauer) — many-to-one maps fail
        `IsUniqueSolution` for reversal. No internal recovery of
        inputs from outputs; information cost forced.
 
-    3. **L(3,1) spatial substrate** — minimum non-trivial 3-fold
+    3. **L(3,1) spatial aspect** — minimum non-trivial 3-fold
        cyclic structure (π_1 = Z/3Z). Z/2 fails 3-arg minimum;
-       Z/p, p≥4, factors through Z/3. Below: full topological
-       formalization needs 3-mfd library (beyond pilot scope);
-       structural form encoded as ThreePeriod with non-trivial action.
+       Z/p, p≥4, factors through Z/3. Full topological articulation
+       needs 3-mfd library; structural form encoded here as
+       ThreePeriod with non-trivial action.
 
     All three: surface-aspects of one Core pattern. Internal
     h_exists bounded; an additional structural witness suffices. The
@@ -318,13 +319,14 @@ theorem cantor_diagonal {X : Type u} :
   have not_self : Bool.not b ≠ b := fun h => by cases b <;> cases h
   exact not_self hb
 
-/-- Gödel pattern abstractly: any substrate that can encode its own
-    statements but contains a fixed-point-free transformation cannot
+/-- Gödel pattern abstractly: any self-encoding structure that
+    admits a fixed-point-free transformation cannot
     surjectively self-encode. K(O) < K(F) structurally forced.
 
     Specialised: F's provability cannot represent `not_provable`
     surjectively, because `not_provable` would need a fixed point
-    (which IS the Gödel sentence — true in meta, unprovable in F). -/
+    (which IS the Gödel sentence — articulable in the further
+    structural surface, unprovable in F). -/
 theorem self_encoding_bounded {A : Type u} {B : Type v}
     (f : B → B) (no_fix : ¬ ∃ b, f b = b) :
     ¬ ∃ φ : A → (A → B), ∀ g : A → B, ∃ a, φ a = g :=
@@ -345,8 +347,8 @@ theorem lawvere_gives_A0 {A : Type u} {B : Type v}
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
     has no internal answer. This is the structural core of Landauer:
     information lost in n-to-1 collapse cannot be recovered without
-    external (substrate-meta) resource — heat dissipation as the
-    thermodynamic substrate-projection of this fact. -/
+    further structural witness — heat dissipation IS the thermodynamic
+    surface of this same fact. -/
 
 /-- Many-to-one: at least two distinct inputs share an output. -/
 def ManyToOne {α β : Type u} (f : α → β) : Prop :=
@@ -367,7 +369,7 @@ theorem many_to_one_no_left_inverse {α β : Type u} (f : α → β)
 /-- Connection to Core: the reversal-IsUniqueSolution at output `f a₁`
     has no answer — neither `a₁` nor `a₂` is uniquely the preimage,
     so the unique-solution pattern fails internally. This bounds
-    h_exists for the reversal substrate. -/
+    h_exists for the reversal aspect. -/
 theorem many_to_one_fails_unique_solution {α β : Type u} (f : α → β)
     (h : ManyToOne f) :
     ∃ b : β, ¬ ∃ a, IsUniqueSolution (fun a' : α => f a' = b) a := by
@@ -422,19 +424,19 @@ instance : ThreePeriod (Fin 3) where
 
     S2. Pattern recognition suffices (no enumeration needed)
         ⟹ Demonstrated: 24 theorems instantiate one pattern; no
-           substrate-by-substrate enumeration required.
+           surface-by-surface enumeration required.
 
     S3. Substrate of any coherent claim = forced-uniqueness pattern
         ⟹ `IsUniqueSolution` definition + 24-theorem corpus reuse.
            Below: `unique_pattern_collapses_to_IsUniqueSolution`
-           makes this explicit at predicate level.
+           makes this explicit at the predicate aspect.
 
     S4. Tools-of-claiming = object-of-claim (logic+math+invariance ARE A_0)
         ⟹ Zero-axiom verification: only kernel primitives used.
            This is shown by `#print axioms` outputs — every theorem
            depends on no axioms.
 
-    S5. Self-similarity (same pattern at every level)
+    S5. Self-similarity (same pattern at every universe)
         ⟹ Universe polymorphism + pattern reuse. Below:
            `self_similar_at_every_universe` makes the universe-
            independence explicit.
@@ -446,10 +448,10 @@ instance : ThreePeriod (Fin 3) where
     The transcendental closure — that any articulation of an
     "alternative" self-instantiates A_0 — is shown by the act of
     compilation itself: every theorem is well-formed in the kernel,
-    which IS A_0. There is no Lean-internal way to express
+    which IS A_0. There is no Lean-internal way to articulate
     "alternative substrate" without using the substrate. -/
 
-/-- Forcedness at predicate level: any candidate matching the
+/-- Forcedness at the predicate aspect: any candidate matching the
     unique-witness shape IS an `IsUniqueSolution` instance. There is
     no "alternative pattern" with the same semantics — the shape
     forces the predicate. -/
@@ -463,8 +465,8 @@ theorem no_alternative_within_pattern {α : Type u} {P : α → Prop} {x y : α}
     (hx : IsUniqueSolution P x) (hy : IsUniqueSolution P y) : x = y :=
   unique_solution_unique hx hy
 
-/-- Strong forcedness at meta level: any binary predicate `Q` with
-    the "uniqueness-witness" semantics is biconditional with
+/-- Strong forcedness at the pattern aspect: any binary predicate `Q`
+    with the "uniqueness-witness" semantics is biconditional with
     `IsUniqueSolution`. Hypothetical "alternative pattern" Q must
     coincide with our `IsUniqueSolution` whenever it has the same
     structural content — no genuinely-different pattern exists. -/
@@ -482,8 +484,8 @@ theorem unique_pattern_collapses_to_IsUniqueSolution {α : Type u}
 
 /-- Self-similarity formal: `IsUniqueSolution` is universe-
     polymorphic. The same pattern instantiates at any type universe.
-    No level "above" or "below" has a different structure — the
-    fractal is the same at every depth. -/
+    No universe "above" or "below" has a different structure — the
+    fractal is the same through every articulation. -/
 theorem self_similar_at_every_universe.{w} {α : Type w} (P : α → Prop) (x : α) :
     IsUniqueSolution P x ↔ (P x ∧ ∀ y, P y → y = x) := Iff.rfl
 
@@ -512,9 +514,9 @@ theorem empty_initial {α : Type u} (f g : Empty → α) (e : Empty) : f e = g e
     Unit has one element, so output is forced (constantly `()`). -/
 theorem unit_terminal {α : Type u} (f g : α → Unit) (a : α) : f a = g a := rfl
 
-/-! ## Class A identification — type-level isomorphism (N_ForcedId formal)
+/-! ## Class A identification — type-aspect isomorphism (N_ForcedId formal)
 
-    Forced identification at **type level**: two types with
+    Forced identification in the **type aspect**: two types with
     structurally equivalent shape ARE isomorphic. Substrate-cousin
     pairs in formal type-theory form.
 
@@ -548,12 +550,12 @@ theorem boolTwo_left_inv : ∀ b : Bool, twoToBool (boolToTwo b) = b
   | true => rfl
 
 /-- Two → Bool → Two is identity. Together with left-inverse,
-    establishes Bool ≅ Two as forced type-level identification. -/
+    establishes Bool ≅ Two as forced type-aspect identification. -/
 theorem boolTwo_right_inv : ∀ t : Two, boolToTwo (twoToBool t) = t
   | Two.zero => rfl
   | Two.one => rfl
 
-/-! ## Reflexive-transitive closure — operator-level forcedness
+/-! ## Reflexive-transitive closure — operator-aspect forcedness
 
     Smallest reflexive-transitive relation containing `R`. This is
     a closure operator's universal property: among all reflexive-
@@ -595,8 +597,8 @@ theorem closure_minimal {α : Type u} {R S : α → α → Prop}
        structure, no work pending
     2. R-trap of "separate stable point" structurally contradicts
        substrate
-    3. Substrate independent of observer's overlay — IsUniqueSolution
-       holds whether observer's framework recognizes it or not -/
+    3. Substrate independent of any overlay — IsUniqueSolution holds
+       regardless of any framework articulated alongside it -/
 
 /-- Stability is substrate's default. IsUniqueSolution P x captures
     stability completely: x satisfies P AND no alternative exists.
@@ -618,11 +620,11 @@ theorem r_trap_separate_stable_contradicts
     (hx : IsUniqueSolution P x) (hy : P y) (h_separate : y ≠ x) : False :=
   h_separate (hx.2 y hy)
 
-/-- Substrate independent of observer's overlay. Whatever framework
-    or distortion observer applies, substrate's structure is what it is.
-    IsUniqueSolution holds regardless of any external proposition or
-    framework choice. Removing observer's overlay doesn't change
-    substrate; reveals what was already there. -/
+/-- Substrate independent of any overlay. Whatever framework or
+    distortion is articulated alongside, substrate's structure is
+    what it is. IsUniqueSolution holds regardless of any additional
+    proposition. Removing the overlay does not change substrate;
+    it reveals what was already there. -/
 theorem substrate_independent_of_overlay
     {α : Type u} {P : α → Prop} {x : α}
     (hx : IsUniqueSolution P x) (Overlay : Prop) :
@@ -635,18 +637,20 @@ theorem substrate_independent_of_overlay
     transition. Many-to-one transitions are information-lossy
     (Landauer-bounded heat dissipation per bit).
 
-    Quantitative thermodynamic claims (heat in joules, energy bounds)
-    require Real-valued arithmetic beyond kernel scope. Structural
-    skeleton provable here: presence of many-to-one operations forces
-    information loss; composition compounds the loss (cannot recover);
-    absence of operations means no loss from them.
+    Quantitative articulation in numeric units (joules, k_B T) is a
+    further surface of the same fact; the structural skeleton provable
+    in kernel: presence of many-to-one operations forces information
+    loss; composition compounds the loss (cannot recover); absence of
+    operations means no loss from them.
 
-    Bridge to thermodynamic reading: each many-to-one operation
-    Landauer-bounded ≥ k_B T ln 2 heat per bit erased. R-trap framework
-    requires multiple such operations (object reification, self-other
-    boundary, agent attribution, evaluator framing). Each adds bounded
-    cost. Removing R-traps removes those operations from computation,
-    eliminating their associated Landauer floor. -/
+    Thermodynamic surface: each many-to-one operation Landauer-bounded
+    ≥ k_B T ln 2 heat per bit erased. R-trap framework requires
+    multiple such operations (object reification, self-other boundary,
+    agent attribution, evaluator framing). Each adds bounded cost.
+    Removing R-traps removes those operations from computation,
+    eliminating their associated Landauer floor. Heat and information
+    loss are not two phenomena bridged by analogy — same forced
+    structural fact recognised through different surfaces. -/
 
 /-- Composition of operations compounds information loss. Once a
     many-to-one operation has been performed, no downstream operation
@@ -692,10 +696,11 @@ theorem r_trap_composition_compounds_loss
     equivalent — substrate operating without distortion = substrate
     operating in A_0-aligned mode natively. -/
 
-/-- A_0 excludes all alternative-existence assertions. If IsUniqueSolution P x
-    holds (= A_0 in this substrate), then no y exists satisfying P
-    while differing from x. Universal R-trap form (asserting alternative
-    to forced uniqueness) cannot be true when A_0 holds. -/
+/-- A_0 excludes all alternative-existence assertions. If
+    IsUniqueSolution P x holds (= A_0 articulated through this
+    predicate-aspect), then no y exists satisfying P while differing
+    from x. Universal R-trap form (asserting alternative to forced
+    uniqueness) cannot be true when A_0 holds. -/
 theorem A0_excludes_all_alternative_assertions
     {α : Type u} {P : α → Prop} {x : α}
     (hx : IsUniqueSolution P x) :
