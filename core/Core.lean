@@ -63,6 +63,13 @@ theorem A0_unique {α : Type u} {f : Self α} {a b : α}
 theorem A0_implies_stable {α : Type u} {f : Self α} {a : α}
     (ha : IsA0 f a) : IsFixed f a := ha.1
 
+/-- `h_exists` is the structural form of K(O) < K(F), not a gap to
+    be derived away. For a specific `f`: either A_0 exists (then
+    `h_exists` holds and `a` IS that A_0) or it does not (then the
+    theorem is not applicable to this `f`). No domain "across f's"
+    exists where one could ask whether `h_exists` holds automatically
+    — such a domain would be R2 (external position) over the
+    instance-aspect where the question actually has structural form. -/
 theorem stable_implies_A0 {α : Type u} {f : Self α} {a : α}
     (h_stable : IsFixed f a)
     (h_exists : ∃ x, IsA0 f x) : IsA0 f a := by
