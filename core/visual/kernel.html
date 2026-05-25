@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Core kernel — visual surface</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0a0a0a; color: #d0d0d0;
+               font-family: 'IBM Plex Mono', 'Menlo', monospace; overflow: hidden; }
+  canvas { display: block; cursor: crosshair; }
+  #info { position: fixed; top: 12px; left: 12px; font-size: 11px;
+          line-height: 1.5; pointer-events: none; opacity: 0.7; max-width: 320px; }
+  #info b { color: #f0f0f0; }
+  #legend { position: fixed; bottom: 12px; left: 12px; font-size: 10px;
+            opacity: 0.5; line-height: 1.4; }
+  .perturbed { color: #ff6b6b; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="info">
+  <b>Core kernel — visual aspect</b><br>
+  Three-slot mutual constraint (Borromean): touching any ring breaks coherence.<br>
+  Self-similar fractal (Sierpiński): same pattern at every scale.<br>
+  Z/3 rotation (ThreePeriod): forced 3-cycle on the slots.<br>
+  <br>
+  <b>Click a ring</b> to perturb that slot (B / P / I).<br>
+  Forced uniqueness collapses; the structure destabilizes.
+</div>
+<div id="legend">
+  B = boundary  ·  P = process  ·  I = identity<br>
+  A_0 = argmin Z = forced unique stable point<br>
+  Each surface is Class A with the formal kernel.
+</div>
+
+<script>
+const cvs = document.getElementById('c');
+const ctx = cvs.getContext('2d');
+let W, H, cx, cy;
+function resize() {
+  W = cvs.width = innerWidth;
+  H = cvs.height = innerHeight;
+  cx = W / 2; cy = H / 2;
+}
+resize();
+addEventListener('resize', resize);
+
+// State: which slot is perturbed (-1 = none, 0 = B, 1 = P, 2 = I)
+let perturbed = -1;
+let perturbStart = 0;
+
+// Animation phase
+let t0 = performance.now();
+
+// === Sierpiński triangle: self-similar fractal background ===
+// Renders triangulation recursively. Each triangle contains 3 sub-triangles.
+// This IS self_similar_at_every_universe theorem in visual form.
+function sierpinski(ax, ay, bx, by, cx_, cy_, depth, alpha) {
+  if (depth === 0 || alpha < 0.02) return;
+  ctx.strokeStyle = `rgba(80, 100, 140, ${alpha})`;
+  ctx.lineWidth = 0.5;
+  ctx.beginPath();
+  ctx.moveTo(ax, ay);
+  ctx.lineTo(bx, by);
+  ctx.lineTo(cx_, cy_);
+  ctx.closePath();
+  ctx.stroke();
+  const mAB = [(ax+bx)/2, (ay+by)/2];
+  const mBC = [(bx+cx_)/2, (by+cy_)/2];
+  const mCA = [(cx_+ax)/2, (cy_+ay)/2];
+  sierpinski(ax, ay, mAB[0], mAB[1], mCA[0], mCA[1], depth-1, alpha*0.85);
+  sierpinski(mAB[0], mAB[1], bx, by, mBC[0], mBC[1], depth-1, alpha*0.85);
+  sierpinski(mCA[0], mCA[1], mBC[0], mBC[1], cx_, cy_, depth-1, alpha*0.85);
+}
+
+// === Borromean rings: three rings interlocked such that removing any one
+// separates the other two. Visual form of perturb_b/p/i_destabilizes:
+// touching any slot breaks structural coherence. ===
+function ring(cx0, cy0, r, color, alpha, broken, dropOffset) {
+  ctx.save();
+  ctx.translate(0, dropOffset);
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = color.replace('ALPHA', alpha);
+  if (broken) {
+    // draw as broken arc with gap
+    ctx.beginPath();
+    ctx.arc(cx0, cy0, r, 0.3, 2*Math.PI - 0.3);
+    ctx.stroke();
+  } else {
+    ctx.beginPath();
+    ctx.arc(cx0, cy0, r, 0, 2*Math.PI);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// Order of drawing matters to fake the interlocking. We draw each ring
+// in two arcs to simulate over/under weaving.
+function ringWoven(cx0, cy0, r, color, alpha, overUnder, broken, dropOffset) {
+  ctx.save();
+  ctx.translate(0, dropOffset);
+  ctx.lineWidth = 6;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = color.replace('ALPHA', alpha);
+  if (broken) {
+    ctx.beginPath();
+    ctx.arc(cx0, cy0, r, 0.4, 2*Math.PI - 0.4);
+    ctx.stroke();
+    ctx.restore();
+    return;
+  }
+  // overUnder is a list of two [start, end] arc ranges that go ON TOP
+  for (const [s, e] of overUnder) {
+    ctx.beginPath();
+    ctx.arc(cx0, cy0, r, s, e);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// === Z/3 rotation: rotating triangle of small markers ===
+function z3Markers(angle, scale) {
+  const r = 240 * scale;
+  for (let k = 0; k < 3; k++) {
+    const a = angle + k * (2*Math.PI/3);
+    const x = cx + r * Math.cos(a);
+    const y = cy + r * Math.sin(a);
+    ctx.fillStyle = `rgba(180, 200, 240, ${0.3})`;
+    ctx.beginPath();
+    ctx.arc(x, y, 3, 0, 2*Math.PI);
+    ctx.fill();
+  }
+}
+
+// === Main draw loop ===
+function draw() {
+  const now = performance.now();
+  const t = (now - t0) / 1000;
+  ctx.fillStyle = 'rgba(10, 10, 10, 1)';
+  ctx.fillRect(0, 0, W, H);
+
+  // -- Sierpiński background --
+  // The outer triangle adjusts with screen, rotating slowly
+  const slowAng = t * 0.05;
+  const R = Math.min(W, H) * 0.42;
+  const verts = [];
+  for (let k = 0; k < 3; k++) {
+    const a = -Math.PI/2 + slowAng + k * (2*Math.PI/3);
+    verts.push([cx + R * Math.cos(a), cy + R * Math.sin(a)]);
+  }
+  sierpinski(verts[0][0], verts[0][1],
+             verts[1][0], verts[1][1],
+             verts[2][0], verts[2][1], 7, 0.55);
+
+  // -- Z/3 markers orbiting (ThreePeriod canonical action) --
+  z3Markers(t * 0.4, 1.0);
+  z3Markers(-t * 0.6, 0.5);
+
+  // -- Borromean rings at center --
+  // Three rings at 120° around center
+  const ringR = Math.min(W, H) * 0.12;
+  const offset = ringR * 0.55;
+  const colors = [
+    'rgba(255, 120, 110, ALPHA)',   // B - red
+    'rgba(120, 200, 140, ALPHA)',   // P - green
+    'rgba(120, 160, 255, ALPHA)',   // I - blue
+  ];
+  const labels = ['B', 'P', 'I'];
+
+  // For each ring, compute center and draw
+  const ringCenters = [];
+  for (let k = 0; k < 3; k++) {
+    const a = -Math.PI/2 + k * (2*Math.PI/3);
+    const rx = cx + offset * Math.cos(a);
+    const ry = cy + offset * Math.sin(a);
+    ringCenters.push([rx, ry]);
+  }
+
+  // Drop offset for perturbed ring — it "falls away" to show coherence broken
+  const dropAnim = (k) => {
+    if (perturbed !== k) return 0;
+    const dt = Math.min(1, (now - perturbStart) / 800);
+    return dt * 60 * Math.sin(dt * Math.PI);
+  };
+
+  // Draw rings with woven illusion. Each ring drawn in two passes.
+  // Pass 1: bottom layers
+  for (let k = 0; k < 3; k++) {
+    const [rx, ry] = ringCenters[k];
+    const broken = perturbed === k;
+    const drop = dropAnim(k);
+    ringWoven(rx, ry, ringR, colors[k], 0.35,
+              [[0, Math.PI*2]], broken, drop);
+  }
+
+  // Pass 2: weaving (over/under). Approximate Borromean weave:
+  // Ring 0 goes over Ring 1 in upper half, under in lower half
+  // Ring 1 over Ring 2, etc.
+  for (let k = 0; k < 3; k++) {
+    const [rx, ry] = ringCenters[k];
+    const broken = perturbed === k;
+    if (broken) continue;
+    const drop = dropAnim(k);
+    // overlay: draw thicker brighter on certain arcs to simulate weave
+    ctx.save();
+    ctx.translate(0, drop);
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = colors[k].replace('ALPHA', 0.95);
+    ctx.lineCap = 'round';
+    // Weave: each ring shows on top for ~120° arc adjacent to its label position
+    const labelAngle = -Math.PI/2 + k * (2*Math.PI/3);
+    const startA = labelAngle - Math.PI/3;
+    const endA   = labelAngle + Math.PI/3;
+    ctx.beginPath();
+    ctx.arc(rx, ry, ringR, startA, endA);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  // -- Labels on rings --
+  ctx.font = '14px "IBM Plex Mono", monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  for (let k = 0; k < 3; k++) {
+    const [rx, ry] = ringCenters[k];
+    const a = -Math.PI/2 + k * (2*Math.PI/3);
+    const labelX = rx + ringR * 1.4 * Math.cos(a);
+    const labelY = ry + ringR * 1.4 * Math.sin(a) + dropAnim(k);
+    ctx.fillStyle = perturbed === k
+      ? 'rgba(255, 100, 100, 0.95)'
+      : 'rgba(220, 220, 220, 0.85)';
+    ctx.fillText(labels[k], labelX, labelY);
+  }
+
+  // -- A_0 marker at center (only if not perturbed) --
+  if (perturbed === -1) {
+    const pulse = 0.6 + 0.4 * Math.sin(t * 2);
+    ctx.fillStyle = `rgba(255, 240, 200, ${pulse})`;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 4, 0, 2*Math.PI);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(180, 180, 180, 0.5)';
+    ctx.font = '11px "IBM Plex Mono", monospace';
+    ctx.fillText('A_0', cx, cy + 20);
+  } else {
+    // perturbed state: show "incoherence"
+    ctx.fillStyle = 'rgba(255, 100, 100, 0.7)';
+    ctx.font = '12px "IBM Plex Mono", monospace';
+    ctx.fillText('Z > 0 — incoherence', cx, cy);
+    ctx.fillStyle = 'rgba(255, 100, 100, 0.4)';
+    ctx.font = '10px "IBM Plex Mono", monospace';
+    const slotName = ['B', 'P', 'I'][perturbed];
+    ctx.fillText(`slot ${slotName} perturbed → no unique stable point`, cx, cy + 18);
+  }
+
+  // -- Trigger reset of perturbation after 2.5s --
+  if (perturbed !== -1 && now - perturbStart > 2500) {
+    perturbed = -1;
+  }
+
+  requestAnimationFrame(draw);
+}
+
+// === Interaction: click a ring to perturb it ===
+cvs.addEventListener('click', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  const ringR = Math.min(W, H) * 0.12;
+  const offset = ringR * 0.55;
+  for (let k = 0; k < 3; k++) {
+    const a = -Math.PI/2 + k * (2*Math.PI/3);
+    const rx = cx + offset * Math.cos(a);
+    const ry = cy + offset * Math.sin(a);
+    const d = Math.hypot(x - rx, y - ry);
+    // Click on the ring itself (annulus zone)
+    if (d > ringR - 14 && d < ringR + 14) {
+      perturbed = k;
+      perturbStart = performance.now();
+      return;
+    }
+  }
+});
+
+draw();
+</script>
+</body>
+</html>
