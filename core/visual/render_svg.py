@@ -1,18 +1,23 @@
 """
 Render core kernel visual surface as animated SVG.
 
-Composition (matches core/visual/kernel.html):
-- Sierpinski triangulation background (self-similarity)
+Composition:
+- Sierpinski triangulation (self-similarity, rotates 120°/loop)
 - Borromean rings at center (3-slot mutual constraint)
-- Z/3 marker orbits (ThreePeriod canonical action)
 - A_0 halo pulse at center (forced unique stable point)
+
+Structural note: nothing exists outside the triangle.
+Triangle = closure structure; outside the closure = no structural
+existence (would violate A_0 = argmin Z). Z/3 action is shown via
+rotation of the triangle itself, not by additional orbital markers
+(those would falsely represent "something existing outside closure").
 
 SVG with SMIL animations:
 - Vector quality — crisp at any zoom
 - True alpha — no palette banding
-- Small file — typical <50 KB
-- Loops cleanly: rotations complete 120° per cycle, indistinguishable
-  from full cycle due to triangle's Z/3 symmetry.
+- Small file — typical <80 KB
+- Loops cleanly: 120° rotation per cycle, indistinguishable from
+  full cycle due to triangle's Z/3 symmetry.
 
 GitHub renders SVG via `![](file.svg)` markdown syntax.
 """
@@ -29,7 +34,6 @@ PULSE_SEC = 4.0                   # 3 pulses per main loop
 # ── Palette (works on both light and dark GitHub backgrounds) ──────────────
 # No background rectangle: SVG is transparent, blends with parent.
 SIERPINSKI = '#5a6482'            # dusty slate-blue
-Z3_DOT = '#464b5f'                # dark slate
 A0_AMBER = '#b48232'              # warm amber
 LABEL_COLOR = '#3c3c46'
 
@@ -91,29 +95,6 @@ def sierpinski_svg(depth=6):
     parts.append(
         f'    <animateTransform attributeName="transform" type="rotate" '
         f'from="0 {cx} {cy}" to="120 {cx} {cy}" '
-        f'dur="{LOOP_SEC}s" repeatCount="indefinite" />'
-    )
-    parts.append('  </g>')
-    return '\n'.join(parts)
-
-
-def z3_orbit_svg(radius_factor, rotate_forward, duration_offset_ratio):
-    """Three small markers at 120° around center, orbiting."""
-    r_orbit = min(W, H) * radius_factor
-    direction = "" if rotate_forward else "-"
-    parts = [
-        f'  <!-- Z/3 orbit (radius {radius_factor}, '
-        f'{"forward" if rotate_forward else "reverse"}) -->',
-        f'  <g fill="{Z3_DOT}" fill-opacity="0.45">'
-    ]
-    for k in range(3):
-        a = -math.pi / 2 + k * (2 * math.pi / 3)
-        x = cx + r_orbit * math.cos(a)
-        y = cy + r_orbit * math.sin(a)
-        parts.append(f'    <circle cx="{x:.2f}" cy="{y:.2f}" r="3.5" />')
-    parts.append(
-        f'    <animateTransform attributeName="transform" type="rotate" '
-        f'from="0 {cx} {cy}" to="{direction}120 {cx} {cy}" '
         f'dur="{LOOP_SEC}s" repeatCount="indefinite" />'
     )
     parts.append('  </g>')
@@ -216,12 +197,6 @@ def main():
   -->
 
 {sierpinski_svg(depth=6)}
-
-{z3_orbit_svg(radius_factor=0.40, rotate_forward=True,
-              duration_offset_ratio=0)}
-
-{z3_orbit_svg(radius_factor=0.22, rotate_forward=False,
-              duration_offset_ratio=0.5)}
 
 {borromean_svg()}
 

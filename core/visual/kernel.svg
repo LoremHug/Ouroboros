@@ -1119,22 +1119,6 @@
     <animateTransform attributeName="transform" type="rotate" from="0 300.0 300.0" to="120 300.0 300.0" dur="12.0s" repeatCount="indefinite" />
   </g>
 
-  <!-- Z/3 orbit (radius 0.4, forward) -->
-  <g fill="#464b5f" fill-opacity="0.45">
-    <circle cx="300.00" cy="60.00" r="3.5" />
-    <circle cx="507.85" cy="420.00" r="3.5" />
-    <circle cx="92.15" cy="420.00" r="3.5" />
-    <animateTransform attributeName="transform" type="rotate" from="0 300.0 300.0" to="120 300.0 300.0" dur="12.0s" repeatCount="indefinite" />
-  </g>
-
-  <!-- Z/3 orbit (radius 0.22, reverse) -->
-  <g fill="#464b5f" fill-opacity="0.45">
-    <circle cx="300.00" cy="168.00" r="3.5" />
-    <circle cx="414.32" cy="366.00" r="3.5" />
-    <circle cx="185.68" cy="366.00" r="3.5" />
-    <animateTransform attributeName="transform" type="rotate" from="0 300.0 300.0" to="-120 300.0 300.0" dur="12.0s" repeatCount="indefinite" />
-  </g>
-
   <!-- Borromean rings: 3-slot mutual constraint -->
   <g id="borromean-under" fill="none" stroke-width="3">
     <circle cx="300.00" cy="258.75" r="75.00" stroke="#be4b41" stroke-opacity="0.40" />
