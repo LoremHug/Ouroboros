@@ -1,73 +1,79 @@
 """
 Render core kernel visual surface as animated GIF.
 
-Same composition as core/visual/kernel.html (without interactivity):
+Composition (matches core/visual/kernel.html):
 - Sierpinski triangulation background (self-similarity)
 - Borromean rings at center (3-slot mutual constraint)
 - Z/3 marker orbits (ThreePeriod canonical action)
-- A_0 pulse at center (forced unique stable point)
+- A_0 halo pulse at center (forced unique stable point)
 
-Loops cleanly via 3-fold rotational symmetry: all rotations complete
-exactly 1/3 cycle per loop, indistinguishable from full cycle due to
-triangle's Z/3 symmetry.
+Designed for white README background. Anti-aliased via 2x supersampling.
+Loops cleanly: all rotations complete 120° per loop, indistinguishable
+from full cycle due to 3-fold rotational symmetry of triangle.
 """
 
 from PIL import Image, ImageDraw, ImageFont
 import math
 
-# ── Parameters ──────────────────────────────────────────────────────────────
-W = H = 720
+# ── Output parameters ───────────────────────────────────────────────────────
+OUT_W = OUT_H = 400              # final GIF resolution
+SS = 2                            # supersampling factor (render at SS×, downscale)
+W = OUT_W * SS
+H = OUT_H * SS
 cx, cy = W / 2, H / 2
-N_FRAMES = 60
-FRAME_MS = 50  # 3 s loop
 
-BG = (10, 10, 10)
-SIERPINSKI_COLOR = (80, 100, 140)   # bluish grey
-Z3_COLOR = (180, 200, 240)          # pale blue-violet
-A0_COLOR_BRIGHT = (255, 240, 200)   # warm cream
-A0_LABEL_COLOR = (180, 180, 180)
+LOOP_SEC = 6.0                    # one full visual cycle (meditative pace)
+FPS = 10                          # 60 frames total
+N_FRAMES = int(LOOP_SEC * FPS)
+FRAME_MS = int(1000 / FPS)
 
-# Ring colors B, P, I — distinguishable hues
+# ── Palette for white/paper background ──────────────────────────────────────
+BG = (252, 251, 247)              # warm paper white
+SIERPINSKI = (90, 100, 130)       # dusty slate-blue
+Z3_DOT = (70, 75, 95)             # dark slate
+A0_AMBER = (180, 130, 50)         # warm amber for A_0 pulse
+A0_LABEL = (90, 90, 100)
+LABEL_COLOR = (60, 60, 70)
+
+# Borromean rings — muted, paper-friendly
 RING_COLORS = [
-    (255, 120, 110),   # B — red
-    (120, 200, 140),   # P — green
-    (120, 160, 255),   # I — blue
+    (190, 75, 65),    # B — terracotta
+    (60, 140, 95),    # P — sage
+    (60, 100, 165),   # I — slate blue
 ]
 RING_LABELS = ['B', 'P', 'I']
 
-
-def sierpinski(draw, ax, ay, bx, by, cx_, cy_, depth, alpha):
-    """Recursive Sierpinski triangle outline."""
-    if depth == 0 or alpha < 0.02:
+# ── Sierpinski (self-similar fractal background) ────────────────────────────
+def sierpinski(draw, p1, p2, p3, depth, alpha, line_w):
+    """Recursive triangulation outline — fading at deeper levels."""
+    if depth == 0 or alpha < 0.015:
         return
-    rgba = SIERPINSKI_COLOR + (int(255 * alpha),)
-    draw.line([(ax, ay), (bx, by), (cx_, cy_), (ax, ay)],
-              fill=rgba, width=1)
-    mAB = ((ax + bx) / 2, (ay + by) / 2)
-    mBC = ((bx + cx_) / 2, (by + cy_) / 2)
-    mCA = ((cx_ + ax) / 2, (cy_ + ay) / 2)
-    sierpinski(draw, ax, ay, mAB[0], mAB[1], mCA[0], mCA[1],
-               depth - 1, alpha * 0.85)
-    sierpinski(draw, mAB[0], mAB[1], bx, by, mBC[0], mBC[1],
-               depth - 1, alpha * 0.85)
-    sierpinski(draw, mCA[0], mCA[1], mBC[0], mBC[1], cx_, cy_,
-               depth - 1, alpha * 0.85)
+    rgba = SIERPINSKI + (int(255 * alpha),)
+    draw.line([p1, p2, p3, p1], fill=rgba, width=line_w)
+    m12 = ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2)
+    m23 = ((p2[0] + p3[0]) / 2, (p2[1] + p3[1]) / 2)
+    m31 = ((p3[0] + p1[0]) / 2, (p3[1] + p1[1]) / 2)
+    next_w = max(1, line_w - 1) if depth < 5 else line_w
+    sierpinski(draw, p1, m12, m31, depth - 1, alpha * 0.78, next_w)
+    sierpinski(draw, m12, p2, m23, depth - 1, alpha * 0.78, next_w)
+    sierpinski(draw, m31, m23, p3, depth - 1, alpha * 0.78, next_w)
 
 
-def z3_orbit(draw, angle, scale):
+def z3_orbit(draw, angle, scale, alpha):
     """Three small markers at 120° around center, orbiting."""
-    r = 280 * scale
+    r = 245 * SS * scale
     for k in range(3):
         a = angle + k * (2 * math.pi / 3)
         x = cx + r * math.cos(a)
         y = cy + r * math.sin(a)
-        rgba = Z3_COLOR + (90,)
-        draw.ellipse([x - 3.5, y - 3.5, x + 3.5, y + 3.5], fill=rgba)
+        rgba = Z3_DOT + (int(255 * alpha),)
+        rad = 4 * SS
+        draw.ellipse([x - rad, y - rad, x + rad, y + rad], fill=rgba)
 
 
-def draw_borromean(draw, font, font_label):
-    """Three rings at 120° around center, with weave illusion."""
-    ring_r = min(W, H) * 0.13
+def draw_borromean(draw, font_label):
+    """Three rings at 120° around center, woven via arc-overlay illusion."""
+    ring_r = min(W, H) * 0.125
     offset = ring_r * 0.55
     centers = []
     for k in range(3):
@@ -76,119 +82,139 @@ def draw_borromean(draw, font, font_label):
         ry = cy + offset * math.sin(a)
         centers.append((rx, ry, a))
 
-    # Pass 1: each full ring at lower alpha
-    for k, (rx, ry, _) in enumerate(centers):
-        rgba = RING_COLORS[k] + (90,)
-        # Draw ring as annulus by stroking
-        for w in range(6):
-            r = ring_r - 3 + w
-            draw.ellipse([rx - r, ry - r, rx + r, ry + r],
-                         outline=rgba, width=1)
+    base_w = 3 * SS
 
-    # Pass 2: top-arcs at full opacity to fake the weave
+    # Pass 1: each full ring at low alpha — the "under" layer
+    for k, (rx, ry, _) in enumerate(centers):
+        rgba = RING_COLORS[k] + (110,)
+        for w in range(base_w):
+            r = ring_r - base_w / 2 + w
+            draw.ellipse(
+                [rx - r, ry - r, rx + r, ry + r],
+                outline=rgba, width=1
+            )
+
+    # Pass 2: top-arc at higher alpha to fake the weave
     for k, (rx, ry, label_a) in enumerate(centers):
-        rgba = RING_COLORS[k] + (240,)
+        rgba = RING_COLORS[k] + (230,)
         start_a = math.degrees(label_a - math.pi / 3)
         end_a = math.degrees(label_a + math.pi / 3)
-        # PIL arc draws clockwise from positive-x axis at degree 0
-        bbox = [rx - ring_r - 3, ry - ring_r - 3,
-                rx + ring_r + 3, ry + ring_r + 3]
-        # Draw a thick arc by overlaying several arc strokes
-        for w in range(7):
-            r_off = w - 3
-            bbox_w = [rx - ring_r - r_off, ry - ring_r - r_off,
-                      rx + ring_r + r_off, ry + ring_r + r_off]
-            draw.arc(bbox_w, start=start_a, end=end_a,
-                     fill=rgba, width=1)
+        for w in range(base_w + 1):
+            r_off = w - base_w / 2
+            bbox = [
+                rx - ring_r - r_off, ry - ring_r - r_off,
+                rx + ring_r + r_off, ry + ring_r + r_off
+            ]
+            draw.arc(bbox, start=start_a, end=end_a, fill=rgba, width=1)
 
-    # Labels for each ring
+    # Labels at the outer edge of each ring
     for k, (rx, ry, label_a) in enumerate(centers):
-        label_x = rx + ring_r * 1.45 * math.cos(label_a)
-        label_y = ry + ring_r * 1.45 * math.sin(label_a)
+        label_x = rx + ring_r * 1.42 * math.cos(label_a)
+        label_y = ry + ring_r * 1.42 * math.sin(label_a)
         text = RING_LABELS[k]
         bbox = font_label.getbbox(text)
-        tw = bbox[2] - bbox[0]
-        th = bbox[3] - bbox[1]
-        draw.text((label_x - tw / 2, label_y - th / 2),
-                  text, fill=(220, 220, 220, 230), font=font_label)
+        tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+        draw.text(
+            (label_x - tw / 2, label_y - th / 2),
+            text, fill=LABEL_COLOR + (240,), font=font_label
+        )
 
 
 def draw_a0_center(draw, font, pulse):
-    """A_0 marker at center with pulsing brightness."""
-    intensity = int(255 * pulse)
-    r, g, b = A0_COLOR_BRIGHT
-    color = (r, g, b, intensity)
-    radius = 5
-    draw.ellipse([cx - radius, cy - radius, cx + radius, cy + radius],
-                 fill=color)
+    """A_0 marker at center with pulsing halo."""
+    # Outer halo: radius modulated by pulse
+    halo_r = (4 + 6 * pulse) * SS
+    halo_alpha = int(60 * (1.0 - pulse * 0.5))
+    halo_rgba = A0_AMBER + (halo_alpha,)
+    draw.ellipse(
+        [cx - halo_r, cy - halo_r, cx + halo_r, cy + halo_r],
+        fill=halo_rgba
+    )
+
+    # Inner dot: stable brightness
+    inner_r = 3.5 * SS
+    draw.ellipse(
+        [cx - inner_r, cy - inner_r, cx + inner_r, cy + inner_r],
+        fill=A0_AMBER + (230,)
+    )
+
     # Label below
-    text = 'A_0'
+    text = 'A₀'
     bbox = font.getbbox(text)
     tw = bbox[2] - bbox[0]
-    draw.text((cx - tw / 2, cy + 14), text,
-              fill=A0_LABEL_COLOR + (200,), font=font)
+    draw.text(
+        (cx - tw / 2, cy + 14 * SS),
+        text, fill=A0_LABEL + (200,), font=font
+    )
 
 
-def _load_font():
-    """Try a few system font paths; fall back to default."""
-    candidates = [
-        '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf',
+def _load_fonts():
+    """Try system fonts; fall back to default."""
+    paths = [
         '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
-        '/usr/share/fonts/TTF/DejaVuSansMono.ttf',
+        '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf',
+        '/usr/share/fonts/TTF/DejaVuSans.ttf',
     ]
-    for path in candidates:
+    for p in paths:
         try:
-            font_label = ImageFont.truetype(path, 16)
-            font_small = ImageFont.truetype(path, 11)
-            return font_label, font_small
+            return ImageFont.truetype(p, 14 * SS), ImageFont.truetype(p, 11 * SS)
         except (OSError, IOError):
             continue
-    # Fallback
     return ImageFont.load_default(), ImageFont.load_default()
 
 
 def render_frame(t, font_label, font_small):
     """Render one frame at normalised time t ∈ [0, 1)."""
+    # Render at SS× resolution, then downscale with LANCZOS for AA
     img = Image.new('RGBA', (W, H), color=BG + (255,))
     draw = ImageDraw.Draw(img)
 
-    # Sierpinski rotation: 1/3 cycle per loop (Z/3 symmetry → looks full)
+    # Sierpinski: 120° rotation per loop (Z/3 → looks like full cycle)
     rot = t * (2 * math.pi / 3) - math.pi / 2
-    R = min(W, H) * 0.44
-    verts = []
-    for k in range(3):
-        a = rot + k * (2 * math.pi / 3)
-        verts.append((cx + R * math.cos(a), cy + R * math.sin(a)))
-    sierpinski(draw, verts[0][0], verts[0][1],
-               verts[1][0], verts[1][1],
-               verts[2][0], verts[2][1],
-               depth=7, alpha=0.55)
+    R = min(W, H) * 0.43
+    verts = [
+        (cx + R * math.cos(rot + k * 2 * math.pi / 3),
+         cy + R * math.sin(rot + k * 2 * math.pi / 3))
+        for k in range(3)
+    ]
+    sierpinski(draw, verts[0], verts[1], verts[2],
+               depth=7, alpha=0.45, line_w=1 * SS)
 
-    # Z/3 markers: two orbits, opposite rotations
-    z3_orbit(draw, t * (2 * math.pi / 3) - math.pi / 2, scale=1.0)
-    z3_orbit(draw, -t * (2 * math.pi / 3) - math.pi / 2 + 0.4, scale=0.55)
+    # Z/3 markers: two orbits, opposite direction, different scale
+    z3_orbit(draw, t * (2 * math.pi / 3) - math.pi / 2,
+             scale=1.0, alpha=0.45)
+    z3_orbit(draw, -t * (2 * math.pi / 3) + 0.3,
+             scale=0.55, alpha=0.30)
 
-    # Borromean rings + labels
-    draw_borromean(draw, font_small, font_label)
+    # Borromean rings + labels (static topology, time-independent)
+    draw_borromean(draw, font_label)
 
-    # A_0 pulse: 3 pulses per loop (3-fold)
-    pulse = 0.55 + 0.45 * math.sin(t * 2 * math.pi * 3)
+    # A_0 pulse: 3 pulses per loop for 3-fold rhythm
+    pulse_raw = math.sin(t * 2 * math.pi * 3)
+    pulse = 0.5 + 0.5 * pulse_raw
     draw_a0_center(draw, font_small, pulse)
 
-    return img.convert('RGB')
+    # Downscale to output resolution with anti-aliasing
+    out = img.resize((OUT_W, OUT_H), Image.LANCZOS)
+    return out.convert('RGB')
 
 
 def main():
-    font_label, font_small = _load_font()
+    font_label, font_small = _load_fonts()
+    print(f'Rendering {N_FRAMES} frames at {OUT_W}×{OUT_H} '
+          f'({LOOP_SEC}s loop @ {FPS} fps, {SS}× supersample)...')
     frames = []
     for i in range(N_FRAMES):
         t = i / N_FRAMES
         frame = render_frame(t, font_label, font_small)
-        # Convert to palette mode for smaller GIF
-        frame_p = frame.convert('P', palette=Image.Palette.ADAPTIVE,
-                                colors=128)
+        # No dithering: dither-noise kills inter-frame compression
+        frame_p = frame.quantize(
+            colors=48,
+            method=Image.Quantize.MEDIANCUT,
+            dither=Image.Dither.NONE,
+        )
         frames.append(frame_p)
-        if i % 10 == 0:
+        if i % 20 == 0:
             print(f'  frame {i}/{N_FRAMES}')
 
     out_path = '/home/user/Ouroboros/core/visual/kernel.gif'
@@ -203,7 +229,9 @@ def main():
     )
     import os
     size_kb = os.path.getsize(out_path) / 1024
-    print(f'Wrote {out_path} ({size_kb:.1f} KB, {N_FRAMES} frames @ {FRAME_MS}ms)')
+    print(f'Wrote {out_path}')
+    print(f'  size: {size_kb:.1f} KB')
+    print(f'  frames: {N_FRAMES} @ {FRAME_MS}ms = {LOOP_SEC}s loop')
 
 
 if __name__ == '__main__':
