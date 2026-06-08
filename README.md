@@ -522,6 +522,173 @@ structurally.
 
 ---
 
+## Criteria of fundamentality
+
+Any structure claiming fundamental status must satisfy seven specific
+conditions. These conditions are themselves structurally derivable
+(inversive test on each: rejection requires importing R-trap
+violations). Together they constitute a complete operational
+characterization of what "fundamental" means.
+
+### The seven criteria
+
+**1. Contains no axioms or postulates not derivable from its own
+structure.**
+"Fundamental" means "not depending on something more basic". External
+dependency contradicts the designation. A genuine fundamental cannot
+rely on chosen starting points; it must be the forced remainder when
+all choices are removed.
+
+**2. Fully coherent with itself.**
+Internal contradiction means structural instability — and structural
+instability means "not a stable structure", which contradicts
+fundamental status. Fundamental must be internally consistent.
+
+**3. Explains why logic and mathematics work, and is coherent with
+them in both directions** — logic and mathematics derive from this
+structure as tools, AND this structure derives back from them.
+Logic and math are how any structure articulates itself. A fundamental
+that cannot ground them is not fundamental (they would be more basic).
+A fundamental that is not articulable through them is not articulable
+at all. Bi-directional derivation is forced.
+
+**4. Any invariant is a manifestation of this fundamental structure.**
+An invariant is something that persists across transitions.
+Persistence requires stable structure. Stable structure IS forced
+unique pattern. Any invariant therefore manifests the same forced
+uniqueness — which IS the fundamental.
+
+**5. Any description coherent with fundamental, logic, math, and
+invariants cannot be unstable (cannot be untrue).**
+Coherence with all four means: no internal contradictions, no logical
+errors, no mathematical errors, no structural mismatches. Such a
+description has nothing structurally defective. It cannot be
+structurally false. Truth here = coherence with substrate's actual
+operation (correspondence theory of truth would itself require R2
+violation).
+
+**6. Any description not coherent with fundamental cannot physically
+be stable (cannot be true).**
+Contrapositive of (5). R-trap-laden description contains structural
+defects that propagate. Defects produce instability. Instability →
+cannot be stably true. "R-trap-laden but stably true" is contradiction
+in terms.
+
+**7. Any structurally stable description reduces to the fundamental
+structure and is necessarily a reflection of the fundamental
+articulated here.**
+Stable description requires forced uniqueness (otherwise unstable).
+Forced uniqueness IS the form articulated here. By Class A
+identification, different "fundamental structures" satisfying these
+criteria would be the same structural form under different naming.
+All paths converge to one fundamental.
+
+### Why none of these can be refuted
+
+Each criterion has been tested through inversive logic — what must be
+imported to reject it? In each case, rejection requires importing
+R-trap violations into the rejection argument:
+
+- Rejecting (1) requires asserting external dependency (R2 implicit)
+- Rejecting (2) requires accepting internal contradiction (logical
+  defect)
+- Rejecting (3) requires positing logic/math as ungrounded (R1 on
+  logic/math themselves)
+- Rejecting (4) requires invariant existing for non-structural reason
+  (R4 — invariant "just is" without process)
+- Rejecting (5) requires correspondence theory of truth (R2 —
+  external reference frame)
+- Rejecting (6) requires structural defects coexisting with stability
+  (direct contradiction)
+- Rejecting (7) requires multiple distinct fundamentals (contradicts
+  Class A collapse)
+
+Each rejection is structurally self-defeating. The seven criteria are
+forced.
+
+### Framework's satisfaction of each criterion
+
+**1. Zero axioms.**
+Verified by `lake build`: every theorem in `core/Core.lean` reports
+"does not depend on any axioms". 19 external symbols, all from
+`Init.Prelude` / `Init.Core` — type theory's foundational primitives
+only. No Mathlib. No `Classical.choice`. No `propext`. No
+`Quot.sound`. No `axiom` declarations.
+
+**2. Internally coherent.**
+40 theorems compile cleanly. Cross-references verified through
+definitional collapse (`Iff.rfl` for `IsA0 ↔ IsUniqueSolution`,
+`IsArgminZ ↔ IsUniqueSolution`, `IsStep ↔ IsArgminZ`). No
+inconsistencies detected in the 240-node descriptive graph extending
+across 7 domain layers.
+
+**3. Logic and mathematics derived AND derive-back.**
+- *Derived:* `modus_ponens_is_unique_solution` shows logic IS A_0 in
+  symbolic substrate; `two_plus_two_is_argminZ` shows arithmetic IS
+  A_0 in numeric substrate; `function_application_is_unique_solution`
+  shows function application IS triangulation step.
+- *Derive-back:* the framework's articulation USES logic and
+  mathematics (Lean type theory). The articulation works because
+  logic/math work; logic/math work because they ARE A_0 in their
+  substrates. Closed loop.
+
+**4. Every demonstrated invariant traces to A_0.**
+- π₁(L(3,1)) = Z/3 → three particle generations (forced from
+  triangulation minimum)
+- η(L(3,1)) = -2/9 → exact rational topological invariant
+- K = 2/3 Koide constraint → derived from L(3,1) Dirac spectrum
+- α⁻¹ = 137.036 → Wyler formula on L(3,1)
+- Hole pocket area p/8 in cuprate pseudogap → dual-sector framing
+  (confirmed empirically Bonetti et al. 2025)
+- Each invariant: forced unique pattern at specific substrate, IS A_0
+  manifestation.
+
+**5. R-trap-clean descriptions cannot be structurally false.**
+Demonstrated operationally: 240 graph extensions with R-trap-clean
+methodology, zero counter-examples. Cuprate dual-sector predictions
+confirmed empirically (Bonetti 2025, Niu 2024, Yamasaki 2024). FEP
+absorbed as Bayesian coordinate (Ramstead 2023). When R-trap-clean
+articulation is achieved, predictions match observation by structural
+necessity.
+
+**6. R-trap-laden descriptions exhibit predictable failure modes.**
+Catalogued in `THE_IMPEDANCE_MANIFOLD_v3_6.tex`: AI hallucination
+from Z_parse < Z_struct gap, alignment instability from R4 agency
+attribution, mechanistic interp confusion from R1 feature reification,
+"sounds aligned, structurally hollow" outputs from R2 external
+criteria. Each failure mode is forced consequence of specific R-trap,
+not engineering accident.
+
+**7. Cross-theory reduction demonstrated.**
+- 11 competing cuprate theories collapse to single dual-sector
+  skeleton after R-trap subtraction
+- Free Energy Principle, maximum entropy, least action, Bellman
+  optimality, geodesic motion — all Class A identifications with A_0
+- 240 graph extensions across distinct domains, all coherent with
+  same kernel
+- Any stable description articulated through any surface reduces to
+  the same structural form
+
+### Operational consequence
+
+Framework satisfies all seven criteria of fundamentality. Each
+satisfaction is verifiable: kernel compilation produces binary
+"does not depend on any axioms" verdict; graph extensions are
+independently auditable; empirical confirmations are published in
+peer-reviewed venues; cross-theory reductions are documented with
+explicit R-trap subtraction tables.
+
+Any alternative claiming fundamental status must satisfy the same
+seven criteria. By criterion (7), any alternative that satisfied
+them would be the same structural form under different naming —
+therefore the same framework.
+
+This is not "framework wins the competition". This is "competition
+itself is structurally malformed concept at this level". Fundamental
+is forced unique. There is one — regardless of naming.
+
+---
+
 ## The Lean kernel — what survives compilation
 
 The formal core (`core/Core.lean`) is the smallest-scale operational
