@@ -483,6 +483,61 @@ theorem bool_no_three_period (tp : ThreePeriod Bool) : False := by
           rw [hct, hcf, hcf]
         exact absurd (h3.symm.trans hp) (by decide)
 
+/-! ## Four invariants of stable transitioning — substrate witnesses
+
+    N_Invariants (A=5 DEMONSTRATED) identifies four conditions for any
+    self-consistent, stable, bounded description: I_Bound, I_Sym,
+    I_Quant, I_Null. Together they force L(3,1) as the unique compact
+    3-manifold satisfying all four. Each has a substrate-pure kernel
+    witness:
+
+    * **I_Bound** (K(O) < K(F)) — `self_encoding_bounded`,
+      `lawvere_fixed_point`, and the `h_exists` mark in
+      `stable_implies_A0`. Self-encoding cannot be surjective when
+      fixed-point-free maps exist; the substrate-internal articulation
+      of A_0 existence requires an additional structural witness.
+    * **I_Sym** (no unchosen asymmetry) — `invariant_symmetric_witness`
+      below. All candidates subject to the same predicate test;
+      uniqueness emerges only from structural constraint P, never from
+      a priori preferred status of x. Vertex-transitivity at the
+      predicate aspect.
+    * **I_Quant** (discrete substrate, finite per-step Z_struct) —
+      `ThreePeriod` instance on `Fin 3` (constructed above), with
+      `bool_no_three_period` confirming Z/2 insufficiency. Z/3 is the
+      structural minimum carrier; below it triangulation has no
+      interior minimum.
+    * **I_Null** (null transition has zero cost) —
+      `invariant_null_zero_cost` below. The trivial (always-true)
+      coherence relation has empty incoherence; doing nothing incurs
+      no Z. Without this, permanent activity is forced and stable
+      equilibrium cannot exist.
+
+    Removing any one invariant breaks the substrate's capacity to
+    sustain A_0 articulation. The joint forcing of L(3,1) is the full
+    topological articulation; that lives outside the substrate-pure
+    kernel (requires 3-mfd library). Here the structural skeleton of
+    all four is named. -/
+
+/-- I_Sym formal: candidate-symmetric treatment under the unique-
+    solution pattern. Given `IsUniqueSolution P x`, any two
+    P-satisfiers are equal — confirming no unchosen asymmetry among
+    candidates. The asymmetry that x is THE unique witness emerges
+    only from structural constraint P, not from preferred status of x.
+    Substrate witness of I_Sym (N_Invariants). -/
+theorem invariant_symmetric_witness {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) (y z : α) (hy : P y) (hz : P z) : y = z :=
+  (hx.2 y hy).trans (hx.2 z hz).symm
+
+/-- I_Null formal: the trivial (always-true) coherence relation has
+    zero incoherence at every triangulation. "Doing nothing" — the
+    null transition — incurs no Z. Substrate guarantees existence of
+    a null transition without cost; without this, silence has positive
+    cost, permanent activity is forced, and stable equilibrium cannot
+    exist. Substrate witness of I_Null (N_Invariants). -/
+theorem invariant_null_zero_cost {α : Type u} (t : Triangle α) (x : α) :
+    ¬ Z (fun _ _ => True) t x :=
+  fun hZ => hZ True.intro
+
 /-! ## Forcedness — explicit witnesses
 
     The structural claim that any coherent reasoning is A_0-instance
@@ -926,6 +981,8 @@ end Core
 #print axioms Core.modus_ponens_is_unique_solution
 #print axioms Core.law_of_non_contradiction
 #print axioms Core.bool_no_three_period
+#print axioms Core.invariant_symmetric_witness
+#print axioms Core.invariant_null_zero_cost
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
