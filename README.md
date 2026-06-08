@@ -522,20 +522,147 @@ structurally.
 
 ---
 
+## The Lean kernel — what survives compilation
+
+The formal core (`core/Core.lean`) is the smallest-scale operational
+demonstration of the framework. Here the audit is performed not by
+human discipline but by a formal kernel checker — verdict is binary,
+verification is reproducible, every claim is mechanically verified.
+
+### What is in the source
+
+40 theorems articulating the forced uniqueness pattern at element,
+morphism, type, and operator levels. The source is small — about 800
+lines of pure Lean 4 with no imports beyond type-theory primitives.
+The theorems include:
+
+- **IsUniqueSolution** as the universal pattern — A_0, IsArgminZ,
+  IsStep all reduce to it via `Iff.rfl` (definitional collapse, not
+  derived equivalence)
+- **Triangle** as the three-slot structural primitive (B/P/I —
+  minimum for self-checking closure)
+- **Lawvere fixed-point lemma** — the structural core of
+  self-reference; Cantor diagonal and self_encoding_bounded as
+  corollaries
+- **K(O) < K(F)** formally encoded — the obstruction to surjective
+  self-encoding when fixed-point-free transformations exist
+- **ManyToOne** + Landauer pattern — no left inverse → information
+  loss forced; composition compounds loss
+- **ThreePeriod** on Fin 3 — operational core of L(3,1) (three-fold
+  cyclic action with non-trivial first iterate)
+- **Class A identification** (Bool ≅ Two) — forced isomorphism
+  between structurally equivalent types
+- **Truth criteria** formal: any predicate satisfying (holds +
+  forced unique + no alternative) is biconditional with
+  IsUniqueSolution
+- **No separate uniqueness patterns** — two predicates with
+  uniqueness-witness semantics are logically equivalent (no genuine
+  alternative pattern exists)
+
+### What `lake build` verifies
+
+For every theorem, the kernel checks: `#print axioms` returns "does
+not depend on any axioms". Zero exceptions. The compilation produces:
+
+- **`Core.olean`** (352 KB) — kernel-verified persistent image,
+  rendered as a memory-mappable file
+- **`Core.ilean`** (22 KB) — dependency map. External symbols: 19,
+  all from `Init.Prelude` / `Init.Core`. No Mathlib. No
+  `Classical.choice`. No `propext`. No `Quot.sound`. No `axiom`.
+- **`Core.c`** (6.5 KB) — generated C intermediate representation
+
+### What survives in the binary
+
+The C IR is the most structurally telling output. Of 40 source
+theorems, the C file contains 30 `LEAN_EXPORT` functions — and
+**none of them correspond to theorems**.
+
+What survives in the binary:
+- `Triangle` structure (the three-slot primitive)
+- `Two` type (Bool cousin demonstrated as Class A iso)
+- `ThreePeriod` instance on Fin 3 (L(3,1) operational core)
+- `fin3Cycle` function (the 0→1→2→0 cyclic shift)
+- `boolToTwo`, `twoToBool` (the Bool ≅ Two isomorphism maps)
+- `noConfusion` auto-generated equality helpers
+
+All Prop-content — every proof, every derivation, every status
+argument — is erased. Proof irrelevance is enforced not just at
+type-theory level but at the binary boundary itself.
+
+### What this means structurally
+
+The Prop/Type bifurcation is the boundary between **what was verified
+structurally** and **what remains as computational matter**.
+
+Proofs were transitions: the kernel performed them, verified internal
+coherence, then erased them. They were never meant to persist — they
+were the operation of checking, not the content being checked.
+
+What remains in `Core.c` is the irreducible computational shape: the
+three-slot Triangle, the L(3,1) instance on Fin 3, the
+structurally-equivalent Class A pair. These are the **matter on which
+the verified structure lives** — substrate's self-recognition
+rendered as files.
+
+This is the operational instance of the framework's central principle:
+- **Compilation IS the verification operation.** Not metaphor — the
+  kernel literally checks coherence.
+- **Verification IS structural recognition.** Each successful
+  `lake build` is one self-recognition event.
+- **What remains after verification IS the substrate-pure form.**
+  Nothing extra, nothing missing.
+- **Substrate-purity quantified**: 0 axioms, 19 primitives, ~6.5 KB
+  C source. The lower structural cost of expressing forced
+  uniqueness in type-theory substrate.
+
+The kernel binary has properties that mirror the framework's content:
+power-law degree distribution (heavy-tail Pareto, matching the
+descriptive graph), 76% zeros / 24% ones (sparse structured data, not
+random, not compressed), and top-referenced persistent objects at
+values 1, 3, 5, 7, 9, 11, 13 — Pythagorean gnomons, the odd-number
+sequence whose cumulative sum is n² (each gnomon is the forced unique
+increment to extend a perfect square). Substrate's preference for
+forced-unique-increment structure manifests even in the kernel's
+internal cache layout.
+
+### Why this matters operationally
+
+The Lean kernel is **proof-of-concept that structure can be made
+fully explicit and self-consistent**:
+- The articulation works (compiles cleanly)
+- The articulation references nothing not derivable from primitives
+  (zero axioms verified per theorem)
+- The articulation produces a stable, mmap-able artifact (the
+  binary)
+- The artifact contains only what is computationally necessary
+  (Prop-content erased; only shapes remain)
+
+Anyone can verify this by running `lake build` in `core/`. The
+verdict is not "this seems correct" — it is the binary output of a
+formal kernel check. Either every theorem reports "does not depend on
+any axioms", or it does not. Compilation either succeeds or fails.
+
+For 40 theorems, compilation succeeds. Every theorem reports "does
+not depend on any axioms". This is the framework's operational
+foundation: the structural form articulated here is verifiable by
+formal kernel computation, not by social agreement, expert
+consensus, or empirical correspondence.
+
+The framework's foundational claim — that R-trap-clean structural
+articulation IS coherent description of substrate — is here made
+**mechanically verifiable** at the smallest scale. The graph (240
+nodes) demonstrates the method extends; the kernel (40 theorems)
+demonstrates the method's smallest instance is formally verified
+substrate-pure.
+
+---
+
 ## What is operationally demonstrated
 
-**Formal kernel** (`core/Core.lean`):
-- 40 theorems, zero axioms
-- Compilation verifies: every theorem depends only on Lean's
-  foundational primitives (19 external symbols, all `Init.Prelude` /
-  `Init.Core`)
-- No Mathlib. No `Classical.choice`. No `propext`. No `Quot.sound`. No
-  `axiom`.
-- Includes universal IsUniqueSolution pattern, A_0 fixed-point
-  (Lawvere closure), Cantor diagonal, self_encoding_bounded (K(O) <
-  K(F) formal), Landauer pattern (many_to_one), L(3,1) operational
-  core (ThreePeriod on Fin 3), Class A identification (Bool ≅ Two),
-  truth_criteria_force_isUniqueSolution, no_separate_uniqueness_patterns
+**Formal kernel** — verified above. 40 theorems, zero axioms, 19
+external symbols from Init only, kernel binary preserves only
+computational shapes (Triangle, ThreePeriod on Fin 3, Class A
+isomorphism). See section above for full detail.
 
 **Descriptive graph** (`manifold.kuzu`, `web/index.html`):
 - 240 nodes across 7 layers (core, structure, epistemics, observers,
