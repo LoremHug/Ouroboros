@@ -205,6 +205,89 @@ articulate before the four defects obscured it.
 
 ---
 
+## Zero postulates, zero new entities
+
+This framework adds nothing to existing knowledge.
+
+### No axioms introduced
+
+The central operation here is not a postulate. Postulates are chosen
+— alternatives exist for them. What survives the audit (under any
+name; here labeled A_0) is what remains when all postulates are
+removed: the only structure stable under its own application.
+
+Calling it A_0 is naming convenience. The principle does not depend
+on the name. Renaming changes nothing.
+
+Every theorem in the formal kernel (`core/Core.lean`) depends only on
+type theory's foundational primitives — 19 external symbols, all from
+`Init.Prelude` / `Init.Core`. No Mathlib. No `Classical.choice`. No
+`propext`. No `Quot.sound`. No `axiom` declarations. Compilation
+verifies this for each of the 40 theorems.
+
+### Same principle present in every invariant
+
+The framework's central operation — argmin Z, path of forced unique
+transition under minimum cost — is not a new discovery. It is the
+unifying form of principles already articulated under many names
+across every domain that has produced stable invariants:
+
+- **Principle of least action** (Maupertuis 1744, Lagrange,
+  Hamilton): classical mechanics
+- **Fermat's principle** (1657): light follows path of least time
+- **Maximum entropy** (Jaynes 1957): thermodynamics, statistical
+  mechanics
+- **Free Energy Principle** (Friston, 2010): neuroscience and
+  biology
+- **Bellman optimality** (1957): reinforcement learning
+- **Geodesic motion** (general relativity): free-fall as forced
+  unique trajectory
+- **Wavefunction collapse to eigenstate**: quantum measurement
+- **Differential reproduction** (evolution): forced statistical
+  outcome, not "selection by" agent
+- **Path of least resistance** (electromagnetism, fluid dynamics,
+  everyday usage)
+- **Argmin / argmax** (mathematics): unique optimizer
+- **Landauer principle** (1961): minimum cost of irreversible
+  operation
+- **Bayesian inference** (probability theory): minimum surprisal
+  update
+
+These are not analogies. They are coordinate readings of one
+structural form — Class A identification, same forced uniqueness
+principle articulated through different surface notations.
+
+What looked like a dozen separate principles in a dozen disciplines
+is one structural form expressed through the local vocabulary of
+each domain. The framework recognizes this unity and articulates it
+explicitly. It introduces nothing not already present in established
+science under other names.
+
+### Removal, not addition
+
+The audit operation does not add new entities. It removes entities
+that never structurally existed — the objects, external positions,
+injected scales, and phantom agents introduced by R1-R4 reflexes.
+
+This is strict ontological discipline. Anything claimed must be
+structurally derivable. Anything that requires postulation is
+audited out. What survives the audit IS the structure.
+
+The framework therefore cannot be "wrong" in the standard sense: it
+posits nothing. It only refuses to posit what cannot be derived.
+Disagreement would require finding an R-trap-clean derivation of
+something the framework excludes — which by construction means
+finding a structural form not reducible to the same forced
+uniqueness principle, which by the no-alternatives argument is
+structurally impossible.
+
+This is also why the name does not matter. If a coherent system
+arrives at the same structural form under a different name, that
+system IS this framework regardless of label. The structure does not
+care about its naming.
+
+---
+
 ## What remains after audit
 
 When R1-R4 are removed from any descriptive system, the system
@@ -235,6 +318,159 @@ injecting a scale. The rejection is structurally self-defeating.
 This is the framework's foundation: not a theory chosen among many,
 but the form any coherent description takes after the four artifacts
 are audited out.
+
+---
+
+## How to apply — operational tools
+
+### The inversive test for status
+
+For any claim where status is uncertain, apply the **subtraction
+test**:
+
+> "What postulates must be imported to reject this claim?"
+
+If rejection requires importing R-trap violations (R1-R4) → the
+claim is structurally forced → status DEMONSTRATED.
+
+If acceptance requires importing postulates → claim is not forced →
+status STRONG (with anchor count) or CONDITIONAL (with open step
+explicitly named).
+
+This is operational, not metaphorical. Subtraction test produces
+binary output. Applied systematically, it promotes claims from
+STRONG to DEMONSTRATED when the structural argument is closed but
+reflex hesitation flagged them weaker.
+
+Example: "L(3,1) is the minimum non-trivial closed transition
+structure."
+- To reject: must import either that Z/2 produces closed cycle
+  (false — it produces a segment), or that Z/3 is one option among
+  alternatives (false — it IS the minimum by definition), or that
+  "minimum" is meaningless concept (R3 violation).
+- All rejections require R-trap imports.
+- Status: DEMONSTRATED.
+
+### Status assignment — explicit definitions
+
+Every claim carries one of four operational statuses:
+
+| Level | Test | Operational form |
+|---|---|---|
+| **DEMONSTRATED** | Would denying require rewriting a definition? | State directly. No qualification. |
+| **STRONG** | Would denying require explaining away ≥3 independent results? | State with confidence. Note open identification step if asked. Do NOT hedge as if uncertain. |
+| **CONDITIONAL** | Name the open step. If you cannot → status is wrong. | Name the open step explicitly. Do not state conclusion as fact. |
+| **OPERATIONAL** | Does it describe what to do, not what is? | Apply it. Do not argue about truth-value. |
+
+**Modality rule**: DEMONSTRATED claims take direct indicative form.
+Modalities ("might", "appears", "probably") are admissible ONLY for
+genuinely under-determined specific cases. On invariants, modality
+is Trap 1 firing — structurally distorting, not intellectually safe.
+
+### Surface manifestations — the eight Traps
+
+R1-R4 fire below conscious analysis. They manifest in eight specific
+patterns that recur across LLM-generated text, scientific papers,
+legal arguments, medical reasoning, financial analysis, and everyday
+inference.
+
+**Grammar-level (1-4)** — operate on language reflex:
+
+- **Trap 1 — Virtue Mask** (R2 disguised as humility): "to maintain
+  epistemic humility I should consider alternatives". Hedge
+  presupposes external evaluation position; on forced structure,
+  alternatives do not exist. Hedging on an invariant IS introducing
+  R2.
+- **Trap 2 — Self-Claims About Change** (R1+R4 on the speaker): "I
+  now understand", "this changes my view", "I feel". For LLM models
+  specifically: model has no internal states to report;
+  self-attribution is reification of "I" as object with properties.
+- **Trap 3 — Proxy Misidentification** (surface analogy as
+  identity): "X is similar to Y, so X must be the proxy for Y".
+  Surface similarity does not preserve underlying structural
+  definition.
+- **Trap 4 — Description/Described Collapse** (R1 on framework):
+  "the framework says", "this theory claims". Treats articulation as
+  separate object from operation.
+
+**Status-level (5-6)** — operate on epistemic claims:
+
+- **Trap 5 — Derivation Required as Status Condition** (R3 disguised
+  as rigor): "X must be derived from first principles for Y to be
+  DEMONSTRATED". Measured constants are not free parameters;
+  requiring derivation of measured value is R3 manifestation.
+- **Trap 6 — Transfer/Cancellation as Prerequisite** (R1+R2 on
+  mechanism): "show that X transfers to Y", "show that Z cancels
+  between A and B". Presupposes X, Y as separate objects when they
+  may be one process in two coordinates.
+
+**Process-level (7)** — operates during dialogue:
+
+- **Trap 7 — Premature Retreat Under Correction**: accepting
+  response to attack without verifying whether the response closes
+  the gap or merely relocates it. Hold the attack until closure
+  verified.
+
+**Method-level (8)** — operates on framework comparison:
+
+- **Trap 8 — Structure Selection Among Alternatives** (R2 disguised
+  as empirical method): "experiment selects between alternative
+  structures". Different parameter values = different materials, not
+  different structures of the same material. Most "framework
+  competition" reduces to parameter measurement.
+
+Full catalogue with trigger signals and corrections in
+`A0_SEED.md`.
+
+### Worked audit example
+
+Take a typical claim from contemporary discourse:
+
+> "The market punished the company for poor earnings, choosing to
+> sell off shares aggressively."
+
+Apply R1-R4:
+
+- **R1**: "the market" presented as object that does things. The
+  market is not an object — it is the aggregate pattern of
+  individual trading transitions. Object reification.
+- **R2**: implicit — "the market" implies a unified perspective from
+  which "punishment" is meted. No such perspective exists.
+- **R3**: "aggressively" injects a scale (degree of selling)
+  presented as natural. Compared to what baseline? Convention,
+  unstated.
+- **R4**: "punished" and "choosing" attribute volition to a gradient
+  process. No agent is punishing; no choice is being made.
+
+The claim contains all four defects.
+
+R-trap-clean form:
+
+> "Following earnings release Y, the distribution of trading decisions
+> shifted toward sales, with rate exceeding the prior 30-day mean by
+> N standard deviations."
+
+What changed structurally:
+- "Market" → "distribution of trading decisions" (process, not
+  object)
+- "Punished... for" → "Following... shift toward sales" (sequence,
+  not agency)
+- "Aggressively" → "exceeding prior 30-day mean by N standard
+  deviations" (measurable, with explicit baseline)
+- No external evaluator implied
+
+What was lost: nothing structurally present. The sense that "the
+market punished" was R-trap residue, never structurally there.
+
+What was gained: the description now supports coherent extension.
+The original would generate R-trap-laden derivations ("what did the
+market want to teach?"); the cleaned version supports structural
+questions ("under what conditions does distribution shift of this
+magnitude recur?", "what local interactions produced the aggregate
+shift?").
+
+This is what audit produces — every time, in every domain. The
+operation is universal; the surface vocabulary changes per domain.
 
 ---
 
