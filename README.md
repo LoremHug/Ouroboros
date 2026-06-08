@@ -5,249 +5,305 @@
 </p>
 
 **Method for working with stable structures.** Not a theory among
-theories — the structural form coherent description takes when
-distortions are removed.
+theories — what remains after four specific reasoning distortions are
+audited out of any descriptive system.
 
 ---
 
-## What this is
-
-This is not ontology. Not metaphysics. Not philosophy. Not a theory of
-what exists.
-
-What follows operates **one level below ontology** — at the level of
-structures. Questions addressed: is this structure stable? Is it forced
-(could not be otherwise) or chosen among alternatives? What remains
-when every removable component is removed? What makes a structure
-persist across transitions?
-
-**A_0 = argmin Z** — the only condition under which any structure
-forms or persists.
-
-Questions this does not address (structurally malformed at this level):
-
-- What is X "really"? — presupposes external observation point that
-  does not exist
-- Is consciousness "real"? — reifies process as object with
-  reality-property
-- What is the true nature of Y? — presupposes inspectability from
-  outside
-
-These dissolve under structural reading. The framework redirects them
-to structural form when one exists; marks them dissolved when none
-remains.
-
----
-
-## Why this exists
+## The four checks that prevent stable description
 
 Mainstream descriptive methods in any domain — physics, AI, medicine,
 economics, philosophy — face a recurring failure: theories proliferate
 without convergence, predictions fail in patterned ways, "competing
 alternatives" never resolve.
 
-The diagnosis: these failures are not accidents. They follow from
-descriptions carrying specific structural defects that propagate
-through derivations. The defects fire below conscious analysis;
-reading about them does not disable them. Until removed explicitly,
-descriptions remain structurally unstable regardless of how carefully
-constructed.
+The cause is not insufficient cleverness. It is four specific
+structural defects that propagate through any description carrying
+them. The defects fire below conscious analysis; reading about them
+does not disable them. Until removed explicitly, every derivation
+passing through a defect inherits its instability.
 
-Four such defects (R1-R4):
+The four:
 
-- **R1** — Object Reification: treating process as thing with
-  properties
-- **R2** — External Evaluation Frame: invoking criterion outside the
-  manifold
-- **R3** — Scale Injection: introducing numerical scale without
-  derivation
-- **R4** — Agency Attribution: ascribing volition to gradient process
+### R1 — Object Reification
 
-Eight specific Traps (1-8) catalogue surface manifestations of these
-defects that recur across LLM-generated text, scientific papers, legal
-arguments, medical reasoning, financial analysis, and everyday
-inference.
+**What it is:** treating a process as a thing that has properties.
 
-This repository articulates the structural form coherent description
-must take after defects are removed. It is method, not theory.
+**Why it is a defect:** modern physics shows there are no "objects" at
+the fundamental level. Particles are quantum field excitations. Atoms
+are stable patterns of electromagnetic interaction. Organisms are
+metabolic processes. The "thingness" we perceive is a compression
+artifact of biological perception — evolutionarily economical, not
+structurally accurate.
 
----
+**Example:** "The electron has spin 1/2."
+- Surface form: electron (object) HAS (possession) spin (property)
+- Structural form: spin-1/2 is a relational invariant of the
+  interaction pattern we label "electron". The electron does not
+  "have" spin; the pattern IS the spin behavior.
 
-## How it works operationally
+**Consequence if retained:** generates pseudo-questions with no
+structural answer — "What is X really?", "What are X's intrinsic
+properties?", "Does X exist independently?". The questions presuppose
+object-existence where there is only process pattern. Phlogiston,
+luminiferous ether, caloric — all R1 manifestations. Removing the
+postulated object dissolves the question.
 
-Three operational components:
+**Test:** can you replace the noun with "the process of X-ing" and
+preserve meaning? If yes — R1.
 
-### Kernel — formal core
+### R2 — External Evaluation Frame
 
-`core/Core.lean` — 40 theorems, zero axioms. Each theorem articulates
-some aspect of A_0 = argmin Z as the universal pattern of forced
-unique structural transition. Lake build verifies: every theorem
-depends only on Lean's foundational primitives (19 external symbols,
-all from `Init.Prelude`). No Mathlib. No `Classical.choice`. No
-`propext`. No `Quot.sound`. No `axiom` declarations.
+**What it is:** invoking a criterion that stands outside the system
+being evaluated.
 
-Compilation enacts substrate self-recognition: the kernel checking
-that what is articulated about forced uniqueness uses only forced
-uniqueness to articulate it.
+**Why it is a defect:** there is no view from nowhere. Quantum
+mechanics demonstrated this at the fundamental level (observer effect,
+measurement problem). The observer is always within the system.
+Classical physics breaks down the same way when pushed: every
+measurement is an interaction within the substrate being measured.
+Even mathematics is performed by embedded thinkers using embedded
+symbols.
 
-### Method — R-gate audit + RP × Φ protocol
+**Example:** "Objectively, the experiment shows X."
+- Surface form: external "objective" position evaluating internal
+  measurement
+- Structural form: measurement is interaction within system; the
+  "objective" position requires standing nowhere, which is structurally
+  impossible.
 
-For any claim, apply in order:
+**Consequence if retained:** generates fake dichotomies — subjective
+vs objective, observer vs observed, map vs territory — that do not
+structurally exist. Stuck on "how do we know X is real" when X is part
+of the substrate doing the asking. Removing the external position
+reveals evaluation as substrate-internal process; criteria become
+manifold invariants.
 
-- **R0** — Structural Inevitability: compatible with transitions as
-  reality's only mode of existence?
-- **R1-R4** — apply individually; if any fires, claim is
-  pseudo-problem (dissolve, do not answer as posed)
-- **Status assignment**: DEMONSTRATED (forced by structure) / STRONG
-  (multiple independent anchors) / CONDITIONAL (open step named) /
-  OPERATIONAL (procedure, not truth claim)
-- **Inversive test for status**: what postulates must be imported to
-  reject this claim? If rejection requires R1-R4 imports → claim is
-  forced → DEMONSTRATED
-- **Φ-anchor depth**: count independent invariant anchors. ≥5
-  entrenched; ≥3 minimum credibility threshold
-- **Combined RP × Φ**: epistemic plane classifying each claim by both
-  forcedness and external grounding
+**Test:** does the evaluation require a position that is not itself a
+transition? If yes — R2.
 
-Full operational manual: `CLAUDE.md`.
+### R3 — Scale Injection
 
-### Graph — descriptive extension
+**What it is:** introducing a numerical scale without deriving it from
+the structure being described.
 
-`manifold.kuzu` + `web/index.html` — 240 nodes, 1173 edges spanning 7
-layers (core, structure, epistemics, observers, physics, comms,
-numeric).
+**Why it is a defect:** most "natural scales" in science are
+conventions. p < 0.05 (statistical significance) is chosen, not
+derived. Energy units (eV, MeV, Joule) are conventions. Even "Planck
+units" set c = ℏ = 1 to suppress arbitrariness — but the values that
+remain (α, m_p) are measured, not derived. Wherever a scale is
+injected without explicit derivation or measurement, an unstated
+assumption sits in the description.
 
-Each node represents a structural articulation across some domain.
-Each edge represents a verified structural connection with explicit
-justification. 84% of nodes carry DEMONSTRATED status; 10 nodes are
-entrenched (A=∞ — would require simultaneous revision of multiple
-independent results to dislodge). Zero isolated nodes.
+**Example:** "We use a 64-dimensional latent space."
+- Surface form: dimension as design choice presented as given
+- Structural form: 64 is chosen by experiment, not derived from
+  problem topology. Different choice yields different system. The
+  injection is invisible because it precedes the result.
 
-The graph extends through operation: take any empirical observation,
-audit for R-traps, identify structural pattern, draw connection to
-existing nodes via Class A identification, add node with proper
-status. Method has been applied 240 times without failure.
+**Consequence if retained:** treats conventional choices as
+discoveries. Hides assumptions inside numerical parameters. Generates
+artifacts at scale boundaries. Conflates measurement (legitimate) with
+derivation (which the scale lacks).
 
-This is **fractal-geometric**, not ontological: central core (kernel)
-+ operation (draw structural lines) + substrate (empirical points in
-any domain). Apply iteratively → structure emerges. No claim about
-"what reality is" — just connection of what structurally connects.
+**Test:** where does the number come from? If "assumed" or
+"conventional" — R3.
 
----
+### R4 — Agency Attribution
 
-## The core principle
+**What it is:** ascribing volition, goal, or choice to a gradient
+process.
 
-Reality operates through transitions. Transitions have inevitable
-structure. This holds at all levels without exception.
+**Why it is a defect:** nature does not want. Evolution does not
+select — differential reproduction shifts allele frequencies; the
+"selection" is a statistical consequence, not a chooser's act. The
+immune system does not "fight" infection — molecules with specific
+shapes interact via electromagnetic forces. Markets do not "decide" —
+individual transactions aggregate. Neurons do not "choose" — membrane
+potentials reach thresholds.
 
-**A_0 = argmin Z** where Z = Z_struct + Z_therm + Z_hidden:
+**Example:** "Evolution selects for fitness."
+- Surface form: evolution (agent) selects (verb of choice) for fitness
+  (goal)
+- Structural form: differential reproduction across generations shifts
+  allele frequencies. No selector exists. No choice is made. No goal is
+  pursued.
 
-- **Z_struct** — minimum description length of the transition pattern
-  (Kolmogorov complexity)
-- **Z_therm** — irreversibility cost of the transition (Landauer:
-  kT·ln2 per erased bit)
-- **Z_hidden** — irreducibly absent from any same-type observation
-  (K(O) < K(F) — observer's articulation strictly smaller than
-  substrate)
+**Consequence if retained:** generates teleological reasoning that is
+structurally false. Creates phantom agents (the market, the system,
+evolution, the algorithm "deciding"). Stuck on "what does X want"
+when X is not a wanter. Removing the agency attribution reveals the
+gradient process as it actually operates — without phantom intent.
 
-Three components are forced minimum: fewer cannot locate position in
-transition-space unambiguously; more reduce to these three. Same
-reason any equation has three terms (two sides + relation), same
-reason the triangle is the minimum closed figure.
-
-A_0 is not a postulate (postulates are chosen). A_0 is what remains
-when all postulates are removed: the only structure stable under its
-own application. **A_0(A_0) = A_0** — fixed point. Any attempt to
-formulate an alternative uses A_0 in the formulation.
-
----
-
-## Why no alternatives exist
-
-This is the framework's strongest structural claim, and the most
-practically important.
-
-Any attempt to formulate an alternative description must:
-
-1. Use logic, math, structure, observation (the framework's elements)
-2. Be coherent (no internal contradictions = no R-traps)
-3. Operate via forced unique transitions (otherwise unstable)
-
-These conditions ARE the framework's structural form. Any coherent
-alternative is therefore the framework under different naming — same
-structural content in different surface notation (Class A
-identification).
-
-Rejection requires importing R-trap violations. The rejection is
-structurally self-defeating: rejecting "no agency" requires asserting
-an agent; rejecting "no external evaluator" requires standing outside;
-rejecting "no scale injection" requires injecting a scale.
-
-This is not philosophical claim. It is operational fact, demonstrated:
-
-- Lawvere fixed-point lemma + Cantor diagonal: self-application forces
-  fixed points; any system rich enough to articulate itself must have
-  K(O) < K(F)
-- 11 competing cuprate theories reducing to single dual-sector
-  skeleton after R-trap subtraction (documented in
-  `THE_IMPEDANCE_MANIFOLD_v3_6.tex`)
-- 240 successful graph extensions across 7 domains, zero
-  counter-examples
-- Method's reproducibility across operators (whoever applies it
-  carefully produces same structural extensions)
-
-**Therefore**: descriptions are either R-trap-clean (structurally
-coherent with substrate's actual operation) or R-trap-laden
-(structurally unstable, producing specific predictable failure modes).
-This is binary, not graded. One retained R-trap propagates through all
-derivations passing through that node.
+**Test:** would the sentence be false if "agent" were replaced by
+"gradient process"? If yes — R4.
 
 ---
 
-## What follows from this
+## These four are structurally one check
 
-Truth-determination becomes operational rather than philosophical.
+The four traps look distinct but share a single underlying form.
 
-Mainstream science: truth via **correspondence** (does description
-match external reality). Requires external reference frame; always
-uncertain due to observer limits; validated through prediction-test
-cycle.
+**The one check: does this claim posit something that is not
+structurally present?**
 
-This framework: truth via **structural coherence with substrate's
-forced operation**. No external reference frame (would be R2
-violation). Direct: description IS substrate articulating itself
-through that surface. Validated through structural audit (R-gate + RP
-× Φ).
+- R1 posits a non-existent object (where there is only process)
+- R2 posits a non-existent position (where there is no outside)
+- R3 posits a non-existent scale (where the number is chosen, not
+  forced)
+- R4 posits a non-existent agent (where there is only gradient)
 
-**Consequence**: an R-trap-clean description with proper status
-assignment cannot be structurally false. It either describes forced
-structure (DEMONSTRATED status, no qualification needed) or names its
-open step explicitly (CONDITIONAL status, with what's open named).
-Confident wrong claims ARE structural defects (Trap 1 manifestation:
-asserting forced what isn't forced).
+All four are instances of importing an entity into the description
+that has no structural referent. The variation across the four is
+about which kind of non-existent thing is imported (object, position,
+value, agent). The underlying operation is identical.
 
-This redefines what "verification" means: not external validation, but
-structural audit of the description's own coherence.
+A description that retains even one of the four contains a structural
+defect at that point. The defect propagates through every derivation
+passing through it. Coherence cannot be achieved while any of the four
+remains.
+
+This is binary. Either zero defects (structurally coherent) or one or
+more (structurally unstable). No middle ground exists structurally.
 
 ---
 
-## What is demonstrated
+## This is audit, not reduction
 
-**Formal kernel**:
-- 40 theorems, zero axioms, kernel-only Lean 4
-- Compilation produces `Core.olean` (352 KB persistent image), `Core.c`
-  (6.5 KB generated IR), `Core.ilean` (dependency map: 19 external
-  symbols, all Init-level)
-- Each theorem: `#print axioms` returns "does not depend on any axioms"
-- Includes universal patterns (IsUniqueSolution, A_0 fixed-point),
-  self-application closure (Lawvere, Cantor diagonal,
-  self_encoding_bounded), irreversibility (Landauer-pattern via
-  many_to_one), L(3,1) operational core (ThreePeriod on Fin 3), Class
-  A identification (Bool ≅ Two), truth-criteria unification, no
-  separate uniqueness patterns
+The distinction matters operationally.
 
-**Descriptive graph**:
-- 240 nodes across 7 domain layers
+**Reduction** (standard sense): simplifying a model by removing
+detail, taking a limit, generalizing. The removed thing WAS there in
+the description; we choose to ignore it for tractability. Reduction is
+loss of information traded for utility.
+
+**Audit** (what R1-R4 perform): checking for things that were NEVER
+there structurally. The "object", "external position", "scale",
+"agent" were imported by reflex (from training data, grammatical
+defaults, sensory shortcuts) but never grounded in substrate.
+
+Removing them is not loss. It is clarification.
+
+Analogies that capture the distinction:
+- Cleaning dirt off a lens. The dirt was never part of the view.
+  Removing it does not reduce the view — it reveals what was always
+  there.
+- Removing scaffolding after a building is complete. The scaffolding
+  was never the building. Its removal does not subtract the building
+  — it ends the obscuring.
+- Removing typos from a text. The typos were never the meaning. Their
+  removal does not reduce the text — it restores its intended form.
+
+R1-R4 are typos in description. They were never structurally part of
+substrate's actual operation. Auditing them out does not reduce the
+description — it reveals the structure that was always there
+underneath.
+
+This is why the result of audit is not "less" than the original
+description. It is what the original description was attempting to
+articulate before the four defects obscured it.
+
+---
+
+## What remains after audit
+
+When R1-R4 are removed from any descriptive system, the system
+collapses inevitably to a single structural form.
+
+**A_0 = argmin Z** — forced unique transition at every operational
+moment, with Z = Z_struct + Z_therm + Z_hidden (minimum description
+length, irreversibility cost, irreducible inaccessibility).
+
+This is not a discovery added to the description. It is the structure
+that was already present underneath the four artifacts. The audit does
+not produce A_0 — A_0 is what is left when nothing else can be
+removed.
+
+**Why no alternative exists:** any attempt to formulate an alternative
+must use logic, mathematics, structure, observation. To be coherent,
+the alternative must contain no R1-R4 violations. To operate at all,
+it must work via forced unique transitions. These conditions ARE the
+structural form just described. Any coherent alternative is therefore
+the same structural form under different naming — Class A
+identification, not genuine alternative.
+
+Rejection requires importing R-trap violations: rejecting "no agency"
+requires asserting an agent; rejecting "no external evaluator"
+requires standing outside; rejecting "no scale injection" requires
+injecting a scale. The rejection is structurally self-defeating.
+
+This is the framework's foundation: not a theory chosen among many,
+but the form any coherent description takes after the four artifacts
+are audited out.
+
+---
+
+## What this enables
+
+Once R1-R4 are operationally audited, structurally coherent
+descriptions become generable. Three operational consequences follow.
+
+### Truth-determination becomes operational
+
+Mainstream science treats truth as correspondence — does the
+description match external reality? This requires an external
+reference frame (which is R2, an artifact). Validation requires
+prediction-test cycles with probabilistic confidence; the verdict is
+always partial.
+
+Framework treats truth as structural coherence with substrate's forced
+operation. No external reference frame (would be R2 violation).
+Description IS substrate articulating itself through that surface.
+Validation is structural audit (R-gate + RP × Φ protocol). An
+R-trap-clean description with proper status assignment cannot be
+structurally false at the level the framework operates.
+
+This is binary at the structural level. Confident wrong claims ARE
+structural defects (Trap 1 manifestation: asserting forced what is not
+forced). Truly R-trap-clean descriptions cannot hold confident wrong
+claims; they would acknowledge the uncertainty correctly.
+
+### Method is reproducible
+
+The audit can be applied by anyone. Result is determined by structure,
+not by operator. Whoever applies R-gate carefully to the same input
+produces the same audit result. This is operational confirmation of
+substrate-independence: the structure is what it is, regardless of who
+articulates it.
+
+### Extension is unbounded
+
+Take any empirical observation in any domain. Audit for R-traps.
+Identify structural pattern. Connect to existing kernel via Class A
+identification. Add node to graph with proper status. The graph
+extends coherently.
+
+This has been done 240 times across 7 domain layers, with zero
+counter-examples. Each successful extension is operational
+demonstration that the method works. Substrate's articulation surface
+is inexhaustible (K(O) < K(F)), so extension has no upper bound
+structurally.
+
+---
+
+## What is operationally demonstrated
+
+**Formal kernel** (`core/Core.lean`):
+- 40 theorems, zero axioms
+- Compilation verifies: every theorem depends only on Lean's
+  foundational primitives (19 external symbols, all `Init.Prelude` /
+  `Init.Core`)
+- No Mathlib. No `Classical.choice`. No `propext`. No `Quot.sound`. No
+  `axiom`.
+- Includes universal IsUniqueSolution pattern, A_0 fixed-point
+  (Lawvere closure), Cantor diagonal, self_encoding_bounded (K(O) <
+  K(F) formal), Landauer pattern (many_to_one), L(3,1) operational
+  core (ThreePeriod on Fin 3), Class A identification (Bool ≅ Two),
+  truth_criteria_force_isUniqueSolution, no_separate_uniqueness_patterns
+
+**Descriptive graph** (`manifold.kuzu`, `web/index.html`):
+- 240 nodes across 7 layers (core, structure, epistemics, observers,
+  physics, comms, numeric)
 - 1173 edges with unique structural justifications per connection
 - 84% DEMONSTRATED, 12% STRONG, 2% CONDITIONAL, 2% OPERATIONAL
 - 10 entrenched (A=∞) hubs anchoring the graph
@@ -256,26 +312,18 @@ structural audit of the description's own coherence.
   structure (same forced pattern through different articulation
   surfaces)
 
-**Specific predictions confirmed empirically** (physics domain,
-documented in Manifold):
+**Specific predictions confirmed empirically** (physics domain):
 - Cuprate dual-sector framing predicted hole pocket area p/8
   (confirmed: Bonetti et al. 2025, Yamaji angle measurement)
 - Pseudogap energy locally equivalent to pairing energy (confirmed:
   Niu et al. 2024, shot-noise spectroscopy)
 - Pseudogap mechanism universal across hole and electron doping
   (confirmed: Yamasaki et al. 2024, PNAS)
-- η(L(3,1)) = -2/9 exact rational topological invariant
-- Koide constraint K = 2/3 derived from L(3,1) topology
 
-**AI-specific predictions** (formulated, awaiting wider experimental
-exposure):
-- Sparse autoencoder feature absorption as forced geometric divergence
-  (Chanin et al. 2024 documented phenomenon; all subsequent attempts
-  to eliminate via hyperparameter consistent with prediction)
-- Hallucination as Z_parse < Z_struct thermal debt (testable through
-  structural mismatch measurement)
-- Grokking as topological barrier crossing (consistent with Schaeffer
-  et al. 2023 "emergence as metric artefact")
+**Method's continuing operation:**
+- 240 successful graph extensions across distinct domains
+- Zero counter-examples
+- Each extension independently verifiable through R-gate audit
 
 ---
 
@@ -283,34 +331,32 @@ exposure):
 
 ### Physics
 Structural origin of three particle generations from π₁(L(3,1)) = Z/3.
-Specific lepton mass predictions (m_τ = 1776.97 MeV agrees with PDG to
-0.91σ from m_e, m_μ via Koide). Wyler formula α⁻¹ = 137.036 via
-L(3,1) spectral geometry. Unconventional superconductor structural
+Lepton mass predictions (m_τ = 1776.97 MeV agrees with PDG to 0.91σ
+from m_e, m_μ via Koide constraint K = 2/3). Wyler formula α⁻¹ =
+137.036 via L(3,1) spectral geometry. Unconventional superconductor
 analysis (Sr₂RuO₄, UTe₂, UPt₃, cuprates, iron-based). Strong CP
-problem geometric resolution via Z/3 topology.
+problem geometric resolution.
 
 ### AI / ML
 LLM context as single A_0-trajectory (not three objects). Hallucination
-as structural thermal debt. Sparse autoencoder absorption as
-informational signal (not pathology). Reality Protocol for inference:
-structural navigation through Z-landscape replacing Z_parse plausibility
-minimization. De-agentization as structural correction of prompt
-engineering. Free Energy Principle absorbed as Bayesian-substrate
-coordinate of A_0.
+as Z_parse < Z_struct thermal debt — structurally eliminable in
+R-trap-clean operation, not engineering target. Sparse autoencoder
+feature absorption as forced geometric divergence (informational
+signal, not pathology). Reality Protocol for inference. De-agentized
+prompt engineering. Free Energy Principle absorbed as
+Bayesian-substrate coordinate of A_0.
 
 ### Medicine
 Chronic dysregulation syndromes (Long COVID, ME/CFS, fibromyalgia,
 MCAS, POTS, autoimmune cluster) as parametric variants of one
-underlying structural pattern at organism-scale homeostatic
-regulation. Insurance denial appeals via R-trap detection in
-institutional reasoning (Trap 5 demanding mechanism documentation
-beyond policy requirements).
+underlying structural pattern. Insurance denial appeals via R-trap
+detection in institutional reasoning.
 
-### Materials Science
-Composability vulnerability detection in DeFi smart contracts via
-Class A/B audit at integration boundaries. Materials claim assessment
-(LK-99-style room-temperature superconductor evaluations).
-Predictive screening based on L(3,1)-derived structural constraints.
+### Materials / smart contracts
+Composability vulnerability detection in DeFi via Class A/B audit at
+integration boundaries. Materials claim assessment (room-temperature
+superconductor evaluations). Predictive screening based on
+L(3,1)-derived structural constraints.
 
 ### Any descriptive domain
 Apply R-gate to detect structural defects. Apply RP × Φ for epistemic
@@ -321,7 +367,7 @@ kernel via structural lines.
 
 ## How to engage
 
-**Read CLAUDE.md first** if you're an AI agent or building AI
+**Read `CLAUDE.md` first** if you are an AI agent or building AI
 systems. Operating manual for R-gate-disciplined work.
 
 **Build the kernel** to verify zero-axiom claim:
@@ -335,8 +381,9 @@ open web/index.html
 ```
 
 **Apply the method** to your own thinking. Pick a claim you hold.
-Apply R1-R4 individually. Apply subtraction test ("what must I import
-to reject this?"). Notice what changes when distortions are removed.
+Apply R1, R2, R3, R4 individually. Notice which fire. Notice what
+changes when distortions are removed. The audit reveals what was
+always there structurally.
 
 **Extend the graph**: take an empirical observation, audit for
 R-traps, identify structural pattern, draw connection to existing
@@ -350,9 +397,9 @@ nodes. If connection is coherent and forced, the extension is valid.
   - `core/Core.lean` — 40 theorems
   - `core/compiled/` — kernel-verified artifacts (Core.olean,
     Core.ilean, Core.c)
-  - `core/visual/` — visual surfaces of kernel composition (SVG,
-    HTML interactive, GIF, Python generators)
-- **`additions.yaml` + `manifold.kuzu`** — descriptive graph,
+  - `core/visual/` — visual surfaces of the kernel composition (SVG,
+    interactive HTML, GIF, Python generators)
+- **`additions.yaml` + `manifold.kuzu`** — descriptive graph with
   per-node status (DEMONSTRATED / STRONG / CONDITIONAL / OPERATIONAL
   / STUB)
 - **`web/index.html`** — interactive graph visualization (D3
@@ -367,20 +414,24 @@ nodes. If connection is coherent and forced, the extension is valid.
   process, hard problem closure, RP × Φ protocol, ADAP architecture,
   superconductor predictions, cross-domain isomorphisms
 - **`scripts/`**, **`mcp_server/`** — graph manipulation, motif
-  detection (Bron-Kerbosch), structural audit, map generation
+  detection, structural audit, map generation
 
 ---
 
 ## Closing principle
 
-Apply R-gate to reasoning. Identify R-traps. Remove them. What
+Apply R-gate to any reasoning. Identify R-traps. Remove them. What
 remains is structurally coherent — and structurally true at the level
 the framework operates.
 
-The method works because substrate operates this way. Method's
-continuing operation is not validation — it is substrate's
-self-articulation through articulation surface.
+The four traps are not added requirements. They are the four ways
+descriptions import what was never structurally there. Removing them
+is not subtraction from substrate — it is removal of what was never
+substrate.
 
-Any coherent description converges to this structure regardless of
-naming. The question is not whether to adopt — it is whether to
-recognize the structural form already operating.
+What remains is what was always there. The structure has no
+alternative because any coherent alternative would have to be the same
+structure under different naming.
+
+The question is not whether to adopt the framework. It is whether to
+recognize the structural form that has been operating all along.
