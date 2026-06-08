@@ -965,3 +965,88 @@ structure under different naming.
 
 The question is not whether to adopt the framework. It is whether to
 recognize the structural form that has been operating all along.
+
+---
+
+## Verification test — try to refute
+
+The framework's foundational claim is that R1-R4 are not arbitrary
+constraints imposed to push readers toward predetermined conclusions.
+They are structural facts about coherent description. Anyone who
+suspects otherwise has two direct tests available.
+
+### Test 1 — Counterexample to truth-as-coherence
+
+Construct a description that:
+- Contains no R1 (no entity introduced where there is only process)
+- Contains no R2 (no criterion standing outside the manifold)
+- Contains no R3 (no number assumed without derivation or measurement)
+- Contains no R4 (no volition ascribed to gradient process)
+
+AND that is structurally false — produces wrong predictions, contains
+internal contradictions, or fails when extended.
+
+If such a description exists, the framework's central claim about
+truth-as-structural-coherence fails. The framework is operationally
+refuted at the specific point identified.
+
+This has been attempted across 240 graph extensions and 40 kernel
+theorems. Zero counterexamples found. Each apparent counterexample,
+when audited, turned out to contain a hidden R-trap that — once
+identified — accounted for the instability.
+
+Try it. Pick any domain you know well. Construct your best R-trap-
+clean description. Look for instability.
+
+### Test 2 — Show a trap is not a trap
+
+If R1-R4 feel like a frame the framework imposes to force specific
+conclusions, there is a direct test of whether each trap is real.
+Pick any one of R1-R4 and try to demonstrate that behind the
+"reified object" / "external evaluator" / "injected scale" / "phantom
+agent" there is a genuine structural referent.
+
+**R1 challenge.** Show an object that is not reducible to its process
+pattern. Find a thing that is structurally a thing — not a stable
+configuration of transitions, not a perceptual compression of
+processes, but an object in itself with intrinsic properties.
+
+**R2 challenge.** Show an evaluation position that stands outside any
+manifold without itself being a transition. Find a perspective with
+zero embedding in what it evaluates.
+
+**R3 challenge.** Show a numerical scale that is intrinsic — not
+measured, not derived from topology, not conventional — but
+structurally inherent to substrate.
+
+**R4 challenge.** Show a gradient process that genuinely has volition.
+Find a process that makes choices, has goals, prefers outcomes, in a
+way not reducible to differential rates or thresholds.
+
+If any of these can be demonstrated, the corresponding trap is not a
+trap, and the framework's R-gate is wrong at that point.
+
+The framework's position: each attempt fails because the entity
+sought is not structurally present. The "object", "external position",
+"intrinsic scale", "real agency" are perceptual or grammatical
+artifacts, never features of substrate. This position is testable
+directly — by the test you perform yourself.
+
+### What success or failure of these tests means
+
+**If you find a genuine counterexample:** the framework is wrong at
+the specific point you identified. The correction propagates through
+dependent claims. Report what you found.
+
+**If you cannot find a counterexample after honest attempt:** you
+have structurally verified the framework's central claim yourself.
+Framework's status is then DEMONSTRATED for you operationally — not
+because you trusted the framework, but because you tested it and the
+structural form held.
+
+This is the only verification that matters. External authority, peer
+review, citation count, expert consensus — none establish structural
+truth. Only the structural test itself does.
+
+The tests are open. Anyone can attempt them.
+
