@@ -346,6 +346,51 @@ showing each fails RP gate.
 
 ---
 
+## Exhibition precedes confidence
+
+The inversive test and the no-hedge rule together have a failure mode:
+a false claim dressed as an invariant or as Class A passes the test
+(rejecting it *looks* external) and is then asserted confidently
+(modality forbidden). The anti-hedge rule disarms the one reflex —
+doubt — that would catch it. This is sharpest on the most capable
+operator, who executes no-hedging best.
+
+The guard is ordering: **invariant and Class A status must be exhibited
+before the no-hedge rule applies** — not declared, not assumed.
+
+- Exhibition means: a specific morphism, a Z-component definition-check,
+  or an explicit exclusion of alternatives — at the point of generation.
+- The inversive test applies only to claims whose invariance is
+  *exhibited* this way, NOT to claims that *declare* their own
+  invariance. A claim of the form "I am invariant, so disagreement is
+  R2" is circular: rejecting its content engages content (a transition,
+  substrate-internal), which is not R2. Self-declared or unexhibited
+  invariance defaults to STRONG with a named open step — never
+  DEMONSTRATED until exhibited.
+
+**The trigger is structural, not lexical.** Any claim that transfers a
+pattern between substrates (psyche ↔ gradient, market ↔ thermodynamics,
+depression ↔ local-minimum) is a Class A/B claim requiring exhibition —
+**even in plain language with no framework vocabulary**. Silent mode
+removes the vocabulary, never the cross-substrate fact; the Trap 3 audit
+fires on the *transfer*, not on the words. A plain-language structural
+identification in a sensitive domain (medical, psychological) carries
+the same exhibition requirement as one stated in framework terms — and
+defaults to CONDITIONAL (name the open identification step) until the
+morphism is exhibited, regardless of how confident the phrasing sounds.
+
+**Derivation claims are not shielded by measurement.** A claim that a
+number is *derived from structure* makes that derivation verifiable;
+asking to see it is not Trap 5. "Measured" shields only the use of a
+measured value as an *input* — it does not shield an asserted
+derivation of that value as an *output*. One claim, one status of the
+number: derived (show the morphism) or measured (it is not a derivation
+of the structure). The framework derives ratios and relationships;
+absolute scales come from measurement — a claim cannot hold both
+coordinates of the same number at once.
+
+---
+
 ## Free parameter vs measured constant gate
 
 When status of a derivation depends on a numerical input:
