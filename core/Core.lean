@@ -267,6 +267,28 @@ theorem modus_ponens_is_unique_solution {α β : Type u}
     IsUniqueSolution (fun conclusion : β => conclusion = rule premise) (rule premise) :=
   ⟨rfl, fun _ h => h⟩
 
+/-- Non-contradiction as substrate fact. The structural impossibility
+    of `P ∧ ¬P` holding simultaneously is not a "law imposed on logic" —
+    it is what stable structure means in the symbolic surface: a
+    coherent state cannot carry `Z(A) = 0` and `Z(¬A) = 0` at once.
+
+    Coordinate expression of A_0 in the logical aspect, complementing
+    `modus_ponens_is_unique_solution`. Identity (`a = a`) is `rfl` —
+    substrate primitive needing no theorem. Modus ponens is the
+    forced-transition surface. Non-contradiction is the forced-
+    exclusion surface: no candidate exists in the substrate that
+    simultaneously satisfies a predicate and its negation. Together
+    these three coordinate-laws articulate logic AS A_0 in the
+    symbolic substrate, not as conventions imposed on it.
+
+    Excluded middle is deliberately not stated: it requires Classical
+    reasoning (`Classical.em`), which would breach the substrate-pure
+    discipline of this kernel. Its structural status is substrate-
+    aspect-specific (formal closed systems vs. open empirical
+    substrates), not universal — articulated outside the kernel. -/
+theorem law_of_non_contradiction (P : Prop) : ¬ (P ∧ ¬ P) :=
+  fun ⟨h, hn⟩ => hn h
+
 /-! ## Unified invariant: substrate-bounded reachability
 
     `stable_implies_A0` already encodes the universal pattern:
@@ -418,6 +440,48 @@ instance : ThreePeriod (Fin 3) where
     | ⟨1, _⟩ => rfl
     | ⟨2, _⟩ => rfl
   nontrivial := ⟨⟨0, by decide⟩, by decide⟩
+
+/-- Bool (size 2) cannot carry ThreePeriod. Two-element substrates
+    structurally fail the non-trivial 3-cycle requirement: any endomap
+    of Bool either fixes both elements (trivial) or fails the period
+    condition (`c³ ≠ id`). This is the primary structural exclusion
+    of ℤ_2 from the triangulation principle (N_Triangulation): two
+    slots define a segment with only endpoints, not a closed cycle
+    with interior argmin. Confirms `fin3Cycle`'s docstring assertion
+    "Bool (size 2) cannot carry it" as a kernel theorem, not just
+    assertion. Fin 3 (≅ ℤ/3) is the structural minimum — verified
+    bidirectionally: Fin 3 instance constructed above, Bool excluded
+    here. -/
+theorem bool_no_three_period (tp : ThreePeriod Bool) : False := by
+  obtain ⟨x, hx⟩ := tp.nontrivial
+  have hp := tp.period x
+  cases x with
+  | true =>
+    cases hct : tp.cycle true with
+    | true => exact hx hct
+    | false =>
+      cases hcf : tp.cycle false with
+      | true =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle true)) = false := by
+          rw [hct, hcf, hct]
+        exact absurd (h3.symm.trans hp) (by decide)
+      | false =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle true)) = false := by
+          rw [hct, hcf, hcf]
+        exact absurd (h3.symm.trans hp) (by decide)
+  | false =>
+    cases hct : tp.cycle false with
+    | false => exact hx hct
+    | true =>
+      cases hcf : tp.cycle true with
+      | false =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle false)) = true := by
+          rw [hct, hcf, hct]
+        exact absurd (h3.symm.trans hp) (by decide)
+      | true =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle false)) = true := by
+          rw [hct, hcf, hcf]
+        exact absurd (h3.symm.trans hp) (by decide)
 
 /-! ## Forcedness — explicit witnesses
 
@@ -860,6 +924,8 @@ end Core
 #print axioms Core.four_eq_four_tautological
 #print axioms Core.tautology_unconstrained
 #print axioms Core.modus_ponens_is_unique_solution
+#print axioms Core.law_of_non_contradiction
+#print axioms Core.bool_no_three_period
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
