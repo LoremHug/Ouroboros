@@ -486,6 +486,64 @@ theorem knaster_tarski_least_prefixed_is_fixed
   have h2 : le m (f m) := hleast (f m) h1
   exact antisymm _ _ hpre h2
 
+/-- Lyapunov existence (dynamical discharger). Given a measure
+    V : α → β into a well-founded relation `lt`, and a self-map
+    f : α → α that either fixes its argument or strictly descends V,
+    iterating from any `x₀` eventually reaches a fixed point.
+
+    What this needs: only well-foundedness on the codomain of V and
+    a per-step "descent OR fixed" condition. No metric on α, no
+    contraction constant, no continuity. The well-foundedness IS the
+    completeness structure that discharges existence.
+
+    Discharge profile vs. neighbours in the family:
+    * Banach: needs metric on α + contraction `q<1`; gives unique FP
+      reachable from any `x₀`.
+    * Lyapunov (here): needs V into well-founded β; gives existence
+      from any `x₀`, but DOES NOT impose uniqueness — different
+      starting points may reach different fixed points (multi-
+      attractor landscape). This is structurally why the graph's
+      homeostasis claim is Lyapunov, NOT Banach: healthy and
+      pathological attractors coexist; Lyapunov-stable per starting
+      point, but a Banach contraction would force a single FP and
+      could not represent a pathological attractor at all.
+    * Knaster–Tarski: needs antisymmetric order + monotonicity;
+      gives canonical least pre-fixed-point as fixed-point. -/
+theorem lyapunov_existence
+    {α : Type u} {β : Type v}
+    (V : α → β) (lt : β → β → Prop)
+    (wf : WellFounded lt)
+    (f : α → α)
+    (descent_or_fixed : ∀ x, f x = x ∨ lt (V (f x)) (V x))
+    (x₀ : α) :
+    ∃ x, f x = x := by
+  suffices key : ∀ b, ∀ x, V x = b → ∃ y, f y = y from key (V x₀) x₀ rfl
+  intro b
+  apply wf.induction b
+  intro b' ih x hVx
+  rcases descent_or_fixed x with h | hlt
+  · exact ⟨x, h⟩
+  · exact ih (V (f x)) (hVx ▸ hlt) (f x) rfl
+
+/-- Lyapunov dynamics + uniqueness witness → discharger. The dynamical
+    existence (Lyapunov) combined with an exogenous uniqueness
+    hypothesis instantiates `DischargesA0`. Parallels
+    `lawvere_is_discharger`: existence-only theorems become full
+    dischargers when paired with uniqueness. The honest profile:
+    Lyapunov alone discharges existence per starting point;
+    uniqueness is a separate obligation that fails in multi-attractor
+    cases (homeostasis, ecology, polarisation basins). -/
+theorem lyapunov_is_discharger
+    {α : Type u} {β : Type v}
+    (V : α → β) (lt : β → β → Prop)
+    (wf : WellFounded lt)
+    (f : α → α)
+    (descent_or_fixed : ∀ x, f x = x ∨ lt (V (f x)) (V x))
+    (x₀ : α)
+    (uniq : ∀ y z, f y = y → f z = z → y = z) :
+    DischargesA0 f :=
+  ⟨lyapunov_existence V lt wf f descent_or_fixed x₀, uniq⟩
+
 /-! ### Landauer pattern — irreversibility as no-unique-inverse
 
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
@@ -1281,6 +1339,8 @@ end Core
 #print axioms Core.dischargers_reach_same_A0
 #print axioms Core.lawvere_is_discharger
 #print axioms Core.knaster_tarski_least_prefixed_is_fixed
+#print axioms Core.lyapunov_existence
+#print axioms Core.lyapunov_is_discharger
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
 #print axioms Core.unique_witness_is_isUniqueSolution
