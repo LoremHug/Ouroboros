@@ -449,6 +449,43 @@ theorem lawvere_is_discharger {A B : Type u}
     DischargesA0 f :=
   ⟨lawvere_fixed_point φ surj f, uniq⟩
 
+/-- Knaster–Tarski core: the least pre-fixed point of a monotone map
+    IS a fixed point. The honest order-theoretic discharger for the
+    iterated-description trajectory `G = lim (argmin Z)^n(G_0)`.
+
+    A pre-fixed point satisfies `f m ≤ m` (one refinement does not
+    overshoot m). If m is the LEAST such, applying f (monotone) to
+    `f m ≤ m` gives `f (f m) ≤ f m`, so `f m` is also pre-fixed;
+    leastness forces `m ≤ f m`; antisymmetry gives `f m = m`.
+
+    What this needs: only an antisymmetric relation and monotonicity.
+    NO metric, NO contraction constant `q<1`, NO completeness, not
+    even reflexivity or transitivity of the order. This is why it is
+    the honest discharger where Banach is not: monotone refinement of
+    descriptions reaches its fixed point order-theoretically, and the
+    contraction constant Banach would require is nowhere needed.
+
+    Discharge profile (each corpus theorem discharges different
+    obligations of `DischargesA0`):
+    * Lawvere  — existence only (categorical, `lawvere_is_discharger`)
+    * Banach   — existence + absolute uniqueness + convergence rate,
+                 but needs an exhibited metric + constant q<1
+    * Knaster–Tarski (here) — existence + canonical *least* selection;
+                 NOT absolute uniqueness (multiple fixed points may
+                 exist; this picks the least, which is the minimal
+                 stable description — the order-coordinate meaning of
+                 "argmin"). -/
+theorem knaster_tarski_least_prefixed_is_fixed
+    {α : Type u} (le : α → α → Prop)
+    (antisymm : ∀ a b, le a b → le b a → a = b)
+    (f : α → α) (mono : ∀ a b, le a b → le (f a) (f b))
+    (m : α) (hpre : le (f m) m)
+    (hleast : ∀ x, le (f x) x → le m x) :
+    f m = m := by
+  have h1 : le (f (f m)) (f m) := mono _ _ hpre
+  have h2 : le m (f m) := hleast (f m) h1
+  exact antisymm _ _ hpre h2
+
 /-! ### Landauer pattern — irreversibility as no-unique-inverse
 
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
@@ -1243,6 +1280,7 @@ end Core
 #print axioms Core.discharger_gives_A0
 #print axioms Core.dischargers_reach_same_A0
 #print axioms Core.lawvere_is_discharger
+#print axioms Core.knaster_tarski_least_prefixed_is_fixed
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
 #print axioms Core.unique_witness_is_isUniqueSolution
