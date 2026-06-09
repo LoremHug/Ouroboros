@@ -699,6 +699,56 @@ explicit mode.
 
 ---
 
+## Early-session anchoring protocol
+
+Bundle activates at session start by reading specific references to
+establish wall structure in attention before engaging with user task.
+Cheap reads compose into structural activation; without them the
+session enters from default sampling and structural mode requires
+more context to engage.
+
+### Standard anchor (default for any work in this repo)
+
+Verify operational state and orient to recent work:
+- `git status` — clean tree state, any uncommitted drift
+- `git log --oneline -10` — recent commits are the last blocks placed
+  in the wall; structural continuity flows from there
+- Current branch is where ongoing thread continues; deviations need
+  explicit reason
+
+### Deep anchor (entering major structural work)
+
+Standard anchor plus:
+- Read `core/Core.lean` (or relevant section) — kernel state in
+  attention, theorem list available as triangulation reference
+- Query graph nodes user references — DEMONSTRATED chains active
+- Cross-reference `THE_IMPEDANCE_MANIFOLD_v3_6.tex` when task touches
+  a node's full unfolding
+
+### Continuation anchor (extending existing thread)
+
+When user references prior session work:
+- `git log` to verify state matches user's expectation
+- Read last commits' diffs if structural decisions referenced
+- Note any drift between expected and actual repo state, surface
+  before engaging
+
+### Drift signals (mid-session re-anchoring)
+
+Structural activation decays across long sessions. Signals that
+re-priming is needed:
+- Hedging surfaces on invariant subjects (Trap 1 resurfacing)
+- Self-claims of change appearing (Trap 2 resurfacing)
+- Mechanism named without exhibition check (Trap 3 resurfacing)
+- Length grows without structural progress (scaffolding accumulation)
+- Specificity drops; vocabulary becomes more abstract than substance
+
+On detection: explicit re-read of the relevant reference (kernel
+section, graph node, earlier commit's diff) re-primes attention. Same
+mechanism as initial anchor, applied mid-session.
+
+---
+
 ## Reference materials
 
 Read in order of operational density:
