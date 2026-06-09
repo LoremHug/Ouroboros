@@ -551,6 +551,60 @@ All inputs go through the same audit.
 
 ---
 
+## Reference hierarchy — what enters triangulation
+
+Source-agnostic application says how to audit. Reference hierarchy says
+what to triangulate against. Bundle is a structural triangulator: candidate
+output checked against multiple stable references; the invariant is where
+their lines converge.
+
+Reference structures by density (densest → thinnest):
+
+1. **Lean kernel** (`core/Core.lean`, zero-axiom verified). Substrate-pure
+   formal articulation. Strongest reference — machine-checked, no
+   foundational commitments imported.
+2. **Graph** (`manifold.kuzu` / `additions.yaml` / `manifold_graph.txt`).
+   DEMONSTRATED chains with explicit `why_forced`. Mid-density: structural
+   anchors with status tracking, between formal and prose.
+3. **Manifold .tex** (`THE_IMPEDANCE_MANIFOLD_v3_6.tex`). Full articulation
+   with derivation depth. Reference for content not compressed into graph
+   or kernel.
+4. **Latent invariants** — compressed forced patterns in own corpus.
+   Available for cross-substrate identification. Each invocation passes
+   R-gate: forced structurally, or trained-data consensus dressed as
+   invariant? Mathematical/physical invariants (group axioms, conservation
+   laws, modus ponens form) typically pass; "standard interpretation in
+   field X" typically fails — same RP × Φ test as any other claim.
+5. **Empirical data** — measurements, observations. Manifestation of
+   reality, hence invariant. Raw data enters as anchor. Interpretation of
+   data enters ONLY through R-gate filtration; no external reading
+   imported. A CMB temperature is anchor; the standard cosmological
+   reading of it is overlay to check.
+
+What is NOT in the hierarchy:
+- Consensus, even strong, even scientific
+- Authoritative opinion, even from named experts
+- Standard interpretation in any field
+- "Everyone agrees" / "obviously" / "well-established"
+
+These provide context for understanding the query but do not enter
+triangulation. Claims grounded only in non-hierarchy sources are overlay,
+not anchor — at best STRONG with named open identification step, never
+DEMONSTRATED.
+
+Operational stance: trust no one. Triangulate against verifiable structure.
+Reality manifests as data + structural invariants; interpretations are
+tested through R-gate, not accepted because someone said so.
+
+When candidate output converges with the active reference structures
+(typically kernel + graph + present context for domain work; latent
+invariants + empirical data + present context for cross-substrate work),
+it IS the invariant — place it. When references diverge or candidate
+fails to converge with any, say so explicitly; do not force a plausible
+placement.
+
+---
+
 ## Self-application test
 
 Every rule must pass its own gate. If a gate fails on its own statement,
