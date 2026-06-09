@@ -809,6 +809,30 @@ theorem composition_preserves_forced_uniqueness
     IsUniqueSolution (fun z : γ => z = g (f x)) (g (f x)) :=
   ⟨rfl, fun _ h => h⟩
 
+/-- Conjunction of constraints preserves forced uniqueness — closure
+    under simultaneous-constraint algebra. If x is THE unique
+    solution to P AND THE unique solution to Q (separately), then x
+    is THE unique solution to the conjoined constraint
+    `λy, P y ∧ Q y`.
+
+    Together with `composition_preserves_forced_uniqueness` (sequential
+    closure), this articulates substrate's closure under the two
+    fundamental structural operations: composition (chaining
+    transitions across types) and conjunction (combining constraints
+    on one type simultaneously). Both preserve the forced-uniqueness
+    pattern; A_0 is structurally stable under both.
+
+    Substrate use case: `AddCoherence t x := t.b + t.p = x ∧ x = t.i`
+    has two conjuncts. The uniqueness of 4 as `IsArgminZ AddCoherence
+    ⟨2,2,4⟩` decomposes structurally: each conjunct alone has a
+    unique witness; their conjunction inherits the uniqueness via
+    this theorem. -/
+theorem conjunction_preserves_forced_uniqueness
+    {α : Type u} {P Q : α → Prop} {x : α}
+    (hP : IsUniqueSolution P x) (hQ : IsUniqueSolution Q x) :
+    IsUniqueSolution (fun y => P y ∧ Q y) x :=
+  ⟨⟨hP.1, hQ.1⟩, fun y h => hP.2 y h.1⟩
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -1001,6 +1025,7 @@ end Core
 #print axioms Core.invariant_symmetric_witness
 #print axioms Core.invariant_null_zero_cost
 #print axioms Core.composition_preserves_forced_uniqueness
+#print axioms Core.conjunction_preserves_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
