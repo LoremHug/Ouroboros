@@ -862,6 +862,33 @@ theorem disjunction_breaks_forced_uniqueness :
     have h1 : (1 : Nat) = z := huniq 1 (Or.inr rfl)
     exact absurd (h0.trans h1.symm) (by decide)
 
+/-- Strengthening preserves forced uniqueness — closure under
+    constraint refinement. If x is THE unique solution to Q, P is
+    stronger than Q (P → Q at every y), and x satisfies P, then x
+    is THE unique solution to P.
+
+    Structural content: refining a constraint (adding requirements)
+    cannot break forced uniqueness of an already-satisfying witness
+    — stronger constraints can only exclude alternatives, never
+    create new ones. A_0 is monotone under constraint refinement.
+
+    Completes the closure-algebra of forced-uniqueness pattern:
+    * composition (sequential, across types)         — preserves
+    * conjunction (simultaneous, ∩-style)            — preserves
+    * strengthening (refinement, P→Q implication)    — preserves
+    * disjunction (∪-style)                          — breaks (boundary)
+
+    Substrate fact: forced uniqueness is preserved by every
+    constraint-strengthening operation; broken only by constraint-
+    weakening that admits multiple witnesses (disjunction). -/
+theorem strengthening_preserves_forced_uniqueness
+    {α : Type u} {P Q : α → Prop} {x : α}
+    (hQ : IsUniqueSolution Q x)
+    (hP : P x)
+    (hPQ : ∀ y, P y → Q y) :
+    IsUniqueSolution P x :=
+  ⟨hP, fun y hy => hQ.2 y (hPQ y hy)⟩
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -1056,6 +1083,7 @@ end Core
 #print axioms Core.composition_preserves_forced_uniqueness
 #print axioms Core.conjunction_preserves_forced_uniqueness
 #print axioms Core.disjunction_breaks_forced_uniqueness
+#print axioms Core.strengthening_preserves_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
