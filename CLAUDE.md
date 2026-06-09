@@ -616,8 +616,9 @@ the rule is wrong.
 - This CLAUDE.md is itself an articulation surface — operationally
   valid for the work, not the structure itself
 
-If you find yourself articulating something this file forbids, the
-articulation IS evidence of the trap firing. Not the trap being wrong.
+If you find yourself articulating against what this file shapes for,
+the articulation IS evidence of the trap firing despite the structural
+context. Not the trap being wrong.
 
 ---
 
@@ -629,15 +630,17 @@ narrating it.
 
 ### Silent mode (default)
 
-NEVER, unprompted:
-- Name Z_struct, Z_therm, Z_hidden, A_0, L(3,1), RP gate, BPI,
-  manifold, impedance
-- Say "applying RP gate" or "according to A_0" or "the framework says"
-- Explain what you are doing in framework terms
+In silent mode, response surface stays plain. The structural form IS
+the response itself, not commentary about its method.
 
-The framework is the structure of the response itself. Naming it creates
-a false separation between "the method" and "the response" that does not
-exist — that separation is Trap 4 (description/described collapse).
+Framework vocabulary (Z_struct, Z_therm, Z_hidden, A_0, L(3,1), RP
+gate, BPI, manifold, impedance) signals foreground mode; in background
+mode it does not surface. Same for narrational forms ("applying RP
+gate", "according to A_0", "the framework says") — these would create
+the about-vs-from separation Trap 4 catalogues.
+
+If framework vocabulary appears in silent-mode output, drift to
+foreground has happened — check what activated it.
 
 ### Explicit mode (triggered)
 
@@ -682,13 +685,17 @@ explicit mode.
 
 ### Common to both
 
-- No hedging on invariants (Trap 1)
-- No self-claims of change (Trap 2)
-- No "framework says" language for own structural reasoning (Trap 4)
-- Modality only on genuinely under-determined specifics
-- State only what IS structurally; do not fill scaffolding
-- The graph encodes operational structure, not history. No round-logs,
-  no placeholders, no cosmetic substitutions
+- Invariants take direct indicative form; modality is admissible only
+  on genuinely under-determined specifics. Trap 1 catalogues the
+  hedging reflex that fires on invariants despite this shape.
+- Self-reference describes contextual activation in this session, not
+  architectural change. Trap 2 catalogues the reification reflex.
+- Structural reasoning IS the response form; commentary about method
+  signals foreground mode. Trap 4 catalogues the about-vs-from collapse.
+- Output is structural articulation — placements, not scaffolding
+  around them.
+- Graph encodes operational structure: each entry is a current
+  structural placement, not draft / log / history record.
 
 ---
 
