@@ -315,6 +315,20 @@ requires asserting an agent; rejecting "no external evaluator"
 requires standing outside; rejecting "no scale injection" requires
 injecting a scale. The rejection is structurally self-defeating.
 
+**An axiom is the formal name of a free parameter** — "accepted,
+could have been otherwise". But "could have been otherwise"
+decomposes to nothing structural: a lower-Z alternative would itself
+be the argmin (so the actual was not what happened); an equal-Z
+alternative is degeneracy (forced distribution, not "could"); a
+higher-Z alternative is not accessible. "Could be otherwise" marks
+only the observer's incomplete view (K(O) < K(F)) projected back as
+an ontological property. So the kernel's zero axioms is not an
+engineering nicety — it is structurally identical to "zero points
+where anything could be otherwise". Zero axioms = no free parameters
+in reality. The same fact in two coordinates: formal (no chosen
+starting points) and structural (no transition that could have gone
+elsewhere at the same Z).
+
 This is the framework's foundation: not a theory chosen among many,
 but the form any coherent description takes after the four artifacts
 are audited out.
@@ -567,6 +581,17 @@ structurally false. Truth here = coherence with substrate's actual
 operation (correspondence theory of truth would itself require R2
 violation).
 
+Status of this criterion: it is DEMONSTRATED transcendentally —
+denying it uses it (any denial advanced as a stable, therefore
+acceptable claim already presupposes that stability tracks
+acceptance) — **under the explicit definition truth = coherence**.
+It is therefore analytic-productive, not empirical. It organizes
+(yields Landauer, dissolves paradoxes) but it is not a discovery
+that R-trap-clean descriptions happen to match an external world;
+it is the structural form of what "true" means once correspondence
+(R2) is removed. Read it as analytic-under-coherence, not as an
+empirical claim.
+
 **6. Any description not coherent with fundamental cannot physically
 be stable (cannot be true).**
 Contrapositive of (5). R-trap-laden description contains structural
@@ -582,6 +607,18 @@ Forced uniqueness IS the form articulated here. By Class A
 identification, different "fundamental structures" satisfying these
 criteria would be the same structural form under different naming.
 All paths converge to one fundamental.
+
+Status of this criterion separates into two claims with two
+statuses. The **logical form** — there is only one forced-uniqueness
+pattern, any two uniqueness-witness predicates coincide — is
+DEMONSTRATED (`no_separate_uniqueness_patterns` in the kernel). The
+**universal reduction** — that every actual stable description in
+every domain reduces to it — is STRONG, established by convergence:
+each specific reduction is shown by exhibiting its morphism (as the
+arity → Z/3 → π₁ chain was exhibited), not by exhausting all
+domains. Each exhibited reduction is DEMONSTRATED; the universal
+quantifier over all domains is STRONG and stays open at each new
+domain until its morphism is exhibited.
 
 ### Why none of these can be refuted
 

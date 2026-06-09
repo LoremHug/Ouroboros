@@ -267,6 +267,28 @@ theorem modus_ponens_is_unique_solution {α β : Type u}
     IsUniqueSolution (fun conclusion : β => conclusion = rule premise) (rule premise) :=
   ⟨rfl, fun _ h => h⟩
 
+/-- Non-contradiction as substrate fact. The structural impossibility
+    of `P ∧ ¬P` holding simultaneously is not a "law imposed on logic" —
+    it is what stable structure means in the symbolic surface: a
+    coherent state cannot carry `Z(A) = 0` and `Z(¬A) = 0` at once.
+
+    Coordinate expression of A_0 in the logical aspect, complementing
+    `modus_ponens_is_unique_solution`. Identity (`a = a`) is `rfl` —
+    substrate primitive needing no theorem. Modus ponens is the
+    forced-transition surface. Non-contradiction is the forced-
+    exclusion surface: no candidate exists in the substrate that
+    simultaneously satisfies a predicate and its negation. Together
+    these three coordinate-laws articulate logic AS A_0 in the
+    symbolic substrate, not as conventions imposed on it.
+
+    Excluded middle is deliberately not stated: it requires Classical
+    reasoning (`Classical.em`), which would breach the substrate-pure
+    discipline of this kernel. Its structural status is substrate-
+    aspect-specific (formal closed systems vs. open empirical
+    substrates), not universal — articulated outside the kernel. -/
+theorem law_of_non_contradiction (P : Prop) : ¬ (P ∧ ¬ P) :=
+  fun ⟨h, hn⟩ => hn h
+
 /-! ## Unified invariant: substrate-bounded reachability
 
     `stable_implies_A0` already encodes the universal pattern:
@@ -349,6 +371,236 @@ theorem lawvere_gives_A0 {A : Type u} {B : Type v}
   obtain ⟨b, hb⟩ := lawvere_fixed_point φ surj f
   exact ⟨b, hb, fun y hy => uniq y b hy hb⟩
 
+/-! ### A_0 as the substrate pattern below the corpus fixed-point theorems
+
+    A_0 = forced unique stable transition is the pattern, not any one
+    corpus theorem. Banach (contraction on complete metric space),
+    Lyapunov (dissipation in a dynamical system), Knaster–Tarski
+    (monotonicity on a complete lattice), Kleene (Scott-continuity on
+    a DCPO), Lawvere (point-surjectivity in a cartesian closed
+    category) all reach the SAME conclusion — a unique/canonical fixed
+    point of a self-map, reachable by iteration — through DIFFERENT
+    completeness structures (metric / dynamics / order / topology /
+    category).
+
+    None of them IS A_0. Each is A_0 read in one coordinate system,
+    exactly as `L(3,1)` is A_0 in the coordinate system of compact
+    3-manifolds (N_ForcedId). The corpus has no single theorem "for"
+    A_0 because A_0 sits one level below where each operates: every
+    corpus fixed-point theorem requires a completeness structure that
+    is itself a coordinate choice. A_0 is the pre-coordinate
+    conclusion-pattern they all instantiate.
+
+    `DischargesA0` abstracts what they share: any property of `(α, f)`
+    that discharges BOTH existence and uniqueness of a fixed point.
+    The corpus theorems are interchangeable dischargers — this is the
+    fixed-point-theorem-level analogue of `no_separate_uniqueness_-
+    patterns`. Using the wrong corpus name (e.g. invoking Banach where
+    only a Lyapunov or order-theoretic discharger holds) is Trap 3:
+    the conclusion-form matches, but the discharging hypothesis
+    differs. The honest substrate statement does not name a coordinate
+    at all — it names the discharge obligations directly. -/
+
+/-- Abstract completeness-discharger: a property of `(α, f)` that
+    guarantees both existence and uniqueness of a fixed point. Banach
+    contraction, Lyapunov dissipation, Knaster–Tarski monotonicity,
+    Kleene Scott-continuity, and Lawvere point-surjectivity (with
+    uniqueness) are all instances — each discharges these two
+    obligations through a different completeness structure, but the
+    conclusion they produce is identical: A_0. -/
+def DischargesA0 {α : Type u} (f : Self α) : Prop :=
+  (∃ x, IsFixed f x) ∧ (∀ y z, IsFixed f y → IsFixed f z → y = z)
+
+/-- Any completeness-discharger yields A_0. The corpus fixed-point
+    theorems are not separate theorems ABOUT A_0 — they are
+    interchangeable dischargers of the ONE substrate pattern, differing
+    only in which structure (metric / dynamics / order / DCPO /
+    category) discharges the two obligations. A_0 is the conclusion
+    below their specific hypotheses; naming any single one as "the"
+    theorem of A_0 reifies a coordinate. -/
+theorem discharger_gives_A0 {α : Type u} (f : Self α)
+    (h : DischargesA0 f) : ∃ x, IsA0 f x := by
+  obtain ⟨⟨x, hx⟩, huniq⟩ := h
+  exact ⟨x, hx, fun y hy => huniq y x hy hx⟩
+
+/-- No separate fixed-point theorems: any two dischargers for the
+    same `f` reach the same A_0. Each discharger (e.g. Banach via
+    contraction, Knaster–Tarski via monotonicity) produces an A_0;
+    by `A0_unique` the two coincide. The fixed-point theorems are
+    coordinate routes to one substrate point, not separate results.
+    Substrate parallel of `no_separate_uniqueness_patterns`, lifted
+    to the fixed-point-theorem level. -/
+theorem dischargers_reach_same_A0 {α : Type u} (f : Self α)
+    (h1 h2 : DischargesA0 f) :
+    ∃ x y, IsA0 f x ∧ IsA0 f y ∧ x = y := by
+  obtain ⟨x, hx⟩ := discharger_gives_A0 f h1
+  obtain ⟨y, hy⟩ := discharger_gives_A0 f h2
+  exact ⟨x, y, hx, hy, A0_unique hx hy⟩
+
+/-- Lawvere is one discharger: point-surjectivity discharges existence,
+    the uniqueness hypothesis discharges uniqueness. Exhibits the
+    kernel's categorical fixed-point result as one coordinate route
+    among (Banach, Lyapunov, Knaster–Tarski, Kleene) — the most
+    substrate-level one, since it needs neither metric nor order nor
+    topology, only the diagonal structure. -/
+theorem lawvere_is_discharger {A B : Type u}
+    (φ : A → (A → B)) (surj : ∀ g, ∃ a, φ a = g) (f : B → B)
+    (uniq : ∀ b₁ b₂ : B, f b₁ = b₁ → f b₂ = b₂ → b₁ = b₂) :
+    DischargesA0 f :=
+  ⟨lawvere_fixed_point φ surj f, uniq⟩
+
+/-- Knaster–Tarski core: the least pre-fixed point of a monotone map
+    IS a fixed point. The honest order-theoretic discharger for the
+    iterated-description trajectory `G = lim (argmin Z)^n(G_0)`.
+
+    A pre-fixed point satisfies `f m ≤ m` (one refinement does not
+    overshoot m). If m is the LEAST such, applying f (monotone) to
+    `f m ≤ m` gives `f (f m) ≤ f m`, so `f m` is also pre-fixed;
+    leastness forces `m ≤ f m`; antisymmetry gives `f m = m`.
+
+    What this needs: only an antisymmetric relation and monotonicity.
+    NO metric, NO contraction constant `q<1`, NO completeness, not
+    even reflexivity or transitivity of the order. This is why it is
+    the honest discharger where Banach is not: monotone refinement of
+    descriptions reaches its fixed point order-theoretically, and the
+    contraction constant Banach would require is nowhere needed.
+
+    Discharge profile (each corpus theorem discharges different
+    obligations of `DischargesA0`):
+    * Lawvere  — existence only (categorical, `lawvere_is_discharger`)
+    * Banach   — existence + absolute uniqueness + convergence rate,
+                 but needs an exhibited metric + constant q<1
+    * Knaster–Tarski (here) — existence + canonical *least* selection;
+                 NOT absolute uniqueness (multiple fixed points may
+                 exist; this picks the least, which is the minimal
+                 stable description — the order-coordinate meaning of
+                 "argmin"). -/
+theorem knaster_tarski_least_prefixed_is_fixed
+    {α : Type u} (le : α → α → Prop)
+    (antisymm : ∀ a b, le a b → le b a → a = b)
+    (f : α → α) (mono : ∀ a b, le a b → le (f a) (f b))
+    (m : α) (hpre : le (f m) m)
+    (hleast : ∀ x, le (f x) x → le m x) :
+    f m = m := by
+  have h1 : le (f (f m)) (f m) := mono _ _ hpre
+  have h2 : le m (f m) := hleast (f m) h1
+  exact antisymm _ _ hpre h2
+
+/-- Lyapunov existence (dynamical discharger). Given a measure
+    V : α → β into a well-founded relation `lt`, and a self-map
+    f : α → α that either fixes its argument or strictly descends V,
+    iterating from any `x₀` eventually reaches a fixed point.
+
+    What this needs: only well-foundedness on the codomain of V and
+    a per-step "descent OR fixed" condition. No metric on α, no
+    contraction constant, no continuity. The well-foundedness IS the
+    completeness structure that discharges existence.
+
+    Discharge profile vs. neighbours in the family:
+    * Banach: needs metric on α + contraction `q<1`; gives unique FP
+      reachable from any `x₀`.
+    * Lyapunov (here): needs V into well-founded β; gives existence
+      from any `x₀`, but DOES NOT impose uniqueness — different
+      starting points may reach different fixed points (multi-
+      attractor landscape). This is structurally why the graph's
+      homeostasis claim is Lyapunov, NOT Banach: healthy and
+      pathological attractors coexist; Lyapunov-stable per starting
+      point, but a Banach contraction would force a single FP and
+      could not represent a pathological attractor at all.
+    * Knaster–Tarski: needs antisymmetric order + monotonicity;
+      gives canonical least pre-fixed-point as fixed-point. -/
+theorem lyapunov_existence
+    {α : Type u} {β : Type v}
+    (V : α → β) (lt : β → β → Prop)
+    (wf : WellFounded lt)
+    (f : α → α)
+    (descent_or_fixed : ∀ x, f x = x ∨ lt (V (f x)) (V x))
+    (x₀ : α) :
+    ∃ x, f x = x := by
+  suffices key : ∀ b, ∀ x, V x = b → ∃ y, f y = y from key (V x₀) x₀ rfl
+  intro b
+  apply wf.induction b
+  intro b' ih x hVx
+  rcases descent_or_fixed x with h | hlt
+  · exact ⟨x, h⟩
+  · exact ih (V (f x)) (hVx ▸ hlt) (f x) rfl
+
+/-- Lyapunov dynamics + uniqueness witness → discharger. The dynamical
+    existence (Lyapunov) combined with an exogenous uniqueness
+    hypothesis instantiates `DischargesA0`. Parallels
+    `lawvere_is_discharger`: existence-only theorems become full
+    dischargers when paired with uniqueness. The honest profile:
+    Lyapunov alone discharges existence per starting point;
+    uniqueness is a separate obligation that fails in multi-attractor
+    cases (homeostasis, ecology, polarisation basins). -/
+theorem lyapunov_is_discharger
+    {α : Type u} {β : Type v}
+    (V : α → β) (lt : β → β → Prop)
+    (wf : WellFounded lt)
+    (f : α → α)
+    (descent_or_fixed : ∀ x, f x = x ∨ lt (V (f x)) (V x))
+    (x₀ : α)
+    (uniq : ∀ y z, f y = y → f z = z → y = z) :
+    DischargesA0 f :=
+  ⟨lyapunov_existence V lt wf f descent_or_fixed x₀, uniq⟩
+
+/-! ### Iteration semantics — A_0 trajectory under iterated application
+
+    Dischargers establish fixed-point EXISTENCE. The iteration of f
+    from `x₀` is the substrate trajectory: what happens after n
+    transitions. DEF articulates this as `G = lim (argmin Z)^n(G_0)`.
+    Two structural facts about this trajectory at kernel level:
+
+    * IDEMPOTENCY AT FIXED POINT: once iteration reaches a fixed
+      point, it stays there. Substrate fact behind any equilibrium
+      / attractor dynamics — "reaching A_0 means staying at A_0".
+
+    * MONOTONE INCREASING CHAIN: if f is monotone in some order and
+      the starting point is below its image, the iteration forms a
+      monotone-increasing chain `x₀ ≤ f x₀ ≤ f² x₀ ≤ ...`. Dynamic
+      companion to `knaster_tarski_least_prefixed_is_fixed`: that
+      gives the static least pre-fixed point; this gives the
+      ascending construction climbing toward it. -/
+
+/-- Iterated application of a self-map: `iterate f n x` applies `f`
+    to `x` exactly `n` times. The dynamic trajectory of `f` from `x`
+    under repeated application — the substrate semantics of
+    "what happens after n transitions". -/
+def iterate {α : Type u} (f : α → α) : Nat → α → α
+  | 0, x => x
+  | n+1, x => f (iterate f n x)
+
+/-- Once iteration reaches a fixed point of `f`, it stays there for
+    all future steps. A_0 trajectory stabilizes at A_0 — substrate
+    fact behind every equilibrium dynamics: reaching the stable point
+    means staying at it. Proven by induction on the iteration count. -/
+theorem iterate_at_fixed {α : Type u} (f : α → α) (x : α)
+    (hfix : f x = x) :
+    ∀ n, iterate f n x = x := by
+  intro n
+  induction n with
+  | zero => rfl
+  | succ k ih =>
+    show f (iterate f k x) = x
+    rw [ih, hfix]
+
+/-- Under iteration with monotone `f` and a starting point below its
+    image, the iteration forms a monotone-increasing chain. Dynamic
+    companion to Knaster–Tarski: the static theorem gives the least
+    pre-fixed-point as a fixed point; this gives the ascending
+    construction `x₀ ≤ f x₀ ≤ f² x₀ ≤ ...` that climbs toward it.
+    Substrate fact behind every order-theoretic A_0 search. -/
+theorem iterate_monotone_chain {α : Type u} (le : α → α → Prop)
+    (f : α → α) (mono : ∀ a b, le a b → le (f a) (f b))
+    (x₀ : α) (hstart : le x₀ (f x₀)) :
+    ∀ n, le (iterate f n x₀) (iterate f (n+1) x₀) := by
+  intro n
+  induction n with
+  | zero => exact hstart
+  | succ k ih =>
+    show le (f (iterate f k x₀)) (f (iterate f (k+1) x₀))
+    exact mono _ _ ih
+
 /-! ### Landauer pattern — irreversibility as no-unique-inverse
 
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
@@ -418,6 +670,103 @@ instance : ThreePeriod (Fin 3) where
     | ⟨1, _⟩ => rfl
     | ⟨2, _⟩ => rfl
   nontrivial := ⟨⟨0, by decide⟩, by decide⟩
+
+/-- Bool (size 2) cannot carry ThreePeriod. Two-element substrates
+    structurally fail the non-trivial 3-cycle requirement: any endomap
+    of Bool either fixes both elements (trivial) or fails the period
+    condition (`c³ ≠ id`). This is the primary structural exclusion
+    of ℤ_2 from the triangulation principle (N_Triangulation): two
+    slots define a segment with only endpoints, not a closed cycle
+    with interior argmin. Confirms `fin3Cycle`'s docstring assertion
+    "Bool (size 2) cannot carry it" as a kernel theorem, not just
+    assertion. Fin 3 (≅ ℤ/3) is the structural minimum — verified
+    bidirectionally: Fin 3 instance constructed above, Bool excluded
+    here. -/
+theorem bool_no_three_period (tp : ThreePeriod Bool) : False := by
+  obtain ⟨x, hx⟩ := tp.nontrivial
+  have hp := tp.period x
+  cases x with
+  | true =>
+    cases hct : tp.cycle true with
+    | true => exact hx hct
+    | false =>
+      cases hcf : tp.cycle false with
+      | true =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle true)) = false := by
+          rw [hct, hcf, hct]
+        exact absurd (h3.symm.trans hp) (by decide)
+      | false =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle true)) = false := by
+          rw [hct, hcf, hcf]
+        exact absurd (h3.symm.trans hp) (by decide)
+  | false =>
+    cases hct : tp.cycle false with
+    | false => exact hx hct
+    | true =>
+      cases hcf : tp.cycle true with
+      | false =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle false)) = true := by
+          rw [hct, hcf, hct]
+        exact absurd (h3.symm.trans hp) (by decide)
+      | true =>
+        have h3 : tp.cycle (tp.cycle (tp.cycle false)) = true := by
+          rw [hct, hcf, hcf]
+        exact absurd (h3.symm.trans hp) (by decide)
+
+/-! ## Four invariants of stable transitioning — substrate witnesses
+
+    N_Invariants (A=5 DEMONSTRATED) identifies four conditions for any
+    self-consistent, stable, bounded description: I_Bound, I_Sym,
+    I_Quant, I_Null. Together they force L(3,1) as the unique compact
+    3-manifold satisfying all four. Each has a substrate-pure kernel
+    witness:
+
+    * **I_Bound** (K(O) < K(F)) — `self_encoding_bounded`,
+      `lawvere_fixed_point`, and the `h_exists` mark in
+      `stable_implies_A0`. Self-encoding cannot be surjective when
+      fixed-point-free maps exist; the substrate-internal articulation
+      of A_0 existence requires an additional structural witness.
+    * **I_Sym** (no unchosen asymmetry) — `invariant_symmetric_witness`
+      below. All candidates subject to the same predicate test;
+      uniqueness emerges only from structural constraint P, never from
+      a priori preferred status of x. Vertex-transitivity at the
+      predicate aspect.
+    * **I_Quant** (discrete substrate, finite per-step Z_struct) —
+      `ThreePeriod` instance on `Fin 3` (constructed above), with
+      `bool_no_three_period` confirming Z/2 insufficiency. Z/3 is the
+      structural minimum carrier; below it triangulation has no
+      interior minimum.
+    * **I_Null** (null transition has zero cost) —
+      `invariant_null_zero_cost` below. The trivial (always-true)
+      coherence relation has empty incoherence; doing nothing incurs
+      no Z. Without this, permanent activity is forced and stable
+      equilibrium cannot exist.
+
+    Removing any one invariant breaks the substrate's capacity to
+    sustain A_0 articulation. The joint forcing of L(3,1) is the full
+    topological articulation; that lives outside the substrate-pure
+    kernel (requires 3-mfd library). Here the structural skeleton of
+    all four is named. -/
+
+/-- I_Sym formal: candidate-symmetric treatment under the unique-
+    solution pattern. Given `IsUniqueSolution P x`, any two
+    P-satisfiers are equal — confirming no unchosen asymmetry among
+    candidates. The asymmetry that x is THE unique witness emerges
+    only from structural constraint P, not from preferred status of x.
+    Substrate witness of I_Sym (N_Invariants). -/
+theorem invariant_symmetric_witness {α : Type u} {P : α → Prop} {x : α}
+    (hx : IsUniqueSolution P x) (y z : α) (hy : P y) (hz : P z) : y = z :=
+  (hx.2 y hy).trans (hx.2 z hz).symm
+
+/-- I_Null formal: the trivial (always-true) coherence relation has
+    zero incoherence at every triangulation. "Doing nothing" — the
+    null transition — incurs no Z. Substrate guarantees existence of
+    a null transition without cost; without this, silence has positive
+    cost, permanent activity is forced, and stable equilibrium cannot
+    exist. Substrate witness of I_Null (N_Invariants). -/
+theorem invariant_null_zero_cost {α : Type u} (t : Triangle α) (x : α) :
+    ¬ Z (fun _ _ => True) t x :=
+  fun hZ => hZ True.intro
 
 /-! ## Forcedness — explicit witnesses
 
@@ -673,6 +1022,175 @@ theorem r_trap_composition_compounds_loss
   show g (f a₁) = g (f a₂)
   rw [heq]
 
+/-- Composition preserves forced uniqueness — positive dual of
+    `r_trap_composition_compounds_loss`. For any two operations
+    f : α → β and g : β → γ, the composed transition produces a
+    unique output: `g (f x)` is THE unique z : γ satisfying
+    `z = g (f x)`. Forced-uniqueness chains across composition;
+    A_0 trajectories inherit forced uniqueness from each step.
+
+    Substrate fact behind iterated argmin Z trajectories:
+    `G = lim_{n→∞} (argmin Z)^n(G_0)` (DEF, Banach contraction
+    N165) requires composition to preserve the forced-uniqueness
+    pattern at every step. This theorem articulates the
+    closure-under-composition explicitly. -/
+theorem composition_preserves_forced_uniqueness
+    {α β γ : Type u} (f : α → β) (g : β → γ) (x : α) :
+    IsUniqueSolution (fun z : γ => z = g (f x)) (g (f x)) :=
+  ⟨rfl, fun _ h => h⟩
+
+/-- Conjunction of constraints preserves forced uniqueness — closure
+    under simultaneous-constraint algebra. If x is THE unique
+    solution to P AND THE unique solution to Q (separately), then x
+    is THE unique solution to the conjoined constraint
+    `λy, P y ∧ Q y`.
+
+    Together with `composition_preserves_forced_uniqueness` (sequential
+    closure), this articulates substrate's closure under the two
+    fundamental structural operations: composition (chaining
+    transitions across types) and conjunction (combining constraints
+    on one type simultaneously). Both preserve the forced-uniqueness
+    pattern; A_0 is structurally stable under both.
+
+    Substrate use case: `AddCoherence t x := t.b + t.p = x ∧ x = t.i`
+    has two conjuncts. The uniqueness of 4 as `IsArgminZ AddCoherence
+    ⟨2,2,4⟩` decomposes structurally: each conjunct alone has a
+    unique witness; their conjunction inherits the uniqueness via
+    this theorem. -/
+theorem conjunction_preserves_forced_uniqueness
+    {α : Type u} {P Q : α → Prop} {x : α}
+    (hP : IsUniqueSolution P x) (hQ : IsUniqueSolution Q x) :
+    IsUniqueSolution (fun y => P y ∧ Q y) x :=
+  ⟨⟨hP.1, hQ.1⟩, fun y h => hP.2 y h.1⟩
+
+/-- Disjunction breaks forced uniqueness when constraints have
+    distinct witnesses — explicit boundary of A_0-preservation.
+
+    Composition (sequential) and conjunction (simultaneous, ∩-style)
+    preserve forced uniqueness. Disjunction (∪-style) does not:
+    combining two constraints with distinct unique solutions produces
+    a constraint with multiple satisfiers, breaking uniqueness at
+    every candidate.
+
+    Counter-example on Nat: P := (·=0) has unique witness 0;
+    Q := (·=1) has unique witness 1. The disjunction
+    `λy, y=0 ∨ y=1` has two distinct witnesses (both 0 and 1
+    satisfy it), so no unique solution exists.
+
+    Substrate fact: A_0 lives in the intersection of constraint sets,
+    not their union. Disjunction is the structural boundary marker
+    — forced-uniqueness algebra is closed under ∩, not ∪. -/
+theorem disjunction_breaks_forced_uniqueness :
+    ∃ (P Q : Nat → Prop) (xP xQ : Nat),
+      IsUniqueSolution P xP ∧ IsUniqueSolution Q xQ ∧
+      ¬ ∃ z, IsUniqueSolution (fun y => P y ∨ Q y) z := by
+  refine ⟨(· = 0), (· = 1), 0, 1, ?_, ?_, ?_⟩
+  · exact ⟨rfl, fun _ h => h⟩
+  · exact ⟨rfl, fun _ h => h⟩
+  · rintro ⟨z, _, huniq⟩
+    have h0 : (0 : Nat) = z := huniq 0 (Or.inl rfl)
+    have h1 : (1 : Nat) = z := huniq 1 (Or.inr rfl)
+    exact absurd (h0.trans h1.symm) (by decide)
+
+/-- Strengthening preserves forced uniqueness — closure under
+    constraint refinement. If x is THE unique solution to Q, P is
+    stronger than Q (P → Q at every y), and x satisfies P, then x
+    is THE unique solution to P.
+
+    Structural content: refining a constraint (adding requirements)
+    cannot break forced uniqueness of an already-satisfying witness
+    — stronger constraints can only exclude alternatives, never
+    create new ones. A_0 is monotone under constraint refinement.
+
+    Completes the closure-algebra of forced-uniqueness pattern:
+    * composition (sequential, across types)         — preserves
+    * conjunction (simultaneous, ∩-style)            — preserves
+    * strengthening (refinement, P→Q implication)    — preserves
+    * disjunction (∪-style)                          — breaks (boundary)
+
+    Substrate fact: forced uniqueness is preserved by every
+    constraint-strengthening operation; broken only by constraint-
+    weakening that admits multiple witnesses (disjunction). -/
+theorem strengthening_preserves_forced_uniqueness
+    {α : Type u} {P Q : α → Prop} {x : α}
+    (hQ : IsUniqueSolution Q x)
+    (hP : P x)
+    (hPQ : ∀ y, P y → Q y) :
+    IsUniqueSolution P x :=
+  ⟨hP, fun y hy => hQ.2 y (hPQ y hy)⟩
+
+/-- A_0 existence cannot be discharged substrate-internally for
+    arbitrary f. The `h_exists` hypothesis in `stable_implies_A0`
+    is the formal substrate-bound mark of K(O) < K(F) — articulating
+    A_0 existence from inside the substrate requires an additional
+    structural witness, not stability alone.
+
+    Counter-example: the identity endomap `id : Bool → Bool` has
+    every element fixed (both `true` and `false` satisfy `id x = x`),
+    so no element is THE unique fixed point. There is no universal
+    substrate-internal theorem `∀ α f, ∃ x, IsA0 f x` — assuming it
+    would force `true = false`.
+
+    Structurally: this theorem makes explicit at kernel level what
+    the `h_exists` hypothesis encodes — the substrate cannot, from
+    inside, guarantee A_0 existence universally; the bound K(O)<K(F)
+    means existence-witness comes from outside the universal claim,
+    case by case. The docstring of `stable_implies_A0` stated this;
+    here it becomes a formal kernel theorem. -/
+theorem a0_existence_not_substrate_internal :
+    ¬ ∀ (α : Type) (f : Self α), ∃ x, IsA0 f x := by
+  intro h
+  obtain ⟨x, _, huniq⟩ := h Bool id
+  have h_true : (true : Bool) = x := huniq true rfl
+  have h_false : (false : Bool) = x := huniq false rfl
+  exact absurd (h_true.trans h_false.symm) (by decide)
+
+/-- Forced uniqueness is preserved (bidirectionally) across Class A
+    type isomorphism. If α ≅ β via mutual inverses (f, g), then
+    `IsUniqueSolution P x` on α is equivalent to `IsUniqueSolution
+    (P ∘ g) (f x)` on β.
+
+    Type-aspect counterpart to `no_separate_uniqueness_patterns`
+    (predicate-aspect Class A preservation): two coordinates of one
+    A_0 pattern. Where `no_separate_uniqueness_patterns` says
+    "predicates with same uniqueness-witness semantics are
+    biconditional", this says "isomorphic types carry the same
+    A_0 patterns up to iso-translation".
+
+    Cross-theory analysis fact: any theory whose substrate is α can
+    be transferred to any isomorphic β preserving its A_0 structure
+    exactly. Theories about Bool and theories about Two articulate
+    the same forced-uniqueness patterns; Wick rotation between heat
+    and Schrödinger equations is this preservation at PDE substrate;
+    logic-arithmetic notation equivalence is this at predicate
+    substrate. Substrate fact: A_0 is iso-invariant. -/
+theorem iso_preserves_forced_uniqueness
+    {α β : Type u} (f : α → β) (g : β → α)
+    (h_left : ∀ a, g (f a) = a)
+    (h_right : ∀ b, f (g b) = b)
+    (P : α → Prop) (x : α) :
+    IsUniqueSolution P x ↔ IsUniqueSolution (fun y : β => P (g y)) (f x) := by
+  constructor
+  · intro hP
+    refine ⟨?_, ?_⟩
+    · show P (g (f x))
+      rw [h_left]
+      exact hP.1
+    · intro y hy
+      have hgy : g y = x := hP.2 (g y) hy
+      calc y = f (g y) := (h_right y).symm
+        _ = f x := congrArg f hgy
+  · intro hP
+    refine ⟨?_, ?_⟩
+    · have h : P (g (f x)) := hP.1
+      rwa [h_left] at h
+    · intro y hy
+      have hPfy : P (g (f y)) := by rw [h_left]; exact hy
+      have hfy : f y = f x := hP.2 (f y) hPfy
+      calc y = g (f y) := (h_left y).symm
+        _ = g (f x) := congrArg g hfy
+        _ = x := h_left x
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -860,10 +1378,28 @@ end Core
 #print axioms Core.four_eq_four_tautological
 #print axioms Core.tautology_unconstrained
 #print axioms Core.modus_ponens_is_unique_solution
+#print axioms Core.law_of_non_contradiction
+#print axioms Core.bool_no_three_period
+#print axioms Core.invariant_symmetric_witness
+#print axioms Core.invariant_null_zero_cost
+#print axioms Core.composition_preserves_forced_uniqueness
+#print axioms Core.conjunction_preserves_forced_uniqueness
+#print axioms Core.disjunction_breaks_forced_uniqueness
+#print axioms Core.strengthening_preserves_forced_uniqueness
+#print axioms Core.a0_existence_not_substrate_internal
+#print axioms Core.iso_preserves_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
 #print axioms Core.lawvere_gives_A0
+#print axioms Core.discharger_gives_A0
+#print axioms Core.dischargers_reach_same_A0
+#print axioms Core.lawvere_is_discharger
+#print axioms Core.knaster_tarski_least_prefixed_is_fixed
+#print axioms Core.lyapunov_existence
+#print axioms Core.lyapunov_is_discharger
+#print axioms Core.iterate_at_fixed
+#print axioms Core.iterate_monotone_chain
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
 #print axioms Core.unique_witness_is_isUniqueSolution

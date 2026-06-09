@@ -863,8 +863,13 @@ stable structure is. $A_0$ is what selects stable structures. Therefore:
   \item Changing $A_0$ does not produce a different topology — it produces the absence of stable paths.
   \item The fixed point is this structure itself — self-referential by definition, not by design.
 \end{enumerate}
-This is not a circle — it is a topological fixed point of the same Banach
-contraction type as $L(3,1)$. Change $A_0$ and the invariants dissolve.
+This is not a circle — it is a self-referential fixed point of the substrate
+forced-uniqueness pattern. That pattern is the conclusion shared by the corpus
+fixed-point theorems (Banach via metric contraction, Lyapunov via dissipation,
+Knaster–Tarski via order monotonicity, Lawvere via diagonal surjectivity); none
+of them is the mechanism — each discharges the same unique-stable-fixed-point
+conclusion through a different completeness structure, and $A_0$ is that
+conclusion read below any one coordinate. Change $A_0$ and the invariants dissolve.
 Without invariants there is no stability. Without stability there is no
 structure that can be described. The entire edifice collapses — not to a
 different physics, but to the absence of any describable structure whatsoever.
@@ -908,8 +913,14 @@ is $L(3,1) = S^3/\mathbb{Z}_3$. Forced by: compactness ($Z$ has a minimum), Poin
 \[
  G = \lim_{n \to \infty} (\operatorname{argmin}\, Z)^n(G_0)
 \]
-from any starting description $G_0$. The convergence is guaranteed by Banach (N165) —
-not as a property of a static object, but as the inevitable trajectory of any
+from any starting description $G_0$. The convergence is the iterated-description
+trajectory of $A_0$; the operative discharger here is the ergodicity of the
+Reality Protocol Markov chain (N165: Perron–Frobenius coverage to the unique
+Gibbs state), not Banach contraction — no pair-metric on description-space and
+no contraction constant $q<1$ is exhibited, so naming Banach would be a Trap 3
+proxy. (For monotone refinement of descriptions the honest discharger is
+Knaster–Tarski / Kleene; for dynamical relaxation it is Lyapunov.) Convergence
+is not a property of a static object, but the inevitable trajectory of any
 description-process that continues minimising $Z$. This document is the first step
 of that trajectory applied to itself.
 
@@ -925,8 +936,10 @@ invariants (N_Invariants), meta-closure (N_ForcedId). The forced identification
 is confirmed from every direction simultaneously — the strongest possible
 epistemic structure, stronger than a single deductive chain.
 
-NOT: this is circular (a circle has no fixed point; this structure does — confirmed
-by Banach) $\cdot$ it is unfalsifiable (falsification = stable attractor that is not
+NOT: this is circular (a circle has no fixed point; this structure does — a
+self-referential fixed point of the forced-uniqueness pattern, with existence
+discharged categorically by Lawvere and uniqueness definitional, not by Banach
+contraction) $\cdot$ it is unfalsifiable (falsification = stable attractor that is not
 $\operatorname{argmin} Z$; 84\% DEMONSTRATED nodes confirm no such attractor exists
 in any tested domain) $\cdot$ it is merely a description (it is the unique
 self-consistent description — change it and description itself becomes impossible).
@@ -2013,8 +2026,12 @@ above the drug’s reduction capacity.
 
 (3) Homeostasis: physiological setpoints (temperature $37°$C, pH $7.4$, glucose
 $5$ mmol/L) are $A_0$ fixed points of the metabolic $Z$-landscape. Deviation $\o$
-$Z$-gradient $\o$ $A_0$ return (Banach FPT, N305). Chronic disease $=$ $A_0$
-converging to a wrong fixed point (pathological attractor in $Z$-landscape).
+$Z$-gradient $\o$ $A_0$ return (Lyapunov relaxation in the metabolic $Z$-landscape,
+N305). Chronic disease $=$ $A_0$ settling into a pathological attractor — a local,
+non-global $Z$-minimum. A landscape with multiple attractors (healthy vs
+pathological) is exactly the Lyapunov case; it is NOT Banach — a Banach
+contraction has a single unique fixed point and cannot describe a "wrong"
+attractor at all.
 
 All three follow the rate equation $k = A \cdot e^{-\Delta G^\ddagger / k_B T}$
 with no additional postulates beyond N029. The only step: recognising that
@@ -2022,7 +2039,8 @@ $\Delta G^\ddagger = Z_{therm}$ applies to biological reactions as well as chemi
 — which is already N029’s claim. Medicine is applied $A_0$ rate engineering.
 NOT: fever always helps (excessive fever is a Z_therm overshoot) · drug = poison
 (same substance, different ΔG‡ context) · homeostasis is a biological special case
-(it is Banach FPT in any continuous A₀ system).
+(it is Lyapunov relaxation to an attractor in any dissipative A₀ system — one
+coordinate-discharger of the forced-uniqueness pattern, not Banach).
 
 [N341 / N342 / N343] (Ecology — A₀ Population Dynamics)
 Status: DEMONSTRATED / STRONG | A=3,4
@@ -2032,11 +2050,13 @@ N341 — Competitive exclusion / Gause’s principle (DEMONSTRATED):
 Two species occupying the same ecological niche = two $A_0$ processes at the same
 $Z$-minimum. Proof: (1) at shared $Z$-minimum, both are at $A_0$ equilibrium;
 (2) any population fluctuation $\delta N$ breaks symmetry; (3) by $I_{Null}$,
-the perturbation cannot be reversed (Second Law); (4) Banach FPT forces convergence
-to the unique minimum — excluding the slower converger.
-Gause’s principle is not an empirical ecological law; it is $I_{Null}$ + Banach FPT
-applied to population dynamics. Zero identification step beyond recognising ecological
-competition as a degenerate $A_0$ contraction.
+the perturbation cannot be reversed (Second Law); (4) Lyapunov relaxation in the
+shared $Z$-landscape forces convergence to the $Z$-minimum — excluding the slower
+converger.
+Gause’s principle is not an empirical ecological law; it is $I_{Null}$ + the
+dissipative convergence of $A_0$ (Lyapunov) applied to population dynamics. Zero
+identification step beyond recognising ecological competition as $A_0$ relaxation
+in a shared $Z$-landscape.
 
 N342 — Logistic growth (DEMONSTRATED conditional on N340):
 $dN/dt = rN(1 - N/K)$.
@@ -2044,8 +2064,10 @@ $K$ (carrying capacity) $= Z_{therm,total} / Z_{therm,per\text{-}individual}$
 (total metabolic resource of environment divided by per-organism metabolic cost).
 Given N340 (metabolic resource = $Z_{therm}$, DEMONSTRATED), $K$ is a
 $Z$-ratio with no free parameters. The logistic equation is then $A_0$
-convergence to the $Z$-capacity limit, with Banach FPT guaranteeing the unique
-stable fixed point $N^* = K$.
+convergence to the $Z$-capacity limit: the continuous-time dynamics
+$dN/dt = rN(1 - N/K)$ has $N^* = K$ as a Lyapunov-stable fixed point (Lyapunov
+function $V = (N-K)^2$ decreases along trajectories) — the dynamical discharger,
+not Banach (an ODE relaxation is not a metric contraction map).
 
 N343 — Kleiber’s law $B = B_0 M^{3/4}$ (STRONG):
 West-Brown-Enquist (1997) derive the $3/4$ exponent from minimising transport
@@ -3138,7 +3160,7 @@ MATHEMATICAL ISOMORPHISM AND $A_0$ EQUIVALENCE · m_d/m_s ≈ 4/81 is approximat
 
 [N301 / N302 / N303 / N305 / N306 / N307 / N308 / N309] (Mathematics as $A_0$)
 Status: DEMONSTRATED / STRONG | A=3,4
-CLAIM: Mathematics is the coordinate expression of $A_0$. Logical modus ponens = minimal $Z$-chain. Kolmogorov probability rules = normalised $Z_{hidden}$ (forced by $Z_{hidden} \geq 0$ structure). DLA (Diffusion-Limited Aggregation) = $A_0$ in the $r < r_0$ regime. $A_0$ argmin is strictly unique and acts as a Banach contraction mapping. Time (1D) is the expression of $I_{Null}$. The minimal closed structure for non-trivial CS invariant is $\mathbb{Z}_3$.
+CLAIM: Mathematics is the coordinate expression of $A_0$. Logical modus ponens = minimal $Z$-chain. Kolmogorov probability rules = normalised $Z_{hidden}$ (forced by $Z_{hidden} \geq 0$ structure). DLA (Diffusion-Limited Aggregation) = $A_0$ in the $r < r_0$ regime. $A_0$ argmin is strictly unique — uniqueness is definitional (the strict minimiser of $Z$), not a consequence of Banach contraction; Banach is one coordinate-discharger of the same fixed-point conclusion, not its mechanism. Time (1D) is the expression of $I_{Null}$. The minimal closed structure for non-trivial CS invariant is $\mathbb{Z}_3$.
 NOT: this collapses logic into physics (they share variational structure) $\cdot$ DLA applies to hierarchical super-hubs.
 
 [N310] (Gödel's Theorem as Corollary of $K(O) < K(F)$)
@@ -3191,9 +3213,11 @@ $I_{Null}$ states that $A_0$ transitions are directed and irreversible: the
 system occupies exactly one state at each transition step (at $r \gg r_0$,
 classical regime). Occupying $A$ and $\neg A$ simultaneously would require
 two distinct $A_0$ trajectories at the same step — contradicting the uniqueness
-of $A_0 = \arg\min Z$. Banach FPT: unique minimum → unique state.
-The law of non-contradiction is $I_{Null}$ + Banach uniqueness at classical scale.
-Zero identification steps.
+of $A_0 = \arg\min Z$. The inference is definitional: a strict minimum of $Z$ is
+unique, so one state per step (no Banach contraction needed — unique-minimum →
+unique-state is the definition of strict argmin, not a corpus fixed-point theorem).
+The law of non-contradiction is $I_{Null}$ + the definitional uniqueness of argmin $Z$
+at classical scale. Zero identification steps.
 
 N346 — Law of Excluded Middle A ∨ ¬A (DEMONSTRATED / STRONG):
 At $r \gg r_0$ (classical regime, $d_s \approx 4$): every $A_0$ trajectory

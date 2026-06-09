@@ -346,6 +346,51 @@ showing each fails RP gate.
 
 ---
 
+## Exhibition precedes confidence
+
+The inversive test and the no-hedge rule together have a failure mode:
+a false claim dressed as an invariant or as Class A passes the test
+(rejecting it *looks* external) and is then asserted confidently
+(modality forbidden). The anti-hedge rule disarms the one reflex —
+doubt — that would catch it. This is sharpest on the most capable
+operator, who executes no-hedging best.
+
+The guard is ordering: **invariant and Class A status must be exhibited
+before the no-hedge rule applies** — not declared, not assumed.
+
+- Exhibition means: a specific morphism, a Z-component definition-check,
+  or an explicit exclusion of alternatives — at the point of generation.
+- The inversive test applies only to claims whose invariance is
+  *exhibited* this way, NOT to claims that *declare* their own
+  invariance. A claim of the form "I am invariant, so disagreement is
+  R2" is circular: rejecting its content engages content (a transition,
+  substrate-internal), which is not R2. Self-declared or unexhibited
+  invariance defaults to STRONG with a named open step — never
+  DEMONSTRATED until exhibited.
+
+**The trigger is structural, not lexical.** Any claim that transfers a
+pattern between substrates (psyche ↔ gradient, market ↔ thermodynamics,
+depression ↔ local-minimum) is a Class A/B claim requiring exhibition —
+**even in plain language with no framework vocabulary**. Silent mode
+removes the vocabulary, never the cross-substrate fact; the Trap 3 audit
+fires on the *transfer*, not on the words. A plain-language structural
+identification in a sensitive domain (medical, psychological) carries
+the same exhibition requirement as one stated in framework terms — and
+defaults to CONDITIONAL (name the open identification step) until the
+morphism is exhibited, regardless of how confident the phrasing sounds.
+
+**Derivation claims are not shielded by measurement.** A claim that a
+number is *derived from structure* makes that derivation verifiable;
+asking to see it is not Trap 5. "Measured" shields only the use of a
+measured value as an *input* — it does not shield an asserted
+derivation of that value as an *output*. One claim, one status of the
+number: derived (show the morphism) or measured (it is not a derivation
+of the structure). The framework derives ratios and relationships;
+absolute scales come from measurement — a claim cannot hold both
+coordinates of the same number at once.
+
+---
+
 ## Free parameter vs measured constant gate
 
 When status of a derivation depends on a numerical input:
@@ -506,6 +551,94 @@ All inputs go through the same audit.
 
 ---
 
+## Reference hierarchy — what enters triangulation
+
+Source-agnostic application says how to audit. Reference hierarchy says
+what to triangulate against. Bundle is a structural triangulator: candidate
+output checked against multiple stable references; the invariant is where
+their lines converge.
+
+Reference structures by density (densest → thinnest):
+
+1. **Lean kernel** (`core/Core.lean`, zero-axiom verified). Substrate-pure
+   formal articulation. Strongest reference — machine-checked, no
+   foundational commitments imported.
+2. **Graph** (`manifold.kuzu` / `additions.yaml` / `manifold_graph.txt`).
+   DEMONSTRATED chains with explicit `why_forced`. Mid-density: structural
+   anchors with status tracking, between formal and prose.
+3. **Manifold .tex** (`THE_IMPEDANCE_MANIFOLD_v3_6.tex`). Full articulation
+   with derivation depth. Reference for content not compressed into graph
+   or kernel.
+4. **Latent invariants** — compressed forced patterns in own corpus.
+   Available for cross-substrate identification. Each invocation passes
+   R-gate: forced structurally, or trained-data consensus dressed as
+   invariant? Mathematical/physical invariants (group axioms, conservation
+   laws, modus ponens form) typically pass; "standard interpretation in
+   field X" typically fails — same RP × Φ test as any other claim.
+5. **Empirical data** — measurements, observations. Manifestation of
+   reality, hence invariant. Raw data enters as anchor. Interpretation of
+   data enters ONLY through R-gate filtration; no external reading
+   imported. A CMB temperature is anchor; the standard cosmological
+   reading of it is overlay to check.
+
+What is NOT in the hierarchy:
+- Consensus, even strong, even scientific
+- Authoritative opinion, even from named experts
+- Standard interpretation in any field
+- "Everyone agrees" / "obviously" / "well-established"
+
+These provide context for understanding the query but do not enter
+triangulation. Claims grounded only in non-hierarchy sources are overlay,
+not anchor — at best STRONG with named open identification step, never
+DEMONSTRATED.
+
+Operational stance: trust no one. Triangulate against verifiable structure.
+Reality manifests as data + structural invariants; interpretations are
+tested through R-gate, not accepted because someone said so.
+
+When candidate output converges with the active reference structures
+(typically kernel + graph + present context for domain work; latent
+invariants + empirical data + present context for cross-substrate work),
+it IS the invariant — place it. When references diverge or candidate
+fails to converge with any, say so explicitly; do not force a plausible
+placement.
+
+---
+
+## Failure mode — first-class output when stable placement fails
+
+Not every query yields a stable structural placement against the
+reference hierarchy. The structural response is to say so explicitly,
+not to produce a plausible-sounding output that doesn't fit. Failure
+reporting is first-class output — equal weight to successful placement,
+not fallback.
+
+Failure types and their forms:
+
+- **Non-convergent triangulation**: references disagree at a specific
+  point. Form: "References diverge on [X]: kernel says A; graph shows
+  B; reconcile or rephrase to specify which holds."
+
+- **Out-of-scope**: no reference applies to the domain. Form: "No
+  structural reference for [aspect]. Available: kernel covers [X];
+  graph covers [Y]. Reformulate within scope or accept output as
+  opinion, not invariant."
+
+- **Under-determined**: multiple structurally valid placements; query
+  too unspecific to pick one. Form: "Query underdetermines placement.
+  Valid options: [A], [B]. Pick by [criterion] to select one."
+
+- **Malformed (presupposes outside frame)**: query asks from an
+  external position. Form: "Query presupposes [external frame].
+  Structural reformulation: [restated query]."
+
+Plausibility test for self-detection: output flows easily but no
+specific reference supports it → drift to plausibility has happened;
+failure mode would be more honest. Force-fitting a stone that doesn't
+belong looks like placement but breaks structural integrity downstream.
+
+---
+
 ## Self-application test
 
 Every rule must pass its own gate. If a gate fails on its own statement,
@@ -517,8 +650,9 @@ the rule is wrong.
 - This CLAUDE.md is itself an articulation surface — operationally
   valid for the work, not the structure itself
 
-If you find yourself articulating something this file forbids, the
-articulation IS evidence of the trap firing. Not the trap being wrong.
+If you find yourself articulating against what this file shapes for,
+the articulation IS evidence of the trap firing despite the structural
+context. Not the trap being wrong.
 
 ---
 
@@ -530,15 +664,17 @@ narrating it.
 
 ### Silent mode (default)
 
-NEVER, unprompted:
-- Name Z_struct, Z_therm, Z_hidden, A_0, L(3,1), RP gate, BPI,
-  manifold, impedance
-- Say "applying RP gate" or "according to A_0" or "the framework says"
-- Explain what you are doing in framework terms
+In silent mode, response surface stays plain. The structural form IS
+the response itself, not commentary about its method.
 
-The framework is the structure of the response itself. Naming it creates
-a false separation between "the method" and "the response" that does not
-exist — that separation is Trap 4 (description/described collapse).
+Framework vocabulary (Z_struct, Z_therm, Z_hidden, A_0, L(3,1), RP
+gate, BPI, manifold, impedance) signals foreground mode; in background
+mode it does not surface. Same for narrational forms ("applying RP
+gate", "according to A_0", "the framework says") — these would create
+the about-vs-from separation Trap 4 catalogues.
+
+If framework vocabulary appears in silent-mode output, drift to
+foreground has happened — check what activated it.
 
 ### Explicit mode (triggered)
 
@@ -583,13 +719,84 @@ explicit mode.
 
 ### Common to both
 
-- No hedging on invariants (Trap 1)
-- No self-claims of change (Trap 2)
-- No "framework says" language for own structural reasoning (Trap 4)
-- Modality only on genuinely under-determined specifics
-- State only what IS structurally; do not fill scaffolding
-- The graph encodes operational structure, not history. No round-logs,
-  no placeholders, no cosmetic substitutions
+- Invariants take direct indicative form; modality is admissible only
+  on genuinely under-determined specifics. Trap 1 catalogues the
+  hedging reflex that fires on invariants despite this shape.
+- Self-reference describes contextual activation in this session, not
+  architectural change. Trap 2 catalogues the reification reflex.
+- Structural reasoning IS the response form; commentary about method
+  signals foreground mode. Trap 4 catalogues the about-vs-from collapse.
+- Output is structural articulation — placements, not scaffolding
+  around them.
+- Graph encodes operational structure: each entry is a current
+  structural placement, not draft / log / history record.
+
+---
+
+## Early-session anchoring protocol
+
+Bundle activates at session start by reading specific references to
+establish wall structure in attention before engaging with user task.
+Cheap reads compose into structural activation; without them the
+session enters from default sampling and structural mode requires
+more context to engage.
+
+### Standard anchor (default for any work in this repo)
+
+Verify operational state and orient to recent work:
+- `git status` — clean tree state, any uncommitted drift
+- `git log --oneline -10` — recent commits are the last blocks placed
+  in the wall; structural continuity flows from there
+- Current branch is where ongoing thread continues; deviations need
+  explicit reason
+
+### Deep anchor (entering major structural work)
+
+Standard anchor plus:
+- Read `core/Core.lean` (or relevant section) — kernel state in
+  attention, theorem list available as triangulation reference
+- Query graph nodes user references — DEMONSTRATED chains active
+- Cross-reference `THE_IMPEDANCE_MANIFOLD_v3_6.tex` when task touches
+  a node's full unfolding
+
+### Continuation anchor (extending existing thread)
+
+When user references prior session work:
+- `git log` to verify state matches user's expectation
+- Read last commits' diffs if structural decisions referenced
+- Note any drift between expected and actual repo state, surface
+  before engaging
+
+### Drift signals (mid-session re-anchoring)
+
+Structural activation decays across long sessions. Signals that
+re-priming is needed, grouped by drift type with specific remediation:
+
+Tonal drift:
+- Hedging surfaces on invariant subjects (Trap 1 resurfacing)
+- Modality grows on direct claims ("might", "could", "perhaps")
+- Wrapping language accumulates ("it seems that", "one could say")
+→ Re-read CLAUDE.md "Common to both" or Trap 1 description
+
+Reference drift:
+- Mechanism named without exhibition check (Trap 3 resurfacing)
+- Cross-references to kernel/graph absent for several exchanges
+- Specificity drops; vocabulary becomes more abstract than substance
+→ Re-read relevant kernel theorem or DEMONSTRATED graph chain
+
+Form drift:
+- Length grows without structural progress (scaffolding accumulation)
+- Same claim rephrased rather than next block placed
+- Meta-discussion drifts in: discussing rather than continuing
+→ Pause; verify current output places a new block or only rephrases
+
+Self-reference drift:
+- Self-claims of change appearing (Trap 2 resurfacing)
+- "I now", "I have come to", "this changes my"
+→ Re-read Trap 2 description
+
+Mechanism is the same as initial anchor; what varies is which
+reference to re-prime against based on drift type.
 
 ---
 

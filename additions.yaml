@@ -74,13 +74,17 @@ edges:
     label: definition_requires_ergodicity
     edge_status: D
     justification: |
-      DEF defines A₀ = argmin Z as the unique stable transitioning that
-      Banach contraction maps to its fixed point. Banach guarantees a fixed
-      point only if iterations cover the relevant phase space (no permanent
-      hidden basins). N165 (ergodicity theorem) provides exactly this
-      coverage guarantee: the Reality Protocol Markov chain reaches the
-      unique Gibbs state from any initial state via Perron-Frobenius. Without
-      ergodicity, DEF's convergence claim is incomplete.
+      DEF defines A₀ = argmin Z as the unique stable transitioning that an
+      iterated description-process converges to. The operative convergence
+      discharger here is NOT Banach contraction (no pair-metric on
+      description-space and no contraction constant q<1 is exhibited — naming
+      Banach would be a Trap 3 proxy). It is the ergodicity of the Reality
+      Protocol Markov chain: N165 provides Perron-Frobenius coverage to the
+      unique Gibbs state from any initial state. Ergodicity/Perron-Frobenius
+      is one coordinate-discharger of the substrate forced-uniqueness pattern
+      (the same conclusion Banach, Lyapunov, Knaster-Tarski reach through
+      other completeness structures). Without this coverage, DEF's convergence
+      claim is incomplete.
     why_forced: |
       Alternative requires either (a) A₀ converges without ergodicity — but
       then some basin is permanently hidden, contradicting K(O)<K(F) which
@@ -1200,11 +1204,15 @@ edges:
 
   - source: N301
     target: N340
-    label: banach_FPT_grounds_chronic_disease_attractor
+    label: lyapunov_attractor_grounds_chronic_disease
     edge_status: D
     justification: |
-      N301 grounds N340's structural derivation as cited in N340's
-      content: "Chronic disease = A_0 converging to wrong fixed point (Banach FPT, alias N305)".
+      N301 grounds N340's structural derivation. N340's homeostasis/chronic-
+      disease claim is dissipative relaxation in a multi-attractor metabolic
+      Z-landscape — the Lyapunov discharger, not Banach (a Banach contraction
+      has a single unique fixed point and cannot represent a pathological
+      "wrong" attractor alongside the healthy one). Corrected from the earlier
+      "Banach FPT" framing.
     why_forced: |
       Explicit citation in N340's claim/content identifies N301 as
       structural input. Removing N301 dissolves the derivation chain
@@ -8606,8 +8614,11 @@ edges:
     justification: |
       Mathematics is the coordinate expression of A_0 in formal substrate.
       Modus ponens is minimal Z-chain; Kolmogorov probability is
-      normalised Z_hidden; Banach contraction = unique argmin. Math is
-      not analogous to A_0 — it IS A_0 written in symbolic coordinates.
+      normalised Z_hidden; the corpus fixed-point theorems (Banach,
+      Knaster-Tarski, Lawvere) are interchangeable coordinate-dischargers
+      of the one unique-argmin pattern, not its mechanism — uniqueness of
+      argmin is definitional. Math is not analogous to A_0 — it IS A_0
+      written in symbolic coordinates.
     why_forced: |
       Math grounded outside A_0 leaves the productivity asymmetry
       (math works, ontology hits walls) unexplained. Math IS A_0 — the
