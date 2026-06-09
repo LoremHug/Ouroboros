@@ -792,6 +792,23 @@ theorem r_trap_composition_compounds_loss
   show g (f a₁) = g (f a₂)
   rw [heq]
 
+/-- Composition preserves forced uniqueness — positive dual of
+    `r_trap_composition_compounds_loss`. For any two operations
+    f : α → β and g : β → γ, the composed transition produces a
+    unique output: `g (f x)` is THE unique z : γ satisfying
+    `z = g (f x)`. Forced-uniqueness chains across composition;
+    A_0 trajectories inherit forced uniqueness from each step.
+
+    Substrate fact behind iterated argmin Z trajectories:
+    `G = lim_{n→∞} (argmin Z)^n(G_0)` (DEF, Banach contraction
+    N165) requires composition to preserve the forced-uniqueness
+    pattern at every step. This theorem articulates the
+    closure-under-composition explicitly. -/
+theorem composition_preserves_forced_uniqueness
+    {α β γ : Type u} (f : α → β) (g : β → γ) (x : α) :
+    IsUniqueSolution (fun z : γ => z = g (f x)) (g (f x)) :=
+  ⟨rfl, fun _ h => h⟩
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -983,6 +1000,7 @@ end Core
 #print axioms Core.bool_no_three_period
 #print axioms Core.invariant_symmetric_witness
 #print axioms Core.invariant_null_zero_cost
+#print axioms Core.composition_preserves_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
