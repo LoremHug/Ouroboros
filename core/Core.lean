@@ -371,6 +371,84 @@ theorem lawvere_gives_A0 {A : Type u} {B : Type v}
   obtain ⟨b, hb⟩ := lawvere_fixed_point φ surj f
   exact ⟨b, hb, fun y hy => uniq y b hy hb⟩
 
+/-! ### A_0 as the substrate pattern below the corpus fixed-point theorems
+
+    A_0 = forced unique stable transition is the pattern, not any one
+    corpus theorem. Banach (contraction on complete metric space),
+    Lyapunov (dissipation in a dynamical system), Knaster–Tarski
+    (monotonicity on a complete lattice), Kleene (Scott-continuity on
+    a DCPO), Lawvere (point-surjectivity in a cartesian closed
+    category) all reach the SAME conclusion — a unique/canonical fixed
+    point of a self-map, reachable by iteration — through DIFFERENT
+    completeness structures (metric / dynamics / order / topology /
+    category).
+
+    None of them IS A_0. Each is A_0 read in one coordinate system,
+    exactly as `L(3,1)` is A_0 in the coordinate system of compact
+    3-manifolds (N_ForcedId). The corpus has no single theorem "for"
+    A_0 because A_0 sits one level below where each operates: every
+    corpus fixed-point theorem requires a completeness structure that
+    is itself a coordinate choice. A_0 is the pre-coordinate
+    conclusion-pattern they all instantiate.
+
+    `DischargesA0` abstracts what they share: any property of `(α, f)`
+    that discharges BOTH existence and uniqueness of a fixed point.
+    The corpus theorems are interchangeable dischargers — this is the
+    fixed-point-theorem-level analogue of `no_separate_uniqueness_-
+    patterns`. Using the wrong corpus name (e.g. invoking Banach where
+    only a Lyapunov or order-theoretic discharger holds) is Trap 3:
+    the conclusion-form matches, but the discharging hypothesis
+    differs. The honest substrate statement does not name a coordinate
+    at all — it names the discharge obligations directly. -/
+
+/-- Abstract completeness-discharger: a property of `(α, f)` that
+    guarantees both existence and uniqueness of a fixed point. Banach
+    contraction, Lyapunov dissipation, Knaster–Tarski monotonicity,
+    Kleene Scott-continuity, and Lawvere point-surjectivity (with
+    uniqueness) are all instances — each discharges these two
+    obligations through a different completeness structure, but the
+    conclusion they produce is identical: A_0. -/
+def DischargesA0 {α : Type u} (f : Self α) : Prop :=
+  (∃ x, IsFixed f x) ∧ (∀ y z, IsFixed f y → IsFixed f z → y = z)
+
+/-- Any completeness-discharger yields A_0. The corpus fixed-point
+    theorems are not separate theorems ABOUT A_0 — they are
+    interchangeable dischargers of the ONE substrate pattern, differing
+    only in which structure (metric / dynamics / order / DCPO /
+    category) discharges the two obligations. A_0 is the conclusion
+    below their specific hypotheses; naming any single one as "the"
+    theorem of A_0 reifies a coordinate. -/
+theorem discharger_gives_A0 {α : Type u} (f : Self α)
+    (h : DischargesA0 f) : ∃ x, IsA0 f x := by
+  obtain ⟨⟨x, hx⟩, huniq⟩ := h
+  exact ⟨x, hx, fun y hy => huniq y x hy hx⟩
+
+/-- No separate fixed-point theorems: any two dischargers for the
+    same `f` reach the same A_0. Each discharger (e.g. Banach via
+    contraction, Knaster–Tarski via monotonicity) produces an A_0;
+    by `A0_unique` the two coincide. The fixed-point theorems are
+    coordinate routes to one substrate point, not separate results.
+    Substrate parallel of `no_separate_uniqueness_patterns`, lifted
+    to the fixed-point-theorem level. -/
+theorem dischargers_reach_same_A0 {α : Type u} (f : Self α)
+    (h1 h2 : DischargesA0 f) :
+    ∃ x y, IsA0 f x ∧ IsA0 f y ∧ x = y := by
+  obtain ⟨x, hx⟩ := discharger_gives_A0 f h1
+  obtain ⟨y, hy⟩ := discharger_gives_A0 f h2
+  exact ⟨x, y, hx, hy, A0_unique hx hy⟩
+
+/-- Lawvere is one discharger: point-surjectivity discharges existence,
+    the uniqueness hypothesis discharges uniqueness. Exhibits the
+    kernel's categorical fixed-point result as one coordinate route
+    among (Banach, Lyapunov, Knaster–Tarski, Kleene) — the most
+    substrate-level one, since it needs neither metric nor order nor
+    topology, only the diagonal structure. -/
+theorem lawvere_is_discharger {A B : Type u}
+    (φ : A → (A → B)) (surj : ∀ g, ∃ a, φ a = g) (f : B → B)
+    (uniq : ∀ b₁ b₂ : B, f b₁ = b₁ → f b₂ = b₂ → b₁ = b₂) :
+    DischargesA0 f :=
+  ⟨lawvere_fixed_point φ surj f, uniq⟩
+
 /-! ### Landauer pattern — irreversibility as no-unique-inverse
 
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
@@ -1162,6 +1240,9 @@ end Core
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
 #print axioms Core.lawvere_gives_A0
+#print axioms Core.discharger_gives_A0
+#print axioms Core.dischargers_reach_same_A0
+#print axioms Core.lawvere_is_discharger
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
 #print axioms Core.unique_witness_is_isUniqueSolution
