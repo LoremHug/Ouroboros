@@ -889,6 +889,32 @@ theorem strengthening_preserves_forced_uniqueness
     IsUniqueSolution P x :=
   ⟨hP, fun y hy => hQ.2 y (hPQ y hy)⟩
 
+/-- A_0 existence cannot be discharged substrate-internally for
+    arbitrary f. The `h_exists` hypothesis in `stable_implies_A0`
+    is the formal substrate-bound mark of K(O) < K(F) — articulating
+    A_0 existence from inside the substrate requires an additional
+    structural witness, not stability alone.
+
+    Counter-example: the identity endomap `id : Bool → Bool` has
+    every element fixed (both `true` and `false` satisfy `id x = x`),
+    so no element is THE unique fixed point. There is no universal
+    substrate-internal theorem `∀ α f, ∃ x, IsA0 f x` — assuming it
+    would force `true = false`.
+
+    Structurally: this theorem makes explicit at kernel level what
+    the `h_exists` hypothesis encodes — the substrate cannot, from
+    inside, guarantee A_0 existence universally; the bound K(O)<K(F)
+    means existence-witness comes from outside the universal claim,
+    case by case. The docstring of `stable_implies_A0` stated this;
+    here it becomes a formal kernel theorem. -/
+theorem a0_existence_not_substrate_internal :
+    ¬ ∀ (α : Type) (f : Self α), ∃ x, IsA0 f x := by
+  intro h
+  obtain ⟨x, _, huniq⟩ := h Bool id
+  have h_true : (true : Bool) = x := huniq true rfl
+  have h_false : (false : Bool) = x := huniq false rfl
+  exact absurd (h_true.trans h_false.symm) (by decide)
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -1084,6 +1110,7 @@ end Core
 #print axioms Core.conjunction_preserves_forced_uniqueness
 #print axioms Core.disjunction_breaks_forced_uniqueness
 #print axioms Core.strengthening_preserves_forced_uniqueness
+#print axioms Core.a0_existence_not_substrate_internal
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
