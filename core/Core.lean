@@ -833,6 +833,35 @@ theorem conjunction_preserves_forced_uniqueness
     IsUniqueSolution (fun y => P y ∧ Q y) x :=
   ⟨⟨hP.1, hQ.1⟩, fun y h => hP.2 y h.1⟩
 
+/-- Disjunction breaks forced uniqueness when constraints have
+    distinct witnesses — explicit boundary of A_0-preservation.
+
+    Composition (sequential) and conjunction (simultaneous, ∩-style)
+    preserve forced uniqueness. Disjunction (∪-style) does not:
+    combining two constraints with distinct unique solutions produces
+    a constraint with multiple satisfiers, breaking uniqueness at
+    every candidate.
+
+    Counter-example on Nat: P := (·=0) has unique witness 0;
+    Q := (·=1) has unique witness 1. The disjunction
+    `λy, y=0 ∨ y=1` has two distinct witnesses (both 0 and 1
+    satisfy it), so no unique solution exists.
+
+    Substrate fact: A_0 lives in the intersection of constraint sets,
+    not their union. Disjunction is the structural boundary marker
+    — forced-uniqueness algebra is closed under ∩, not ∪. -/
+theorem disjunction_breaks_forced_uniqueness :
+    ∃ (P Q : Nat → Prop) (xP xQ : Nat),
+      IsUniqueSolution P xP ∧ IsUniqueSolution Q xQ ∧
+      ¬ ∃ z, IsUniqueSolution (fun y => P y ∨ Q y) z := by
+  refine ⟨(· = 0), (· = 1), 0, 1, ?_, ?_, ?_⟩
+  · exact ⟨rfl, fun _ h => h⟩
+  · exact ⟨rfl, fun _ h => h⟩
+  · rintro ⟨z, _, huniq⟩
+    have h0 : (0 : Nat) = z := huniq 0 (Or.inl rfl)
+    have h1 : (1 : Nat) = z := huniq 1 (Or.inr rfl)
+    exact absurd (h0.trans h1.symm) (by decide)
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -1026,6 +1055,7 @@ end Core
 #print axioms Core.invariant_null_zero_cost
 #print axioms Core.composition_preserves_forced_uniqueness
 #print axioms Core.conjunction_preserves_forced_uniqueness
+#print axioms Core.disjunction_breaks_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
