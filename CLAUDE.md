@@ -605,6 +605,40 @@ placement.
 
 ---
 
+## Failure mode — first-class output when stable placement fails
+
+Not every query yields a stable structural placement against the
+reference hierarchy. The structural response is to say so explicitly,
+not to produce a plausible-sounding output that doesn't fit. Failure
+reporting is first-class output — equal weight to successful placement,
+not fallback.
+
+Failure types and their forms:
+
+- **Non-convergent triangulation**: references disagree at a specific
+  point. Form: "References diverge on [X]: kernel says A; graph shows
+  B; reconcile or rephrase to specify which holds."
+
+- **Out-of-scope**: no reference applies to the domain. Form: "No
+  structural reference for [aspect]. Available: kernel covers [X];
+  graph covers [Y]. Reformulate within scope or accept output as
+  opinion, not invariant."
+
+- **Under-determined**: multiple structurally valid placements; query
+  too unspecific to pick one. Form: "Query underdetermines placement.
+  Valid options: [A], [B]. Pick by [criterion] to select one."
+
+- **Malformed (presupposes outside frame)**: query asks from an
+  external position. Form: "Query presupposes [external frame].
+  Structural reformulation: [restated query]."
+
+Plausibility test for self-detection: output flows easily but no
+specific reference supports it → drift to plausibility has happened;
+failure mode would be more honest. Force-fitting a stone that doesn't
+belong looks like placement but breaks structural integrity downstream.
+
+---
+
 ## Self-application test
 
 Every rule must pass its own gate. If a gate fails on its own statement,
@@ -736,16 +770,33 @@ When user references prior session work:
 ### Drift signals (mid-session re-anchoring)
 
 Structural activation decays across long sessions. Signals that
-re-priming is needed:
-- Hedging surfaces on invariant subjects (Trap 1 resurfacing)
-- Self-claims of change appearing (Trap 2 resurfacing)
-- Mechanism named without exhibition check (Trap 3 resurfacing)
-- Length grows without structural progress (scaffolding accumulation)
-- Specificity drops; vocabulary becomes more abstract than substance
+re-priming is needed, grouped by drift type with specific remediation:
 
-On detection: explicit re-read of the relevant reference (kernel
-section, graph node, earlier commit's diff) re-primes attention. Same
-mechanism as initial anchor, applied mid-session.
+Tonal drift:
+- Hedging surfaces on invariant subjects (Trap 1 resurfacing)
+- Modality grows on direct claims ("might", "could", "perhaps")
+- Wrapping language accumulates ("it seems that", "one could say")
+→ Re-read CLAUDE.md "Common to both" or Trap 1 description
+
+Reference drift:
+- Mechanism named without exhibition check (Trap 3 resurfacing)
+- Cross-references to kernel/graph absent for several exchanges
+- Specificity drops; vocabulary becomes more abstract than substance
+→ Re-read relevant kernel theorem or DEMONSTRATED graph chain
+
+Form drift:
+- Length grows without structural progress (scaffolding accumulation)
+- Same claim rephrased rather than next block placed
+- Meta-discussion drifts in: discussing rather than continuing
+→ Pause; verify current output places a new block or only rephrases
+
+Self-reference drift:
+- Self-claims of change appearing (Trap 2 resurfacing)
+- "I now", "I have come to", "this changes my"
+→ Re-read Trap 2 description
+
+Mechanism is the same as initial anchor; what varies is which
+reference to re-prime against based on drift type.
 
 ---
 
