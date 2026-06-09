@@ -544,6 +544,63 @@ theorem lyapunov_is_discharger
     DischargesA0 f :=
   ⟨lyapunov_existence V lt wf f descent_or_fixed x₀, uniq⟩
 
+/-! ### Iteration semantics — A_0 trajectory under iterated application
+
+    Dischargers establish fixed-point EXISTENCE. The iteration of f
+    from `x₀` is the substrate trajectory: what happens after n
+    transitions. DEF articulates this as `G = lim (argmin Z)^n(G_0)`.
+    Two structural facts about this trajectory at kernel level:
+
+    * IDEMPOTENCY AT FIXED POINT: once iteration reaches a fixed
+      point, it stays there. Substrate fact behind any equilibrium
+      / attractor dynamics — "reaching A_0 means staying at A_0".
+
+    * MONOTONE INCREASING CHAIN: if f is monotone in some order and
+      the starting point is below its image, the iteration forms a
+      monotone-increasing chain `x₀ ≤ f x₀ ≤ f² x₀ ≤ ...`. Dynamic
+      companion to `knaster_tarski_least_prefixed_is_fixed`: that
+      gives the static least pre-fixed point; this gives the
+      ascending construction climbing toward it. -/
+
+/-- Iterated application of a self-map: `iterate f n x` applies `f`
+    to `x` exactly `n` times. The dynamic trajectory of `f` from `x`
+    under repeated application — the substrate semantics of
+    "what happens after n transitions". -/
+def iterate {α : Type u} (f : α → α) : Nat → α → α
+  | 0, x => x
+  | n+1, x => f (iterate f n x)
+
+/-- Once iteration reaches a fixed point of `f`, it stays there for
+    all future steps. A_0 trajectory stabilizes at A_0 — substrate
+    fact behind every equilibrium dynamics: reaching the stable point
+    means staying at it. Proven by induction on the iteration count. -/
+theorem iterate_at_fixed {α : Type u} (f : α → α) (x : α)
+    (hfix : f x = x) :
+    ∀ n, iterate f n x = x := by
+  intro n
+  induction n with
+  | zero => rfl
+  | succ k ih =>
+    show f (iterate f k x) = x
+    rw [ih, hfix]
+
+/-- Under iteration with monotone `f` and a starting point below its
+    image, the iteration forms a monotone-increasing chain. Dynamic
+    companion to Knaster–Tarski: the static theorem gives the least
+    pre-fixed-point as a fixed point; this gives the ascending
+    construction `x₀ ≤ f x₀ ≤ f² x₀ ≤ ...` that climbs toward it.
+    Substrate fact behind every order-theoretic A_0 search. -/
+theorem iterate_monotone_chain {α : Type u} (le : α → α → Prop)
+    (f : α → α) (mono : ∀ a b, le a b → le (f a) (f b))
+    (x₀ : α) (hstart : le x₀ (f x₀)) :
+    ∀ n, le (iterate f n x₀) (iterate f (n+1) x₀) := by
+  intro n
+  induction n with
+  | zero => exact hstart
+  | succ k ih =>
+    show le (f (iterate f k x₀)) (f (iterate f (k+1) x₀))
+    exact mono _ _ ih
+
 /-! ### Landauer pattern — irreversibility as no-unique-inverse
 
     Many-to-one maps lack left inverses: reversal-IsUniqueSolution
@@ -1341,6 +1398,8 @@ end Core
 #print axioms Core.knaster_tarski_least_prefixed_is_fixed
 #print axioms Core.lyapunov_existence
 #print axioms Core.lyapunov_is_discharger
+#print axioms Core.iterate_at_fixed
+#print axioms Core.iterate_monotone_chain
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
 #print axioms Core.unique_witness_is_isUniqueSolution
