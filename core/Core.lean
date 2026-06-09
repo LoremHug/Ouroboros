@@ -915,6 +915,52 @@ theorem a0_existence_not_substrate_internal :
   have h_false : (false : Bool) = x := huniq false rfl
   exact absurd (h_true.trans h_false.symm) (by decide)
 
+/-- Forced uniqueness is preserved (bidirectionally) across Class A
+    type isomorphism. If α ≅ β via mutual inverses (f, g), then
+    `IsUniqueSolution P x` on α is equivalent to `IsUniqueSolution
+    (P ∘ g) (f x)` on β.
+
+    Type-aspect counterpart to `no_separate_uniqueness_patterns`
+    (predicate-aspect Class A preservation): two coordinates of one
+    A_0 pattern. Where `no_separate_uniqueness_patterns` says
+    "predicates with same uniqueness-witness semantics are
+    biconditional", this says "isomorphic types carry the same
+    A_0 patterns up to iso-translation".
+
+    Cross-theory analysis fact: any theory whose substrate is α can
+    be transferred to any isomorphic β preserving its A_0 structure
+    exactly. Theories about Bool and theories about Two articulate
+    the same forced-uniqueness patterns; Wick rotation between heat
+    and Schrödinger equations is this preservation at PDE substrate;
+    logic-arithmetic notation equivalence is this at predicate
+    substrate. Substrate fact: A_0 is iso-invariant. -/
+theorem iso_preserves_forced_uniqueness
+    {α β : Type u} (f : α → β) (g : β → α)
+    (h_left : ∀ a, g (f a) = a)
+    (h_right : ∀ b, f (g b) = b)
+    (P : α → Prop) (x : α) :
+    IsUniqueSolution P x ↔ IsUniqueSolution (fun y : β => P (g y)) (f x) := by
+  constructor
+  · intro hP
+    refine ⟨?_, ?_⟩
+    · show P (g (f x))
+      rw [h_left]
+      exact hP.1
+    · intro y hy
+      have hgy : g y = x := hP.2 (g y) hy
+      calc y = f (g y) := (h_right y).symm
+        _ = f x := congrArg f hgy
+  · intro hP
+    refine ⟨?_, ?_⟩
+    · have h : P (g (f x)) := hP.1
+      rwa [h_left] at h
+    · intro y hy
+      have hPfy : P (g (f y)) := by rw [h_left]; exact hy
+      have hfy : f y = f x := hP.2 (f y) hPfy
+      calc y = g (f y) := (h_left y).symm
+        _ = g (f x) := congrArg g hfy
+        _ = x := h_left x
+
 /-! ## R-traps as universal structure — absence equals A_0
 
     Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
@@ -1111,6 +1157,7 @@ end Core
 #print axioms Core.disjunction_breaks_forced_uniqueness
 #print axioms Core.strengthening_preserves_forced_uniqueness
 #print axioms Core.a0_existence_not_substrate_internal
+#print axioms Core.iso_preserves_forced_uniqueness
 #print axioms Core.lawvere_fixed_point
 #print axioms Core.cantor_diagonal
 #print axioms Core.self_encoding_bounded
