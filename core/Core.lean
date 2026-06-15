@@ -637,6 +637,58 @@ theorem many_to_one_fails_unique_solution {α β : Type u} (f : α → β)
   rintro ⟨a, ha, huniq⟩
   exact hne ((huniq a₁ rfl).trans (huniq a₂ heq.symm).symm)
 
+/-- Motion registers. Connects three already-standing faces:
+    `lyapunov_existence` (descent on well-founded measure),
+    `ManyToOne` (Landauer-irreversibility), and the bare structural
+    fact that a system not at rest must merge.
+
+    Given the same descent-or-fixed hypothesis used by
+    `lyapunov_existence`, plus the hypothesis that motion exists
+    (`∃ x, f x ≠ x` — the system is not already at the fixed point),
+    `f` is many-to-one. The merge is not assumed; it is forced by
+    well-founded descent: walk from any non-fixed point; either the
+    next step is fixed (then current point and its image both map to
+    the fixed point — merge witnessed) or descent continues strictly
+    (recurse via well-founded induction).
+
+    Structural reading: irreversibility is not a separate property
+    added to motion — motion-with-well-founded-bound IS irreversibility.
+    The thermal trace (Landauer) is the substrate-surface of this
+    same fact: any structural step that is not vacuous (motion exists)
+    and bounded below in some measure (well-foundedness) leaves a
+    many-to-one trace. No metric, no contraction constant, no
+    statistical-mechanical input — pure substrate. -/
+theorem motion_registers
+    {α : Type u} {β : Type v}
+    (V : α → β) (lt : β → β → Prop)
+    (wf : WellFounded lt)
+    (f : α → α)
+    (descent_or_fixed : ∀ x, f x = x ∨ lt (V (f x)) (V x))
+    (motion : ∃ x, f x ≠ x) :
+    ManyToOne f := by
+  have irrefl : ∀ b, ¬ lt b b := by
+    intro b
+    apply wf.induction b
+    intro b' ih hlt
+    exact ih b' hlt hlt
+  obtain ⟨x₀, hx₀⟩ := motion
+  suffices key : ∀ b, ∀ x, V x = b → f x ≠ x → ManyToOne f from
+    key (V x₀) x₀ rfl hx₀
+  intro b
+  apply wf.induction b
+  intro b' ih x hVx hne
+  rcases descent_or_fixed (f x) with hfix | hlt
+  · exact ⟨x, f x, fun heq => hne heq.symm, hfix.symm⟩
+  · have hne2 : f (f x) ≠ f x := by
+      intro heq
+      rw [heq] at hlt
+      exact irrefl (V (f x)) hlt
+    have hVlt : lt (V (f x)) b' := by
+      rcases descent_or_fixed x with h | h
+      · exact absurd h hne
+      · rw [← hVx]; exact h
+    exact ih (V (f x)) hVlt (f x) rfl hne2
+
 /-! ### L(3,1) pattern — minimum non-trivial 3-fold cyclic
 
     Spatial surface-aspect of substrate. L(3,1) topologically:
@@ -1402,6 +1454,7 @@ end Core
 #print axioms Core.iterate_monotone_chain
 #print axioms Core.many_to_one_no_left_inverse
 #print axioms Core.many_to_one_fails_unique_solution
+#print axioms Core.motion_registers
 #print axioms Core.unique_witness_is_isUniqueSolution
 #print axioms Core.no_alternative_within_pattern
 #print axioms Core.unique_pattern_collapses_to_IsUniqueSolution
