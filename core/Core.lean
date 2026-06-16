@@ -3,19 +3,27 @@
 
 A_0 = the forced unique transition pattern under self-coherence.
 
-"A_0" is a name, not a new principle. `argmin Z` — settling to the
-candidate of least incoherence / least resistance — is the substrate-level
-form of a principle already established across substrates under many
-names: least action (Maupertuis, Hamilton, Fermat), gradient / steepest
-descent, free-energy minimisation (Friston, neurobiology), maximum entropy
-(Jaynes), minimum entropy production (Prigogine) and reciprocal relations
-(Onsager) near equilibrium, minimum-dissipation trajectory (Landauer),
-minimum description length (Rissanen / Kolmogorov). These are the same
-operation — relax to the configuration of least resistance — each read in
-one substrate's units. The kernel states it once, substrate-pure, as
-`IsUniqueSolution` / `argmin Z`; "A_0" labels that shape, it does not
-posit a new entity. (Graph: DEF and its anchors N027/N182/N311/… record
-the convergence.)
+"A_0" is a name, not a new principle — and the kernel states it in its
+*Prop-level* form, which must not be mistaken for quantitative
+minimisation. `Z R t x := ¬ R t x` is incoherence as a proposition (holds
+or not); `argmin Z` is the unique coherent point — the degenerate limit
+where Z is at its minimum (zero incoherence). What IS in the kernel is
+the forced-unique-selection structure (`IsArgminZ` = the unique
+R-satisfier); what is absent is only the real-valued measure — and that
+absence is deliberate: a scale would be an injected coordinate (R3), not
+part of the structure. The selection structure is invariant across
+measures; only its numeric resolution is.
+
+The quantitative principle this is the Prop-level limit of is long
+established across substrates: least action (Maupertuis, Hamilton,
+Fermat), gradient descent, free-energy minimisation (Friston), maximum
+entropy (Jaynes), minimum entropy production (Prigogine) / Onsager,
+minimum-dissipation trajectory (Landauer), minimum description length
+(Rissanen / Kolmogorov). In a metric substrate, where Z is real-valued,
+`argmin Z` IS those. Identifying the kernel's Prop-level limit with that
+quantitative principle is a Class A identification — named here and in the
+graph (DEF, N027, N182, …), NOT something the Prop-level kernel proves.
+"A_0" labels the shared shape; it posits no new entity.
 
 This file is kernel-only: no `import Mathlib`, no `Classical.choice`, no
 `axiom` declarations beyond Lean's foundational primitives. Substrate
@@ -1483,31 +1491,29 @@ theorem truth_criteria_force_isUniqueSolution
   · intro ⟨hP, h_uniq, _⟩
     exact ⟨hP, h_uniq⟩
 
-/-! ## No separate patterns — structural impossibility of alternative
+/-! ## Same-semantics uniqueness predicates collapse to one
 
-    Inversive logic (basic, not novel methodology) combined with pattern
-    uniqueness yields: no two "separate" forced-uniqueness patterns can
-    structurally exist. Any attempt to articulate alternative pattern
-    Q with uniqueness-witness semantics produces predicate biconditional
-    with IsUniqueSolution. Therefore "alternative pattern" reduces to
-    same pattern — no actual separation possible.
+    Scope, stated up front so the theorem is not over-read: this is about
+    predicates that ALREADY share the uniqueness-witness semantics. Two
+    such predicates Q, Q' are each biconditional with IsUniqueSolution,
+    hence with each other — they are not separate patterns, only separate
+    notations.
 
-    Logically (no special method needed):
     1. Q has uniqueness-witness semantics ⟹ Q ↔ IsUniqueSolution (proven)
     2. Q' also has uniqueness-witness semantics ⟹ Q' ↔ IsUniqueSolution
     3. Therefore Q ↔ Q' (transitivity)
-    4. "Separate patterns" Q and Q' would require Q ↛ Q' — contradicts 3
-    5. No separate patterns exist structurally
 
-    This is logical consequence of pattern uniqueness, not empirical
-    observation. Articulating "separate pattern" uses logic + math +
-    invariance = substrate primitives = produces instance of same
-    pattern. Structurally impossible to be otherwise. -/
+    What this does NOT prove: that no predicate with DIFFERENT semantics
+    can exist. Such a predicate is simply outside the theorem's scope —
+    not excluded by it. The broader claim "no alternative to A_0" is a
+    separate argument (the inversive / R-gate test: rejecting forced
+    uniqueness requires importing an R1-R4 violation), NOT a consequence
+    of this theorem. Keeping the two apart is the point: the theorem is a
+    same-notation collapse, not a metaphysical impossibility result. -/
 
-/-- No separate uniqueness patterns can exist structurally. Any two
-    predicates with uniqueness-witness semantics are logically
-    equivalent — they reduce to one underlying pattern. "Alternative
-    pattern" claim cannot survive structurally. -/
+/-- Two predicates that BOTH carry the uniqueness-witness semantics are
+    logically equivalent — they reduce to one underlying pattern. This
+    says nothing about predicates with different semantics. -/
 theorem no_separate_uniqueness_patterns
     {α : Type u}
     (Q1 Q2 : (α → Prop) → α → Prop)
@@ -1527,32 +1533,37 @@ theorem no_separate_uniqueness_patterns
 
 /-! ## Fractal closure — chain of forced identifications
 
-    The 40 theorems collectively articulate one substrate operating
-    through forced unique transitions. The equational chain closes —
-    self-application returns to the starting point:
-
-      object  =  process  =  structural transition
+    The theorems articulate one forced-uniqueness pattern in several
+    coordinates. The chain below lists only members the kernel actually
+    carries; each `=` is a Class A identification (same structural
+    content, different surface notation):
 
       structural A_0 transition
                =  invariant
                =  triangulation
-               =  L(3,1)
+               =  Z/3 (the `Sect` cell)
                =  logic
                =  math
                =  invariants
                =  structural A_0 transition           (loop closes)
 
-    Each `=` is Class A identification: same structural content under
-    different surface notation. The identifications are forced inside
-    the kernel by the listed theorems (`no_separate_uniqueness_patterns`,
-    `unique_pattern_collapses_to_IsUniqueSolution`,
-    `A0_excludes_all_alternative_assertions`). The closure is at the
-    level of these structural identifications; the kernel does not make
-    claims beyond them.
+    Note the chain stops at Z/3. The manifold L(3,1) is NOT a member:
+    the kernel carries the abstract Z/3 cell (`ThreePeriod`/`Sect`),
+    not a 3-manifold. The realisation Z/3 → π_1(M) → L(3,1) is
+    frame-borne (graph N_DirichletWeld / N360), witness, not proved
+    here.
 
-    Articulation surface: the L(3,1)-aspect is the kernel's structural
-    label for the minimum non-trivial 3-fold cyclic pattern (encoded as
-    `ThreePeriod`/`Sect`), not a claim about a physical container.
+    The identifications are forced inside the kernel by the listed
+    theorems (`no_separate_uniqueness_patterns`,
+    `unique_pattern_collapses_to_IsUniqueSolution`,
+    `A0_excludes_all_alternative_assertions`) — but only for predicates
+    that share the uniqueness-witness semantics, and only WHERE a unique
+    fixed point exists. Existence is not substrate-internal
+    (`a0_existence_not_substrate_internal`: not every `f` has one), so
+    every A_0 statement is conditional on `h_exists`. The closure is the
+    collapse of same-semantics coordinates onto one pattern; it is not a
+    claim that no different structure can exist, nor that the pattern is
+    instantiated unconditionally.
 
     The 40 theorems compile this closure. Compilation result: each
     theorem typechecks against Lean's foundational primitives only
