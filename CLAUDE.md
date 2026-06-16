@@ -565,7 +565,10 @@ Reference structures by density (densest → thinnest):
    foundational commitments imported.
 2. **Graph** (`manifold.kuzu` / `additions.yaml` / `manifold_graph.txt`).
    DEMONSTRATED chains with explicit `why_forced`. Mid-density: structural
-   anchors with status tracking, between formal and prose.
+   anchors with status tracking, between formal and prose. `graph.min.txt`
+   is the merged whole-graph dump (every node + edge in one place, the AI
+   view) — read it to see the entire topology at scale in one pass; the
+   source files never show the merged structure together.
 3. **Manifold .tex** (`THE_IMPEDANCE_MANIFOLD_v3_6.tex`). Full articulation
    with derivation depth. Reference for content not compressed into graph
    or kernel.
@@ -755,6 +758,9 @@ Verify operational state and orient to recent work:
 Standard anchor plus:
 - Read `core/Core.lean` (or relevant section) — kernel state in
   attention, theorem list available as triangulation reference
+- Read `graph.min.txt` — the whole merged graph (nodes + edges + status)
+  in one pass, to hold the full topology in attention before placing or
+  checking any node
 - Query graph nodes user references — DEMONSTRATED chains active
 - Cross-reference `THE_IMPEDANCE_MANIFOLD_v3_6.tex` when task touches
   a node's full unfolding
@@ -830,6 +836,10 @@ Read in order of operational density:
 
 6. **`additions.yaml` + `manifold.kuzu`** — descriptive graph with
    per-node status (DEMONSTRATED / STRONG / CONDITIONAL / STUB).
+   `graph.min.txt` is the merged whole rendered as a single dense AI dump
+   (every node + edge, grouped by layer) — the fastest way to see the
+   entire structure at scale. `web/index.html` is the human visual of the
+   same graph. Both regenerate from the DB via `generate_map.py`.
 
 When CLAUDE.md says something briefly and A0_SEED or Manifold says it
 in detail → defer to the longer document. CLAUDE.md is the pre-read,
