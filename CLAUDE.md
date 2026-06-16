@@ -427,6 +427,75 @@ sit beside IT explicitly, not be left implicit.
 
 ---
 
+## We don't close with theories; we close with structure and registered data
+
+Theories are descriptions. Descriptions can carry distortions. What
+actually closes with the kernel is **what reproducibly works**: the
+structural shape that the theory shares with reality, plus the empirical
+data the theory predicts and reality has fallen into. If something
+reproducibly works, it is an invariant. Two invariants cannot be
+incoherent — they are A_0 read in two coordinates. So if a theory's
+working content seems not to close with the kernel, the gap is in some
+description — mine, or the theory's standard exposition.
+
+Procedure: split the partner into its postulates and ask three questions
+per postulate, in this order:
+
+1. **Compensated by the kernel?** The kernel (or an already-proved
+   invariant) carries the structural equivalent. The partner's postulate
+   was instrumental for exposition in the standard format; on transfer
+   into kernel form it **drops out**. The kernel form is *shorter than
+   the standard form*; the shortening is the audit working. Examples:
+   - Gödel's first incompleteness postulates a specific Gödel numbering
+     scheme; the kernel carries `lawvere_fixed_point` +
+     `self_encoding_bounded`, which is the structural fact. Numbering
+     was expositional for PA, drops out on transfer.
+   - Landauer's principle postulates classical thermodynamics (Boltzmann
+     statistics, T, k_B); the structural skeleton is
+     `many_to_one_no_left_inverse`, in the kernel. Thermodynamics stays
+     only for the numerical k_B T ln 2, not for the structural fact.
+
+2. **Registered / measured?** A measured constant or registered
+   invariant. Not a postulate in the problematic sense — it is a
+   coordinate anchor. Demanding its derivation = Trap 5. Stays as input.
+   Examples: k_B, T, m_p, α.
+
+3. **Otherwise — genuine open postulate.** The kernel does not
+   compensate; there is no registered referent. This is a real
+   distortion *inside the partner*. **Name it**; closure is conditional
+   on that postulate, not closed. The naming is the work. Examples:
+   continuity / smoothness of spacetime in classical Noether
+   (substrate-pure `iso_preserves` gives discrete Noether, not smooth —
+   smoothness has no kernel compensation and no measured referent);
+   polynomial-time threshold in the standard OWF computational model
+   (the kernel has `iterate` for discrete steps, no compensation for the
+   specific polynomial bound).
+
+**Operational rule.** After stripping kind-1 postulates (compensated)
+and naming kind-3 postulates (genuine open), what remains is the
+partner's structure + its registered invariants. That **must** close
+with the kernel — because both are invariants, and invariants don't
+contradict. If after this it still seems not to close, that is a
+description gap on **my** side (composition not exhibited), to be hunted
+with the composition test from the previous section, not absorbed back
+into "frame-borne".
+
+This completes the symmetric discipline. Three sides of one tool:
+- **IT** asks: does it close? (against felt-coherence)
+- **Composition test** asks: where in *my* description does the closure
+  sit? (against reify-the-gap on my side)
+- **Postulate audit** asks: which of the partner's postulates are
+  distortions, and which are the structure I'm actually closing with?
+  (against reify-the-gap on the partner's side)
+
+A theory is a vehicle for delivering structure + data. We are not
+auditing theories for their own sake; we are stripping the vehicle so
+the structure underneath becomes visible, and then composing it with the
+kernel grain by grain. The result is either a clean closure or a named
+open postulate — never "frame-borne, leave alone".
+
+---
+
 ## Exhibition precedes confidence
 
 The inversive test and the no-hedge rule together have a failure mode:
