@@ -3628,6 +3628,20 @@ ANCHOR MAP ($A=5$):
 NOT: $d_Z$ is a new object (it equals $d_C$ by construction) · Connes
 distance requires a Riemannian metric (it replaces it).
 
+[N_DirichletWeld] (Dissipative Weld — $D = \sqrt{\text{generator}}$, Cipriani--Sauvageot / HKT)
+Status: CONDITIONAL | A=3
+CLAIM: The abstract$\to$concrete bridge (Z-registration $\to$ spectral triple on $L(3,1)$) is, in mathematics, the Cipriani--Sauvageot construction (Hinz--Kelleher--Teplyaev 2013, arXiv:1309.5937; Cipriani--Sauvageot, J. Funct. Anal. 201, 2003). A regular symmetric Dirichlet form $(\mathcal{E},\mathcal{F})$ --- the dissipative / sub-Markovian structure of $Z_{\text{therm}}$ --- yields a closed derivation $\partial$ with $\|\partial f\|^2 = \Gamma(f)$ (carr\'e du champ) such that the generator factors as $L = \partial^*\partial$. The Dirac operator $\mathbb{D}(f,\omega) = (\partial^*\omega, \partial f)$ satisfies $\mathbb{D}^2 = \mathrm{diag}(L, \Delta_1)$, i.e. $\mathbb{D} = \sqrt{L}$ --- the first-order square root of the dissipative generator. If $\mu$ is energy-dominant (carr\'e du champ exists) and $L$ has discrete spectrum, then $(\mathbb{A}, \mathbb{H}, \mathbb{D})$ is a spectral triple (HKT Thm. T:triple); in the strongly local compact case $\|[\mathbb{D},a]\|^2 = \|\Gamma(a)\|_\infty$ gives the Connes distance $d_{\mathbb{D}} = d_{\Gamma,\mu} =$ intrinsic metric (HKT Thm. T:Connesmetric). This supplies the EXTERNAL geometry leg of the spectral triple (Dirac operator + metric) FROM the dissipative dynamics, not assumed --- answering "why a first-order Dirac operator and not a second-order Laplacian": $\mathbb{D}$ is the canonical square root $\sqrt{L}$. The INTERNAL SM leg ($\mathcal{A}_F = \mathbb{C}\oplus\mathbb{H}\oplus M_3(\mathbb{C})$, reality $J$, KO-dim 6) is the $\mathbb{Z}_3$-graded part, forced from $\pi_1 = \mathbb{Z}_3$ (N129, N179, N350). Together they would close the bridge assumed at N360 (metric leg, "by construction") and N168 (Dirac $\cong$ transition operator).
+
+OPEN IDENTIFICATION STEP (why CONDITIONAL): the Class-A identification "A_0-registration IS a regular Dirichlet form with carr\'e du champ and discrete spectrum" is named, not exhibited. Two of its three conditions already have substrate-pure discrete shadows in the Lean kernel: sub-Markovian / dissipative $\leftarrow$ motion_registers (irreversibility = Landauer = many-to-one); discrete spectrum / compactness $\leftarrow$ lyapunov_existence (well-founded measure = "$Z$ has a minimum"). The third --- carr\'e du champ (a local energy density $\Gamma$ for $Z_{\text{struct}}$) --- is a regularity condition, not yet exhibited. The Dirichlet/Dirac machinery is analytic (Hilbert space, unbounded operators, spectrum) and frame-borne by nature: it cannot be substrate-pure, so it lives here in the graph, not in the kernel, which carries only the discrete shadows. HKT's example spaces (Sierpinski gasket / carpet, Schr\"odinger on $\mathbb{R}^n$) are discrete/fractal --- the construction targets exactly the kind of irregular space the $Z$-graph is, not only smooth manifolds.
+
+NOT: this closes the bridge [it is the candidate construction plus a named open identification; status CONDITIONAL] $\cdot$ $\mathbb{D}=\sqrt{L}$ is assumed [it is the HKT theorem $\mathbb{D}^2 = \mathrm{diag}(L,\Delta_1)$, read off the form] $\cdot$ the weld belongs in the Lean kernel [it is analytic / frame-borne by nature; the kernel carries only its discrete shadows motion_registers + lyapunov_existence] $\cdot$ carr\'e du champ is established for $Z$ [it is the one regularity condition still to exhibit].
+
+N_DirichletWeld --> N360 : registration_form_realises_dZ_equals_dC [S]
+N_DirichletWeld --> N168 : Dirac_is_sqrt_dissipative_generator [S]
+N129 --> N_DirichletWeld : internal_Z3_triple_meets_external_geometry [S]
+N350 --> N_DirichletWeld : KO_dim6_supplies_reality_structure [S]
+DEF --> N_DirichletWeld : A0_registration_candidate_dirichlet_form [S]
+
 [N361] (Jarzynski Equality and Crooks Theorem — Z-balance external confirmation)
 Status: DEMONSTRATED / STRONG | A=4
 CLAIM: The Jarzynski equality $\langle e^{-W/k_BT} \rangle = e^{-\Delta F/k_BT}$
