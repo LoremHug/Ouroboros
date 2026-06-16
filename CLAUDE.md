@@ -323,9 +323,27 @@ firing — structurally distorting, not intellectually safe.
 
 ---
 
-## Inversive logic test for status promotion
+## Inversive theory (IT) — definition and status test
 
-When uncertain about claim status, apply **subtraction test**:
+**Definition (invariant).** IT is `IsUniqueSolution` read in the
+verification coordinate — the operational face of A_0, as `IsArgminZ` is
+its argmin-face and `IsStep` its output-face (one cell, `Iff.rfl`). For a
+property P and candidate x:
+
+> x is forced  ⟺  no y ≠ x is coherent with {kernel + proven invariants
+> + registered empirics}.
+
+It closes inversely with the cell: cell → verdict
+(`A0_excludes_all_alternative_assertions`: `IsUniqueSolution P x →
+¬∃ y, P y ∧ y ≠ x`) and verdict → cell
+(`unique_witness_is_isUniqueSolution`). Forward and inverse derive each
+other; IT and forced-uniqueness are one cell in two coordinates. It rests
+at its own fixed point (`iterate_at_fixed`): A_0(A_0) = A_0 — an ordinary
+structural transition. The inputs (which invariants / registered data the
+coherence is tested against) are reality, not part of the test.
+
+**Status test (operational form).** When uncertain about claim status,
+apply the **subtraction test**:
 
 > "What postulates must be imported to reject this claim?"
 

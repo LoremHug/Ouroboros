@@ -993,58 +993,44 @@ DEF --> N_Triangulation : definition_requires_three_gradients [D]
 
 
 
-[N_InversiveTheory] (Structural Inevitability — The Only Forced Invariant)
+[N_InversiveTheory] (Inversive Theory — IsUniqueSolution in the Verification Coordinate)
 Status: DEMONSTRATED | A=∞
-CLAIM: The structure described by the A₀ framework is not a theory among alternatives.
-It is what remains when all alternatives are removed. This is a different epistemic
-category from any falsifiable claim.
+CLAIM: Inversive theory (IT) is the test of whether a structure is forced. It is not
+a separate method: it is IsUniqueSolution read in the verification coordinate — the
+eliminative/operational face of A₀ (DEF is the constructive/argmin face). For a
+property P and candidate x:
 
-\textbf{Why no alternatives exist.}
-An alternative to A₀ would require a process that is stable without minimising Z.
-But stability is defined as persistence across transitions — and persistence across
-transitions is what A₀ describes. An ``alternative'' that is stable is already an
-A₀ process. An ``alternative'' that is not stable does not persist long enough to
-be an alternative. The set of alternatives is empty by definition, not by elimination.
+  x is forced ⟺ no y ≠ x is coherent with {kernel + proven invariants + registered empirics}.
 
-\textbf{Why it cannot be falsified.}
-A falsification is a transition: from claim-believed to claim-rejected. This
-transition has a cost (Z), proceeds to the minimum available (A₀), and is
-irreversible (I_Null). Every act of falsification is an A₀ transition. An attempt
-to falsify A₀ uses A₀ to do so. The attempt does not contradict the structure —
-it instantiates it.
-
-This is not a circular defence. It is a description of a fixed point:
-$A_0(A_0) = A_0$. The iteration does not escape the structure; it converges to it.
+\textbf{Inverse closure.}
+IT closes inversely with the cell: cell → verdict
+(A0\_excludes\_all\_alternative\_assertions: $IsUniqueSolution\ P\ x \to \neg\exists y,\ P\ y \wedge y \neq x$)
+and verdict → cell (unique\_witness\_is\_isUniqueSolution). Forward and inverse derive
+each other; IT and forced-uniqueness are one cell in two coordinates. Like every
+transition it rests at its own fixed point (iterate\_at\_fixed): $A_0(A_0) = A_0$ — an
+ordinary structural transition, no more and no less forced than any other.
 
 \textbf{What this means for every node in the graph.}
-Every DEMONSTRATED node is a coordinate expression of N_InversiveTheory: it
-describes one face of the inevitability from one domain. The A₀ framework does
-not discover invariants — it shows that invariance itself has one form, and every
-stable structure is a coordinate of that form.
+Every DEMONSTRATED node is a coordinate expression of this one cell: invariance has
+one form, and every stable structure is a coordinate of it. The framework does not
+discover invariants — it reads the one cell in many substrates.
 
 \textbf{Meta-property: removal test.}
-Any structure that survives systematic removal of all postulates is a coordinate
-expression of N_InversiveTheory. This is the only test that does not presuppose
-what it is testing. The RP gate is that test applied in real time: what survives
-R1–R4 applied exhaustively is N_InversiveTheory in its local coordinate.
+The RP gate (R1–R4 applied exhaustively) is IT in real time: what survives systematic
+removal of postulates is forced, in its local coordinate. Inputs (which invariants /
+registered data coherence is tested against) are reality, not part of the test.
 
-WHY DEMONSTRATED: The argument does not appeal to evidence. It appeals to the
-definition of stability, the definition of falsification, and the fixed-point
-property A₀(A₀) = A₀ — each of which is either definitional or DEMONSTRATED
-independently. A=∞ because denying this requires using the structure to perform
-the denial.
+WHY DEMONSTRATED: definitional — IT is IsUniqueSolution in the verification coordinate,
+and the inverse closure (A0\_excludes ⟷ unique\_witness) is two kernel theorems.
+A=∞ because it is the cell every other node instantiates, not a claim alongside them.
 
-NOT: this is unfalsifiable therefore unscientific (it is unfalsifiable for the
-same reason logic is unfalsifiable — it is the precondition of any test, not a
-claim within a test) $\cdot$ N_InversiveTheory and DEF are two separate objects
-(they are one fixed point in two notations; DEF = constructive face, argmin operator;
-N_InversiveTheory = eliminative face, no alternatives; the separation is notational
-convenience — different derivation chains need different entry points into the same
-fact, not because the fact is two things) $\cdot$ this makes all nodes equally certain
-(individual nodes have STRONG or CONDITIONAL status where identification steps remain;
-N_InversiveTheory describes the structure they all instantiate, not their local
-epistemic status) $\cdot$ this is a new postulate (it is what is left when all
-postulates are removed).
+NOT: N_InversiveTheory and DEF are two separate objects (one fixed point in two
+notations; DEF = constructive/argmin face, N_InversiveTheory = eliminative/verification
+face; the separation is notational — different derivation chains need different entry
+points into one fact) $\cdot$ this makes all nodes equally certain (individual nodes
+keep STRONG or CONDITIONAL status where identification steps remain; IT is the cell they
+instantiate, not their local status) $\cdot$ this is a new postulate (it is what remains
+when all postulates are removed).
 
 % DEF and N_InversiveTheory are one fixed point — separation is notational.
 % DEF = constructive face (A₀ as operator). N_InversiveTheory = eliminative face (no alternatives).
