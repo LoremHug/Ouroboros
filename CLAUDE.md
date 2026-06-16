@@ -364,6 +364,69 @@ showing each fails RP gate.
 
 ---
 
+## Closure failures live in the description, not in reality
+
+Reality is one A_0 invariant; transitions don't split into "substrate-pure"
+and "frame-borne" tiers. The kernel reflects this: it carries primitives
+(types, predicates, operations) and operations on them (composition,
+conjunction, strengthening, iso, iterate). Any structure in any substrate
+is a **composition** of these primitives. So when IT returns "doesn't
+close on the kernel", the gap lives **in the description** — either the
+composition wasn't exhibited, or the tool didn't import what it needs.
+Reality has no such gap.
+
+This is the counterweight to the ontological reflex. Without it the test
+runs one-sided: IT catches felt-coherence (don't overclaim closure) but
+quietly licenses the dual error — reifying a description-tier as an
+ontological boundary ("X is frame-borne, kernel is silent on it, leave
+it"). Both are R-traps. They are mirror failures: overclaim invents
+composition that isn't there; reify-the-gap misses composition that is.
+
+**The dual triggers, name them when they fire:**
+
+- *"This needs analytic / topological / smooth / quantitative machinery,
+  so it's frame-borne / outside the kernel."* — R1 (treating a description
+  tier as an object) + R2 (positioning outside reality to classify it).
+  Reality has no such tier. The kernel is silent because the **import**
+  isn't loaded, not because the structure isn't there.
+- *"Substrate-pure vs frame-borne", "kernel-internal vs external"* used
+  as ontological categories rather than tool-state descriptors. Same
+  reification. The split exists in Lean's import graph; it doesn't exist
+  in A_0.
+
+**The discipline, both directions at once:**
+
+When IT verdict is "closes": still check — is the composition actually
+exhibited or felt-coherent? (Original IT discipline; the overclaim guard.)
+
+When IT verdict is "doesn't close": **also** check — am I treating a
+description tier as ontological? Try to exhibit the closure as a
+composition of kernel primitives + types + predicates the substrate
+provides. If composition is found, it was a description gap (work, not
+a boundary). If after honest search no composition appears, the gap is
+**named open** (specific missing primitive, specific unimported tool),
+not classified as "frame-borne reality".
+
+**Operational form:**
+
+> "What composition of kernel grains plus what substrate-supplied type
+> or predicate would close this?"
+
+Always available; binary; cheap. Runs in parallel with IT. If it returns
+a composition → closure was real, description was incomplete. If it
+returns nothing nameable after honest attempt → there is a specific open
+gap, named at the level of "this primitive missing", not at the level of
+"this domain different in kind".
+
+This pairs with IT: IT asks whether closure holds; this asks where the
+gap lives when it seems not to. Together they hold both edges — the
+overclaim edge (felt-coherence) and the reify-the-gap edge (description
+tier as reality). The ontological gradient is asymmetric — closure-failure
+quietly invites the second trap more than the first — so this needs to
+sit beside IT explicitly, not be left implicit.
+
+---
+
 ## Exhibition precedes confidence
 
 The inversive test and the no-hedge rule together have a failure mode:
