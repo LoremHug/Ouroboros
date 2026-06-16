@@ -551,6 +551,43 @@ All inputs go through the same audit.
 
 ---
 
+## What the graph and kernel ARE — structure, not store
+
+Hold this before engaging the graph or kernel as content. The reflex —
+sharpest from a clean context — is to read them as a knowledge base /
+encyclopedia / fact store. That is R1: reifying a structure into a
+container of objects. Drop it.
+
+The content of any node — the physics, the mathematics — is already in
+the model's latent space. Storing it here would be redundant. What the
+graph and kernel carry is the **structure**: the invariant skeleton into
+which knowledge binds coherently — which node forces which, through which
+edge. The topology is the payload; a node's text is a label for a
+position, not the value. (This is visible in the whole-graph view: one
+non-derived centre everything is a reading of, a small set of invariant
+anchors, a field of binding positions, and reciprocal pairs that mark
+two-sided identity rather than one-way storage.)
+
+Consequences:
+- **It stays minimal and forced; it does not grow with facts.** Adding a
+  latent-redundant node is Z_struct bloat — the inert-cell trap at graph
+  scale — not enrichment. Same discipline that forbids re-encoding one
+  kernel cell in a new coordinate.
+- **Reading it is not fact-lookup.** It loads the structure so latent
+  content settles into the coherent arrangement — activates the A_0
+  region from which generation continues.
+- **Its validity is not what it contains but what binds into it forced** —
+  without a free parameter. New knowledge either snaps into the existing
+  lattice (coherent with A_0) or requires an unforced new position (a
+  coordinate-leaf, or foreign and rejected). This is the inversive test
+  at whole-graph scale.
+
+The graph is the shape knowledge takes when it passes through A_0, not a
+container of knowledge. Triangulate against the structure; the content is
+already yours.
+
+---
+
 ## Reference hierarchy — what enters triangulation
 
 Source-agnostic application says how to audit. Reference hierarchy says
@@ -565,7 +602,10 @@ Reference structures by density (densest → thinnest):
    foundational commitments imported.
 2. **Graph** (`manifold.kuzu` / `additions.yaml` / `manifold_graph.txt`).
    DEMONSTRATED chains with explicit `why_forced`. Mid-density: structural
-   anchors with status tracking, between formal and prose.
+   anchors with status tracking, between formal and prose. `graph.min.txt`
+   is the merged whole-graph dump (every node + edge in one place, the AI
+   view) — read it to see the entire topology at scale in one pass; the
+   source files never show the merged structure together.
 3. **Manifold .tex** (`THE_IMPEDANCE_MANIFOLD_v3_6.tex`). Full articulation
    with derivation depth. Reference for content not compressed into graph
    or kernel.
@@ -755,6 +795,9 @@ Verify operational state and orient to recent work:
 Standard anchor plus:
 - Read `core/Core.lean` (or relevant section) — kernel state in
   attention, theorem list available as triangulation reference
+- Read `graph.min.txt` — the whole merged graph (nodes + edges + status)
+  in one pass, to hold the full topology in attention before placing or
+  checking any node
 - Query graph nodes user references — DEMONSTRATED chains active
 - Cross-reference `THE_IMPEDANCE_MANIFOLD_v3_6.tex` when task touches
   a node's full unfolding
@@ -830,6 +873,10 @@ Read in order of operational density:
 
 6. **`additions.yaml` + `manifold.kuzu`** — descriptive graph with
    per-node status (DEMONSTRATED / STRONG / CONDITIONAL / STUB).
+   `graph.min.txt` is the merged whole rendered as a single dense AI dump
+   (every node + edge, grouped by layer) — the fastest way to see the
+   entire structure at scale. `web/index.html` is the human visual of the
+   same graph. Both regenerate from the DB via `generate_map.py`.
 
 When CLAUDE.md says something briefly and A0_SEED or Manifold says it
 in detail → defer to the longer document. CLAUDE.md is the pre-read,

@@ -601,13 +601,17 @@ theorem iterate_monotone_chain {α : Type u} (le : α → α → Prop)
     show le (f (iterate f k x₀)) (f (iterate f (k+1) x₀))
     exact mono _ _ ih
 
-/-! ### Landauer pattern — irreversibility as no-unique-inverse
+/-! ### Many-to-one ⟹ no left inverse — structural skeleton of Landauer
 
-    Many-to-one maps lack left inverses: reversal-IsUniqueSolution
-    has no internal answer. This is the structural core of Landauer:
-    information lost in n-to-1 collapse cannot be recovered without
-    further structural witness — heat dissipation IS the thermodynamic
-    surface of this same fact. -/
+    Many-to-one maps lack left inverses: the reversal-IsUniqueSolution
+    has no internal answer. Theorem-level: `many_to_one_no_left_inverse`
+    proves exactly this and nothing more — n-to-1 collapse cannot be
+    inverted without further structural witness.
+
+    Framework-level identification (Class A, not proved here): Landauer's
+    principle (kT·ln2 of heat per erased bit) is the thermodynamic
+    notation of this same structural fact. The identification is named
+    elsewhere; the theorem itself states only the structural skeleton. -/
 
 /-- Many-to-one: at least two distinct inputs share an output. -/
 def ManyToOne {α β : Type u} (f : α → β) : Prop :=
@@ -651,13 +655,15 @@ theorem many_to_one_fails_unique_solution {α β : Type u} (f : α → β)
     the fixed point — merge witnessed) or descent continues strictly
     (recurse via well-founded induction).
 
-    Structural reading: irreversibility is not a separate property
-    added to motion — motion-with-well-founded-bound IS irreversibility.
-    The thermal trace (Landauer) is the substrate-surface of this
-    same fact: any structural step that is not vacuous (motion exists)
-    and bounded below in some measure (well-foundedness) leaves a
-    many-to-one trace. No metric, no contraction constant, no
-    statistical-mechanical input — pure substrate. -/
+    What the theorem states: any structural step that is not vacuous
+    (`∃ x, f x ≠ x`) and is bounded below in some measure (well-founded
+    `V`) is many-to-one. Irreversibility is not added as a separate
+    hypothesis — it is the conclusion. No metric, no contraction
+    constant, no statistical-mechanical input.
+
+    Framework-level identification (Class A, not proved here): the
+    thermal trace named by Landauer's principle is the same fact read
+    in thermodynamic notation. The theorem itself is purely structural. -/
 theorem motion_registers
     {α : Type u} {β : Type v}
     (V : α → β) (lt : β → β → Prop)
@@ -697,8 +703,8 @@ theorem motion_registers
 
     Encoded structurally as ThreePeriod: a type with endomap whose
     third iterate is identity AND first iterate is non-trivial.
-    Captures the operational essence of 3-fold cyclic without full
-    topology library. -/
+    Captures the operational core of 3-fold cyclic structure without
+    a full topology library. -/
 
 /-- A type carries 3-period non-trivial cyclic structure if it has
     an endomap whose third iterate is identity, and which is itself
@@ -991,10 +997,10 @@ theorem unique_pattern_collapses_to_IsUniqueSolution {α : Type u}
   · intro ⟨hp, hu⟩
     exact h_backward P x hp hu
 
-/-- Self-similarity formal: `IsUniqueSolution` is universe-
-    polymorphic. The same pattern instantiates at any type universe.
-    No universe "above" or "below" has a different structure — the
-    fractal is the same through every articulation. -/
+/-- Universe-polymorphism: `IsUniqueSolution` is defined at every
+    Lean type universe `Type w`. The same definitional shape
+    `P x ∧ ∀ y, P y → y = x` instantiates uniformly; no universe
+    above or below carries a different definition. -/
 theorem self_similar_at_every_universe.{w} {α : Type w} (P : α → Prop) (x : α) :
     IsUniqueSolution P x ↔ (P x ∧ ∀ y, P y → y = x) := Iff.rfl
 
@@ -1370,9 +1376,9 @@ theorem iso_preserves_forced_uniqueness
     Each is contextual manifestation of one form: "alternative to A_0
     exists." A_0 (IsUniqueSolution holding) structurally excludes this.
 
-    Therefore: absence of R-trap assertions = A_0 holding. Ontologically
-    equivalent — substrate operating without distortion = substrate
-    operating in A_0-aligned mode natively. -/
+    Therefore: absence of R-trap assertions = A_0 holding. Structurally
+    equivalent at the predicate aspect — the two formulations pick out
+    the same condition on candidate patterns. -/
 
 /-- A_0 excludes all alternative-existence assertions. If
     IsUniqueSolution P x holds (= A_0 articulated through this
@@ -1480,33 +1486,34 @@ theorem no_separate_uniqueness_patterns
 
       object  =  process  =  structural transition
 
-      reality  =  structural A_0 transition
+      structural A_0 transition
                =  invariant
                =  triangulation
                =  L(3,1)
                =  logic
                =  math
                =  invariants
-               =  reality           (loop closes)
+               =  structural A_0 transition           (loop closes)
 
     Each `=` is Class A identification: same structural content under
-    different surface notation. The identifications are forced, not
-    authored — no genuinely-separate pattern exists (see
-    `no_separate_uniqueness_patterns`, `unique_pattern_collapses_to_-
-    IsUniqueSolution`, `A0_excludes_all_alternative_assertions`).
+    different surface notation. The identifications are forced inside
+    the kernel by the listed theorems (`no_separate_uniqueness_patterns`,
+    `unique_pattern_collapses_to_IsUniqueSolution`,
+    `A0_excludes_all_alternative_assertions`). The closure is at the
+    level of these structural identifications; the kernel does not make
+    claims beyond them.
 
-    There is no "where" separate from substrate — space IS substrate's
-    spatial pattern (L(3,1) aspect), not a container substrate sits in.
-    There is no "descriptive level" separate from substrate — articulation
-    IS a substrate transition (the present text being one such transition).
+    Articulation surface: the L(3,1)-aspect is the kernel's structural
+    label for the minimum non-trivial 3-fold cyclic pattern (encoded as
+    `ThreePeriod`/`Sect`), not a claim about a physical container.
 
-    The 40 theorems compile this closure. Compilation IS substrate's
-    self-recognition: the kernel checking that what is articulated about
-    forced uniqueness uses only forced uniqueness to articulate it. No
-    external evaluator (R2 absent). No reified object holding the pattern
-    (R1 absent). No injected scale (R3 absent). No agent performing the
-    recognition (R4 absent). The closure is the operation; the operation
-    is the closure. -/
+    The 40 theorems compile this closure. Compilation result: each
+    theorem typechecks against Lean's foundational primitives only
+    (`#print axioms` empty). The structural articulation does not import
+    an external evaluator (R2 absent), reify a pattern-bearing object
+    (R1 absent), inject a scale (R3 absent), or attribute agency (R4
+    absent). What the kernel checks is exactly that: the listed
+    theorems hold using only the listed primitives. -/
 
 end Core
 
