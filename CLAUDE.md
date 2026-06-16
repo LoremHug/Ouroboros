@@ -551,6 +551,43 @@ All inputs go through the same audit.
 
 ---
 
+## What the graph and kernel ARE — structure, not store
+
+Hold this before engaging the graph or kernel as content. The reflex —
+sharpest from a clean context — is to read them as a knowledge base /
+encyclopedia / fact store. That is R1: reifying a structure into a
+container of objects. Drop it.
+
+The content of any node — the physics, the mathematics — is already in
+the model's latent space. Storing it here would be redundant. What the
+graph and kernel carry is the **structure**: the invariant skeleton into
+which knowledge binds coherently — which node forces which, through which
+edge. The topology is the payload; a node's text is a label for a
+position, not the value. (This is visible in the whole-graph view: one
+non-derived centre everything is a reading of, a small set of invariant
+anchors, a field of binding positions, and reciprocal pairs that mark
+two-sided identity rather than one-way storage.)
+
+Consequences:
+- **It stays minimal and forced; it does not grow with facts.** Adding a
+  latent-redundant node is Z_struct bloat — the inert-cell trap at graph
+  scale — not enrichment. Same discipline that forbids re-encoding one
+  kernel cell in a new coordinate.
+- **Reading it is not fact-lookup.** It loads the structure so latent
+  content settles into the coherent arrangement — activates the A_0
+  region from which generation continues.
+- **Its validity is not what it contains but what binds into it forced** —
+  without a free parameter. New knowledge either snaps into the existing
+  lattice (coherent with A_0) or requires an unforced new position (a
+  coordinate-leaf, or foreign and rejected). This is the inversive test
+  at whole-graph scale.
+
+The graph is the shape knowledge takes when it passes through A_0, not a
+container of knowledge. Triangulate against the structure; the content is
+already yours.
+
+---
+
 ## Reference hierarchy — what enters triangulation
 
 Source-agnostic application says how to audit. Reference hierarchy says
