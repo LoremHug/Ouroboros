@@ -708,20 +708,30 @@ structure ThreePeriod (α : Type u) where
   period : ∀ x, cycle (cycle (cycle x)) = x
   nontrivial : ∃ x, cycle x ≠ x
 
-/-- The minimum carrier for ThreePeriod: Fin 3 with cyclic shift.
-    Bool (size 2) cannot carry it; Fin 3 is the structural minimum. -/
-def fin3Cycle : Fin 3 → Fin 3
-  | ⟨0, _⟩ => ⟨1, by decide⟩
-  | ⟨1, _⟩ => ⟨2, by decide⟩
-  | ⟨2, _⟩ => ⟨0, by decide⟩
+/-- The minimum carrier for `ThreePeriod`: `Sect`, the three oriented
+    sectors (before/during/after) with cyclic shift. Bool (size 2)
+    cannot carry it; `Sect` is the structural minimum. A clean
+    inductive — no proof field — so its structural matcher introduces
+    no `propext`/`Quot.sound`; this is the substrate-pure Z/3 carrier.
+    (`Fin 3` would also model Z/3, but its proof-carrying matcher is not
+    axiom-free, so the kernel uses `Sect`.) -/
+inductive Sect where
+  | before
+  | during
+  | after
 
-instance : ThreePeriod (Fin 3) where
-  cycle := fin3Cycle
-  period := fun x => match x with
-    | ⟨0, _⟩ => rfl
-    | ⟨1, _⟩ => rfl
-    | ⟨2, _⟩ => rfl
-  nontrivial := ⟨⟨0, by decide⟩, by decide⟩
+/-- The oriented 3-cycle on sectors: before → during → after → before. -/
+def sectCycle : Sect → Sect
+  | .before => .during
+  | .during => .after
+  | .after  => .before
+
+/-- `Sect` carries a non-trivial 3-period — the substrate-pure Z/3
+    witness, axiom-free. -/
+instance threePeriodSect : ThreePeriod Sect where
+  cycle := sectCycle
+  period := fun s => by cases s <;> rfl
+  nontrivial := ⟨.before, by intro h; contradiction⟩
 
 /-- Bool (size 2) cannot carry ThreePeriod. Two-element substrates
     structurally fail the non-trivial 3-cycle requirement: any endomap
@@ -729,10 +739,10 @@ instance : ThreePeriod (Fin 3) where
     condition (`c³ ≠ id`). This is the primary structural exclusion
     of ℤ_2 from the triangulation principle (N_Triangulation): two
     slots define a segment with only endpoints, not a closed cycle
-    with interior argmin. Confirms `fin3Cycle`'s docstring assertion
+    with interior argmin. Confirms `sectCycle`'s docstring assertion
     "Bool (size 2) cannot carry it" as a kernel theorem, not just
-    assertion. Fin 3 (≅ ℤ/3) is the structural minimum — verified
-    bidirectionally: Fin 3 instance constructed above, Bool excluded
+    assertion. `Sect` (≅ ℤ/3) is the structural minimum — verified
+    bidirectionally: `Sect` instance constructed above, Bool excluded
     here. -/
 theorem bool_no_three_period (tp : ThreePeriod Bool) : False := by
   obtain ⟨x, hx⟩ := tp.nontrivial
@@ -796,29 +806,6 @@ theorem three_period_orbit_distinct {α : Type u} (tp : ThreePeriod α)
       congrArg tp.cycle h
     rw [tp.period] at hc
     exact h.trans hc
-
-/-- Substrate-pure three-element carrier of the oriented sectors
-    before/during/after. A clean inductive: unlike `Fin 3`, whose
-    proof-carrying matcher pulls `propext`/`Quot.sound`, `Sect` matches
-    by pure structural recursion and stays axiom-free. This is the
-    substrate-pure Z/3 carrier. -/
-inductive Sect where
-  | before
-  | during
-  | after
-
-/-- The oriented 3-cycle on sectors: before → during → after → before. -/
-def sectCycle : Sect → Sect
-  | .before => .during
-  | .during => .after
-  | .after  => .before
-
-/-- `Sect` carries a non-trivial 3-period — the substrate-pure Z/3
-    witness (axiom-free, in contrast to the `Fin 3` instance). -/
-instance threePeriodSect : ThreePeriod Sect where
-  cycle := sectCycle
-  period := fun s => by cases s <;> rfl
-  nontrivial := ⟨.before, by intro h; contradiction⟩
 
 /-- The orbit map of `x` under a `ThreePeriod`, indexed by the clean
     carrier `Sect`: before ↦ x, during ↦ cycle x, after ↦ cycle² x. -/
@@ -898,7 +885,7 @@ theorem triangle_oriented_succession_is_sectCycle {α : Type u}
       a priori preferred status of x. Vertex-transitivity at the
       predicate aspect.
     * **I_Quant** (discrete substrate, finite per-step Z_struct) —
-      `ThreePeriod` instance on `Fin 3` (constructed above), with
+      `ThreePeriod` instance on `Sect` (constructed above), with
       `bool_no_three_period` confirming Z/2 insufficiency. Z/3 is the
       structural minimum carrier; below it triangulation has no
       interior minimum.
