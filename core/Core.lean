@@ -765,6 +765,120 @@ theorem bool_no_three_period (tp : ThreePeriod Bool) : False := by
           rw [hct, hcf, hcf]
         exact absurd (h3.symm.trans hp) (by decide)
 
+/-! ### Z/3 cell — frame-independent core (number 3, not the manifold)
+
+    The following make explicit the substrate-pure half of the L(3,1)
+    story: the forced minimal oriented three-fold cyclic structure —
+    Z/3 as an abstract action, NOT L(3,1) as a manifold. No `π_1`, no
+    Hilbert space, no spectral triple appears here. The manifold
+    realisation (Z/3 → π_1(M) → lens space → L(3,1)) is frame-borne
+    (Connes reconstruction + Perelman, taken as witness) and does not
+    enter the kernel. What the kernel carries is exactly the number 3 /
+    the Z/3 cell, double-anchorable below the frame. -/
+
+/-- Any non-trivial `ThreePeriod` carrier has three pairwise-distinct
+    points in the orbit of its non-trivial witness. Strengthens
+    `bool_no_three_period` from "Bool (size 2) cannot carry it" to
+    "any carrier of a non-trivial 3-period needs ≥ 3 distinct states".
+    This is the forced lower bound: oriented three-fold closure cannot
+    live on fewer than three states. -/
+theorem three_period_orbit_distinct {α : Type u} (tp : ThreePeriod α)
+    {x : α} (hx : tp.cycle x ≠ x) :
+    x ≠ tp.cycle x ∧ x ≠ tp.cycle (tp.cycle x)
+      ∧ tp.cycle x ≠ tp.cycle (tp.cycle x) := by
+  refine ⟨fun h => hx h.symm, fun h => hx ?_, fun h => hx ?_⟩
+  · -- h : x = cycle (cycle x) ⊢ cycle x = x
+    have hc : tp.cycle x = tp.cycle (tp.cycle (tp.cycle x)) := congrArg tp.cycle h
+    rw [tp.period] at hc
+    exact hc
+  · -- h : cycle x = cycle (cycle x) ⊢ cycle x = x
+    have hc : tp.cycle (tp.cycle x) = tp.cycle (tp.cycle (tp.cycle x)) :=
+      congrArg tp.cycle h
+    rw [tp.period] at hc
+    exact h.trans hc
+
+/-- Substrate-pure three-element carrier of the oriented sectors
+    before/during/after. A clean inductive: unlike `Fin 3`, whose
+    proof-carrying matcher pulls `propext`/`Quot.sound`, `Sect` matches
+    by pure structural recursion and stays axiom-free. This is the
+    substrate-pure Z/3 carrier. -/
+inductive Sect where
+  | before
+  | during
+  | after
+
+/-- The oriented 3-cycle on sectors: before → during → after → before. -/
+def sectCycle : Sect → Sect
+  | .before => .during
+  | .during => .after
+  | .after  => .before
+
+/-- `Sect` carries a non-trivial 3-period — the substrate-pure Z/3
+    witness (axiom-free, in contrast to the `Fin 3` instance). -/
+instance threePeriodSect : ThreePeriod Sect where
+  cycle := sectCycle
+  period := fun s => by cases s <;> rfl
+  nontrivial := ⟨.before, by intro h; contradiction⟩
+
+/-- The orbit map of `x` under a `ThreePeriod`, indexed by the clean
+    carrier `Sect`: before ↦ x, during ↦ cycle x, after ↦ cycle² x. -/
+def orbitMap {α : Type u} (tp : ThreePeriod α) (x : α) : Sect → α
+  | .before => x
+  | .during => tp.cycle x
+  | .after  => tp.cycle (tp.cycle x)
+
+/-- The orbit map intertwines `sectCycle` with the carrier's own cycle:
+    `orbitMap (sectCycle k) = cycle (orbitMap k)`. The abstract Z/3
+    3-cycle (`sectCycle`) IS the action realised on any orbit — the
+    forced structure, in no notation but the cyclic one. -/
+theorem orbitMap_intertwines_sectCycle {α : Type u}
+    (tp : ThreePeriod α) (x : α) :
+    ∀ k, orbitMap tp x (sectCycle k) = tp.cycle (orbitMap tp x k) := by
+  intro k
+  cases k with
+  | before => rfl
+  | during => rfl
+  | after  => exact (tp.period x).symm
+
+/-- Under a free witness (`cycle x ≠ x`), the orbit map is injective:
+    `sectCycle` embeds faithfully into any non-trivial `ThreePeriod`.
+    Together with `orbitMap_intertwines_sectCycle`, this is the forced
+    realisation of Z/3 — the three sectors are genuinely distinct and
+    permuted as the 3-cycle. (Surjectivity onto a 3-element carrier is
+    the manifold-irrelevant remainder; it needs a single-orbit
+    hypothesis and is not the forced content.) -/
+theorem orbitMap_injective {α : Type u} (tp : ThreePeriod α) {x : α}
+    (hx : tp.cycle x ≠ x) :
+    ∀ j k : Sect, orbitMap tp x j = orbitMap tp x k → j = k := by
+  obtain ⟨d01, d02, d12⟩ := three_period_orbit_distinct tp hx
+  intro j k
+  cases j <;> cases k <;> intro h
+  all_goals first
+    | rfl
+    | exact absurd h d01 | exact absurd h.symm d01
+    | exact absurd h d02 | exact absurd h.symm d02
+    | exact absurd h d12 | exact absurd h.symm d12
+
+/-- Slot access for a `Triangle`: index the three slots b/p/i
+    (before/during/after) by the clean carrier `Sect`. -/
+def Triangle.get {α : Type u} (t : Triangle α) : Sect → α
+  | .before => t.b
+  | .during => t.p
+  | .after  => t.i
+
+/-- Bridge: the oriented succession of `Triangle` slots
+    (before → during → after → before) IS the `sectCycle` action on
+    the slot indices. The B/P/I trichotomy of the `Z`-decomposition and
+    the Z/3 3-cycle of `ThreePeriod` are one oriented Z/3 — "the two
+    trichotomies are one", rendered in the kernel without any reference
+    to `π_1` or a manifold. -/
+theorem triangle_oriented_succession_is_sectCycle {α : Type u}
+    (t : Triangle α) :
+    t.get (sectCycle .before) = t.p
+      ∧ t.get (sectCycle .during) = t.i
+      ∧ t.get (sectCycle .after) = t.b :=
+  ⟨rfl, rfl, rfl⟩
+
 /-! ## Four invariants of stable transitioning — substrate witnesses
 
     N_Invariants (A=5 DEMONSTRATED) identifies four conditions for any
@@ -1432,6 +1546,10 @@ end Core
 #print axioms Core.modus_ponens_is_unique_solution
 #print axioms Core.law_of_non_contradiction
 #print axioms Core.bool_no_three_period
+#print axioms Core.three_period_orbit_distinct
+#print axioms Core.orbitMap_intertwines_sectCycle
+#print axioms Core.orbitMap_injective
+#print axioms Core.triangle_oriented_succession_is_sectCycle
 #print axioms Core.invariant_symmetric_witness
 #print axioms Core.invariant_null_zero_cost
 #print axioms Core.composition_preserves_forced_uniqueness
