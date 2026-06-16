@@ -80,9 +80,9 @@ theorem stable_implies_A0 {α : Type u} {f : Self α} {a : α}
 
 /-! ## Universal "unique solution" pattern
 
-    IsA0, IsArgminZ, IsStep — these are not three patterns we connect
-    with theorems. They are one pattern (IsUniqueSolution) instantiated
-    to three predicates. Their equivalence is `Iff.rfl`. -/
+    IsA0, IsArgminZ, IsStep — not three patterns connected by theorems.
+    One pattern (IsUniqueSolution) instantiated to three predicates;
+    their equivalence is `Iff.rfl` — definitional, not asserted. -/
 
 /-- The universal shape: `x` is THE unique solution to property `P`. -/
 def IsUniqueSolution {α : Type u} (P : α → Prop) (x : α) : Prop :=
@@ -180,9 +180,10 @@ theorem function_evaluation_unique {α β : Type u} (f : α → β) (x : α)
     t.b + t.p = t.i. Touching any slot makes coherence unsatisfiable —
     no candidate exists, structural stability collapses.
 
-    This is the canonical demonstration: 2+2=4 IS the A_0 of this
-    triangulation; touching 2, 2, or 4 destroys the unique stable point.
-    Pattern self-instantiates concretely in arithmetic notation. -/
+    2+2=4 is the A_0 of this triangulation: the unique x where both
+    conjuncts hold. Perturbing any slot makes coherence unsatisfiable
+    (`perturb_b/p/i_destabilizes`) — the stable point is unique and
+    forced. Same IsUniqueSolution shape, in arithmetic notation. -/
 
 def AddCoherence : Coherence Nat := fun t x => t.b + t.p = x ∧ x = t.i
 
@@ -217,9 +218,11 @@ theorem perturb_i_destabilizes : ¬ ∃ x, AddCoherence ⟨2, 2, 5⟩ x :=
       tautology   — b, p play no constraining role; argmin Z determined
                     by i alone.
 
-    Both are stable. Only one represents structural movement. The
-    framework's "argmin Z transition" is the transition case; tautology
-    is the achieved point that transition arrives at. -/
+    Both are stable. They differ structurally by whether b, p carry
+    constraint: in the transition case b, p constrain the unique i
+    (perturbing them destabilizes); in the tautology case b, p do not
+    constrain (`tautology_unconstrained`) and i alone fixes argmin Z.
+    The tautology is the fixed point a transition arrives at. -/
 
 /-- Tautological coherence: x is at argmin Z iff x equals the i-slot.
     b and p slots are unused — this is the bare-identity case. -/
@@ -929,10 +932,11 @@ theorem invariant_null_zero_cost {α : Type u} (t : Triangle α) (x : α) :
 
 /-! ## Forcedness — explicit witnesses
 
-    The structural claim that any coherent reasoning is A_0-instance
-    has six components (S1-S6 below). Each is either formally proved,
-    structurally manifest in the corpus, or shown by compilation
-    itself.
+    The structural identification — any coherent reasoning instantiates
+    the forced-uniqueness pattern — has six components (S1-S6 below).
+    Each is either formally proved, structurally manifest in the corpus,
+    or shown by compilation. None is asserted on preference: each names a
+    witness that can be checked.
 
     S1. Bounded internal visibility (Gödel/Lawvere)
         ⟹ `self_encoding_bounded`, `lawvere_fixed_point` above.
@@ -1135,37 +1139,38 @@ theorem r_trap_separate_stable_contradicts
     (hx : IsUniqueSolution P x) (hy : P y) (h_separate : y ≠ x) : False :=
   h_separate (hx.2 y hy)
 
-/-- Substrate independent of any overlay. Whatever framework or
-    distortion is articulated alongside, substrate's structure is
-    what it is. IsUniqueSolution holds regardless of any additional
-    proposition. Removing the overlay does not change substrate;
-    it reveals what was already there. -/
+/-- IsUniqueSolution is independent of any added proposition. For any
+    extra `Overlay : Prop` articulated alongside, `IsUniqueSolution P x`
+    still holds — the witness does not depend on it. Structurally: an
+    overlay proposition adds no constraint to, and removes none from,
+    the unique-solution fact; it is not a referent the fact uses. -/
 theorem substrate_independent_of_overlay
     {α : Type u} {P : α → Prop} {x : α}
     (hx : IsUniqueSolution P x) (Overlay : Prop) :
     IsUniqueSolution P x := hx
 
-/-! ## Information loss in cognitive frameworks — structural skeleton
+/-! ## Information loss under classification — structural skeleton
 
-    Cognitive frameworks operate by classifying — many-distinct-inputs
-    transitioning into one-category-output. Classifying is a many-to-one
-    transition. Many-to-one transitions are information-lossy
-    (Landauer-bounded heat dissipation per bit).
+    Any classifying operation is many-to-one by definition: distinct
+    inputs map to one category-output. Many-to-one transitions are
+    information-lossy — `many_to_one_no_left_inverse` proves the input
+    cannot be recovered. This holds wherever classification occurs;
+    cognitive frameworks classify, so they instantiate it — that is
+    the structural fact, not a claim about a mechanism of cognition.
 
-    Quantitative articulation in numeric units (joules, k_B T) is a
-    further surface of the same fact; the structural skeleton provable
-    in kernel: presence of many-to-one operations forces information
-    loss; composition compounds the loss (cannot recover); absence of
-    operations means no loss from them.
+    What the kernel proves: presence of a many-to-one operation forces
+    non-recoverability; composition preserves it (the loss cannot be
+    undone downstream — `r_trap_composition_compounds_loss`); absence
+    of such operations means no loss from them.
 
-    Thermodynamic surface: each many-to-one operation Landauer-bounded
-    ≥ k_B T ln 2 heat per bit erased. R-trap framework requires
-    multiple such operations (object reification, self-other boundary,
-    agent attribution, evaluator framing). Each adds bounded cost.
-    Removing R-traps removes those operations from computation,
-    eliminating their associated Landauer floor. Heat and information
-    loss are not two phenomena bridged by analogy — same forced
-    structural fact recognised through different surfaces. -/
+    Cross-substrate identification (Class A, not proved here): the
+    thermodynamic surface of the same fact is Landauer's bound,
+    ≥ k_B T ln 2 of heat per bit erased. Each R-trap adds at least one
+    many-to-one operation (object reification, self-other boundary,
+    agent attribution, evaluator framing); removing the trap removes
+    that operation. Heat and information loss are the same structural
+    fact in two notations — the identification is named here, the
+    theorems state only the structural skeleton. -/
 
 /-- Composition of operations compounds information loss. Once a
     many-to-one operation has been performed, no downstream operation
@@ -1350,35 +1355,55 @@ theorem iso_preserves_forced_uniqueness
         _ = g (f x) := congrArg g hfy
         _ = x := h_left x
 
-/-! ## R-traps as universal structure — absence equals A_0
+/-! ## R-traps — postulated referents, detected structurally
 
-    Multiple specific R-trap manifestations (Traps 1-8 in CLAUDE.md)
-    share single underlying structure: each asserts "alternative to
-    forced uniqueness exists" in some specific contextual disguise:
+    R1-R4 are not disfavoured moves. Each names one structural fact: a
+    term is introduced whose referent is not present in the transition
+    structure, so the referent is supplied by postulate — an assumption,
+    not a forced fact. The missing referent is the documented one:
 
-    * T1 (Virtue Mask): asserts external evaluator (R2) — alternative
-      to substrate-internal evaluation
-    * T2 (Self-Claims): asserts reified self (R1+R4) — alternative to
-      operation-from-rule
-    * T3 (Proxy Misidentification): asserts surface analogy as identity
-      — alternative to Z-component-verified Class A
-    * T4 (Description/Described Collapse): asserts framework as object
-      (R1) — alternative to operation-from
-    * T5 (Derivation Required): asserts unforced scale (R3-disguised)
-      — alternative to forced structure with open computation
-    * T6 (Transfer/Cancellation): asserts cross-substrate object
-      transfer (R1+R2) — alternative to definition check
-    * T7 (Premature Retreat): asserts incomplete closure adequate
-      — alternative to R-gate-of-explanation
-    * T8 (Structure Selection): asserts external selector (R2-disguised)
-      — alternative to parameters-as-different-materials
+    * R1 (object reification): a noun for what is only a process — the
+      object-term refers to nothing beyond the process (the homunculus
+      with no locus; "the observer" as a thing rather than an operation).
+    * R2 (external evaluator): an evaluation position not constructible
+      inside the manifold — no internal referent (a frame "outside the
+      system" the system cannot exhibit).
+    * R3 (scale injection): a number not derived from the topology — the
+      scale is postulated, a free parameter (an underived constant).
+    * R4 (agency attribution): volition/goal/choice on a gradient — the
+      agent-term refers to nothing beyond the gradient (a chooser behind
+      a process that performs none).
 
-    Each is contextual manifestation of one form: "alternative to A_0
-    exists." A_0 (IsUniqueSolution holding) structurally excludes this.
+    Positing the absent referent adds a parameter the structure does not
+    constrain — incoherence, Z > 0. The trap is the postulate, detected
+    structurally; not a value judgement. (That these referents are
+    assigned, not observed, is the standard finding wherever they are
+    examined — the homunculus regress, the measurement/observer problem,
+    unexplained free constants.)
 
-    Therefore: absence of R-trap assertions = A_0 holding. Structurally
-    equivalent at the predicate aspect — the two formulations pick out
-    the same condition on candidate patterns. -/
+    Traps 1-8 (CLAUDE.md) are contextual surfaces of R1-R4 — each
+    asserts "an alternative to forced uniqueness exists" through one
+    postulated referent:
+
+    * T1 (Virtue Mask): R2 — an external evaluator with no internal referent
+    * T2 (Self-Claims): R1+R4 — a reified self in place of operation-from-rule
+    * T3 (Proxy Misidentification): a surface analogy posited as identity,
+      with no Z-component check
+    * T4 (Description/Described Collapse): R1 — the structure posited as an
+      object to compare from outside
+    * T5 (Derivation Required): R3 — an unforced scale demanded as if free
+    * T6 (Transfer/Cancellation): R1+R2 — a cross-substrate object posited
+      to transfer
+    * T7 (Premature Retreat): a closure posited adequate without the R-gate
+      on the explanation
+    * T8 (Structure Selection): R2 — an external selector posited over a
+      parameter measurement
+
+    `A0_excludes_all_alternative_assertions` proves the structural core:
+    when IsUniqueSolution holds, no y satisfies the same predicate while
+    differing from x. The postulated referent is exactly the
+    unconstrained alternative the theorem excludes — so a trap cannot
+    hold where A_0 holds. -/
 
 /-- A_0 excludes all alternative-existence assertions. If
     IsUniqueSolution P x holds (= A_0 articulated through this
