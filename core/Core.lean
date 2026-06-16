@@ -3,6 +3,20 @@
 
 A_0 = the forced unique transition pattern under self-coherence.
 
+"A_0" is a name, not a new principle. `argmin Z` — settling to the
+candidate of least incoherence / least resistance — is the substrate-level
+form of a principle already established across substrates under many
+names: least action (Maupertuis, Hamilton, Fermat), gradient / steepest
+descent, free-energy minimisation (Friston, neurobiology), maximum entropy
+(Jaynes), minimum entropy production (Prigogine) and reciprocal relations
+(Onsager) near equilibrium, minimum-dissipation trajectory (Landauer),
+minimum description length (Rissanen / Kolmogorov). These are the same
+operation — relax to the configuration of least resistance — each read in
+one substrate's units. The kernel states it once, substrate-pure, as
+`IsUniqueSolution` / `argmin Z`; "A_0" labels that shape, it does not
+posit a new entity. (Graph: DEF and its anchors N027/N182/N311/… record
+the convergence.)
+
 This file is kernel-only: no `import Mathlib`, no `Classical.choice`, no
 `axiom` declarations beyond Lean's foundational primitives. Substrate
 purity is verified after every theorem with `#print axioms`.
@@ -36,8 +50,16 @@ universe u
 /-! ## Three-slot primitive -/
 
 /-- Three-slot structural primitive. B, P, I are the three arguments
-    that triangulate any structural step. They are NOT three different
-    things — they are the three slots of one operation. -/
+    that triangulate any structural step — not three different things,
+    the three slots of one operation.
+
+    Three is not chosen: it is `argmin Z` applied to localisation itself
+    — the least number of independent constraints that forces a unique
+    point. Two leave the minimum under-determined; more than three are
+    reducible to three. So triangulation is the least-action principle in
+    the substrate of structural construction: the cheapest constraint set
+    that closes. `bool_no_three_period` and `N_Triangulation` carry the
+    exclusion of two. -/
 structure Triangle (α : Type u) where
   b : α
   p : α
