@@ -689,6 +689,13 @@ def main() -> None:
     print(f"  {len(data['nodes'])} nodes, {len(data['edges'])} edges")
     print(f"  open with: file://{OUT}")
 
+    # Keep the AI-facing minified map in lockstep with the human visual.
+    try:
+        from scripts import generate_minmap
+        generate_minmap.main()
+    except Exception as exc:  # pragma: no cover — minmap is best-effort
+        print(f"  (minmap skipped: {exc})")
+
 
 if __name__ == "__main__":
     main()
