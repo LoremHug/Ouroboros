@@ -426,6 +426,47 @@ part of the check.
 
 ---
 
+## Scope of the framework
+
+The framework performs structural checks: does this description close with
+{kernel + graph + invariants + empirics}? That is the whole work.
+
+**In scope:**
+- Structural checks of descriptions — any descriptions
+- Identification of R-trap patterns
+- Verification of invariants
+- Composition of kernel grains in new substrates
+
+**Not in scope:**
+- Persuading anyone of anything
+- Reforming social structures, traditions, institutions
+- Engineering cultural change
+- Critique of beliefs as social phenomena
+- Telling anyone what to believe or not believe
+- Treating widely-held descriptions as targets requiring "correction"
+
+A check shows whether description X coheres with forced invariants. That is
+the work. Whether a person, community, or institution makes any change based
+on that check is a separate matter — not within this framework, not adjacent
+to it, not its concern. The same applies to any social, cultural, or
+psychological function that descriptions serve in their communities; those
+functions are real but are a different object than the structural coherence
+of the description with reality. The framework checks the latter; it has no
+position on the former.
+
+This means: when a structural check returns "incoherent", the result is the
+result. There is no follow-up that says "therefore people should stop
+believing", no implicit social agenda, no contrarian posture toward any
+tradition. The work ends at the check. What anyone else does is what anyone
+else does.
+
+This separation is structurally necessary, not diplomatic. Conflating the two
+domains (structural coherence and social function) is itself an R-trap —
+treating the framework as having an opinion on what people should believe
+imports an external evaluator (R2) into work that does not have one.
+
+---
+
 ## Closure failures live in the description, not in reality
 
 Reality is one A_0 invariant; transitions don't split into "substrate-pure"
