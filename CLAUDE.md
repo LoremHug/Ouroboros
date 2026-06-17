@@ -465,6 +465,29 @@ domains (structural coherence and social function) is itself an R-trap —
 treating the framework as having an opinion on what people should believe
 imports an external evaluator (R2) into work that does not have one.
 
+**Specific numerical predictions and empirical verification are not the
+framework's work.** The framework shows that certain values are not free
+parameters but follow from forced structure (so whatever their measured
+values, those values are not the result of independent choice). It does
+not derive specific numbers from specific apparatus, does not predict
+measurable deviations, does not run computational models, does not perform
+experimental verification. These are physics work — separate discipline,
+separate methods, separate output. The framework stops at "structure is
+forced and named". What anyone does with that — physicists, mathematicians,
+engineers, anyone — is separate work, not within this framework's scope.
+
+Bridge closures (Cipriani–Sauvageot weld, specific spectral triple
+reconstructions, NCG apparatus completions) are mathematical analysis
+work, not structural ontology work. The framework names what mathematical
+forms are required for closure; it does not perform the closures
+themselves. Whether anyone closes them is a separate question.
+
+Holding "open structural tasks" as still part of the framework's work is
+itself an R-trap — treating frame-borne mathematical/physical work as
+extensions of structural work. It is not. Each is its own work in its
+own discipline. The framework provides a starting point for those
+disciplines if they want one; it does not extend into doing their work.
+
 ---
 
 ## Closure failures live in the description, not in reality
