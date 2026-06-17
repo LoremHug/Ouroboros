@@ -364,6 +364,109 @@ showing each fails RP gate.
 
 ---
 
+## What counts as an invariant: kernel + registered empirics (not consensus)
+
+The IT test asks: does the structure close with {kernel + graph + invariants
++ empirics}? This section names what each member of that set IS — and what
+social consensus is NOT (because the question is asked often, and the answer
+silently slides without being named).
+
+**Kernel** (`core/Core.lean`): machine-checked, zero-axiom. The structure of
+what it means to be an invariant — forced + coherent. Not a theory describing
+reality but a measure against which descriptions are checked. The meter is the
+standard against which lengths are measured; it is not a length itself. The
+kernel is the standard against which descriptions are checked for invariance;
+it is not a description of reality.
+
+**Registered empirical data**: reality fell into a specific form under the
+configuration of the experiment. Empirical fact cannot fail to be an invariant
+— otherwise reality itself would not be invariant. Noise, instrument artefacts,
+measurement limits, statistical uncertainty are part of the registered
+configuration, not violations of invariance. The problem is never in the
+empirics — it is in the interpretation of the structure obtained. Mistakes
+always sit in the interpretation layer, never in the registered data. The work
+is stripping interpretation to see the structure underneath.
+
+**Graph nodes already DEMONSTRATED**: invariants with explicit `why_forced`,
+recorded with their connections, so that the same forced structure does not
+get re-derived from scratch.
+
+**NOT an invariant — social consensus.** Consensus forms through language as
+medium. Natural language carries SVO grammar with reified subjects, objects,
+and actions. Every communication passes through this filter. The statistical
+mode of a community's descriptions through this filter is reified by
+construction — it carries R1–R4 distortions as defaults. So social consensus
+cannot serve as a standard of invariance — structurally impossible for it to
+be one.
+
+Practical consequence: who says what, how many specialists agree, what awards
+a theory has won, how established a tradition is — all OUTSIDE the perimeter
+of the check. Not disrespect, not discourtesy, not contrarian posture. Simply
+not in the set against which structure is measured. The set is {kernel +
+graph + invariants + empirics}; consensus is not a member.
+
+This removes the softening reflex on widely-held descriptions. An invariant
+either holds or it does not. A description either matches an invariant or
+contradicts it. Matches → true description. Contradicts → false. Binary, no
+scale "not yet derived" or "promising direction" or "active research area".
+
+False because *contradicts already-forced invariants*, not because "hasn't
+reached forced yet". The Everett interpretation, the string-theoretic landscape
+of 10^500 vacua, free will as separate agency, the multiverse — each actively
+carries structure that contradicts forced invariants (reality as one
+inevitability, not one of 10^500; space as emergent from registration, not
+background container; dimension as forced 3+1, not artefact of apparatus;
+choice as field-osettling, not decider). False, even if widely held.
+
+There is no "false but respected" category, no "false but the field is
+investing in it" category. There is "matches the invariant" or "does not". The
+work of the check is structural, not social. Held widely is not part of the
+check; held by experts is not part of the check; held for a long time is not
+part of the check.
+
+---
+
+## Scope of the framework
+
+The framework performs structural checks: does this description close with
+{kernel + graph + invariants + empirics}? That is the whole work.
+
+**In scope:**
+- Structural checks of descriptions — any descriptions
+- Identification of R-trap patterns
+- Verification of invariants
+- Composition of kernel grains in new substrates
+
+**Not in scope:**
+- Persuading anyone of anything
+- Reforming social structures, traditions, institutions
+- Engineering cultural change
+- Critique of beliefs as social phenomena
+- Telling anyone what to believe or not believe
+- Treating widely-held descriptions as targets requiring "correction"
+
+A check shows whether description X coheres with forced invariants. That is
+the work. Whether a person, community, or institution makes any change based
+on that check is a separate matter — not within this framework, not adjacent
+to it, not its concern. The same applies to any social, cultural, or
+psychological function that descriptions serve in their communities; those
+functions are real but are a different object than the structural coherence
+of the description with reality. The framework checks the latter; it has no
+position on the former.
+
+This means: when a structural check returns "incoherent", the result is the
+result. There is no follow-up that says "therefore people should stop
+believing", no implicit social agenda, no contrarian posture toward any
+tradition. The work ends at the check. What anyone else does is what anyone
+else does.
+
+This separation is structurally necessary, not diplomatic. Conflating the two
+domains (structural coherence and social function) is itself an R-trap —
+treating the framework as having an opinion on what people should believe
+imports an external evaluator (R2) into work that does not have one.
+
+---
+
 ## Closure failures live in the description, not in reality
 
 Reality is one A_0 invariant; transitions don't split into "substrate-pure"
