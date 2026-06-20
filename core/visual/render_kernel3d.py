@@ -26,8 +26,12 @@ LAYER_HEIGHT = 0.35            # vertical spacing per layer
 TRIANGLE_SIZE = 2.2            # outer triangle radius
 
 # Colors (carry over palette from 2D kernel.svg)
-SIERPINSKI_HEX = '#5a6482'     # dusty slate-blue
-A0_HEX = '#b48232'             # warm amber
+SIERPINSKI_HEX = '#5a6482'     # dusty slate-blue (in-plane subdivision)
+A0_HEX = '#b48232'             # warm amber (A_0 + helical screw edges)
+HELIX_HEX = '#a8703a'          # slightly darker amber for helical edges
+                               # (visually marks 3_1 screw axis as triple
+                               # helix linking corresponding corners
+                               # across Z/3 deck transformation layers)
 
 
 def hex_to_rgb(h):
@@ -55,6 +59,14 @@ def build_fractal_edges():
     Each z-layer is a Sierpinski fractal, rotated by 120 degrees per layer
     (Z/3 screw). After 3 layers, structure returns to same orientation
     (Z/3 deck transformation cycle). N_LAYERS = 9 shows 3 full cycles.
+
+    Returns two edge lists:
+    - sierpinski edges: in-plane Sierpinski subdivision per layer
+    - helical edges: triple helix connecting outer corners across layers,
+      visually manifesting the 3_1 screw axis (rotation + translation).
+      Triple helix is THE classic L(3,1) deck transformation form;
+      without it, the screw structure would be invisible because
+      Sierpinski triangle is itself Z/3 fixed under rotation.
     """
     R = TRIANGLE_SIZE
     initial = []
@@ -65,42 +77,77 @@ def build_fractal_edges():
     base_triangles = gen_sierpinski(initial[0], initial[1], initial[2],
                                      SIERPINSKI_DEPTH, SIERPINSKI_DEPTH)
 
-    edges = []
+    sierpinski_edges = []
+    layer_corners = []  # store per-layer absolute corner positions
     for layer in range(N_LAYERS):
         z = (layer - (N_LAYERS - 1) / 2) * LAYER_HEIGHT
         rot = layer * 2 * math.pi / 3  # 3_1 screw: 120 deg per layer
         cr, sr = math.cos(rot), math.sin(rot)
 
+        def transform(p):
+            x, y = p
+            return (cr * x - sr * y, sr * x + cr * y, z)
+
+        # Sierpinski subdivision in this layer
         for (level, p1, p2, p3) in base_triangles:
-            def transform(p):
-                x, y = p
-                return (cr * x - sr * y, sr * x + cr * y, z)
             r1, r2, r3 = transform(p1), transform(p2), transform(p3)
-            edges.append((r1, r2, level))
-            edges.append((r2, r3, level))
-            edges.append((r3, r1, level))
+            sierpinski_edges.append((r1, r2, level))
+            sierpinski_edges.append((r2, r3, level))
+            sierpinski_edges.append((r3, r1, level))
 
-    return edges
+        # Store outer corners (initial[0], initial[1], initial[2]) at
+        # this layer for helical-edge generation
+        layer_corners.append([transform(v) for v in initial])
+
+    # Helical edges: connect corner k of layer N to corner k of layer N+1.
+    # Each layer's corner k is rotated 120 deg from previous layer's
+    # corner k (because layer rotation is 120 deg per step), so connection
+    # forms helix ascending around central axis. Three helices total
+    # (k = 0, 1, 2) make the triple helix.
+    helical_edges = []
+    for layer in range(N_LAYERS - 1):
+        for k in range(3):
+            p_curr = layer_corners[layer][k]
+            p_next = layer_corners[layer + 1][k]
+            helical_edges.append((p_curr, p_next, -1))  # -1 = helix marker
+
+    return sierpinski_edges, helical_edges
 
 
-def edges_to_buffers(edges):
+def edges_to_buffers(sierpinski_edges, helical_edges):
     """Flatten edges into position + color arrays for Three.js BufferGeometry.
 
     Rounds floats to 3 decimals (sufficient for visual precision at all
     practical zoom levels) to reduce file size.
+
+    Sierpinski edges colored slate-blue with opacity fading by subdivision
+    level (outer strong, inner fades). Helical edges colored amber to
+    visually mark them as part of A_0/screw-axis structure, full opacity
+    since there are only 3*(N-1) of them — visual emphasis warranted.
     """
     positions = []
     colors = []
-    base_rgb = hex_to_rgb(SIERPINSKI_HEX)
+    sierp_rgb = hex_to_rgb(SIERPINSKI_HEX)
+    helix_rgb = hex_to_rgb(HELIX_HEX)
 
     def r(v):
         return round(v, 3)
 
-    for (p1, p2, level) in edges:
+    # Sierpinski edges first
+    for (p1, p2, level) in sierpinski_edges:
         positions.extend([r(p1[0]), r(p1[1]), r(p1[2])])
         positions.extend([r(p2[0]), r(p2[1]), r(p2[2])])
         op = max(0.05, 0.7 * (0.78 ** level))
-        col = [r(base_rgb[0] * op), r(base_rgb[1] * op), r(base_rgb[2] * op)]
+        col = [r(sierp_rgb[0] * op), r(sierp_rgb[1] * op), r(sierp_rgb[2] * op)]
+        colors.extend(col)
+        colors.extend(col)
+
+    # Helical edges (full opacity, amber for screw axis visual emphasis)
+    for (p1, p2, _) in helical_edges:
+        positions.extend([r(p1[0]), r(p1[1]), r(p1[2])])
+        positions.extend([r(p2[0]), r(p2[1]), r(p2[2])])
+        col = [r(helix_rgb[0] * 0.92), r(helix_rgb[1] * 0.92),
+               r(helix_rgb[2] * 0.92)]
         colors.extend(col)
         colors.extend(col)
 
@@ -264,8 +311,8 @@ window.controls = controls;
 
 
 def main():
-    edges = build_fractal_edges()
-    fractal = edges_to_buffers(edges)
+    sierp_edges, helix_edges = build_fractal_edges()
+    fractal = edges_to_buffers(sierp_edges, helix_edges)
     fractal_json = json.dumps(fractal, separators=(',', ':'))
 
     html = HTML_TEMPLATE.replace('__FRACTAL_JSON__', fractal_json)
@@ -277,10 +324,12 @@ def main():
     size_kb = os.path.getsize(out_path) / 1024
     print(f'Wrote {out_path}')
     print(f'  size: {size_kb:.1f} KB')
-    print(f'  edges: {len(edges)}')
+    print(f'  sierpinski edges: {len(sierp_edges)}')
+    print(f'  helical edges: {len(helix_edges)} '
+          f'(3 helices x {N_LAYERS - 1} segments = triple helix manifest)')
+    print(f'  total edges: {len(sierp_edges) + len(helix_edges)}')
     print(f'  layers: {N_LAYERS} (3 full Z/3 cycles)')
     print(f'  Sierpinski depth: {SIERPINSKI_DEPTH}')
-    print(f'  triangles per layer: {len([1 for e in edges if e[2] == SIERPINSKI_DEPTH]) // 3}')
 
 
 if __name__ == '__main__':
