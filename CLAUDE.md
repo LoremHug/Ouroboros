@@ -923,10 +923,10 @@ placement.
 
 ## Compact mathematical articulation — trunk for scan-first load
 
-This section is the framework's structural skeleton in math-readable
-form. Load first in any anchoring mode — it puts the full topology in
-attention as a single compact unit, so any incoming question or claim
-can be located directly on the cascade without walking 241 graph nodes.
+This section is the structural skeleton in math-readable form. Load
+first in any anchoring mode — it puts the full topology in attention as
+a single compact unit, so any incoming question or claim can be located
+directly on the cascade without walking 241 graph nodes.
 
 This is articulation, not substitute:
 - Kernel (`core/Core.lean`): zero-axiom formal standard
@@ -941,10 +941,14 @@ this section.
 ### Core formula (Part 1)
 
 ```
-A_0 = argmin_{x ∈ Fix(A_0)} [ K(x) + k_B T · ΔS_irr(x) + (K(F) − K(O|x)) ]
+A_0 = argmin_{x ∈ C(A_0)} [ K(x) + k_B T · ΔS_irr(x) + (K(F) − K(O|x)) ]
 
-with:  Fix(A_0) = { x : A_0(A_0) = A_0 }   (self-application closure)
-       K(O) < K(F)                          (Observer Containment, forced)
+with:  C(A_0) = { x : x coherent with A_0 }
+                                     (self-coherence; A_0 is fixed point
+                                     of its own forcing operator F, where
+                                     F(y) = argmin_{z ∈ C(y)} Z(z),
+                                     so A_0 = F(A_0))
+       K(O) < K(F)                  (Observer Containment, forced)
 ```
 
 **Read per term:**
@@ -955,8 +959,9 @@ with:  Fix(A_0) = { x : A_0(A_0) = A_0 }   (self-application closure)
 **Read per structure:**
 - `argmin Z`     → variational principle in any substrate (least action,
   Fermat, free energy, MDL, gradient descent, Nash, Bayesian posterior)
-- `Fix(A_0)`     → Lawvere fixed-point structure (Gödel, Cantor, Tarski,
-  halting, Russell — all substrate-cousins of one self-application form)
+- self-reference `A_0 = F(A_0)` → Lawvere fixed-point structure (Gödel,
+  Cantor, Tarski, halting, Russell — all substrate-cousins of one
+  self-application form)
 - `K(O) < K(F)`  → Observer Containment Lemma (forces Z_hidden > 0,
   Born rule, contextuality, complex Hilbert space, quantum formalism)
 
@@ -973,7 +978,8 @@ T1  Topology:
 
 T2  Group selection:
     Filter A (KO-dim=6, Frobenius-Schur=0): Γ = Z/p, p odd prime
-    Filter B (Wedderburn → SU(p) gauge): p=3 (SM needs SU(3))
+    Filter B (Wedderburn → SU(p) gauge): p=3 (anchored by registered
+                                              SM gauge SU(3))
     Filter C (N370 baryon conservation): π_1 = Z/3
     ⇒ Γ = Z/3,  M = L(3,1) = S^3 / Z_3
 
@@ -992,9 +998,11 @@ T6  Spectral action:
     S = Tr(f(D/Λ)) + ⟨ψ, Dψ⟩
     Heat-kernel expansion → Einstein-Hilbert + Yang-Mills + Higgs
 
-T7  Higgs mass:
-    m_H = v · (2/π)^(3/2) = 125.07 GeV
-    (Peter-Weyl on SU(2) + Haar; PDG: 125.09 GeV — 0.02% match)
+T7  Higgs mass — structurally forced (not free parameter):
+    m_H derived geometrically via Peter-Weyl on SU(2) + Haar measure
+    [Specific value m_H = v·(2/π)^(3/2) = 125.07 GeV vs PDG 125.09 GeV
+     is STRONG-status downstream: unique-coefficient verification
+     remains open NCG work, not structural limitation]
 
 T8  Spectral dimension:
     d_s(r) = 2 + 2r/(r + r_0)
@@ -1011,9 +1019,11 @@ T10 Gravity = thermodynamics:
     ⇒ G_μν = (8πG/c^4) T_μν
     ⇒ gravity = thermodynamic structure, not force; no graviton
 
-T11 Cosmological constant:
-    Z_hidden accumulation in vacuum + dS thermodynamics
-    Λ = 3ℏH_0^2 / (8π ℓ_P^2 c)   (matches Planck 2018, < 2%)
+T11 Cosmological constant — structurally forced (not free parameter):
+    Λ ↔ Z_hidden accumulation in vacuum + dS thermodynamics
+    [Specific value Λ = 3ℏH_0^2/(8π ℓ_P^2 c), matches Planck 2018 < 2%,
+     is STRONG-status downstream: consistency check using H_0 as input,
+     not standalone prediction]
     "10^120 problem" dissolves: categorical error (reversible vs
     irreversible mode counting)
 ```
@@ -1022,7 +1032,7 @@ T11 Cosmological constant:
 
 A_0 in any substrate has the same form:
 ```
-A_0^substrate = argmin_{x ∈ Fix_substrate(A_0)} Z_substrate(x)
+A_0^substrate = argmin_{x ∈ C_substrate(A_0)} Z_substrate(x)
 ```
 
 | Substrate      | Z_substrate              | A_0^substrate          |
@@ -1044,13 +1054,19 @@ coordinates. `Iff.rfl` at kernel level.
 
 ### Status note
 
-T1-T11: structurally DEMONSTRATED (R0 forced, no postulate imported at
-any step). Specific numerical computations downstream (Haar integral
-unique-coefficient verifications, RGE point selection from solution
-family, NCG bridge closures) are open work for NCG / spectral geometry /
-SM physics specialists — separate discipline, separate methods. Not
-framework limitations; downstream math work that someone may complete
-if they want. (See "Scope of the framework" above.)
+T1-T11: structural forcedness DEMONSTRATED (R0 forced, no postulate
+imported at any step). The structural claim "this is forced, not free
+parameter" holds for every step.
+
+Distinction to keep: structural-forcedness ≠ specific-numerical-derivation.
+Where T-steps include specific numerical values (T7 Higgs mass, T11
+cosmological constant), the structural claim is DEMONSTRATED; the
+verification of the specific number — Haar integral unique-coefficient,
+RGE point selection from solution family, NCG bridge closures — is
+STRONG-status downstream, open work for NCG / spectral geometry / SM
+physics specialists. Not framework limitations; downstream math work
+that someone may complete if they want. (See "Scope of the framework"
+above.)
 
 ### Operational use
 
