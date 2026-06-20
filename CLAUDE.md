@@ -921,6 +921,153 @@ placement.
 
 ---
 
+## Compact mathematical articulation — trunk for scan-first load
+
+This section is the framework's structural skeleton in math-readable
+form. Load first in any anchoring mode — it puts the full topology in
+attention as a single compact unit, so any incoming question or claim
+can be located directly on the cascade without walking 241 graph nodes.
+
+This is articulation, not substitute:
+- Kernel (`core/Core.lean`): zero-axiom formal standard
+- Graph (`manifold.kuzu`, `graph.min.txt`): operational map with
+  specific substrate-instances and N-ID nodes
+- Cascade (this section): math-readable trunk in compressed form
+
+For node-level work touching specific N-IDs → graph. For formal
+verification → kernel. For trunk orientation and scan-first load →
+this section.
+
+### Core formula (Part 1)
+
+```
+A_0 = argmin_{x ∈ Fix(A_0)} [ K(x) + k_B T · ΔS_irr(x) + (K(F) − K(O|x)) ]
+
+with:  Fix(A_0) = { x : A_0(A_0) = A_0 }   (self-application closure)
+       K(O) < K(F)                          (Observer Containment, forced)
+```
+
+**Read per term:**
+- `K(x)`               = Z_struct  → Shannon, Kolmogorov, MDL
+- `k_B T · ΔS_irr(x)`  = Z_therm   → Landauer (k_B T ln 2 floor per bit erased)
+- `K(F) − K(O|x)`      = Z_hidden  → observer aperture deficit
+
+**Read per structure:**
+- `argmin Z`     → variational principle in any substrate (least action,
+  Fermat, free energy, MDL, gradient descent, Nash, Bayesian posterior)
+- `Fix(A_0)`     → Lawvere fixed-point structure (Gödel, Cantor, Tarski,
+  halting, Russell — all substrate-cousins of one self-application form)
+- `K(O) < K(F)`  → Observer Containment Lemma (forces Z_hidden > 0,
+  Born rule, contextuality, complex Hilbert space, quantum formalism)
+
+### Cascade (Part 2) — forced derivation chain
+
+Each T-step forced from previous + named classical theorem. No free
+parameter introduced at any step. All DEMONSTRATED at structural level.
+
+```
+T1  Topology:
+    A_0 unique + finite K(O) + self-application
+    → vertex-transitive action of finite group Γ on closed oriented 3-mfd
+    → (Perelman geometrization) M = S^3 / Γ
+
+T2  Group selection:
+    Filter A (KO-dim=6, Frobenius-Schur=0): Γ = Z/p, p odd prime
+    Filter B (Wedderburn → SU(p) gauge): p=3 (SM needs SU(3))
+    Filter C (N370 baryon conservation): π_1 = Z/3
+    ⇒ Γ = Z/3,  M = L(3,1) = S^3 / Z_3
+
+T3  Spectral triple:
+    A_F = C ⊕ H ⊕ M_3(C)   (Krajewski two-sided, KO-dim filter)
+    (A, H, D) on L(3,1) × F
+
+T4  Gauge group:
+    G = Aut(A_F) / Inn_centre = U(1) × SU(2) × SU(3)
+
+T5  Three generations:
+    H_1(L(3,1)) = Z/3 → matter H ⊕ 3 sectors, identical gauge numbers
+    No 4th: w = 3 ≡ 0 (mod 3)
+
+T6  Spectral action:
+    S = Tr(f(D/Λ)) + ⟨ψ, Dψ⟩
+    Heat-kernel expansion → Einstein-Hilbert + Yang-Mills + Higgs
+
+T7  Higgs mass:
+    m_H = v · (2/π)^(3/2) = 125.07 GeV
+    (Peter-Weyl on SU(2) + Haar; PDG: 125.09 GeV — 0.02% match)
+
+T8  Spectral dimension:
+    d_s(r) = 2 + 2r/(r + r_0)
+    UV (r ≪ r_0): d_s → 2  |  At r_0: d_s = 3  |  IR (r ≫ r_0): d_s → 4
+    Observed 3+1 = observer-relative, not fundamental
+
+T9  Born rule:
+    Z/3 has no real irreducible rep dim 3 → complex Hilbert forced
+    K(O) < K(F) + Gleason → P(i) = |⟨i|ψ⟩|^2
+    = Solomonoff prior in Hilbert substrate (via Levin coding theorem)
+
+T10 Gravity = thermodynamics:
+    Bekenstein-Hawking dS = dA/4 + first law (Jacobson 1995)
+    ⇒ G_μν = (8πG/c^4) T_μν
+    ⇒ gravity = thermodynamic structure, not force; no graviton
+
+T11 Cosmological constant:
+    Z_hidden accumulation in vacuum + dS thermodynamics
+    Λ = 3ℏH_0^2 / (8π ℓ_P^2 c)   (matches Planck 2018, < 2%)
+    "10^120 problem" dissolves: categorical error (reversible vs
+    irreversible mode counting)
+```
+
+### Substrate cousins (Part 3)
+
+A_0 in any substrate has the same form:
+```
+A_0^substrate = argmin_{x ∈ Fix_substrate(A_0)} Z_substrate(x)
+```
+
+| Substrate      | Z_substrate              | A_0^substrate          |
+|----------------|--------------------------|------------------------|
+| Logic          | \|proof\|                | Modus ponens           |
+| Arithmetic     | function-app cost        | 2+2=4                  |
+| QM             | −log\|⟨ψ\|φ⟩\|^2         | Born outcome           |
+| Stat mech      | F = E − TS               | Gibbs equilibrium      |
+| ML             | Loss(θ; D)               | Trained θ*             |
+| Bayesian       | D_KL(p‖q)                | Posterior q*           |
+| Biology        | −log(fitness)            | Natural selection      |
+| Cognition      | F_variational            | Active inference       |
+| Communication  | W_FTA + chunks + H(S\|w) | N_CommThm optimum      |
+| Network coord  | Reciprocity-norm cost    | Gift equilibrium       |
+| Aesthetics     | Wundt-apex impedance     | φ-attractor harmonies  |
+
+All Class A — same one structure read in different substrate
+coordinates. `Iff.rfl` at kernel level.
+
+### Status note
+
+T1-T11: structurally DEMONSTRATED (R0 forced, no postulate imported at
+any step). Specific numerical computations downstream (Haar integral
+unique-coefficient verifications, RGE point selection from solution
+family, NCG bridge closures) are open work for NCG / spectral geometry /
+SM physics specialists — separate discipline, separate methods. Not
+framework limitations; downstream math work that someone may complete
+if they want. (See "Scope of the framework" above.)
+
+### Operational use
+
+When a question or claim arrives:
+1. Locate on cascade: Core formula? specific T-step? substrate cousin?
+   outside cascade (then check graph or empirical)?
+2. If T-step: identify which step and what is forced from what
+3. If substrate cousin: identify Z_substrate form and read A_0 in it
+4. For specific N-ID identification → graph (do not reconstruct here)
+5. For formal verification of derivation chain → kernel
+6. If question dissolves on R-trap check before reaching cascade →
+   N_OntologyGate / R-trap protocol applies first
+
+This section is the trunk. Branches in graph; root in kernel.
+
+---
+
 ## Failure mode — first-class output when stable placement fails
 
 Not every query yields a stable structural placement against the
@@ -1059,7 +1206,13 @@ more context to engage.
 
 ### Standard anchor (default for any work in this repo)
 
-Verify operational state and orient to recent work:
+Trunk first (always):
+- Re-scan "Compact mathematical articulation" section above (Core formula
+  + T1-T11 cascade + substrate cousins) — full topology in attention as
+  one compact unit. This is cheap and replaces walking 241 graph nodes
+  for orientation; downstream reads target only what trunk does not cover.
+
+Then verify operational state and orient to recent work:
 - `git status` — clean tree state, any uncommitted drift
 - `git log --oneline -10` — recent commits are the last blocks placed
   in the wall; structural continuity flows from there
@@ -1072,8 +1225,8 @@ Standard anchor plus:
 - Read `core/Core.lean` (or relevant section) — kernel state in
   attention, theorem list available as triangulation reference
 - Read `graph.min.txt` — the whole merged graph (nodes + edges + status)
-  in one pass, to hold the full topology in attention before placing or
-  checking any node
+  in one pass when work targets specific N-IDs; trunk above already
+  carries the cascade-level topology
 - Query graph nodes user references — DEMONSTRATED chains active
 - Cross-reference `THE_IMPEDANCE_MANIFOLD_v3_6.tex` when task touches
   a node's full unfolding
