@@ -176,43 +176,95 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Diamond lattice - invariant skeleton manifestation</title>
+<title>Diamond lattice - invariant skeleton</title>
 <style>
-  html, body { margin: 0; padding: 0; background: #050810; color: #c8d0e0;
-               font-family: Georgia, 'Times New Roman', serif;
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #030508; color: #c8d0e0;
+               font-family: -apple-system, 'Segoe UI', Roboto, Georgia, serif;
                overflow: hidden; }
   canvas { display: block; }
-  #info { position: fixed; top: 16px; left: 16px; font-size: 12px;
-          opacity: 0.65; max-width: 380px; line-height: 1.55;
-          pointer-events: none; }
-  #info b { color: #e8ecf5; font-size: 13px; }
-  #stats { position: fixed; bottom: 16px; left: 16px; font-size: 10px;
-           opacity: 0.4; line-height: 1.4; pointer-events: none;
-           font-family: 'Courier New', monospace; }
-  #legend { position: fixed; bottom: 16px; right: 16px; font-size: 10px;
-            opacity: 0.4; line-height: 1.4; text-align: right;
-            pointer-events: none; }
+
+  /* Vignette overlay — softens edges, focuses center */
+  #vignette { position: fixed; inset: 0; pointer-events: none;
+              background: radial-gradient(ellipse at center,
+                          transparent 30%, rgba(0,0,0,0.6) 100%);
+              z-index: 2; }
+
+  /* Info panel — fades in/out gracefully */
+  #info { position: fixed; top: 24px; left: 24px; font-size: 12px;
+          max-width: 380px; line-height: 1.6; z-index: 10;
+          color: rgba(232, 236, 245, 0.78);
+          transition: opacity 1.5s ease-out;
+          pointer-events: none; user-select: none; }
+  #info.faded { opacity: 0.25; }
+  #info h1 { margin: 0 0 8px; font-size: 14px; font-weight: 500;
+             color: rgba(255,255,255,0.92); letter-spacing: 0.5px; }
+  #info .sub { font-size: 11px; opacity: 0.7; margin-top: 4px;
+               font-family: 'SF Mono', Menlo, monospace; }
+
+  /* Stats — minimal bottom-left */
+  #stats { position: fixed; bottom: 20px; left: 24px; font-size: 10px;
+           opacity: 0.35; font-family: 'SF Mono', Menlo, monospace;
+           letter-spacing: 0.5px; z-index: 10;
+           transition: opacity 0.5s; pointer-events: none; }
+  #stats:hover { opacity: 0.7; }
+
+  /* Controls — subtle bottom-right icons */
+  #controls { position: fixed; bottom: 20px; right: 24px; z-index: 10;
+              display: flex; gap: 12px; }
+  .ctrl-btn { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.15);
+              background: rgba(0,0,0,0.3); border-radius: 50%;
+              color: rgba(255,255,255,0.5); cursor: pointer;
+              display: flex; align-items: center; justify-content: center;
+              transition: all 0.2s; font-size: 13px;
+              backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .ctrl-btn:hover { color: rgba(255,255,255,0.9);
+                    border-color: rgba(255,255,255,0.4);
+                    background: rgba(255,255,255,0.08); }
+  .ctrl-btn:active { transform: scale(0.93); }
+
+  /* Loading state */
+  #loading { position: fixed; inset: 0; background: #030508;
+             display: flex; align-items: center; justify-content: center;
+             z-index: 100; transition: opacity 1s; }
+  #loading.gone { opacity: 0; pointer-events: none; }
+  #loading-dot { width: 6px; height: 6px; border-radius: 50%;
+                 background: #88aaff; opacity: 0.6;
+                 animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 0.9; transform: scale(1.4); }
+  }
 </style>
 </head>
 <body>
+
+<div id="loading"><div id="loading-dot"></div></div>
+
 <div id="info">
-  <b>Diamond cubic lattice</b><br>
-  Space group Fd-3m. Vertex-transitive sp3 tetrahedral coordination.<br>
-  Z/3 rotation symmetry along each [111] body diagonal axis.<br>
-  Invariant skeleton manifestation — substrate-cousin in carbon-physical
-  substrate of the load-bearing structural form.
+  <h1>Diamond lattice</h1>
+  Vertex-transitive sp³ tetrahedral coordination.<br>
+  Invariant skeleton — substrate-cousin of A₀-locked structural form.
+  <div class="sub">Fd-3m · space group 227</div>
 </div>
+
 <div id="stats">
-  atoms: __N_ATOMS__   bonds: __N_BONDS__   cells: __N_CELLS__^3
+  __N_ATOMS__ atoms · __N_BONDS__ bonds · __N_CELLS__³ unit cells
 </div>
-<div id="legend">
-  drag: rotate &middot; scroll: zoom &middot; idle: auto-rotate
+
+<div id="controls">
+  <button class="ctrl-btn" id="btn-pause" title="Pause / resume rotation">⏸</button>
+  <button class="ctrl-btn" id="btn-reset" title="Reset view">⟲</button>
+  <button class="ctrl-btn" id="btn-fullscreen" title="Fullscreen">⛶</button>
 </div>
+
+<div id="vignette"></div>
 
 <script type="importmap">
 {
   "imports": {
-    "three": "./lib/three.module.js"
+    "three": "./lib/three.module.js",
+    "three/addons/": "./lib/"
   }
 }
 </script>
@@ -220,44 +272,79 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 <script type="module">
 import * as THREE from 'three';
 import { OrbitControls } from './lib/OrbitControls.js';
+import { EffectComposer } from './lib/postprocessing/EffectComposer.js';
+import { RenderPass } from './lib/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from './lib/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from './lib/postprocessing/OutputPass.js';
 
 const DATA = __DATA_JSON__;
 
-// ── Scene setup ────────────────────────────────────────────────────────
+// ── Scene ──────────────────────────────────────────────────────────────
 const scene = new THREE.Scene();
-scene.fog = new THREE.FogExp2(0x050810, 0.045);
+scene.fog = new THREE.FogExp2(0x030508, 0.055);
 
 const camera = new THREE.PerspectiveCamera(
-  50, window.innerWidth / window.innerHeight, 0.1, 200
+  48, window.innerWidth / window.innerHeight, 0.1, 200
 );
-const initDist = DATA.sphere_radius * 2.2;
-camera.position.set(initDist * 0.7, initDist * 0.55, initDist * 0.7);
+
+// Initial framing — angled view that shows tetrahedral structure
+const baseDist = DATA.sphere_radius * 2.4;
+const finalCameraPos = new THREE.Vector3(
+  baseDist * 0.72, baseDist * 0.52, baseDist * 0.72
+);
+const entranceStartPos = finalCameraPos.clone().multiplyScalar(3.5);
+
+camera.position.copy(entranceStartPos);
 camera.lookAt(0, 0, 0);
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({
+  antialias: true,
+  powerPreference: 'high-performance'
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setClearColor(0x050810, 1);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setClearColor(0x030508, 1);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.85;
 document.body.appendChild(renderer.domElement);
 
-// ── Gaussian point sprite texture (procedural) ─────────────────────────
+// ── Post-processing: UnrealBloomPass for AA-VFX-style glow ──────────────
+const composer = new EffectComposer(renderer);
+composer.setSize(window.innerWidth, window.innerHeight);
+composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+const renderPass = new RenderPass(scene, camera);
+composer.addPass(renderPass);
+
+const bloomPass = new UnrealBloomPass(
+  new THREE.Vector2(window.innerWidth, window.innerHeight),
+  1.4,    // strength
+  0.65,   // radius
+  0.0     // threshold (everything blooms)
+);
+composer.addPass(bloomPass);
+
+const outputPass = new OutputPass();
+composer.addPass(outputPass);
+
+// ── Procedural gaussian point sprite ────────────────────────────────────
 function makeGaussianSprite(size = 128) {
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = size;
   const ctx = canvas.getContext('2d');
-  const gradient = ctx.createRadialGradient(
+  const g = ctx.createRadialGradient(
     size/2, size/2, 0, size/2, size/2, size/2
   );
-  gradient.addColorStop(0.0,  'rgba(255,255,255,1.0)');
-  gradient.addColorStop(0.15, 'rgba(255,255,255,0.9)');
-  gradient.addColorStop(0.35, 'rgba(200,220,255,0.4)');
-  gradient.addColorStop(0.7,  'rgba(120,160,255,0.08)');
-  gradient.addColorStop(1.0,  'rgba(80,120,255,0.0)');
-  ctx.fillStyle = gradient;
+  g.addColorStop(0.00, 'rgba(255,255,255,1.0)');
+  g.addColorStop(0.12, 'rgba(255,255,255,0.95)');
+  g.addColorStop(0.30, 'rgba(220,235,255,0.5)');
+  g.addColorStop(0.55, 'rgba(150,180,255,0.15)');
+  g.addColorStop(1.00, 'rgba(80,120,255,0.0)');
+  ctx.fillStyle = g;
   ctx.fillRect(0, 0, size, size);
-  const texture = new THREE.CanvasTexture(canvas);
-  texture.needsUpdate = true;
-  return texture;
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.needsUpdate = true;
+  return tex;
 }
 
 const spriteTex = makeGaussianSprite();
@@ -270,7 +357,7 @@ atomsGeo.setAttribute('color',
   new THREE.Float32BufferAttribute(DATA.atoms_colors, 3));
 
 const atomsMat = new THREE.PointsMaterial({
-  size: 0.32,
+  size: 0.28,
   map: spriteTex,
   vertexColors: true,
   transparent: true,
@@ -303,35 +390,142 @@ scene.add(bondsLines);
 // ── Controls ───────────────────────────────────────────────────────────
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
-controls.dampingFactor = 0.06;
+controls.dampingFactor = 0.05;
 controls.autoRotate = true;
 controls.autoRotateSpeed = 0.35;
 controls.minDistance = 0.5;
-controls.maxDistance = DATA.sphere_radius * 4;
+controls.maxDistance = DATA.sphere_radius * 5;
 controls.target.set(0, 0, 0);
+controls.enabled = false;  // disable during entrance
 
 let lastInteract = 0;
+let autoRotatePaused = false;
 controls.addEventListener('start', () => { lastInteract = Date.now(); });
 
+// ── Entrance animation ─────────────────────────────────────────────────
+let entranceT = 0;
+const ENTRANCE_DURATION = 2.8;  // seconds
+
+function easeOutQuint(t) {
+  return 1 - Math.pow(1 - t, 5);
+}
+
+// ── UI controls ────────────────────────────────────────────────────────
+const btnPause = document.getElementById('btn-pause');
+const btnReset = document.getElementById('btn-reset');
+const btnFullscreen = document.getElementById('btn-fullscreen');
+const infoPanel = document.getElementById('info');
+
+btnPause.addEventListener('click', () => {
+  autoRotatePaused = !autoRotatePaused;
+  btnPause.textContent = autoRotatePaused ? '▶' : '⏸';
+  btnPause.title = autoRotatePaused ? 'Resume rotation' : 'Pause rotation';
+});
+
+btnReset.addEventListener('click', () => {
+  // Smooth interpolate camera back to initial position
+  resetT = 0;
+  resetStartPos = camera.position.clone();
+  resetting = true;
+  lastInteract = Date.now();
+});
+
+btnFullscreen.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+});
+
+let resetting = false;
+let resetT = 0;
+let resetStartPos = new THREE.Vector3();
+const RESET_DURATION = 1.2;
+
+// Fade info panel after delay
+setTimeout(() => infoPanel.classList.add('faded'), 5500);
+
+// Show info on mouse near top-left
+document.addEventListener('mousemove', (e) => {
+  if (e.clientX < 420 && e.clientY < 220) {
+    infoPanel.classList.remove('faded');
+  } else {
+    if (Date.now() - lastInteract > 1000) {
+      infoPanel.classList.add('faded');
+    }
+  }
+});
+
+// ── Hide loading screen after first frame ──────────────────────────────
+let firstFrameRendered = false;
+
 // ── Render loop ────────────────────────────────────────────────────────
+const clock = new THREE.Clock();
+
 function animate() {
   requestAnimationFrame(animate);
-  controls.autoRotate = (Date.now() - lastInteract > 3000);
+  const dt = clock.getDelta();
+
+  // Entrance animation
+  if (entranceT < 1) {
+    entranceT += dt / ENTRANCE_DURATION;
+    if (entranceT >= 1) {
+      entranceT = 1;
+      controls.enabled = true;
+    }
+    const e = easeOutQuint(Math.min(entranceT, 1));
+    camera.position.lerpVectors(entranceStartPos, finalCameraPos, e);
+    camera.lookAt(0, 0, 0);
+  }
+
+  // Reset animation
+  if (resetting) {
+    resetT += dt / RESET_DURATION;
+    if (resetT >= 1) {
+      resetT = 1;
+      resetting = false;
+    }
+    const e = easeOutQuint(Math.min(resetT, 1));
+    camera.position.lerpVectors(resetStartPos, finalCameraPos, e);
+    camera.lookAt(0, 0, 0);
+  }
+
+  // Auto-rotate logic
+  const shouldAutoRotate = !autoRotatePaused
+    && !resetting
+    && entranceT >= 1
+    && (Date.now() - lastInteract > 3000);
+  controls.autoRotate = shouldAutoRotate;
+
   controls.update();
-  renderer.render(scene, camera);
+  composer.render();
+
+  // Hide loading after first frame
+  if (!firstFrameRendered) {
+    firstFrameRendered = true;
+    setTimeout(() => {
+      document.getElementById('loading').classList.add('gone');
+    }, 200);
+  }
 }
 animate();
 
+// ── Resize ─────────────────────────────────────────────────────────────
 window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  const w = window.innerWidth, h = window.innerHeight;
+  camera.aspect = w / h;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(w, h);
+  composer.setSize(w, h);
 });
 
-// Expose for debugging
+// ── Expose for debugging ───────────────────────────────────────────────
 window.scene = scene;
 window.camera = camera;
 window.controls = controls;
+window.composer = composer;
+window.bloomPass = bloomPass;
 </script>
 </body>
 </html>
