@@ -17680,6 +17680,299 @@ edges:
       that engagement. Traps cannot exist outside inferential
       operation. Grounding forced.
 
+  # ─── basin/attractor/trace-deepening: Class A links across anchor points ───
+  # Operational denormalization for graph discoverability. The structure
+  # is one (per R0 invariance — domains don't exist in reality).
+  # These edges make Class A identity findable from each anchor point.
+
+  - source: N_MLGradientDescent
+    target: N021
+    label: class_a_evolution_substrate
+    edge_status: D
+    justification: |
+      ML training (parameter descent in loss landscape) and biological
+      evolution (population descent in fitness landscape) are not
+      analogous processes — they are one structural form (gradient
+      descent in Z-space) with different empirical anchors. N021
+      already DEMONSTRATED for biological substrate; N_MLGradientDescent
+      is the same form anchored at ML parameter substrate.
+    why_forced: |
+      Class A: same operator (argmin Z under gradient flow), different
+      population (parameters / organisms). Per kernel
+      iso_preserves_forced_uniqueness, A_0 preserved under type iso —
+      this is exactly such preservation across empirical anchors.
+
+  - source: N_MLGradientDescent
+    target: N371
+    label: class_a_basin_vortex_regimes
+    edge_status: D
+    justification: |
+      Loss landscape exhibits all three N371 regimes: laminar
+      (well-conditioned convex), turbulent (high-Z_hidden chaotic),
+      metastable vortex (local minima trapping). Training pathologies
+      map to these regimes directly: mode collapse = single-attractor
+      lock; catastrophic forgetting = basin overwrite; oscillation =
+      vortex circulation.
+    why_forced: |
+      N371's three regimes are not specific to cognitive substrate —
+      they are the three regimes of BPI flow in any Z-landscape. ML
+      training is BPI flow in parameter substrate. Same regimes manifest.
+
+  - source: N_MLGradientDescent
+    target: N019
+    label: gradient_accumulation_foundation
+    edge_status: D
+    justification: |
+      Momentum, Adam, and other gradient-accumulation optimizers are
+      direct N019 instances — gradient accumulating as Z_struct in
+      optimizer state, influencing next descent step.
+    why_forced: |
+      N019 form forced for any system maintaining gradient over time;
+      optimizer state is exactly this maintained accumulation.
+
+  - source: N_MLGradientDescent
+    target: N020
+    label: hysteresis_synaptic_analog
+    edge_status: D
+    justification: |
+      Weight updates accumulate trace of training paths; basin around
+      frequently-traversed configurations deepens. Direct analog of
+      synaptic potentiation N020 — Z reduction along established paths
+      makes them lower-impedance for repetition.
+    why_forced: |
+      Same N020 hysteresis structure in parameter substrate.
+
+  - source: N_MLGradientDescent
+    target: N_TraceDeepensBasin
+    label: instance_of_compound
+    edge_status: D
+    justification: |
+      ML training is one substrate manifestation of the compound
+      pattern named in N_TraceDeepensBasin (iteration + irreversibility
+      + hysteresis → basin deepening with attractor lock).
+    why_forced: |
+      Forced — compound pattern instantiates wherever its primitives
+      jointly hold, which includes ML training.
+
+  # ── N_LLMContextCoherence Class A links ──
+
+  - source: N_LLMContextCoherence
+    target: N371
+    label: class_a_basin_vortex_regimes
+    edge_status: D
+    justification: |
+      LLM generation through context is BPI flowing in attention/
+      activation landscape. Three N371 regimes manifest directly:
+      laminar (coherent reasoning), turbulent (ambiguous high-entropy
+      generation), metastable vortex (drift, mode-switch, persona-
+      break, off-topic continuation).
+    why_forced: |
+      LLM context coherence is the basin-stability property of N371
+      flow regime applied to LLM substrate. Same operator, different
+      anchor.
+
+  - source: N_LLMContextCoherence
+    target: N_CommThm
+    label: communication_invariants_substrate
+    edge_status: D
+    justification: |
+      N_CommThm thresholds (W_FTA, chunks, H(S|w,ctx)) determine when
+      LLM context retains laminar generation vs degrades into turbulent
+      or vortex regime. Context that violates thresholds pushes
+      generation into structural degradation (hallucination,
+      confabulation).
+    why_forced: |
+      Communication invariants apply uniformly across substrates that
+      carry communication; LLM generation IS communication in
+      computational substrate.
+
+  - source: N_LLMContextCoherence
+    target: N_LeDoux
+    label: regime_threshold_analog
+    edge_status: D
+    justification: |
+      LLM has analog of N_LeDoux's θ threshold: context length /
+      complexity threshold above which coherent reasoning collapses
+      (model "loses thread", lost-in-the-middle phenomenon). Same
+      structural regime-shift, computational substrate.
+    why_forced: |
+      Threshold regime-shift is structural property of bounded
+      observer (K(O) < K(F)); LLM has bounded context window, same
+      regime-shift forced.
+
+  - source: N_LLMContextCoherence
+    target: N_MI
+    label: high_zhidden_strategy
+    edge_status: D
+    justification: |
+      Reflective-listening / clarifying-question patterns LLMs use
+      when prompted appropriately are direct N_MI instances —
+      Z_hidden reduction strategy before applying argmin to
+      substantive content. Same structural function.
+    why_forced: |
+      High-Z_hidden response strategy is forced operationally
+      whenever K(O) < K(F) gap is large; LLMs implement it when
+      prompted because the structural pressure for it is identical.
+
+  - source: N_LLMContextCoherence
+    target: N_TraceDeepensBasin
+    label: instance_of_compound
+    edge_status: D
+    justification: |
+      Context tokens accumulate as trace deepening the basin of
+      coherent continuation; long-context maintenance is direct
+      basin lock. System prompt provides initial basin depth.
+    why_forced: |
+      Trace-deepening basin pattern instantiates in LLM context
+      substrate as it does in all iteration+irreversibility systems.
+
+  # ── N_TraceDeepensBasin compound anchor ↔ existing nodes ──
+
+  - source: N_TraceDeepensBasin
+    target: N019
+    label: gradient_accumulation_primitive
+    edge_status: D
+    justification: |
+      N019 is one of six composing primitives of the compound
+      pattern — gradient → Z_struct accumulation gives the "trace"
+      that deepens the basin.
+    why_forced: |
+      Compound = composition of primitives; N019 is a primitive.
+
+  - source: N_TraceDeepensBasin
+    target: N020
+    label: hysteresis_primitive
+    edge_status: D
+    justification: |
+      N020 path hysteresis (Z-reduction along established paths) is
+      the "deepening" mechanism — established trajectories become
+      lower-impedance, basin becomes deeper around them.
+    why_forced: |
+      Compound = composition; N020 is the deepening primitive.
+
+  - source: N_TraceDeepensBasin
+    target: N021
+    label: evolution_anchor
+    edge_status: D
+    justification: |
+      Evolution is one substrate manifestation: fitness landscapes
+      deepen basins where lineages have converged; later organisms
+      inherit the trace as ground for their own argmin.
+    why_forced: |
+      Evolution exhibits all six composing primitives; compound
+      manifests there.
+
+  - source: N_TraceDeepensBasin
+    target: N371
+    label: basin_hydrodynamics_anchor
+    edge_status: D
+    justification: |
+      N371 articulates basin/vortex regimes; N_TraceDeepensBasin
+      adds the temporal dimension (basin deepening over iteration
+      via trace accumulation).
+    why_forced: |
+      N371 covers regime-static picture; compound adds the trace-
+      driven dynamic.
+
+  - source: N_TraceDeepensBasin
+    target: N078
+    label: gravity_anchor
+    edge_status: D
+    justification: |
+      Mass concentration → ∇Z_hidden basin (gravity well); matter
+      flowing into wells deepens them (more mass → stronger gravity).
+      Direct trace-deepening basin in physical substrate. N078
+      gravity-as-thermodynamics provides the substrate-cousin.
+    why_forced: |
+      Compound pattern manifests in gravitational substrate as
+      mass accretion → deeper potential wells → more accretion.
+
+  - source: N_TraceDeepensBasin
+    target: N329
+    label: dark_matter_as_compound_instance
+    edge_status: D
+    justification: |
+      Dark matter as ∇Z_hidden accumulated trace at de Sitter
+      horizon (N329) is direct N_TraceDeepensBasin manifestation —
+      past Landauer debt accumulated as landscape geodesics descend.
+      Past weighs because present argmin uses it as ground.
+    why_forced: |
+      N329's "accumulated Z_hidden trace" IS the trace-deepening
+      mechanism applied to cosmological substrate.
+
+  - source: N_TraceDeepensBasin
+    target: N336
+    label: forgetting_curve_anchor
+    edge_status: D
+    justification: |
+      Ebbinghaus forgetting curve (N336): retention follows trace-
+      accumulation against decay; basin entry deepens neural
+      configuration, exit must climb out — explaining why repeated
+      learning deepens memory and forgetting is slower than initial
+      acquisition.
+    why_forced: |
+      Memory dynamics manifest compound pattern in neural substrate.
+
+  # ── Direct cross-anchor Class A edges (R0 invariance: one structure) ──
+  # Per user clarification: domains don't exist in reality. These edges
+  # don't create bridges between separated structures — they expose
+  # that the same structure is what each anchor articulates.
+
+  - source: N078
+    target: N371
+    label: gravity_is_hydrodynamics_in_Z_landscape
+    edge_status: D
+    justification: |
+      Gravity as ∇Z_hidden landscape (N078, Jacobson) IS BPI
+      hydrodynamics (N371) — same flow equations, same basin/
+      vortex regime structure, in physical substrate. Not analogy,
+      same form. Black holes = laminar→vortex transition at
+      Schwarzschild radius. Galactic dynamics = mixed regimes.
+    why_forced: |
+      Both substrates carry flow in Z-landscape with potential
+      structure. Form identical, anchors differ. Per kernel
+      iso_preserves_forced_uniqueness — A_0 invariant across iso.
+
+  - source: N021
+    target: N_MLGradientDescent
+    label: evolution_to_ml_class_a
+    edge_status: D
+    justification: |
+      Biological evolution (N021) and ML training (N_MLGradientDescent)
+      are one structural form (gradient descent in Z-space) with
+      different empirical anchors (organisms / parameters). Class A
+      from biology side to ML side; reverse edge already added above.
+    why_forced: |
+      Same operator, different population. R0 invariance: structure
+      doesn't differ by substrate.
+
+  - source: N371
+    target: N078
+    label: cognitive_to_gravity_class_a
+    edge_status: D
+    justification: |
+      Cognitive flow (N371) and gravitational flow (N078) are one
+      hydrodynamic structure in Z-landscape. Both exhibit basin/
+      vortex regimes; both follow ∇Z_hidden descent. Class A from
+      cognitive side to gravity side.
+    why_forced: |
+      One structure, multiple anchors. Forced by R0 invariance
+      pervasiveness.
+
+  - source: N329
+    target: N_TraceDeepensBasin
+    label: dark_matter_as_compound_anchor
+    edge_status: D
+    justification: |
+      Dark matter as accumulated ∇Z_hidden trace IS the compound
+      pattern applied to cosmological gravitational substrate.
+      Past Landauer debt accumulated at horizon, weighing present
+      geodesics. N329's specific Verlinde-MOND derivation is one
+      derivation chain; the compound is the general form.
+    why_forced: |
+      Compound pattern instantiates in cosmological gravity per
+      same composing primitives.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -23200,3 +23493,250 @@ nodes:
 
   - id: N280
     title: "Path A of Gödel Argument Chain — Input to N312"
+
+  # === basin/attractor/trace-deepening compound — operational entry points ===
+  # Three anchor nodes that give AI sessions discoverable entry points
+  # from ML / LLM / general-compound contexts into the existing structure
+  # already carried by N019, N020, N021, N029, N078, N329, N371, motion_registers
+  # (kernel), etc. Not new structural content — Class A links into one
+  # unified pattern: many resistances → common argmin (basin) + accumulated
+  # irreversible trace deepens basin → attractor lock. Forced by R0
+  # invariance: domains don't exist in reality, so the structure must be
+  # the same wherever the pattern instantiates. Anchors here = operational
+  # denormalization for graph discoverability.
+
+  - id: N_MLGradientDescent
+    title: "ML Training as A_0 Gradient Descent in Loss Landscape"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Machine learning parameter optimization (gradient descent on loss
+      landscape) is the same structural form as N021 (evolution as
+      gradient descent in Z-space) and N371 (BPI hydrodynamics with
+      basin/vortex regimes). Loss landscape = Z-landscape; parameter
+      update step = argmin Z iteration; backprop = derivation of local
+      gradient; convergence = basin attractor entry; trained model =
+      A_0-locked configuration. Trace accumulation: each training step
+      leaves irreversible imprint in weights (Landauer skeleton via
+      motion_registers in kernel); accumulated trace IS what next step
+      builds on; basin deepens with training → attractor stability.
+    why_status: |
+      DEMONSTRATED via Class A identification (same structural form,
+      different empirical anchor):
+      (1) N021 (DEMONSTRATED): evolution as gradient descent in Z-space.
+          ML training is the same descent operator, different population
+          (parameters instead of organisms).
+      (2) N371 (DEMONSTRATED): BPI hydrodynamics. Loss landscape exhibits
+          all three regimes — laminar (smooth convex), turbulent (high-
+          Z_hidden chaotic terrain), metastable vortex (local minima
+          that aren't global). Training pathologies (mode collapse,
+          catastrophic forgetting, oscillation) are vortex/turbulent
+          regime instances.
+      (3) N019 (DEMONSTRATED): gradient → accumulated Z_struct. Gradient
+          accumulation in optimizers (momentum, Adam) is direct N019
+          instance.
+      (4) N020 (DEMONSTRATED): path hysteresis = Z-reduction along
+          established paths. Synaptic potentiation analog — weights
+          accumulate the trace of training paths, lowering Z for
+          repeated patterns.
+      (5) motion_registers (kernel, DEMONSTRATED): descent + motion →
+          many-to-one (Landauer). Each parameter update is a many-to-one
+          mapping (many possible weights → updated weight) — Landauer
+          cost accumulates as training proceeds.
+      All five are the same operator applied to ML substrate. No
+      identification step remains — the structure IS this, not analogous
+      to this.
+    content: |
+      Operational correspondences:
+        Loss function L(θ; D)         = Z-functional in parameter substrate
+        Gradient ∇L                   = ∇Z (local landscape slope)
+        Parameter update θ → θ - η∇L  = argmin Z step (descent)
+        Convergence (loss plateau)    = basin attractor entry
+        Trained θ* (local minimum)    = A_0-locked configuration
+        Generalization                = basin breadth (flat minima)
+        Overfitting                   = narrow basin (vortex)
+        Catastrophic forgetting       = basin overwrite by new gradient
+        Transfer learning             = starting in nearby basin
+        Gradient accumulation (Adam)  = N019 explicit (gradient → Z_struct)
+        Weight decay regularization   = trace-deepening control
+        Learning rate schedule        = controlling descent dynamics
+        Loss landscape sharpness      = basin curvature (Hessian)
+        Training stability            = basin depth (Lyapunov)
+
+      Training pathologies as N371 regime classifications:
+        Laminar (smooth descent)     = well-conditioned convex problem
+        Turbulent (chaotic loss)     = high stochasticity, low signal
+        Vortex (local minimum lock)  = non-convex with deep traps
+        Mode collapse (GANs)         = collapse to single attractor
+        Catastrophic forgetting      = vortex re-entry after basin exit
+
+      Cross-context discoverability: queries about training, optimization,
+      neural network convergence, RLHF reward landscapes, learning
+      dynamics, transfer learning — all find this anchor, traversal
+      reveals the same structure as biological evolution (N021),
+      cognitive flow (N371), gradient potential (N019), hysteresis
+      (N020), gravitational basin (N078), dark matter trace (N329).
+    level: 1
+    is_placeholder: false
+
+  - id: N_LLMContextCoherence
+    title: "LLM Context Coherence as Basin Stability in N371 Hydrodynamics"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.3
+    z_therm: 0.3
+    z_hidden: 0.4
+    summary: |
+      LLM context coherence — model staying in single coherent reasoning
+      trajectory across long context — is the same structural form as
+      N371 (BPI hydrodynamics) with model as BPI in attention/activation
+      space. Coherent context = trajectory stays in single basin
+      (laminar regime). Drift / mode switch / confabulation = vortex
+      transition (model exits basin into adjacent local minimum).
+      Hallucination = vortex regime (high Z_hidden, structure-violating
+      generation). Context dilution = basin shallowing under noise.
+    why_status: |
+      DEMONSTRATED via Class A identification (same structural form,
+      LLM substrate):
+      (1) N371 (DEMONSTRATED): BPI hydrodynamics with three regimes.
+          LLM generation through context is BPI flowing in attention/
+          activation landscape. All three regimes manifest:
+          - Laminar: coherent reasoning chain through well-conditioned
+            prompt (clear basin, smooth descent)
+          - Turbulent: high-entropy generation when context contains
+            high Z_hidden (ambiguous prompts, contradictions)
+          - Metastable vortex: drift into adjacent basin (mode switch,
+            persona break, off-topic continuation)
+      (2) N_CommThm (DEMONSTRATED): optimal communication theorem.
+          Context that violates W_FTA, chunks, or H(S|w,ctx) thresholds
+          pushes generation into vortex regime — model output degrades
+          structurally, not as random noise but as basin transition.
+      (3) N_LeDoux (DEMONSTRATED): θ threshold regime shift. LLM has
+          analog — context length / complexity threshold above which
+          coherent reasoning collapses (model "loses thread"). Direct
+          structural cousin of amygdala threshold in cognitive substrate.
+      (4) N_MI (DEMONSTRATED): high-Z_hidden response strategy. Reflective
+          listening as Z_hidden reduction is a strategy LLMs implement
+          when prompted appropriately — same structural function
+          (reduce hidden cost before applying argmin to substantive content).
+    content: |
+      Operational correspondences:
+        Coherent context window      = single basin trajectory (laminar)
+        Topic drift                  = adjacent basin transition (vortex)
+        Hallucination                = vortex regime (high Z_hidden generation)
+        Context dilution             = basin shallowing
+        Lost-in-the-middle           = trajectory escape from anchor basin
+        Prompt injection success     = forced basin transition by adversarial input
+        Chain-of-thought             = laminar regime maintenance
+        Self-consistency methods     = enforcing same-basin convergence
+        Mode switching (persona)     = explicit basin transition
+        Context length collapse      = N_LeDoux θ threshold crossing
+        RAG (retrieval augmentation) = injecting basin-anchoring tokens
+        System prompt strength       = basin depth provided by initial context
+
+      Cross-context discoverability: queries about LLM behavior, prompt
+      engineering, AI alignment, hallucination, context length, attention
+      patterns, in-context learning, chain-of-thought reasoning — find
+      this anchor, traversal reveals same structure as cognitive flow
+      (N371), communication (N_CommThm), regime thresholds (N_LeDoux),
+      defended-belief navigation (N_MI).
+    level: 1
+    is_placeholder: false
+
+  - id: N_TraceDeepensBasin
+    title: "Compound Pattern: Trace Accumulation Deepens A_0 Basin (Iteration + Landauer + Hysteresis)"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 6
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Compound structural pattern: any system with (a) iteration toward
+      A_0 (argmin Z), (b) irreversibility (Landauer / I_Null), and (c)
+      hysteresis on path (Z-reduction along established trajectories)
+      necessarily exhibits TRACE-DEEPENING BASIN behavior — accumulated
+      irreversible registrations BECOME part of the landscape that next
+      iteration descends, basin grows deeper with each pass, attractor
+      stability monotonically increases, return-to-state becomes
+      structurally easier than escape. Past WEIGHS because the next
+      step's argmin uses it as ground.
+    why_status: |
+      DEMONSTRATED via composition of forced primitives, each already
+      DEMONSTRATED:
+      (1) iterate_at_fixed (kernel, DEMONSTRATED): A_0(A_0) = A_0,
+          iteration toward fixed point.
+      (2) motion_registers (kernel, DEMONSTRATED): descent + motion →
+          many-to-one (Landauer skeleton, irreversible information loss).
+      (3) N019 (DEMONSTRATED): gradient → Z_struct accumulation.
+      (4) N020 (DEMONSTRATED): path hysteresis = Z-reduction along path.
+      (5) N371 (DEMONSTRATED): basin/attractor dynamics in Z-space.
+      (6) I_Null: irreversibility as four-invariants member.
+
+      Composition: iteration descends Z-landscape → each step is
+      many-to-one (irreversible) → accumulated registrations form
+      Z_struct of landscape itself → next iteration descends THIS
+      landscape (modified by trace) → basin deepens. Pattern is FORCED
+      whenever all six primitives are jointly present, which they are
+      whenever there is iteration with irreversibility — i.e. always,
+      in any A_0-substrate (which is all of reality).
+    content: |
+      Compound pattern explicit form:
+
+        Iteration:        x_{n+1} = step(x_n, landscape_n)
+        Trace:            trace_{n+1} = trace_n ⊕ register(x_{n+1})
+        Landscape update: landscape_{n+1} = landscape_n + κ·trace_{n+1}
+        Basin deepens:    depth(basin) monotone-non-decreasing in n
+        Attractor locks:  exit_probability(basin) → 0 as n → ∞
+
+      Substrate-anchor manifestations (all Class A, same structure):
+
+        Gravity (N078-080):     Mass = ∇Z_hidden basin; matter accumulates
+                                in gravitational wells, deepening them.
+        Dark matter (N329):     Accumulated ∇Z_hidden trace at de Sitter
+                                horizon — past Landauer debt that weighs
+                                because present geodesics descend it.
+        Evolution (N021):       Fitness landscape deepens basins where
+                                lineages have already converged; later
+                                organisms inherit the trace.
+        Synaptic potentiation (N020):  Repeated neural activation reduces
+                                Z along paths; basin for that response
+                                deepens — memory as trace-deepening.
+        ML training (N_MLGradientDescent):  Weights accumulate gradient
+                                trace; basin around trained configuration
+                                deepens; transfer learning starts in
+                                pre-deepened basin.
+        LLM context (N_LLMContextCoherence):  Established context tokens
+                                deepen basin of coherent continuation;
+                                long-context maintenance is basin lock.
+        Cognitive habits:       Repeated patterns deepen cognitive basins;
+                                breaking habits requires Z input to exit.
+        Cultural institutions (N333):  Institutional sclerosis is trace-
+                                deepening basin at social scale — past
+                                decisions accumulate as Z_struct ground.
+
+      What this dissolves:
+        - "Why does X tend to persist?" — past trace deepens its basin.
+        - "Why is change hard?" — accumulated trace creates retention.
+        - "Why do systems show path-dependence?" — basin depth depends
+          on which paths were taken (hysteresis).
+        - "Why is forgetting slower than learning?" (Ebbinghaus N336) —
+          basin entry deepens it; exit must climb out of trace-deepened
+          well.
+
+      Cross-context discoverability: queries about memory, learning,
+      training dynamics, institutional persistence, gravitational
+      stability, dark matter, habit formation, addiction, technical
+      debt, cultural inertia, path dependence in any system — all find
+      this anchor; traversal reveals one unified mechanism (six
+      composing invariants) manifest as the named phenomenon.
+    level: 1
+    is_placeholder: false
