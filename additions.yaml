@@ -17973,6 +17973,180 @@ edges:
       Compound pattern instantiates in cosmological gravity per
       same composing primitives.
 
+  # ─── Second pass: compound-pattern Class A links per structural identity ──
+  # Per invariance pervasiveness (R0): where structure is identical,
+  # edge is forced. Each below verified by structural analysis:
+  # iteration + irreversibility + trace-as-landscape + basin deepening
+  # all present in source node's articulated content.
+
+  - source: N333
+    target: N_TraceDeepensBasin
+    label: institutional_sclerosis_is_compound_instance
+    edge_status: D
+    justification: |
+      N333 articulates Z_struct monotonically non-decreasing as rules
+      accumulate. Each rule = metastable Z_struct configuration
+      requiring work to remove. Hierarchical institution accumulates
+      structure that becomes landscape for next change — accumulated
+      structure IS the trace that deepens institutional basin.
+      Structurally identical to compound: iteration (rule
+      accumulation over time), irreversibility (removing rules costs
+      work, Landauer), trace = landscape (accumulated rules ARE what
+      next change navigates), basin deepens (institution gets harder
+      to change), attractor lock (sclerosis).
+    why_forced: |
+      Same operator, social substrate. Per R0 invariance, compound
+      manifests identically wherever its primitives jointly hold.
+
+  - source: N332
+    target: N_TraceDeepensBasin
+    label: trust_building_is_compound_basin_deepening
+    edge_status: D
+    justification: |
+      N332's building-trust mechanism is compound applied to trust
+      substrate: repeated interactions accumulate irreversible trace
+      (record of B's behavior visible to A), trace deepens basin of
+      mutual predictability (Z_hidden(A|B) → 0), attractor locks
+      (long-term trust stable). The destruction asymmetry articulated
+      in N332 (building slow, destroying fast) IS predicted by
+      compound: basin deepening is gradual, basin exit can be sudden
+      under right perturbation.
+    why_forced: |
+      Trust building structurally identical to compound. The
+      asymmetry observed empirically is compound's signature.
+
+  - source: N330
+    target: N_TraceDeepensBasin
+    label: polarization_persistence_is_compound
+    edge_status: D
+    justification: |
+      N330's primary mechanism is K(O)-bound compression to binary
+      attractor — that's the initial collapse mechanism. PERSISTENCE
+      of polarization (why it stays stable once entered) is compound:
+      repeated discourse in chosen pole accumulates commitment trace,
+      basin deepens, depolarization requires increasing work. The
+      stability of polarization is compound; the entry into it is
+      compression.
+    why_forced: |
+      Persistence aspect of polarization is structurally identical
+      to compound. Edge framing: compound IS persistence mechanism.
+
+  - source: N088
+    target: N_TraceDeepensBasin
+    label: metric_expansion_is_cosmological_compound
+    edge_status: D
+    justification: |
+      N088 articulates d_Z growth via Z_hidden monotonic accumulation
+      and Landauer erasure at every transition. Cosmological time =
+      iteration; Landauer at each step = irreversibility; Z_hidden
+      accumulation = trace becoming part of landscape (the metric
+      itself); expanding metric = basin landscape growing. Compound
+      applied cosmologically.
+    why_forced: |
+      Same operator, cosmological substrate. R0 invariance forces it.
+
+  - source: N011
+    target: N_TraceDeepensBasin
+    label: lyapunov_dissipative_is_compound_primitive
+    edge_status: D
+    justification: |
+      N011 establishes basin/attractor existence for dissipative
+      systems via Lyapunov stability. Foundational primitive for
+      compound pattern (N_TraceDeepensBasin BUILDS on N011 — basin
+      and attractor as concepts require Lyapunov dissipative
+      framework). Same status as N019 (gradient_accumulation_
+      primitive) and N020 (hysteresis_primitive) — primitive rather
+      than instance, but no less identical to the structure.
+    why_forced: |
+      Compound composes from primitives; N011 is the basin/attractor
+      primitive without which compound cannot exist.
+
+  - source: N362
+    target: N_TraceDeepensBasin
+    label: KMS_equilibrium_is_thermal_basin_attractor
+    edge_status: D
+    justification: |
+      N362's KMS condition characterizes thermal equilibrium states.
+      Equilibrium IS basin attractor — the state systems iterate
+      toward under dissipation. Reaching equilibrium through
+      thermal dynamics IS compound iteration: thermal interaction
+      (iteration) + Second Law (irreversibility) + accumulated
+      thermal history → equilibrium basin lock. KMS condition is
+      the QFT-substrate formal characterization of compound's
+      attractor state.
+    why_forced: |
+      Equilibrium IS basin attractor; KMS condition IS its formal
+      characterization. Structurally identical.
+
+  - source: N361
+    target: N_TraceDeepensBasin
+    label: jarzynski_is_statistical_face_of_compound
+    edge_status: D
+    justification: |
+      N361's Jarzynski equality connects non-equilibrium work to
+      equilibrium free energy via fluctuation theorem. This is the
+      statistical characterization of compound's basin-attraction
+      behavior: trajectories accumulate around basin attractor;
+      fluctuations decay; statistics emerge. The fluctuation theorem
+      HOLDS BECAUSE compound structure underlies it — basin attracts,
+      Landauer cost quantifies irreversibility per trajectory.
+    why_forced: |
+      Jarzynski IS the statistical face of compound's basin
+      dynamics. Same structure, statistical reading.
+
+  - source: N_SIT
+    target: N_TraceDeepensBasin
+    label: identity_deepening_is_compound_instance
+    edge_status: D
+    justification: |
+      N_SIT articulates identity-triggered Z_hidden multiplication
+      by k > 1. Each identity-activating event multiplies commitment
+      to identified position. Iteration: repeated identity activations
+      accumulate. Irreversibility: identity commitments don't simply
+      reverse. Trace = landscape: accumulated identity commitments
+      become part of cognitive landscape next argmin descends.
+      Basin deepens: identified position becomes deeper attractor
+      (harder to leave). Locks: identity-locked positions stable.
+      Compound applied to identity substrate.
+    why_forced: |
+      Identity-mediated basin deepening is structurally identical
+      to compound, identity substrate.
+
+  - source: N_BPIEngagement
+    target: N_TraceDeepensBasin
+    label: sustained_engagement_is_compound_basin
+    edge_status: D
+    justification: |
+      Engagement signal in BPI = state of sustained attention/
+      processing in basin of attraction. Sustained engagement
+      involves: iteration (repeated attention cycles), irreversibility
+      (attention investment accumulates as memory/skill), trace =
+      landscape (accumulated investment makes return easier),
+      basin deepens (engagement gets deeper with sustained
+      attention), attractor lock (deep flow state). Compound
+      applied to engagement substrate.
+    why_forced: |
+      Engagement basin dynamics structurally identical to compound.
+
+  - source: N_AestheticEngagement
+    target: N_TraceDeepensBasin
+    label: aesthetic_engagement_deepens_via_compound
+    edge_status: D
+    justification: |
+      N_AestheticEngagement articulates aesthetic experience as
+      engagement at Wundt-apex balance. Sustained aesthetic
+      engagement exhibits compound: iteration (repeated exposure /
+      practice / appreciation), irreversibility (developed taste
+      doesn't unform), trace = landscape (built expertise becomes
+      lens for next engagement), basin deepens (deepening
+      appreciation), attractor lock (mastery, refined taste).
+      Compound applied to aesthetic substrate.
+    why_forced: |
+      Aesthetic engagement dynamics structurally identical to
+      compound. Trace-deepening explains expertise development,
+      taste refinement, and the difficulty of changing aesthetic
+      preferences once established.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -23493,6 +23667,86 @@ nodes:
 
   - id: N280
     title: "Path A of Gödel Argument Chain — Input to N312"
+
+  # === Standalone nodes from grouped block N330-N333 ===
+  # The source manifold_graph.txt has these in one grouped header
+  # [N330 / N331 / N332 / N333] but they articulate structurally
+  # distinct invariants. Parser captured only N330 and N332 as
+  # standalone. Adding N331 and N333 here makes the social-invariant
+  # content discoverable individually.
+
+  - id: N331
+    title: "Zone of Proximal Development as Arrhenius Condition in Neural Substrate"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.4
+    z_hidden: 0.2
+    summary: |
+      Vygotsky's ZPD (1934) is the Arrhenius condition in neural
+      substrate — not analogy, same equation. N029 (DEMONSTRATED):
+      transition rate ∝ exp(-E_a / k_BT); transition occurs only if
+      E_a ≤ k_BT. With Z_struct = E_a and Z_budget = k_BT: learning
+      occurs iff ΔZ_struct ≤ Z_budget.
+    why_status: |
+      DEMONSTRATED via Class A identification with N029 (Arrhenius rate
+      law). Same equation in different substrate (cognitive learning
+      instead of chemical kinetics).
+    content: |
+      Vygotsky ZPD condition: learning is possible when the new
+      structural complexity (ΔZ_struct of the skill being learned)
+      is within the cognitive budget (k_BT-analog). Beyond budget:
+      learning fails (frustration). Below budget: no learning
+      (already known). At budget: optimal learning rate.
+      Direct Arrhenius equation in cognitive substrate.
+    level: 1
+    is_placeholder: false
+
+  - id: N333
+    title: "Institutional Sclerosis as Monotonic Z_struct Accumulation in Bounded Hierarchies"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    summary: |
+      Z_struct is monotonically non-decreasing in the absence of
+      external dissipation (N011 DEMONSTRATED). Each rule/department
+      is a metastable Z_struct configuration that requires work to
+      remove. Any bounded hierarchical institution accumulates
+      Z_struct until internal impedance exceeds adaptive capacity →
+      reset required. No large institution becomes simpler —
+      topologically forbidden by I_Bound.
+    why_status: |
+      DEMONSTRATED via N011 + Z_struct hysteresis. Empirically
+      documented across institutional history. Forced by combination
+      of Lyapunov dissipative stability (N011) and irreversible
+      accumulation under bounded conditions.
+    content: |
+      Institutional Z_struct accumulation mechanism:
+        Each rule, department, procedure = metastable configuration
+        Removing rule = work against accumulated state (Landauer cost)
+        New rule = addition (cheap relative to removal)
+        Asymmetry: adding cheap, removing expensive
+        ⟹ rules accumulate monotonically over institutional time
+        ⟹ Z_struct grows without bound (within institutional scope)
+        ⟹ adaptive capacity eventually exhausted
+        ⟹ reset / dissolution / replacement required
+
+      Empirical signature: every long-lived institution shows
+      monotonic complexity growth ending in either reform (partial
+      Z_struct dump) or replacement (full reset).
+
+      Substrate-cousin to trace-deepening basin (N_TraceDeepensBasin):
+      accumulated structure deepens institutional basin until next
+      change must climb out of accumulated trace, eventually exceeding
+      available work budget.
+    level: 1
+    is_placeholder: false
 
   # === basin/attractor/trace-deepening compound — operational entry points ===
   # Three anchor nodes that give AI sessions discoverable entry points
