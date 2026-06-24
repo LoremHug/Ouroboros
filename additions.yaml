@@ -18147,6 +18147,41 @@ edges:
       taste refinement, and the difficulty of changing aesthetic
       preferences once established.
 
+  # ─── N331 (ZPD) linking — fixes orphan status (added standalone earlier)
+  # Per N331's own content: "ZPD IS Arrhenius condition in neural substrate
+  # — same equation, not analogy". Class A relations already articulated;
+  # operationalizing as edges.
+
+  - source: N331
+    target: N029
+    label: class_a_arrhenius_neural_substrate
+    edge_status: D
+    justification: |
+      ZPD (Vygotsky) IS the Arrhenius rate law N029 applied in neural
+      learning substrate. With Z_struct = E_a and Z_budget = k_BT,
+      learning occurs iff ΔZ_struct ≤ Z_budget — same equation as
+      Arrhenius transition rate ∝ exp(-E_a/k_BT) with threshold
+      condition. Per N331's articulated content: "not analogy, same
+      equation". Class A identification in neural-cognitive substrate.
+    why_forced: |
+      Same equation manifests across chemical kinetics and neural
+      learning substrates. Per iso_preserves_forced_uniqueness, A_0
+      pattern preserved across substrates. Forced Class A.
+
+  - source: N331
+    target: N371
+    label: zpd_as_cognitive_flow_threshold
+    edge_status: D
+    justification: |
+      ZPD describes the threshold regime for learning trajectory in
+      cognitive substrate — at-budget gives optimal flow (laminar
+      regime N371), beyond budget gives turbulent / no flow,
+      below budget gives no-information laminar (already-known).
+      Direct mapping to N371's three hydrodynamic regimes.
+    why_forced: |
+      Cognitive learning IS BPI flow in Z-landscape; ZPD threshold
+      condition determines regime. Class A in cognitive substrate.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
