@@ -3852,11 +3852,21 @@ independent directions in which $A_0$ operates. $A_0$ is located by the same
 triangulation it uses to locate every other minimum. This is not circularity —
 it is the fixed point: $A_0(A_0) = A_0$.
 
-WHY DEMONSTRATED: The argument is combinatorial. Fewer than three independent
-directions cannot span a space in which a point is uniquely identifiable —
-this is linear algebra applied to the gradient space of $Z$. The conclusion
-requires no physical postulate, only the definition of what "unambiguous
-localisation of a minimum" means.
+WHY DEMONSTRATED: Triangulation is $A_0(A_0) = A_0$ read in the form-coordinate.
+Form-of-structure, unfolding-of-structure, logic-applied-to-itself, and fixed
+point are one cell in four coordinates (kernel: iterate\_at\_fixed,
+bool\_no\_three\_period, three\_period\_orbit\_distinct — Iff.rfl). The minimal
+action that governs how a structure unfolds equally governs what form it takes:
+the form a structure has IS an argmin Z. Among forms, one element is trivial (no
+transition, no structure); two carries R2 (a segment needs an external label to
+distinguish its endpoints — unchosen asymmetry, not forced); three is the first
+self-closing self-distinguishing form (positional, no external reference). Three
+is therefore argmin Z at the level of architecture, not of any particular
+structure. Dimension 3 follows from this — it is not assumed. The "span a space
+with N directions" framing presupposes space as a pre-existing container to be
+filled (R1, the container reading dissolved per N088: space is the unfolding,
+not a vessel prior to it); there is no container prior to the form. The
+conclusion requires no physical postulate, only argmin Z applied to itself.
 
 NOT: triangulation requires physical space (it requires only the abstract
 transition-space, which is prior to physical space) $\cdot$ three is conventional
