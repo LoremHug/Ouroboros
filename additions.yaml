@@ -19108,7 +19108,7 @@ nodes:
 
 
   - id: N_PhonemeAsTriangulation
-    title: "Phoneme as Triangulation Instance — 3 Distinctive Features Minimum"
+    title: "Phoneme Feature-Dimensions as argmin-Z Localization — Class-B Parallel with Triangulation (value contingent)"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19118,49 +19118,64 @@ nodes:
     z_hidden: 0.15
     summary: |
       Phoneme = bundle of distinctive features (Trubetzkoy 1939,
-      Jakobson). Localizing a phoneme requires ≥3 independent
-      feature-DIMENSIONS (manner, place, voicing, or substitutes
-      per phonological theory) — 3 coordinate axes jointly pinning
-      it in feature-space. This is a genuine 3-coordinate
-      localization (the 3 is the number of independent axes needed
-      to resolve a phoneme, NOT log₂ of inventory size), directly
-      instantiating N_Triangulation's 3-coord-minimum in the
-      sound-form substrate. Note: unlike the codon (whose 3 is
-      capacity-forced, Class B), the phoneme 3 is a true
-      coordinate-localization minimum.
+      Jakobson). A phoneme is localized by independent feature
+      DIMENSIONS (manner, place, voicing, …) — the minimal number
+      of axes is set by argmin Z_struct subject to distinguishing
+      the language's inventory. Shared FORM with N_Triangulation
+      (minimal mutually-constraining coordinates to localize), but
+      the VALUE is contingent on the inventory, NOT the invariant
+      topological 3: a voicing-contrast language needs ≥3
+      (manner+place cannot separate /p/ from /b/), while a system
+      without a voicing contrast localizes with 2 (e.g. Hawaiian
+      /p k ʔ h m n l w/ — place + manner, no voicing). So this is
+      a Class-B parallel with triangulation at the argmin-Z FORM
+      level, not a Class-A instantiation of the value 3 (same
+      status as the codon).
     why_status: |
       DEMONSTRATED via:
-      (1) Structural argument: fewer than 3 independent feature
-          axes leaves phonemes unresolved (manner+place without
-          voicing cannot separate /p/ from /b/).
-      (2) Empirical universality: distinctive-feature theory
-          captures all known phonological systems with >=3
-          feature dimensions.
-      (3) Direct correspondence with N_Triangulation principle
-          (3 mutually-constraining coordinates to localize).
+      (1) argmin Z_struct: minimal feature-dimensions to
+          distinguish the inventory — the shared FORM with
+          N_Triangulation.
+      (2) Empirical: distinctive-feature theory captures all
+          known phonological systems; dimension count varies by
+          inventory (≥3 with voicing contrast, 2 without).
+      (3) Class-B parallel with N_Triangulation at the form level;
+          the value (often 3) is inventory-contingent, not the
+          invariant topological 3.
     content: |
-      Why 3 specifically (feature-dimensions, not capacity):
-        A phoneme is localized by independent feature AXES, not
-        by log₂(inventory). Minimal axes to pin a consonant:
+      Why the count is contingent (form shared, value not):
+        A phoneme is localized by independent feature AXES, count
+        set by argmin Z_struct over the inventory. Typical axes:
           manner  (stop / fricative / nasal / ...)
           place   (labial / coronal / dorsal / ...)
           voicing (voiced / voiceless)
-        Fewer than 3 axes leaves phonemes unresolved (e.g.
-        manner+place without voicing cannot separate /p/ from
-        /b/). 3 independent axes is the localization minimum —
-        this IS triangulation (3 mutually-constraining
-        coordinates), not a capacity threshold. Languages add
-        further axes (nasality, length, tone) beyond the 3.
+        A voicing-contrast language needs ≥3 (manner+place cannot
+        separate /p/ from /b/); a language without voicing
+        contrast localizes with 2 (Hawaiian: place + manner only).
+        So the value is contingent (often 3, not always) — shared
+        with triangulation at the FORM level (argmin-Z minimal
+        coordinates), not at the VALUE level. The invariant 3 is
+        topological (L(3,1) closure), not phonological.
 
-      Cross-substrate parallels:
-        Codon (biology):  3 nt (matching N_TripletCode)
-        Phoneme (linguistics): 3 features
-        Body-plan (physics): 3 spatial dims (per N370 L(3,1))
-        Cognitive state (cognition): 3 coord min
-        Music: triad = 3 notes (chord-identity minimum)
+      Cross-substrate parallels — shared FORM (argmin-Z minimal
+      coordinates), but the VALUE 3 is forced-invariant only
+      where it is topological; contingent (coincidentally 3)
+      where it is a discrete encoding/inventory threshold:
+        Body-plan (physics): 3 spatial dims — INVARIANT 3
+          (L(3,1) closure, per N370). Genuine triangulation.
+        Cognitive state: 3-coord localization — triangulation
+          if continuous-closure; check per case.
+        Codon (biology): 3 nt — CONTINGENT (4^n≥20; alphabet-
+          dependent). Class-B parallel.
+        Phoneme (linguistics): feature-dimensions — CONTINGENT
+          (inventory-dependent; 2 suffices without voicing
+          contrast). Class-B parallel.
+        Music: triad = 3 notes — UNAUDITED (is it the
+          chord-identity localization minimum, or a
+          harmonic-capacity threshold? check before bundling).
 
-        Same N_Triangulation principle pervasive across
-        forced-structure substrates.
+        Shared at the argmin-Z FORM level; the invariant value 3
+        is topological, not a property every member inherits.
     level: 1
     is_placeholder: false
 
@@ -19507,7 +19522,7 @@ nodes:
 
 
   - id: N_TripletCodeAsTriangulation
-    title: "Triplet Genetic Code as Triangulation Instance"
+    title: "Triplet Genetic Code as argmin-Z Encoding — Class-B Parallel with Triangulation (value capacity-forced)"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19550,16 +19565,23 @@ nodes:
       is a Class-B parallel with N_Triangulation's invariant 3,
       not an instantiation of it.
 
-      Cross-substrate parallel:
-        Music: octave = 12 semitones; chord identity = 3+ notes
-               (triad minimum). Same triangulation principle.
-        Physics: spatial dimensions = 3 (per N370 L(3,1)
-                 baryon exclusion).
-        Cognition: minimum 3 coords for state identification
-                   (per N_Triangulation).
-        Biology: codon = 3 nucleotides.
-        N_Triangulation pervasively forces "3 = minimum
-        coords for forced identification".
+      Cross-substrate parallel — shared argmin-Z FORM (minimal
+      coordinates to localize/distinguish), but the VALUE 3 is
+      forced-invariant only where topological; contingent where
+      it is a discrete encoding/inventory threshold:
+        Physics: spatial dimensions = 3 — INVARIANT (L(3,1)
+                 closure, N370). Genuine triangulation value.
+        Cognition: 3-coord state identification — triangulation
+                   if continuous-closure (per N_Triangulation).
+        Biology: codon = 3 nt — CONTINGENT (4^n≥20, alphabet-
+                 dependent). Class-B parallel (this node).
+        Music: triad ≥ 3 notes — UNAUDITED (chord-identity
+               localization minimum vs harmonic-capacity
+               threshold — check before treating as the
+               invariant 3).
+        Shared at the FORM level (argmin-Z minimal coordinates);
+        the invariant value 3 is topological, not inherited by
+        every member.
     level: 1
     is_placeholder: false
 
