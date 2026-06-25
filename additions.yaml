@@ -20441,9 +20441,13 @@ nodes:
       A structural motif M observed by graph-level inspection: parent
       node P → 3 children {a, b, c} that pairwise connect (closed
       triangle). Same triadic shape recurs across substrates and
-      scales. The motif IS Z = Z_struct + Z_therm + Z_hidden read
-      structurally — three coordinates, mutually constraining, no
-      free parameter, around one parent process.
+      scales. The motif IS triangulation read at graph scale
+      (N_Triangulation) — three mutually-constraining coordinates, no
+      free parameter, around one parent process. Z = Z_struct +
+      Z_therm + Z_hidden is the canonical instance (the prototype
+      triple); other instances realise the same three-coordinate shape
+      with substrate-specific coordinate roles (TEST/CALIBRATION/GROUND,
+      PHENOMENON/MECHANISM/SUBSTRATE), not the literal Z-components.
 
       Evidence of recurrence (round 37 graph audit):
         - 11+ instances (after filtering hub-saturation noise)
