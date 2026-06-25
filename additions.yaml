@@ -19170,9 +19170,10 @@ nodes:
         Phoneme (linguistics): feature-dimensions — CONTINGENT
           (inventory-dependent; 2 suffices without voicing
           contrast). Class-B parallel.
-        Music: triad = 3 notes — UNAUDITED (is it the
-          chord-identity localization minimum, or a
-          harmonic-capacity threshold? check before bundling).
+        Music: triad = 3 notes — CONTINGENT/localization. Third
+          disambiguates chord quality (2-note dyad is major-minor
+          ambiguous); 3 robust in tonal harmony but framework-
+          relative, not topological. Class-B (like phoneme).
 
         Shared at the argmin-Z FORM level; the invariant value 3
         is topological, not a property every member inherits.
@@ -19575,10 +19576,12 @@ nodes:
                    if continuous-closure (per N_Triangulation).
         Biology: codon = 3 nt — CONTINGENT (4^n≥20, alphabet-
                  dependent). Class-B parallel (this node).
-        Music: triad ≥ 3 notes — UNAUDITED (chord-identity
-               localization minimum vs harmonic-capacity
-               threshold — check before treating as the
-               invariant 3).
+        Music: triad ≥ 3 notes — CONTINGENT/localization. The
+               third disambiguates chord quality (a 2-note dyad/
+               power-chord is deliberately major-minor ambiguous);
+               3 robust within tonal harmony but framework-relative,
+               not topological. Class-B parallel (localization-
+               flavoured, like phoneme).
         Shared at the FORM level (argmin-Z minimal coordinates);
         the invariant value 3 is topological, not inherited by
         every member.
