@@ -1791,45 +1791,6 @@ edges:
       that N264 relies on. Direction: cited grounds citing per framework
       convention.
 
-  - source: N315
-    target: N028
-    label: scale_free_topology_chain_to_stub_placeholder
-    edge_status: D
-    justification: |
-      N315 grounds N028's structural derivation as cited in N028's
-      content: "A_0 trajectory output from N316 (alias of N315)".
-    why_forced: |
-      Explicit citation in N028's claim/content identifies N315 as
-      structural input. Removing N315 dissolves the derivation chain
-      that N028 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N114
-    label: L31_chain_to_generation_isomorphism_stub
-    edge_status: D
-    justification: |
-      N311 grounds N114's structural derivation as cited in N114's
-      content: "L(3,1) chain input to N313a (alias of N311), generation isomorphism chain".
-    why_forced: |
-      Explicit citation in N114's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N114 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N228
-    label: critical_transitions_chain_to_isomorphism_stub
-    edge_status: D
-    justification: |
-      N311 grounds N228's structural derivation as cited in N228's
-      content: "Critical transitions input to N313a (alias of N311)".
-    why_forced: |
-      Explicit citation in N228's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N228 relies on. Direction: cited grounds citing per framework
-      convention.
-
   - source: N311
     target: N273
     label: scale_free_topology_chain_output
@@ -1880,19 +1841,6 @@ edges:
       Explicit citation in N276's claim/content identifies N311 as
       structural input. Removing N311 dissolves the derivation chain
       that N276 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N310
-    target: N278
-    label: godel_argument_chain_input
-    edge_status: D
-    justification: |
-      N310 grounds N278's structural derivation as cited in N278's
-      content: "Input to N310 (Godel incompleteness node)".
-    why_forced: |
-      Explicit citation in N278's claim/content identifies N310 as
-      structural input. Removing N310 dissolves the derivation chain
-      that N278 relies on. Direction: cited grounds citing per framework
       convention.
 
   - source: N311
@@ -13633,111 +13581,6 @@ edges:
   # Placeholders have real structural claims in their summaries but only 1
   # edge each (to the chain-source). Each needs proper forced edges to core.
 
-  # === N028: A_0 trajectory from scale-free topology ===
-  - source: N028
-    target: DEF
-    label: A0_trajectory_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      N028 is an A_0 trajectory output from scale-free topology
-      convergence. Trajectory IS argmin Z over time in scale-free
-      substrate; DEF directly supplies the trajectory framework.
-    why_forced: |
-      A_0 trajectory without DEF grounding is descriptive; with DEF,
-      it is forced consequence of substrate-applied argmin Z.
-
-  - source: N028
-    target: N337
-    label: A0_trajectory_paired_with_scale_free_networks
-    edge_status: D
-    justification: |
-      N028 (A_0 trajectory) is the dynamic counterpart to N337's
-      scale-free Barabási-Albert network: same topology substrate,
-      static structure (N337) + dynamic trajectory (N028).
-    why_forced: |
-      Static-dynamic pair on same substrate forced by N_NoSeparatePieces.
-
-  - source: N028
-    target: N363
-    label: A0_trajectory_paired_with_zipf_power_law_attractor
-    edge_status: D
-    justification: |
-      Scale-free convergence in N028 yields Zipf-like power-law
-      distributions per N363. Trajectory + asymptotic-distribution
-      pair.
-    why_forced: |
-      Scale-free trajectory + Zipf law are siblings on same
-      power-law substrate.
-
-  # === N114: L(3,1) chain input to generation iso ===
-  - source: N114
-    target: N370
-    label: L31_chain_input_grounds_in_manifold
-    edge_status: D
-    justification: |
-      N114 is input to the L(3,1) → generation isomorphism chain.
-      Manifold (N370) supplies the substrate; N114 is one of its
-      structural inputs.
-    why_forced: |
-      L(3,1) chain content requires manifold reference; pair forced.
-
-  - source: N114
-    target: N218
-    label: L31_chain_input_grounds_generation_isomorphism
-    edge_status: D
-    justification: |
-      N114's role in generation isomorphism chain (per N218) makes
-      it a direct ingredient of the canonical isomorphism between
-      L(3,1) leaves and SM generations.
-    why_forced: |
-      Chain-input + theorem paired structurally.
-
-  - source: N114
-    target: DEF
-    label: L31_chain_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      The L(3,1) chain grounds in argmin Z structural derivation
-      (DEF). N114's chain placement is one substrate of A_0.
-    why_forced: |
-      Chain in framework = A_0 substrate instance; DEF grounding
-      forced.
-
-  # === N228: critical transitions input ===
-  - source: N228
-    target: DEF
-    label: critical_transitions_argmin_Z_regime_shift
-    edge_status: D
-    justification: |
-      Critical transitions are argmin Z bifurcations between
-      regimes. DEF specifies the argmin operation; N228 the
-      bifurcation events.
-    why_forced: |
-      Bifurcation without argmin Z grounding is descriptive; with
-      it, forced.
-
-  - source: N228
-    target: N371
-    label: critical_transitions_paired_with_BPI_hydrodynamic_regime_shift
-    edge_status: D
-    justification: |
-      Critical transitions in dynamics ↔ N371's hydrodynamic
-      regime shifts (laminar→turbulent). Same regime-shift
-      phenomenon, two readings.
-    why_forced: |
-      Regime-shift phenomena cross-linked by N_NoSeparatePieces.
-
-  - source: N228
-    target: N011
-    label: critical_transitions_paired_with_Lyapunov_stability_loss
-    edge_status: D
-    justification: |
-      Critical transitions occur at loss of Lyapunov stability
-      (N011). Stability framework + transition events paired.
-    why_forced: |
-      Stability + bifurcation paired definitionally.
-
-  # === N273: scale-free topology output ===
   - source: N273
     target: DEF
     label: scale_free_topology_argmin_Z_in_network_substrate
@@ -13758,17 +13601,6 @@ edges:
     why_forced: |
       BA process + topology output paired.
 
-  - source: N273
-    target: N028
-    label: scale_free_output_paired_with_A0_trajectory
-    edge_status: D
-    justification: |
-      N273 (topology) and N028 (trajectory) are sibling outputs
-      of scale-free convergence — structure + dynamics pair.
-    why_forced: |
-      Structure + dynamics siblings forced.
-
-  # === N274: spectral dim d_s=2 at UV ===
   - source: N274
     target: DEF
     label: spectral_dim_2_UV_argmin_Z_in_quantum_walk_regime
@@ -13865,28 +13697,6 @@ edges:
     why_forced: |
       Inversion + argmin substrate paired.
 
-  # === N278: input to Gödel ===
-  - source: N278
-    target: N310
-    label: godel_input_paired_with_godel_theorem_node
-    edge_status: D
-    justification: |
-      N278 is input to the Gödel incompleteness derivation (N310).
-      Direct pair: input + theorem.
-    why_forced: |
-      Chain-input + theorem pair definitional.
-
-  - source: N278
-    target: DEF
-    label: godel_chain_input_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      Gödel chain inputs operate within DEF's argmin Z applied to
-      formal-system substrate.
-    why_forced: |
-      Formal-system A_0 + DEF grounding forced.
-
-  # === N280: Path A Gödel argument ===
   - source: N280
     target: N310
     label: godel_path_a_paired_with_godel_theorem
@@ -18888,19 +18698,20 @@ nodes:
       s, αs, α²s, ... — no preferred scale; no separation
       between "macro" and "micro". This is N_NoSeparatePieces
       TOTAL claim (round 30: TOTAL not substrate-relative)
-      applied along scale-axis.
-
-      Empirical verification in framework: β₁/V cycle-richness
-      ratio stable across rounds 38-46 (3.245 → 3.28 with
-      V going 209 → 226). The framework graph is scale-invariant
-      under growth — fractal property of itself.
+      applied along scale-axis. (The β₁/V cycle-density ratio
+      of the framework graph stays roughly constant under
+      growth, 3.25 ± 0.04 across rounds 38–46 — a density
+      regularity under growth, suggestive but not by itself
+      establishing graph self-similarity.)
     why_status: |
       DEMONSTRATED via:
       (1) Direct application of N_NoSeparatePieces TOTAL
           claim to scale-substrate.
-      (2) Empirical β₁/V invariance across 8+ rounds.
-      (3) Substrate-cousins (3 fractal types) all exhibit
+      (2) Substrate-cousins (3 fractal types) all exhibit
           scale-invariance in their respective form.
+      (3) β₁/V cycle-density ≈ 3.25 ± 0.04 across 8+ rounds
+          is a density regularity under growth — suggestive,
+          not establishing, graph self-similarity.
     content: |
       Substrate-cousin instantiations:
         Deterministic IFS: exact scale-invariance
@@ -18909,23 +18720,17 @@ nodes:
         Stochastic: statistical scale-invariance (distribution
                     invariant under rescaling)
 
-      Framework empirical verification:
+      Framework graph density regularity (suggestive, not
+      establishing graph self-similarity — constant ratio is
+      not scale-recurrent structure):
         Round  V    E   β₁  β₁/V
         38     203  977 ?    ?
         41     210  1015 686 3.27
         43     212  1025 688 3.245
         44     219  1058 714 3.26
         46     226  1093 742 3.283
-        Stable at 3.25-3.28 ± 0.04 across +23 nodes, +116 edges.
-        Scale-invariance in graph-substrate.
-
-      Predictions:
-        (P1) Round 47 (this round) should preserve β₁/V at
-          ~3.28. If it spikes or drops, signals graph is
-          becoming non-self-similar.
-        (P2) Future rounds adding more domain substrates
-          (mathematics, music, etc.) should preserve scale-
-          invariance — fractal property survives growth.
+        Stable at 3.25-3.28 ± 0.04 across +23 nodes, +116 edges
+        — density regularity under growth.
     level: 1
     is_placeholder: false
 
@@ -22830,12 +22635,6 @@ nodes:
     z_hidden: 0.2
     # LM + human + response = one process in three coordinates — structural
 
-  - id: N028
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-    # stub — placeholder balance
-
   - id: N038b
     z_struct: 0.6
     z_therm: 0.3
@@ -22967,11 +22766,6 @@ nodes:
     z_therm: 0.1
     z_hidden: 0.1
 
-  - id: N114
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
   - id: N117
     z_struct: 0.6
     z_therm: 0.2
@@ -23097,11 +22891,6 @@ nodes:
     z_therm: 0.1
     z_hidden: 0.1
 
-  - id: N228
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
   - id: N231
     z_struct: 0.6
     z_therm: 0.2
@@ -23178,11 +22967,6 @@ nodes:
     z_hidden: 0.3
 
   - id: N276
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
-  - id: N278
     z_struct: 0.4
     z_therm: 0.3
     z_hidden: 0.3
@@ -23472,35 +23256,11 @@ nodes:
 
   # ─── Phase 2: 9 stub-node why_status fills (chain-membership justification) ───
 
-  - id: N028
-    why_status: |
-      STRONG via chain-membership in N316 (scale-free topology convergence) derivation. Node is forced bridge:
-      (1) N316 → N028: scale-free topology convergence produces this trajectory output as forced consequence.
-      (2) N028 → N273: scale-free topology output node further used in N314-chain to N311.
-      (3) Inversive: removing N028 breaks N316→N311 derivation chain at the trajectory-output step. Required bridge.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed at the node level — full elaboration requires explicit trajectory parameterisation.
-
-  - id: N114
-    why_status: |
-      STRONG via chain-membership in L(3,1) → N313a derivation. Node is forced bridge:
-      (1) DEF → N370 (L(3,1)) → N114 → N311 → N313a: L(3,1) chain forces this input to N313a.
-      (2) Inversive: removing N114 breaks the L(3,1) → N313a chain at the input step. Required bridge.
-      (3) Connected to N218 (related L(3,1) structure) — forced by topology.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; full L(3,1)-input elaboration pending.
-
-  - id: N228
-    why_status: |
-      STRONG via chain-membership in critical-transitions → N313a derivation. Node is forced bridge:
-      (1) DEF + N011 (I_Bound from Lyapunov) + N371 (BPI hydrodynamics) → N228 → N311 → N313a: critical-transitions chain forces this input.
-      (2) Inversive: removing N228 breaks critical-transitions input to the N313a derivation. Required bridge.
-      (3) Connection to N371 grounds it in BPI dynamics (forced).
-      (4) STRONG (not DEMONSTRATED) because content is under-developed at node level.
-
   - id: N273
     why_status: |
       STRONG via chain-membership in N314 → scale-free topology → N311 derivation. Node is forced bridge:
       (1) N314 → N273: scale-free topology output of N314.
-      (2) N028 → N273 → N337: trajectory-and-topology chain.
+      (2) N273 → N337: scale-free topology grounds Barabási-Albert preferential attachment.
       (3) Inversive: removing N273 breaks the scale-free topology bridge between N314 and downstream N311 chain. Required.
       (4) STRONG (not DEMONSTRATED) because content is under-developed; specific scale-free dynamics require explicit derivation.
 
@@ -23527,14 +23287,6 @@ nodes:
       (2) N311 + N313b → N276: output of N313b derivation.
       (3) Inversive: removing N276 breaks antimatter-as-symmetry-inversion chain; matter/antimatter Z_3 structure forced by L(3,1).
       (4) STRONG because while inversion structure forced, full antimatter-derivation requires N_LeptonMassScale + quark-sector closure.
-
-  - id: N278
-    why_status: |
-      STRONG via chain-membership in N310 (Gödel incompleteness) input chain. Node is forced bridge:
-      (1) DEF → N278 → N310: Gödel-chain input.
-      (2) Inversive: removing N278 breaks the Gödel-chain input step; N310 derivation requires this input.
-      (3) Forced by Gödel argument structure: N310 is DEMONSTRATED, requires N278 as input bridge.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific Gödel-chain input contribution needs explicit derivation.
 
   - id: N280
     why_status: |
@@ -23713,15 +23465,6 @@ nodes:
 
   # ─── Stub nodes: descriptive titles per structural role ───
 
-  - id: N028
-    title: "Scale-Free Topology Trajectory — N316 Output"
-
-  - id: N114
-    title: "L(3,1) Chain Input to N313a"
-
-  - id: N228
-    title: "Critical Transitions Input to N313a"
-
   - id: N273
     title: "Scale-Free Topology — N314 Output"
 
@@ -23733,9 +23476,6 @@ nodes:
 
   - id: N276
     title: "Antimatter as ℤ₃ Inversion x→-x — N313b Output"
-
-  - id: N278
-    title: "Gödel Incompleteness Chain Input to N310"
 
   - id: N280
     title: "Path A of Gödel Argument Chain — Input to N312"

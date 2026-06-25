@@ -1249,19 +1249,7 @@ NOT: $\cos^2\theta_W = 3/8$ follows from this pattern — it is independently de
 $\mathcal{A}_F$ algebra (DEMONSTRATED, N138).
 
 
-[N028] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: A₀ trajectory output from N316 (scale-free topology convergence). Referenced in edge list N316→N028. Stub — full definition in technical document.
 
-
-[N114] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: L(3,1) chain input to N313a. Part of the generation isomorphism chain. Stub — referenced in edge list.
-
-
-[N228] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Critical transitions input to N313a. Stub — full content in technical document.
 
 
 [N273] (Stub — Referenced in Edge Lists)
@@ -1283,10 +1271,6 @@ CLAIM: CP structure = $\mathbb{Z}_3$ coordinate reflection. Output of N313b. $\t
 Status: STRONG | A=3
 CLAIM: Antimatter = $\mathbb{Z}_3$ inversion $x \to -x$. Output of N313b.
 
-
-[N278] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Input to N310 (Gödel incompleteness node). Stub.
 
 
 [N280] (Stub — Referenced in Edge Lists)
