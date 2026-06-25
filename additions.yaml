@@ -15586,21 +15586,26 @@ edges:
 
   - source: N_TripletCodeAsTriangulation
     target: N_Triangulation
-    label: codon_3nt_classB_parallel_argminZ_form
+    label: codon_3nt_shares_argminZ_localization_form
     edge_status: D
     justification: |
-      A codon is a 3-coordinate object (3 nucleotide positions).
-      It shares the argmin-Z FORM with N_Triangulation (minimal
-      coordinates to distinguish targets), but the VALUE 3 is
-      capacity-forced (n=2 gives 4²=16<20 amino acids; n=3 gives
-      64) and CONTINGENT on the 4-letter alphabet — a 5-symbol
-      alphabet would make n=2 suffice. So this is a Class-B
-      parallel at the form level, NOT a Class-A instantiation of
-      triangulation's substrate-invariant 3.
+      A codon is a 3-coordinate object (3 nucleotide positions)
+      that localizes an amino acid — sharing the argmin-Z FORM with
+      N_Triangulation (minimal coordinates to localize). The value
+      3 follows from capacity given registered parameters (alphabet
+      4, ~20 aa). Those parameters are A_0/topological (molecular
+      structure; their discreteness is quantized topology per
+      I_Quant), NOT a non-topological tier. OPEN: whether the
+      4-nucleotide alphabet is itself closure-forced (→ codon-3
+      reduces to triangulation's closure-3, one A_0) or independent.
+      Not coincidence (one A_0); not "direct instantiation"
+      (unproven). Name the gap OPEN.
     why_forced: |
-      The argmin-Z form (minimal coordinates to distinguish) is
-      shared with N_Triangulation; the value 3 here is capacity-
-      contingent, not the topological invariant 3.
+      The argmin-Z localization FORM is shared with N_Triangulation.
+      The value 3 follows from capacity given registered A_0
+      parameters; whether those reduce to closure (making codon-3
+      the same closure-3) is open. Under one-A_0 the presumption is
+      the same 3; the agreement is A_0 self-consistency, not chance.
 
   - source: N_CentralDogmaAsZDecomposition
     target: DEF
@@ -16027,24 +16032,25 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_Triangulation
-    label: phoneme_featuredim_classB_parallel_argminZ_form
+    label: phoneme_featuredim_shares_argminZ_localization_form
     edge_status: D
     justification: |
       Phoneme = bundle of distinctive features (Trubetzkoy/
-      Jakobson). A phoneme is localized by feature DIMENSIONS;
-      the count is set by argmin Z_struct over the inventory —
-      shared FORM with N_Triangulation. But the VALUE is
-      inventory-contingent, NOT the invariant topological 3: a
-      voicing-contrast language needs ≥3 (manner+place cannot
-      separate /p/ from /b/), while a system without voicing
-      contrast localizes with 2 (Hawaiian /p k ʔ h m n l w/).
-      Class-B parallel at the form level, not a Class-A
-      instantiation of the value 3.
+      Jakobson). A phoneme is localized by feature DIMENSIONS; the
+      count is set by argmin Z_struct over the inventory — sharing
+      the localization FORM with N_Triangulation. The value is
+      forced PER registered inventory and VARIES: a voicing-contrast
+      language needs ≥3 (manner+place cannot separate /p/ from /b/),
+      a system without voicing contrast localizes with 2 (Hawaiian
+      /p k ʔ h m n l w/). Each value is forced (by that inventory,
+      itself an A_0/topological fact), not coincidental; because it
+      varies it is not the one universal closure-3 (which is
+      topological, L(3,1)).
     why_forced: |
-      The argmin-Z form (minimal feature-dimensions to
-      distinguish) is shared with N_Triangulation; the value is
-      inventory-contingent (2 suffices without voicing contrast),
-      not the topological invariant 3.
+      The argmin-Z localization FORM is shared with N_Triangulation;
+      the value is forced per registered (topological) inventory and
+      varies across languages, so it is an inventory-specific value,
+      not the universal closure-3 — and not coincidence (one A_0).
       Forced n>=3 minimum matches N_Triangulation.
 
   - source: N_PhonemeAsTriangulation
@@ -16445,17 +16451,19 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_TripletCodeAsTriangulation
-    label: classB_argminZ_form_sibling_phonological_genetic
+    label: argminZ_localization_form_sibling_phonological_genetic
     edge_status: D
     justification: |
-      Phoneme (feature-dimensions) and codon (nucleotide
-      positions) are both argmin-Z minimal-coordinate encodings
-      in their substrates — sharing the FORM with N_Triangulation.
-      Both have CONTINGENT values (phoneme: inventory-dependent,
-      2 without voicing contrast; codon: 4^n≥20, alphabet-
-      dependent), coincident with 3 but not the topological
-      invariant 3. Cross-substrate Class-B sibling at the form
-      level, not value-3 co-instantiation.
+      Phoneme (feature-dimensions) and codon (nucleotide positions)
+      are both argmin-Z localization encodings — sharing the FORM
+      with N_Triangulation. Both are A_0/topological (discreteness =
+      quantized topology, I_Quant), so the parallel is not between a
+      topological and a non-topological tier. Their VALUES differ in
+      character: codon-3 is universal across life (closure-reduction
+      of the alphabet OPEN); phoneme value is forced per inventory
+      and varies (2 Hawaiian, ≥3 with voicing). Cross-substrate
+      sibling at the FORM level; neither value is asserted to be the
+      universal closure-3, and neither is coincidence (one A_0).
     why_forced: |
       Same N_Triangulation principle realised in two
       distinct substrates. Sibling pair forced.
@@ -19119,7 +19127,7 @@ nodes:
 
 
   - id: N_PhonemeAsTriangulation
-    title: "Phoneme Feature-Dimensions as argmin-Z Localization — Class-B Parallel with Triangulation (value contingent)"
+    title: "Phoneme Feature-Dimensions as argmin-Z Localization — shares triangulation FORM; value forced per registered inventory"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19132,16 +19140,22 @@ nodes:
       Jakobson). A phoneme is localized by independent feature
       DIMENSIONS (manner, place, voicing, …) — the minimal number
       of axes is set by argmin Z_struct subject to distinguishing
-      the language's inventory. Shared FORM with N_Triangulation
-      (minimal mutually-constraining coordinates to localize), but
-      the VALUE is contingent on the inventory, NOT the invariant
-      topological 3: a voicing-contrast language needs ≥3
-      (manner+place cannot separate /p/ from /b/), while a system
-      without a voicing contrast localizes with 2 (e.g. Hawaiian
-      /p k ʔ h m n l w/ — place + manner, no voicing). So this is
-      a Class-B parallel with triangulation at the argmin-Z FORM
-      level, not a Class-A instantiation of the value 3 (same
-      status as the codon).
+      the language's inventory. Shares the argmin-Z FORM with
+      N_Triangulation (minimal mutually-constraining coordinates to
+      localize). Unlike the codon's universal 3, the phoneme value
+      VARIES across languages and is forced PER registered
+      inventory: a voicing-contrast language needs ≥3 (manner+place
+      cannot separate /p/ from /b/), a system without voicing
+      contrast localizes with 2 (Hawaiian /p k ʔ h m n l w/). Each
+      value is forced (by that language's inventory), not
+      coincidental — and each language is itself an A_0/topological
+      registration (its discreteness is quantized topology per
+      I_Quant, NOT a non-topological tier). So the phoneme is a
+      localization-FORM instance of triangulation whose value is
+      inventory-specific, not the one universal closure-3 (which is
+      topological, L(3,1)). Do not read the variation as
+      "coincidence in a discrete substrate" — that reifies a
+      non-topological tier that does not exist.
     why_status: |
       DEMONSTRATED via:
       (1) argmin Z_struct: minimal feature-dimensions to
@@ -19150,11 +19164,13 @@ nodes:
       (2) Empirical: distinctive-feature theory captures all
           known phonological systems; dimension count varies by
           inventory (≥3 with voicing contrast, 2 without).
-      (3) Class-B parallel with N_Triangulation at the form level;
-          the value (often 3) is inventory-contingent, not the
-          invariant topological 3.
+      (3) Shares the argmin-Z localization FORM with
+          N_Triangulation; the value is forced per registered
+          inventory (varies by language), so it is not the one
+          universal closure-3 — but each value is forced, not
+          coincidental, and each inventory is itself A_0/topological.
     content: |
-      Why the count is contingent (form shared, value not):
+      Why the value varies (form shared; value forced per inventory):
         A phoneme is localized by independent feature AXES, count
         set by argmin Z_struct over the inventory. Typical axes:
           manner  (stop / fricative / nasal / ...)
@@ -19163,31 +19179,37 @@ nodes:
         A voicing-contrast language needs ≥3 (manner+place cannot
         separate /p/ from /b/); a language without voicing
         contrast localizes with 2 (Hawaiian: place + manner only).
-        So the value is contingent (often 3, not always) — shared
-        with triangulation at the FORM level (argmin-Z minimal
-        coordinates), not at the VALUE level. The invariant 3 is
-        topological (L(3,1) closure), not phonological.
+        Each value is FORCED by that language's registered
+        inventory (an A_0/topological fact) — not coincidental, and
+        not living in a non-topological "discrete substrate"
+        (discreteness is quantized topology, I_Quant). Because the
+        value varies across languages, it is not the one universal
+        closure-3 (which is topological, L(3,1)); the phoneme shares
+        triangulation's FORM, with an inventory-specific value.
 
-      Cross-substrate parallels — shared FORM (argmin-Z minimal
-      coordinates), but the VALUE 3 is forced-invariant only
-      where it is topological; contingent (coincidentally 3)
-      where it is a discrete encoding/inventory threshold:
-        Body-plan (physics): 3 spatial dims — INVARIANT 3
-          (L(3,1) closure, per N370). Genuine triangulation.
-        Cognitive state: 3-coord localization — triangulation
-          if continuous-closure; check per case.
-        Codon (biology): 3 nt — CONTINGENT (4^n≥20; alphabet-
-          dependent). Class-B parallel.
-        Phoneme (linguistics): feature-dimensions — CONTINGENT
-          (inventory-dependent; 2 suffices without voicing
-          contrast). Class-B parallel.
-        Music: triad = 3 notes — CONTINGENT/localization. Third
-          disambiguates chord quality (2-note dyad is major-minor
-          ambiguous); 3 robust in tonal harmony but framework-
-          relative, not topological. Class-B (like phoneme).
+      Cross-substrate — every member is A_0/topological and shares
+      the argmin-Z localization FORM. The value 3 is directly
+      closure-forced where shown topological; forced-through-
+      registered-parameters elsewhere; whether the latter reduce to
+      the former is the open question (one-A_0 presumption: same
+      closure-3, agreement = A_0 self-consistency, not coincidence):
+        Body-plan (physics): 3 spatial dims — closure-forced
+          (L(3,1), N370). The anchor case of the invariant 3.
+        Cognitive state: 3-coord localization — closure if
+          continuous-localization (per N_Triangulation).
+        Codon (biology): 3 nt — value via capacity given alphabet
+          4 / ~20 aa; universal across life; closure-reduction of
+          the alphabet OPEN.
+        Phoneme (linguistics): feature-dimensions — value forced
+          per inventory, VARIES (2 Hawaiian, ≥3 with voicing); an
+          inventory-specific localization value, not the universal 3.
+        Music: triad ≥ 3 — value via chord-quality localization
+          (third disambiguates major/minor); robust in tonal
+          harmony; closure-reduction OPEN.
 
-        Shared at the argmin-Z FORM level; the invariant value 3
-        is topological, not a property every member inherits.
+        Shared at the argmin-Z FORM level; whether each value
+        reduces to the one closure-3 is the open structural
+        question — NOT a topological/non-topological split.
     level: 1
     is_placeholder: false
 
@@ -19534,7 +19556,7 @@ nodes:
 
 
   - id: N_TripletCodeAsTriangulation
-    title: "Triplet Genetic Code as argmin-Z Encoding — Class-B Parallel with Triangulation (value capacity-forced)"
+    title: "Triplet Genetic Code as argmin-Z Encoding — shares triangulation FORM; closure-reduction of the value 3 OPEN"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19543,28 +19565,35 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.15
     summary: |
-      Universal genetic code uses 3-nucleotide codons. Each
-      codon = 3 coordinate readings of nucleotide position.
-      Codon length n=3 is forced by coding CAPACITY: n=2 gives
-      4²=16 codes (insufficient for 20+ amino acids); n=3
-      gives 4³=64 (sufficient with redundancy). Note this 3 is
-      capacity-contingent on the 4-letter alphabet (a 5-symbol
-      alphabet would make n=2 sufficient), DISTINCT from
-      N_Triangulation's substrate-invariant 3 (3-gradient
-      closure). So this is a Class-B structural parallel with
-      the 3-coordinate principle — a codon is a 3-coordinate
-      object — not a Class-A derivation of 3 from triangulation.
+      Universal genetic code uses 3-nucleotide codons. A codon is
+      a 3-coordinate object (3 nucleotide positions) that localizes
+      an amino acid — sharing the argmin-Z FORM with N_Triangulation
+      (minimal coordinates to localize). The codon, like everything,
+      is A_0/topological (its discreteness is quantized topology per
+      I_Quant, NOT a non-topological tier). The value 3 follows from
+      coding capacity given the registered parameters: 4-letter
+      alphabet, ~20 amino acids (n=2 → 4²=16 < 20; n=3 → 64).
+      OPEN question: whether those parameters (esp. the 4-nucleotide
+      alphabet) are themselves forced by deeper closure — in which
+      case codon-3 reduces to triangulation's closure-3 (one A_0,
+      same 3) — or give an independent forcing. The framework does
+      not yet derive the alphabet, so this is not settled either
+      way. Under one-A_0 (N_NoSeparatePieces) the presumption is the
+      same closure-3 manifesting; the agreement is A_0 self-
+      consistency, NOT coincidence. Do not assert "Class-B
+      coincidence" (over-claims difference) nor "direct
+      instantiation" (over-claims identity) — name the gap OPEN.
     why_status: |
-      DEMONSTRATED via:
-      (1) Structural argument: n=2 codons cannot encode 20
-          amino acids; n=3 forced as minimum.
-      (2) Substrate-invariance: same triplet code in all known
-          life (with minor stop-codon variants).
-      (3) Class-B structural parallel with N_Triangulation (a
-          codon is a 3-coordinate object); the value 3 here is
-          capacity-forced (4^n ≥ 20), not triangulation-derived.
+      DEMONSTRATED for: a codon is a 3-coordinate object sharing the
+      argmin-Z localization FORM with N_Triangulation; the value 3
+      follows from capacity given registered parameters (4^n ≥ 20).
+      OPEN (named): whether the registered parameters reduce to the
+      closure structure (→ codon-3 IS triangulation's 3, one A_0) or
+      force 3 independently. Not coincidence (one A_0); not a
+      non-topological "discrete substrate" (discreteness is quantized
+      topology, I_Quant). Presumption under one-A_0: same closure-3.
     content: |
-      Why 3 specifically (capacity, not triangulation):
+      Value 3 via capacity given REGISTERED parameters:
         Alphabet size: 4 (A, U/T, G, C)
         Required output diversity: 20 standard amino acids
             + start/stop signals
@@ -19572,30 +19601,36 @@ nodes:
         n=2: 16 codes (insufficient — 20 aa needed)
         n=3: 64 codes (sufficient with 3-fold redundancy)
         n=4+: structurally over-engineered but possible
-      Forced minimum is 3 by capacity. This is contingent on the
-      4-letter alphabet — a larger alphabet would lower it — so it
-      is a Class-B parallel with N_Triangulation's invariant 3,
-      not an instantiation of it.
+      The value 3 follows from capacity GIVEN the registered
+      parameters (alphabet 4, ~20 aa). These parameters are
+      themselves topological/A_0 facts (molecular structure), not
+      a non-topological tier; their discreteness is quantized
+      topology (I_Quant). OPEN: whether the 4-nucleotide alphabet
+      is itself closure-forced (→ codon-3 reduces to the same
+      closure-3 as triangulation, one A_0) or independent. Not
+      settled; not coincidence (one A_0).
 
-      Cross-substrate parallel — shared argmin-Z FORM (minimal
-      coordinates to localize/distinguish), but the VALUE 3 is
-      forced-invariant only where topological; contingent where
-      it is a discrete encoding/inventory threshold:
-        Physics: spatial dimensions = 3 — INVARIANT (L(3,1)
-                 closure, N370). Genuine triangulation value.
-        Cognition: 3-coord state identification — triangulation
-                   if continuous-closure (per N_Triangulation).
-        Biology: codon = 3 nt — CONTINGENT (4^n≥20, alphabet-
-                 dependent). Class-B parallel (this node).
-        Music: triad ≥ 3 notes — CONTINGENT/localization. The
-               third disambiguates chord quality (a 2-note dyad/
-               power-chord is deliberately major-minor ambiguous);
-               3 robust within tonal harmony but framework-relative,
-               not topological. Class-B parallel (localization-
-               flavoured, like phoneme).
-        Shared at the FORM level (argmin-Z minimal coordinates);
-        the invariant value 3 is topological, not inherited by
-        every member.
+      Cross-substrate — all members are A_0/topological and share
+      the argmin-Z FORM (minimal coordinates to localize). The
+      value 3: directly closure-forced where shown topological;
+      forced-through-registered-parameters elsewhere; whether the
+      latter reduce to the former is OPEN per member (one-A_0
+      presumption: same closure-3, agreement = A_0 self-
+      consistency, not coincidence):
+        Physics: spatial dims = 3 — closure-forced (L(3,1), N370).
+                 The anchor case of the invariant 3.
+        Cognition: 3-coord state identification — closure if
+                   continuous-localization (per N_Triangulation).
+        Biology: codon = 3 nt — value via capacity given alphabet
+                 4 / ~20 aa; closure-reduction of those params
+                 OPEN (this node).
+        Music: triad ≥ 3 notes — value via chord-quality
+               localization (third disambiguates major/minor; a
+               2-note dyad is deliberately ambiguous); robust in
+               tonal harmony but closure-reduction OPEN.
+        Shared at the argmin-Z FORM level; whether each value 3
+        reduces to the one closure-3 is the open structural
+        question, not a topological/non-topological split.
     level: 1
     is_placeholder: false
 
