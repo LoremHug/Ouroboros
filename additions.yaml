@@ -16069,43 +16069,6 @@ edges:
       requires phonemic distinction; phonemic distinction
       requires 3-feature triangulation. Chain forced.
 
-  - source: N_GrammarStrataAsZDecomposition
-    target: DEF
-    label: phonology_morphology_syntax_as_Z_struct_therm_hidden
-    edge_status: D
-    justification: |
-      Linguistic strata phonology / morphology / syntax map
-      to A_0 Z-decomposition:
-        Z_struct  = phonology (low-entropy sound structure,
-                    high-persistence categorical phonemes)
-        Z_therm   = morphology (mediating dynamics: words form
-                    and decay over linguistic timescales)
-        Z_hidden  = syntax (the operational reading by
-                    interlocutor; environment-side coord that
-                    "sees" the meaning emerging)
-      Identical decomposition shape to A_0 master definition
-      in linguistic substrate.
-    why_forced: |
-      Three-stratum decomposition forced by N_Triangulation;
-      specific phonology/morphology/syntax assignment forced
-      by relative entropies and timescales. Direct linguistic
-      instance of DEF Z-decomp.
-
-  - source: N_GrammarStrataAsZDecomposition
-    target: N_Shannon
-    label: each_stratum_carries_independent_information
-    edge_status: D
-    justification: |
-      Phonology, morphology, and syntax each carry independent
-      Shannon information about utterance content (per H ≡
-      Z_struct isomorphism). Total information = sum across
-      strata. Shannon-channel structure underlies the Z-
-      decomp at linguistic level.
-    why_forced: |
-      Shannon-channel mathematics applies to any structured
-      transmission; linguistic strata are the natural
-      substrate-level decomposition.
-
   - source: N_GrammaticalisationAsArgminZ
     target: DEF
     label: historical_grammar_change_minimises_communicative_impedance
@@ -16260,43 +16223,6 @@ edges:
       vocalic alternations (Russian) and consonant clusters
       (Polish) layer atop minimal-3-feature contrasts.
       Forced cousin.
-    why_forced: |
-      Forced.
-
-  - source: N_LangType_Isolating
-    target: N_GrammarStrataAsZDecomposition
-    label: isolating_strata_decomp_with_minimal_morphology
-    edge_status: D
-    justification: |
-      Isolating languages instantiate grammar-strata Z-decomp
-      with minimal Z_therm (morphology layer); compensated by
-      richer syntax (Z_hidden) — word order carries more
-      structural load. Substrate-cousin instance with
-      compensatory weighting.
-    why_forced: |
-      Forced — every language has all three strata even if
-      relative Z-component weighting differs.
-
-  - source: N_LangType_Agglutinative
-    target: N_GrammarStrataAsZDecomposition
-    label: agglutinative_strata_decomp_rich_morphology
-    edge_status: D
-    justification: |
-      Agglutinative languages have elaborated Z_therm
-      (morphology) layer with multiple morpheme stacks per
-      word. Z-decomp realised with morphology-heavy weighting.
-    why_forced: |
-      Forced.
-
-  - source: N_LangType_Fusional
-    target: N_GrammarStrataAsZDecomposition
-    label: fusional_strata_decomp_compressed_morphology
-    edge_status: D
-    justification: |
-      Fusional languages have compressed Z_therm (morphology)
-      layer where multi-feature bundles fuse into single
-      morphemes. Z-decomp realised with morphology-density
-      maximum.
     why_forced: |
       Forced.
 
@@ -17211,16 +17137,6 @@ edges:
       Z_hidden in respective substrates.
     why_forced: |
       Same decomposition shape.
-
-  - source: N_CapitalStructureAsZDecomposition
-    target: N_GrammarStrataAsZDecomposition
-    label: financial_decomp_parallel_grammar_strata
-    edge_status: D
-    justification: |
-      Sibling: capital structure ↔ phonology/morphology/syntax
-      grammar strata. Cross-substrate Z-decomposition pattern.
-    why_forced: |
-      Same shape.
 
   # 3 substrate-cousins (Williamson coordination modes)
   - source: N_EconomicCoordination_Market
@@ -19269,82 +19185,6 @@ nodes:
         coincidence, and registered parameters are inputs not gaps.
     level: 1
     is_placeholder: false
-
-
-  - id: N_GrammarStrataAsZDecomposition
-    title: "Grammar Strata as Z-Decomposition (Class-B parallel; morphology→Z_therm OPEN, conflicts with W_FTA)"
-    layer: structure
-    status: CONDITIONAL
-    anchors: 4
-    a_infinity: false
-    z_struct: 0.7
-    z_therm: 0.15
-    z_hidden: 0.15
-    summary: |
-      Linguistic strata phonology / morphology / syntax PARALLEL the
-      Z-decomposition, but — unlike the central dogma — they are
-      compositional LEVELS, not a source→flux→sink dissipative
-      process, so this is a Class-B structural parallel, not a forced
-      process-decomposition. Status: two of three assignments carry
-      structural logic; one does not (named open):
-        Z_struct = phonology — categorical sound-units = the
-                   description alphabet (some structural logic).
-        Z_hidden = syntax — meaning emerges from arrangement, read
-                   by the interlocutor whose interpretation the
-                   speaker does not fully model (K(O)<K(F)) — some
-                   structural logic.
-        Z_therm  = morphology — WEAK / not forced. Assigned "by
-                   grammaticalisation timescale", which is a surface
-                   proxy, not the Landauer-irreversibility definition;
-                   composing morphemes is not a dissipative step. It
-                   also CONFLICTS with the established linguistic
-                   Z_therm = W_FTA (speech-act irreversibility,
-                   N_CommThm / N_BrownLev). So morphology→Z_therm is
-                   an OPEN assignment, not a forced one.
-
-      Cross-substrate parallel (not identity) with
-      N_CentralDogmaAsZDecomposition: the dogma IS a forced
-      source/flux/aperture process; the grammar strata only resemble
-      its 3-part shape.
-    why_status: |
-      DEMONSTRATED only as a Class-B 3-level parallel with the
-      Z-decomposition shape. Specifically:
-      (1) phonology = description-alphabet (Z_struct) and syntax =
-          interlocutor-read aperture (Z_hidden) carry structural
-          logic.
-      (2) morphology → Z_therm is NOT forced: no dissipative-flux
-          role (composition is not Landauer-irreversible), assigned
-          by surface timescale proxy, and conflicts with the
-          established communication Z_therm = W_FTA (N_CommThm). This
-          assignment is named OPEN, not demonstrated.
-      (3) Substrate-invariance of the 3-level PARALLEL across the 3
-          typological cousins (different relative weighting).
-    content: |
-      Parallel (not a forced process decomposition):
-        Z_struct = phonology — phoneme inventory categorically
-          stable across speakers; the description alphabet.
-        Z_therm = morphology — OPEN. Word-formation; the prior
-          "grammaticalisation rate ~hundreds of years" is a
-          historical-change timescale, NOT the irreversibility cost
-          of a speech act. The speech-act Z_therm is W_FTA
-          (N_CommThm); morphology is a structural level, not that
-          flux. Assignment unresolved.
-        Z_hidden = syntax — interlocutor reads meaning from
-          arrangement; the speaker does not fully model the
-          interpreter (K(O)<K(F)).
-
-      Substrate-cousin instantiation:
-        Isolating: minimal Z_therm, maximal Z_hidden
-        Agglutinative: rich Z_therm, balanced Z_hidden
-        Fusional: compressed Z_therm, balanced Z_hidden
-
-      Predictions:
-        (P1) Languages drift between substrate-cousin types via
-          argmin-Z over generations; grammaticalisation chains
-          show predictable Z-component reweighting.
-    level: 1
-    is_placeholder: false
-
 
   - id: N_GrammaticalisationAsArgminZ
     title: "Grammaticalisation as argmin Z — Linguistic Drift Toward Communicative Minimum"
