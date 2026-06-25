@@ -15586,19 +15586,21 @@ edges:
 
   - source: N_TripletCodeAsTriangulation
     target: N_Triangulation
-    label: codon_3nt_unit_instantiates_3coord_principle
+    label: codon_3nt_classB_parallel_argminZ_form
     edge_status: D
     justification: |
-      Universal genetic code uses 3-nucleotide codons. Each codon
-      = 3 coordinate readings of position; minimum 3 (4-fold
-      degeneracy at position-3 confirms 3-coord-min N_Triangulation
-      principle). Translation requires 3-nt codons because
-      n=2 is insufficient for 20-amino-acid alphabet (4²=16<20),
-      n=3 gives 4³=64 (sufficient with redundancy). Triangulation
-      principle directly instantiated.
+      A codon is a 3-coordinate object (3 nucleotide positions).
+      It shares the argmin-Z FORM with N_Triangulation (minimal
+      coordinates to distinguish targets), but the VALUE 3 is
+      capacity-forced (n=2 gives 4²=16<20 amino acids; n=3 gives
+      64) and CONTINGENT on the 4-letter alphabet — a 5-symbol
+      alphabet would make n=2 suffice. So this is a Class-B
+      parallel at the form level, NOT a Class-A instantiation of
+      triangulation's substrate-invariant 3.
     why_forced: |
-      n=2 codons cannot encode 20+ amino acids. Forced minimum
-      is 3, matching N_Triangulation.
+      The argmin-Z form (minimal coordinates to distinguish) is
+      shared with N_Triangulation; the value 3 here is capacity-
+      contingent, not the topological invariant 3.
 
   - source: N_CentralDogmaAsZDecomposition
     target: DEF
@@ -16025,18 +16027,24 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_Triangulation
-    label: phoneme_minimum_3_distinctive_features
+    label: phoneme_featuredim_classB_parallel_argminZ_form
     edge_status: D
     justification: |
       Phoneme = bundle of distinctive features (Trubetzkoy/
-      Jakobson). Minimum specification requires 3 features:
-      manner, place, voicing (or substitutes per
-      phonological theory). Below 3, phonemes underdetermined
-      against contrast set. N_Triangulation 3-coord-minimum
-      principle directly instantiated.
+      Jakobson). A phoneme is localized by feature DIMENSIONS;
+      the count is set by argmin Z_struct over the inventory —
+      shared FORM with N_Triangulation. But the VALUE is
+      inventory-contingent, NOT the invariant topological 3: a
+      voicing-contrast language needs ≥3 (manner+place cannot
+      separate /p/ from /b/), while a system without voicing
+      contrast localizes with 2 (Hawaiian /p k ʔ h m n l w/).
+      Class-B parallel at the form level, not a Class-A
+      instantiation of the value 3.
     why_forced: |
-      n=2 features cannot distinguish 20+ phonemes typical
-      across languages (4²=16 combinations < phoneme inventory).
+      The argmin-Z form (minimal feature-dimensions to
+      distinguish) is shared with N_Triangulation; the value is
+      inventory-contingent (2 suffices without voicing contrast),
+      not the topological invariant 3.
       Forced n>=3 minimum matches N_Triangulation.
 
   - source: N_PhonemeAsTriangulation
@@ -16437,14 +16445,17 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_TripletCodeAsTriangulation
-    label: 3coord_minimum_phonological_genetic_parallel
+    label: classB_argminZ_form_sibling_phonological_genetic
     edge_status: D
     justification: |
-      Phoneme uses 3 distinctive features minimum; codon
-      uses 3 nucleotides minimum. Both instances of
-      N_Triangulation 3-coord-minimum principle in
-      respective substrates. Cross-substrate sibling
-      between linguistic and genetic substrate.
+      Phoneme (feature-dimensions) and codon (nucleotide
+      positions) are both argmin-Z minimal-coordinate encodings
+      in their substrates — sharing the FORM with N_Triangulation.
+      Both have CONTINGENT values (phoneme: inventory-dependent,
+      2 without voicing contrast; codon: 4^n≥20, alphabet-
+      dependent), coincident with 3 but not the topological
+      invariant 3. Cross-substrate Class-B sibling at the form
+      level, not value-3 co-instantiation.
     why_forced: |
       Same N_Triangulation principle realised in two
       distinct substrates. Sibling pair forced.
