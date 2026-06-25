@@ -3077,9 +3077,9 @@ CLAIM: The Cabibbo angle is tied to the $\eta$-invariant: $\sin(\theta_{Cabibbo}
 
 \textbf{Precision note .} $2/9 = 0.2222$ matches direct beta-decay measurements of $V_{ud}$ and $V_{us}$ ($\sin\theta_C = 0.2222$--$0.2230$, PDG nuclear/semileptonic). The Wolfenstein parameter $\lambda = 0.22537$ (PDG global CKM fit) gives a $4.1\sigma$ discrepancy from $2/9$. DEMONSTRATED status applies only to the beta-decay comparison. The Wolfenstein global fit includes higher-order CKM corrections and should not be used as the primary benchmark for this prediction.
 
-NOT: $\lambda = 2/9$ is fitted to PDG $\cdot$ $A = \sqrt{2/3}$ is fitted $\cdot$ this closes $\theta_{13}$ (that requires conditional $\rho$ and $\eta_W$) $\cdot$ $\lambda_{Wolfenstein} = 2/9$ (the correct comparison is direct beta-decay, not the global CKM fit).TOPOLOGICAL PROPERTIES OF $L(3,1)$
+NOT: $\lambda = 2/9$ is fitted to PDG $\cdot$ $A = \sqrt{2/3}$ is fitted $\cdot$ this closes $\theta_{13}$ (that requires conditional $\rho$ and $\eta_W$) $\cdot$ $\lambda_{Wolfenstein} = 2/9$ (the correct comparison is direct beta-decay, not the global CKM fit).
 
-AND STABILITY
+TOPOLOGICAL PROPERTIES OF $L(3,1)$ AND STABILITY
 
 [N231] (Proton Stability)
 Status: DEMONSTRATED | A=4 
