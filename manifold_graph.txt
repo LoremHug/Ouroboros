@@ -1946,7 +1946,7 @@ NOT: see chapter context
 
 [N019]
 Status: DEMONSTRATED | A=4
-CLAIM: An energy gradient leads to accumulated potential ($Z_{struct}$), stored as structural impedance in the system’s configuration. A maintained gradient forces $Z_{struct}$ upward until either a transition occurs or the system reaches a new stable minimum. The relationship $Z_{struct} = \int R \cdot dU$ holds dimensionally across all domains.
+CLAIM: An energy gradient leads to accumulated potential ($Z_{struct}$), stored as structural impedance in the system’s configuration. Under a maintained gradient $Z_{struct}$ accumulates upward until either a transition occurs or the system reaches a new stable minimum. The relationship $Z_{struct} = \int R \cdot dU$ holds dimensionally across all domains.
 WHY DEMONSTRATED: under process-lens, $Z_{struct}$ is defined as the cost of maintaining a transitioning pattern against resistance. "Domain-specific resistance $R$" is not a separate object being identified with $Z$ — it IS $Z_{struct}$ in that domain's coordinates. The "identification step" was an artefact of treating resistance as an object-property rather than a process-cost. The dimensional identity $Z_{struct} = \int R \cdot dU$ is the definition of structural cost, not an empirical coincidence.
 NOT: see chapter context
 

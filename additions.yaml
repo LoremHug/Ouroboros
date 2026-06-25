@@ -23956,8 +23956,9 @@ nodes:
       irreversible registrations BECOME part of the landscape that next
       iteration descends, basin grows deeper with each pass, attractor
       stability monotonically increases, return-to-state becomes
-      structurally easier than escape. Past WEIGHS because the next
-      step's argmin uses it as ground.
+      structurally easier than escape. Accumulated trace is part of the
+      landscape on which the next iteration's argmin operates — the past
+      is structurally present as ground, not as a separate weighing agent.
     why_status: |
       DEMONSTRATED via composition of forced primitives, each already
       DEMONSTRATED:
