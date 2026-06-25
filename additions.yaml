@@ -18501,37 +18501,51 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
     summary: |
-      Financial capital structure decomposes into A_0 Z-coords:
-        Z_struct  = equity (low-entropy ownership claim, long
-                    persistence)
-        Z_therm   = debt (mediating dynamics: interest-rate
-                    governed flows, term-bounded)
-        Z_hidden  = derivatives (operational coordinate;
-                    contingent claims revealing market-side
-                    expectation)
+      Capital settling along −∇Z (cost-of-capital minimisation)
+      decomposes into the three Z-coords by STRUCTURAL ROLE, not
+      surface descriptor:
+        Z_struct = equity — the permanent base with NO mandatory
+                   payout: the conserved structural claim the firm
+                   reads against (Z_struct = the persistent
+                   description). Source/base coordinate.
+        Z_therm  = debt — the MANDATORY IRREVERSIBLE service-cost:
+                   interest is paid and cannot be reclaimed, default
+                   is irreversible. The dissipative cost the capital
+                   process pays per period — Z_therm by the
+                   irreversibility definition (not by timescale).
+        Z_hidden = derivatives — contingent claims on the UNMODELLED
+                   future: they price the K(F)−K(O) gap (market-side
+                   states the firm cannot access). Aperture coord.
 
-      Cross-substrate siblings (all Z-decomp): N_CentralDogmaAs
-      ZDecomposition (DNA/RNA/Protein) and N_GrammarStratasAs
-      ZDecomposition (phonology/morphology/syntax). Same
-      decomposition shape across genetic / linguistic /
-      financial substrates.
+      Cross-substrate sibling of N_CentralDogmaAsZDecomposition
+      (DNA/RNA/Protein) — both read the Z-decomposition by process
+      role (conserved base / irreversible flux-cost / unmodelled
+      aperture), not by surface analogy.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct Z-coord assignment by entropy/timescale/
-          operational role.
-      (2) Triple cross-substrate sibling identity: bio + ling +
-          fin all use 3-stratum Z-decomp.
+      (1) Forced by structural role in cost-of-capital settling:
+          equity = conserved base (no mandatory payout) = Z_struct;
+          debt = mandatory irreversible service-cost (interest
+          unrecoverable, default irreversible) = Z_therm by the
+          IRREVERSIBILITY definition, not timescale; derivatives =
+          contingent claims pricing the unmodelled future
+          (K(F)−K(O)) = Z_hidden.
+      (2) Cross-substrate sibling of the central-dogma process
+          decomposition (same source/flux-cost/aperture roles).
     content: |
-      Mapping:
-        Z_struct (low-entropy):
-          Equity — ownership claim, persistence on company
-          lifetime (years to centuries)
-        Z_therm (mediating dynamics):
-          Debt — coupon flows, interest-rate dynamics, term-
-          bounded (months to decades)
-        Z_hidden (operational reading):
-          Derivatives — options, futures, swaps; contingent
-          on underlying state; market-expectation readout
+      Mapping (by structural role in the capital process):
+        Z_struct = conserved base:
+          Equity — permanent claim, no mandatory payout; the
+          structural base the firm reads against.
+        Z_therm = irreversible service-cost (flux):
+          Debt — interest paid-and-unrecoverable, default
+          irreversible; the dissipative cost paid per period. The
+          term-bound is a symptom; the structural fact is the
+          irreversibility of the service.
+        Z_hidden = unmodelled-future aperture:
+          Derivatives — options, futures, swaps; contingent on
+          states the firm cannot access (K(O) < K(F)); price the
+          unresolved future.
     level: 1
     is_placeholder: false
 
@@ -19258,49 +19272,66 @@ nodes:
 
 
   - id: N_GrammarStrataAsZDecomposition
-    title: "Grammar Strata as Z-Decomposition: Phonology, Morphology, Syntax"
+    title: "Grammar Strata as Z-Decomposition (Class-B parallel; morphology→Z_therm OPEN, conflicts with W_FTA)"
     layer: structure
-    status: DEMONSTRATED
+    status: CONDITIONAL
     anchors: 4
     a_infinity: false
     z_struct: 0.7
     z_therm: 0.15
     z_hidden: 0.15
     summary: |
-      Linguistic strata phonology / morphology / syntax instantiate
-      A_0 Z-decomposition in language substrate:
-        Z_struct  = phonology (low-entropy categorical sound
-                    structure, high stability across instances)
-        Z_therm   = morphology (mediating dynamics: word formation
-                    rules with linguistic-timescale decay
-                    via grammaticalisation)
-        Z_hidden  = syntax (operational reading by interlocutor;
-                    environment-side coord that "sees" meaning
-                    emerging from arrangement)
+      Linguistic strata phonology / morphology / syntax PARALLEL the
+      Z-decomposition, but — unlike the central dogma — they are
+      compositional LEVELS, not a source→flux→sink dissipative
+      process, so this is a Class-B structural parallel, not a forced
+      process-decomposition. Status: two of three assignments carry
+      structural logic; one does not (named open):
+        Z_struct = phonology — categorical sound-units = the
+                   description alphabet (some structural logic).
+        Z_hidden = syntax — meaning emerges from arrangement, read
+                   by the interlocutor whose interpretation the
+                   speaker does not fully model (K(O)<K(F)) — some
+                   structural logic.
+        Z_therm  = morphology — WEAK / not forced. Assigned "by
+                   grammaticalisation timescale", which is a surface
+                   proxy, not the Landauer-irreversibility definition;
+                   composing morphemes is not a dissipative step. It
+                   also CONFLICTS with the established linguistic
+                   Z_therm = W_FTA (speech-act irreversibility,
+                   N_CommThm / N_BrownLev). So morphology→Z_therm is
+                   an OPEN assignment, not a forced one.
 
-      Cross-substrate sibling of N_CentralDogmaAsZDecomposition
-      (DNA/RNA/Protein).
+      Cross-substrate parallel (not identity) with
+      N_CentralDogmaAsZDecomposition: the dogma IS a forced
+      source/flux/aperture process; the grammar strata only resemble
+      its 3-part shape.
     why_status: |
-      DEMONSTRATED via:
-      (1) Direct mapping of linguistic strata to Z_struct/Z_therm/
-          Z_hidden by entropy/persistence/operational role.
-      (2) Substrate-invariance: same 3-stratum decomp across
-          all 3 typological cousins (with different relative
-          weighting).
-      (3) Shannon-channel structure: each stratum carries
-          independent information (per N_Shannon).
+      DEMONSTRATED only as a Class-B 3-level parallel with the
+      Z-decomposition shape. Specifically:
+      (1) phonology = description-alphabet (Z_struct) and syntax =
+          interlocutor-read aperture (Z_hidden) carry structural
+          logic.
+      (2) morphology → Z_therm is NOT forced: no dissipative-flux
+          role (composition is not Landauer-irreversible), assigned
+          by surface timescale proxy, and conflicts with the
+          established communication Z_therm = W_FTA (N_CommThm). This
+          assignment is named OPEN, not demonstrated.
+      (3) Substrate-invariance of the 3-level PARALLEL across the 3
+          typological cousins (different relative weighting).
     content: |
-      Z-decomposition correspondence:
-        Z_struct (low-entropy structure):
-          Phonology — phoneme inventory categorically stable
-          across speakers; persistence on order of language-
-          generation timescales
-        Z_therm (mediating dynamics):
-          Morphology — word-formation rules; grammaticalisation
-          rate ~hundreds-of-years; population-level dynamics
-        Z_hidden (operational reading by environment):
-          Syntax — interlocutor reads meaning from arrangement;
-          environment-side coordinate
+      Parallel (not a forced process decomposition):
+        Z_struct = phonology — phoneme inventory categorically
+          stable across speakers; the description alphabet.
+        Z_therm = morphology — OPEN. Word-formation; the prior
+          "grammaticalisation rate ~hundreds of years" is a
+          historical-change timescale, NOT the irreversibility cost
+          of a speech act. The speech-act Z_therm is W_FTA
+          (N_CommThm); morphology is a structural level, not that
+          flux. Assignment unresolved.
+        Z_hidden = syntax — interlocutor reads meaning from
+          arrangement; the speaker does not fully model the
+          interpreter (K(O)<K(F)).
 
       Substrate-cousin instantiation:
         Isolating: minimal Z_therm, maximal Z_hidden
@@ -19685,21 +19716,34 @@ nodes:
     z_therm: 0.15
     z_hidden: 0.15
     summary: |
-      Central dogma DNA → RNA → Protein is a 3-coord Z-decomposition
-      directly instantiating DEF Z = Z_struct + Z_therm + Z_hidden:
-        Z_struct  = DNA  (informational template, low entropy,
-                    long persistence)
-        Z_therm   = RNA  (transient mediating dynamics, decay-
-                    rate governed transcription/translation flux)
-        Z_hidden  = Protein (functional reading; environment-
-                    facing operational coordinate)
-
-      Identical decomposition shape to A_0 master definition
-      in biological substrate.
+      Central dogma DNA → RNA → Protein is a directional A_0 PROCESS
+      (gradient-settling), and its three stages are forced into the
+      three Z-coordinates by their STRUCTURAL ROLE in the process —
+      not by surface descriptors:
+        Z_struct = DNA — the persistent template the process READS,
+                   not consumes: the conserved minimum description
+                   (Z_struct = MDL). Source coordinate.
+        Z_therm  = RNA — the DISSIPATIVE-MEDIATION coordinate where
+                   the irreversible copying concentrates
+                   (transcription/translation/degradation pay the
+                   Landauer cost). Its transience is a SYMPTOM of
+                   being the flux/throughput coordinate, not the
+                   reason. Flux coordinate.
+        Z_hidden = Protein — the output coordinate that meets the
+                   UNMODELLED environment (folding, post-translational
+                   modification, cellular context not specified by the
+                   genome: K(O) < K(F)). Sink/aperture coordinate.
+      So the assignment is forced by the process's source/flux/sink
+      structure, the structural reading of DEF in the biological
+      substrate.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct mapping of DNA/RNA/Protein to Z_struct/Z_therm/
-          Z_hidden by entropy/persistence/operational role.
+      (1) Forced by process structure (gradient-settling), not
+          surface proxy: the source the process reads = Z_struct
+          (conserved description); the dissipative-mediation stage
+          where irreversible copying concentrates = Z_therm
+          (Landauer throughput, RNA); the output meeting the
+          unmodelled environment = Z_hidden (K(O)<K(F), Protein).
       (2) Substrate-invariance: same DNA → RNA → Protein flow
           in Bacteria, Archaea, Eukarya (with substrate-
           specific machinery).
@@ -19711,17 +19755,23 @@ nodes:
           coord, RNA-coord, Protein-coord} with pairwise
           structural relations.
     content: |
-      Z-decomposition correspondence:
-        Z_struct (low-entropy structure):
-          DNA — long-persistence template, copy-error rate
-          ~10⁻⁹ per nucleotide per replication
-        Z_therm (mediating dynamics):
-          RNA — half-life seconds to hours, transcription
-          rate ~50 nt/sec, decay rate K-T governed
-        Z_hidden (operational reading by environment):
-          Protein — folded structure performs function;
-          environment "sees" the protein as the gene's
-          operational coordinate
+      Z-decomposition correspondence (by process role, not by
+      surface descriptor):
+        Z_struct = source the process reads (conserved description):
+          DNA — long-persistence template the process reads without
+          consuming; copy-error ~10⁻⁹/nt/replication. The MDL the
+          process carries forward.
+        Z_therm = dissipative-mediation / flux (Landauer throughput):
+          RNA — the stage where irreversible copying concentrates
+          (transcription ~50 nt/sec, translation, then degradation,
+          half-life sec–hours). The short life is the SYMPTOM of
+          being the throughput coordinate; the structural fact is
+          that the irreversible cost of the process lives here.
+        Z_hidden = sink meeting the unmodelled environment (aperture):
+          Protein — folding/function/modification depend on cellular
+          context the genome does not specify (K(O) < K(F)); the
+          environment reads the protein as the gene's output. The
+          irreducibly-unmodelled coordinate of the process.
 
       Substrate-cousin instantiation:
         Bacteria: 70S ribosome, sigma-factor transcription
