@@ -23597,7 +23597,7 @@ nodes:
   - id: N370
     why_status: |
       DEMONSTRATED via:
-      (1) Topological forcing: π_1(L(3,1)) = ℤ_3 forces p=3 generation count uniquely; among odd p>1 only p=3 is compatible with baryon-number conservation as ℤ_p-charge.
+      (1) Two convergent forcing roots: (a) triangulation principle → ℤ_3 as minimal non-trivial self-closing form (architecturally forced via argmin-Z-on-form per N_Triangulation, independent of baryon physics); (b) baryon arithmetic — among odd p>1, ρ_1^⊗3 = ρ_0 requires p|3, hence p=3 (registered SM color confinement + exact ℤ_p representation arithmetic). Two independent roots converge on p=3; neither presupposes the other.
       (2) Inversive: alternative p=2 → not closed cycle (per N_Triangulation 3-coord-min); alternative p≥4 → over-determines minimum required for stable structure (per I_Quant).
       (3) Empirical: 3 generations observed in physics — quark masses, lepton masses, mixing angles all consistent with p=3.
       (4) Cross-validation: ℤ_3 covering structure of L(3,1) forces gauge sectors per N_ZGaugeDecomposition; same number from independent topological path.
