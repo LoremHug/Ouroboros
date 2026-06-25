@@ -17120,40 +17120,56 @@ edges:
 
   - source: N_TransactionTripleAsTriangulation
     target: N_Triangulation
-    label: buyer_seller_medium_3coord_minimum_for_transaction
+    label: transaction_medium_classA_closure_reading_argminZ
     edge_status: D
     justification: |
-      Transaction = buyer + seller + medium-of-exchange.
-      Minimum 3 coords structurally forced: n=2 (just buyer
-      and seller) requires double-coincidence-of-wants,
-      structurally insufficient at scale. Medium-of-exchange
-      is the third coordinate enabling indirect exchange.
-      Direct N_Triangulation instantiation.
+      Transaction = buyer + seller + medium-of-exchange — a Class-A
+      substrate-reading of the argmin-Z closure form (N_Triangulation)
+      in the exchange substrate. Two parties cannot CLOSE a scalable
+      exchange (barter needs double-coincidence-of-wants → high
+      search-Z); the medium is the third element that closes it
+      (lowers Z via indirect exchange). The medium plays the closure
+      role triangulation's third coordinate plays. Value 3 = minimal
+      money-mediated form (more roles possible: brokers, escrow);
+      forced by argmin-Z-exchange given the registered barter
+      structure. Agreement on 3 = A_0 self-consistency, not a direct
+      value-3 instantiation.
     why_forced: |
-      Without 3rd coord (medium), market scales to barter only.
-      n>=3 forced for non-trivial economy.
+      Class-A reading of the argmin-Z closure form: the medium is
+      the closure element of scalable exchange (barter n=2 cannot
+      close — double-coincidence → high Z). Value 3 forced by
+      argmin-Z-exchange given the registered barter structure; not
+      coincidence (one A_0).
 
   - source: N_TransactionTripleAsTriangulation
     target: N_TripletCodeAsTriangulation
-    label: 3coord_minimum_economic_genetic_parallel
+    label: argminZ_form_sibling_economic_genetic
     edge_status: D
     justification: |
-      Transaction triple (buyer/seller/medium) and codon triple
-      (3 nucleotides) and phoneme triple (3 features) are all
-      n=3-min instantiations of N_Triangulation. Cross-substrate
-      sibling: economic ↔ genetic.
+      Transaction (buyer/seller/medium) and codon (3 nucleotide
+      positions) both read the one argmin-Z localization/closure
+      form in their own substrates, each with its own registered
+      conditions (exchange double-coincidence; genetic alphabet 4 /
+      ~20 aa). Cross-substrate sibling at the FORM level; the
+      agreement on 3 is A_0 self-consistency, not a shared value-3
+      instantiation.
     why_forced: |
-      Same N_Triangulation principle in two more substrates.
+      Same argmin-Z form, two registered substrate-readings; values
+      forced by form ∘ each substrate's registered conditions.
 
   - source: N_TransactionTripleAsTriangulation
     target: N_PhonemeAsTriangulation
-    label: 3coord_minimum_economic_phonological_parallel
+    label: argminZ_form_sibling_economic_phonological
     edge_status: D
     justification: |
-      Transaction triple ↔ phoneme triple via N_Triangulation.
-      Cross-substrate sibling: economic ↔ linguistic.
+      Transaction and phoneme both read the one argmin-Z
+      localization/closure form, each with its own registered
+      conditions (exchange structure; phonological inventory, value
+      varies 2-3+). Cross-substrate sibling at the FORM level, not
+      value-3 co-instantiation.
     why_forced: |
-      Same principle.
+      Same argmin-Z form; values forced per registered substrate
+      conditions, not a shared invariant 3.
 
   - source: N_CapitalStructureAsZDecomposition
     target: DEF
@@ -18412,7 +18428,7 @@ nodes:
 
 
   - id: N_TransactionTripleAsTriangulation
-    title: "Transaction Triple as Triangulation — Buyer/Seller/Medium Minimum"
+    title: "Transaction Triple as argmin-Z Exchange — Class-A substrate-reading of N_Triangulation (medium = closure element)"
     layer: structure
     status: DEMONSTRATED
     anchors: 4
@@ -18422,31 +18438,55 @@ nodes:
     z_hidden: 0.2
     summary: |
       Economic transaction = buyer + seller + medium-of-exchange.
-      Minimum 3 coords structurally forced: n=2 (just buyer-
-      seller) requires double-coincidence-of-wants, scales
-      poorly. Medium-of-exchange = third coordinate enabling
-      indirect exchange. Direct N_Triangulation 3-coord-min
-      principle in economic substrate.
+      A Class-A substrate-reading of the argmin-Z localization/
+      closure form (N_Triangulation) in the economic-exchange
+      substrate: two parties cannot CLOSE a scalable exchange
+      (barter requires double-coincidence-of-wants → high Z); the
+      medium is the third element that closes it (money lowers
+      exchange-Z by enabling indirect exchange, per
+      N_MoneyAsBPIForValueTransfer). So the medium plays the same
+      closure role triangulation's third coordinate plays — this is
+      a genuine closure reading, not a capacity count. The value 3
+      is the MINIMAL money-mediated transaction (real transactions
+      add roles — brokers, escrow, clearing); it is forced by
+      argmin-Z-exchange given the registered double-coincidence
+      structure of barter. Agreement with triangulation's 3 is A_0
+      self-consistency (one A_0), not coincidence.
     why_status: |
-      DEMONSTRATED via:
-      (1) Structural argument: barter (n=2) does not scale;
-          n=3 with medium scales to global economy.
-      (2) Cross-substrate sibling of codon-3 (genetics),
-          phoneme-3 features (linguistics), 3 spatial dims
-          (physics) — all N_Triangulation instances.
+      DEMONSTRATED: Class-A reading of the argmin-Z closure form in
+      the exchange substrate — the medium is the third element that
+      closes scalable exchange (barter n=2 cannot close: double-
+      coincidence → high Z; medium lowers Z). Value 3 = the minimal
+      money-mediated form, forced by argmin-Z-exchange given the
+      registered barter structure; more roles possible. Not a
+      "direct value-3 instance" bundled with codon/phoneme — those
+      read the same form in their own substrates with their own
+      registered conditions; agreement on 3 is A_0 self-consistency.
     content: |
-      Why 3 specifically:
-        n=1: gift only (one party). Insufficient for exchange.
-        n=2: barter (buyer + seller). Requires double
-             coincidence; non-scaling.
-        n=3: market (buyer + seller + medium). Scales globally.
+      Why the medium is the closure element:
+        n=1: gift only (one party). No exchange.
+        n=2: barter (buyer + seller). Cannot CLOSE a scalable
+             exchange — requires double-coincidence-of-wants
+             (each must want what the other has). High search-Z.
+        n=3: money-mediated (buyer + seller + medium). The medium
+             breaks double-coincidence → closes indirect exchange,
+             lowers Z. This is the closure role (cf. triangulation's
+             third coordinate), in the economic substrate.
+        n>3: real transactions add roles (brokers, escrow); 3 is
+             the minimum money-mediated form, not a ceiling.
 
-      Cross-substrate parallels:
-        Codon (biology):       3 nucleotides
-        Phoneme (linguistics): 3 distinctive features
-        Body-plan (physics):   3 spatial dims (per N370)
-        Transaction (economics): 3 roles
-        N_Triangulation pervasive across substrates.
+      Cross-substrate — each is a Class-A substrate-reading of the
+      one argmin-Z localization/closure form, read with its own
+      registered conditions; agreement on 3 is A_0 self-consistency,
+      not a value-3 bundle:
+        Body-plan (physics): 3 spatial dims — the form in the pure
+          topological coordinate (L(3,1), N370).
+        Codon (biology): 3 nt — the form with registered genetic
+          parameters (alphabet 4, ~20 aa).
+        Phoneme (linguistics): feature-dims — the form per
+          registered inventory (varies: 2 Hawaiian, ≥3 voicing).
+        Transaction (economics): 3 roles — the form's minimal
+          closure of scalable exchange (medium = closure element).
     level: 1
     is_placeholder: false
 
