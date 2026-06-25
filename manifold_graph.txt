@@ -2327,7 +2327,9 @@ NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 [N070]
 Status: DEMONSTRATED | A=3 
 CLAIM: The quantum measurement problem asks how a superposition collapses upon measurement. The problem dissolves because it presupposes a structural duality that does not exist: observer and observed are not two separate entities that interact across an interface.
-NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.GRAVITY, COSMOLOGY AND $Z_{hidden}$
+NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
+
+GRAVITY, COSMOLOGY AND $Z_{hidden}$
 
 [N071 / N072 / N073] (Dark Energy)
 Status: DEMONSTRATED / STRONG | A=3
