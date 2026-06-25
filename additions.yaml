@@ -21422,13 +21422,22 @@ nodes:
         link.
     content: |
       Mechanism (Landauer interface):
-        Each bit-erasure costs k_B T ln 2 of heat. A transition
-        involving N bits of state-update produces N · k_B T ln 2
-        of dissipation. So Z_therm(transition) ∝ bits-erased,
-        and bits-erased ∝ Z_struct of the transitioning structure.
-        The relation is direct, not metaphorical:
-          ΔZ_therm ≈ k_B T ln 2 · ΔK(state)
+        Each bit-erasure costs k_B T ln 2 of heat. A transition that
+        erases N bits of state produces N · k_B T ln 2 of dissipation,
+        so Z_therm(transition) ∝ bits-erased-in-that-transition. A
+        structure of depth K(state) carries that many bits of internal
+        state; processing one throughput cycle resets a number of them
+        proportional to the depth. So the dissipation RATE scales with
+        structural depth:
+          Z_therm-rate ≈ k_B T ln 2 · (bits-reset-per-cycle) · (cycle-rate)
+                       ∝ K(state) · throughput
         where K is Kolmogorov complexity (= Z_struct via N_Shannon).
+        The relation is to the depth K(state), not to its change ΔK:
+        a structure at steady-state dissipation has ΔK = 0 yet maximal
+        Z_therm flow. Building Z_struct (raising K) raises the
+        dissipation rate the structure can sustain — which is why
+        throughput-driven trajectory-argmin builds complexity. The
+        relation is direct, not metaphorical.
 
       A_0 in dissipative substrate:
         Pointwise: argmin Z is satisfied by simple low-Z configurations.
