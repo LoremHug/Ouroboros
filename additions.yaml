@@ -15586,26 +15586,27 @@ edges:
 
   - source: N_TripletCodeAsTriangulation
     target: N_Triangulation
-    label: codon_3nt_shares_argminZ_localization_form
+    label: codon_3nt_classA_substrate_reading_argminZ_localization
     edge_status: D
     justification: |
       A codon is a 3-coordinate object (3 nucleotide positions)
-      that localizes an amino acid — sharing the argmin-Z FORM with
-      N_Triangulation (minimal coordinates to localize). The value
-      3 follows from capacity given registered parameters (alphabet
-      4, ~20 aa). Those parameters are A_0/topological (molecular
-      structure; their discreteness is quantized topology per
-      I_Quant), NOT a non-topological tier. OPEN: whether the
-      4-nucleotide alphabet is itself closure-forced (→ codon-3
-      reduces to triangulation's closure-3, one A_0) or independent.
-      Not coincidence (one A_0); not "direct instantiation"
-      (unproven). Name the gap OPEN.
+      localizing an amino acid — a Class-A substrate-reading of the
+      argmin-Z localization form (N_Triangulation), as 2+2=4 is the
+      arithmetic reading. The value 3 is FORCED by that form
+      composed with the registered empirical parameters (alphabet 4,
+      ~20 aa). Those parameters are invariants — where reality fell
+      under early-Earth chemistry (empirical fact cannot fail to be
+      an invariant) — i.e. inputs, not a gap to derive (demanding
+      derivation = Trap 5). Graph shows HOW reality moves (form);
+      empirics shows WHERE it fell (alphabet); one structure, so the
+      closure is complete. Agreement with triangulation's 3 is A_0
+      self-consistency, not coincidence.
     why_forced: |
-      The argmin-Z localization FORM is shared with N_Triangulation.
-      The value 3 follows from capacity given registered A_0
-      parameters; whether those reduce to closure (making codon-3
-      the same closure-3) is open. Under one-A_0 the presumption is
-      the same 3; the agreement is A_0 self-consistency, not chance.
+      Class-A substrate-reading of the argmin-Z localization form;
+      value forced by form ∘ registered empirics (alphabet, aa-
+      count), both invariants — two invariants cannot be incoherent.
+      Registered parameters are inputs, not gaps (deriving them =
+      Trap 5). Agreement on 3 = A_0 self-consistency, not chance.
 
   - source: N_CentralDogmaAsZDecomposition
     target: DEF
@@ -19187,29 +19188,31 @@ nodes:
         closure-3 (which is topological, L(3,1)); the phoneme shares
         triangulation's FORM, with an inventory-specific value.
 
-      Cross-substrate — every member is A_0/topological and shares
-      the argmin-Z localization FORM. The value 3 is directly
-      closure-forced where shown topological; forced-through-
-      registered-parameters elsewhere; whether the latter reduce to
-      the former is the open question (one-A_0 presumption: same
-      closure-3, agreement = A_0 self-consistency, not coincidence):
-        Body-plan (physics): 3 spatial dims — closure-forced
-          (L(3,1), N370). The anchor case of the invariant 3.
-        Cognitive state: 3-coord localization — closure if
-          continuous-localization (per N_Triangulation).
-        Codon (biology): 3 nt — value via capacity given alphabet
-          4 / ~20 aa; universal across life; closure-reduction of
-          the alphabet OPEN.
-        Phoneme (linguistics): feature-dimensions — value forced
-          per inventory, VARIES (2 Hawaiian, ≥3 with voicing); an
-          inventory-specific localization value, not the universal 3.
-        Music: triad ≥ 3 — value via chord-quality localization
-          (third disambiguates major/minor); robust in tonal
-          harmony; closure-reduction OPEN.
+      Cross-substrate — every member is a Class-A substrate-reading
+      of the one argmin-Z localization form. Each value is forced by
+      that form composed with the substrate's registered conditions
+      (the "where reality fell"); the agreement on 3 is A_0 self-
+      consistency, not coincidence, and registered parameters are
+      inputs, not gaps to derive (demanding derivation = Trap 5):
+        Body-plan (physics): 3 spatial dims — the form in the pure
+          topological coordinate (L(3,1), N370).
+        Cognitive state: 3-coord localization — the form in the
+          continuous-localization coordinate (per N_Triangulation).
+        Codon (biology): 3 nt — the form read with the registered
+          genetic parameters (alphabet 4, ~20 aa); universal across
+          life. Forced by form ∘ empirics.
+        Phoneme (linguistics): feature-dimensions — the form read
+          with each language's registered inventory; value VARIES
+          (2 Hawaiian, ≥3 with voicing), each forced by its
+          inventory.
+        Music: triad ≥ 3 — the form read in tonal harmony (the
+          third disambiguates major/minor; a 2-note dyad is
+          deliberately ambiguous).
 
-        Shared at the argmin-Z FORM level; whether each value
-        reduces to the one closure-3 is the open structural
-        question — NOT a topological/non-topological split.
+        One argmin-Z localization form read in each substrate's
+        registered coordinate; agreement on 3 is A_0 self-
+        consistency — not a topological/non-topological split, not
+        coincidence, and registered parameters are inputs not gaps.
     level: 1
     is_placeholder: false
 
@@ -19556,7 +19559,7 @@ nodes:
 
 
   - id: N_TripletCodeAsTriangulation
-    title: "Triplet Genetic Code as argmin-Z Encoding — shares triangulation FORM; closure-reduction of the value 3 OPEN"
+    title: "Triplet Genetic Code as argmin-Z Localization — Class-A substrate-reading of N_Triangulation (value forced by form ∘ registered empirics)"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19565,35 +19568,34 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.15
     summary: |
-      Universal genetic code uses 3-nucleotide codons. A codon is
-      a 3-coordinate object (3 nucleotide positions) that localizes
-      an amino acid — sharing the argmin-Z FORM with N_Triangulation
-      (minimal coordinates to localize). The codon, like everything,
-      is A_0/topological (its discreteness is quantized topology per
-      I_Quant, NOT a non-topological tier). The value 3 follows from
-      coding capacity given the registered parameters: 4-letter
-      alphabet, ~20 amino acids (n=2 → 4²=16 < 20; n=3 → 64).
-      OPEN question: whether those parameters (esp. the 4-nucleotide
-      alphabet) are themselves forced by deeper closure — in which
-      case codon-3 reduces to triangulation's closure-3 (one A_0,
-      same 3) — or give an independent forcing. The framework does
-      not yet derive the alphabet, so this is not settled either
-      way. Under one-A_0 (N_NoSeparatePieces) the presumption is the
-      same closure-3 manifesting; the agreement is A_0 self-
-      consistency, NOT coincidence. Do not assert "Class-B
-      coincidence" (over-claims difference) nor "direct
-      instantiation" (over-claims identity) — name the gap OPEN.
+      Universal genetic code uses 3-nucleotide codons. A codon is a
+      3-coordinate object (3 nucleotide positions) localizing an
+      amino acid — a Class-A substrate-reading of the argmin-Z
+      localization form (N_Triangulation), exactly as 2+2=4 is the
+      arithmetic reading of argmin Z: the surface (4 letters, ~20
+      aa) is incidental/registered; the structural load is the
+      localization form. The value 3 is FORCED by that form composed
+      with the REGISTERED empirical parameters (alphabet 4, ~20 aa;
+      n=2 → 4²=16 < 20, n=3 → 64). Those parameters are invariants —
+      where reality fell under early-Earth chemistry — not a gap to
+      be derived (demanding their derivation = Trap 5). Graph shows
+      HOW reality moves (the form); empirics shows WHERE it fell
+      (the registered alphabet); one structure, so the closure is
+      complete, NOT open. The agreement with triangulation's 3 is
+      A_0 self-consistency (one A_0), not coincidence — the same
+      localization form read in the genetic coordinate.
     why_status: |
-      DEMONSTRATED for: a codon is a 3-coordinate object sharing the
-      argmin-Z localization FORM with N_Triangulation; the value 3
-      follows from capacity given registered parameters (4^n ≥ 20).
-      OPEN (named): whether the registered parameters reduce to the
-      closure structure (→ codon-3 IS triangulation's 3, one A_0) or
-      force 3 independently. Not coincidence (one A_0); not a
-      non-topological "discrete substrate" (discreteness is quantized
-      topology, I_Quant). Presumption under one-A_0: same closure-3.
+      DEMONSTRATED: a codon is a Class-A substrate-reading of the
+      argmin-Z localization form (N_Triangulation); the value 3 is
+      forced by that form composed with the registered empirical
+      parameters (alphabet 4, ~20 aa), both invariants. The
+      registered alphabet is an input (where reality fell), not an
+      open gap — demanding its derivation is Trap 5. Agreement with
+      triangulation's 3 is A_0 self-consistency, not coincidence;
+      discreteness here is quantized topology (I_Quant), not a
+      non-topological tier.
     content: |
-      Value 3 via capacity given REGISTERED parameters:
+      Value 3 via the localization form ∘ REGISTERED parameters:
         Alphabet size: 4 (A, U/T, G, C)
         Required output diversity: 20 standard amino acids
             + start/stop signals
@@ -19601,36 +19603,34 @@ nodes:
         n=2: 16 codes (insufficient — 20 aa needed)
         n=3: 64 codes (sufficient with 3-fold redundancy)
         n=4+: structurally over-engineered but possible
-      The value 3 follows from capacity GIVEN the registered
-      parameters (alphabet 4, ~20 aa). These parameters are
-      themselves topological/A_0 facts (molecular structure), not
-      a non-topological tier; their discreteness is quantized
-      topology (I_Quant). OPEN: whether the 4-nucleotide alphabet
-      is itself closure-forced (→ codon-3 reduces to the same
-      closure-3 as triangulation, one A_0) or independent. Not
-      settled; not coincidence (one A_0).
+      The value 3 is FORCED by the localization form composed with
+      the registered parameters (alphabet 4, ~20 aa). These
+      parameters are invariants — where reality fell under
+      early-Earth chemistry (empirical fact cannot fail to be an
+      invariant). They are inputs/coordinate-anchors, NOT a gap to
+      derive: demanding their derivation is Trap 5. So the closure
+      is complete — codon-3 is forced by form ∘ empirics, both
+      invariants, two invariants cannot be incoherent.
 
-      Cross-substrate — all members are A_0/topological and share
-      the argmin-Z FORM (minimal coordinates to localize). The
-      value 3: directly closure-forced where shown topological;
-      forced-through-registered-parameters elsewhere; whether the
-      latter reduce to the former is OPEN per member (one-A_0
-      presumption: same closure-3, agreement = A_0 self-
-      consistency, not coincidence):
-        Physics: spatial dims = 3 — closure-forced (L(3,1), N370).
-                 The anchor case of the invariant 3.
-        Cognition: 3-coord state identification — closure if
-                   continuous-localization (per N_Triangulation).
-        Biology: codon = 3 nt — value via capacity given alphabet
-                 4 / ~20 aa; closure-reduction of those params
-                 OPEN (this node).
-        Music: triad ≥ 3 notes — value via chord-quality
-               localization (third disambiguates major/minor; a
-               2-note dyad is deliberately ambiguous); robust in
-               tonal harmony but closure-reduction OPEN.
-        Shared at the argmin-Z FORM level; whether each value 3
-        reduces to the one closure-3 is the open structural
-        question, not a topological/non-topological split.
+      Cross-substrate — all members are Class-A substrate-readings
+      of the one argmin-Z localization form. The value each reads is
+      forced by that form composed with its registered conditions;
+      the agreement on 3 is A_0 self-consistency (one A_0), not
+      coincidence:
+        Physics: spatial dims = 3 — the form read in the pure
+                 topological coordinate (L(3,1) closure, N370).
+        Cognition: 3-coord state identification — the form in the
+                   continuous-localization coordinate.
+        Biology: codon = 3 nt — the form read with the registered
+                 genetic parameters (alphabet 4, ~20 aa). Value
+                 forced by form ∘ empirics (this node).
+        Music: triad ≥ 3 notes — the form read in tonal harmony
+               (the third disambiguates major/minor; a 2-note dyad
+               is deliberately ambiguous).
+        One argmin-Z localization form, read in each substrate's
+        registered coordinate; agreement on 3 is A_0 self-
+        consistency, not a topological/non-topological split and
+        not coincidence.
     level: 1
     is_placeholder: false
 
