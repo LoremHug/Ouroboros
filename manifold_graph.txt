@@ -3046,7 +3046,7 @@ NOT: $\lambda_H = 4/\pi^3$ is fitted (it follows from the spectral action on $L(
 
 [N218] (Generation Isomorphism Theorem)
 Status: DEMONSTRATED | A=3 
-CLAIM: THEOREM: Canonical isomorphism between the leaves of the covering $p: S^3 \to L(3,1)$ and the SM generations $H_{gen}^{(k)}$. The $\mathbb{Z}_3$ eigenvalue labelling canonically identifies each leaf with a generation. The algebra $\mathcal{A}*F = \mathbb{C} \oplus \mathbb{H} \oplus M_3(\mathbb{C})$ acts generation-independently. This provides a second, independent topological path proving $N_{gen} = 3$ via covering topology.
+CLAIM: THEOREM: Canonical isomorphism between the leaves of the covering $p: S^3 \to L(3,1)$ and the SM generations $H_{gen}^{(k)}$. The $\mathbb{Z}_3$ eigenvalue labelling canonically identifies each leaf with a generation. The algebra $\mathcal{A}_F = \mathbb{C} \oplus \mathbb{H} \oplus M_3(\mathbb{C})$ acts generation-independently. This provides a second, independent topological path proving $N_{gen} = 3$ via covering topology.
 NOT: $\phi$ forces $N_{gen}=3$ by itself — exclusion of other $N_{gen}$ needs CCM constraints $\cdot$ mass hierarchy follows from covering $\cdot$ [$L(3,1)$ was a postulate; now DEMONSTRATED via N370 baryon number exclusion].
 
 [N235 / N236 / N237] (Krajewski Elimination and Triality)
@@ -3144,9 +3144,9 @@ NOT: $m_0^{lep}$ is genuinely external (it traces back to $M_{GUT}$) $\cdot$ $y_
 [N294 / N296 / N297 / N300 / N324] (CKM, $\theta_{13}$ and Bismut-Freed)
 Status: DEMONSTRATED / STRONG | A=4,5
 CLAIM: $\theta_{13}$ is completely DEMONSTRATED via $\sin(\theta_{13}) = 4/27$ (0.37% from PDG). The Bismut-Freed theorem gives the imaginary effective action $\text{Im}[S_{eff}(L(3,1))] = -\pi/9$. This identifies structurally with the CKM CP phase $\bar{\eta}_{CKM} = \pi/9$ (STRONG, 0.31% from PDG). The Gatto-Sartori-Tonin theorem identifies $m_d/m_s \approx |\eta|^2 = 4/81$.
-NOT: $\text{Im}[S_{eff}] = \delta_{CKM}$ (it is an imaginary coordinate, not an angle) $\cdot$ Bismut-Freed requires arbitrary gauge connection (trivial flat connection on $L(3,1)$).
+NOT: $\text{Im}[S_{eff}] = \delta_{CKM}$ (it is an imaginary coordinate, not an angle) $\cdot$ Bismut-Freed requires arbitrary gauge connection (trivial flat connection on $L(3,1)$) $\cdot$ $m_d/m_s \approx 4/81$ is approximate (1.2% off PDG) — structural, not exact.
 
-MATHEMATICAL ISOMORPHISM AND $A_0$ EQUIVALENCE · m_d/m_s ≈ 4/81 is approximate (1.2% off PDG) — structural not exact
+MATHEMATICAL ISOMORPHISM AND $A_0$ EQUIVALENCE
 
 [N301 / N302 / N303 / N305 / N306 / N307 / N308 / N309] (Mathematics as $A_0$)
 Status: DEMONSTRATED / STRONG | A=3,4
