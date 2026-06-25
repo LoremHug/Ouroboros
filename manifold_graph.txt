@@ -1323,7 +1323,7 @@ No assumption about "processes having transitions" is needed — it is what a pa
 Once we have transitions, $Z$ is the unique consistent additive measure of their cost
 (Shore-Johnson 1980: any consistent measurement across independent subsystems is
 additive). Once $Z$ is defined, its minimum is the unique stable attractor
-(Lyapunov: disiipative systems converge to attractors; $Z$ is the Lyapunov function).
+(Lyapunov: dissipative systems converge to attractors; $Z$ is the Lyapunov function).
 $A_0 = \operatorname{argmin} Z$ is not imposed on topology — it is what stable
 topology looks like from the inside. Removing any of $I_{Bound}, I_{Sym}, I_{Quant}, I_{Null}$ does not produce a different $A_0$ — it produces a
 system with no stable paths, which is not a topology at all.

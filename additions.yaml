@@ -19118,29 +19118,39 @@ nodes:
     z_hidden: 0.15
     summary: |
       Phoneme = bundle of distinctive features (Trubetzkoy 1939,
-      Jakobson). Minimum 3 features (manner, place, voicing or
-      substitutes per phonological theory) needed to specify
-      against typical phoneme inventory. N_Triangulation
-      3-coord-minimum principle directly instantiated in
-      sound-form substrate. Cross-substrate sibling of
-      N_TripletCodeAsTriangulation (codon = 3 nt).
+      Jakobson). Localizing a phoneme requires ≥3 independent
+      feature-DIMENSIONS (manner, place, voicing, or substitutes
+      per phonological theory) — 3 coordinate axes jointly pinning
+      it in feature-space. This is a genuine 3-coordinate
+      localization (the 3 is the number of independent axes needed
+      to resolve a phoneme, NOT log₂ of inventory size), directly
+      instantiating N_Triangulation's 3-coord-minimum in the
+      sound-form substrate. Note: unlike the codon (whose 3 is
+      capacity-forced, Class B), the phoneme 3 is a true
+      coordinate-localization minimum.
     why_status: |
       DEMONSTRATED via:
-      (1) Structural argument: n=2 features insufficient for
-          20+ phonemes typical across languages.
+      (1) Structural argument: fewer than 3 independent feature
+          axes leaves phonemes unresolved (manner+place without
+          voicing cannot separate /p/ from /b/).
       (2) Empirical universality: distinctive-feature theory
           captures all known phonological systems with >=3
           feature dimensions.
-      (3) Direct correspondence with N_Triangulation principle.
+      (3) Direct correspondence with N_Triangulation principle
+          (3 mutually-constraining coordinates to localize).
     content: |
-      Why 3 specifically:
-        Phoneme inventory: 20-100 phonemes typical
-        Required distinctions per phoneme: log₂(N)
-        n=1 binary feature: 2 distinctions (insufficient)
-        n=2 features:  4 distinctions (insufficient)
-        n=3 features:  8 distinctions (boundary-sufficient)
-        n>=4: structurally over-determined but common
-      Forced minimum is 3, matching N_Triangulation.
+      Why 3 specifically (feature-dimensions, not capacity):
+        A phoneme is localized by independent feature AXES, not
+        by log₂(inventory). Minimal axes to pin a consonant:
+          manner  (stop / fricative / nasal / ...)
+          place   (labial / coronal / dorsal / ...)
+          voicing (voiced / voiceless)
+        Fewer than 3 axes leaves phonemes unresolved (e.g.
+        manner+place without voicing cannot separate /p/ from
+        /b/). 3 independent axes is the localization minimum —
+        this IS triangulation (3 mutually-constraining
+        coordinates), not a capacity threshold. Languages add
+        further axes (nasality, length, tone) beyond the 3.
 
       Cross-substrate parallels:
         Codon (biology):  3 nt (matching N_TripletCode)
@@ -19508,20 +19518,26 @@ nodes:
     summary: |
       Universal genetic code uses 3-nucleotide codons. Each
       codon = 3 coordinate readings of nucleotide position.
-      Codon length n=3 is structurally forced: n=2 gives
+      Codon length n=3 is forced by coding CAPACITY: n=2 gives
       4²=16 codes (insufficient for 20+ amino acids); n=3
-      gives 4³=64 (sufficient with redundancy). Direct
-      instantiation of N_Triangulation 3-coord-minimum
-      principle in genetic substrate.
+      gives 4³=64 (sufficient with redundancy). Note this 3 is
+      capacity-contingent on the 4-letter alphabet (a 5-symbol
+      alphabet would make n=2 sufficient), DISTINCT from
+      N_Triangulation's substrate-invariant 3 (3-gradient
+      closure). So this is a Class-B structural parallel with
+      the 3-coordinate principle — a codon is a 3-coordinate
+      object — not a Class-A derivation of 3 from triangulation.
     why_status: |
       DEMONSTRATED via:
       (1) Structural argument: n=2 codons cannot encode 20
           amino acids; n=3 forced as minimum.
       (2) Substrate-invariance: same triplet code in all known
           life (with minor stop-codon variants).
-      (3) Direct correspondence with N_Triangulation principle.
+      (3) Class-B structural parallel with N_Triangulation (a
+          codon is a 3-coordinate object); the value 3 here is
+          capacity-forced (4^n ≥ 20), not triangulation-derived.
     content: |
-      Why 3 specifically:
+      Why 3 specifically (capacity, not triangulation):
         Alphabet size: 4 (A, U/T, G, C)
         Required output diversity: 20 standard amino acids
             + start/stop signals
@@ -19529,7 +19545,10 @@ nodes:
         n=2: 16 codes (insufficient — 20 aa needed)
         n=3: 64 codes (sufficient with 3-fold redundancy)
         n=4+: structurally over-engineered but possible
-      Forced minimum is 3. Matches N_Triangulation 3-coord-min.
+      Forced minimum is 3 by capacity. This is contingent on the
+      4-letter alphabet — a larger alphabet would lower it — so it
+      is a Class-B parallel with N_Triangulation's invariant 3,
+      not an instantiation of it.
 
       Cross-substrate parallel:
         Music: octave = 12 semitones; chord identity = 3+ notes
