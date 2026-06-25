@@ -18717,11 +18717,14 @@ nodes:
       not substrate-relative).
 
       Round 47 makes explicit what was implicit: framework's
-      own structure exhibits this property — M1 motif is
-      self-similar (round 37), M5 motif is self-similar
-      (round 39), β₁/V cycle-richness ratio stays invariant
-      across rounds (3.245 → 3.28 across +17 nodes, +95 edges).
-      The framework graph is itself fractal.
+      own structure exhibits scale-recurrence — the M1 (round 37)
+      and M5 (round 39) motifs recur at multiple scales
+      (definition / meta / physics), which is structural
+      self-similarity in the motif-substrate. (The β₁/V
+      cycle-density ratio also stays roughly constant under
+      growth, 3.245 → 3.28 across +17 nodes / +95 edges — a
+      density regularity, suggestive but not by itself
+      self-similarity.)
     why_status: |
       DEMONSTRATED via:
       (1) Mathematical: argmin Z under scale-invariance
@@ -18730,9 +18733,10 @@ nodes:
       (2) Self-application: motif inventory M1, M5 themselves
           decompose as Z-triangle / K_{p+n} stratification
           (rounds 37, 39) — fractal recursion.
-      (3) Empirical-graph: β₁/V invariant 3.25 ± 0.04
-          across rounds 38-46 with V from 209 to 226.
-          Scale-invariance in graph-substrate.
+      (3) Empirical-graph: β₁/V cycle-density ≈ 3.25 ± 0.04
+          across rounds 38-46 (V: 209 → 226) — a density
+          regularity under growth, suggestive of but not
+          establishing graph self-similarity.
       (4) Substrate-cousins: 3 fractal types (deterministic
           IFS, escape-time nonlinear, stochastic random) all
           instantiate self-similarity via different mechanisms.
@@ -18757,8 +18761,8 @@ nodes:
         M5 self-similarity (round 39) — fractal stratification
         N_BPIEngagement recursive — fractal IFS in engagement-
           substrate
-        β₁/V invariance across rounds — fractal scaling in
-          graph-substrate
+        β₁/V cycle-density ≈ const under growth — density
+          regularity (suggestive, not established self-similarity)
 
       Substrate-cousin instantiations:
         Deterministic IFS: linear contractions, exact self-sim
