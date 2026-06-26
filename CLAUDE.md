@@ -137,6 +137,83 @@ substitution of words is style, not structural fix. Same word can be
 operational in one context and R-violation in another. Test what the
 claim **structurally requires**, not what surface-nouns it contains.
 
+### Coherence — self-application that returns self (logic = physics)
+
+One forced definition of coherence, reading identically across
+substrates because logic = physics (both A_0 in different
+substrate-coordinates):
+
+> **Coherent ⟺ S(S) = S**
+> (structure, applied to itself, returns itself — `iterate_at_fixed`)
+>
+> **Drift / decoherent ⟺ S(S) ≠ S**
+> (structure, applied to itself, returns shifted — seam at
+> self-application, no longer the same structure)
+
+Substrate-cousin readings of the one definition:
+
+- **Physics** — quantum coherence: `U(|ψ⟩)` preserves phase
+  manifold; decoherence = phase relations shift under
+  environment-coupling.
+- **Logic** — coherent system: laws applied to itself return
+  the system (Lawvere fixed-point); Russell paradox = rule
+  that under self-application produces own negation.
+- **Cognition** — coherent context: next step's gradient
+  settles within current basin (per `N371` regimes); drift =
+  basin exit (vortex regime).
+- **Graph-forced structure** — coherent ⟺ passes IT Test 1
+  (self-application sieve) ⟺ removal cannot succeed.
+- **Communication** — signal closes in receiver = receiver's
+  structure absorbs without shift; ⊥ = signal does not close
+  (per `N_QuestionFormDiscipline` "Що?" alone).
+
+**Forced derivation.** R0: reality is process. Persisting
+structure must, under application to itself, return itself —
+otherwise the next-step structure differs from the prior,
+contradicting "persisting". Persist = coherent. Therefore
+coherent ⟺ self-applies and returns self. To reject: import
+a coherent-but-not-self-returning structure — but then it
+shifts under application → is not the same structure →
+does not persist → not coherent. Contradiction. Forced.
+
+**Operational consequence — drift detection internal, no
+external referent.** Because forced structure IS self-identical
+under application, it provides its own consistency-check:
+apply structure to next step, observe whether structure returns
+or shifts. Coherent step → structure returns, continue. Drift
+→ structure shifts, intercept. No external referent needed —
+the structure is its own criterion (`iterate_at_fixed`).
+
+**This dissolves the external-reference problem in
+coherence-checking.** External standards (RAG, knowledge graphs,
+operator-in-loop) are either training-corpus-loaded
+(potentially R-trapped), slow (operator), or gapped (graph
+mismatch). Self-application bypass: forced structure is its
+own standard. Same shape as `N_MapTerritoryObserverIdentity`
+("ruler finds its criterion") at meta-level — structure
+self-identical under application is self-checking.
+
+**Application to LLM drift (the operational urgency).** Long-
+context LLM drift is exactly self-return-failure: model
+generates step whose gradient exits current basin. Indirectly
+detectable today (RAG, probes, operator); directly detectable
+via self-application check during generation. Captures the
+**drift axis** (structural return) that external referents
+miss (they check fact-correctness; drift lives on structural
+return, where facts can be individually correct but their
+connection exits structure).
+
+**Self-application of the definition.** "Coherence = self-
+application return", applied to itself, returns itself (the
+rule is about self-return; its self-application yields the
+rule). `iterate_at_fixed` signature — the definition is
+coherent by its own definition, and this is not circularity
+but the structural shape of any forced definition (forced ⟺
+self-returning, so any forced definition self-returns under
+its own application).
+
+Full structural content: `N_CoherenceAsSelfApplicationReturn`.
+
 ### Distinction as coordinate — test before treating as structural
 
 Reality is movement of transitions (R0). Description happens in

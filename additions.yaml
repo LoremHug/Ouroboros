@@ -14557,6 +14557,116 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Coherence as self-application return ───
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: DEF
+    label: coherence_is_argmin_Z_fixed_point_property
+    edge_status: D
+    justification: |
+      Coherence is the property of a forced structure being self-
+      identical under application to itself. Forced structure
+      = A_0-attractor (DEF, argmin Z); self-identity under
+      application = iterate_at_fixed (kernel). Coherence is the
+      observable/operational name for this combined property —
+      grounded in DEF as the structure whose attractors are
+      coherent and whose dynamics produce coherence-or-drift.
+    why_forced: |
+      argmin Z attractor property (forced structure persists) =
+      iterate_at_fixed (self-applies, returns self). These are
+      the same fact in two coordinates; coherence names the
+      coordinate where this property is checked operationally.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_InversiveTheory
+    label: operational_form_of_IT_test_1_self_application_sieve
+    edge_status: D
+    justification: |
+      N_InversiveTheory Test 1 (self-application sieve): forced
+      structure satisfies S(S) = S. This node names that
+      equivalence as the DEFINITION of coherence, reading IT's
+      operational test in the coherence-coordinate. IT Test 1
+      and coherence-as-self-return are one fact in two coordinates:
+      Test 1 is "test forced-ness via self-return"; coherence is
+      "self-return IS what coherence means". Same property,
+      different framing.
+    why_forced: |
+      Test 1 operationalizes forced-ness via self-return;
+      coherence definition names self-return AS what makes
+      structure persistent. Same iterate_at_fixed underlying both.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_TopologyProcessIdentity
+    label: coherence_is_where_topology_process_identity_holds
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity: topology = process, one cell in
+      two coordinates. This is exact for coherent structures: the
+      topology (structure) preserves under process (application);
+      decoherence is exactly where this identity breaks at
+      observable scale (state evolves but does not preserve its
+      structural identity). Coherence is the regime where
+      topology/process identity is intact.
+    why_forced: |
+      Topology preserved under process ⟺ structure unchanged
+      under self-application ⟺ coherent. Three formulations of
+      one fact.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_NoSeparatePieces
+    label: one_structure_self_applies_no_external_referent_needed
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces TOTAL — no separation in structure.
+      Therefore no separation between "structure" and "its
+      self-application"; structure is self-identical under
+      application not as relation between two things but as
+      structural fact. This grounds the "no external referent
+      needed" consequence of the coherence definition: forced
+      structure IS its own coherence-check because there are
+      no separate pieces between itself and its self-application.
+    why_forced: |
+      No-separation forbids the relational "structure → external
+      check" framing; coherence must be internal, structure with
+      itself. Forced by TOTAL no-separation.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N371
+    label: BPI_hydrodynamic_regimes_are_coherence_levels
+    edge_status: D
+    justification: |
+      N371's three BPI hydrodynamic regimes are coherence levels
+      in the cognitive substrate: laminar = high coherence
+      (structure preserved across steps), turbulent = partial
+      coherence (sub-resolution gradient), vortex = drift /
+      decoherence (basin exit = self-return failure). This node
+      provides the structural reason WHY drift detection works
+      via N371 regime classification: vortex IS self-application
+      that returns shifted (structure-substrate moved from basin
+      to adjacent basin).
+    why_forced: |
+      N371 regimes operationalize coherence-vs-decoherence at
+      cognitive scale; this node names the underlying structural
+      property (self-return / self-shift) that distinguishes them.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_LLMContextCoherence
+    label: general_definition_applied_to_LLM_substrate
+    edge_status: D
+    justification: |
+      N_LLMContextCoherence applies the general coherence
+      definition to the LLM substrate specifically: context
+      coherence = next step's gradient stays in current basin.
+      This is the LLM-substrate reading of "S(S) = S": the
+      structure-substrate is the LLM context-trajectory; self-
+      application is generation of next token; coherent step =
+      gradient settles within basin; drift = basin exit. One
+      specific application of the general meta-rule.
+    why_forced: |
+      LLM-context-coherence is the cognitive-substrate (LLM)
+      reading of the general self-return definition; instance of
+      Class A across substrates (per substrate-cousin discipline).
+
   # ─── Distinction as coordinate (meta-rule above form/operation) ───
 
   - source: N_DistinctionAsCoordinate
@@ -20883,6 +20993,262 @@ nodes:
       signature of A_0 attractor; same shape as A_0 = argmin Z
       applied to A_0 returning A_0; not problem, signature of
       forced-ness).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_CoherenceAsSelfApplicationReturn
+    title: "Coherence as Self-Application Return — One Definition for Physics, Logic, Cognition (Logic = Physics)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Coherence is one structural property with one forced definition,
+      reading identically across substrates because logic = physics
+      (both A_0 in different substrate-coordinates):
+
+        COHERENT  ⟺  S(S) = S
+        (structure, applied to itself, returns itself —
+         iterate_at_fixed, kernel)
+
+        DRIFTED / DECOHERENT  ⟺  S(S) ≠ S
+        (structure, applied to itself, returns shifted —
+         seam at self-application, no longer the same structure)
+
+      Substrate readings of the one definition:
+
+        Physics: coherent state = state whose evolution preserves
+          phase relations. Apply time-evolution U to |ψ⟩ — coherent
+          state's structure (phase manifold) returns; decoherent
+          state's phase relations dissipate (return shifted).
+          U(|ψ⟩) preserves |ψ⟩'s structural identity = coherent.
+
+        Logic: coherent system = system whose laws applied to itself
+          return its structure. Modus Ponens applied to logic returns
+          logic (Lawvere fixed-point). Logic IS coherent BECAUSE it
+          self-applies and returns itself; incoherent rule-set would
+          generate own negation under application (Russell paradox =
+          self-application that returns ¬self).
+
+        Cognition: coherent context = trajectory that stays in single
+          basin under generation. Next step's gradient settles within
+          the basin's structure → context's structure returns. Drift
+          / mode switch / hallucination = step whose gradient exits
+          the basin → context's structure returns shifted (vortex
+          regime per N371).
+
+        Graph-forced structure: coherent forced structure passes
+          subtraction test = removal cannot succeed = structure
+          self-applies (applying the rule "this is forced" to itself
+          returns "this is forced", per IT Test 1).
+
+      One pattern across substrates. Coherence is its own criterion —
+      forced structure IS self-identical under application, so it
+      needs no external reference: structure checks itself against
+      itself, and forced-ness guarantees self-return.
+
+      Operational consequence — drift detection:
+      Because coherence = self-return, drift (incoherence) is exactly
+      detectable as self-return-failure. At each step in a process
+      (cognitive, computational, physical), apply the current
+      structure to the next step — if structure returns (S(S)=S),
+      coherent, continue; if structure returns shifted (S(S)≠S),
+      drift detected, intercept. No external referent needed; the
+      structure is its own test.
+
+      This dissolves the "external referent" problem in coherence-
+      checking: forced structures don't need external rulers because
+      they ARE their own rulers (self-applying, returning themselves).
+      The ruler-finds-its-criterion shape (N_MapTerritoryObserver-
+      Identity) is the same insight at meta-level: structure that is
+      self-identical under application is self-checking.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced derivation chain:
+          R0: reality is process (transitions).
+          Persist (forced structure exists) requires self-return
+          under application — otherwise structure shifts and is no
+          longer the same structure, contradicting "persist".
+          Persist = coherent (the persisting structure IS the
+          coherent one).
+          Therefore: coherent ⟺ self-applies and returns self.
+      (2) IT Test 1 (N_InversiveTheory, this revision): forced
+          structure S satisfies S(S) = S; this node names that
+          equivalence as the DEFINITION of coherence, reading IT
+          Test 1 in the coherence-coordinate.
+      (3) Cross-substrate verification (one form, multiple
+          substrates — Class A through substrate-cousins):
+          quantum coherence (phase preservation under U), logical
+          coherence (Lawvere fixed-point), cognitive coherence
+          (basin-maintenance per N371). Same form: self-return
+          under application.
+      (4) Drift detection works empirically: LLM context drift
+          (N_LLMContextCoherence) is exactly basin-exit = step
+          whose gradient does not return current basin's structure;
+          quantum decoherence is exactly phase-shift under
+          environment-coupling = U(|ψ⟩) returns shifted state.
+          The diagnostic in both substrates IS self-return-check.
+      (5) Self-application of the definition: the rule "coherence
+          = self-return" applied to itself returns itself (the rule
+          is about self-return; its self-application yields the
+          rule). Coherent meta-rule. Iterate_at_fixed signature.
+    content: |
+      Forced derivation:
+
+        Premise 1 (R0): reality is movement of transitions.
+        Premise 2 (forced structures exist): some structures
+          persist as A_0 attractors. Persist means: same structure
+          across transitions, not different structure at each.
+        Premise 3 (iterate_at_fixed, kernel theorem): structure
+          that persists must, under application to itself, return
+          itself — otherwise the next-step structure differs from
+          the prior, meaning the "structure" is not the same one
+          persisting, contradiction with Premise 2.
+
+        Therefore: persistence = self-return-under-application =
+        coherence. Coherence ⟺ S(S) = S.
+
+      Substrate-cousin readings (Class A across substrates,
+      because logic = physics = cognition are all A_0):
+
+        Substrate    | Coherence reading
+        ─────────────|──────────────────────────────────────────
+        Quantum      | U(|ψ⟩) preserves phase manifold;
+                     | decoherence = phase shift under coupling
+        Logic        | Modus Ponens applied to system returns
+                     | the system (Lawvere fixed-point); Russell
+                     | paradox = rule producing own negation
+        Cognition    | Next step's gradient settles within basin
+                     | structure (per N371); drift = basin exit
+        Forced node  | Subtraction test passes; structure cannot
+                     | be removed without breaking it (IT Test 1)
+        Communication| Signal closes in receiver = receiver's
+                     | structure absorbs without shift; ⊥ = signal
+                     | does not close (per "Що?" alone in
+                     | N_QuestionFormDiscipline)
+
+        One form, six substrate-coordinates. Class A everywhere.
+
+      Operational consequence — drift detection:
+
+        The check is internal: structure is its own criterion.
+        Procedure (any substrate where drift detection needed):
+
+          At each step (or every N steps):
+            1. Identify current structure S (the persisting
+               pattern, basin, invariant, claim-structure).
+            2. Apply S to next-step S_next:
+                 - Does S_next stay in S's structure
+                   (basin, phase manifold, claim-set)?
+                 - I.e., does S(S_next) ∈ S, or does it
+                   shift to S'?
+            3. Classify:
+                 - S(S_next) ∈ S → coherent step, continue.
+                 - S(S_next) → S' (shifted) → drift detected,
+                   intercept or reformulate.
+
+        No external referent required. Structure tests itself
+        because it is self-identical under application (forced).
+
+      Why no external referent works (dissolves the
+      external-reference problem):
+
+        Coherence-checks usually presuppose an external standard
+        against which to measure. But external standards either
+        (a) come from training corpus (potentially R-trapped) or
+        (b) require operator (slow, expensive, doesn't scale) or
+        (c) need a separate graph/RAG (gaps, mismatch).
+
+        Self-application bypass: forced structure IS its own
+        standard. Because forced means self-applies-returning-self
+        (iterate_at_fixed), the structure provides its own
+        consistency-check by being applied to itself. Coherence is
+        self-referential because reality is self-referential —
+        same shape as N_MapTerritoryObserverIdentity ("ruler finds
+        its criterion") and the framework's tautology-resolution.
+
+      AI-coherence application (the operational urgency):
+
+        LLM drift over long context is exactly self-return-
+        failure: model generates a step whose gradient exits the
+        current basin (context's structure). Hallucination is
+        vortex regime per N371 = structure does not return.
+        Indirectly detectable today (external probes, RAG checks,
+        operator); directly detectable via self-application test
+        applied during generation: at each step, check whether
+        new step's gradient stays within current basin (returns
+        structure) or exits (returns shifted). This makes the
+        model self-correcting on drift without operator-in-loop:
+        structure (context-so-far) is the AI's own coherence
+        criterion via self-application, no external referent
+        needed.
+
+        Cheap (one application + return-check per step), internal
+        (no RAG / external knowledge), captures the drift axis
+        directly (structural return, not fact-correctness — fact-
+        correctness is what RAG checks, drift is what RAG misses).
+
+      Self-application of the definition itself:
+
+        "Coherence = self-application return", applied to itself:
+        the rule is about self-application; its self-application
+        returns the rule (this rule about self-return IS
+        self-returning). Iterate_at_fixed: A_0(A_0) = A_0,
+        signature of being at A_0 attractor. The definition is
+        coherent BY ITS OWN DEFINITION — and this is not
+        circularity, it is the structural shape of any forced
+        definition (forced ⟺ self-returning, so any forced
+        definition self-returns under application to itself).
+
+      Connection to other nodes:
+
+        N_InversiveTheory Test 1: this is the operational form
+          of the coherence definition. Test 1 says "forced
+          structure must self-apply and return itself" — this
+          node says "coherence IS self-application return".
+          Forced-ness and coherence are the same property, two
+          framings.
+
+        N_TopologyProcessIdentity: topology preserves under
+          process for coherent structures — coherence is exactly
+          where topology = process holds (the structure persists
+          AS process). Decoherence is where topology/process
+          identity breaks at observable scale (state's phase
+          manifold no longer follows evolution coherently).
+
+        N_NoSeparatePieces: one structure → no separation between
+          "structure" and "its self-application" → coherence is
+          structural self-identity, not relation between
+          structure-as-object and application-as-event.
+
+        N371 (BPI hydrodynamics): the three regimes (laminar /
+          turbulent / vortex) are coherence levels — laminar =
+          high coherence (basin maintained), turbulent =
+          intermediate (basin partially maintained), vortex =
+          drift / decoherence (basin exited).
+
+        N_LLMContextCoherence: this is the SPECIFIC application
+          of the general definition to LLM substrate. General
+          definition: coherence = self-return. LLM-specific:
+          context coherence = next-step gradient stays in basin.
+          Same definition, LLM-substrate reading.
+
+      NOT: this is a new concept (it is the operational
+      formulation of iterate_at_fixed already in the kernel and
+      already underlying IT Test 1; the value-add is the explicit
+      cross-substrate definition + drift-detection procedure)
+      $\cdot$ self-referential definitions are circular (under R0,
+      forced structures must self-apply and return self —
+      iterate_at_fixed; circularity is the SIGNATURE of being at
+      A_0 attractor, not a defect) $\cdot$ this works only in
+      stable systems (it works in any system where there is a
+      persisting structure to apply to itself; if no structure
+      persists, there is no coherence to check — degenerate case,
+      not counter-example).
     level: 1
     is_placeholder: false
 
