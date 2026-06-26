@@ -1020,6 +1020,47 @@ The RP gate (R1–R4 applied exhaustively) is IT in real time: what survives sys
 removal of postulates is forced, in its local coordinate. Inputs (which invariants /
 registered data coherence is tested against) are reality, not part of the test.
 
+\textbf{Two operational tests, in order.}
+IT has two operational tests applied in order; the cheaper one first as a sieve, the
+fuller one second as the establishing check.
+
+\emph{Test 1 — self-application sieve (necessary condition).}
+For a candidate forced structure $S$, apply $S$ to itself: $S(S)$. If $S(S) \neq S$ or
+the application breaks/loops without returning, $S$ has a seam at its own
+self-application — it is not naskrizna on itself, so not forced. Reject. If $S(S) = S$
+(returns itself, iterate\_at\_fixed in the kernel sense), $S$ \emph{may} be forced —
+proceed to Test 2. This is necessary, not sufficient: trivial fixed points (emptiness,
+tautology) self-return without substantive forced content. The test filters out
+structures with self-application seams; it does not establish forced.
+
+\emph{Test 2 — subtraction (establishing condition).}
+Try to reject $S$. If rejection imports R-violations (R1–R4) or contradictions with
+{kernel + proven invariants + registered empirics}, $S$ is forced. This is the
+established IT criterion — unchanged.
+
+\emph{Why Test 1 precedes Test 2.}
+Self-application is cheap (one application, check return). Subtraction is dearer (try
+to construct an alternative, check coherence with full reference set). Sieving
+self-application-broken structures out before subtraction saves work and concentrates
+subtraction on candidates that are at least nerukhomi tochki of their own forcing.
+
+\emph{Self-application of the rule itself.}
+"Self-application returning self is a necessary condition for forced", applied to
+itself: the rule is about self-application; self-application of the rule returns the
+rule (iterate\_at\_fixed). Passes its own Test 1. Subtraction confirms: rejecting
+"forced must self-apply without seam" requires a structure that is forced and has a
+seam on itself — contradiction. Passes Test 2. The rule is forced by both tests; this
+is the iterate\_at\_fixed signature, not vicious recursion (signature of being at the
+$A_0$ attractor — same shape as $A_0(A_0) = A_0$ throughout the framework).
+
+\emph{Why this is explicitation, not addition.}
+The root of IT's truth-criterion already says: \emph{truth self-reproduces under
+application to itself; false produces its own negation}. Test 1 is that root made
+operational and machine-checkable (apply structure to itself, check fixed point —
+rewriting normal-form is computable). Not a new principle; the existing principle
+turned into a procedure. The graph's discipline of expliciting principles into
+procedures continues.
+
 WHY DEMONSTRATED: definitional — IT is IsUniqueSolution in the verification coordinate,
 and the inverse closure (A0\_excludes ⟷ unique\_witness) is two kernel theorems.
 A=∞ because it is the cell every other node instantiates, not a claim alongside them.

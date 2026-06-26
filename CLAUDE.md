@@ -516,25 +516,62 @@ at its own fixed point (`iterate_at_fixed`): A_0(A_0) = A_0 — an ordinary
 structural transition. The inputs (which invariants / registered data the
 coherence is tested against) are reality, not part of the test.
 
-**Status test (operational form).** When uncertain about claim status,
-apply the **subtraction test**:
+**Two operational tests, in order.**
 
-> "What postulates must be imported to reject this claim?"
+IT has two operational tests applied in order — the cheaper one first as
+a sieve, the fuller one second as the establishing check.
 
+**Test 1 — self-application sieve (necessary, not sufficient).** For
+candidate forced structure S, apply S to itself: S(S).
+- If S(S) ≠ S, or the application breaks/loops without returning, S has
+  a seam at its own self-application — not naskrizna on itself, **not
+  forced**. Reject.
+- If S(S) = S (returns itself, `iterate_at_fixed`), S **may** be forced
+  — proceed to Test 2.
+
+This is *necessary, not sufficient*: trivial fixed points (emptiness,
+tautology) self-return without substantive forced content. The test
+filters out structures with self-application seams; it does not
+*establish* forced. Applied first because cheap (one application, check
+return) and concentrates Test 2 on candidates already at fixed point of
+own forcing.
+
+**Test 2 — subtraction (establishing).** When candidate passes Test 1,
+ask: *"What postulates must be imported to reject this claim?"*
 - If rejection requires importing R1-R4 violations (object reification,
-  external evaluator, scale injection, agency attribution) → claim is
-  forced → **DEMONSTRATED**
-- If acceptance requires importing postulates → claim is not forced
+  external evaluator, scale injection, agency attribution) or
+  contradictions with {kernel + proven invariants + registered empirics}
+  → claim is forced → **DEMONSTRATED**.
+- If acceptance requires importing postulates → claim is not forced.
 
-This is operational, not metaphorical. Subtraction test produces binary
-output. Used systematically, it promotes claims from STRONG to
-DEMONSTRATED when the structural argument is in fact closed but reflex
-hesitation flagged them weaker.
+Both tests together: forced ⟺ S(S) = S **and** rejection imports
+R-violations. Test 1 alone is necessary not sufficient; Test 2 is the
+establishing criterion.
+
+**The rule passes its own tests.** "Self-application returning self is
+necessary for forced", applied to itself, returns itself (the rule is
+about self-application; self-application of the rule yields the rule —
+`iterate_at_fixed`). Subtraction confirms: rejecting "forced must
+self-apply without seam" requires a structure that is forced and has a
+seam on itself — contradiction. The rule is forced by both tests; this
+is the `iterate_at_fixed` signature, **not vicious recursion**. Same
+shape as A_0(A_0) = A_0 throughout the framework — being at the A_0
+attractor.
+
+**This is explicitation, not addition.** The root of IT's truth-criterion
+already says: *truth self-reproduces under application to itself; false
+produces its own negation*. Test 1 is that root made operational and
+machine-checkable (apply structure to itself, check fixed point —
+rewriting normal-form is computable). Not a new principle; the existing
+principle turned into a procedure. The discipline of expliciting
+principles into procedures continues.
 
 **Source-text convention**: documents articulating this framework apply
 the test as "subtraction proof" — a paragraph explicitly listing the
 postulates whose import would be required to reject the framing, then
-showing each fails RP gate.
+showing each fails RP gate. Subtraction proof IS Test 2 in expository
+form; Test 1 typically passes silently (the structure being argued for
+self-applies without breakdown — if it didn't, no proof would even begin).
 
 ---
 
