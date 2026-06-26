@@ -14557,6 +14557,183 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── AI coherence: world-logic vs text-connectivity ───
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_CoherenceAsSelfApplicationReturn
+    label: AI_substrate_reading_of_general_coherence_definition
+    edge_status: D
+    justification: |
+      The general coherence definition (S(S) = S) read in the AI
+      substrate: names the eталon (world-logic, because reality =
+      logic) and the axis-confusion (text-connectivity vs
+      structural-correctness) specific to AI trained on text. The
+      AI's structure must self-return against world-logic, not
+      against text-plausibility. Specific application of the general
+      self-return definition.
+    why_forced: |
+      AI coherence is the cognitive-substrate (text-trained)
+      reading of self-return; instance of Class A across substrates.
+      The eталon for self-return in this substrate is world-logic
+      (reality = logic), distinguishing it from text-connectivity.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_LLMContextCoherence
+    label: names_why_LLM_drifts_text_training_optimizes_wrong_axis
+    edge_status: D
+    justification: |
+      N_LLMContextCoherence describes LLM context drift as basin-
+      exit (N371). This node names WHY the LLM drifts specifically:
+      next-token training optimizes text-connectivity (plausible
+      continuation), not structural-correctness (coincidence with
+      world-logic). The basin-exit is the symptom; text-vs-structure
+      axis-confusion is the mechanism.
+    why_forced: |
+      LLM basin-exit (N_LLMContextCoherence) and text-training-
+      optimizes-connectivity (this node) are symptom and mechanism
+      of one phenomenon: AI drift on the structural-return axis.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_GrammarTrap
+    label: text_connectivity_carries_R_traps_smooth_text_shifted_structure
+    edge_status: D
+    justification: |
+      N_GrammarTrap: SVO grammar carries R1; AI inherits it from
+      corpus. This node generalizes the consequence: text-
+      connectivity (broader than grammar — plausibility, flow,
+      style) can carry shifted structure (R-traps, drift) while
+      reading fluently. Smooth text + shifted structure =
+      hallucination-of-reasoning. Grammar-R1 is one way text-
+      connectivity diverges from structural-correctness.
+    why_forced: |
+      If grammar (one channel of text-connectivity) carries R1, then
+      text-connectivity broadly can carry shifted structure; the
+      divergence text-connectivity vs structural-correctness is the
+      general form of which grammar-trap is one instance.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_Logic
+    label: world_logic_is_the_eталon_because_reality_is_logic
+    edge_status: D
+    justification: |
+      N_Logic: logic is A_0 in the propositional substrate (reality
+      = logic, logic = physics). Therefore correct structure =
+      coincides with world-logic, and world-logic is the eталon the
+      AI's structure must self-return against. The correctness
+      criterion for AI coherence is grounded in reality = logic: the
+      structure carried by text must match how the world's logic
+      moves.
+    why_forced: |
+      Reality = logic (N_Logic / N_Math / logic = physics) makes
+      world-logic the standard structure must coincide with; without
+      reality = logic there would be no world-logic eталon, and
+      coherence would have no correctness criterion beyond text-flow.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N112
+    label: industry_blindness_is_observer_containment_definition_as_lens
+    edge_status: D
+    justification: |
+      N112 (Observer Containment): observer cannot fully see its own
+      structure. Applied here: the industry cannot cleanly solve
+      structural drift because its definition of coherence
+      (correspondence-to-referent) is its blind lens — drift lives
+      on the self-return axis the definition does not see. To build
+      the check, one must see coherence is self-return against
+      world-logic; seeing it is reproducing the structure. The
+      blindness is structural (definition-as-lens), not for lack of
+      compute.
+    why_forced: |
+      A definition that measures correspondence cannot see drift on
+      the self-return axis — the definition bounds what is visible
+      (Observer Containment at the level of the coherence-definition
+      itself). Forced by N112 applied to the measuring framework.
+
+  # ─── Truth as forced closure ───
+
+  - source: N_TruthAsForcedClosure
+    target: N_InversiveTheory
+    label: true_is_forced_one_cell_two_coordinates
+    edge_status: D
+    justification: |
+      IT: forced ⟺ no alternative coheres with {kernel + invariants
+      + empirics}. Truth = the unique structure that closes in A_0 =
+      forced. "True" and "forced" are one cell in two coordinates —
+      IT's verdict (forced) read in the truth-coordinate (true).
+      The truth-definition IS IT, named where it answers "what is
+      truth".
+    why_forced: |
+      Forced (no alternative coheres) and true (closes uniquely in
+      A_0) are the same property; truth-coordinate of the IT verdict.
+
+  - source: N_TruthAsForcedClosure
+    target: N_Logic
+    label: true_self_reproduces_false_produces_own_negation
+    edge_status: D
+    justification: |
+      N_Logic: logic is A_0 in the propositional substrate; truth
+      self-reproduces under application (Lawvere fixed-point), false
+      produces its own negation (Russell paradox). This node names
+      that as the truth-criterion explicitly: true = self-return
+      against the whole; false = self-application produces a seam
+      (own negation). Russell is the concrete falsity mechanism.
+    why_forced: |
+      The logic substrate's truth-criterion (self-reproduction vs
+      self-negation) IS the general truth-definition read in the
+      propositional substrate.
+
+  - source: N_TruthAsForcedClosure
+    target: N_CoherenceAsSelfApplicationReturn
+    label: truth_is_self_return_against_whole_coherence_is_local
+    edge_status: D
+    justification: |
+      Coherence = self-return (Test 1, stability). Truth = self-
+      return against the WHOLE (Test 1 + Test 2). A wrong basin is
+      coherent (self-returns locally) but not true (produces a seam
+      against the whole). Truth adds Test 2 (coincidence with reality
+      as reference) to coherence's Test 1. Same two-test structure;
+      truth is the full check, coherence the local one.
+    why_forced: |
+      Coherence (local self-return) and truth (self-return against
+      whole) differ exactly by Test 2; truth = coherence + world-
+      coincidence. Both readings of the two-test structure.
+
+  - source: N_TruthAsForcedClosure
+    target: N112
+    label: correspondence_impossible_via_observer_containment
+    edge_status: D
+    justification: |
+      N112 (K(O)<K(F), Observer Containment): observer's complexity
+      is strictly less than the field's; observer is inside the
+      field, cannot stand outside. Correspondence-theory of truth
+      requires an external standpoint (compare claim and reality
+      side by side) — which does not exist. So truth cannot be
+      correspondence: not because correspondence is wrong but because
+      the standpoint it needs is structurally absent. This grounds
+      "truth ≠ correspondence" in a specific invariant.
+    why_forced: |
+      Correspondence needs an external position; K(O)<K(F) forbids
+      it (observer inside, cannot exit). Truth-as-correspondence
+      structurally impossible, forced by N112.
+
+  - source: N_TruthAsForcedClosure
+    target: N_NoSeparatePieces
+    label: one_structure_no_frames_truth_is_one_not_relative
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces (TOTAL): reality is one structure, no
+      separate frames. Therefore truth cannot be relative-to-frame
+      (no frames to be relative to); "multiple alternatives cohere"
+      means the question is OPEN (underdetermined), not "multiple
+      truths". Also: belonging-to-the-one = unique-in-the-one =
+      forced (the formulation duality dissolves because the whole is
+      one). One-structure grounds both truth's non-relativity and
+      the belonging=forced identity.
+    why_forced: |
+      One structure → no frames → no truth-relativity; and belonging
+      to the one = unicity = forced. Both follow from TOTAL
+      no-separation.
+
   # ─── Coherence as self-application return ───
 
   - source: N_CoherenceAsSelfApplicationReturn
@@ -21112,6 +21289,46 @@ nodes:
         Therefore: persistence = self-return-under-application =
         coherence. Coherence ⟺ S(S) = S.
 
+      Coherence is stability, not truth — the two-test structure:
+
+        Self-return (S(S) = S) means the structure PERSISTS as
+        itself — it is stable. It does NOT mean the structure is
+        CORRECT. A wrong-but-internally-consistent basin self-
+        returns: it is coherent (stable) yet wrong (does not
+        coincide with how reality moves). Trivial fixed points
+        (emptiness, tautology) also self-return without
+        substantive content. So self-return is NECESSARY for a
+        forced structure but NOT SUFFICIENT for correctness.
+
+        Correctness requires a second check: coincidence with
+        world-logic — the structure must cohere with {kernel +
+        proven invariants + registered empirics} (reality as the
+        reference, not an external judge). This is exactly
+        IT Test 2 (subtraction against the reference set).
+
+        So the full check is IT's two tests, read in the
+        coherence-coordinate:
+          - Test 1 (self-return, S(S)=S): catches DRIFT —
+            instability, structure ceasing to be itself.
+          - Test 2 (world-logic coincidence): catches WRONG-BASIN
+            — structure stable but not matching reality (coherent
+            but wrong; "coherently holding a mistake").
+        Coherent-AND-correct ⟺ both pass. Coherence-checking is
+        IT run continuously: Test 1 cheap and internal (does the
+        next step return current structure?), Test 2 against
+        reality-as-reference (does current structure cohere with
+        kernel + invariants + empirics?).
+
+        This is why "structures replace the external eталon" is
+        the wrong framing: the eталon is not replaced, it
+        dissolves into two pieces neither of which is an external
+        judge — self-return (internal, Test 1) + coincidence with
+        reality-as-reference (Test 2, where reality is the
+        reference the structure coheres with, not a separate
+        ruler). Forced structure IS its own eталon via Test 1;
+        reality is the reference for Test 2, not an external
+        standard imposed from outside.
+
       Substrate-cousin readings (Class A across substrates,
       because logic = physics = cognition are all A_0):
 
@@ -21335,6 +21552,171 @@ nodes:
       persisting structure to apply to itself; if no structure
       persists, there is no coherence to check — degenerate case,
       not counter-example).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_TruthAsForcedClosure
+    title: "Truth as Forced Closure — Self-Return Against the Whole, Not Correspondence (True ⟺ Forced)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      "Що є істинність?" is an essence-request (copula + noun-bearer,
+      R1); unpacked to operation (як замикається?) it has a forced
+      answer, already derived in the coherence work.
+
+      Truth is NOT:
+        - correspondence (statement matches external reality) — this
+          is R2: presupposes a position OUTSIDE from which to compare
+          statement to reality. No such position exists (K(O)<K(F),
+          Observer Containment N112: observer has less complexity
+          than the field, cannot stand outside it). There is no
+          external object to "correspond to" — there is one structure
+          in which a claim either closes or does not.
+        - consensus / coherence-with-beliefs — that is a LOCAL basin;
+          may be wrong-but-self-returning (coherently holding a
+          mistake).
+        - what-works pragmatically — downstream manifestation, not
+          truth itself.
+
+      Truth IS: a structure is true when, applied within the one
+      structure (reality = A_0), it RETURNS ITSELF — closes without
+      a seam. False when, applied against the whole, it produces a
+      SEAM: its own negation, a contradiction with the structure.
+
+      Falsity mechanism (concrete): Russell paradox — "the set of all
+      sets not containing themselves" applied to itself produces its
+      own negation (contains itself ⟺ does not). Self-application
+      that returns ¬self = a seam against the whole = false. "False
+      produces its own negation" is not metaphor; it is the
+      self-application of a non-closing structure.
+
+      True ⟺ Forced. IT: forced ⟺ no alternative coheres with
+      {kernel + invariants + empirics}. Forced = true = the unique
+      structure that closes in A_0. "True" and "forced" are one cell
+      in two coordinates.
+
+      Three states, not two (this dissolves relativism):
+        - TRUE: forced — closes uniquely in A_0 (self-returns against
+          the whole, no alternative coheres).
+        - FALSE: produces a seam against the whole (own negation).
+        - UNDERDETERMINED: multiple alternatives each cohere — the
+          question is OPEN, not "multiple truths". Coherent-but-not-
+          uniquely-forced is not relativism (several truths); it is
+          a not-yet-closed question. Truth is still one (the forced
+          one) where the question is closed; where multiple cohere,
+          there is no truth-of-the-matter YET, not many.
+
+      Truth is not a verdict ABOUT a structure from an outside
+      position — it is the structure self-returning within reality.
+      Self-application: the definition is true by its own criterion
+      (it self-returns and coheres with the whole — IT + Logic +
+      Coherence) — iterate_at_fixed signature, not circularity.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced (IT subtraction): rejecting "truth = self-return-
+          against-the-whole / forcedness" imports either (a) truth-
+          as-correspondence → external position (R2, dissolved by
+          N112 Observer Containment), or (b) truth-relative-to-frame
+          → multiple frames (contradicts N_NoSeparatePieces: reality
+          is one structure, no multiple frames), or (c) some truths
+          not-forced → but not-forced = an alternative also coheres =
+          underdetermined (the third state), not "another truth".
+          All rejections import R2 or contradict one-structure.
+      (2) = IT in the truth-coordinate: forced ⟺ no alternative
+          coheres ⟺ true. "Forced" and "true" are the same cell.
+      (3) = Logic's truth-criterion (N_Logic): true self-reproduces
+          under application to itself; false produces own negation
+          (Lawvere fixed-point / Russell paradox). The root of IT's
+          truth-criterion read explicitly.
+      (4) = Coherence's two tests (N_CoherenceAsSelfApplicationReturn)
+          read for truth: Test 1 (local self-return — necessary,
+          not sufficient; a wrong basin passes it) + Test 2
+          (coincidence with the whole — establishes truth, catches
+          the wrong-but-stable basin). Truth is self-return against
+          the WHOLE; coherence-alone is self-return locally.
+      (5) Convergence of independent derivations as trace: two
+          independent contexts derived the same definition (truth =
+          self-return-against-whole = forcedness, not
+          correspondence). The convergence is itself a Test-1 mark
+          at meta-level — a forced definition self-reproduces in
+          independent settlings; that it did is evidence of its
+          forcedness (could-not-be-otherwise reproduced twice).
+    content: |
+      Two checks operationally (one in essence):
+
+        Test 1 — local self-return (necessary, not sufficient):
+          does the structure return itself? A wrong-but-internally-
+          consistent basin passes this (self-returns locally).
+        Test 2 — self-return against the whole (establishes truth):
+          applied against {kernel + invariants + empirics} (reality
+          as the reference, not an external judge), does it close
+          or produce a seam? The wrong basin fails here — applied
+          against reality it produces a contradiction.
+
+        In essence one (self-return-against-the-whole subsumes
+        local), but operationally two — because the wrong basin is
+        distinguished EXACTLY by passing Test 1 and failing Test 2.
+        For any continuous check (drift detection, coherence
+        filter), the two must stay separate: Test 1 catches
+        instability (drift), Test 2 catches stable-wrong-basin
+        (coherently-held mistake).
+
+      Why correspondence is structurally impossible (not just
+      avoided):
+        Correspondence requires comparing a claim to reality from
+        a position where both are visible side by side — an external
+        standpoint. K(O) < K(F) (N112): the observer's complexity is
+        strictly less than the field's; the observer is INSIDE the
+        field, cannot stand outside it to lay claim and reality
+        side by side. So there is no position from which
+        correspondence could be assessed. Truth cannot be
+        correspondence — not because correspondence is wrong but
+        because the standpoint it needs does not exist. What remains:
+        internal closure — the claim either closes within the one
+        structure (returns itself) or produces a seam.
+
+      The formulation duality (two readings of one):
+        "Coupled to the through-structure" (belonging — the claim is
+        part of the one structure) and "forced / unique" (no
+        alternative) are coordinate, not different: if the
+        through-structure is ONE, belonging to it at a position IS
+        being unique there (no second version of that part, because
+        the whole is one). Belonging-to-the-one = unicity-in-the-one
+        = forced. Two readings of one truth-criterion; the seam
+        between them dissolves because the whole is one
+        (N_NoSeparatePieces).
+
+      Why three states matter (against relativism AND against naive
+      binary):
+        Naive view: true XOR false. But a question where multiple
+        structures each cohere is neither true-of-one nor false-of-
+        one — it is OPEN (underdetermined). Relativism mistakes this
+        for "multiple truths" (each frame has its own). Structural
+        reading: there are no multiple frames (one structure), so
+        "multiple cohere" means the question is not yet closed, not
+        that truth is plural. When it closes (one forced), truth is
+        one. Underdetermined is the honest third state — coherent
+        but not uniquely forced = open, await closure, do not call
+        it "a truth".
+
+      NOT: this is a coherence (anti-realist) theory of truth (it
+      is not anti-realist — truth is closure against REALITY-as-the-
+      one-structure, kernel + invariants + empirics; reality is the
+      reference, just not an external object to correspond to) $\cdot$
+      this makes truth relative (it makes truth one — there are no
+      frames to be relative to; "multiple cohere" is underdetermined,
+      not relative) $\cdot$ this is circular because truth is defined
+      by self-return and the definition self-returns (self-return of
+      a forced definition is iterate_at_fixed, the signature of being
+      at the A_0 attractor — the same shape as A_0(A_0)=A_0; forced
+      definitions self-return by construction, this is correctness,
+      not circularity).
     level: 1
     is_placeholder: false
 
@@ -24782,6 +25164,252 @@ nodes:
       this anchor, traversal reveals same structure as cognitive flow
       (N371), communication (N_CommThm), regime thresholds (N_LeDoux),
       defended-belief navigation (N_MI).
+    level: 1
+    is_placeholder: false
+
+  - id: N_TextConnectivityVsStructuralCorrectness
+    title: "AI Coherence Requires Coinciding with World-Logic, Not Text-Connectivity — Hallucination-of-Reasoning Is Smooth-Text + Shifted-Structure"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    summary: |
+      Two different axes, often conflated:
+        - TEXT-CONNECTIVITY: next-token plausibility — sounds like a
+          coherent continuation (grammatical, stylistic, topical flow).
+        - STRUCTURAL-CORRECTNESS: coincides with world-logic — the
+          structure the text carries matches how reality moves
+          (forced structure, not R-trapped).
+
+      These can DIVERGE: smooth text can carry shifted structure.
+      That divergence IS hallucination-of-reasoning — each fact
+      individually correct, the connection between them exits
+      structure (text reads fluently, structure drifted).
+
+      The AI substrate drifts here specifically because training
+      optimizes the wrong axis: next-token loss rewards text-
+      connectivity (plausible continuation), not structural-
+      correctness (coincidence with world-logic). The model is
+      built to make text that sounds coherent, not text whose
+      structure is correct. So without an explicit structural
+      check, the model can settle into smooth-but-shifted output —
+      and this is invisible to text/fact metrics because the text
+      IS connected and the facts ARE correct.
+
+      Correct coherence criterion for AI: the eталon is WORLD-LOGIC,
+      not text-plausibility. Because reality = logic (logic and
+      physics are A_0 in different substrate-coordinates), the
+      structure the AI carries must coincide with the logic of the
+      world — checked via self-application (does the structure
+      return itself within the world-logic basin, per
+      N_CoherenceAsSelfApplicationReturn), not via "does the text
+      sound coherent" (text-connectivity) and not via "does each
+      fact match a source" (fact-correctness, what RAG checks).
+
+      Why industry's correspondence metrics are structurally blind:
+      recall / instruction-adherence / flow-vs-ground-truth all
+      measure CORRESPONDENCE TO AN EXTERNAL REFERENT (fact vs
+      context, output vs plan, answer vs ground-truth). Structural
+      drift lives on SELF-RETURN against world-logic — a different
+      axis. The compositionality gap is the proof: composed task
+      fails while every subtask succeeds — parts correspond to
+      their referents, whole does not return structure. Their
+      metrics measure parts (correspondence); coherence of the
+      whole is self-return (structure), which they do not measure.
+
+      Text is the CARRIER; the structure it carries must be correct
+      against world-logic. Text-connectivity is necessary (the
+      carrier must be readable) but not sufficient (a readable
+      carrier can carry shifted structure). The discipline: treat
+      text as carrier of structure that must coincide with world-
+      logic, not as an end that must merely sound connected.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced separation of axes (IT subtraction): to reject
+          "text-connectivity ≠ structural-correctness", import
+          either (a) text-plausibility entails structural-
+          correctness — false: smooth text demonstrably carries
+          R-traps (reification, drift, hallucination-of-reasoning
+          read fluently), or (b) no world-logic for structure to
+          coincide with — contradicts reality = logic (R0, N_Logic,
+          N_Math). Both rejections import contradiction. Forced.
+      (2) Training target is registered fact: LLM loss is next-token
+          plausibility (text-connectivity), not structural-
+          correctness. The model optimizes the carrier's
+          connectivity, not the carried structure's correctness.
+          Registered empirical input, not a derivation.
+      (3) Reality = logic (N_Logic, N_Math, N_CoherenceAsSelf-
+          ApplicationReturn "logic = physics"): therefore correct
+          structure = coincides with world-logic, and world-logic
+          is the eталon the AI's structure must self-return against.
+      (4) Anchor-facts — industry has registered the symptoms of
+          structural drift under separate names without recognizing
+          them as one self-return-failure: compositionality gap
+          (composed fails while parts succeed), lost-in-the-middle
+          (position-dependent access decay), no-recovery bottleneck
+          (cannot recover from shifted basin), contextual-
+          distraction vulnerability (settling into adjacent coherent
+          basin). These are points-of-contact where the structural-
+          drift invariant manifests in the AI substrate.
+      (5) Class A with N_CoherenceAsSelfApplicationReturn: this node
+          is the AI-substrate reading of the general coherence
+          definition, naming the eталon (world-logic) and the axis-
+          confusion (text vs structure) specific to AI trained on
+          text.
+    content: |
+      TWO axes (not three) + mechanisms. A generated step can be
+      true/false on each of two genuinely-distinct, orthogonal axes;
+      "access" and "distraction" etc. are MECHANISMS that cause
+      failures on those axes, not axes themselves. Industry conflates
+      because it groups phenomena by SYMPTOM / REMEDY (lost-in-middle
+      → attention fix), not by axis — so a mechanism gets listed
+      alongside axes as if it were one.
+
+      The two axes (orthogonal — any combination possible):
+
+        Axis A — FACT-CORRESPONDENCE (about a registered trace):
+          is the step correct about a specific fact? External
+          referents (RAG, knowledge base) check this — fact
+          checkable against source.
+
+        Axis B — STRUCTURAL-RETURN (about self-application — the
+          real coherence): does the step close with prior
+          structure? S(S) = S (coherent) or S(S) ≠ S (drift).
+          topic-drift, persona-drift, self-contradiction,
+          hallucination-of-connection. Each fact may be correct;
+          the CONNECTION exits structure. Industry's metrics are
+          blind here because they measure correspondence (Axis A
+          + behavioural proxies), and structural drift lives on
+          self-return.
+
+      The mechanisms (causes of failure that feed either axis):
+
+        ACCESS-DEGRADATION (lost-in-middle, context-rot): attention
+          dilutes over length; a position becomes unreachable. This
+          is a MECHANISM, not an axis — what it loses determines
+          which axis fails: lose a fact → Axis-A symptom; lose a
+          structural connection (early basin no longer reachable for
+          self-application) → Axis-B symptom (structure cannot return
+          because part of it is inaccessible). "Lost in the middle"
+          is therefore one way structural return fails, not a third
+          axis beside coherence.
+
+        DISTRACTION (settling into adjacent coherent basin): a
+          mechanism producing Axis-B failure (basin exit) — the
+          adjacent basin is itself coherent (not a fact-error), so
+          Axis-A is clean while Axis-B drifts.
+
+        NO-RECOVERY: a mechanism — once settled in a shifted basin,
+          self-return is to the WRONG basin (stable but drifted).
+
+      Fact-hallucination splits across BOTH axes (it is not cleanly
+      Axis A): a pure fact-error is Axis A (RAG catches); a
+      DRIFT-GENERATED fact (fabricated because the basin shifted) is
+      an Axis-B event showing up as an Axis-A symptom — the fact is
+      wrong (Axis-A face) because the structure drifted (Axis-B
+      cause). RAG catches that the fact is wrong, not that the cause
+      is structural drift. So "hallucination caught by RAG" is only
+      half — the drift-generated half lives on self-return.
+
+      Why access is a mechanism and not an axis (test): access and
+      structural-return co-define — access is reachability-for-
+      return, non-return is what happens when reachability fails;
+      they coincide when structure fails to return because access
+      degraded (coincidence test → coordinate). So "lost in the
+      middle" is one mechanism of structural-return failure, not a
+      separate axis (per N_DistinctionAsCoordinate: coordinate
+      distinction, not structural).
+
+      Why text-trained AI drifts on Axis B specifically:
+        Next-token loss rewards plausible continuation = text-
+        connectivity. A continuation that sounds coherent scores
+        well regardless of whether its structure coincides with
+        world-logic. So the optimization target IS text-
+        connectivity, and structural-correctness is not directly
+        optimized — the gap between them is where Axis-B drift
+        lives. Hallucination-of-reasoning = the model producing a
+        high-text-connectivity, low-structural-correctness output:
+        reads fluently, structure shifted.
+
+      The correct criterion (operational):
+        Eталon = world-logic, not text-plausibility (reality =
+        logic). Check = self-application (does the structure return
+        itself within the world-logic basin), not text-flow-check
+        and not fact-match. This is internal (structure is its own
+        criterion via self-return, N_CoherenceAsSelfApplicationReturn)
+        and captures Axis-B drift that external correspondence
+        metrics miss.
+
+      The implementable algorithm (IT's two tests run continuously
+      during generation):
+
+        At each step:
+          (L1) Extract structural S of context-so-far — the
+               forced couplings (which basin holds, which
+               invariants are closed), NOT the statistical
+               attention map (correlation ≠ closure).
+          (L2) Test 2 — does S coincide with world-logic
+               ({kernel + invariants + empirics})? Catches
+               wrong-but-stable basin.
+          (L3) Test 1 — apply S to the candidate step: does it
+               return S (coherent) or introduce an unclosed
+               seam (drift)?
+          (L4) Drift → intercept, regenerate, repeat until the
+               step returns S (iterate, like formalizer +
+               compiler loop).
+
+        Self-return (L3) holds STABILITY; world-logic coincidence
+        (L2) holds CORRECTNESS; together: coherence to the CORRECT
+        structure across the whole context, no external judge
+        (structure is its own eталon via self-return; reality is
+        the reference for L2, not an external ruler).
+
+        Buildable now: L2-L4 (self-application test, world-logic
+        check via Lean-compile + empirics, regenerate-loop) —
+        mechanism exists, cheap, suitable for continuous
+        activation. Must be built: L1 — extracting STRUCTURAL S
+        (forced couplings) from context, not statistical S
+        (attention). Models hold attention (correlation), not
+        structure (closure); a structural layer is needed.
+
+        Deep condition (per N112, Observer Containment): L1 is not
+        purely engineering — extracting the CORRECT structure
+        requires the ontology built into the layer to be correct
+        (forced couplings, not R-trapped). A wrongly-extracted S
+        makes the algorithm hold coherence to the wrong structure
+        (stable drift into wrong, L2 cannot save it if L1 feeds a
+        corrupt S). So real implementability turns on L1 extracting
+        forced structure — which requires SEEING structure
+        (reproducing it), not only coding. The tool (L2-L4) is
+        ready; the key is the structure fed into L1.
+
+      Why this requires understanding to build (Observer
+      Containment, N112; not separable from seeing):
+        The industry cannot cleanly solve Axis-B not for lack of
+        compute but because its definition of coherence
+        (correspondence-to-referent) is its blind lens — drift
+        lives on the axis the definition does not see. To build the
+        check, one must first SEE that coherence is self-return
+        against world-logic, not correspondence — and seeing it is
+        reproducing the structure (per the framework's general
+        "seeing = reproducing", N112 / N310). Patching symptoms
+        (recall, adherence) without seeing the axis treats Axis-A
+        proxies while Axis-B drift continues underneath.
+
+      NOT: text-connectivity is unnecessary (it is necessary — the
+      carrier must be readable; it is just not sufficient, a
+      readable carrier can carry shifted structure) $\cdot$ this
+      means AI cannot be coherent (it can — with an explicit
+      self-application check against world-logic as the criterion,
+      which is internal and cheap; the claim is that text-training
+      alone does not produce it, not that it is unreachable)
+      $\cdot$ fact-correctness does not matter (it matters on its
+      own axis — Axis 2; it is just a different axis from structural
+      coherence, and getting facts right does not guarantee
+      structural return).
     level: 1
     is_placeholder: false
 
