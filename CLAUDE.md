@@ -244,6 +244,37 @@ its own application).
 
 Full structural content: `N_CoherenceAsSelfApplicationReturn`.
 
+### Truth — forced closure, not correspondence (true ⟺ forced)
+
+"Що є істинність?" is essence-request (R1); unpacked, it has a
+forced answer. Truth is **not** correspondence (R2 — no external
+position to compare claim and reality side by side; K(O)<K(F),
+the observer is inside the field, cannot stand outside — N112),
+**not** consensus (a local basin, may be wrong-but-self-returning),
+**not** what-works (downstream).
+
+**Truth IS:** a structure self-returns when applied against
+reality-as-the-one-structure (A_0) — closes without a seam. False
+= produces a **seam** (its own negation) — Russell paradox is the
+concrete mechanism (self-application returns ¬self). **True ⟺
+forced** (IT: forced ⟺ no alternative coheres). "True" and "forced"
+are one cell.
+
+**Three states, not two** (dissolves relativism): true (forced —
+closes uniquely), false (seam against the whole), **underdetermined**
+(multiple alternatives cohere = open question, NOT "multiple
+truths"). Where multiple cohere, the question is not yet closed —
+truth is still one where it closes; relativism mistakes open for
+plural.
+
+**Two checks** (operationally; one in essence): Test 1 local
+self-return (necessary, a wrong basin passes it) + Test 2 self-return
+against the whole (establishes truth, catches the wrong-but-stable
+basin). Truth = self-return against the WHOLE; coherence-alone =
+self-return locally.
+
+Full structural content: `N_TruthAsForcedClosure`.
+
 ### Distinction as coordinate — test before treating as structural
 
 Reality is movement of transitions (R0). Description happens in

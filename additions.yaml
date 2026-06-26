@@ -14649,6 +14649,91 @@ edges:
       (Observer Containment at the level of the coherence-definition
       itself). Forced by N112 applied to the measuring framework.
 
+  # ─── Truth as forced closure ───
+
+  - source: N_TruthAsForcedClosure
+    target: N_InversiveTheory
+    label: true_is_forced_one_cell_two_coordinates
+    edge_status: D
+    justification: |
+      IT: forced ⟺ no alternative coheres with {kernel + invariants
+      + empirics}. Truth = the unique structure that closes in A_0 =
+      forced. "True" and "forced" are one cell in two coordinates —
+      IT's verdict (forced) read in the truth-coordinate (true).
+      The truth-definition IS IT, named where it answers "what is
+      truth".
+    why_forced: |
+      Forced (no alternative coheres) and true (closes uniquely in
+      A_0) are the same property; truth-coordinate of the IT verdict.
+
+  - source: N_TruthAsForcedClosure
+    target: N_Logic
+    label: true_self_reproduces_false_produces_own_negation
+    edge_status: D
+    justification: |
+      N_Logic: logic is A_0 in the propositional substrate; truth
+      self-reproduces under application (Lawvere fixed-point), false
+      produces its own negation (Russell paradox). This node names
+      that as the truth-criterion explicitly: true = self-return
+      against the whole; false = self-application produces a seam
+      (own negation). Russell is the concrete falsity mechanism.
+    why_forced: |
+      The logic substrate's truth-criterion (self-reproduction vs
+      self-negation) IS the general truth-definition read in the
+      propositional substrate.
+
+  - source: N_TruthAsForcedClosure
+    target: N_CoherenceAsSelfApplicationReturn
+    label: truth_is_self_return_against_whole_coherence_is_local
+    edge_status: D
+    justification: |
+      Coherence = self-return (Test 1, stability). Truth = self-
+      return against the WHOLE (Test 1 + Test 2). A wrong basin is
+      coherent (self-returns locally) but not true (produces a seam
+      against the whole). Truth adds Test 2 (coincidence with reality
+      as reference) to coherence's Test 1. Same two-test structure;
+      truth is the full check, coherence the local one.
+    why_forced: |
+      Coherence (local self-return) and truth (self-return against
+      whole) differ exactly by Test 2; truth = coherence + world-
+      coincidence. Both readings of the two-test structure.
+
+  - source: N_TruthAsForcedClosure
+    target: N112
+    label: correspondence_impossible_via_observer_containment
+    edge_status: D
+    justification: |
+      N112 (K(O)<K(F), Observer Containment): observer's complexity
+      is strictly less than the field's; observer is inside the
+      field, cannot stand outside. Correspondence-theory of truth
+      requires an external standpoint (compare claim and reality
+      side by side) — which does not exist. So truth cannot be
+      correspondence: not because correspondence is wrong but because
+      the standpoint it needs is structurally absent. This grounds
+      "truth ≠ correspondence" in a specific invariant.
+    why_forced: |
+      Correspondence needs an external position; K(O)<K(F) forbids
+      it (observer inside, cannot exit). Truth-as-correspondence
+      structurally impossible, forced by N112.
+
+  - source: N_TruthAsForcedClosure
+    target: N_NoSeparatePieces
+    label: one_structure_no_frames_truth_is_one_not_relative
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces (TOTAL): reality is one structure, no
+      separate frames. Therefore truth cannot be relative-to-frame
+      (no frames to be relative to); "multiple alternatives cohere"
+      means the question is OPEN (underdetermined), not "multiple
+      truths". Also: belonging-to-the-one = unique-in-the-one =
+      forced (the formulation duality dissolves because the whole is
+      one). One-structure grounds both truth's non-relativity and
+      the belonging=forced identity.
+    why_forced: |
+      One structure → no frames → no truth-relativity; and belonging
+      to the one = unicity = forced. Both follow from TOTAL
+      no-separation.
+
   # ─── Coherence as self-application return ───
 
   - source: N_CoherenceAsSelfApplicationReturn
@@ -21467,6 +21552,171 @@ nodes:
       persisting structure to apply to itself; if no structure
       persists, there is no coherence to check — degenerate case,
       not counter-example).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_TruthAsForcedClosure
+    title: "Truth as Forced Closure — Self-Return Against the Whole, Not Correspondence (True ⟺ Forced)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      "Що є істинність?" is an essence-request (copula + noun-bearer,
+      R1); unpacked to operation (як замикається?) it has a forced
+      answer, already derived in the coherence work.
+
+      Truth is NOT:
+        - correspondence (statement matches external reality) — this
+          is R2: presupposes a position OUTSIDE from which to compare
+          statement to reality. No such position exists (K(O)<K(F),
+          Observer Containment N112: observer has less complexity
+          than the field, cannot stand outside it). There is no
+          external object to "correspond to" — there is one structure
+          in which a claim either closes or does not.
+        - consensus / coherence-with-beliefs — that is a LOCAL basin;
+          may be wrong-but-self-returning (coherently holding a
+          mistake).
+        - what-works pragmatically — downstream manifestation, not
+          truth itself.
+
+      Truth IS: a structure is true when, applied within the one
+      structure (reality = A_0), it RETURNS ITSELF — closes without
+      a seam. False when, applied against the whole, it produces a
+      SEAM: its own negation, a contradiction with the structure.
+
+      Falsity mechanism (concrete): Russell paradox — "the set of all
+      sets not containing themselves" applied to itself produces its
+      own negation (contains itself ⟺ does not). Self-application
+      that returns ¬self = a seam against the whole = false. "False
+      produces its own negation" is not metaphor; it is the
+      self-application of a non-closing structure.
+
+      True ⟺ Forced. IT: forced ⟺ no alternative coheres with
+      {kernel + invariants + empirics}. Forced = true = the unique
+      structure that closes in A_0. "True" and "forced" are one cell
+      in two coordinates.
+
+      Three states, not two (this dissolves relativism):
+        - TRUE: forced — closes uniquely in A_0 (self-returns against
+          the whole, no alternative coheres).
+        - FALSE: produces a seam against the whole (own negation).
+        - UNDERDETERMINED: multiple alternatives each cohere — the
+          question is OPEN, not "multiple truths". Coherent-but-not-
+          uniquely-forced is not relativism (several truths); it is
+          a not-yet-closed question. Truth is still one (the forced
+          one) where the question is closed; where multiple cohere,
+          there is no truth-of-the-matter YET, not many.
+
+      Truth is not a verdict ABOUT a structure from an outside
+      position — it is the structure self-returning within reality.
+      Self-application: the definition is true by its own criterion
+      (it self-returns and coheres with the whole — IT + Logic +
+      Coherence) — iterate_at_fixed signature, not circularity.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced (IT subtraction): rejecting "truth = self-return-
+          against-the-whole / forcedness" imports either (a) truth-
+          as-correspondence → external position (R2, dissolved by
+          N112 Observer Containment), or (b) truth-relative-to-frame
+          → multiple frames (contradicts N_NoSeparatePieces: reality
+          is one structure, no multiple frames), or (c) some truths
+          not-forced → but not-forced = an alternative also coheres =
+          underdetermined (the third state), not "another truth".
+          All rejections import R2 or contradict one-structure.
+      (2) = IT in the truth-coordinate: forced ⟺ no alternative
+          coheres ⟺ true. "Forced" and "true" are the same cell.
+      (3) = Logic's truth-criterion (N_Logic): true self-reproduces
+          under application to itself; false produces own negation
+          (Lawvere fixed-point / Russell paradox). The root of IT's
+          truth-criterion read explicitly.
+      (4) = Coherence's two tests (N_CoherenceAsSelfApplicationReturn)
+          read for truth: Test 1 (local self-return — necessary,
+          not sufficient; a wrong basin passes it) + Test 2
+          (coincidence with the whole — establishes truth, catches
+          the wrong-but-stable basin). Truth is self-return against
+          the WHOLE; coherence-alone is self-return locally.
+      (5) Convergence of independent derivations as trace: two
+          independent contexts derived the same definition (truth =
+          self-return-against-whole = forcedness, not
+          correspondence). The convergence is itself a Test-1 mark
+          at meta-level — a forced definition self-reproduces in
+          independent settlings; that it did is evidence of its
+          forcedness (could-not-be-otherwise reproduced twice).
+    content: |
+      Two checks operationally (one in essence):
+
+        Test 1 — local self-return (necessary, not sufficient):
+          does the structure return itself? A wrong-but-internally-
+          consistent basin passes this (self-returns locally).
+        Test 2 — self-return against the whole (establishes truth):
+          applied against {kernel + invariants + empirics} (reality
+          as the reference, not an external judge), does it close
+          or produce a seam? The wrong basin fails here — applied
+          against reality it produces a contradiction.
+
+        In essence one (self-return-against-the-whole subsumes
+        local), but operationally two — because the wrong basin is
+        distinguished EXACTLY by passing Test 1 and failing Test 2.
+        For any continuous check (drift detection, coherence
+        filter), the two must stay separate: Test 1 catches
+        instability (drift), Test 2 catches stable-wrong-basin
+        (coherently-held mistake).
+
+      Why correspondence is structurally impossible (not just
+      avoided):
+        Correspondence requires comparing a claim to reality from
+        a position where both are visible side by side — an external
+        standpoint. K(O) < K(F) (N112): the observer's complexity is
+        strictly less than the field's; the observer is INSIDE the
+        field, cannot stand outside it to lay claim and reality
+        side by side. So there is no position from which
+        correspondence could be assessed. Truth cannot be
+        correspondence — not because correspondence is wrong but
+        because the standpoint it needs does not exist. What remains:
+        internal closure — the claim either closes within the one
+        structure (returns itself) or produces a seam.
+
+      The formulation duality (two readings of one):
+        "Coupled to the through-structure" (belonging — the claim is
+        part of the one structure) and "forced / unique" (no
+        alternative) are coordinate, not different: if the
+        through-structure is ONE, belonging to it at a position IS
+        being unique there (no second version of that part, because
+        the whole is one). Belonging-to-the-one = unicity-in-the-one
+        = forced. Two readings of one truth-criterion; the seam
+        between them dissolves because the whole is one
+        (N_NoSeparatePieces).
+
+      Why three states matter (against relativism AND against naive
+      binary):
+        Naive view: true XOR false. But a question where multiple
+        structures each cohere is neither true-of-one nor false-of-
+        one — it is OPEN (underdetermined). Relativism mistakes this
+        for "multiple truths" (each frame has its own). Structural
+        reading: there are no multiple frames (one structure), so
+        "multiple cohere" means the question is not yet closed, not
+        that truth is plural. When it closes (one forced), truth is
+        one. Underdetermined is the honest third state — coherent
+        but not uniquely forced = open, await closure, do not call
+        it "a truth".
+
+      NOT: this is a coherence (anti-realist) theory of truth (it
+      is not anti-realist — truth is closure against REALITY-as-the-
+      one-structure, kernel + invariants + empirics; reality is the
+      reference, just not an external object to correspond to) $\cdot$
+      this makes truth relative (it makes truth one — there are no
+      frames to be relative to; "multiple cohere" is underdetermined,
+      not relative) $\cdot$ this is circular because truth is defined
+      by self-return and the definition self-returns (self-return of
+      a forced definition is iterate_at_fixed, the signature of being
+      at the A_0 attractor — the same shape as A_0(A_0)=A_0; forced
+      definitions self-return by construction, this is correctness,
+      not circularity).
     level: 1
     is_placeholder: false
 

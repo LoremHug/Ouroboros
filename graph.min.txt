@@ -1,8 +1,8 @@
 # OUROBOROS — minified graph (AI dump; bare merged structure, not a visual).
-# nodes=242 edges=1201
+# nodes=243 edges=1206
 # status: D=DEMONSTRATED S=STRONG C=CONDITIONAL O=OPERATIONAL ·=STUB
-# counts: D=237 O=5
-# layers: numeric=126 structure=47 epistemics=23 comms=17 physics=15 observers=8 core=6
+# counts: D=238 O=5
+# layers: numeric=126 structure=47 epistemics=24 comms=17 physics=15 observers=8 core=6
 # line:  ID[status] (A=anchors) summary  >>  tgt:label[edge_status] | ...
 #
 ## numeric
@@ -206,6 +206,7 @@ N_StructuralMotif_PrincipleStratification[D](A5) Generalisation of M2 (K_n famil
 N_StructuralMotif_StructuralTwins[D](A4) Structural motif M3: pairs of nodes (a, b) where neighbor(a) \ b =…  >>  N_MI:twin_instance_information_self_identity[D] | N_OperationalCarrierVsOntologicalCommitment:twins_signal_carrier_layer_redundancy[D] | N_RPfibo:twin_instance_RP_behavioral_pair[D] | N_StructuralMotif_KnFamilyClique:twins_are_K2_limit_of_family_clique[D]
 N_StructuralMotif_ZTriangle[D](A6) A structural motif M observed by graph-level inspection: parent node P → 3…  >>  DEF:motif_is_DEF_decomposition_recurring[D] | N275:motif_instance_physics_CP_scale[D] | N_BPIEngagement:motif_instance_operational_scale[D] | N_FrameworkCore:motif_is_candidate_core_member_at_meta_level[D] | N_InversiveTheory:motif_instance_meta_test_scale[D] | N_NoSeparatePieces:motif_instance_meta_claim_scale[D] | N_Triangulation:motif_specialises_3coord_principle[D]
 N_TranslationLayer[O] Direct translation table for AI use. Apply when ontological language appears…
+N_TruthAsForcedClosure[D](A5) "Що є істинність?" is an essence-request (copula + noun-bearer, R1); unpacked…  >>  N112:correspondence_impossible_via_observer_containment[D] | N_CoherenceAsSelfApplicationReturn:truth_is_self_return_against_whole_coherence_is_local[D] | N_InversiveTheory:true_is_forced_one_cell_two_coordinates[D] | N_Logic:true_self_reproduces_false_produces_own_negation[D] | N_NoSeparatePieces:one_structure_no_frames_truth_is_one_not_relative[D]
 
 ## comms
 N001[D](A8) A classical puzzle in foundations of physics and philosophy of science: if…  >>  N002:multi_observer_paired_with_falsification_criterion[D] | N_CommThm:argmin_Z_principle[D] | N_NoSeparatePieces:multi_observer_dissolution_via_unity[D]
