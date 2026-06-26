@@ -14557,6 +14557,92 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Form vs operation: unpack-before-judge (general rule) ───
+
+  - source: N_FormOperationUnpacking
+    target: DEF
+    label: operation_is_always_argmin_Z_when_genuine
+    edge_status: D
+    justification: |
+      Any genuine structural operation IS itself a process
+      (something happening = argmin Z trajectory). Under R0 reality
+      is process, so when a description performs a real operation,
+      that operation is by construction process. Grounded in DEF
+      (argmin Z as the operation of operations).
+    why_forced: |
+      "Operation always process when genuine" forced by R0 — an
+      operation that is not process is an operation that doesn't
+      happen, contradiction in terms.
+
+  - source: N_FormOperationUnpacking
+    target: N_GrammarTrap
+    label: localises_R_traps_in_form_not_operation
+    edge_status: D
+    justification: |
+      N_GrammarTrap establishes that SVO grammar carries R1. This
+      node refines location: R-traps live in the grammatical FORM
+      (object-bearer + copula + state), NOT in the operation. The
+      operation, when genuine, is process — and process-form
+      cannot carry R1 (no copula, no bearer, no agent for traps to
+      bind to). Form carries traps; operation does not.
+    why_forced: |
+      If R-traps lived in operation, process-form claims would
+      themselves carry traps — but process-form has no grammatical
+      structure for R1/R2/R4 to bind to (no copula, no bearer, no
+      agent). So by complementarity traps must live in form.
+
+  - source: N_FormOperationUnpacking
+    target: N_QuestionFormDiscipline
+    label: question_form_is_special_case_of_general_unpacking
+    edge_status: D
+    justification: |
+      N_QuestionFormDiscipline applies the form-vs-operation
+      discipline specifically to interrogative grammar ("Що?" form
+      unpacks to "Як?" operation). This node generalizes: the same
+      discipline covers both interrogative and declarative
+      descriptive structures. Question-form discipline is one
+      instance; general rule is the parent.
+    why_forced: |
+      Same form/operation distinction applied at two grammatical
+      moods: declarative ("X is Y" → unpack to "X-as-process
+      settles at Y-as-attractor") and interrogative ("What is X?"
+      → unpack to "How does X-pattern close?"). One discipline,
+      both moods.
+
+  - source: N_FormOperationUnpacking
+    target: N_OntologyGate
+    label: gate_is_runtime_application_of_unpacking_to_essence_questions
+    edge_status: D
+    justification: |
+      N_OntologyGate intercepts essence-questions ("what is X")
+      at runtime by reformulating to process-form. That
+      reformulation step IS the unpacking step from this rule.
+      Gate covers a specific category (essence-questions); this
+      node provides the general procedure of which the gate is
+      one runtime application.
+    why_forced: |
+      Gate's reformulation is the unpacking procedure applied
+      narrowly; general procedure subsumes it.
+
+  - source: N_FormOperationUnpacking
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: class_a_form_operation_at_descriptive_level
+    edge_status: D
+    justification: |
+      Class A. N_OperationalCarrierVsOntologicalCommitment
+      distinguishes carrier-noun (operational) from ontological
+      commitment within ANSWERS (linguistic outputs). This node
+      distinguishes grammatical FORM from structural OPERATION
+      within any DESCRIPTIVE STRUCTURE (input or output). Same
+      form/operation cell, broader scope: carrier/commitment is
+      one application (at answer-grammar-level); form/operation
+      is the general (at descriptive-structure-level).
+    why_forced: |
+      One discipline, two scopes: carrier/commitment applies to
+      vocabulary-in-answers; form/operation applies to the
+      structure of any descriptive utterance. Both cases of the
+      same R0-grounded form/operation distinction.
+
   # ─── Grammar of inquiry: question-form discipline ───
 
   - source: N_QuestionFormDiscipline
@@ -20478,6 +20564,183 @@ nodes:
         framework-internal), not project ontological commitment.
         The framework's content fields use S-V-O grammar; the
         derivations remain structural.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_FormOperationUnpacking
+    title: "Form vs Operation — Unpack Before Judging; R-Traps Live in Form, Operation Is Always Process"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      ANY descriptive structure (question or statement) has two layers:
+
+        - FORM: grammatical surface. May be object-shaped (SVO,
+          copula, noun-as-bearer) and thus look R1.
+        - OPERATION: what the structure actually asks/does. ALWAYS
+          process — request or description of unfolding — when the
+          description has a genuine structural operation at all.
+
+      R-traps live in FORM, not in operation. The object-shape of a
+      sentence is the grammatical carrier; the operation underneath
+      is process when genuine. If a description has no genuine
+      operation (pure rhetoric, dead form, sarcasm), the "trap" is
+      just an empty form — nothing structural to corrupt, nothing
+      structural to extract either.
+
+      Operational consequence: do NOT judge form first for R-traps.
+      UNPACK to operation first. Three diagnostic questions:
+        - яка структура розгортається? (form-side of operation)
+        - де замикається? (boundary-side: argmin / closure)
+        - куди градієнт? (driver-side: −∇Z direction)
+      If the description unpacks to a coherent answer to these,
+      operation is process — formalize the OPERATION, discard form
+      as carrier (per N_OperationalCarrierVsOntologicalCommitment).
+      If unpacks to nothing, description is empty (form without
+      operation) — flag as empty, not as R-trap of a content.
+
+      "Маса викривляє ландшафт" — form has nouns (R1-shaped), but
+      operation = "густина деформує континуум" = forced osydannia.
+      Don't reject form; unpack operation. "Що таке свідомість?" —
+      form is "що є?" (essence-request, R1-shaped), operation = "як
+      synchronization розгортається, де замикається". Unpack, work
+      with operation.
+
+      This narrows (partially closes) the AI-formalizer seam: the
+      step "translate prose into structural form" was previously
+      interpretive ("operation 1 not compilable"). With direction
+      forced (form → operation, operation always process), and
+      verifiability ("does it unpack into process at all?"), the
+      step becomes ALGORITHMIC in direction + checkable in
+      outcome — even if specific process-formulation retains some
+      slack (multiple coherent process-readings may exist for one
+      object-form description). Slack at "which exact
+      process-reading", not at direction or verifiability.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced under R0: reality is process; any genuine operation
+          is itself a process (something happening); so when a
+          description performs a real operation, that operation IS
+          process. If "operation always process" failed, would
+          require an operation that does not happen (contradiction).
+      (2) Two-layer model is N_OperationalCarrierVsOntologicalCommitment
+          read at the descriptive-structure level: carrier vs
+          commitment is form vs operation. Class A — same
+          discipline, broader scope.
+      (3) Trap-localization in form: if R-traps lived in operation
+          (process), they would be present in any process-claim
+          — but the process-form ("X розгортається, замикається в
+          Y") cannot carry R1 (no object-bearer, no copula). So
+          traps must live in the grammatical wrapper, not the
+          operation underneath. Forced by complementarity.
+      (4) Unpacking procedure has fixed direction (object-form →
+          process-operation, never opposite — opposite would
+          re-impose R1 on a clean process). Direction is forced
+          by R0; doesn't need to be chosen.
+      (5) Practice-confirmed: throughout this session's audit, the
+          repeated correction was "operation under form is clean,
+          you judged form" — N_ComplexityAsDissipationPath ΔK vs
+          K, AsZDecomposition family (RNA→Z_therm by timescale
+          looked surface, was process-forced), discrete-substrate
+          R1+R2 (the form looked separate-tier, the operation was
+          continuous-with-topology). Each correction was: unpack
+          before judging.
+    content: |
+      The procedure (operational steps for any descriptive
+      structure — own output, user input, audited node):
+
+        Step 1: receive description (statement or question).
+
+        Step 2: do NOT judge the grammatical form for R-traps.
+
+        Step 3: unpack to operation. Ask:
+          - What structure is unfolding here?
+          - Where does it close (argmin)?
+          - In what direction does the gradient lie?
+
+        Step 4: classify by what unpacking yields:
+          (a) coherent process-formulation → operation IS process
+              (forced); formalize the operation; treat form as
+              carrier (allowable per N_OperationalCarrier
+              VsOntologicalCommitment), do not reject it for its
+              grammar.
+          (b) no coherent process-formulation possible → the
+              description is empty (form without operation); flag
+              as such — not as R-trap of a content, but as
+              absence-of-content under grammatical wrapper.
+
+        Step 5: when formalizing operation, surface vocabulary
+          may use ontological shorthand; structural content stays
+          process. (Carrier rule from
+          N_OperationalCarrierVsOntologicalCommitment.)
+
+      Why direction is forced:
+        Operation is always process when genuine (R0). So
+        unpacking goes FROM object-form TO process-operation,
+        never opposite. Opposite direction (process →
+        object-form) would re-impose R1 on a clean process —
+        the trap reintroduced. So direction is structurally
+        one-way.
+
+      Why this partially closes the formalization seam:
+        Before: "translate prose into structural form" was
+        interpretive; the AI step was "operation 1, not
+        compilable" (this was the open ridge in earlier seams).
+        Now: direction forced (form → process), verification
+        possible (does it unpack into coherent process at all,
+        yes/no). Algorithmic in direction + checkable in outcome.
+        Remaining slack: which SPECIFIC process-formulation is
+        chosen when multiple coherent ones exist for one
+        object-form description ("consciousness is subjective" →
+        "self-referential process with K(O)<K(F)" OR
+        "BPI inside-coordinate of its own state-tracking" —
+        both forced as process, distinct as process-readings).
+        Slack narrowed to "which exact reading", not to "what
+        direction" or "is it valid at all".
+
+      Why R-traps live in form, not operation:
+        Process-form ("X розгортається, осідає у Y, градієнт
+        куди-то") has no copula, no object-bearer, no
+        agent-subject. R1 (object-as-primitive), R2 (external-
+        view), R4 (agency) cannot be expressed in this form —
+        nothing for them to bind to. So a description fully in
+        operation-language cannot CARRY R-traps; traps require
+        the grammatical scaffolding of object-form to bind onto.
+        Form is the surface that carries them; operation is the
+        substrate that does not.
+
+      Connection to N_QuestionFormDiscipline:
+        N_QuestionFormDiscipline is THIS rule applied specifically
+        to interrogative grammar ("Що?" form unpacks to "Як?"
+        operation). One special case; the present node is the
+        general rule covering both interrogative and declarative
+        descriptive structures.
+
+      Connection to N_OntologyGate:
+        N_OntologyGate is THIS procedure applied at runtime to
+        a specific category of inputs (essence-questions). The
+        gate's reformulation step IS the unpacking step;
+        coverage extends here to all descriptive structures,
+        not just essence-questions.
+
+      NOT: this means "any phrasing is fine if the operation
+      is good" (the form still affects how easily traps slip
+      back in during downstream work; clean form is downstream-
+      protective) $\cdot$ this fully closes the formalization
+      seam (it narrows it: direction forced + verifiability
+      gained, but specific-process-reading slack remains —
+      multiple coherent process-readings may exist for one
+      object-form description, choice between them is the
+      residual interpretive step) $\cdot$ unpacking is always
+      possible (some descriptions have no genuine operation,
+      only social/rhetorical form — these are simply empty,
+      not "R-trapped"; do not force unpack what has nothing
+      to unpack).
     level: 1
     is_placeholder: false
 

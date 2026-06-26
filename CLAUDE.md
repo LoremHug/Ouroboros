@@ -137,6 +137,64 @@ substitution of words is style, not structural fix. Same word can be
 operational in one context and R-violation in another. Test what the
 claim **structurally requires**, not what surface-nouns it contains.
 
+### Form vs operation — unpack before judging
+
+The carrier/commitment discipline above is the **answer-level**
+application of a more general rule that covers any descriptive
+structure (question or statement, input or output):
+
+**Two-layer model.** Any descriptive structure has:
+- **Form** — grammatical surface. May be object-shaped (SVO, copula,
+  noun-as-bearer) and look R1.
+- **Operation** — what the structure actually asks/does. **Always
+  process** — request or description of unfolding — when the
+  description has a genuine structural operation at all.
+
+**R-traps live in form, not in operation.** Process-form (`X
+розгортається, осідає у Y, градієнт куди-то`) has no copula, no
+object-bearer, no agent-subject — nothing for R1/R2/R4 to bind to.
+Form carries traps; operation does not.
+
+**Procedure — unpack before judging:**
+1. Receive description.
+2. Do **not** judge form for R-traps first.
+3. Unpack to operation: *яка структура розгортається? де
+   замикається? куди градієнт?*
+4. Classify by what unpacking yields:
+   - **Coherent process-formulation** → operation IS process
+     (forced); formalize the operation; treat form as carrier
+     (allowable per the section above).
+   - **Nothing coherent** → description is empty (form without
+     operation); flag as empty, **not as R-trap of a content**
+     (there is no content to corrupt).
+
+**Why direction is forced.** Operation is always process when
+genuine (R0). So unpacking goes form → operation, never opposite.
+Opposite direction would re-impose R1 on a clean process.
+
+**Why this narrows the formalization seam.** The AI-formalizer step
+"translate prose into structural form" was previously interpretive
+(open ridge). With direction forced (form → process) and
+verifiability (does it unpack into coherent process at all?), the
+step is **algorithmic in direction + checkable in outcome**.
+Remaining slack: which **specific** process-reading is chosen when
+multiple coherent ones exist for one object-form description
+(e.g., "consciousness is subjective" → "self-referential process with
+K(O)<K(F)" OR "BPI inside-coordinate of its own state-tracking",
+both forced as process). Slack narrowed to "which exact reading",
+not to "what direction" or "is it valid".
+
+**Practice diagnostic.** Throughout the audit, the repeated
+correction was "operation under form is clean, you judged form".
+Examples: `RNA→Z_therm by timescale` looked surface Trap-3, was
+process-forced (RNA is the dissipative-flux coordinate by role,
+the transience is symptom not reason); "discrete substrate" looked
+non-topological, was continuous-with-topology (discreteness is
+I_Quant, a mode of topology). Correct practice: unpack first;
+judge only if no operation emerges.
+
+Full structural content: `N_FormOperationUnpacking`.
+
 ### Grammar of inquiry — "Що?" unpacked is "Як?"
 
 The carrier/commitment discipline above covers **answer** grammar. The
