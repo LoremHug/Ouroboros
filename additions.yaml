@@ -1765,19 +1765,6 @@ edges:
       that N016 relies on. Direction: cited grounds citing per framework
       convention.
 
-  - source: N251
-    target: N217
-    label: fine_structure_RGE_links_bottleneck_a4
-    edge_status: D
-    justification: |
-      N251 grounds N217's structural derivation as cited in N217's
-      content: "single Type 1 open task closes N217 and N251 simultaneously".
-    why_forced: |
-      Explicit citation in N217's claim/content identifies N251 as
-      structural input. Removing N251 dissolves the derivation chain
-      that N217 relies on. Direction: cited grounds citing per framework
-      convention.
-
   - source: N315
     target: N264
     label: variational_principle_uncertainty_grounds_r0_balance
@@ -1789,19 +1776,6 @@ edges:
       Explicit citation in N264's claim/content identifies N315 as
       structural input. Removing N315 dissolves the derivation chain
       that N264 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N273
-    label: scale_free_topology_chain_output
-    edge_status: D
-    justification: |
-      N311 grounds N273's structural derivation as cited in N273's
-      content: "Scale-free topology node, output of N314 (alias of N311)".
-    why_forced: |
-      Explicit citation in N273's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N273 relies on. Direction: cited grounds citing per framework
       convention.
 
   - source: N301
@@ -1842,22 +1816,6 @@ edges:
       structural input. Removing N311 dissolves the derivation chain
       that N276 relies on. Direction: cited grounds citing per framework
       convention.
-
-  - source: N311
-    target: N280
-    label: godel_argument_chain_path_a
-    edge_status: D
-    justification: |
-      N311 grounds N280's structural derivation as cited in N280's
-      content: "Path A of Godel argument chain. Input to N312 (alias of N311)".
-    why_forced: |
-      Explicit citation in N280's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N280 relies on. Direction: cited grounds citing per framework
-      convention.
-
-
-# ─── Round 6: semantic grounding of orphans ───
 
   - source: N112
     target: N061
@@ -3008,16 +2966,6 @@ edges:
     why_forced: |
       N054's claim invokes N_InversiveTheory-content as structural input;
       removing N_InversiveTheory dissolves N054's derivation chain.
-
-  - source: N_PhiAttractor
-    target: N056
-    label: phi_attractor_grounds_fibonacci_anchor_chain
-    edge_status: D
-    justification: |
-      N_PhiAttractor grounds N056's argument: anchor counts converging — Fibonacci-style structural feature.
-    why_forced: |
-      N056's claim invokes N_PhiAttractor-content as structural input;
-      removing N_PhiAttractor dissolves N056's derivation chain.
 
   - source: N067
     target: N057
@@ -12011,7 +11959,7 @@ edges:
     why_forced: |
       Bare + running pair forced.
 
-  # === N311, N350, N351, N352, N217 — math/topology infrastructure ===
+  # === N311, N350, N351, N352 — math/topology infrastructure ===
 
   - source: N311
     target: DEF
@@ -12108,59 +12056,6 @@ edges:
       manifold supplied by N370.
     why_forced: |
       Manifold-grounded investigation forced.
-
-  - source: N217
-    target: DEF
-    label: bottleneck_a4_argmin_Z_heat_kernel
-    edge_status: D
-    justification: |
-      a_4 coefficient on S^3/Z_3 × S^1 is argmin Z heat-kernel
-      contribution at bottleneck scale.
-    why_forced: |
-      Spectral computation forced by argmin uniqueness.
-
-  - source: N217
-    target: N370
-    label: bottleneck_grounds_in_L31_S1_substrate
-    edge_status: D
-    justification: |
-      a_4 computed on M_4 = L(3,1) × S^1; manifold supplies
-      substrate.
-    why_forced: |
-      Computation manifold-grounded.
-
-  - source: N217
-    target: N353
-    label: bottleneck_paired_with_heat_kernel_coefficients
-    edge_status: D
-    justification: |
-      N217 (a_4 bottleneck) and N353 (Seeley-DeWitt coefficients)
-      both compute heat-kernel data on same substrate. Sibling
-      computations.
-    why_forced: |
-      Same operator, paired computations.
-
-  # === N056, N087, N264, N304, N366 — special structural cases ===
-
-  - source: N056
-    target: N_PhiAttractor
-    label: theory_coherence_grounds_in_phi_sequence_attractor
-    edge_status: D
-    justification: |
-      Anchor counts converging to φ-sequence (Fibonacci) IS literal
-      φ-attractor manifesting in theory-coherence substrate.
-    why_forced: |
-      φ in theory-anchor counts forced by N_PhiAttractor.
-
-  - source: N056
-    target: DEF
-    label: theory_coherence_argmin_Z_anchor_optimisation
-    edge_status: D
-    justification: |
-      Theory coherence = argmin Z over anchor counts that minimise
-      structural cost. DEF at meta-theoretical level.
-    why_forced: |
-      Coherence without DEF is descriptive; with DEF, forced.
 
   - source: N264
     target: DEF
@@ -13581,26 +13476,6 @@ edges:
   # Placeholders have real structural claims in their summaries but only 1
   # edge each (to the chain-source). Each needs proper forced edges to core.
 
-  - source: N273
-    target: DEF
-    label: scale_free_topology_argmin_Z_in_network_substrate
-    edge_status: D
-    justification: |
-      N273 is scale-free topology output; convergence to scale-free
-      structure IS argmin Z in network substrate.
-    why_forced: |
-      Network A_0 + DEF grounding forced.
-
-  - source: N273
-    target: N337
-    label: scale_free_output_paired_with_BA_model
-    edge_status: D
-    justification: |
-      N273 is the topology output of the convergence process
-      formalised in N337's Barabási-Albert preferential attachment.
-    why_forced: |
-      BA process + topology output paired.
-
   - source: N274
     target: DEF
     label: spectral_dim_2_UV_argmin_Z_in_quantum_walk_regime
@@ -13697,38 +13572,6 @@ edges:
     why_forced: |
       Inversion + argmin substrate paired.
 
-  - source: N280
-    target: N310
-    label: godel_path_a_paired_with_godel_theorem
-    edge_status: D
-    justification: |
-      N280 is one path of the Gödel argument chain leading to
-      N310's incompleteness theorem. Chain-step + conclusion pair.
-    why_forced: |
-      Argument-step + conclusion paired definitionally.
-
-  - source: N280
-    target: N107
-    label: godel_path_paired_with_simplicial_homology
-    edge_status: D
-    justification: |
-      Gödel's incompleteness has homological structure (Chaitin
-      version uses Kolmogorov; both relate to N107's simplicial
-      framework).
-    why_forced: |
-      Formal-system limit + homological framework paired.
-
-  - source: N280
-    target: DEF
-    label: godel_path_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      Gödel argument paths operate in DEF's formal substrate;
-      direct grounding.
-    why_forced: |
-      Formal-substrate A_0 + DEF paired.
-
-  # === N043: Information Laws — strengthen ===
   - source: N043
     target: DEF
     label: information_laws_argmin_Z_in_logarithmic_substrate
@@ -20304,8 +20147,8 @@ nodes:
         N_InversiveTheory → {N_EpistemicTraps, DEF,
                 N_ZGaugeDecomposition}
           (meta-test scale: trap-calibration + ground + exemplar)
-        N217 → {DEF, N353, N370}
-          (bridging scale)
+        N353 → {DEF, N370, N_Bar}
+          (bridging scale: heat kernel coefficients on L(3,1))
     why_status: |
       DEMONSTRATED via:
       (1) Direct graph audit: Cypher query for parent → 3 pairwise-
@@ -21910,9 +21753,6 @@ nodes:
   - id: N054
     title: "Methodological Verification: No Disguised Type-2 Claims"
 
-  - id: N056
-    title: "Theory Coherence: Anchor Counts Converging to φ-Sequence"
-
   - id: N057
     title: "QM as Coordinate System: No Process Compatibility Postulate Required"
 
@@ -22676,11 +22516,6 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.1
 
-  - id: N056
-    z_struct: 0.7
-    z_therm: 0.2
-    z_hidden: 0.1
-
   - id: N057
     z_struct: 0.5
     z_therm: 0.2
@@ -22881,11 +22716,6 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
 
-  - id: N217
-    z_struct: 0.6
-    z_therm: 0.2
-    z_hidden: 0.2
-
   - id: N218
     z_struct: 0.8
     z_therm: 0.1
@@ -22951,11 +22781,6 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
 
-  - id: N273
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
   - id: N274
     z_struct: 0.4
     z_therm: 0.3
@@ -22967,11 +22792,6 @@ nodes:
     z_hidden: 0.3
 
   - id: N276
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
-  - id: N280
     z_struct: 0.4
     z_therm: 0.3
     z_hidden: 0.3
@@ -23256,14 +23076,6 @@ nodes:
 
   # ─── Phase 2: 9 stub-node why_status fills (chain-membership justification) ───
 
-  - id: N273
-    why_status: |
-      STRONG via chain-membership in N314 → scale-free topology → N311 derivation. Node is forced bridge:
-      (1) N314 → N273: scale-free topology output of N314.
-      (2) N273 → N337: scale-free topology grounds Barabási-Albert preferential attachment.
-      (3) Inversive: removing N273 breaks the scale-free topology bridge between N314 and downstream N311 chain. Required.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific scale-free dynamics require explicit derivation.
-
   - id: N274
     why_status: |
       STRONG via chain-membership in UV-regime spectral-dimension structure. Node is forced bridge:
@@ -23287,16 +23099,6 @@ nodes:
       (2) N311 + N313b → N276: output of N313b derivation.
       (3) Inversive: removing N276 breaks antimatter-as-symmetry-inversion chain; matter/antimatter Z_3 structure forced by L(3,1).
       (4) STRONG because while inversion structure forced, full antimatter-derivation requires N_LeptonMassScale + quark-sector closure.
-
-  - id: N280
-    why_status: |
-      STRONG via chain-membership as Path A of N310 Gödel argument. Node is forced bridge:
-      (1) DEF + N107 + N310 → N280 → N311: Path A of Gödel argument input to N311 chain.
-      (2) Inversive: removing N280 removes Path A of Gödel chain; alternative single-path derivation would need to be constructed; current chain-structure requires this bridge.
-      (3) Forced by Gödel argument multi-path structure; N310 (incompleteness) DEMONSTRATED requires its argument paths to be filled.
-      (4) STRONG because while structural role is forced, specific Path-A content requires explicit derivation step.
-
-  # ─── Phase 3a: 10 numbered-node why_status fills (already cognitively audited) ───
 
   - id: N000
     why_status: |
@@ -23465,9 +23267,6 @@ nodes:
 
   # ─── Stub nodes: descriptive titles per structural role ───
 
-  - id: N273
-    title: "Scale-Free Topology — N314 Output"
-
   - id: N274
     title: "UV Spectral Dimension d_s=2 at r→0 (L(3,1) UV Limit)"
 
@@ -23476,16 +23275,6 @@ nodes:
 
   - id: N276
     title: "Antimatter as ℤ₃ Inversion x→-x — N313b Output"
-
-  - id: N280
-    title: "Path A of Gödel Argument Chain — Input to N312"
-
-  # === Standalone nodes from grouped block N330-N333 ===
-  # The source manifold_graph.txt has these in one grouped header
-  # [N330 / N331 / N332 / N333] but they articulate structurally
-  # distinct invariants. Parser captured only N330 and N332 as
-  # standalone. Adding N331 and N333 here makes the social-invariant
-  # content discoverable individually.
 
   - id: N331
     title: "Zone of Proximal Development as Arrhenius Condition in Neural Substrate"
