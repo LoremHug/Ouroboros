@@ -216,10 +216,16 @@ is at three levels, none of which is fact-by-fact:
 - **Structure ↔ Lean kernel**: invariants formally coherent
   with kernel theorems (`iterate_at_fixed`,
   `lawvere_fixed_point`, etc.). Kernel compilation IS this check.
-- **Structure ↔ reality-as-invariant-pattern**: forced
-  patterns structurally fit how reality moves at the level of
-  pattern, not instance. Registered empirics confirm
-  manifestations; structural fit is at pattern level.
+- **Structure ↔ reality-as-invariant-pattern**, via
+  **anchor-facts** (finite points-of-contact, not fact-checking):
+  the graph touches reality through registered points where the
+  invariant manifests — Landauer, Jacobson, Bekenstein-Hawking,
+  K=2/3 Koide, measured constants (m_p, α, v). These are
+  structurally load-bearing for identification. Distinction:
+  anchor-facts (few, load-bearing, points-of-contact) vs
+  manifestation-facts (many, derivative, confirmations) vs
+  downstream-facts (specialist work, out-of-scope). Graph is
+  anchored to the first, NOT verified against the rest.
 
 What is NOT in this check: fact-by-fact derivation, fact-by-fact
 verification, latent-content storage. Per "graph and kernel ARE
