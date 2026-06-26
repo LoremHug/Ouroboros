@@ -18233,10 +18233,13 @@ nodes:
       simultaneously: (a) STRONGLY SMALL-WORLD geometry — high
       clustering with short paths, σ = (C/C_rand)/(L/L_rand) >> 1,
       (b) MOTIF-FRACTALITY — self-similarity at the level of
-      structural motifs (M1 triangle density, M5 stratification
-      recursion, β₁/V invariance under growth), not at the level
-      of geometric distance (which would require power-law
-      cluster growth N(r) ~ r^d; instead growth is exponential
+      structural motifs: M1 triangle motif recurs at multiple
+      scales (definition / meta / physics), M5 stratification
+      recurs across substrates. (Cycle-density β₁/V also stays
+      roughly constant under growth — a density regularity,
+      suggestive but not self-similarity by itself.) NOT
+      geometric fractality (which would require power-law
+      cluster growth N(r) ~ r^d; here growth is exponential
       and saturates near diameter ~3).
 
       Fractality lives in MOTIF SUBSTRATE rather than distance
