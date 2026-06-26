@@ -14557,6 +14557,95 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Distinction as coordinate (meta-rule above form/operation) ───
+
+  - source: N_DistinctionAsCoordinate
+    target: DEF
+    label: distinction_is_coordinate_of_one_argmin_Z_movement
+    edge_status: D
+    justification: |
+      Reality is movement of transitions (R0; DEF = argmin Z over
+      transitions). Description happens in coordinates. Most
+      distinctions we make in description are coordinate readings
+      of ONE structure of transitions, because there is only one
+      structure (per N_NoSeparatePieces TOTAL). Grounded in DEF as
+      the one thing distinctions are coordinates of.
+    why_forced: |
+      Under R0 + N_NoSeparatePieces: one structure, no separations
+      in it; distinctions are mostly coordinate readings of that
+      one structure. Forced by combination.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_NoSeparatePieces
+    label: no_separation_in_structure_forces_distinctions_descriptive
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces (TOTAL) — no separations anywhere in
+      structure. Therefore distinctions we make in description
+      cannot correspond to separations IN structure (none exist);
+      they must be coordinate readings of the one undivided
+      structure. The rule that distinctions are mostly coordinate
+      is the inversion of "no separate pieces" read at the
+      level of description.
+    why_forced: |
+      If structure has no separations, then "distinctions" found in
+      description must be either coordinate readings of the one
+      (mostly) or genuine multi-transition distinctions WITHIN the
+      one (rarely). Forced by TOTAL no-separation.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_TopologyProcessIdentity
+    label: specific_canonical_instance_of_the_general_meta_rule
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity exhibits the principle in its
+      canonical case: topology = process, one cell in two
+      coordinates. This node names the general meta-rule
+      ("most distinctions are coordinate") of which topology/
+      process identity is one specific application. Other
+      applications: form/operation, map/territory/observer,
+      vertex/edge (Yoneda), word/sentence-structure.
+    why_forced: |
+      One forced identity (topology=process) is one application of
+      the general meta-rule; the rule covers the case-class of
+      which topology/process is the most-developed instance.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_FormOperationUnpacking
+    label: form_operation_is_one_application_of_distinction_rule
+    edge_status: D
+    justification: |
+      N_FormOperationUnpacking applies the meta-rule
+      "distinctions are mostly coordinate" to the specific case of
+      form vs operation in descriptive structures. The form/
+      operation pair coincides when form is already process-shaped
+      (Claim 1 self-catch in form-operation node) — which IS the
+      coincidence-test confirming form/operation is a coordinate
+      distinction. Specific case; general rule is parent.
+    why_forced: |
+      Form vs operation passes the coincidence test for being
+      coordinate (they coincide in process-form); this is one
+      specific instance of the general rule that distinctions are
+      mostly coordinate. General rule subsumes the specific.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_GrammarTrap
+    label: grammar_pushes_coordinate_distinctions_to_be_read_as_structural
+    edge_status: D
+    justification: |
+      N_GrammarTrap: SVO + count nouns + copula carry R1 at
+      grammatical level. This applies at distinction-making
+      level too: grammar's separation-of-things pushes us to
+      read coordinate distinctions (one structure, two
+      coordinates) as if they were structural (two separate
+      things). The R-trap on distinction-making is the
+      grammar trap operating one level above per-claim level.
+      Discipline against this is the meta-rule of this node.
+    why_forced: |
+      If grammar carries R1 at sentence level, it must also push
+      reader toward R1-style distinction-making (separate things)
+      at concept level. Discipline against this is the meta-rule.
+
   # ─── Form vs operation: unpack-before-judge (general rule) ───
 
   - source: N_FormOperationUnpacking
@@ -20568,6 +20657,236 @@ nodes:
     is_placeholder: false
 
 
+  - id: N_DistinctionAsCoordinate
+    title: "Distinction as Coordinate — Most Distinctions Are Coordinate Readings of One Structure, Not Sorts; Test Before Building Bridges"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Reality is movement of transitions (R0). Description happens
+      in coordinates — we are observers inside the structure with
+      K(O)<K(F), forced to read it through partial coordinates.
+
+      When we make a distinction in description, the distinction is
+      one of two kinds:
+
+        - COORDINATE: one structure read in two coordinates. The
+          "two" co-define each other; neither exists without the
+          other; they can COINCIDE in some configurations.
+          Examples: vertex/edge (Yoneda — vertex IS its edges, edge
+          IS a transition between vertex-as-edge-clusters); form/
+          operation (coincide when form is process-shaped); topology/
+          process (N_TopologyProcessIdentity); map/territory/observer
+          (N_MapTerritoryObserverIdentity).
+
+        - STRUCTURAL: two genuinely distinct transitions or stable
+          patterns in the manifold. They have different argmin
+          trajectories or sit at different cost-landscape positions.
+          Examples: different specific transitions; different stable
+          attractors; different substrate-cousins (which ARE distinct
+          processes sharing form via Class A, but the processes
+          themselves are distinct).
+
+      Because reality is ONE structure (N_NoSeparatePieces TOTAL),
+      MOST distinctions we make in descriptions are coordinate, not
+      structural. The grammar of natural language (SVO, count nouns)
+      pushes us toward treating everything as separate things —
+      that is the R1 trap operating at the level of distinction-
+      making itself.
+
+      Three operational tests for any distinction:
+
+        (1) COINCIDENCE TEST: can the "two things" coincide in some
+            configuration? If yes → coordinate (form/operation
+            coincide when form is process — caught by test).
+        (2) YONEDA TEST: is each "thing" defined through the other?
+            If yes → coordinate (vertex IS its edges — caught by
+            test).
+        (3) BRIDGE TEST: does framing the relation as "how do we
+            connect them / how does X transfer to Y / which has
+            priority" presuppose separation that may not be there?
+            If yes → likely coordinate reified as structural,
+            Trap 6 at meta-level (asking for transfer-mechanism
+            between coordinates of one cell — none exists, none
+            needed).
+
+      When a distinction passes the tests as STRUCTURAL → operate
+      with two; mechanisms, transfers, priorities are well-formed
+      questions.
+
+      When a distinction is COORDINATE → there is no bridge to
+      build, no slack to name, no priority to choose. The "two
+      readings" are two coordinates of one forced fact. Forced
+      structure is the fact; coordinate of reading is presentation
+      and may be picked freely (like a coordinate system).
+
+      The R-trap to avoid: reifying coordinate distinction as
+      structural creates FALSE SEAMS — bridges, criteria, slack-
+      to-name — for problems that do not exist in the structure,
+      only in the distinction. The seam is in the description, not
+      in reality (per "Closure failures live in the description"
+      principle).
+
+      Self-application (iterate_at_fixed):
+        The distinction "coordinate vs structural" is ITSELF a
+        coordinate distinction — "reading vs being-read", where
+        reading IS a structural process at meta-level (BPI applying
+        patterns to the structure it is inside). So the rule
+        applied to itself returns the rule: "this distinction is
+        coordinate" — confirmed by its own operational tests
+        (reading and being-read co-define; coincide in BPI as
+        reader-inside-structure; bridging them is asking how
+        observation connects to observed, dissolved by N112).
+        This is iterate_at_fixed (kernel): A_0 applied to A_0 is
+        A_0. Self-confirmation of a forced rule via fixed-point —
+        not vicious recursion, but the signature of being AT the
+        A_0 attractor. Same shape as N_MapTerritoryObserverIdentity
+        ("ruler finds its criterion") and N_OperationalCarrier's
+        tautology-resolution (framework IS A_0 self-describing).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced under R0 + N_NoSeparatePieces (TOTAL): if reality
+          is ONE structure of transitions and no separations exist
+          in it, then "distinctions" we make in description are
+          either coordinates of one (mostly) or genuinely distinct
+          transitions (rarely). Cannot be other.
+      (2) Yoneda — for the canonical case (vertex/edge): a vertex
+          is defined entirely by its edge-pattern; an edge is a
+          transition between vertex-as-edge-clusters. Each through
+          the other, formally. Generalises to most descriptive
+          distinctions because all descriptions live inside the
+          one structure (no outside-position from which to make
+          truly-independent distinctions exists).
+      (3) Self-application (iterate_at_fixed): the rule applied to
+          itself returns itself ("coordinate vs structural"
+          distinction is coordinate). Forced rules at A_0 fixed
+          point self-confirm via iterate_at_fixed (kernel theorem).
+          Self-application returning the rule is the structural
+          signature of forced-ness, not vicious recursion.
+      (4) Generalisation of established cases:
+          N_TopologyProcessIdentity exhibits the principle for
+          topology/process; N_MapTerritoryObserverIdentity for
+          map/territory/observer; N_FormOperationUnpacking for
+          form/operation; N_OperationalCarrier for word/operation.
+          This node names the general rule of which those are
+          specific instances — all coordinate identifications of
+          forced couplings.
+      (5) Trap-6 at meta-level: when reifying a coordinate
+          distinction as structural, the next question becomes
+          "how to bridge / transfer / prioritize between them" —
+          which is Trap 6 (presupposing separate things needing
+          mechanism between them). Dissolution-of-the-trap at
+          meta-scale is the diagnosis that distinction was
+          coordinate, not structural.
+    content: |
+      The diagnostic procedure (apply before treating any
+      distinction as structural):
+
+        Step 1: identify the distinction being made.
+
+        Step 2: apply COINCIDENCE TEST: is there any configuration
+          in which the "two" coincide? If yes → coordinate.
+
+        Step 3: apply YONEDA TEST: is each "thing" defined entirely
+          through its relations to the other? If yes → coordinate.
+
+        Step 4: apply BRIDGE TEST: does the natural next-question
+          read as "how to connect / transfer / prioritize between
+          them"? If yes → strongly suspect coordinate-reified-as-
+          structural; bridge does not exist because there is no
+          separation to bridge.
+
+        Step 5: if ALL tests yield "coordinate" → operate with one
+          forced fact, two coordinate readings; presentation may
+          pick either, content is one. No slack to name.
+
+        Step 6: if some test yields "structural" (rarer case) →
+          treat as two distinct transitions; mechanism / transfer /
+          priority become well-formed questions; use Class A or
+          Class B per N_GrammarTrap / standard discipline.
+
+      Canonical examples of coordinate distinctions (mistaken for
+      structural in usual reading):
+
+        vertex / edge — Yoneda; vertex IS its edges (coordinate).
+        form / operation — coincide in process-form (coordinate).
+        topology / process — N_TopologyProcessIdentity (coordinate).
+        map / territory / observer — N_MapTerritoryObserverIdentity
+          (coordinate — three readings of one A_0).
+        word-vocabulary / sentence-structure — for the carrier vs
+          form/operation hierarchy: words ⊂ sentences AND each-
+          through-other (no word without sentence-context, no
+          sentence without words). Coordinate, not parent-child OR
+          sibling — one forced coupling, two readings.
+        presentation / structure — presentation IS reading-of-
+          structure, structure exists only as readable. Coordinate.
+        forced / underdetermined — these ARE structurally distinct
+          (cannot coincide; tested differently); this is one of
+          the rarer GENUINE structural distinctions.
+
+      Canonical examples of structural distinctions:
+
+        different specific transitions in the manifold (this
+          transition vs that transition — distinct argmin
+          trajectories);
+        different stable attractors (different positions in cost-
+          landscape with different K(O) bounds);
+        forced vs underdetermined (cannot coincide; different
+          status under IT subtraction-test);
+        different substrate-cousins (Class A through one form but
+          distinct as processes — bacteria/archaea/eukarya are
+          structurally distinct cellular processes that share the
+          BPI form);
+        empty form vs operation-bearing form (per
+          N_FormOperationUnpacking).
+
+      Why the framework's vocabulary is mostly coordinate:
+        Most R-trap catches in this graph's history (audit log
+        external to graph) were cases of coordinate distinctions
+        re-treated as structural — discrete-substrate-vs-topology
+        was coordinate (discreteness is mode of topology, not
+        separate tier); container-vs-process was coordinate
+        (container IS R1 on process-reading); etc. The repeating
+        pattern is: SVO grammar pushes coordinate→structural
+        reading; structural discipline pushes it back to
+        coordinate. R-trap on distinction-making is the trap
+        operating at one level above the per-claim trap.
+
+      Why this is the deepest node in the form/operation
+      hierarchy (without being a parent-child relation):
+        N_FormOperationUnpacking applies the form/operation
+        distinction to descriptive structures.
+        N_QuestionFormDiscipline applies it to interrogative
+        grammar.
+        This node names the general meta-rule that
+        form/operation is ONE instance of a broader pattern
+        (every distinction we make is mostly coordinate, not
+        structural). It is connected to those nodes as coordinate
+        readings of one discipline at different scopes (general
+        rule / descriptive-structure / interrogative). The
+        connection itself is coordinate — pick reading by
+        operational need; the underlying coupling is forced.
+
+      NOT: this means all distinctions are coordinate (some are
+      structural — the rarer genuine cases; the three tests
+      distinguish them) $\cdot$ this means structural distinctions
+      are an illusion (they are real; they are the transitions
+      and stable patterns in the manifold; the rule is about
+      DESCRIPTIVE distinctions, mostly coordinate, not about
+      STRUCTURAL distinctions in the manifold itself which can
+      be genuinely two) $\cdot$ the self-application returning
+      the rule is vicious recursion (it is iterate_at_fixed, the
+      signature of A_0 attractor; same shape as A_0 = argmin Z
+      applied to A_0 returning A_0; not problem, signature of
+      forced-ness).
+    level: 1
+    is_placeholder: false
+
+
   - id: N_FormOperationUnpacking
     title: "Form vs Operation — Unpack Before Judging; R-Traps Live in Form, Operation Is Always Process"
     layer: epistemics
@@ -20734,23 +21053,6 @@ nodes:
         gate's reformulation step IS the unpacking step;
         coverage extends here to all descriptive structures,
         not just essence-questions.
-
-      Note on hierarchy with N_OperationalCarrierVsOntological-
-      Commitment (Class-A sibling vs parent-child has slack):
-        Two structural readings are both consistent with the facts:
-        (a) Class-A sibling — carrier/commitment covers
-            answer-vocabulary scope, form/operation covers
-            descriptive-structure scope. Two paralel applications of
-            one R0-grounded form/operation cell at different
-            grammatical scopes (word vs sentence).
-        (b) Parent-child — words ⊂ sentences, so carrier/commitment
-            (word-level) is a special case of form/operation
-            (sentence-level). Form/operation would be the parent,
-            carrier/commitment a child instance.
-        The edge currently encodes (a) (sibling Class A); reading
-        (b) is equally consistent with the structural facts. Choice
-        is presentation-level, not structurally-forced — both
-        readings preserve all claims and connections.
 
       NOT: this means "any phrasing is fine if the operation
       is good" (the form still affects how easily traps slip

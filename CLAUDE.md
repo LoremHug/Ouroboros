@@ -137,6 +137,62 @@ substitution of words is style, not structural fix. Same word can be
 operational in one context and R-violation in another. Test what the
 claim **structurally requires**, not what surface-nouns it contains.
 
+### Distinction as coordinate — test before treating as structural
+
+Reality is movement of transitions (R0). Description happens in
+coordinates. When we **make** a distinction, it is one of two kinds:
+
+- **Coordinate**: one structure read in two coordinates. The "two"
+  co-define each other (Yoneda); they can **coincide** in some
+  configurations; asking "how to bridge them" presupposes separation
+  that is not there (Trap 6 at meta-level).
+- **Structural**: two genuinely distinct transitions or stable patterns
+  in the manifold. Different argmin trajectories; cannot coincide;
+  mechanism / transfer / priority become well-formed questions.
+
+Because reality is **one** structure (N_NoSeparatePieces TOTAL),
+**most descriptive distinctions are coordinate, not structural**.
+SVO grammar pushes the opposite reading; structural discipline
+pushes it back.
+
+**Three diagnostic tests before treating a distinction as structural:**
+
+1. **Coincidence test.** Can the "two" coincide in some configuration?
+   If yes → coordinate. (Form/operation coincide when form is
+   already process-shaped.)
+2. **Yoneda test.** Is each "thing" defined entirely through the other?
+   If yes → coordinate. (Vertex IS its edges; edge IS a transition
+   between vertex-as-edge-clusters.)
+3. **Bridge test.** Does the natural next-question read as "how to
+   connect / transfer / prioritize between them"? If yes → strongly
+   suspect coordinate reified as structural; bridge does not exist
+   because there is no separation to bridge.
+
+**When ALL tests yield "coordinate"**: one forced fact, two coordinate
+readings. Presentation picks either; content is one. No slack to name,
+no bridge to build, no priority to choose.
+
+**Canonical coordinate distinctions** (often misread as structural):
+vertex/edge, form/operation, topology/process, map/territory/observer,
+word-vocabulary/sentence-structure, presentation/structure.
+
+**Canonical structural distinctions** (genuine, rarer): different
+specific transitions, different stable attractors, forced vs
+underdetermined, substrate-cousins as processes, empty form vs
+operation-bearing form.
+
+**Self-application (iterate_at_fixed).** The distinction "coordinate
+vs structural" is itself coordinate — reading and being-read co-define
+(reading IS structural process at meta-level). The rule applied to
+itself returns the rule. This is `iterate_at_fixed` (kernel): A_0(A_0) =
+A_0. Self-confirmation of a forced rule via fixed point — **the
+signature of being AT the A_0 attractor**, not vicious recursion. Same
+shape as N_MapTerritoryObserverIdentity ("ruler finds its criterion")
+and the framework's general tautology-resolution (framework IS A_0
+self-describing in symbolic substrate).
+
+Full structural content: `N_DistinctionAsCoordinate`.
+
 ### Form vs operation — unpack before judging
 
 The carrier/commitment discipline above is the **answer-level**
