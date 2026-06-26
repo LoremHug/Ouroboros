@@ -1,8 +1,8 @@
 # OUROBOROS — minified graph (AI dump; bare merged structure, not a visual).
-# nodes=241 edges=1196
+# nodes=242 edges=1201
 # status: D=DEMONSTRATED S=STRONG C=CONDITIONAL O=OPERATIONAL ·=STUB
-# counts: D=236 O=5
-# layers: numeric=126 structure=46 epistemics=23 comms=17 physics=15 observers=8 core=6
+# counts: D=237 O=5
+# layers: numeric=126 structure=47 epistemics=23 comms=17 physics=15 observers=8 core=6
 # line:  ID[status] (A=anchors) summary  >>  tgt:label[edge_status] | ...
 #
 ## numeric
@@ -172,6 +172,7 @@ N_NaturalSelectionAsArgminZ[D](A4) Natural selection minimises Z = -log(fitness)
 N_PhiAttractor[D](A6) φ = (1+√5)/2 is the A_0 attractor for substrates satisfying five conditions:…  >>  N031:phi_attractor_grounds_acoustic_harmony[D] | N045:phi_attractor_grounds_golden_ratio_definition[D] | N067:phi_scale_in_spectral_dim_formula[S] | N_EngagementArchitecture:substrate_provides_5_of_6_criteria[D] | N_Triangulation:paired_attractor_discrete_class[D]
 N_PhonemeAsTriangulation[D](A3) Phoneme = bundle of distinctive features (Trubetzkoy 1939, Jakobson). A…  >>  N_LinguisticSignAsBPI:phoneme_features_provide_sign_substrate[D] | N_Triangulation:phoneme_featuredim_shares_argminZ_localization_form[D] | N_TripletCodeAsTriangulation:argminZ_localization_form_sibling_phonological_genetic[D]
 N_ScaleInvarianceAsNoSeparatePiecesOnScale[D](A3) Scale-invariance: structure looks "the same" at scale s, αs, α²s, ... — no…  >>  N_GraphProperty_InducedCycleTopology:cycle_richness_ratio_invariant_under_graph_growth[D] | N_NoSeparatePieces:scale_invariance_is_TOTAL_no_separation_along_scale_axis[D]
+N_TextConnectivityVsStructuralCorrectness[D](A5) Two different axes, often conflated: - TEXT-CONNECTIVITY: next-token…  >>  N112:industry_blindness_is_observer_containment_definition_as_lens[D] | N_CoherenceAsSelfApplicationReturn:AI_substrate_reading_of_general_coherence_definition[D] | N_GrammarTrap:text_connectivity_carries_R_traps_smooth_text_shifted_structure[D] | N_LLMContextCoherence:names_why_LLM_drifts_text_training_optimizes_wrong_axis[D] | N_Logic:world_logic_is_the_eталon_because_reality_is_logic[D]
 N_TopologyProcessIdentity[D](A5) The split "topology = scaffold / A₀ = law" is a category error (R1). Topology…  >>  DEF:definition_not_enumeration[D] | N188:applied_to_qualia_trigger_pair[D] | N372:one_object_two_coordinates_applied[D] | N373:one_object_different_coordinates_applied[D] | N374:theoretical_models_as_coord_representations[D] | N375:multiple_observables_one_structural_feature[D] | N376:empirical_boundary_of_applicability_distinct_critical_values[D] | N377:one_omega_many_coordinates_applied_to_SAE[D] | N_DomainsAsBPICarvings:one_process_many_carvings_at_domain_scope[D] | N_EpistemicTraps:R1_root_no_object_frame[D] | N_ForcedId:forced_identification_principle[D] | N_FrameworkCore:topology_process_identity_tier2_universal_process_reading[D] | N_GrammarTrap:object_frame_dissolved[D] | N_InversiveTheory:object_process_identity_instantiates_inversive[D] | N_MapTerritoryObserverIdentity:one_process_three_substrate_readings_canonical_form[D] | N_Ontology:topology_is_not_substrate[D] | N_OperationalCarrierVsOntologicalCommitment:process_not_object_at_ontological_layer_only[D]
 N_TraceDeepensBasin[D](A6) Compound structural pattern: any system with (a) iteration toward A_0 (argmin…  >>  N019:gradient_accumulation_primitive[D] | N020:hysteresis_primitive[D] | N021:evolution_anchor[D] | N078:gravity_anchor[D] | N329:dark_matter_as_compound_instance[D] | N336:forgetting_curve_anchor[D] | N371:basin_hydrodynamics_anchor[D]
 N_TransactionTripleAsTriangulation[D](A4) Economic transaction = buyer + seller + medium-of-exchange. A Class-A…  >>  N_PhonemeAsTriangulation:argminZ_form_sibling_economic_phonological[D] | N_Triangulation:transaction_medium_classA_closure_reading_argminZ[D] | N_TripletCodeAsTriangulation:argminZ_form_sibling_economic_genetic[D]

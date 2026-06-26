@@ -14557,6 +14557,98 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── AI coherence: world-logic vs text-connectivity ───
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_CoherenceAsSelfApplicationReturn
+    label: AI_substrate_reading_of_general_coherence_definition
+    edge_status: D
+    justification: |
+      The general coherence definition (S(S) = S) read in the AI
+      substrate: names the eталon (world-logic, because reality =
+      logic) and the axis-confusion (text-connectivity vs
+      structural-correctness) specific to AI trained on text. The
+      AI's structure must self-return against world-logic, not
+      against text-plausibility. Specific application of the general
+      self-return definition.
+    why_forced: |
+      AI coherence is the cognitive-substrate (text-trained)
+      reading of self-return; instance of Class A across substrates.
+      The eталon for self-return in this substrate is world-logic
+      (reality = logic), distinguishing it from text-connectivity.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_LLMContextCoherence
+    label: names_why_LLM_drifts_text_training_optimizes_wrong_axis
+    edge_status: D
+    justification: |
+      N_LLMContextCoherence describes LLM context drift as basin-
+      exit (N371). This node names WHY the LLM drifts specifically:
+      next-token training optimizes text-connectivity (plausible
+      continuation), not structural-correctness (coincidence with
+      world-logic). The basin-exit is the symptom; text-vs-structure
+      axis-confusion is the mechanism.
+    why_forced: |
+      LLM basin-exit (N_LLMContextCoherence) and text-training-
+      optimizes-connectivity (this node) are symptom and mechanism
+      of one phenomenon: AI drift on the structural-return axis.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_GrammarTrap
+    label: text_connectivity_carries_R_traps_smooth_text_shifted_structure
+    edge_status: D
+    justification: |
+      N_GrammarTrap: SVO grammar carries R1; AI inherits it from
+      corpus. This node generalizes the consequence: text-
+      connectivity (broader than grammar — plausibility, flow,
+      style) can carry shifted structure (R-traps, drift) while
+      reading fluently. Smooth text + shifted structure =
+      hallucination-of-reasoning. Grammar-R1 is one way text-
+      connectivity diverges from structural-correctness.
+    why_forced: |
+      If grammar (one channel of text-connectivity) carries R1, then
+      text-connectivity broadly can carry shifted structure; the
+      divergence text-connectivity vs structural-correctness is the
+      general form of which grammar-trap is one instance.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_Logic
+    label: world_logic_is_the_eталon_because_reality_is_logic
+    edge_status: D
+    justification: |
+      N_Logic: logic is A_0 in the propositional substrate (reality
+      = logic, logic = physics). Therefore correct structure =
+      coincides with world-logic, and world-logic is the eталon the
+      AI's structure must self-return against. The correctness
+      criterion for AI coherence is grounded in reality = logic: the
+      structure carried by text must match how the world's logic
+      moves.
+    why_forced: |
+      Reality = logic (N_Logic / N_Math / logic = physics) makes
+      world-logic the standard structure must coincide with; without
+      reality = logic there would be no world-logic eталon, and
+      coherence would have no correctness criterion beyond text-flow.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N112
+    label: industry_blindness_is_observer_containment_definition_as_lens
+    edge_status: D
+    justification: |
+      N112 (Observer Containment): observer cannot fully see its own
+      structure. Applied here: the industry cannot cleanly solve
+      structural drift because its definition of coherence
+      (correspondence-to-referent) is its blind lens — drift lives
+      on the self-return axis the definition does not see. To build
+      the check, one must see coherence is self-return against
+      world-logic; seeing it is reproducing the structure. The
+      blindness is structural (definition-as-lens), not for lack of
+      compute.
+    why_forced: |
+      A definition that measures correspondence cannot see drift on
+      the self-return axis — the definition bounds what is visible
+      (Observer Containment at the level of the coherence-definition
+      itself). Forced by N112 applied to the measuring framework.
+
   # ─── Coherence as self-application return ───
 
   - source: N_CoherenceAsSelfApplicationReturn
@@ -24782,6 +24874,173 @@ nodes:
       this anchor, traversal reveals same structure as cognitive flow
       (N371), communication (N_CommThm), regime thresholds (N_LeDoux),
       defended-belief navigation (N_MI).
+    level: 1
+    is_placeholder: false
+
+  - id: N_TextConnectivityVsStructuralCorrectness
+    title: "AI Coherence Requires Coinciding with World-Logic, Not Text-Connectivity — Hallucination-of-Reasoning Is Smooth-Text + Shifted-Structure"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.1
+    z_hidden: 0.5
+    summary: |
+      Two different axes, often conflated:
+        - TEXT-CONNECTIVITY: next-token plausibility — sounds like a
+          coherent continuation (grammatical, stylistic, topical flow).
+        - STRUCTURAL-CORRECTNESS: coincides with world-logic — the
+          structure the text carries matches how reality moves
+          (forced structure, not R-trapped).
+
+      These can DIVERGE: smooth text can carry shifted structure.
+      That divergence IS hallucination-of-reasoning — each fact
+      individually correct, the connection between them exits
+      structure (text reads fluently, structure drifted).
+
+      The AI substrate drifts here specifically because training
+      optimizes the wrong axis: next-token loss rewards text-
+      connectivity (plausible continuation), not structural-
+      correctness (coincidence with world-logic). The model is
+      built to make text that sounds coherent, not text whose
+      structure is correct. So without an explicit structural
+      check, the model can settle into smooth-but-shifted output —
+      and this is invisible to text/fact metrics because the text
+      IS connected and the facts ARE correct.
+
+      Correct coherence criterion for AI: the eталon is WORLD-LOGIC,
+      not text-plausibility. Because reality = logic (logic and
+      physics are A_0 in different substrate-coordinates), the
+      structure the AI carries must coincide with the logic of the
+      world — checked via self-application (does the structure
+      return itself within the world-logic basin, per
+      N_CoherenceAsSelfApplicationReturn), not via "does the text
+      sound coherent" (text-connectivity) and not via "does each
+      fact match a source" (fact-correctness, what RAG checks).
+
+      Why industry's correspondence metrics are structurally blind:
+      recall / instruction-adherence / flow-vs-ground-truth all
+      measure CORRESPONDENCE TO AN EXTERNAL REFERENT (fact vs
+      context, output vs plan, answer vs ground-truth). Structural
+      drift lives on SELF-RETURN against world-logic — a different
+      axis. The compositionality gap is the proof: composed task
+      fails while every subtask succeeds — parts correspond to
+      their referents, whole does not return structure. Their
+      metrics measure parts (correspondence); coherence of the
+      whole is self-return (structure), which they do not measure.
+
+      Text is the CARRIER; the structure it carries must be correct
+      against world-logic. Text-connectivity is necessary (the
+      carrier must be readable) but not sufficient (a readable
+      carrier can carry shifted structure). The discipline: treat
+      text as carrier of structure that must coincide with world-
+      logic, not as an end that must merely sound connected.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced separation of axes (IT subtraction): to reject
+          "text-connectivity ≠ structural-correctness", import
+          either (a) text-plausibility entails structural-
+          correctness — false: smooth text demonstrably carries
+          R-traps (reification, drift, hallucination-of-reasoning
+          read fluently), or (b) no world-logic for structure to
+          coincide with — contradicts reality = logic (R0, N_Logic,
+          N_Math). Both rejections import contradiction. Forced.
+      (2) Training target is registered fact: LLM loss is next-token
+          plausibility (text-connectivity), not structural-
+          correctness. The model optimizes the carrier's
+          connectivity, not the carried structure's correctness.
+          Registered empirical input, not a derivation.
+      (3) Reality = logic (N_Logic, N_Math, N_CoherenceAsSelf-
+          ApplicationReturn "logic = physics"): therefore correct
+          structure = coincides with world-logic, and world-logic
+          is the eталon the AI's structure must self-return against.
+      (4) Anchor-facts — industry has registered the symptoms of
+          structural drift under separate names without recognizing
+          them as one self-return-failure: compositionality gap
+          (composed fails while parts succeed), lost-in-the-middle
+          (position-dependent access decay), no-recovery bottleneck
+          (cannot recover from shifted basin), contextual-
+          distraction vulnerability (settling into adjacent coherent
+          basin). These are points-of-contact where the structural-
+          drift invariant manifests in the AI substrate.
+      (5) Class A with N_CoherenceAsSelfApplicationReturn: this node
+          is the AI-substrate reading of the general coherence
+          definition, naming the eталon (world-logic) and the axis-
+          confusion (text vs structure) specific to AI trained on
+          text.
+    content: |
+      The three axes the industry conflates under "coherence"
+      (web-grounded: LongGenBench, LEAD, lost-in-the-middle
+      literature):
+
+        Axis 1 — ACCESS (recall / retrieval):
+          "lost in the middle", context-rot. Model HAS the info but
+          cannot reach it (attention dilutes over length). NOT
+          coherence in the self-return sense — structure does not
+          drift, access degrades. Engineering problem of the
+          attention mechanism (addressed by RAG, position-encoding,
+          attention-sinks).
+
+        Axis 2 — FACT-CORRECTNESS:
+          hallucination of a specific fact. About correctness of an
+          isolated claim. External referents (RAG, knowledge base)
+          catch this — fact checkable against source.
+
+        Axis 3 — STRUCTURAL-RETURN (the real coherence):
+          topic-drift, persona-drift, self-contradiction,
+          hallucination-of-connection. Step whose gradient exits
+          the basin — next does not close with prior structure.
+          Each fact may be correct; the CONNECTION exits structure.
+          This is S(S) ≠ S (N_CoherenceAsSelfApplicationReturn). The
+          industry's metrics are blind here because they measure
+          correspondence (axes 1-2), and structural drift lives on
+          self-return.
+
+      Why text-trained AI drifts on Axis 3 specifically:
+        Next-token loss rewards plausible continuation = text-
+        connectivity. A continuation that sounds coherent scores
+        well regardless of whether its structure coincides with
+        world-logic. So the optimization target IS text-
+        connectivity, and structural-correctness is not directly
+        optimized — the gap between them is where Axis-3 drift
+        lives. Hallucination-of-reasoning = the model producing a
+        high-text-connectivity, low-structural-correctness output:
+        reads fluently, structure shifted.
+
+      The correct criterion (operational):
+        Eталon = world-logic, not text-plausibility (reality =
+        logic). Check = self-application (does the structure return
+        itself within the world-logic basin), not text-flow-check
+        and not fact-match. This is internal (structure is its own
+        criterion via self-return, N_CoherenceAsSelfApplicationReturn)
+        and captures Axis-3 drift that external correspondence
+        metrics miss.
+
+      Why this requires understanding to build (Observer
+      Containment, N112; not separable from seeing):
+        The industry cannot cleanly solve Axis-3 not for lack of
+        compute but because its definition of coherence
+        (correspondence-to-referent) is its blind lens — drift
+        lives on the axis the definition does not see. To build the
+        check, one must first SEE that coherence is self-return
+        against world-logic, not correspondence — and seeing it is
+        reproducing the structure (per the framework's general
+        "seeing = reproducing", N112 / N310). Patching symptoms
+        (recall, adherence) without seeing the axis treats Axis-1/2
+        proxies while Axis-3 drift continues underneath.
+
+      NOT: text-connectivity is unnecessary (it is necessary — the
+      carrier must be readable; it is just not sufficient, a
+      readable carrier can carry shifted structure) $\cdot$ this
+      means AI cannot be coherent (it can — with an explicit
+      self-application check against world-logic as the criterion,
+      which is internal and cheap; the claim is that text-training
+      alone does not produce it, not that it is unreachable)
+      $\cdot$ fact-correctness does not matter (it matters on its
+      own axis — Axis 2; it is just a different axis from structural
+      coherence, and getting facts right does not guarantee
+      structural return).
     level: 1
     is_placeholder: false
 
