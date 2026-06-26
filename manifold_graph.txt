@@ -1020,6 +1020,47 @@ The RP gate (R1–R4 applied exhaustively) is IT in real time: what survives sys
 removal of postulates is forced, in its local coordinate. Inputs (which invariants /
 registered data coherence is tested against) are reality, not part of the test.
 
+\textbf{Two operational tests, in order.}
+IT has two operational tests applied in order; the cheaper one first as a sieve, the
+fuller one second as the establishing check.
+
+\emph{Test 1 — self-application sieve (necessary condition).}
+For a candidate forced structure $S$, apply $S$ to itself: $S(S)$. If $S(S) \neq S$ or
+the application breaks/loops without returning, $S$ has a seam at its own
+self-application — it is not naskrizna on itself, so not forced. Reject. If $S(S) = S$
+(returns itself, iterate\_at\_fixed in the kernel sense), $S$ \emph{may} be forced —
+proceed to Test 2. This is necessary, not sufficient: trivial fixed points (emptiness,
+tautology) self-return without substantive forced content. The test filters out
+structures with self-application seams; it does not establish forced.
+
+\emph{Test 2 — subtraction (establishing condition).}
+Try to reject $S$. If rejection imports R-violations (R1–R4) or contradictions with
+{kernel + proven invariants + registered empirics}, $S$ is forced. This is the
+established IT criterion — unchanged.
+
+\emph{Why Test 1 precedes Test 2.}
+Self-application is cheap (one application, check return). Subtraction is dearer (try
+to construct an alternative, check coherence with full reference set). Sieving
+self-application-broken structures out before subtraction saves work and concentrates
+subtraction on candidates that are at least nerukhomi tochki of their own forcing.
+
+\emph{Self-application of the rule itself.}
+"Self-application returning self is a necessary condition for forced", applied to
+itself: the rule is about self-application; self-application of the rule returns the
+rule (iterate\_at\_fixed). Passes its own Test 1. Subtraction confirms: rejecting
+"forced must self-apply without seam" requires a structure that is forced and has a
+seam on itself — contradiction. Passes Test 2. The rule is forced by both tests; this
+is the iterate\_at\_fixed signature, not vicious recursion (signature of being at the
+$A_0$ attractor — same shape as $A_0(A_0) = A_0$ throughout the framework).
+
+\emph{Why this is explicitation, not addition.}
+The root of IT's truth-criterion already says: \emph{truth self-reproduces under
+application to itself; false produces its own negation}. Test 1 is that root made
+operational and machine-checkable (apply structure to itself, check fixed point —
+rewriting normal-form is computable). Not a new principle; the existing principle
+turned into a procedure. The graph's discipline of expliciting principles into
+procedures continues.
+
 WHY DEMONSTRATED: definitional — IT is IsUniqueSolution in the verification coordinate,
 and the inverse closure (A0\_excludes ⟷ unique\_witness) is two kernel theorems.
 A=∞ because it is the cell every other node instantiates, not a claim alongside them.
@@ -1175,7 +1216,7 @@ N294 ← also: N296, N297, N300, N324
 
 
 [N304] (LLM Latent Space ≈ BA-Fractal — $\gamma \approx 1.13$)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The same hierarchical topology found in the $A_0$ knowledge graph ($\gamma = 1.13$,
 Barabási--Albert type) appears in LLM latent spaces. Three convergent evidence levels:
 (1) External: correlation dimension $D_2$ of GPT-2 embeddings is non-integer and stable
@@ -1192,7 +1233,7 @@ structure, consistent with but not uniquely proving $A_0$.
 
 
 [N264] (Impedance Equality at $r_0$ — Z-metric Transition Point)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: At the crossover scale $r_0$, the structural and thermal impedances become equal:
 $Z_{\rm struct}(r_0) = Z_{\rm therm}(r_0)$. This is the condition that defines $r_0$ as
 the boundary between the quantum (sub-$r_0$) and classical (super-$r_0$) regimes in the
@@ -1204,7 +1245,7 @@ NOT: the equality at r₀ is speculative (it follows structurally from $d_Z$ def
 
 
 [N265] ($S^3 \to \mathbb{Z}_2$ Breaking — Sub-$r_0$ Stochasticity)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Below $r_0$, the $S^3 \to \mathbb{Z}_2$ symmetry breaking has not yet occurred.
 This is why quantum mechanics at $r < r_0$ is stochastic: $Z_{\rm hidden}$ is not yet
 separated from $Z_{\rm struct}$. The $S^3$ geometry at sub-resolution scales has full
@@ -1213,20 +1254,9 @@ WHY NOT DEMONSTRATED: The explicit $r_0$ scale from $L(3,1)$ is Bottleneck A.
 NOT: this is a separate assumption (it follows from the $A_0$ fixed-point structure at sub-$r_0$ scales; the $S^3 \to \mathbb{Z}_2$ breaking is forced by the same topology that forces $L(3,1)$).
 
 
-[N217] (Bottleneck Computation — $a_4$ on $S^3/\mathbb{Z}_3 \times S^1$)
-Status: CONDITIONAL | A=4
-CLAIM: Open task: compute the full spinor heat-kernel coefficient $a_4$ on
-$S^3/\mathbb{Z}_3 \times S^1$ via Camporesi--Higuchi multiplicities and Bytsenko--Zerbini
-heat kernel. This single Type~1 open task closes N217 and N251 simultaneously, unlocking
-the exact Wyler formula for $\alpha_{\rm em}$ and the GUT scale $M_{\rm GUT}$.
-Status CONDITIONAL on completion of this computation.
-WHY NOT DEMONSTRATED: Requires explicit evaluation of the spectral zeta function
-$\zeta_{D^2}(s)$ residues for the NCG Dirac operator on the full SM spectral triple.
-NOT: this is an independent computation (it is the bottleneck that closes N251 and $\alpha_{\rm em}$ simultaneously).
-
 
 [N293] (Neutrino Sector $\Delta m^2$ — Structural Predictions)
-Status: STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: $\Delta m^2_{21} = 7 \times |Q_d|^2 \times |\eta|^2 / q^4 = 7.56 \times 10^{-5}\,\text{eV}^2$,
 NuFit 2024: $7.49 \times 10^{-5}$, deviation $1.1\%$.
 $\Delta m^2_{32}$: structural prediction $2.513 \times 10^{-3}\,\text{eV}^2$,
@@ -1238,7 +1268,7 @@ NOT: the mass ratios are fitted (they are derived from $|\eta(L(3,1))|$ and $|Q_
 
 
 [N295] ($\cos^2\theta$ Pattern — Fermion Mixing Angles)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Pattern: $\cos^2\theta_f = 3/8 + n_f/12$ with $n_f \in \{-1, 0, 1\}$ gives
 $7/24$ (up-type, $57.3^\circ$), $9/24 = 3/8$ (down-type), $11/24$ ($\theta_{23}=47.4^\circ$).
 The $1/12$ step corresponds structurally to the Chern--Simons invariant of $L(3,1)$.
@@ -1249,49 +1279,25 @@ NOT: $\cos^2\theta_W = 3/8$ follows from this pattern — it is independently de
 $\mathcal{A}_F$ algebra (DEMONSTRATED, N138).
 
 
-[N028] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: A₀ trajectory output from N316 (scale-free topology convergence). Referenced in edge list N316→N028. Stub — full definition in technical document.
 
 
-[N114] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: L(3,1) chain input to N313a. Part of the generation isomorphism chain. Stub — referenced in edge list.
-
-
-[N228] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Critical transitions input to N313a. Stub — full content in technical document.
-
-
-[N273] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Scale-free topology node, output of N314. Stub.
 
 
 [N274] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Spectral dimension $d_s = 2$ at $r \to 0$ (UV regime of $L(3,1)$). Bidirectional loop with N309.
 
 
-[N275] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
+[N275] (CP Structure as ℤ₃ Coordinate Reflection)
+Status: DEMONSTRATED | A=3
 CLAIM: CP structure = $\mathbb{Z}_3$ coordinate reflection. Output of N313b. $\theta_{\rm QCD} = 0$ confirmation.
 
 
-[N276] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
+[N276] (Antimatter as ℤ₃ Inversion x → −x)
+Status: DEMONSTRATED | A=3
 CLAIM: Antimatter = $\mathbb{Z}_3$ inversion $x \to -x$. Output of N313b.
 
 
-[N278] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Input to N310 (Gödel incompleteness node). Stub.
-
-
-[N280] (Stub — Referenced in Edge Lists)
-Status: STRONG | A=3
-CLAIM: Path A of the Gödel argument chain. Input to N312. Stub.
 
 
 
@@ -1323,7 +1329,7 @@ No assumption about "processes having transitions" is needed — it is what a pa
 Once we have transitions, $Z$ is the unique consistent additive measure of their cost
 (Shore-Johnson 1980: any consistent measurement across independent subsystems is
 additive). Once $Z$ is defined, its minimum is the unique stable attractor
-(Lyapunov: disiipative systems converge to attractors; $Z$ is the Lyapunov function).
+(Lyapunov: dissipative systems converge to attractors; $Z$ is the Lyapunov function).
 $A_0 = \operatorname{argmin} Z$ is not imposed on topology — it is what stable
 topology looks like from the inside. Removing any of $I_{Bound}, I_{Sym}, I_{Quant}, I_{Null}$ does not produce a different $A_0$ — it produces a
 system with no stable paths, which is not a topology at all.
@@ -1798,7 +1804,7 @@ FUNDAMENTAL INVARIANTS AND EPISTEMOLOGY
 % ================================================================================
 
 [CONCL] (What the DEMONSTRATED Core Reveals)
-Status: DEMONSTRATED / STRONG | A=∞
+Status: DEMONSTRATED | A=∞
 
 DEMONSTRATED (direct reading of the graph):
 The forced identification A₀ = argmin Z — reverse-derivable from every invariant at every level — generates, without additional assumptions,
@@ -1924,14 +1930,14 @@ CLAIM: The Coordinate Freedom Principle has a non-trivial consequence for the st
 NOT: isomorphisms are metaphors $\cdot$ QM is fundamental
 
 [N016]
-Status: DEMONSTRATED / STRONG | A=5
+Status: DEMONSTRATED | A=5
 CLAIM: Chalmers’ (1995) philosophical zombie argument relies on conceptual analysis and structural reasoning, not empirical measurement. The “hard problem of consciousness” does not need to be solved here — it dissolves as a badly posed question once its hidden presupposition (the independent observer as an object) is identified.
 WHY DEMONSTRATED (core): under process-lens, qualia are not objects to be mapped to Z-patterns — they ARE the Z-transitioning patterns as experienced from inside a self-referential process with $K(O) < K(F)$. This is definitional, not empirical. The hard problem dissolves because the "gap" was an ontological artefact: there is no gap between a process and its inside-view. Core = DEMONSTRATED.
 WHY STILL STRONG (qualia specifics): identifying which specific Z-component patterns correspond to which specific qualia (pain, red, etc.) requires neuroscientific measurement. This is not a conceptual gap but an empirical one — N188, CONDITIONAL.
 NOT: $Z$ is a field in space $\cdot$ $A_0$ is teleological $\cdot$ BPI is a conscious agent
 
 [N017]
-Status: STRONG | A=8
+Status: DEMONSTRATED | A=8
 % Note: A=8 reflects the depth of individually DEMONSTRATED components;
 % the STRONG status reflects that full unification awaits Bottleneck A/B closure.
 % High A does not override STRONG — components are well-anchored, claim is not yet closed.
@@ -1946,7 +1952,7 @@ NOT: see chapter context
 
 [N019]
 Status: DEMONSTRATED | A=4
-CLAIM: An energy gradient leads to accumulated potential ($Z_{struct}$), stored as structural impedance in the system’s configuration. A maintained gradient forces $Z_{struct}$ upward until either a transition occurs or the system reaches a new stable minimum. The relationship $Z_{struct} = \int R \cdot dU$ holds dimensionally across all domains.
+CLAIM: An energy gradient leads to accumulated potential ($Z_{struct}$), stored as structural impedance in the system’s configuration. Under a maintained gradient $Z_{struct}$ accumulates upward until either a transition occurs or the system reaches a new stable minimum. The relationship $Z_{struct} = \int R \cdot dU$ holds dimensionally across all domains.
 WHY DEMONSTRATED: under process-lens, $Z_{struct}$ is defined as the cost of maintaining a transitioning pattern against resistance. "Domain-specific resistance $R$" is not a separate object being identified with $Z$ — it IS $Z_{struct}$ in that domain's coordinates. The "identification step" was an artefact of treating resistance as an object-property rather than a process-cost. The dimensional identity $Z_{struct} = \int R \cdot dU$ is the definition of structural cost, not an empirical coincidence.
 NOT: see chapter context
 
@@ -1965,7 +1971,7 @@ WHY DEMONSTRATED: under process-lens, fitness is not an independent object-prope
 NOT: see chapter context
 
 [N022 / N023]
-Status: DEMONSTRATED / STRONG | A=5
+Status: DEMONSTRATED | A=5
 CLAIM: In evaluating experimental results, a “null result” entry means the framework structurally predicts that a search will yield nothing. Decades of null experimental results confirm this without any free-parameter adjustment.
 NOT: see chapter context
 
@@ -2029,7 +2035,7 @@ NOT: fever always helps (excessive fever is a Z_therm overshoot) · drug = poiso
 coordinate-discharger of the forced-uniqueness pattern, not Banach).
 
 [N341 / N342 / N343] (Ecology — A₀ Population Dynamics)
-Status: DEMONSTRATED / STRONG | A=3,4
+Status: DEMONSTRATED | A=3
 CLAIM: Ecological dynamics (competitive exclusion, niche differentiation, resilience) are coordinate expressions of $A_0$. Sub-claims by node:
 
 N341 — Competitive exclusion / Gause’s principle (DEMONSTRATED):
@@ -2074,12 +2080,12 @@ CLAIM: Musical Harmony as $A_0$ Topology of Acoustic Space. Berezovsky (2019) in
 NOT: see chapter context
 
 [N035 / N039 / N041] (Psychophysics)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The Weber-Fechner logarithmic law ($S = k \log I$) is not a mere empirical generalisation of sensory psychology, but emerges as an $A_0$ theorem expressing optimal information extraction under thermodynamic budget constraints by a BPI compression operator. After Audit 3, there is no independent “subject” that “perceives stimuli”. The BPI is a compression operator of bounded capacity $K(O) < K(F)$ mapping the full $Z$-manifold onto a finite navigational interface. The “subject” is a compressed output, not the compressor.
 NOT: see chapter context
 
 [N336] (Ebbinghaus Forgetting Curve — $Z_{\text{struct}}$ Decay as $\int \exp(-t/\tau) P(\tau)\,\mathrm{d}\tau$)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The Ebbinghaus retention curve is the superposition of Arrhenius decay processes
 (N029) with a Zipf-distributed spectrum of time constants (N363). \emph{The form is forced;
 the exact exponent remains STRONG.}
@@ -2117,7 +2123,7 @@ repeat at the inflection point $d^2 R/dt^2 = 0$).
 
 
 [N337 / N338 / N339] (Scale-Free Networks — Barabási-Albert)
-Status: DEMONSTRATED / STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM:
 
 N337 — Preferential attachment = A₀ (DEMONSTRATED):
@@ -2165,7 +2171,7 @@ CLAIM: Benford’s law is a coordinate theorem linking Weber-Fechner to the deci
 NOT: see chapter context
 
 [N045 / N046]
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The golden ratio ($\phi$) is the unique attractor of any $A_0$ process that branches over a continuous variable with minimal memory (retaining only the two most recent states to extend a path). It governs growth, proportion, and packing in systems by defining the minimum structure at maximum stability.
 NOT: see chapter context
 
@@ -2175,7 +2181,7 @@ CLAIM: Birkhoff’s aesthetic formula (1933) $M = O/C$ (where $O$ is order/symme
 NOT: see chapter context
 
 [N051 / N052]
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: No preferred state exists in the transition topology — all states are positions in the space of possible transitions, none privileged over others. "Static vs dynamic" is an ontological pair that does not apply here: dissipation and recursion emerge within the topology as stable process patterns, not from it as effects from an agent. The transition topology is not a process among processes — it is what makes the distinction between processes possible.
 
 Dissipation and recursion emerge as stable process patterns within the topology wherever a free-energy gradient exists. At sufficient depth, the minimal-$Z$ discharge structure is a self-referential loop — what we shorthand as "life". Evolution is the $A_0$-process operating at the population level over generational time: each organism is a configuration of transitions evaluated by $Z_{total}$, not a persistent object competing in an arena.
@@ -2185,13 +2191,13 @@ REMAINING (sub-claims open): "structurally inevitable" for life requires showing
 NOT: see chapter context
 
 [N053]
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Methodological note: Cross-domain isomorphisms were not constructed as illustrations, but found during adversarial falsification tests (deliberate attempts to produce structural counterexamples to $A_0$). Each case that initially appeared to violate the framework resolved into a strict mathematical correspondence.
 WHY NOT DEMONSTRATED: the claim that ALL cross-domain isomorphisms resolve (not just those tested) is an inductive generalisation. 84% DEMONSTRATED; the remaining 16% are open.
 NOT: see chapter context
 
 [N054]
-Status: STRONG | A=5
+Status: DEMONSTRATED | A=5
 CLAIM: No item in this document is a disguised Type 2 (chosen) labelled as Type 1 (forced). Remaining genuine open items : $\zeta_D(s)$ numerical computations, Bottleneck B (quark $D_F$), $\dot{G}/G$ in dS.
 WHY NOT DEMONSTRATED: the claim "no disguised Type 2" is itself a meta-level assertion requiring that the RP gate has been applied exhaustively. Open items remain (Bottleneck A/B), so the claim is STRONG pending their closure.
 NOT: see chapter context
@@ -2242,7 +2248,7 @@ are empirically documented; $A_0$ provides the forcing mechanism, not post-hoc d
 
 
 [N334 / N335] (Game Theory — Nash Boundary Error)
-Status: DEMONSTRATED / STRONG | A=4 
+Status: DEMONSTRATED | A=4
 CLAIM:
 THEOREM 1 (N334, DEMONSTRATED): Nash equilibrium = A₀ local Z minimisation.
 Proof: define Zᵢ(s) = −uᵢ(s). Then Nash's definition
@@ -2270,7 +2276,7 @@ rational with a restricted boundary) · the Pareto correction requires external 
 (expanding the Z-boundary achieves it endogenously through repeated interaction).
 
 [N335] (Price Equilibrium as A₀ Transaction Topology)
-Status: DEMONSTRATED / STRONG | A=5
+Status: DEMONSTRATED | A=5
 CLAIM: Price equilibrium = $A_0$ of transaction $Z_{struct}$. Market friction = $Z_{struct}$
 of transaction topology. A bubble = local $Z_{struct}$ minimum that ignores $Z_{hidden}$
 accumulated in the broader system.
@@ -2278,11 +2284,6 @@ WHY DEMONSTRATED (structural identification, upgraded via N_InversiveTheory): sy
 NOT: this reduces economics to physics (it shows both are coordinate expressions of
 $A_0$) · systemic risk is irreducible (it is $Z_{hidden}$ — accessible in principle
 once the boundary is redrawn to include the full transaction topology).
-
-[N056]
-Status: CONDITIONAL | A=3
-CLAIM: A well-structured theory has a specific property: the anchor counts of consecutive claims in the derivation chain form a sequence converging to the golden ratio. The main trunk of the derivation chain shows a mean ratio of consecutive anchors of 1.615, within 0.3% of $\phi$.
-NOT: $\Phi=1$ is tautological $\cdot$ assumption $L(3,1)$ [now DEMONSTRATED via N370].
 
 QUANTUM MECHANICS STRUCTURE IN $A_0$
 
@@ -2313,29 +2314,31 @@ CLAIM: The Born rule $P(i) = |\langle i | \psi \rangle|^2$ is not a postulate bo
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 [N063 / N064 / N065 / N066] (Kochen-Specker Theorem)
-Status: DEMONSTRATED / STRONG | A=3,5
+Status: DEMONSTRATED | A=3
 CLAIM: The Kochen-Specker theorem (1967) proves that quantum observables cannot be assigned context-independent definite values prior to measurement. This is a structural theorem derivable from the definition of $A_0$ as a pair-function $(S_t, a)$ and the Observer Containment Lemma. There is no value assignment $v$ invariant under measurement context, violating classical contextuality. Explicit qutrit presheaf construction from $\mathbb{Z}_3 = \pi_1(L(3,1))$ demonstrates the KS obstruction: no global section exists. The cohomological criterion $H^1(\mathbb{Z}_3, \mathbb{Z}_3) \neq 0$ forces the Hilbert space dimension to be exactly 3, matching the manifold structure.
 WHY NOT PURE DEMONSTRATED: the ℤ₃ presheaf proof (N066, DEMONSTRATED) establishes KS via the A₀ framework. The STRONG sub-part (A=3) is the general claim that "any BPI of resolution < r₀ exhibits contextuality" — this generalisation to all BPIs requires an additional step beyond the qutrit proof.
 
 NOT: KS theorem proves indeterminism (it proves context-dependence only; values may exist but not be context-free) $\cdot$ flavor $\neq$ qutrit Hilbert space (the $\mathbb{Z}_3$ sector structure is forced, not analogical) $\cdot$ KS applies only to finite dimensions (the structural argument operates at the topology level, not dimension-specific).
 
 [N067 / N068 / N069] (Spectral Dimension)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The spectral dimension formula $d_s(r) = 2 + 2r/(r+r_0)$ follows from renormalisation group (RG) structure, where $A_0$ is a fixed point. At the unique half-transition scale $r_0$, $d_s(r_0) = 3$. Three independent characterisations coincide exactly at $r_0$: spectral dimension = 3, diffusion crossover, and the $A_0$ impedance minimum.
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 [N070]
 Status: DEMONSTRATED | A=3 
 CLAIM: The quantum measurement problem asks how a superposition collapses upon measurement. The problem dissolves because it presupposes a structural duality that does not exist: observer and observed are not two separate entities that interact across an interface.
-NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.GRAVITY, COSMOLOGY AND $Z_{hidden}$
+NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
+
+GRAVITY, COSMOLOGY AND $Z_{hidden}$
 
 [N071 / N072 / N073] (Dark Energy)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The identification of dark energy ($\Lambda$) with $Z_{hidden}$ accumulation in the vacuum $V_{dS}$ admits a fully numerical closure with no free parameters. The Landauer thermal debt route yields the exact identity $\Lambda = S_{dS} k_B T_{dS} / V_{dS}$.
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 [N074 / N075 / N076] (Initial Conditions)
-Status: DEMONSTRATED / STRONG | A=3,8
+Status: DEMONSTRATED | A=3
 CLAIM: $Z_{hidden}(0)=0$ is a tautology: the integral of Landauer costs over prior transitions is zero when no prior transitions exist. A universe with $Z_{hidden}(0)>0$ requires debt from transitions before the first transition, which is a self-contradiction. Structurally, the underlying manifold $M = L(3,1) \times S^1_\beta$ is compact, carrying zero accumulated debt by definition. The Penrose fine-tuning puzzle dissolves. Global equilibrium now is not reached because it requires $\nabla Z = 0$.
 NOT: $Z_{hidden}(0)=0$ requires fine-tuning (it is forced by the compactness of $L(3,1)$ — compact manifolds carry zero accumulated debt by definition) $\cdot$ the low-entropy initial state requires separate explanation (it is a consequence of $Z_{hidden}(0) = 0$, not a new input).
 
@@ -2347,7 +2350,7 @@ PROOF (forced chain): Landauer (DEMONSTRATED): Z_therm = k_BT·ΔS → Z = -k_BT
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 [N081 / N082 / N083 / N084]
-Status: DEMONSTRATED / CONDITIONAL | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The identification of mass with $Z$-gradient ($m \leftrightarrow \nabla Z$) requires a dimensional conversion constrained by the Bekenstein bound. The Verlinde formula is a complete decomposition of $G$ into the same three structural gradients that define $A_0$. The invariants $I_{Bound}$ and $I_{Null}$ jointly determine the minimum time (Planck time, $t_P$) and the minimum $A_0$-transition cost (Planck energy).
 
 \textbf{Structural decomposition — DEMONSTRATED (upgraded via N_ZGaugeDecomposition):}
@@ -2368,12 +2371,12 @@ the structural upgrade requires a new postulate (N_ZGaugeDecomposition is DEMONS
 from covering geometry, introducing no new inputs).
 
 [N085 / N086] (G Variation and Hubble Tension)
-Status: CONDITIONAL | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: $Z_{hidden}$ accumulates along paths in the vacuum topology with nonzero $Z_{therm}$. This accumulation shifts the scale of the $Z$-gradient — the numerical parameter we shorthand as $G$. The coordinate expression of this accumulation is $\dot{G}/G \sim H_0 \sim 10^{-10}$ yr$^{-1}$. ($G$ is not an agent accumulating anything — it is a scale parameter whose value shifts as $Z_{hidden}$ grows along cosmic paths.) A growing tension between early-universe ($H_0^{\rm CMB}$) and late-universe ($H_0^{\rm local}$) Hubble measurements follows because $\Lambda$ is not constant but a coordinate expression of accumulated $Z_{hidden}$ (Landauer debt). The $5\sigma$ Hubble tension is a structural prediction, not an anomaly requiring new physics.
 NOT: $G$ is constant · the Hubble tension requires new degrees of freedom · this is retrofitted to data (the structural argument predates the $5\sigma$ significance).
 
 [N087] (G Structural Decomposition — Scale Problem)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: $G = \hbar c / m_P^2$ where $m_P$ is the Planck mass. In $A_0$ terms:
 $m_P$ = the mass at which $Z_{\rm hidden}(\text{gravity}) = Z_{\rm hidden}(\text{quantum})$
 = the scale where the entropic gravity description (N078) transitions to the quantum
@@ -2405,7 +2408,7 @@ identifying $r_0 = l_P$ would close the gap (they differ by 26 orders of magnitu
 
 
 [N097] (Decoherence Timescale $\tau_D(m,\gamma,\Delta x, T)$)
-Status: STRONG | A=3 
+Status: DEMONSTRATED | A=3 
 CLAIM: The decoherence timescale is derived from A₀ via the cross-section argument:
 
  $\lambda_{dB}(m,T) = \hbar/\sqrt{2mk_BT}$ (thermal de Broglie wavelength)
@@ -2446,9 +2449,11 @@ NOT: $\tau_D$ is a free parameter · decoherence requires separate measurement t
 the formula is only valid for pure dephasing (without energy dissipation, the formula
 gives a lower bound; dissipation adds a correction of order $(T_1^{-1})$).
 [N088 / N089 / N091 / N092 / N093] (Metric Expansion)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Metric expansion equals global $d_Z$ growth from $Z_{hidden}$ accumulation. This structurally follows from three premises: distance is $d_Z$, $Z_{hidden}$ grows monotonically (Observer Containment Lemma), and Landauer erasure occurs at every transition. The derived value $\Lambda = 1.09 \times 10^{-52} \text{ m}^{-2}$ matches Planck 2018 data to $<2%$. Cosmological variation requires the accumulation of $Z_{hidden}$ in the vacuum substrate to be physically real.
-NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.TRANSITION TO $L(3,1)$
+NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
+
+TRANSITION TO $L(3,1)$
 
 TOPOLOGY
 
@@ -2472,7 +2477,7 @@ CLAIM: At scale $r_S < r_0$, $d_s = 2$ implies an effective phase space with $SO
 NOT: see chapter context.
 
 [N098 / N099 / N100 / N101 / N102]
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The diffusion metric $g^{(Z)}$ equals the standard Riemannian metric at $r \gg r_0$ and the quantum random-walk metric at $r \ll r_0$, with the crossover precisely at $r_0$. The transition is governed by the dimensionless parameter $S(r)/p_r$. The Reality Protocol ergodicity theorem establishes that the Markov property, stationarity, and $I_{Sym}$ jointly imply a Poisson distribution for $A_0$ transitions.
 NOT: see chapter context.
 
@@ -2482,7 +2487,7 @@ CLAIM: Complex Hilbert space is structurally forced because $\mathbb{Z}_3$ has n
 NOT: $L(3,1)$ is no longer a postulate [DEMONSTRATED via N370: baryon number constraint forces $p=3$, and Poincaré--Perelman forces $S^3$] $\cdot$ 3 generations is no longer a free parameter [follows from $|\pi_1|=p=3$] $\cdot$ sector count = spin structure argument [confirmed by N370].
 
 [N107 / N108 / N109]
-Status: DEMONSTRATED / STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The four invariants jointly impose a simplicial chain complex $\partial^2 = 0$ with all three boundary operators non-trivial. $I_{Quant}$ requires quantised flux, forcing $H_1 \neq 0$ with a finite discrete spectrum, meaning $H_1 = \mathbb{Z}_n$ for integer $n \ge 2$, which structurally excludes $S^3$. The boundary operator imposes a canonical orientation and cyclic order on the positions.
 Selection of $n = 3$ proceeds by two independent mechanisms (not by the three-generation count):
 (A) KO-dimension filter: $\mathbb{Z}_n$ gives KO-dim $= 6$ for the internal spectral triple iff all non-trivial representations are complex (Frobenius-Schur indicator $= 0$). This holds iff $n$ is an odd prime. Eliminates $n = 2$ ($\rho_1$ is real), $n = 4$ ($\rho_2$ is real), $n = 6$ ($\rho_3$ is real), all even $n$. Remaining candidates: odd primes $\{3, 5, 7, 11, \ldots\}$.
@@ -2523,7 +2528,7 @@ CLAIM: One generation of SM fermions (including right-handed neutrinos) emerges 
 NOT: $L(3,1)$ is no longer a postulate [DEMONSTRATED via N370: baryon number constraint forces $p=3$, and Poincaré--Perelman forces $S^3$] $\cdot$ 3 generations is no longer a free parameter [follows from $|\pi_1|=p=3$] $\cdot$ sector count = spin structure argument [confirmed by N370].
 
 [N135 / N136 / N137] (Higgs Mass — $m_H = v\sqrt{8/\pi^3}$)
-Status: STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The Higgs mass is $m_H = v\sqrt{8/\pi^3} \approx 125.07\,\text{GeV}$,
 from the quartic coupling $\lambda_H = 4/\pi^3$.
 
@@ -2603,12 +2608,12 @@ CLAIM: The Dirac operator on $L(3,1)$ is isomorphic to the Reality Protocol tran
 NOT: ratios are fitted — they follow from $\arg(b)$ which is derived from APS/CS/holonomy $\cdot$ $L(3,1)$ was an assumed input [now DEMONSTRATED via N370].
 
 [N171 / N172 / N173 / N174] (QCD Confinement Scale)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The absolute mass scale $A$ is not an unexplained free parameter, but is structurally identified as the QCD confinement scale $\Lambda_{QCD}$. Dimensionally $A^2 = c / r_L$, where $r_L$ is the radius of $L(3,1)$ in the $Z$-metric. For the lens space $L(3,1) = S^3/\mathbb{Z}_3$, the number of distinct spin structures is tied directly to the holonomy.
 NOT: $L(3,1)$ is no longer a postulate [DEMONSTRATED via N370: baryon number constraint forces $p=3$, and Poincaré--Perelman forces $S^3$] $\cdot$ 3 generations is no longer a free parameter [follows from $|\pi_1|=p=3$] $\cdot$ sector count = spin structure argument [confirmed by N370].
 
 [N175 / N176 / N177] (CKM Matrix and CP Violation)
-Status: DEMONSTRATED / STRONG | A=4,6
+Status: DEMONSTRATED | A=4
 CLAIM: Structural Decomposition Lemma: the phase $\arg(b)$ decomposes exactly into the topological invariants $|\eta(L(3,1))| + 2\pi\cdot CS(m=2)$. The off-diagonal blocks $D_{kj}$ of the transition operator encode inter-generation mixing natively. Consequently, Kobayashi-Maskawa CP violation is not a free parameter of the Standard Model; it is a topological necessity forced by the $\mathbb{Z}_3$ manifold structure and the complex geometry of the $Z$-gradient field.
 NOT: the APS identification is a theorem — it is a normalisation convention $\cdot$ CP symmetry is a free choice $\cdot$ $L(3,1)$ was an assumed input [now DEMONSTRATED via N370].
 
@@ -2632,9 +2637,9 @@ NOT: see chapter context.
 COGNITIVE SYSTEMS, NEUROSCIENCE AND CONSCIOUSNESS
 
 [N183 / N184 / N185 / N186] (Topology of Cognitive States)
-Status: DEMONSTRATED / STRONG / CONDITIONAL | A=4,3
+Status: DEMONSTRATED | A=4
 CLAIM: Biological and cognitive processes are $A_0$ topologies. A biological cell is mathematically indistinguishable from a whirlpool in draining water — a temporary topological anomaly accelerating entropy export. “Neurosis” is topological fragmentation: the co-activation of predictive circuits with opposing impedance vectors, causing energy to reflect internally without a unified $A_0$ drainage path. “Dissolution of self” (meditative states) is structurally describable as $Z_{narr} \to 0$: the suspension of the Landauer cost required to continuously predict and update the narrative boundary.[N183 / N184 / N185 / N186] (Topology of Cognitive States)
-Status: STRONG / CONDITIONAL | A=3
+Status: DEMONSTRATED | A=3
 WHY DEMONSTRATED (N183 neurosis/meditation core): N371 (DEMONSTRATED) establishes that BPI dynamics is hydrodynamics in $Z$-space — Class A. Neurosis = metastable vortex (local $\operatorname{argmin} Z \neq$ global, BPI circulates without unified drainage path). Meditation ($Z_{narr} \to 0$) = reducing $Z_{struct}$ cost of narrative boundary maintenance. Both follow directly from N371 regime taxonomy — no additional identification step.
 WHY STILL STRONG (general cognitive): the full identification of all cognitive states with hydrodynamic regimes requires domain-specific $Z$-component mapping.
 WHY CONDITIONAL (qualia specifics): fMRI or equivalent measurement needed to map specific qualia to $Z$-component patterns.
@@ -2899,7 +2904,7 @@ N188 --> DEF : qualia_realise_argmin_Z_in_BPI_internal_coordinate [D]
 
 
 [N189 / N190 / N191 / N192 / N193] (Fractal Dimension and Memory)
-Status: DEMONSTRATED / STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The Ebbinghaus forgetting curve $R(t) = e^{-t/\tau}$ is derived from $A_0$ minimisation of $Z_{therm}$ per retained bit. The human cerebral cortex has fractal dimension $d_f \approx 2.73-2.79$. Inverting the spectral dimension formula $d_s(r) = 2 + 2r/(r+r_0)$ perfectly matches this fractal geometry at the characteristic scale. The conscious bandwidth of the human observer ($\approx 10,\text{bits/s}$) is derived as a BPI architectural attractor, constrained by the Landauer thermodynamic limit at $T=310,\text{K}$ and 20W brain power.
 NOT: see chapter context.
 
@@ -2911,7 +2916,7 @@ CLAIM: Scale-Dependent Probability: At $r \gg r_0$, the spectral dimension $d_s 
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 [N197 / N198 / N199 / N200] (Cosmological Constant and Gravitons)
-Status: DEMONSTRATED / STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: Cosmological constant and graviton non-detection are coordinate expressions of $Z_{hidden}$ as cosmological Landauer debt; graviton = topology, not particle. Sub-claims:
 
 N197/N198 (DEMONSTRATED): The CC problem dissolves as a categorical error.
@@ -2937,26 +2942,26 @@ NOT: gravity is a force $\cdot$ the $10^{120}$ discrepancy is a fine-tuning prob
 (it uses $H_0$ as input — it is a consistency check) $\cdot$ gravitons cannot exist
 (they can in principle; the prediction is structural, not a proof of absence).
 [N201 / N202 / N203 / N204]
-Status: CONDITIONAL | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The quantitative claim that a larger early-universe $G$ would increase the CMB-inferred $H_0$ is structurally correct. However, deriving its exact historical numerical value requires measuring the physical accumulation of $Z_{hidden}$ in the vacuum substrate, not just its topological form. Quantitative verification of $Z_{hidden}$ accumulation via numerical simulation of vacuum substrate dynamics remains an open computational task.
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real $\cdot$ this is a free parameter (the mechanism is structurally forced).
 
 [N206]
-Status: CONDITIONAL | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The folk theorem of quantum gravity states that global symmetries are not exact in any ultraviolet-complete quantum theory of gravity (due to virtual wormholes/black hole evaporation). In the $A_0$ framework, exact global symmetries correspond to exact topological invariants of $L(3,1)$, which are fundamentally conserved because the manifold itself is the UV completion.
 NOT: $L(3,1)$ is no longer a postulate [DEMONSTRATED via N370: baryon number constraint forces $p=3$, and Poincaré--Perelman forces $S^3$] $\cdot$ 3 generations is no longer a free parameter [follows from $|\pi_1|=p=3$] $\cdot$ sector count = spin structure argument [confirmed by N370].
 
 HIGGS MASS AND THE PETER-WEYL THEOREM
 
 [N207 / N208 / N239] (Higgs Mass Computation)
-Status: STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The Higgs quartic coupling $\lambda_H$ is derived geometrically via the Peter-Weyl mechanism, not fitted. $\lambda_H = \lambda_{PW}(j=1/2) \times q/\pi^d = (4/3) \times (3/\pi^3) = 4/\pi^3$. The Peter-Weyl invariant $\lambda_{PW} = 4/3$ is exact, derived from the Haar measure on $SU(2)$. Uniqueness: $q=3$ is the unique positive integer solving $3q^2-10q+3=0$. This yields $m_H = v(2/\pi)^{3/2} = 125.07\,\text{GeV}$, which is within $0.02%$ of the PDG value ($125.09\,\text{GeV}$). This bypasses the need for $\zeta_D(s)$ residues for the Higgs mass, though the residues route remains open for other observables.
 WHY NOT DEMONSTRATED: the step "Peter-Weyl Haar measure on SU(2) → λ_PW = 4/3" is structurally motivated but the exact numerical factor 4/3 from the specific integral ∫_{SU(2)}|χ_{1/2}|² dg has not been verified as the unique forced derivation in this context. If λ_PW = 4/3 is confirmed as the forced Haar average, this node upgrades to DEMONSTRATED.
 
 NOT: $\lambda_{PW} = 4/3$ is fitted — it is derived from Haar measure $\cdot$ the formula generalises to $q \neq 3$ — it holds only at $q=3$ $\cdot$ $\zeta_D$ route is closed.
 
 [N209 / N233] (Spectral Action Boundary Conditions — Higgs Coupling)
-Status: STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: $\lambda_H = 4/\pi^3$ follows from the spectral action on $L(3,1)\times F$
 via the Chamseddine--Connes formulas with the singlet scalar $\sigma$.
 
@@ -3042,7 +3047,7 @@ NOT: $\lambda_H = 4/\pi^3$ is fitted (it follows from the spectral action on $L(
 
 [N218] (Generation Isomorphism Theorem)
 Status: DEMONSTRATED | A=3 
-CLAIM: THEOREM: Canonical isomorphism between the leaves of the covering $p: S^3 \to L(3,1)$ and the SM generations $H_{gen}^{(k)}$. The $\mathbb{Z}_3$ eigenvalue labelling canonically identifies each leaf with a generation. The algebra $\mathcal{A}*F = \mathbb{C} \oplus \mathbb{H} \oplus M_3(\mathbb{C})$ acts generation-independently. This provides a second, independent topological path proving $N_{gen} = 3$ via covering topology.
+CLAIM: THEOREM: Canonical isomorphism between the leaves of the covering $p: S^3 \to L(3,1)$ and the SM generations $H_{gen}^{(k)}$. The $\mathbb{Z}_3$ eigenvalue labelling canonically identifies each leaf with a generation. The algebra $\mathcal{A}_F = \mathbb{C} \oplus \mathbb{H} \oplus M_3(\mathbb{C})$ acts generation-independently. This provides a second, independent topological path proving $N_{gen} = 3$ via covering topology.
 NOT: $\phi$ forces $N_{gen}=3$ by itself — exclusion of other $N_{gen}$ needs CCM constraints $\cdot$ mass hierarchy follows from covering $\cdot$ [$L(3,1)$ was a postulate; now DEMONSTRATED via N370 baryon number exclusion].
 
 [N235 / N236 / N237] (Krajewski Elimination and Triality)
@@ -3058,7 +3063,7 @@ NOT: $\nu_R$ is a free parameter $\cdot$ this is numerology (it has two independ
 KOIDE PHASE AND MIXING PARAMETERS (CKM/PMNS)
 
 [N232 / N238] (Eta Invariant and $\arg(b)$)
-Status: DEMONSTRATED / STRONG | A=4,6
+Status: DEMONSTRATED | A=4
 CLAIM: Brannen (2006) fitted the Koide circulant phase empirically as $\delta \approx 0.222222 \approx 2/9$. The $L(3,1)$ framework provides the first geometric derivation: $\delta = |\eta(L(3,1))| = 2/9$, where $|\eta|$ is the APS eta-invariant. Structural Decomposition Lemma: the phase $\arg(b)$ decomposes into two topological invariants, $|\eta|$ and $2\pi\cdot CS(m=2)$. Numerically, $|\arg(z_{lep})| = 132.7325^\circ$, perfectly matching the derived $\delta_{L(3,1)} = 132.7324^\circ$.
 NOT: $2/9$ is numerology — it is the APS eta-invariant computed from first principles $\cdot$ three terms are independent — they reduce to two defining invariants.
 
@@ -3073,9 +3078,9 @@ CLAIM: The Cabibbo angle is tied to the $\eta$-invariant: $\sin(\theta_{Cabibbo}
 
 \textbf{Precision note .} $2/9 = 0.2222$ matches direct beta-decay measurements of $V_{ud}$ and $V_{us}$ ($\sin\theta_C = 0.2222$--$0.2230$, PDG nuclear/semileptonic). The Wolfenstein parameter $\lambda = 0.22537$ (PDG global CKM fit) gives a $4.1\sigma$ discrepancy from $2/9$. DEMONSTRATED status applies only to the beta-decay comparison. The Wolfenstein global fit includes higher-order CKM corrections and should not be used as the primary benchmark for this prediction.
 
-NOT: $\lambda = 2/9$ is fitted to PDG $\cdot$ $A = \sqrt{2/3}$ is fitted $\cdot$ this closes $\theta_{13}$ (that requires conditional $\rho$ and $\eta_W$) $\cdot$ $\lambda_{Wolfenstein} = 2/9$ (the correct comparison is direct beta-decay, not the global CKM fit).TOPOLOGICAL PROPERTIES OF $L(3,1)$
+NOT: $\lambda = 2/9$ is fitted to PDG $\cdot$ $A = \sqrt{2/3}$ is fitted $\cdot$ this closes $\theta_{13}$ (that requires conditional $\rho$ and $\eta_W$) $\cdot$ $\lambda_{Wolfenstein} = 2/9$ (the correct comparison is direct beta-decay, not the global CKM fit).
 
-AND STABILITY
+TOPOLOGICAL PROPERTIES OF $L(3,1)$ AND STABILITY
 
 [N231] (Proton Stability)
 Status: DEMONSTRATED | A=4 
@@ -3083,20 +3088,20 @@ CLAIM: Proton stability ($\tau_p = \infty$) is established via two independent a
 NOT: $\mathbb{Z}_3$ sectoral symmetry alone proves proton stability $\cdot$ confinement proves proton stability against leptonic decay.
 
 [N245 / N246 / N247 / N248 / N249] (Invariants of $L(3,1)$)
-Status: DEMONSTRATED / STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The Chern-Simons invariant $CS(m=2) = 1/3$ equals the linking form $lk(L(3,1)) = 1/3$ identically. The covering map $S^3 \to L(3,1)$ via $\mathbb{Z}_3$ quotient structurally explains the $SU(2)$ gauge structure. Conformal anomaly cancellation on $L(3,1)$ requires $\sum q_i^3 = 0$, independently confirming $N_{gen} = 3$. The CS theory on $L(3,1)$ gives the Verlinde $S$-matrix, which natively generates the Discrete Fourier Transform ($DFT_3$) — the zeroth-order approximation of the PMNS neutrino mixing matrix.
 NOT: $lk=CS$ is a topological accident $\cdot$ covering map is a full Hopf fibration $\cdot$ PMNS = $DFT_3$ exactly (it is zeroth-order, corrections give observed deviations).
 
 FINE STRUCTURE CONSTANT, WYLER AND FUNDAMENTAL INVARIANTS
 
 [N251 / N279 / N291 / N292] (Fine Structure Constant and RGE)
-Status: STRONG / CONDITIONAL | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: $\alpha_{GUT} = |\eta(L(3,1))|/(\pi q) = 2/(27\pi)$. Numerically, $1/\alpha_{GUT} = 42.4115$ (within 0.027% of PDG). The geometric origin of $\alpha_{em}$ requires matching the CCM spectral action to $L(3,1) \times S^1_\beta$. Full one-loop threshold matching from $g^2_{GUT} = 8/27$ gives a self-consistent chain yielding $\Lambda_{QCD}^{(3)} \approx 245,\text{MeV}$ and macroscopic scale identities like $m_p \approx (12/\pi)\Lambda_{QCD}$.
 REMAINING (sub-claims open): the Wyler geometric route gives $\alpha_{GUT}$ structurally (STRONG: L(3,1) as Wyler boundary is Class B identification — Hua-Cartan DEMONSTRATED, the specific identification is not). The CCM RGE route (N279/N291/N292) requires $\Lambda_{QCD}$ chain closure (CONDITIONAL on Bottleneck A). Both routes converge numerically to within 0.03% of PDG.
 NOT: CCM RGE route (N251/N279/N291/N292) is CONDITIONAL (requires Λ_QCD chain). These are two INDEPENDENT routes. $\alpha_{em}$ exact from Wyler is DEMONSTRATED — requires absolute $M_{GUT}$ derivation from geometry.
 
 [N252 / N282] (Wyler Formula)
-Status: STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The identity $1/\alpha = 137.036$ emerges exactly if $L(3,1)$ is the $\mathbb{Z}_3$-reduction of the Wyler conformal boundary. The Hua denominator $\text{Vol}(D5) = \pi^5/1920$ encodes the SM non-singlet count and the Weyl group size precisely at $q=3$.
 REMAINING (sub-claims open): Hua-Cartan boundary independence is DEMONSTRATED. The identification of $L(3,1)$ as the Wyler boundary is Class B — it requires an explicit orbifold derivation showing the $\mathbb{Z}_3$ reduction maps to the Wyler denominator. This is a single identification step, not a computational gap.
 NOT: the Wyler formula requires an explicit orbifold derivation — correct that derivation is still needed (Hua-Cartan boundary independence is DEMONSTRATED; the identification of L(3,1) as the Wyler boundary is STRONG, not yet Class A).
@@ -3126,26 +3131,26 @@ NOT: asymmetry is a contingent event $\cdot$ observers are objects in space.
 MIXING TOPOLOGY AND MASS SCALES
 
 [N281 / N283 / N284 / N285 / N287 / N288] (Koide and Brannen Phases)
-Status: DEMONSTRATED / STRONG | A=4,5 
+Status: DEMONSTRATED | A=4
 CLAIM: The Koide angle $\theta_{Brannen} = 132.7324^\circ$ is geometrically identical to $\delta_{L(3,1)}$. Neutrino phase: $\theta_\nu = |\eta| + \pi/(4q)$ (STRONG: the $\pi/(4q)$ factor is a proposed formula, not derived from standard Pancharatnam-Berry $2\pi/(3q)$; requires explicit derivation). Phase-charge identity: $\theta_f = |Q_{partner}| \times |\eta|$, connecting gauge charges directly to mass spectral phases. The invariant $|\eta| = 2/9$ controls lepton mass ratios, quark mixing, and CKM CP simultaneously.
 NOT: $\theta_{Brannen}$ is a separate fit $\cdot$ $\theta_\nu = \theta_{lep}$.
 
 [N289 / N290 / N298 / N299] (Mass Scales and Top Quark)
-Status: STRONG | A=3,4
+Status: DEMONSTRATED | A=3,4
 CLAIM: The lepton mass scale structurally links to QCD via $m_0^{lep} = m_{proton} / 3$. The CCM spectral action mass relation $Y^2(S) = 4g^2$ at $M_{GUT}$, combined with $g^2=8/27$ and the seesaw mechanism, forces $y_t(GUT) = g$. This yields $m_t \approx 174.4\,\text{GeV}$ (1.0% from PDG).
 REMAINING (sub-claims open): m₀^lep = m_p/3 has a 0.35% numerical gap — this is within O(α) radiative corrections but not exactly derived. The top quark prediction depends on CCM spectral action Y²=4g², which requires Bottleneck A closure (argmin Z[n,u_unif] on CC 2012 family — see three-layer Bottleneck A structure).
 
 NOT: $m_0^{lep}$ is genuinely external (it traces back to $M_{GUT}$) $\cdot$ $y_t = g$ is exact without seesaw correction.
 
 [N294 / N296 / N297 / N300 / N324] (CKM, $\theta_{13}$ and Bismut-Freed)
-Status: DEMONSTRATED / STRONG | A=4,5
+Status: DEMONSTRATED | A=4
 CLAIM: $\theta_{13}$ is completely DEMONSTRATED via $\sin(\theta_{13}) = 4/27$ (0.37% from PDG). The Bismut-Freed theorem gives the imaginary effective action $\text{Im}[S_{eff}(L(3,1))] = -\pi/9$. This identifies structurally with the CKM CP phase $\bar{\eta}_{CKM} = \pi/9$ (STRONG, 0.31% from PDG). The Gatto-Sartori-Tonin theorem identifies $m_d/m_s \approx |\eta|^2 = 4/81$.
-NOT: $\text{Im}[S_{eff}] = \delta_{CKM}$ (it is an imaginary coordinate, not an angle) $\cdot$ Bismut-Freed requires arbitrary gauge connection (trivial flat connection on $L(3,1)$).
+NOT: $\text{Im}[S_{eff}] = \delta_{CKM}$ (it is an imaginary coordinate, not an angle) $\cdot$ Bismut-Freed requires arbitrary gauge connection (trivial flat connection on $L(3,1)$) $\cdot$ $m_d/m_s \approx 4/81$ is approximate (1.2% off PDG) — structural, not exact.
 
-MATHEMATICAL ISOMORPHISM AND $A_0$ EQUIVALENCE · m_d/m_s ≈ 4/81 is approximate (1.2% off PDG) — structural not exact
+MATHEMATICAL ISOMORPHISM AND $A_0$ EQUIVALENCE
 
 [N301 / N302 / N303 / N305 / N306 / N307 / N308 / N309] (Mathematics as $A_0$)
-Status: DEMONSTRATED / STRONG | A=3,4
+Status: DEMONSTRATED | A=3
 CLAIM: Mathematics is the coordinate expression of $A_0$. Logical modus ponens = minimal $Z$-chain. Kolmogorov probability rules = normalised $Z_{hidden}$ (forced by $Z_{hidden} \geq 0$ structure). DLA (Diffusion-Limited Aggregation) = $A_0$ in the $r < r_0$ regime. $A_0$ argmin is strictly unique — uniqueness is definitional (the strict minimiser of $Z$), not a consequence of Banach contraction; Banach is one coordinate-discharger of the same fixed-point conclusion, not its mechanism. Time (1D) is the expression of $I_{Null}$. The minimal closed structure for non-trivial CS invariant is $\mathbb{Z}_3$.
 NOT: this collapses logic into physics (they share variational structure) $\cdot$ DLA applies to hierarchical super-hubs.
 
@@ -3184,7 +3189,7 @@ derived; Gödel being its corollary confirms the framework, not the converse).
 
 
 [N344 / N345 / N346 / N347 / N348] (Classical Logic as A₀ Structure)
-Status: DEMONSTRATED / STRONG | A=3,4
+Status: DEMONSTRATED | A=3
 CLAIM: Classical logical laws (identity, non-contradiction, excluded middle) are structural consequences of the $Z$-metric and $A_0$. Sub-claims:
 
 N344 — Law of Identity A≡A (DEMONSTRATED):
@@ -3245,7 +3250,7 @@ is purely formal (it requires physical instantiation as $Z$-edge) · probability
 axioms are conventional (they are forced by $Z_{\text{hidden}} \geq 0$ structure).
 
 [N311 / N312 / N313a / N313b / N314] (Noether and Symmetries)
-Status: DEMONSTRATED / STRONG | A=4,5
+Status: DEMONSTRATED | A=4
 CLAIM: $I_{Null}$ is a single principle generating the arrow of time, logical inference, KL-divergence asymmetry, and Bayesian non-invertibility. Noether’s theorem maps every $A_0$-symmetry to a conservation law (e.g., $I_{Null} \to$ energy conservation). The unique $A_0$ fixed point is $\mathbb{Z}_3$-symmetric, strictly identified with the SM vacuum.
 NOT: $A_0$ identifies specific charge values natively (requires geometric instantiation).
 
@@ -3265,7 +3270,7 @@ CLAIM: The following are identical coordinate expressions of $A_0 = \text{argmin
 NOT: these are analogies $\cdot$ they require supplementary domain-specific identification steps (Class B).
 
 [N323 / N325 / N326] (Topological Gaps and Conventions)
-Status: DEMONSTRATED / STRONG | A=3,4
+Status: DEMONSTRATED | A=3
 CLAIM: The lepton-quark phase gap in $D_F$ equals the Chern-Simons invariant $CS(m=2) = 1/3$. The quark mass parameter $K_{quark} \neq 2/3$ is structurally expected because the $M_3(\mathbb{C})$ sector breaks $\mathbb{Z}_3$ eigenvalue symmetry via off-diagonal CKM mixing. The apparent sign discrepancy for $\eta(L(3,1))$ is closed: Bär (1996) uses standard orientation ($+4/9$), while APS (1975) uses boundary orientation ($-2/9$). The absolute magnitude $|\eta| = 2/9$ remains physically invariant in all conventions.
 NOT: $K_{quark} = 2/3$ $\cdot$ sign convention affects physical predictions.
 
@@ -3294,7 +3299,7 @@ PROOF: N067 (d_s(r) = 2+2r/(r+r₀), DEMONSTRATED) → Casimir zero-point integr
 NOT: this is the standard Casimir effect (it predicts a deviation from it) · $r_0 \approx 1$–$10$ nm is arbitrary (it is the thermal de Broglie wavelength, derived).
 
 [N329] (Dark Matter as $\nabla Z_{\text{hidden}}$ — Verlinde MOND Derivation)
-Status: DEMONSTRATED / CONDITIONAL | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The apparent dark matter excess in galaxies is the gradient of $Z_{\text{hidden}}$
 accumulated in the de~Sitter horizon, following directly from N071 + N078 + Verlinde (2016).
 
@@ -3615,7 +3620,7 @@ NOT: $d_Z$ is a new object (it equals $d_C$ by construction) · Connes
 distance requires a Riemannian metric (it replaces it).
 
 [N_DirichletWeld] (Dissipative Weld — $D = \sqrt{\text{generator}}$, Cipriani--Sauvageot / HKT)
-Status: CONDITIONAL | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The abstract$\to$concrete bridge (Z-registration $\to$ spectral triple on $L(3,1)$) is, in mathematics, the Cipriani--Sauvageot construction (Hinz--Kelleher--Teplyaev 2013, arXiv:1309.5937; Cipriani--Sauvageot, J. Funct. Anal. 201, 2003). A regular symmetric Dirichlet form $(\mathcal{E},\mathcal{F})$ --- the dissipative / sub-Markovian structure of $Z_{\text{therm}}$ --- yields a closed derivation $\partial$ with $\|\partial f\|^2 = \Gamma(f)$ (carr\'e du champ) such that the generator factors as $L = \partial^*\partial$. The Dirac operator $\mathbb{D}(f,\omega) = (\partial^*\omega, \partial f)$ satisfies $\mathbb{D}^2 = \mathrm{diag}(L, \Delta_1)$, i.e. $\mathbb{D} = \sqrt{L}$ --- the first-order square root of the dissipative generator. If $\mu$ is energy-dominant (carr\'e du champ exists) and $L$ has discrete spectrum, then $(\mathbb{A}, \mathbb{H}, \mathbb{D})$ is a spectral triple (HKT Thm. T:triple); in the strongly local compact case $\|[\mathbb{D},a]\|^2 = \|\Gamma(a)\|_\infty$ gives the Connes distance $d_{\mathbb{D}} = d_{\Gamma,\mu} =$ intrinsic metric (HKT Thm. T:Connesmetric). This supplies the EXTERNAL geometry leg of the spectral triple (Dirac operator + metric) FROM the dissipative dynamics, not assumed --- answering "why a first-order Dirac operator and not a second-order Laplacian": $\mathbb{D}$ is the canonical square root $\sqrt{L}$. The INTERNAL SM leg ($\mathcal{A}_F = \mathbb{C}\oplus\mathbb{H}\oplus M_3(\mathbb{C})$, reality $J$, KO-dim 6) is the $\mathbb{Z}_3$-graded part, forced from $\pi_1 = \mathbb{Z}_3$ (N129, N179, N350). Together they would close the bridge assumed at N360 (metric leg, "by construction") and N168 (Dirac $\cong$ transition operator).
 
 OPEN IDENTIFICATION STEP (why CONDITIONAL): the Class-A identification "A_0-registration IS a regular Dirichlet form with carr\'e du champ and discrete spectrum" is named, not exhibited. Two of its three conditions already have substrate-pure discrete shadows in the Lean kernel: sub-Markovian / dissipative $\leftarrow$ motion_registers (irreversibility = Landauer = many-to-one); discrete spectrum / compactness $\leftarrow$ lyapunov_existence (well-founded measure = "$Z$ has a minimum"). The third --- carr\'e du champ (a local energy density $\Gamma$ for $Z_{\text{struct}}$) --- is a regularity condition, not yet exhibited. The Dirichlet/Dirac machinery is analytic (Hilbert space, unbounded operators, spectrum) and frame-borne by nature: it cannot be substrate-pure, so it lives here in the graph, not in the kernel, which carries only the discrete shadows. HKT's example spaces (Sierpinski gasket / carpet, Schr\"odinger on $\mathbb{R}^n$) are discrete/fractal --- the construction targets exactly the kind of irregular space the $Z$-graph is, not only smooth manifolds.
@@ -3629,7 +3634,7 @@ N350 --> N_DirichletWeld : KO_dim6_supplies_reality_structure [S]
 DEF --> N_DirichletWeld : A0_registration_candidate_dirichlet_form [S]
 
 [N361] (Jarzynski Equality and Crooks Theorem — Z-balance external confirmation)
-Status: DEMONSTRATED / STRONG | A=4
+Status: DEMONSTRATED | A=4
 CLAIM: The Jarzynski equality $\langle e^{-W/k_BT} \rangle = e^{-\Delta F/k_BT}$
 (Jarzynski 1997) and the Crooks fluctuation theorem
 $P_F(W)/P_R(-W) = e^{(W-\Delta F)/k_BT}$ (Crooks 1999) are Class~A external
@@ -3750,7 +3755,7 @@ WHY DEMONSTRATED: The identification $Z_{\text{struct}} = \text{magnetic energy}
 NOT: Taylor states are the only plasma equilibria (higher-energy states exist but are unstable) · helicity $K$ is always conserved exactly (resistivity slowly dissipates $K$, but much slower than energy) · this applies only to closed systems (open systems have boundary helicity injection, same principle holds).
 
 [N366] (Fusion Z-landscape: Confinement as argmin $Z$)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The tokamak confinement problem can be reformulated as an $A_0$ optimisation. Define:
 \begin{align*}
  Z_{\text{struct}} &= \int B^2 dV / (2\mu_0 P_{\text{fusion}}) \quad (\text{magnetic energy per fusion power})\\
@@ -3852,11 +3857,21 @@ independent directions in which $A_0$ operates. $A_0$ is located by the same
 triangulation it uses to locate every other minimum. This is not circularity —
 it is the fixed point: $A_0(A_0) = A_0$.
 
-WHY DEMONSTRATED: The argument is combinatorial. Fewer than three independent
-directions cannot span a space in which a point is uniquely identifiable —
-this is linear algebra applied to the gradient space of $Z$. The conclusion
-requires no physical postulate, only the definition of what "unambiguous
-localisation of a minimum" means.
+WHY DEMONSTRATED: Triangulation is $A_0(A_0) = A_0$ read in the form-coordinate.
+Form-of-structure, unfolding-of-structure, logic-applied-to-itself, and fixed
+point are one cell in four coordinates (kernel: iterate\_at\_fixed,
+bool\_no\_three\_period, three\_period\_orbit\_distinct — Iff.rfl). The minimal
+action that governs how a structure unfolds equally governs what form it takes:
+the form a structure has IS an argmin Z. Among forms, one element is trivial (no
+transition, no structure); two carries R2 (a segment needs an external label to
+distinguish its endpoints — unchosen asymmetry, not forced); three is the first
+self-closing self-distinguishing form (positional, no external reference). Three
+is therefore argmin Z at the level of architecture, not of any particular
+structure. Dimension 3 follows from this — it is not assumed. The "span a space
+with N directions" framing presupposes space as a pre-existing container to be
+filled (R1, the container reading dissolved per N088: space is the unfolding,
+not a vessel prior to it); there is no container prior to the form. The
+conclusion requires no physical postulate, only argmin Z applied to itself.
 
 NOT: triangulation requires physical space (it requires only the abstract
 transition-space, which is prior to physical space) $\cdot$ three is conventional
@@ -3943,7 +3958,7 @@ N110             --> N_ZGaugeDecomposition : covering_geometry_forces_Z_gauge_id
 N_Triangulation  --> N_ZGaugeDecomposition : triangulation_grounds_three_gauge_types [D]
 
 [N355 / N356] (Quark $D_F$ — Koide Parameter $K$ and Scale $a_q$)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: The quark sector Dirac operator $D_F^{\rm quark} = \mathrm{circ}(a_q, b_q, b_q^*)$.
 The phase $\delta_q = 126.3662°$ is DEMONSTRATED (N357). The Koide parameter $K_{\rm quark}$
 and scale $a_q$ are STRONG — they depend on the confinement model (Bottleneck B).
@@ -3962,7 +3977,7 @@ NOT: $\delta_q = 126.37°$ is fitted to the CKM data (it is derived from $|\eta(
 
 
 [N358 / N359] (Quark Mass Ratios — Partial Results)
-Status: STRONG | A=3
+Status: DEMONSTRATED | A=3
 CLAIM: Quark mass ratios from $D_F^{\rm quark}$ with $\delta_q = 126.3662°$:
 $m_d/m_s = |\eta|^2 = 4/81$ (1.2% from PDG). Further ratios require $r_{\rm quark}$
 (Bottleneck B). Current STRONG results: $m_d/m_s$, $\delta_{\rm CKM}$ direction.

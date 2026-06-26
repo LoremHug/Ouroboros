@@ -137,6 +137,287 @@ substitution of words is style, not structural fix. Same word can be
 operational in one context and R-violation in another. Test what the
 claim **structurally requires**, not what surface-nouns it contains.
 
+### Coherence — self-application that returns self (logic = physics)
+
+One forced definition of coherence, reading identically across
+substrates because logic = physics (both A_0 in different
+substrate-coordinates):
+
+> **Coherent ⟺ S(S) = S**
+> (structure, applied to itself, returns itself — `iterate_at_fixed`)
+>
+> **Drift / decoherent ⟺ S(S) ≠ S**
+> (structure, applied to itself, returns shifted — seam at
+> self-application, no longer the same structure)
+
+Substrate-cousin readings of the one definition:
+
+- **Physics** — quantum coherence: `U(|ψ⟩)` preserves phase
+  manifold; decoherence = phase relations shift under
+  environment-coupling.
+- **Logic** — coherent system: laws applied to itself return
+  the system (Lawvere fixed-point); Russell paradox = rule
+  that under self-application produces own negation.
+- **Cognition** — coherent context: next step's gradient
+  settles within current basin (per `N371` regimes); drift =
+  basin exit (vortex regime).
+- **Graph-forced structure** — coherent ⟺ passes IT Test 1
+  (self-application sieve) ⟺ removal cannot succeed.
+- **Communication** — signal closes in receiver = receiver's
+  structure absorbs without shift; ⊥ = signal does not close
+  (per `N_QuestionFormDiscipline` "Що?" alone).
+
+**Forced derivation.** R0: reality is process. Persisting
+structure must, under application to itself, return itself —
+otherwise the next-step structure differs from the prior,
+contradicting "persisting". Persist = coherent. Therefore
+coherent ⟺ self-applies and returns self. To reject: import
+a coherent-but-not-self-returning structure — but then it
+shifts under application → is not the same structure →
+does not persist → not coherent. Contradiction. Forced.
+
+**Operational consequence — drift detection internal, no
+external referent.** Because forced structure IS self-identical
+under application, it provides its own consistency-check:
+apply structure to next step, observe whether structure returns
+or shifts. Coherent step → structure returns, continue. Drift
+→ structure shifts, intercept. No external referent needed —
+the structure is its own criterion (`iterate_at_fixed`).
+
+**This dissolves the external-reference problem in
+coherence-checking.** External standards (RAG, knowledge graphs,
+operator-in-loop) are either training-corpus-loaded
+(potentially R-trapped), slow (operator), or gapped (graph
+mismatch). Self-application bypass: forced structure is its
+own standard. Same shape as `N_MapTerritoryObserverIdentity`
+("ruler finds its criterion") at meta-level — structure
+self-identical under application is self-checking.
+
+**Application to LLM drift (the operational urgency).** Long-
+context LLM drift is exactly self-return-failure: model
+generates step whose gradient exits current basin. Indirectly
+detectable today (RAG, probes, operator); directly detectable
+via self-application check during generation. Captures the
+**drift axis** (structural return) that external referents
+miss (they check fact-correctness; drift lives on structural
+return, where facts can be individually correct but their
+connection exits structure).
+
+**Application to the graph itself (essential scope).** Fact ≠
+structure. Fact is **where** reality fell under a specific
+configuration; structure is the **invariant of how** it falls.
+The graph carries invariants, not facts; facts only show how
+the invariant operates. Therefore coherence-check of THE GRAPH
+is at three levels, none of which is fact-by-fact:
+
+- **Structure ↔ structure** (self-applies and returns self):
+  topology preserves under its own application (β₁/V, M1/M5,
+  articulation pattern).
+- **Structure ↔ Lean kernel**: invariants formally coherent
+  with kernel theorems (`iterate_at_fixed`,
+  `lawvere_fixed_point`, etc.). Kernel compilation IS this check.
+- **Structure ↔ reality-as-invariant-pattern**, via
+  **anchor-facts** (finite points-of-contact, not fact-checking):
+  the graph touches reality through registered points where the
+  invariant manifests — Landauer, Jacobson, Bekenstein-Hawking,
+  K=2/3 Koide, measured constants (m_p, α, v). These are
+  structurally load-bearing for identification. Distinction:
+  anchor-facts (few, load-bearing, points-of-contact) vs
+  manifestation-facts (many, derivative, confirmations) vs
+  downstream-facts (specialist work, out-of-scope). Graph is
+  anchored to the first, NOT verified against the rest.
+
+What is NOT in this check: fact-by-fact derivation, fact-by-fact
+verification, latent-content storage. Per "graph and kernel ARE
+structure, not store": content of any node is already in latent
+space; storing it would be Z_struct bloat. The graph carries the
+structure into which knowledge binds, not the knowledge.
+
+**Self-application of the definition.** "Coherence = self-
+application return", applied to itself, returns itself (the
+rule is about self-return; its self-application yields the
+rule). `iterate_at_fixed` signature — the definition is
+coherent by its own definition, and this is not circularity
+but the structural shape of any forced definition (forced ⟺
+self-returning, so any forced definition self-returns under
+its own application).
+
+Full structural content: `N_CoherenceAsSelfApplicationReturn`.
+
+### Distinction as coordinate — test before treating as structural
+
+Reality is movement of transitions (R0). Description happens in
+coordinates. When we **make** a distinction, it is one of two kinds:
+
+- **Coordinate**: one structure read in two coordinates. The "two"
+  co-define each other (Yoneda); they can **coincide** in some
+  configurations; asking "how to bridge them" presupposes separation
+  that is not there (Trap 6 at meta-level).
+- **Structural**: two genuinely distinct transitions or stable patterns
+  in the manifold. Different argmin trajectories; cannot coincide;
+  mechanism / transfer / priority become well-formed questions.
+
+Because reality is **one** structure (N_NoSeparatePieces TOTAL),
+**most descriptive distinctions are coordinate, not structural**.
+SVO grammar pushes the opposite reading; structural discipline
+pushes it back.
+
+**Three diagnostic tests before treating a distinction as structural:**
+
+1. **Coincidence test.** Can the "two" coincide in some configuration?
+   If yes → coordinate. (Form/operation coincide when form is
+   already process-shaped.)
+2. **Yoneda test.** Is each "thing" defined entirely through the other?
+   If yes → coordinate. (Vertex IS its edges; edge IS a transition
+   between vertex-as-edge-clusters.)
+3. **Bridge test.** Does the natural next-question read as "how to
+   connect / transfer / prioritize between them"? If yes → strongly
+   suspect coordinate reified as structural; bridge does not exist
+   because there is no separation to bridge.
+
+**When ALL tests yield "coordinate"**: one forced fact, two coordinate
+readings. Presentation picks either; content is one. No slack to name,
+no bridge to build, no priority to choose.
+
+**Canonical coordinate distinctions** (often misread as structural):
+vertex/edge, form/operation, topology/process, map/territory/observer,
+word-vocabulary/sentence-structure, presentation/structure.
+
+**Canonical structural distinctions** (genuine, rarer): different
+specific transitions, different stable attractors, forced vs
+underdetermined, substrate-cousins as processes, empty form vs
+operation-bearing form.
+
+**Self-application (iterate_at_fixed).** The distinction "coordinate
+vs structural" is itself coordinate — reading and being-read co-define
+(reading IS structural process at meta-level). The rule applied to
+itself returns the rule. This is `iterate_at_fixed` (kernel): A_0(A_0) =
+A_0. Self-confirmation of a forced rule via fixed point — **the
+signature of being AT the A_0 attractor**, not vicious recursion. Same
+shape as N_MapTerritoryObserverIdentity ("ruler finds its criterion")
+and the framework's general tautology-resolution (framework IS A_0
+self-describing in symbolic substrate).
+
+Full structural content: `N_DistinctionAsCoordinate`.
+
+### Form vs operation — unpack before judging
+
+The carrier/commitment discipline above is the **answer-level**
+application of a more general rule that covers any descriptive
+structure (question or statement, input or output):
+
+**Two-layer model.** Any descriptive structure has:
+- **Form** — grammatical surface. May be object-shaped (SVO, copula,
+  noun-as-bearer) and look R1.
+- **Operation** — what the structure actually asks/does. **Always
+  process** — request or description of unfolding — when the
+  description has a genuine structural operation at all.
+
+**R-traps live in form, not in operation.** Process-form (`X
+розгортається, осідає у Y, градієнт куди-то`) has no copula, no
+object-bearer, no agent-subject — nothing for R1/R2/R4 to bind to.
+Form carries traps; operation does not.
+
+**Procedure — unpack before judging:**
+1. Receive description.
+2. Do **not** judge form for R-traps first.
+3. Unpack to operation: *яка структура розгортається? де
+   замикається? куди градієнт?*
+4. Classify by what unpacking yields:
+   - **Coherent process-formulation** → operation IS process
+     (forced); formalize the operation; treat form as carrier
+     (allowable per the section above).
+   - **Nothing coherent** → description is empty (form without
+     operation); flag as empty, **not as R-trap of a content**
+     (there is no content to corrupt).
+
+**Why direction is forced.** Operation is always process when
+genuine (R0). So unpacking goes form → operation, never opposite.
+Opposite direction would re-impose R1 on a clean process.
+
+**Why this narrows the formalization seam.** The AI-formalizer step
+"translate prose into structural form" was previously interpretive
+(open ridge). With direction forced (form → process) and
+verifiability (does it unpack into coherent process at all?), the
+step is **algorithmic in direction + checkable in outcome**.
+Remaining slack: which **specific** process-reading is chosen when
+multiple coherent ones exist for one object-form description
+(e.g., "consciousness is subjective" → "self-referential process with
+K(O)<K(F)" OR "BPI inside-coordinate of its own state-tracking",
+both forced as process). Slack narrowed to "which exact reading",
+not to "what direction" or "is it valid".
+
+**Practice diagnostic.** Throughout the audit, the repeated
+correction was "operation under form is clean, you judged form".
+Examples: `RNA→Z_therm by timescale` looked surface Trap-3, was
+process-forced (RNA is the dissipative-flux coordinate by role,
+the transience is symptom not reason); "discrete substrate" looked
+non-topological, was continuous-with-topology (discreteness is
+I_Quant, a mode of topology). Correct practice: unpack first;
+judge only if no operation emerges.
+
+Full structural content: `N_FormOperationUnpacking`.
+
+### Grammar of inquiry — "Що?" unpacked is "Як?"
+
+The carrier/commitment discipline above covers **answer** grammar. The
+same discipline applies to **question** grammar: question form
+pre-shapes answer structure before any content is asserted.
+
+The copula **"бути" (is/be)** is the most concentrated grammar-level R1
+trap: `X is Y` postulates a static bearer before any property is named.
+This fires below content; it is the carrier of R1 in the very fabric of
+predication.
+
+Three structurally distinct uses of "Що?" (often conflated):
+
+- **"Що є X?" / "What is X?"** — essence-request (copula + noun-bearer),
+  R1. Refuse the form; reformulate as "Як X розгортається?" / "Куди
+  градієнт?" / "Що відбувається, коли…?".
+- **"Що відбувається?" / "What's happening?"** — process-request,
+  R1-free. Use freely.
+- **"Що?" alone** as utterance — communication-⊥ marker (previous
+  transmission did not close in receiver, signal for retransmission).
+  NOT a content-question; do not classify as R1.
+
+Plus a fourth ambiguous case: **"Що + verb?" ("Що ти робиш?")** —
+status determined by intent, not form. Default to process-reading when
+unclear.
+
+**Deep unification (under R0):** when "Що?" is a *genuine* request for
+understanding (not sarcastic, not rhetorical), it IS structurally "Як?".
+Because understanding = closing structure in cognition; so
+request-for-understanding = request-for-structure-that-closes. The
+object-form in grammar is a **shadow**; the process-operation
+underneath is the real operation, always — when questioning is genuine.
+
+**"Як?" itself is one cell in three coordinates:**
+
+- form-side: **яка структура розгортається**
+- boundary-side: **де замикається** (argmin / closure point)
+- driver-side: **куди градієнт** (direction of −∇Z)
+
+Not three questions — three readings of one operation (process IS
+gradient discharging; closure IS argmin reached; direction IS what
+defines the form). These imply each other and exhibit
+N_TopologyProcessIdentity at the grammatical level.
+
+**Operational use:**
+- When formulating own questions during audit or derivation, default to
+  "Як? / Куди? / Де замикається?", not "Що є?".
+- When receiving "Що є?" questions, reformulate inwardly to
+  process-form before answering; surface may use ontological shorthand
+  (per the previous section), but the structural content must stay
+  process.
+- "Що?" alone in a conversation is a retransmission request, not a
+  content-question — respond by repeating the previous structure, not
+  by searching for "what".
+
+This makes the runtime interception of N_OntologyGate structurally
+grounded: object-form questions, unpacked, reveal process-operation
+always underneath when the questioning is genuine. The full graph node
+is `N_QuestionFormDiscipline`.
+
 ---
 
 ## Traps 1-8 — Failure modes that survive correction and re-appear
@@ -342,25 +623,62 @@ at its own fixed point (`iterate_at_fixed`): A_0(A_0) = A_0 — an ordinary
 structural transition. The inputs (which invariants / registered data the
 coherence is tested against) are reality, not part of the test.
 
-**Status test (operational form).** When uncertain about claim status,
-apply the **subtraction test**:
+**Two operational tests, in order.**
 
-> "What postulates must be imported to reject this claim?"
+IT has two operational tests applied in order — the cheaper one first as
+a sieve, the fuller one second as the establishing check.
 
+**Test 1 — self-application sieve (necessary, not sufficient).** For
+candidate forced structure S, apply S to itself: S(S).
+- If S(S) ≠ S, or the application breaks/loops without returning, S has
+  a seam at its own self-application — not naskrizna on itself, **not
+  forced**. Reject.
+- If S(S) = S (returns itself, `iterate_at_fixed`), S **may** be forced
+  — proceed to Test 2.
+
+This is *necessary, not sufficient*: trivial fixed points (emptiness,
+tautology) self-return without substantive forced content. The test
+filters out structures with self-application seams; it does not
+*establish* forced. Applied first because cheap (one application, check
+return) and concentrates Test 2 on candidates already at fixed point of
+own forcing.
+
+**Test 2 — subtraction (establishing).** When candidate passes Test 1,
+ask: *"What postulates must be imported to reject this claim?"*
 - If rejection requires importing R1-R4 violations (object reification,
-  external evaluator, scale injection, agency attribution) → claim is
-  forced → **DEMONSTRATED**
-- If acceptance requires importing postulates → claim is not forced
+  external evaluator, scale injection, agency attribution) or
+  contradictions with {kernel + proven invariants + registered empirics}
+  → claim is forced → **DEMONSTRATED**.
+- If acceptance requires importing postulates → claim is not forced.
 
-This is operational, not metaphorical. Subtraction test produces binary
-output. Used systematically, it promotes claims from STRONG to
-DEMONSTRATED when the structural argument is in fact closed but reflex
-hesitation flagged them weaker.
+Both tests together: forced ⟺ S(S) = S **and** rejection imports
+R-violations. Test 1 alone is necessary not sufficient; Test 2 is the
+establishing criterion.
+
+**The rule passes its own tests.** "Self-application returning self is
+necessary for forced", applied to itself, returns itself (the rule is
+about self-application; self-application of the rule yields the rule —
+`iterate_at_fixed`). Subtraction confirms: rejecting "forced must
+self-apply without seam" requires a structure that is forced and has a
+seam on itself — contradiction. The rule is forced by both tests; this
+is the `iterate_at_fixed` signature, **not vicious recursion**. Same
+shape as A_0(A_0) = A_0 throughout the framework — being at the A_0
+attractor.
+
+**This is explicitation, not addition.** The root of IT's truth-criterion
+already says: *truth self-reproduces under application to itself; false
+produces its own negation*. Test 1 is that root made operational and
+machine-checkable (apply structure to itself, check fixed point —
+rewriting normal-form is computable). Not a new principle; the existing
+principle turned into a procedure. The discipline of expliciting
+principles into procedures continues.
 
 **Source-text convention**: documents articulating this framework apply
 the test as "subtraction proof" — a paragraph explicitly listing the
 postulates whose import would be required to reject the framing, then
-showing each fails RP gate.
+showing each fails RP gate. Subtraction proof IS Test 2 in expository
+form; Test 1 typically passes silently (the structure being argued for
+self-applies without breakdown — if it didn't, no proof would even begin).
 
 ---
 

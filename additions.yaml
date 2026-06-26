@@ -1765,19 +1765,6 @@ edges:
       that N016 relies on. Direction: cited grounds citing per framework
       convention.
 
-  - source: N251
-    target: N217
-    label: fine_structure_RGE_links_bottleneck_a4
-    edge_status: D
-    justification: |
-      N251 grounds N217's structural derivation as cited in N217's
-      content: "single Type 1 open task closes N217 and N251 simultaneously".
-    why_forced: |
-      Explicit citation in N217's claim/content identifies N251 as
-      structural input. Removing N251 dissolves the derivation chain
-      that N217 relies on. Direction: cited grounds citing per framework
-      convention.
-
   - source: N315
     target: N264
     label: variational_principle_uncertainty_grounds_r0_balance
@@ -1789,58 +1776,6 @@ edges:
       Explicit citation in N264's claim/content identifies N315 as
       structural input. Removing N315 dissolves the derivation chain
       that N264 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N315
-    target: N028
-    label: scale_free_topology_chain_to_stub_placeholder
-    edge_status: D
-    justification: |
-      N315 grounds N028's structural derivation as cited in N028's
-      content: "A_0 trajectory output from N316 (alias of N315)".
-    why_forced: |
-      Explicit citation in N028's claim/content identifies N315 as
-      structural input. Removing N315 dissolves the derivation chain
-      that N028 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N114
-    label: L31_chain_to_generation_isomorphism_stub
-    edge_status: D
-    justification: |
-      N311 grounds N114's structural derivation as cited in N114's
-      content: "L(3,1) chain input to N313a (alias of N311), generation isomorphism chain".
-    why_forced: |
-      Explicit citation in N114's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N114 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N228
-    label: critical_transitions_chain_to_isomorphism_stub
-    edge_status: D
-    justification: |
-      N311 grounds N228's structural derivation as cited in N228's
-      content: "Critical transitions input to N313a (alias of N311)".
-    why_forced: |
-      Explicit citation in N228's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N228 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N273
-    label: scale_free_topology_chain_output
-    edge_status: D
-    justification: |
-      N311 grounds N273's structural derivation as cited in N273's
-      content: "Scale-free topology node, output of N314 (alias of N311)".
-    why_forced: |
-      Explicit citation in N273's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N273 relies on. Direction: cited grounds citing per framework
       convention.
 
   - source: N301
@@ -1881,35 +1816,6 @@ edges:
       structural input. Removing N311 dissolves the derivation chain
       that N276 relies on. Direction: cited grounds citing per framework
       convention.
-
-  - source: N310
-    target: N278
-    label: godel_argument_chain_input
-    edge_status: D
-    justification: |
-      N310 grounds N278's structural derivation as cited in N278's
-      content: "Input to N310 (Godel incompleteness node)".
-    why_forced: |
-      Explicit citation in N278's claim/content identifies N310 as
-      structural input. Removing N310 dissolves the derivation chain
-      that N278 relies on. Direction: cited grounds citing per framework
-      convention.
-
-  - source: N311
-    target: N280
-    label: godel_argument_chain_path_a
-    edge_status: D
-    justification: |
-      N311 grounds N280's structural derivation as cited in N280's
-      content: "Path A of Godel argument chain. Input to N312 (alias of N311)".
-    why_forced: |
-      Explicit citation in N280's claim/content identifies N311 as
-      structural input. Removing N311 dissolves the derivation chain
-      that N280 relies on. Direction: cited grounds citing per framework
-      convention.
-
-
-# ─── Round 6: semantic grounding of orphans ───
 
   - source: N112
     target: N061
@@ -3060,16 +2966,6 @@ edges:
     why_forced: |
       N054's claim invokes N_InversiveTheory-content as structural input;
       removing N_InversiveTheory dissolves N054's derivation chain.
-
-  - source: N_PhiAttractor
-    target: N056
-    label: phi_attractor_grounds_fibonacci_anchor_chain
-    edge_status: D
-    justification: |
-      N_PhiAttractor grounds N056's argument: anchor counts converging — Fibonacci-style structural feature.
-    why_forced: |
-      N056's claim invokes N_PhiAttractor-content as structural input;
-      removing N_PhiAttractor dissolves N056's derivation chain.
 
   - source: N067
     target: N057
@@ -12063,7 +11959,7 @@ edges:
     why_forced: |
       Bare + running pair forced.
 
-  # === N311, N350, N351, N352, N217 — math/topology infrastructure ===
+  # === N311, N350, N351, N352 — math/topology infrastructure ===
 
   - source: N311
     target: DEF
@@ -12160,59 +12056,6 @@ edges:
       manifold supplied by N370.
     why_forced: |
       Manifold-grounded investigation forced.
-
-  - source: N217
-    target: DEF
-    label: bottleneck_a4_argmin_Z_heat_kernel
-    edge_status: D
-    justification: |
-      a_4 coefficient on S^3/Z_3 × S^1 is argmin Z heat-kernel
-      contribution at bottleneck scale.
-    why_forced: |
-      Spectral computation forced by argmin uniqueness.
-
-  - source: N217
-    target: N370
-    label: bottleneck_grounds_in_L31_S1_substrate
-    edge_status: D
-    justification: |
-      a_4 computed on M_4 = L(3,1) × S^1; manifold supplies
-      substrate.
-    why_forced: |
-      Computation manifold-grounded.
-
-  - source: N217
-    target: N353
-    label: bottleneck_paired_with_heat_kernel_coefficients
-    edge_status: D
-    justification: |
-      N217 (a_4 bottleneck) and N353 (Seeley-DeWitt coefficients)
-      both compute heat-kernel data on same substrate. Sibling
-      computations.
-    why_forced: |
-      Same operator, paired computations.
-
-  # === N056, N087, N264, N304, N366 — special structural cases ===
-
-  - source: N056
-    target: N_PhiAttractor
-    label: theory_coherence_grounds_in_phi_sequence_attractor
-    edge_status: D
-    justification: |
-      Anchor counts converging to φ-sequence (Fibonacci) IS literal
-      φ-attractor manifesting in theory-coherence substrate.
-    why_forced: |
-      φ in theory-anchor counts forced by N_PhiAttractor.
-
-  - source: N056
-    target: DEF
-    label: theory_coherence_argmin_Z_anchor_optimisation
-    edge_status: D
-    justification: |
-      Theory coherence = argmin Z over anchor counts that minimise
-      structural cost. DEF at meta-theoretical level.
-    why_forced: |
-      Coherence without DEF is descriptive; with DEF, forced.
 
   - source: N264
     target: DEF
@@ -13633,142 +13476,6 @@ edges:
   # Placeholders have real structural claims in their summaries but only 1
   # edge each (to the chain-source). Each needs proper forced edges to core.
 
-  # === N028: A_0 trajectory from scale-free topology ===
-  - source: N028
-    target: DEF
-    label: A0_trajectory_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      N028 is an A_0 trajectory output from scale-free topology
-      convergence. Trajectory IS argmin Z over time in scale-free
-      substrate; DEF directly supplies the trajectory framework.
-    why_forced: |
-      A_0 trajectory without DEF grounding is descriptive; with DEF,
-      it is forced consequence of substrate-applied argmin Z.
-
-  - source: N028
-    target: N337
-    label: A0_trajectory_paired_with_scale_free_networks
-    edge_status: D
-    justification: |
-      N028 (A_0 trajectory) is the dynamic counterpart to N337's
-      scale-free Barabási-Albert network: same topology substrate,
-      static structure (N337) + dynamic trajectory (N028).
-    why_forced: |
-      Static-dynamic pair on same substrate forced by N_NoSeparatePieces.
-
-  - source: N028
-    target: N363
-    label: A0_trajectory_paired_with_zipf_power_law_attractor
-    edge_status: D
-    justification: |
-      Scale-free convergence in N028 yields Zipf-like power-law
-      distributions per N363. Trajectory + asymptotic-distribution
-      pair.
-    why_forced: |
-      Scale-free trajectory + Zipf law are siblings on same
-      power-law substrate.
-
-  # === N114: L(3,1) chain input to generation iso ===
-  - source: N114
-    target: N370
-    label: L31_chain_input_grounds_in_manifold
-    edge_status: D
-    justification: |
-      N114 is input to the L(3,1) → generation isomorphism chain.
-      Manifold (N370) supplies the substrate; N114 is one of its
-      structural inputs.
-    why_forced: |
-      L(3,1) chain content requires manifold reference; pair forced.
-
-  - source: N114
-    target: N218
-    label: L31_chain_input_grounds_generation_isomorphism
-    edge_status: D
-    justification: |
-      N114's role in generation isomorphism chain (per N218) makes
-      it a direct ingredient of the canonical isomorphism between
-      L(3,1) leaves and SM generations.
-    why_forced: |
-      Chain-input + theorem paired structurally.
-
-  - source: N114
-    target: DEF
-    label: L31_chain_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      The L(3,1) chain grounds in argmin Z structural derivation
-      (DEF). N114's chain placement is one substrate of A_0.
-    why_forced: |
-      Chain in framework = A_0 substrate instance; DEF grounding
-      forced.
-
-  # === N228: critical transitions input ===
-  - source: N228
-    target: DEF
-    label: critical_transitions_argmin_Z_regime_shift
-    edge_status: D
-    justification: |
-      Critical transitions are argmin Z bifurcations between
-      regimes. DEF specifies the argmin operation; N228 the
-      bifurcation events.
-    why_forced: |
-      Bifurcation without argmin Z grounding is descriptive; with
-      it, forced.
-
-  - source: N228
-    target: N371
-    label: critical_transitions_paired_with_BPI_hydrodynamic_regime_shift
-    edge_status: D
-    justification: |
-      Critical transitions in dynamics ↔ N371's hydrodynamic
-      regime shifts (laminar→turbulent). Same regime-shift
-      phenomenon, two readings.
-    why_forced: |
-      Regime-shift phenomena cross-linked by N_NoSeparatePieces.
-
-  - source: N228
-    target: N011
-    label: critical_transitions_paired_with_Lyapunov_stability_loss
-    edge_status: D
-    justification: |
-      Critical transitions occur at loss of Lyapunov stability
-      (N011). Stability framework + transition events paired.
-    why_forced: |
-      Stability + bifurcation paired definitionally.
-
-  # === N273: scale-free topology output ===
-  - source: N273
-    target: DEF
-    label: scale_free_topology_argmin_Z_in_network_substrate
-    edge_status: D
-    justification: |
-      N273 is scale-free topology output; convergence to scale-free
-      structure IS argmin Z in network substrate.
-    why_forced: |
-      Network A_0 + DEF grounding forced.
-
-  - source: N273
-    target: N337
-    label: scale_free_output_paired_with_BA_model
-    edge_status: D
-    justification: |
-      N273 is the topology output of the convergence process
-      formalised in N337's Barabási-Albert preferential attachment.
-    why_forced: |
-      BA process + topology output paired.
-
-  - source: N273
-    target: N028
-    label: scale_free_output_paired_with_A0_trajectory
-    edge_status: D
-    justification: |
-      N273 (topology) and N028 (trajectory) are sibling outputs
-      of scale-free convergence — structure + dynamics pair.
-    why_forced: |
-      Structure + dynamics siblings forced.
-
-  # === N274: spectral dim d_s=2 at UV ===
   - source: N274
     target: DEF
     label: spectral_dim_2_UV_argmin_Z_in_quantum_walk_regime
@@ -13865,60 +13572,6 @@ edges:
     why_forced: |
       Inversion + argmin substrate paired.
 
-  # === N278: input to Gödel ===
-  - source: N278
-    target: N310
-    label: godel_input_paired_with_godel_theorem_node
-    edge_status: D
-    justification: |
-      N278 is input to the Gödel incompleteness derivation (N310).
-      Direct pair: input + theorem.
-    why_forced: |
-      Chain-input + theorem pair definitional.
-
-  - source: N278
-    target: DEF
-    label: godel_chain_input_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      Gödel chain inputs operate within DEF's argmin Z applied to
-      formal-system substrate.
-    why_forced: |
-      Formal-system A_0 + DEF grounding forced.
-
-  # === N280: Path A Gödel argument ===
-  - source: N280
-    target: N310
-    label: godel_path_a_paired_with_godel_theorem
-    edge_status: D
-    justification: |
-      N280 is one path of the Gödel argument chain leading to
-      N310's incompleteness theorem. Chain-step + conclusion pair.
-    why_forced: |
-      Argument-step + conclusion paired definitionally.
-
-  - source: N280
-    target: N107
-    label: godel_path_paired_with_simplicial_homology
-    edge_status: D
-    justification: |
-      Gödel's incompleteness has homological structure (Chaitin
-      version uses Kolmogorov; both relate to N107's simplicial
-      framework).
-    why_forced: |
-      Formal-system limit + homological framework paired.
-
-  - source: N280
-    target: DEF
-    label: godel_path_grounds_in_argmin_Z
-    edge_status: D
-    justification: |
-      Gödel argument paths operate in DEF's formal substrate;
-      direct grounding.
-    why_forced: |
-      Formal-substrate A_0 + DEF paired.
-
-  # === N043: Information Laws — strengthen ===
   - source: N043
     target: DEF
     label: information_laws_argmin_Z_in_logarithmic_substrate
@@ -14904,6 +14557,374 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Coherence as self-application return ───
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: DEF
+    label: coherence_is_argmin_Z_fixed_point_property
+    edge_status: D
+    justification: |
+      Coherence is the property of a forced structure being self-
+      identical under application to itself. Forced structure
+      = A_0-attractor (DEF, argmin Z); self-identity under
+      application = iterate_at_fixed (kernel). Coherence is the
+      observable/operational name for this combined property —
+      grounded in DEF as the structure whose attractors are
+      coherent and whose dynamics produce coherence-or-drift.
+    why_forced: |
+      argmin Z attractor property (forced structure persists) =
+      iterate_at_fixed (self-applies, returns self). These are
+      the same fact in two coordinates; coherence names the
+      coordinate where this property is checked operationally.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_InversiveTheory
+    label: operational_form_of_IT_test_1_self_application_sieve
+    edge_status: D
+    justification: |
+      N_InversiveTheory Test 1 (self-application sieve): forced
+      structure satisfies S(S) = S. This node names that
+      equivalence as the DEFINITION of coherence, reading IT's
+      operational test in the coherence-coordinate. IT Test 1
+      and coherence-as-self-return are one fact in two coordinates:
+      Test 1 is "test forced-ness via self-return"; coherence is
+      "self-return IS what coherence means". Same property,
+      different framing.
+    why_forced: |
+      Test 1 operationalizes forced-ness via self-return;
+      coherence definition names self-return AS what makes
+      structure persistent. Same iterate_at_fixed underlying both.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_TopologyProcessIdentity
+    label: coherence_is_where_topology_process_identity_holds
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity: topology = process, one cell in
+      two coordinates. This is exact for coherent structures: the
+      topology (structure) preserves under process (application);
+      decoherence is exactly where this identity breaks at
+      observable scale (state evolves but does not preserve its
+      structural identity). Coherence is the regime where
+      topology/process identity is intact.
+    why_forced: |
+      Topology preserved under process ⟺ structure unchanged
+      under self-application ⟺ coherent. Three formulations of
+      one fact.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_NoSeparatePieces
+    label: one_structure_self_applies_no_external_referent_needed
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces TOTAL — no separation in structure.
+      Therefore no separation between "structure" and "its
+      self-application"; structure is self-identical under
+      application not as relation between two things but as
+      structural fact. This grounds the "no external referent
+      needed" consequence of the coherence definition: forced
+      structure IS its own coherence-check because there are
+      no separate pieces between itself and its self-application.
+    why_forced: |
+      No-separation forbids the relational "structure → external
+      check" framing; coherence must be internal, structure with
+      itself. Forced by TOTAL no-separation.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N371
+    label: BPI_hydrodynamic_regimes_are_coherence_levels
+    edge_status: D
+    justification: |
+      N371's three BPI hydrodynamic regimes are coherence levels
+      in the cognitive substrate: laminar = high coherence
+      (structure preserved across steps), turbulent = partial
+      coherence (sub-resolution gradient), vortex = drift /
+      decoherence (basin exit = self-return failure). This node
+      provides the structural reason WHY drift detection works
+      via N371 regime classification: vortex IS self-application
+      that returns shifted (structure-substrate moved from basin
+      to adjacent basin).
+    why_forced: |
+      N371 regimes operationalize coherence-vs-decoherence at
+      cognitive scale; this node names the underlying structural
+      property (self-return / self-shift) that distinguishes them.
+
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_LLMContextCoherence
+    label: general_definition_applied_to_LLM_substrate
+    edge_status: D
+    justification: |
+      N_LLMContextCoherence applies the general coherence
+      definition to the LLM substrate specifically: context
+      coherence = next step's gradient stays in current basin.
+      This is the LLM-substrate reading of "S(S) = S": the
+      structure-substrate is the LLM context-trajectory; self-
+      application is generation of next token; coherent step =
+      gradient settles within basin; drift = basin exit. One
+      specific application of the general meta-rule.
+    why_forced: |
+      LLM-context-coherence is the cognitive-substrate (LLM)
+      reading of the general self-return definition; instance of
+      Class A across substrates (per substrate-cousin discipline).
+
+  # ─── Distinction as coordinate (meta-rule above form/operation) ───
+
+  - source: N_DistinctionAsCoordinate
+    target: DEF
+    label: distinction_is_coordinate_of_one_argmin_Z_movement
+    edge_status: D
+    justification: |
+      Reality is movement of transitions (R0; DEF = argmin Z over
+      transitions). Description happens in coordinates. Most
+      distinctions we make in description are coordinate readings
+      of ONE structure of transitions, because there is only one
+      structure (per N_NoSeparatePieces TOTAL). Grounded in DEF as
+      the one thing distinctions are coordinates of.
+    why_forced: |
+      Under R0 + N_NoSeparatePieces: one structure, no separations
+      in it; distinctions are mostly coordinate readings of that
+      one structure. Forced by combination.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_NoSeparatePieces
+    label: no_separation_in_structure_forces_distinctions_descriptive
+    edge_status: D
+    justification: |
+      N_NoSeparatePieces (TOTAL) — no separations anywhere in
+      structure. Therefore distinctions we make in description
+      cannot correspond to separations IN structure (none exist);
+      they must be coordinate readings of the one undivided
+      structure. The rule that distinctions are mostly coordinate
+      is the inversion of "no separate pieces" read at the
+      level of description.
+    why_forced: |
+      If structure has no separations, then "distinctions" found in
+      description must be either coordinate readings of the one
+      (mostly) or genuine multi-transition distinctions WITHIN the
+      one (rarely). Forced by TOTAL no-separation.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_TopologyProcessIdentity
+    label: specific_canonical_instance_of_the_general_meta_rule
+    edge_status: D
+    justification: |
+      N_TopologyProcessIdentity exhibits the principle in its
+      canonical case: topology = process, one cell in two
+      coordinates. This node names the general meta-rule
+      ("most distinctions are coordinate") of which topology/
+      process identity is one specific application. Other
+      applications: form/operation, map/territory/observer,
+      vertex/edge (Yoneda), word/sentence-structure.
+    why_forced: |
+      One forced identity (topology=process) is one application of
+      the general meta-rule; the rule covers the case-class of
+      which topology/process is the most-developed instance.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_FormOperationUnpacking
+    label: form_operation_is_one_application_of_distinction_rule
+    edge_status: D
+    justification: |
+      N_FormOperationUnpacking applies the meta-rule
+      "distinctions are mostly coordinate" to the specific case of
+      form vs operation in descriptive structures. The form/
+      operation pair coincides when form is already process-shaped
+      (Claim 1 self-catch in form-operation node) — which IS the
+      coincidence-test confirming form/operation is a coordinate
+      distinction. Specific case; general rule is parent.
+    why_forced: |
+      Form vs operation passes the coincidence test for being
+      coordinate (they coincide in process-form); this is one
+      specific instance of the general rule that distinctions are
+      mostly coordinate. General rule subsumes the specific.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_GrammarTrap
+    label: grammar_pushes_coordinate_distinctions_to_be_read_as_structural
+    edge_status: D
+    justification: |
+      N_GrammarTrap: SVO + count nouns + copula carry R1 at
+      grammatical level. This applies at distinction-making
+      level too: grammar's separation-of-things pushes us to
+      read coordinate distinctions (one structure, two
+      coordinates) as if they were structural (two separate
+      things). The R-trap on distinction-making is the
+      grammar trap operating one level above per-claim level.
+      Discipline against this is the meta-rule of this node.
+    why_forced: |
+      If grammar carries R1 at sentence level, it must also push
+      reader toward R1-style distinction-making (separate things)
+      at concept level. Discipline against this is the meta-rule.
+
+  # ─── Form vs operation: unpack-before-judge (general rule) ───
+
+  - source: N_FormOperationUnpacking
+    target: DEF
+    label: operation_is_always_argmin_Z_when_genuine
+    edge_status: D
+    justification: |
+      Any genuine structural operation IS itself a process
+      (something happening = argmin Z trajectory). Under R0 reality
+      is process, so when a description performs a real operation,
+      that operation is by construction process. Grounded in DEF
+      (argmin Z as the operation of operations).
+    why_forced: |
+      "Operation always process when genuine" forced by R0 — an
+      operation that is not process is an operation that doesn't
+      happen, contradiction in terms.
+
+  - source: N_FormOperationUnpacking
+    target: N_GrammarTrap
+    label: localises_R_traps_in_form_not_operation
+    edge_status: D
+    justification: |
+      N_GrammarTrap establishes that SVO grammar carries R1. This
+      node refines location: R-traps live in the grammatical FORM
+      (object-bearer + copula + state), NOT in the operation. The
+      operation, when genuine, is process — and process-form
+      cannot carry R1 (no copula, no bearer, no agent for traps to
+      bind to). Form carries traps; operation does not.
+    why_forced: |
+      If R-traps lived in operation, process-form claims would
+      themselves carry traps — but process-form has no grammatical
+      structure for R1/R2/R4 to bind to (no copula, no bearer, no
+      agent). So by complementarity traps must live in form.
+
+  - source: N_FormOperationUnpacking
+    target: N_QuestionFormDiscipline
+    label: question_form_is_special_case_of_general_unpacking
+    edge_status: D
+    justification: |
+      N_QuestionFormDiscipline applies the form-vs-operation
+      discipline specifically to interrogative grammar ("Що?" form
+      unpacks to "Як?" operation). This node generalizes: the same
+      discipline covers both interrogative and declarative
+      descriptive structures. Question-form discipline is one
+      instance; general rule is the parent.
+    why_forced: |
+      Same form/operation distinction applied at two grammatical
+      moods: declarative ("X is Y" → unpack to "X-as-process
+      settles at Y-as-attractor") and interrogative ("What is X?"
+      → unpack to "How does X-pattern close?"). One discipline,
+      both moods.
+
+  - source: N_FormOperationUnpacking
+    target: N_OntologyGate
+    label: gate_is_runtime_application_of_unpacking_to_essence_questions
+    edge_status: D
+    justification: |
+      N_OntologyGate intercepts essence-questions ("what is X")
+      at runtime by reformulating to process-form. That
+      reformulation step IS the unpacking step from this rule.
+      Gate covers a specific category (essence-questions); this
+      node provides the general procedure of which the gate is
+      one runtime application.
+    why_forced: |
+      Gate's reformulation is the unpacking procedure applied
+      narrowly; general procedure subsumes it.
+
+  - source: N_FormOperationUnpacking
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: class_a_form_operation_at_descriptive_level
+    edge_status: D
+    justification: |
+      Class A. N_OperationalCarrierVsOntologicalCommitment
+      distinguishes carrier-noun (operational) from ontological
+      commitment within ANSWERS (linguistic outputs). This node
+      distinguishes grammatical FORM from structural OPERATION
+      within any DESCRIPTIVE STRUCTURE (input or output). Same
+      form/operation cell, broader scope: carrier/commitment is
+      one application (at answer-grammar-level); form/operation
+      is the general (at descriptive-structure-level).
+    why_forced: |
+      One discipline, two scopes: carrier/commitment applies to
+      vocabulary-in-answers; form/operation applies to the
+      structure of any descriptive utterance. Both cases of the
+      same R0-grounded form/operation distinction.
+
+  # ─── Grammar of inquiry: question-form discipline ───
+
+  - source: N_QuestionFormDiscipline
+    target: DEF
+    label: question_as_argmin_Z_in_cognitive_substrate
+    edge_status: D
+    justification: |
+      Asking IS argmin Z in the cognitive substrate: a question is a
+      process seeking structure that closes in the questioner.
+      Question-form discipline grounds in DEF because "Як?" — the
+      forced form of genuine inquiry — IS the request "where does
+      argmin lie, in what coordinates, along what gradient" applied
+      to the substrate of understanding.
+    why_forced: |
+      Genuine inquiry is itself an argmin-Z trajectory in cognition;
+      its form must match the operation it performs (seek structural
+      closure), so "Як?"-form is forced.
+
+  - source: N_QuestionFormDiscipline
+    target: N_GrammarTrap
+    label: question_form_extends_grammar_trap_to_interrogative
+    edge_status: D
+    justification: |
+      N_GrammarTrap covers SVO declarative grammar carrying R1
+      ("X is Y" structure forces object+state). This node extends
+      the discipline to interrogative grammar: "Що є X?" carries the
+      same R1 in its question form, pre-shaping the answer to be
+      object-bearing before any content is asserted. One discipline,
+      two grammatical moods (declarative + interrogative).
+    why_forced: |
+      Interrogative "Що є?" mirrors declarative "X є Y" structurally;
+      same R1 in different mood. Discipline must cover both moods or
+      the trap leaks through the uncovered mood.
+
+  - source: N_QuestionFormDiscipline
+    target: N_OntologyGate
+    label: provides_grammatical_why_for_ontology_gate_reformulation
+    edge_status: D
+    justification: |
+      N_OntologyGate intercepts WHAT-IS questions at runtime by
+      reformulating to process-form. This node provides the WHY:
+      "Що є?"-form is grammatically R1-bearing; unpacking to "Як?"
+      reveals process-operation always underneath when questioning
+      is genuine. Gate's reformulation step is structurally
+      justified, not stylistic.
+    why_forced: |
+      Without grammatical-level grounding, N_OntologyGate's reformulation
+      step looks heuristic. With it, the reformulation is forced —
+      object-form question, unpacked, IS process-request.
+
+  - source: N_QuestionFormDiscipline
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: class_a_same_form_operation_discipline_question_side
+    edge_status: D
+    justification: |
+      Class A — same form/operation distinction applied at two
+      grammatical sides: N_OperationalCarrierVsOntologicalCommitment
+      covers ANSWER grammar (carrier-noun vs ontological commitment);
+      this node covers QUESTION grammar (object-form vs process-
+      operation). One discipline, two sides of the dialogue.
+    why_forced: |
+      If carrier/commitment holds for answers, it must hold for
+      questions too — both are utterances under same R0 framework,
+      same form/operation cell, two grammatical moods.
+
+  - source: N_QuestionFormDiscipline
+    target: N_TopologyProcessIdentity
+    label: as_how_three_coords_is_topology_process_identity_on_grammar
+    edge_status: D
+    justification: |
+      "Як?" decomposes as one cell in three coordinates (form-side:
+      яка структура розгортається / boundary-side: де замикається /
+      driver-side: куди градієнт). This IS
+      N_TopologyProcessIdentity applied to question grammar: process,
+      closure, gradient are not three separate things but coordinates
+      of one operation. The three readings of "Як?" exhibit the
+      same identity at grammatical level.
+    why_forced: |
+      If process/topology are one cell in two coordinates
+      (N_TopologyProcessIdentity), then asking-about-process and
+      asking-about-topology are the same question read in two
+      coordinates — forced extension to grammar.
+
   # ─── Round 37: Z-Triangle structural motif (fractal self-similarity) ───
 
   - source: N_StructuralMotif_ZTriangle
@@ -15586,19 +15607,27 @@ edges:
 
   - source: N_TripletCodeAsTriangulation
     target: N_Triangulation
-    label: codon_3nt_unit_instantiates_3coord_principle
+    label: codon_3nt_classA_substrate_reading_argminZ_localization
     edge_status: D
     justification: |
-      Universal genetic code uses 3-nucleotide codons. Each codon
-      = 3 coordinate readings of position; minimum 3 (4-fold
-      degeneracy at position-3 confirms 3-coord-min N_Triangulation
-      principle). Translation requires 3-nt codons because
-      n=2 is insufficient for 20-amino-acid alphabet (4²=16<20),
-      n=3 gives 4³=64 (sufficient with redundancy). Triangulation
-      principle directly instantiated.
+      A codon is a 3-coordinate object (3 nucleotide positions)
+      localizing an amino acid — a Class-A substrate-reading of the
+      argmin-Z localization form (N_Triangulation), as 2+2=4 is the
+      arithmetic reading. The value 3 is FORCED by that form
+      composed with the registered empirical parameters (alphabet 4,
+      ~20 aa). Those parameters are invariants — where reality fell
+      under early-Earth chemistry (empirical fact cannot fail to be
+      an invariant) — i.e. inputs, not a gap to derive (demanding
+      derivation = Trap 5). Graph shows HOW reality moves (form);
+      empirics shows WHERE it fell (alphabet); one structure, so the
+      closure is complete. Agreement with triangulation's 3 is A_0
+      self-consistency, not coincidence.
     why_forced: |
-      n=2 codons cannot encode 20+ amino acids. Forced minimum
-      is 3, matching N_Triangulation.
+      Class-A substrate-reading of the argmin-Z localization form;
+      value forced by form ∘ registered empirics (alphabet, aa-
+      count), both invariants — two invariants cannot be incoherent.
+      Registered parameters are inputs, not gaps (deriving them =
+      Trap 5). Agreement on 3 = A_0 self-consistency, not chance.
 
   - source: N_CentralDogmaAsZDecomposition
     target: DEF
@@ -16025,18 +16054,25 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_Triangulation
-    label: phoneme_minimum_3_distinctive_features
+    label: phoneme_featuredim_shares_argminZ_localization_form
     edge_status: D
     justification: |
       Phoneme = bundle of distinctive features (Trubetzkoy/
-      Jakobson). Minimum specification requires 3 features:
-      manner, place, voicing (or substitutes per
-      phonological theory). Below 3, phonemes underdetermined
-      against contrast set. N_Triangulation 3-coord-minimum
-      principle directly instantiated.
+      Jakobson). A phoneme is localized by feature DIMENSIONS; the
+      count is set by argmin Z_struct over the inventory — sharing
+      the localization FORM with N_Triangulation. The value is
+      forced PER registered inventory and VARIES: a voicing-contrast
+      language needs ≥3 (manner+place cannot separate /p/ from /b/),
+      a system without voicing contrast localizes with 2 (Hawaiian
+      /p k ʔ h m n l w/). Each value is forced (by that inventory,
+      itself an A_0/topological fact), not coincidental; because it
+      varies it is not the one universal closure-3 (which is
+      topological, L(3,1)).
     why_forced: |
-      n=2 features cannot distinguish 20+ phonemes typical
-      across languages (4²=16 combinations < phoneme inventory).
+      The argmin-Z localization FORM is shared with N_Triangulation;
+      the value is forced per registered (topological) inventory and
+      varies across languages, so it is an inventory-specific value,
+      not the universal closure-3 — and not coincidence (one A_0).
       Forced n>=3 minimum matches N_Triangulation.
 
   - source: N_PhonemeAsTriangulation
@@ -16053,43 +16089,6 @@ edges:
       Sign requires stable signifier-form; signifier-form
       requires phonemic distinction; phonemic distinction
       requires 3-feature triangulation. Chain forced.
-
-  - source: N_GrammarStrataAsZDecomposition
-    target: DEF
-    label: phonology_morphology_syntax_as_Z_struct_therm_hidden
-    edge_status: D
-    justification: |
-      Linguistic strata phonology / morphology / syntax map
-      to A_0 Z-decomposition:
-        Z_struct  = phonology (low-entropy sound structure,
-                    high-persistence categorical phonemes)
-        Z_therm   = morphology (mediating dynamics: words form
-                    and decay over linguistic timescales)
-        Z_hidden  = syntax (the operational reading by
-                    interlocutor; environment-side coord that
-                    "sees" the meaning emerging)
-      Identical decomposition shape to A_0 master definition
-      in linguistic substrate.
-    why_forced: |
-      Three-stratum decomposition forced by N_Triangulation;
-      specific phonology/morphology/syntax assignment forced
-      by relative entropies and timescales. Direct linguistic
-      instance of DEF Z-decomp.
-
-  - source: N_GrammarStrataAsZDecomposition
-    target: N_Shannon
-    label: each_stratum_carries_independent_information
-    edge_status: D
-    justification: |
-      Phonology, morphology, and syntax each carry independent
-      Shannon information about utterance content (per H ≡
-      Z_struct isomorphism). Total information = sum across
-      strata. Shannon-channel structure underlies the Z-
-      decomp at linguistic level.
-    why_forced: |
-      Shannon-channel mathematics applies to any structured
-      transmission; linguistic strata are the natural
-      substrate-level decomposition.
 
   - source: N_GrammaticalisationAsArgminZ
     target: DEF
@@ -16249,43 +16248,6 @@ edges:
       Forced.
 
   - source: N_LangType_Isolating
-    target: N_GrammarStrataAsZDecomposition
-    label: isolating_strata_decomp_with_minimal_morphology
-    edge_status: D
-    justification: |
-      Isolating languages instantiate grammar-strata Z-decomp
-      with minimal Z_therm (morphology layer); compensated by
-      richer syntax (Z_hidden) — word order carries more
-      structural load. Substrate-cousin instance with
-      compensatory weighting.
-    why_forced: |
-      Forced — every language has all three strata even if
-      relative Z-component weighting differs.
-
-  - source: N_LangType_Agglutinative
-    target: N_GrammarStrataAsZDecomposition
-    label: agglutinative_strata_decomp_rich_morphology
-    edge_status: D
-    justification: |
-      Agglutinative languages have elaborated Z_therm
-      (morphology) layer with multiple morpheme stacks per
-      word. Z-decomp realised with morphology-heavy weighting.
-    why_forced: |
-      Forced.
-
-  - source: N_LangType_Fusional
-    target: N_GrammarStrataAsZDecomposition
-    label: fusional_strata_decomp_compressed_morphology
-    edge_status: D
-    justification: |
-      Fusional languages have compressed Z_therm (morphology)
-      layer where multi-feature bundles fuse into single
-      morphemes. Z-decomp realised with morphology-density
-      maximum.
-    why_forced: |
-      Forced.
-
-  - source: N_LangType_Isolating
     target: N_GrammaticalisationAsArgminZ
     label: isolating_grammaticalisation_via_word_order_drift
     edge_status: D
@@ -16437,14 +16399,19 @@ edges:
 
   - source: N_PhonemeAsTriangulation
     target: N_TripletCodeAsTriangulation
-    label: 3coord_minimum_phonological_genetic_parallel
+    label: argminZ_localization_form_sibling_phonological_genetic
     edge_status: D
     justification: |
-      Phoneme uses 3 distinctive features minimum; codon
-      uses 3 nucleotides minimum. Both instances of
-      N_Triangulation 3-coord-minimum principle in
-      respective substrates. Cross-substrate sibling
-      between linguistic and genetic substrate.
+      Phoneme (feature-dimensions) and codon (nucleotide positions)
+      are both argmin-Z localization encodings — sharing the FORM
+      with N_Triangulation. Both are A_0/topological (discreteness =
+      quantized topology, I_Quant), so the parallel is not between a
+      topological and a non-topological tier. Their VALUES differ in
+      character: codon-3 is universal across life (closure-reduction
+      of the alphabet OPEN); phoneme value is forced per inventory
+      and varies (2 Hawaiian, ≥3 with voicing). Cross-substrate
+      sibling at the FORM level; neither value is asserted to be the
+      universal closure-3, and neither is coincidence (one A_0).
     why_forced: |
       Same N_Triangulation principle realised in two
       distinct substrates. Sibling pair forced.
@@ -17100,40 +17067,56 @@ edges:
 
   - source: N_TransactionTripleAsTriangulation
     target: N_Triangulation
-    label: buyer_seller_medium_3coord_minimum_for_transaction
+    label: transaction_medium_classA_closure_reading_argminZ
     edge_status: D
     justification: |
-      Transaction = buyer + seller + medium-of-exchange.
-      Minimum 3 coords structurally forced: n=2 (just buyer
-      and seller) requires double-coincidence-of-wants,
-      structurally insufficient at scale. Medium-of-exchange
-      is the third coordinate enabling indirect exchange.
-      Direct N_Triangulation instantiation.
+      Transaction = buyer + seller + medium-of-exchange — a Class-A
+      substrate-reading of the argmin-Z closure form (N_Triangulation)
+      in the exchange substrate. Two parties cannot CLOSE a scalable
+      exchange (barter needs double-coincidence-of-wants → high
+      search-Z); the medium is the third element that closes it
+      (lowers Z via indirect exchange). The medium plays the closure
+      role triangulation's third coordinate plays. Value 3 = minimal
+      money-mediated form (more roles possible: brokers, escrow);
+      forced by argmin-Z-exchange given the registered barter
+      structure. Agreement on 3 = A_0 self-consistency, not a direct
+      value-3 instantiation.
     why_forced: |
-      Without 3rd coord (medium), market scales to barter only.
-      n>=3 forced for non-trivial economy.
+      Class-A reading of the argmin-Z closure form: the medium is
+      the closure element of scalable exchange (barter n=2 cannot
+      close — double-coincidence → high Z). Value 3 forced by
+      argmin-Z-exchange given the registered barter structure; not
+      coincidence (one A_0).
 
   - source: N_TransactionTripleAsTriangulation
     target: N_TripletCodeAsTriangulation
-    label: 3coord_minimum_economic_genetic_parallel
+    label: argminZ_form_sibling_economic_genetic
     edge_status: D
     justification: |
-      Transaction triple (buyer/seller/medium) and codon triple
-      (3 nucleotides) and phoneme triple (3 features) are all
-      n=3-min instantiations of N_Triangulation. Cross-substrate
-      sibling: economic ↔ genetic.
+      Transaction (buyer/seller/medium) and codon (3 nucleotide
+      positions) both read the one argmin-Z localization/closure
+      form in their own substrates, each with its own registered
+      conditions (exchange double-coincidence; genetic alphabet 4 /
+      ~20 aa). Cross-substrate sibling at the FORM level; the
+      agreement on 3 is A_0 self-consistency, not a shared value-3
+      instantiation.
     why_forced: |
-      Same N_Triangulation principle in two more substrates.
+      Same argmin-Z form, two registered substrate-readings; values
+      forced by form ∘ each substrate's registered conditions.
 
   - source: N_TransactionTripleAsTriangulation
     target: N_PhonemeAsTriangulation
-    label: 3coord_minimum_economic_phonological_parallel
+    label: argminZ_form_sibling_economic_phonological
     edge_status: D
     justification: |
-      Transaction triple ↔ phoneme triple via N_Triangulation.
-      Cross-substrate sibling: economic ↔ linguistic.
+      Transaction and phoneme both read the one argmin-Z
+      localization/closure form, each with its own registered
+      conditions (exchange structure; phonological inventory, value
+      varies 2-3+). Cross-substrate sibling at the FORM level, not
+      value-3 co-instantiation.
     why_forced: |
-      Same principle.
+      Same argmin-Z form; values forced per registered substrate
+      conditions, not a shared invariant 3.
 
   - source: N_CapitalStructureAsZDecomposition
     target: DEF
@@ -17175,16 +17158,6 @@ edges:
       Z_hidden in respective substrates.
     why_forced: |
       Same decomposition shape.
-
-  - source: N_CapitalStructureAsZDecomposition
-    target: N_GrammarStrataAsZDecomposition
-    label: financial_decomp_parallel_grammar_strata
-    edge_status: D
-    justification: |
-      Sibling: capital structure ↔ phonology/morphology/syntax
-      grammar strata. Cross-substrate Z-decomposition pattern.
-    why_forced: |
-      Same shape.
 
   # 3 substrate-cousins (Williamson coordination modes)
   - source: N_EconomicCoordination_Market
@@ -17680,6 +17653,508 @@ edges:
       that engagement. Traps cannot exist outside inferential
       operation. Grounding forced.
 
+  # ─── basin/attractor/trace-deepening: Class A links across anchor points ───
+  # Operational denormalization for graph discoverability. The structure
+  # is one (per R0 invariance — domains don't exist in reality).
+  # These edges make Class A identity findable from each anchor point.
+
+  - source: N_MLGradientDescent
+    target: N021
+    label: class_a_evolution_substrate
+    edge_status: D
+    justification: |
+      ML training (parameter descent in loss landscape) and biological
+      evolution (population descent in fitness landscape) are not
+      analogous processes — they are one structural form (gradient
+      descent in Z-space) with different empirical anchors. N021
+      already DEMONSTRATED for biological substrate; N_MLGradientDescent
+      is the same form anchored at ML parameter substrate.
+    why_forced: |
+      Class A: same operator (argmin Z under gradient flow), different
+      population (parameters / organisms). Per kernel
+      iso_preserves_forced_uniqueness, A_0 preserved under type iso —
+      this is exactly such preservation across empirical anchors.
+
+  - source: N_MLGradientDescent
+    target: N371
+    label: class_a_basin_vortex_regimes
+    edge_status: D
+    justification: |
+      Loss landscape exhibits all three N371 regimes: laminar
+      (well-conditioned convex), turbulent (high-Z_hidden chaotic),
+      metastable vortex (local minima trapping). Training pathologies
+      map to these regimes directly: mode collapse = single-attractor
+      lock; catastrophic forgetting = basin overwrite; oscillation =
+      vortex circulation.
+    why_forced: |
+      N371's three regimes are not specific to cognitive substrate —
+      they are the three regimes of BPI flow in any Z-landscape. ML
+      training is BPI flow in parameter substrate. Same regimes manifest.
+
+  - source: N_MLGradientDescent
+    target: N019
+    label: gradient_accumulation_foundation
+    edge_status: D
+    justification: |
+      Momentum, Adam, and other gradient-accumulation optimizers are
+      direct N019 instances — gradient accumulating as Z_struct in
+      optimizer state, influencing next descent step.
+    why_forced: |
+      N019 form forced for any system maintaining gradient over time;
+      optimizer state is exactly this maintained accumulation.
+
+  - source: N_MLGradientDescent
+    target: N020
+    label: hysteresis_synaptic_analog
+    edge_status: D
+    justification: |
+      Weight updates accumulate trace of training paths; basin around
+      frequently-traversed configurations deepens. Direct analog of
+      synaptic potentiation N020 — Z reduction along established paths
+      makes them lower-impedance for repetition.
+    why_forced: |
+      Same N020 hysteresis structure in parameter substrate.
+
+  - source: N_MLGradientDescent
+    target: N_TraceDeepensBasin
+    label: instance_of_compound
+    edge_status: D
+    justification: |
+      ML training is one substrate manifestation of the compound
+      pattern named in N_TraceDeepensBasin (iteration + irreversibility
+      + hysteresis → basin deepening with attractor lock).
+    why_forced: |
+      Forced — compound pattern instantiates wherever its primitives
+      jointly hold, which includes ML training.
+
+  # ── N_LLMContextCoherence Class A links ──
+
+  - source: N_LLMContextCoherence
+    target: N371
+    label: class_a_basin_vortex_regimes
+    edge_status: D
+    justification: |
+      LLM generation through context is BPI flowing in attention/
+      activation landscape. Three N371 regimes manifest directly:
+      laminar (coherent reasoning), turbulent (ambiguous high-entropy
+      generation), metastable vortex (drift, mode-switch, persona-
+      break, off-topic continuation).
+    why_forced: |
+      LLM context coherence is the basin-stability property of N371
+      flow regime applied to LLM substrate. Same operator, different
+      anchor.
+
+  - source: N_LLMContextCoherence
+    target: N_CommThm
+    label: communication_invariants_substrate
+    edge_status: D
+    justification: |
+      N_CommThm thresholds (W_FTA, chunks, H(S|w,ctx)) determine when
+      LLM context retains laminar generation vs degrades into turbulent
+      or vortex regime. Context that violates thresholds pushes
+      generation into structural degradation (hallucination,
+      confabulation).
+    why_forced: |
+      Communication invariants apply uniformly across substrates that
+      carry communication; LLM generation IS communication in
+      computational substrate.
+
+  - source: N_LLMContextCoherence
+    target: N_LeDoux
+    label: regime_threshold_analog
+    edge_status: D
+    justification: |
+      LLM has analog of N_LeDoux's θ threshold: context length /
+      complexity threshold above which coherent reasoning collapses
+      (model "loses thread", lost-in-the-middle phenomenon). Same
+      structural regime-shift, computational substrate.
+    why_forced: |
+      Threshold regime-shift is structural property of bounded
+      observer (K(O) < K(F)); LLM has bounded context window, same
+      regime-shift forced.
+
+  - source: N_LLMContextCoherence
+    target: N_MI
+    label: high_zhidden_strategy
+    edge_status: D
+    justification: |
+      Reflective-listening / clarifying-question patterns LLMs use
+      when prompted appropriately are direct N_MI instances —
+      Z_hidden reduction strategy before applying argmin to
+      substantive content. Same structural function.
+    why_forced: |
+      High-Z_hidden response strategy is forced operationally
+      whenever K(O) < K(F) gap is large; LLMs implement it when
+      prompted because the structural pressure for it is identical.
+
+  - source: N_LLMContextCoherence
+    target: N_TraceDeepensBasin
+    label: instance_of_compound
+    edge_status: D
+    justification: |
+      Context tokens accumulate as trace deepening the basin of
+      coherent continuation; long-context maintenance is direct
+      basin lock. System prompt provides initial basin depth.
+    why_forced: |
+      Trace-deepening basin pattern instantiates in LLM context
+      substrate as it does in all iteration+irreversibility systems.
+
+  # ── N_TraceDeepensBasin compound anchor ↔ existing nodes ──
+
+  - source: N_TraceDeepensBasin
+    target: N019
+    label: gradient_accumulation_primitive
+    edge_status: D
+    justification: |
+      N019 is one of six composing primitives of the compound
+      pattern — gradient → Z_struct accumulation gives the "trace"
+      that deepens the basin.
+    why_forced: |
+      Compound = composition of primitives; N019 is a primitive.
+
+  - source: N_TraceDeepensBasin
+    target: N020
+    label: hysteresis_primitive
+    edge_status: D
+    justification: |
+      N020 path hysteresis (Z-reduction along established paths) is
+      the "deepening" mechanism — established trajectories become
+      lower-impedance, basin becomes deeper around them.
+    why_forced: |
+      Compound = composition; N020 is the deepening primitive.
+
+  - source: N_TraceDeepensBasin
+    target: N021
+    label: evolution_anchor
+    edge_status: D
+    justification: |
+      Evolution is one substrate manifestation: fitness landscapes
+      deepen basins where lineages have converged; later organisms
+      inherit the trace as ground for their own argmin.
+    why_forced: |
+      Evolution exhibits all six composing primitives; compound
+      manifests there.
+
+  - source: N_TraceDeepensBasin
+    target: N371
+    label: basin_hydrodynamics_anchor
+    edge_status: D
+    justification: |
+      N371 articulates basin/vortex regimes; N_TraceDeepensBasin
+      adds the temporal dimension (basin deepening over iteration
+      via trace accumulation).
+    why_forced: |
+      N371 covers regime-static picture; compound adds the trace-
+      driven dynamic.
+
+  - source: N_TraceDeepensBasin
+    target: N078
+    label: gravity_anchor
+    edge_status: D
+    justification: |
+      Mass concentration → ∇Z_hidden basin (gravity well); matter
+      flowing into wells deepens them (more mass → stronger gravity).
+      Direct trace-deepening basin in physical substrate. N078
+      gravity-as-thermodynamics provides the substrate-cousin.
+    why_forced: |
+      Compound pattern manifests in gravitational substrate as
+      mass accretion → deeper potential wells → more accretion.
+
+  - source: N_TraceDeepensBasin
+    target: N329
+    label: dark_matter_as_compound_instance
+    edge_status: D
+    justification: |
+      Dark matter as ∇Z_hidden accumulated trace at de Sitter
+      horizon (N329) is direct N_TraceDeepensBasin manifestation —
+      past Landauer debt accumulated as landscape geodesics descend.
+      Past weighs because present argmin uses it as ground.
+    why_forced: |
+      N329's "accumulated Z_hidden trace" IS the trace-deepening
+      mechanism applied to cosmological substrate.
+
+  - source: N_TraceDeepensBasin
+    target: N336
+    label: forgetting_curve_anchor
+    edge_status: D
+    justification: |
+      Ebbinghaus forgetting curve (N336): retention follows trace-
+      accumulation against decay; basin entry deepens neural
+      configuration, exit must climb out — explaining why repeated
+      learning deepens memory and forgetting is slower than initial
+      acquisition.
+    why_forced: |
+      Memory dynamics manifest compound pattern in neural substrate.
+
+  # ── Direct cross-anchor Class A edges (R0 invariance: one structure) ──
+  # Per user clarification: domains don't exist in reality. These edges
+  # don't create bridges between separated structures — they expose
+  # that the same structure is what each anchor articulates.
+
+  - source: N078
+    target: N371
+    label: gravity_is_hydrodynamics_in_Z_landscape
+    edge_status: D
+    justification: |
+      Gravity as ∇Z_hidden landscape (N078, Jacobson) IS BPI
+      hydrodynamics (N371) — same flow equations, same basin/
+      vortex regime structure, in physical substrate. Not analogy,
+      same form. Black holes = laminar→vortex transition at
+      Schwarzschild radius. Galactic dynamics = mixed regimes.
+    why_forced: |
+      Both substrates carry flow in Z-landscape with potential
+      structure. Form identical, anchors differ. Per kernel
+      iso_preserves_forced_uniqueness — A_0 invariant across iso.
+
+  - source: N021
+    target: N_MLGradientDescent
+    label: evolution_to_ml_class_a
+    edge_status: D
+    justification: |
+      Biological evolution (N021) and ML training (N_MLGradientDescent)
+      are one structural form (gradient descent in Z-space) with
+      different empirical anchors (organisms / parameters). Class A
+      from biology side to ML side; reverse edge already added above.
+    why_forced: |
+      Same operator, different population. R0 invariance: structure
+      doesn't differ by substrate.
+
+  - source: N371
+    target: N078
+    label: cognitive_to_gravity_class_a
+    edge_status: D
+    justification: |
+      Cognitive flow (N371) and gravitational flow (N078) are one
+      hydrodynamic structure in Z-landscape. Both exhibit basin/
+      vortex regimes; both follow ∇Z_hidden descent. Class A from
+      cognitive side to gravity side.
+    why_forced: |
+      One structure, multiple anchors. Forced by R0 invariance
+      pervasiveness.
+
+  - source: N329
+    target: N_TraceDeepensBasin
+    label: dark_matter_as_compound_anchor
+    edge_status: D
+    justification: |
+      Dark matter as accumulated ∇Z_hidden trace IS the compound
+      pattern applied to cosmological gravitational substrate.
+      Past Landauer debt accumulated at horizon, weighing present
+      geodesics. N329's specific Verlinde-MOND derivation is one
+      derivation chain; the compound is the general form.
+    why_forced: |
+      Compound pattern instantiates in cosmological gravity per
+      same composing primitives.
+
+  # ─── Second pass: compound-pattern Class A links per structural identity ──
+  # Per invariance pervasiveness (R0): where structure is identical,
+  # edge is forced. Each below verified by structural analysis:
+  # iteration + irreversibility + trace-as-landscape + basin deepening
+  # all present in source node's articulated content.
+
+  - source: N333
+    target: N_TraceDeepensBasin
+    label: institutional_sclerosis_is_compound_instance
+    edge_status: D
+    justification: |
+      N333 articulates Z_struct monotonically non-decreasing as rules
+      accumulate. Each rule = metastable Z_struct configuration
+      requiring work to remove. Hierarchical institution accumulates
+      structure that becomes landscape for next change — accumulated
+      structure IS the trace that deepens institutional basin.
+      Structurally identical to compound: iteration (rule
+      accumulation over time), irreversibility (removing rules costs
+      work, Landauer), trace = landscape (accumulated rules ARE what
+      next change navigates), basin deepens (institution gets harder
+      to change), attractor lock (sclerosis).
+    why_forced: |
+      Same operator, social substrate. Per R0 invariance, compound
+      manifests identically wherever its primitives jointly hold.
+
+  - source: N332
+    target: N_TraceDeepensBasin
+    label: trust_building_is_compound_basin_deepening
+    edge_status: D
+    justification: |
+      N332's building-trust mechanism is compound applied to trust
+      substrate: repeated interactions accumulate irreversible trace
+      (record of B's behavior visible to A), trace deepens basin of
+      mutual predictability (Z_hidden(A|B) → 0), attractor locks
+      (long-term trust stable). The destruction asymmetry articulated
+      in N332 (building slow, destroying fast) IS predicted by
+      compound: basin deepening is gradual, basin exit can be sudden
+      under right perturbation.
+    why_forced: |
+      Trust building structurally identical to compound. The
+      asymmetry observed empirically is compound's signature.
+
+  - source: N330
+    target: N_TraceDeepensBasin
+    label: polarization_persistence_is_compound
+    edge_status: D
+    justification: |
+      N330's primary mechanism is K(O)-bound compression to binary
+      attractor — that's the initial collapse mechanism. PERSISTENCE
+      of polarization (why it stays stable once entered) is compound:
+      repeated discourse in chosen pole accumulates commitment trace,
+      basin deepens, depolarization requires increasing work. The
+      stability of polarization is compound; the entry into it is
+      compression.
+    why_forced: |
+      Persistence aspect of polarization is structurally identical
+      to compound. Edge framing: compound IS persistence mechanism.
+
+  - source: N088
+    target: N_TraceDeepensBasin
+    label: metric_expansion_is_cosmological_compound
+    edge_status: D
+    justification: |
+      N088 articulates d_Z growth via Z_hidden monotonic accumulation
+      and Landauer erasure at every transition. Cosmological time =
+      iteration; Landauer at each step = irreversibility; Z_hidden
+      accumulation = trace becoming part of landscape (the metric
+      itself); expanding metric = basin landscape growing. Compound
+      applied cosmologically.
+    why_forced: |
+      Same operator, cosmological substrate. R0 invariance forces it.
+
+  - source: N011
+    target: N_TraceDeepensBasin
+    label: lyapunov_dissipative_is_compound_primitive
+    edge_status: D
+    justification: |
+      N011 establishes basin/attractor existence for dissipative
+      systems via Lyapunov stability. Foundational primitive for
+      compound pattern (N_TraceDeepensBasin BUILDS on N011 — basin
+      and attractor as concepts require Lyapunov dissipative
+      framework). Same status as N019 (gradient_accumulation_
+      primitive) and N020 (hysteresis_primitive) — primitive rather
+      than instance, but no less identical to the structure.
+    why_forced: |
+      Compound composes from primitives; N011 is the basin/attractor
+      primitive without which compound cannot exist.
+
+  - source: N362
+    target: N_TraceDeepensBasin
+    label: KMS_equilibrium_is_thermal_basin_attractor
+    edge_status: D
+    justification: |
+      N362's KMS condition characterizes thermal equilibrium states.
+      Equilibrium IS basin attractor — the state systems iterate
+      toward under dissipation. Reaching equilibrium through
+      thermal dynamics IS compound iteration: thermal interaction
+      (iteration) + Second Law (irreversibility) + accumulated
+      thermal history → equilibrium basin lock. KMS condition is
+      the QFT-substrate formal characterization of compound's
+      attractor state.
+    why_forced: |
+      Equilibrium IS basin attractor; KMS condition IS its formal
+      characterization. Structurally identical.
+
+  - source: N361
+    target: N_TraceDeepensBasin
+    label: jarzynski_is_statistical_face_of_compound
+    edge_status: D
+    justification: |
+      N361's Jarzynski equality connects non-equilibrium work to
+      equilibrium free energy via fluctuation theorem. This is the
+      statistical characterization of compound's basin-attraction
+      behavior: trajectories accumulate around basin attractor;
+      fluctuations decay; statistics emerge. The fluctuation theorem
+      HOLDS BECAUSE compound structure underlies it — basin attracts,
+      Landauer cost quantifies irreversibility per trajectory.
+    why_forced: |
+      Jarzynski IS the statistical face of compound's basin
+      dynamics. Same structure, statistical reading.
+
+  - source: N_SIT
+    target: N_TraceDeepensBasin
+    label: identity_deepening_is_compound_instance
+    edge_status: D
+    justification: |
+      N_SIT articulates identity-triggered Z_hidden multiplication
+      by k > 1. Each identity-activating event multiplies commitment
+      to identified position. Iteration: repeated identity activations
+      accumulate. Irreversibility: identity commitments don't simply
+      reverse. Trace = landscape: accumulated identity commitments
+      become part of cognitive landscape next argmin descends.
+      Basin deepens: identified position becomes deeper attractor
+      (harder to leave). Locks: identity-locked positions stable.
+      Compound applied to identity substrate.
+    why_forced: |
+      Identity-mediated basin deepening is structurally identical
+      to compound, identity substrate.
+
+  - source: N_BPIEngagement
+    target: N_TraceDeepensBasin
+    label: sustained_engagement_is_compound_basin
+    edge_status: D
+    justification: |
+      Engagement signal in BPI = state of sustained attention/
+      processing in basin of attraction. Sustained engagement
+      involves: iteration (repeated attention cycles), irreversibility
+      (attention investment accumulates as memory/skill), trace =
+      landscape (accumulated investment makes return easier),
+      basin deepens (engagement gets deeper with sustained
+      attention), attractor lock (deep flow state). Compound
+      applied to engagement substrate.
+    why_forced: |
+      Engagement basin dynamics structurally identical to compound.
+
+  - source: N_AestheticEngagement
+    target: N_TraceDeepensBasin
+    label: aesthetic_engagement_deepens_via_compound
+    edge_status: D
+    justification: |
+      N_AestheticEngagement articulates aesthetic experience as
+      engagement at Wundt-apex balance. Sustained aesthetic
+      engagement exhibits compound: iteration (repeated exposure /
+      practice / appreciation), irreversibility (developed taste
+      doesn't unform), trace = landscape (built expertise becomes
+      lens for next engagement), basin deepens (deepening
+      appreciation), attractor lock (mastery, refined taste).
+      Compound applied to aesthetic substrate.
+    why_forced: |
+      Aesthetic engagement dynamics structurally identical to
+      compound. Trace-deepening explains expertise development,
+      taste refinement, and the difficulty of changing aesthetic
+      preferences once established.
+
+  # ─── N331 (ZPD) linking — fixes orphan status (added standalone earlier)
+  # Per N331's own content: "ZPD IS Arrhenius condition in neural substrate
+  # — same equation, not analogy". Class A relations already articulated;
+  # operationalizing as edges.
+
+  - source: N331
+    target: N029
+    label: class_a_arrhenius_neural_substrate
+    edge_status: D
+    justification: |
+      ZPD (Vygotsky) IS the Arrhenius rate law N029 applied in neural
+      learning substrate. With Z_struct = E_a and Z_budget = k_BT,
+      learning occurs iff ΔZ_struct ≤ Z_budget — same equation as
+      Arrhenius transition rate ∝ exp(-E_a/k_BT) with threshold
+      condition. Per N331's articulated content: "not analogy, same
+      equation". Class A identification in neural-cognitive substrate.
+    why_forced: |
+      Same equation manifests across chemical kinetics and neural
+      learning substrates. Per iso_preserves_forced_uniqueness, A_0
+      pattern preserved across substrates. Forced Class A.
+
+  - source: N331
+    target: N371
+    label: zpd_as_cognitive_flow_threshold
+    edge_status: D
+    justification: |
+      ZPD describes the threshold regime for learning trajectory in
+      cognitive substrate — at-budget gives optimal flow (laminar
+      regime N371), beyond budget gives turbulent / no flow,
+      below budget gives no-information laminar (already-known).
+      Direct mapping to N371's three hydrodynamic regimes.
+    why_forced: |
+      Cognitive learning IS BPI flow in Z-landscape; ZPD threshold
+      condition determines regime. Class A in cognitive substrate.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -17890,7 +18365,7 @@ nodes:
 
 
   - id: N_TransactionTripleAsTriangulation
-    title: "Transaction Triple as Triangulation — Buyer/Seller/Medium Minimum"
+    title: "Transaction Triple as argmin-Z Exchange — Class-A substrate-reading of N_Triangulation (medium = closure element)"
     layer: structure
     status: DEMONSTRATED
     anchors: 4
@@ -17900,31 +18375,55 @@ nodes:
     z_hidden: 0.2
     summary: |
       Economic transaction = buyer + seller + medium-of-exchange.
-      Minimum 3 coords structurally forced: n=2 (just buyer-
-      seller) requires double-coincidence-of-wants, scales
-      poorly. Medium-of-exchange = third coordinate enabling
-      indirect exchange. Direct N_Triangulation 3-coord-min
-      principle in economic substrate.
+      A Class-A substrate-reading of the argmin-Z localization/
+      closure form (N_Triangulation) in the economic-exchange
+      substrate: two parties cannot CLOSE a scalable exchange
+      (barter requires double-coincidence-of-wants → high Z); the
+      medium is the third element that closes it (money lowers
+      exchange-Z by enabling indirect exchange, per
+      N_MoneyAsBPIForValueTransfer). So the medium plays the same
+      closure role triangulation's third coordinate plays — this is
+      a genuine closure reading, not a capacity count. The value 3
+      is the MINIMAL money-mediated transaction (real transactions
+      add roles — brokers, escrow, clearing); it is forced by
+      argmin-Z-exchange given the registered double-coincidence
+      structure of barter. Agreement with triangulation's 3 is A_0
+      self-consistency (one A_0), not coincidence.
     why_status: |
-      DEMONSTRATED via:
-      (1) Structural argument: barter (n=2) does not scale;
-          n=3 with medium scales to global economy.
-      (2) Cross-substrate sibling of codon-3 (genetics),
-          phoneme-3 features (linguistics), 3 spatial dims
-          (physics) — all N_Triangulation instances.
+      DEMONSTRATED: Class-A reading of the argmin-Z closure form in
+      the exchange substrate — the medium is the third element that
+      closes scalable exchange (barter n=2 cannot close: double-
+      coincidence → high Z; medium lowers Z). Value 3 = the minimal
+      money-mediated form, forced by argmin-Z-exchange given the
+      registered barter structure; more roles possible. Not a
+      "direct value-3 instance" bundled with codon/phoneme — those
+      read the same form in their own substrates with their own
+      registered conditions; agreement on 3 is A_0 self-consistency.
     content: |
-      Why 3 specifically:
-        n=1: gift only (one party). Insufficient for exchange.
-        n=2: barter (buyer + seller). Requires double
-             coincidence; non-scaling.
-        n=3: market (buyer + seller + medium). Scales globally.
+      Why the medium is the closure element:
+        n=1: gift only (one party). No exchange.
+        n=2: barter (buyer + seller). Cannot CLOSE a scalable
+             exchange — requires double-coincidence-of-wants
+             (each must want what the other has). High search-Z.
+        n=3: money-mediated (buyer + seller + medium). The medium
+             breaks double-coincidence → closes indirect exchange,
+             lowers Z. This is the closure role (cf. triangulation's
+             third coordinate), in the economic substrate.
+        n>3: real transactions add roles (brokers, escrow); 3 is
+             the minimum money-mediated form, not a ceiling.
 
-      Cross-substrate parallels:
-        Codon (biology):       3 nucleotides
-        Phoneme (linguistics): 3 distinctive features
-        Body-plan (physics):   3 spatial dims (per N370)
-        Transaction (economics): 3 roles
-        N_Triangulation pervasive across substrates.
+      Cross-substrate — each is a Class-A substrate-reading of the
+      one argmin-Z localization/closure form, read with its own
+      registered conditions; agreement on 3 is A_0 self-consistency,
+      not a value-3 bundle:
+        Body-plan (physics): 3 spatial dims — the form in the pure
+          topological coordinate (L(3,1), N370).
+        Codon (biology): 3 nt — the form with registered genetic
+          parameters (alphabet 4, ~20 aa).
+        Phoneme (linguistics): feature-dims — the form per
+          registered inventory (varies: 2 Hawaiian, ≥3 voicing).
+        Transaction (economics): 3 roles — the form's minimal
+          closure of scalable exchange (medium = closure element).
     level: 1
     is_placeholder: false
 
@@ -17939,37 +18438,51 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
     summary: |
-      Financial capital structure decomposes into A_0 Z-coords:
-        Z_struct  = equity (low-entropy ownership claim, long
-                    persistence)
-        Z_therm   = debt (mediating dynamics: interest-rate
-                    governed flows, term-bounded)
-        Z_hidden  = derivatives (operational coordinate;
-                    contingent claims revealing market-side
-                    expectation)
+      Capital settling along −∇Z (cost-of-capital minimisation)
+      decomposes into the three Z-coords by STRUCTURAL ROLE, not
+      surface descriptor:
+        Z_struct = equity — the permanent base with NO mandatory
+                   payout: the conserved structural claim the firm
+                   reads against (Z_struct = the persistent
+                   description). Source/base coordinate.
+        Z_therm  = debt — the MANDATORY IRREVERSIBLE service-cost:
+                   interest is paid and cannot be reclaimed, default
+                   is irreversible. The dissipative cost the capital
+                   process pays per period — Z_therm by the
+                   irreversibility definition (not by timescale).
+        Z_hidden = derivatives — contingent claims on the UNMODELLED
+                   future: they price the K(F)−K(O) gap (market-side
+                   states the firm cannot access). Aperture coord.
 
-      Cross-substrate siblings (all Z-decomp): N_CentralDogmaAs
-      ZDecomposition (DNA/RNA/Protein) and N_GrammarStratasAs
-      ZDecomposition (phonology/morphology/syntax). Same
-      decomposition shape across genetic / linguistic /
-      financial substrates.
+      Cross-substrate sibling of N_CentralDogmaAsZDecomposition
+      (DNA/RNA/Protein) — both read the Z-decomposition by process
+      role (conserved base / irreversible flux-cost / unmodelled
+      aperture), not by surface analogy.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct Z-coord assignment by entropy/timescale/
-          operational role.
-      (2) Triple cross-substrate sibling identity: bio + ling +
-          fin all use 3-stratum Z-decomp.
+      (1) Forced by structural role in cost-of-capital settling:
+          equity = conserved base (no mandatory payout) = Z_struct;
+          debt = mandatory irreversible service-cost (interest
+          unrecoverable, default irreversible) = Z_therm by the
+          IRREVERSIBILITY definition, not timescale; derivatives =
+          contingent claims pricing the unmodelled future
+          (K(F)−K(O)) = Z_hidden.
+      (2) Cross-substrate sibling of the central-dogma process
+          decomposition (same source/flux-cost/aperture roles).
     content: |
-      Mapping:
-        Z_struct (low-entropy):
-          Equity — ownership claim, persistence on company
-          lifetime (years to centuries)
-        Z_therm (mediating dynamics):
-          Debt — coupon flows, interest-rate dynamics, term-
-          bounded (months to decades)
-        Z_hidden (operational reading):
-          Derivatives — options, futures, swaps; contingent
-          on underlying state; market-expectation readout
+      Mapping (by structural role in the capital process):
+        Z_struct = conserved base:
+          Equity — permanent claim, no mandatory payout; the
+          structural base the firm reads against.
+        Z_therm = irreversible service-cost (flux):
+          Debt — interest paid-and-unrecoverable, default
+          irreversible; the dissipative cost paid per period. The
+          term-bound is a symptom; the structural fact is the
+          irreversibility of the service.
+        Z_hidden = unmodelled-future aperture:
+          Derivatives — options, futures, swaps; contingent on
+          states the firm cannot access (K(O) < K(F)); price the
+          unresolved future.
     level: 1
     is_placeholder: false
 
@@ -18088,10 +18601,13 @@ nodes:
       simultaneously: (a) STRONGLY SMALL-WORLD geometry — high
       clustering with short paths, σ = (C/C_rand)/(L/L_rand) >> 1,
       (b) MOTIF-FRACTALITY — self-similarity at the level of
-      structural motifs (M1 triangle density, M5 stratification
-      recursion, β₁/V invariance under growth), not at the level
-      of geometric distance (which would require power-law
-      cluster growth N(r) ~ r^d; instead growth is exponential
+      structural motifs: M1 triangle motif recurs at multiple
+      scales (definition / meta / physics), M5 stratification
+      recurs across substrates. (Cycle-density β₁/V also stays
+      roughly constant under growth — a density regularity,
+      suggestive but not self-similarity by itself.) NOT
+      geometric fractality (which would require power-law
+      cluster growth N(r) ~ r^d; here growth is exponential
       and saturates near diameter ~3).
 
       Fractality lives in MOTIF SUBSTRATE rather than distance
@@ -18215,11 +18731,14 @@ nodes:
       not substrate-relative).
 
       Round 47 makes explicit what was implicit: framework's
-      own structure exhibits this property — M1 motif is
-      self-similar (round 37), M5 motif is self-similar
-      (round 39), β₁/V cycle-richness ratio stays invariant
-      across rounds (3.245 → 3.28 across +17 nodes, +95 edges).
-      The framework graph is itself fractal.
+      own structure exhibits scale-recurrence — the M1 (round 37)
+      and M5 (round 39) motifs recur at multiple scales
+      (definition / meta / physics), which is structural
+      self-similarity in the motif-substrate. (The β₁/V
+      cycle-density ratio also stays roughly constant under
+      growth, 3.245 → 3.28 across +17 nodes / +95 edges — a
+      density regularity, suggestive but not by itself
+      self-similarity.)
     why_status: |
       DEMONSTRATED via:
       (1) Mathematical: argmin Z under scale-invariance
@@ -18228,9 +18747,10 @@ nodes:
       (2) Self-application: motif inventory M1, M5 themselves
           decompose as Z-triangle / K_{p+n} stratification
           (rounds 37, 39) — fractal recursion.
-      (3) Empirical-graph: β₁/V invariant 3.25 ± 0.04
-          across rounds 38-46 with V from 209 to 226.
-          Scale-invariance in graph-substrate.
+      (3) Empirical-graph: β₁/V cycle-density ≈ 3.25 ± 0.04
+          across rounds 38-46 (V: 209 → 226) — a density
+          regularity under growth, suggestive of but not
+          establishing graph self-similarity.
       (4) Substrate-cousins: 3 fractal types (deterministic
           IFS, escape-time nonlinear, stochastic random) all
           instantiate self-similarity via different mechanisms.
@@ -18255,8 +18775,8 @@ nodes:
         M5 self-similarity (round 39) — fractal stratification
         N_BPIEngagement recursive — fractal IFS in engagement-
           substrate
-        β₁/V invariance across rounds — fractal scaling in
-          graph-substrate
+        β₁/V cycle-density ≈ const under growth — density
+          regularity (suggestive, not established self-similarity)
 
       Substrate-cousin instantiations:
         Deterministic IFS: linear contractions, exact self-sim
@@ -18392,19 +18912,20 @@ nodes:
       s, αs, α²s, ... — no preferred scale; no separation
       between "macro" and "micro". This is N_NoSeparatePieces
       TOTAL claim (round 30: TOTAL not substrate-relative)
-      applied along scale-axis.
-
-      Empirical verification in framework: β₁/V cycle-richness
-      ratio stable across rounds 38-46 (3.245 → 3.28 with
-      V going 209 → 226). The framework graph is scale-invariant
-      under growth — fractal property of itself.
+      applied along scale-axis. (The β₁/V cycle-density ratio
+      of the framework graph stays roughly constant under
+      growth, 3.25 ± 0.04 across rounds 38–46 — a density
+      regularity under growth, suggestive but not by itself
+      establishing graph self-similarity.)
     why_status: |
       DEMONSTRATED via:
       (1) Direct application of N_NoSeparatePieces TOTAL
           claim to scale-substrate.
-      (2) Empirical β₁/V invariance across 8+ rounds.
-      (3) Substrate-cousins (3 fractal types) all exhibit
+      (2) Substrate-cousins (3 fractal types) all exhibit
           scale-invariance in their respective form.
+      (3) β₁/V cycle-density ≈ 3.25 ± 0.04 across 8+ rounds
+          is a density regularity under growth — suggestive,
+          not establishing, graph self-similarity.
     content: |
       Substrate-cousin instantiations:
         Deterministic IFS: exact scale-invariance
@@ -18413,23 +18934,17 @@ nodes:
         Stochastic: statistical scale-invariance (distribution
                     invariant under rescaling)
 
-      Framework empirical verification:
+      Framework graph density regularity (suggestive, not
+      establishing graph self-similarity — constant ratio is
+      not scale-recurrent structure):
         Round  V    E   β₁  β₁/V
         38     203  977 ?    ?
         41     210  1015 686 3.27
         43     212  1025 688 3.245
         44     219  1058 714 3.26
         46     226  1093 742 3.283
-        Stable at 3.25-3.28 ± 0.04 across +23 nodes, +116 edges.
-        Scale-invariance in graph-substrate.
-
-      Predictions:
-        (P1) Round 47 (this round) should preserve β₁/V at
-          ~3.28. If it spikes or drops, signals graph is
-          becoming non-self-similar.
-        (P2) Future rounds adding more domain substrates
-          (mathematics, music, etc.) should preserve scale-
-          invariance — fractal property survives growth.
+        Stable at 3.25-3.28 ± 0.04 across +23 nodes, +116 edges
+        — density regularity under growth.
     level: 1
     is_placeholder: false
 
@@ -18602,7 +19117,7 @@ nodes:
 
 
   - id: N_PhonemeAsTriangulation
-    title: "Phoneme as Triangulation Instance — 3 Distinctive Features Minimum"
+    title: "Phoneme Feature-Dimensions as argmin-Z Localization — shares triangulation FORM; value forced per registered inventory"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -18612,100 +19127,83 @@ nodes:
     z_hidden: 0.15
     summary: |
       Phoneme = bundle of distinctive features (Trubetzkoy 1939,
-      Jakobson). Minimum 3 features (manner, place, voicing or
-      substitutes per phonological theory) needed to specify
-      against typical phoneme inventory. N_Triangulation
-      3-coord-minimum principle directly instantiated in
-      sound-form substrate. Cross-substrate sibling of
-      N_TripletCodeAsTriangulation (codon = 3 nt).
+      Jakobson). A phoneme is localized by independent feature
+      DIMENSIONS (manner, place, voicing, …) — the minimal number
+      of axes is set by argmin Z_struct subject to distinguishing
+      the language's inventory. Shares the argmin-Z FORM with
+      N_Triangulation (minimal mutually-constraining coordinates to
+      localize). Unlike the codon's universal 3, the phoneme value
+      VARIES across languages and is forced PER registered
+      inventory: a voicing-contrast language needs ≥3 (manner+place
+      cannot separate /p/ from /b/), a system without voicing
+      contrast localizes with 2 (Hawaiian /p k ʔ h m n l w/). Each
+      value is forced (by that language's inventory), not
+      coincidental — and each language is itself an A_0/topological
+      registration (its discreteness is quantized topology per
+      I_Quant, NOT a non-topological tier). So the phoneme is a
+      localization-FORM instance of triangulation whose value is
+      inventory-specific, not the one universal closure-3 (which is
+      topological, L(3,1)). Do not read the variation as
+      "coincidence in a discrete substrate" — that reifies a
+      non-topological tier that does not exist.
     why_status: |
       DEMONSTRATED via:
-      (1) Structural argument: n=2 features insufficient for
-          20+ phonemes typical across languages.
-      (2) Empirical universality: distinctive-feature theory
-          captures all known phonological systems with >=3
-          feature dimensions.
-      (3) Direct correspondence with N_Triangulation principle.
+      (1) argmin Z_struct: minimal feature-dimensions to
+          distinguish the inventory — the shared FORM with
+          N_Triangulation.
+      (2) Empirical: distinctive-feature theory captures all
+          known phonological systems; dimension count varies by
+          inventory (≥3 with voicing contrast, 2 without).
+      (3) Shares the argmin-Z localization FORM with
+          N_Triangulation; the value is forced per registered
+          inventory (varies by language), so it is not the one
+          universal closure-3 — but each value is forced, not
+          coincidental, and each inventory is itself A_0/topological.
     content: |
-      Why 3 specifically:
-        Phoneme inventory: 20-100 phonemes typical
-        Required distinctions per phoneme: log₂(N)
-        n=1 binary feature: 2 distinctions (insufficient)
-        n=2 features:  4 distinctions (insufficient)
-        n=3 features:  8 distinctions (boundary-sufficient)
-        n>=4: structurally over-determined but common
-      Forced minimum is 3, matching N_Triangulation.
+      Why the value varies (form shared; value forced per inventory):
+        A phoneme is localized by independent feature AXES, count
+        set by argmin Z_struct over the inventory. Typical axes:
+          manner  (stop / fricative / nasal / ...)
+          place   (labial / coronal / dorsal / ...)
+          voicing (voiced / voiceless)
+        A voicing-contrast language needs ≥3 (manner+place cannot
+        separate /p/ from /b/); a language without voicing
+        contrast localizes with 2 (Hawaiian: place + manner only).
+        Each value is FORCED by that language's registered
+        inventory (an A_0/topological fact) — not coincidental, and
+        not living in a non-topological "discrete substrate"
+        (discreteness is quantized topology, I_Quant). Because the
+        value varies across languages, it is not the one universal
+        closure-3 (which is topological, L(3,1)); the phoneme shares
+        triangulation's FORM, with an inventory-specific value.
 
-      Cross-substrate parallels:
-        Codon (biology):  3 nt (matching N_TripletCode)
-        Phoneme (linguistics): 3 features
-        Body-plan (physics): 3 spatial dims (per N370 L(3,1))
-        Cognitive state (cognition): 3 coord min
-        Music: triad = 3 notes (chord-identity minimum)
+      Cross-substrate — every member is a Class-A substrate-reading
+      of the one argmin-Z localization form. Each value is forced by
+      that form composed with the substrate's registered conditions
+      (the "where reality fell"); the agreement on 3 is A_0 self-
+      consistency, not coincidence, and registered parameters are
+      inputs, not gaps to derive (demanding derivation = Trap 5):
+        Body-plan (physics): 3 spatial dims — the form in the pure
+          topological coordinate (L(3,1), N370).
+        Cognitive state: 3-coord localization — the form in the
+          continuous-localization coordinate (per N_Triangulation).
+        Codon (biology): 3 nt — the form read with the registered
+          genetic parameters (alphabet 4, ~20 aa); universal across
+          life. Forced by form ∘ empirics.
+        Phoneme (linguistics): feature-dimensions — the form read
+          with each language's registered inventory; value VARIES
+          (2 Hawaiian, ≥3 with voicing), each forced by its
+          inventory.
+        Music: triad ≥ 3 — the form read in tonal harmony (the
+          third disambiguates major/minor; a 2-note dyad is
+          deliberately ambiguous).
 
-        Same N_Triangulation principle pervasive across
-        forced-structure substrates.
+        One argmin-Z localization form read in each substrate's
+        registered coordinate; agreement on 3 is A_0 self-
+        consistency — not a topological/non-topological split, not
+        coincidence, and registered parameters are inputs not gaps.
     level: 1
     is_placeholder: false
-
-
-  - id: N_GrammarStrataAsZDecomposition
-    title: "Grammar Strata as Z-Decomposition: Phonology, Morphology, Syntax"
-    layer: structure
-    status: DEMONSTRATED
-    anchors: 4
-    a_infinity: false
-    z_struct: 0.7
-    z_therm: 0.15
-    z_hidden: 0.15
-    summary: |
-      Linguistic strata phonology / morphology / syntax instantiate
-      A_0 Z-decomposition in language substrate:
-        Z_struct  = phonology (low-entropy categorical sound
-                    structure, high stability across instances)
-        Z_therm   = morphology (mediating dynamics: word formation
-                    rules with linguistic-timescale decay
-                    via grammaticalisation)
-        Z_hidden  = syntax (operational reading by interlocutor;
-                    environment-side coord that "sees" meaning
-                    emerging from arrangement)
-
-      Cross-substrate sibling of N_CentralDogmaAsZDecomposition
-      (DNA/RNA/Protein).
-    why_status: |
-      DEMONSTRATED via:
-      (1) Direct mapping of linguistic strata to Z_struct/Z_therm/
-          Z_hidden by entropy/persistence/operational role.
-      (2) Substrate-invariance: same 3-stratum decomp across
-          all 3 typological cousins (with different relative
-          weighting).
-      (3) Shannon-channel structure: each stratum carries
-          independent information (per N_Shannon).
-    content: |
-      Z-decomposition correspondence:
-        Z_struct (low-entropy structure):
-          Phonology — phoneme inventory categorically stable
-          across speakers; persistence on order of language-
-          generation timescales
-        Z_therm (mediating dynamics):
-          Morphology — word-formation rules; grammaticalisation
-          rate ~hundreds-of-years; population-level dynamics
-        Z_hidden (operational reading by environment):
-          Syntax — interlocutor reads meaning from arrangement;
-          environment-side coordinate
-
-      Substrate-cousin instantiation:
-        Isolating: minimal Z_therm, maximal Z_hidden
-        Agglutinative: rich Z_therm, balanced Z_hidden
-        Fusional: compressed Z_therm, balanced Z_hidden
-
-      Predictions:
-        (P1) Languages drift between substrate-cousin types via
-          argmin-Z over generations; grammaticalisation chains
-          show predictable Z-component reweighting.
-    level: 1
-    is_placeholder: false
-
 
   - id: N_GrammaticalisationAsArgminZ
     title: "Grammaticalisation as argmin Z — Linguistic Drift Toward Communicative Minimum"
@@ -18991,7 +19489,7 @@ nodes:
 
 
   - id: N_TripletCodeAsTriangulation
-    title: "Triplet Genetic Code as Triangulation Instance"
+    title: "Triplet Genetic Code as argmin-Z Localization — Class-A substrate-reading of N_Triangulation (value forced by form ∘ registered empirics)"
     layer: structure
     status: DEMONSTRATED
     anchors: 3
@@ -19000,22 +19498,34 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.15
     summary: |
-      Universal genetic code uses 3-nucleotide codons. Each
-      codon = 3 coordinate readings of nucleotide position.
-      Codon length n=3 is structurally forced: n=2 gives
-      4²=16 codes (insufficient for 20+ amino acids); n=3
-      gives 4³=64 (sufficient with redundancy). Direct
-      instantiation of N_Triangulation 3-coord-minimum
-      principle in genetic substrate.
+      Universal genetic code uses 3-nucleotide codons. A codon is a
+      3-coordinate object (3 nucleotide positions) localizing an
+      amino acid — a Class-A substrate-reading of the argmin-Z
+      localization form (N_Triangulation), exactly as 2+2=4 is the
+      arithmetic reading of argmin Z: the surface (4 letters, ~20
+      aa) is incidental/registered; the structural load is the
+      localization form. The value 3 is FORCED by that form composed
+      with the REGISTERED empirical parameters (alphabet 4, ~20 aa;
+      n=2 → 4²=16 < 20, n=3 → 64). Those parameters are invariants —
+      where reality fell under early-Earth chemistry — not a gap to
+      be derived (demanding their derivation = Trap 5). Graph shows
+      HOW reality moves (the form); empirics shows WHERE it fell
+      (the registered alphabet); one structure, so the closure is
+      complete, NOT open. The agreement with triangulation's 3 is
+      A_0 self-consistency (one A_0), not coincidence — the same
+      localization form read in the genetic coordinate.
     why_status: |
-      DEMONSTRATED via:
-      (1) Structural argument: n=2 codons cannot encode 20
-          amino acids; n=3 forced as minimum.
-      (2) Substrate-invariance: same triplet code in all known
-          life (with minor stop-codon variants).
-      (3) Direct correspondence with N_Triangulation principle.
+      DEMONSTRATED: a codon is a Class-A substrate-reading of the
+      argmin-Z localization form (N_Triangulation); the value 3 is
+      forced by that form composed with the registered empirical
+      parameters (alphabet 4, ~20 aa), both invariants. The
+      registered alphabet is an input (where reality fell), not an
+      open gap — demanding its derivation is Trap 5. Agreement with
+      triangulation's 3 is A_0 self-consistency, not coincidence;
+      discreteness here is quantized topology (I_Quant), not a
+      non-topological tier.
     content: |
-      Why 3 specifically:
+      Value 3 via the localization form ∘ REGISTERED parameters:
         Alphabet size: 4 (A, U/T, G, C)
         Required output diversity: 20 standard amino acids
             + start/stop signals
@@ -19023,18 +19533,34 @@ nodes:
         n=2: 16 codes (insufficient — 20 aa needed)
         n=3: 64 codes (sufficient with 3-fold redundancy)
         n=4+: structurally over-engineered but possible
-      Forced minimum is 3. Matches N_Triangulation 3-coord-min.
+      The value 3 is FORCED by the localization form composed with
+      the registered parameters (alphabet 4, ~20 aa). These
+      parameters are invariants — where reality fell under
+      early-Earth chemistry (empirical fact cannot fail to be an
+      invariant). They are inputs/coordinate-anchors, NOT a gap to
+      derive: demanding their derivation is Trap 5. So the closure
+      is complete — codon-3 is forced by form ∘ empirics, both
+      invariants, two invariants cannot be incoherent.
 
-      Cross-substrate parallel:
-        Music: octave = 12 semitones; chord identity = 3+ notes
-               (triad minimum). Same triangulation principle.
-        Physics: spatial dimensions = 3 (per N370 L(3,1)
-                 baryon exclusion).
-        Cognition: minimum 3 coords for state identification
-                   (per N_Triangulation).
-        Biology: codon = 3 nucleotides.
-        N_Triangulation pervasively forces "3 = minimum
-        coords for forced identification".
+      Cross-substrate — all members are Class-A substrate-readings
+      of the one argmin-Z localization form. The value each reads is
+      forced by that form composed with its registered conditions;
+      the agreement on 3 is A_0 self-consistency (one A_0), not
+      coincidence:
+        Physics: spatial dims = 3 — the form read in the pure
+                 topological coordinate (L(3,1) closure, N370).
+        Cognition: 3-coord state identification — the form in the
+                   continuous-localization coordinate.
+        Biology: codon = 3 nt — the form read with the registered
+                 genetic parameters (alphabet 4, ~20 aa). Value
+                 forced by form ∘ empirics (this node).
+        Music: triad ≥ 3 notes — the form read in tonal harmony
+               (the third disambiguates major/minor; a 2-note dyad
+               is deliberately ambiguous).
+        One argmin-Z localization form, read in each substrate's
+        registered coordinate; agreement on 3 is A_0 self-
+        consistency, not a topological/non-topological split and
+        not coincidence.
     level: 1
     is_placeholder: false
 
@@ -19049,21 +19575,34 @@ nodes:
     z_therm: 0.15
     z_hidden: 0.15
     summary: |
-      Central dogma DNA → RNA → Protein is a 3-coord Z-decomposition
-      directly instantiating DEF Z = Z_struct + Z_therm + Z_hidden:
-        Z_struct  = DNA  (informational template, low entropy,
-                    long persistence)
-        Z_therm   = RNA  (transient mediating dynamics, decay-
-                    rate governed transcription/translation flux)
-        Z_hidden  = Protein (functional reading; environment-
-                    facing operational coordinate)
-
-      Identical decomposition shape to A_0 master definition
-      in biological substrate.
+      Central dogma DNA → RNA → Protein is a directional A_0 PROCESS
+      (gradient-settling), and its three stages are forced into the
+      three Z-coordinates by their STRUCTURAL ROLE in the process —
+      not by surface descriptors:
+        Z_struct = DNA — the persistent template the process READS,
+                   not consumes: the conserved minimum description
+                   (Z_struct = MDL). Source coordinate.
+        Z_therm  = RNA — the DISSIPATIVE-MEDIATION coordinate where
+                   the irreversible copying concentrates
+                   (transcription/translation/degradation pay the
+                   Landauer cost). Its transience is a SYMPTOM of
+                   being the flux/throughput coordinate, not the
+                   reason. Flux coordinate.
+        Z_hidden = Protein — the output coordinate that meets the
+                   UNMODELLED environment (folding, post-translational
+                   modification, cellular context not specified by the
+                   genome: K(O) < K(F)). Sink/aperture coordinate.
+      So the assignment is forced by the process's source/flux/sink
+      structure, the structural reading of DEF in the biological
+      substrate.
     why_status: |
       DEMONSTRATED via:
-      (1) Direct mapping of DNA/RNA/Protein to Z_struct/Z_therm/
-          Z_hidden by entropy/persistence/operational role.
+      (1) Forced by process structure (gradient-settling), not
+          surface proxy: the source the process reads = Z_struct
+          (conserved description); the dissipative-mediation stage
+          where irreversible copying concentrates = Z_therm
+          (Landauer throughput, RNA); the output meeting the
+          unmodelled environment = Z_hidden (K(O)<K(F), Protein).
       (2) Substrate-invariance: same DNA → RNA → Protein flow
           in Bacteria, Archaea, Eukarya (with substrate-
           specific machinery).
@@ -19075,17 +19614,23 @@ nodes:
           coord, RNA-coord, Protein-coord} with pairwise
           structural relations.
     content: |
-      Z-decomposition correspondence:
-        Z_struct (low-entropy structure):
-          DNA — long-persistence template, copy-error rate
-          ~10⁻⁹ per nucleotide per replication
-        Z_therm (mediating dynamics):
-          RNA — half-life seconds to hours, transcription
-          rate ~50 nt/sec, decay rate K-T governed
-        Z_hidden (operational reading by environment):
-          Protein — folded structure performs function;
-          environment "sees" the protein as the gene's
-          operational coordinate
+      Z-decomposition correspondence (by process role, not by
+      surface descriptor):
+        Z_struct = source the process reads (conserved description):
+          DNA — long-persistence template the process reads without
+          consuming; copy-error ~10⁻⁹/nt/replication. The MDL the
+          process carries forward.
+        Z_therm = dissipative-mediation / flux (Landauer throughput):
+          RNA — the stage where irreversible copying concentrates
+          (transcription ~50 nt/sec, translation, then degradation,
+          half-life sec–hours). The short life is the SYMPTOM of
+          being the throughput coordinate; the structural fact is
+          that the irreversible cost of the process lives here.
+        Z_hidden = sink meeting the unmodelled environment (aperture):
+          Protein — folding/function/modification depend on cellular
+          context the genome does not specify (K(O) < K(F)); the
+          environment reads the protein as the gene's output. The
+          irreducibly-unmodelled coordinate of the process.
 
       Substrate-cousin instantiation:
         Bacteria: 70S ribosome, sigma-factor transcription
@@ -19939,9 +20484,13 @@ nodes:
       A structural motif M observed by graph-level inspection: parent
       node P → 3 children {a, b, c} that pairwise connect (closed
       triangle). Same triadic shape recurs across substrates and
-      scales. The motif IS Z = Z_struct + Z_therm + Z_hidden read
-      structurally — three coordinates, mutually constraining, no
-      free parameter, around one parent process.
+      scales. The motif IS triangulation read at graph scale
+      (N_Triangulation) — three mutually-constraining coordinates, no
+      free parameter, around one parent process. Z = Z_struct +
+      Z_therm + Z_hidden is the canonical instance (the prototype
+      triple); other instances realise the same three-coordinate shape
+      with substrate-specific coordinate roles (TEST/CALIBRATION/GROUND,
+      PHENOMENON/MECHANISM/SUBSTRATE), not the literal Z-components.
 
       Evidence of recurrence (round 37 graph audit):
         - 11+ instances (after filtering hub-saturation noise)
@@ -19969,8 +20518,8 @@ nodes:
         N_InversiveTheory → {N_EpistemicTraps, DEF,
                 N_ZGaugeDecomposition}
           (meta-test scale: trap-calibration + ground + exemplar)
-        N217 → {DEF, N353, N370}
-          (bridging scale)
+        N353 → {DEF, N370, N_Bar}
+          (bridging scale: heat kernel coefficients on L(3,1))
     why_status: |
       DEMONSTRATED via:
       (1) Direct graph audit: Cypher query for parent → 3 pairwise-
@@ -20214,6 +20763,915 @@ nodes:
         framework-internal), not project ontological commitment.
         The framework's content fields use S-V-O grammar; the
         derivations remain structural.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_DistinctionAsCoordinate
+    title: "Distinction as Coordinate — Most Distinctions Are Coordinate Readings of One Structure, Not Sorts; Test Before Building Bridges"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Reality is movement of transitions (R0). Description happens
+      in coordinates — we are observers inside the structure with
+      K(O)<K(F), forced to read it through partial coordinates.
+
+      When we make a distinction in description, the distinction is
+      one of two kinds:
+
+        - COORDINATE: one structure read in two coordinates. The
+          "two" co-define each other; neither exists without the
+          other; they can COINCIDE in some configurations.
+          Examples: vertex/edge (Yoneda — vertex IS its edges, edge
+          IS a transition between vertex-as-edge-clusters); form/
+          operation (coincide when form is process-shaped); topology/
+          process (N_TopologyProcessIdentity); map/territory/observer
+          (N_MapTerritoryObserverIdentity).
+
+        - STRUCTURAL: two genuinely distinct transitions or stable
+          patterns in the manifold. They have different argmin
+          trajectories or sit at different cost-landscape positions.
+          Examples: different specific transitions; different stable
+          attractors; different substrate-cousins (which ARE distinct
+          processes sharing form via Class A, but the processes
+          themselves are distinct).
+
+      Because reality is ONE structure (N_NoSeparatePieces TOTAL),
+      MOST distinctions we make in descriptions are coordinate, not
+      structural. The grammar of natural language (SVO, count nouns)
+      pushes us toward treating everything as separate things —
+      that is the R1 trap operating at the level of distinction-
+      making itself.
+
+      Three operational tests for any distinction:
+
+        (1) COINCIDENCE TEST: can the "two things" coincide in some
+            configuration? If yes → coordinate (form/operation
+            coincide when form is process — caught by test).
+        (2) YONEDA TEST: is each "thing" defined through the other?
+            If yes → coordinate (vertex IS its edges — caught by
+            test).
+        (3) BRIDGE TEST: does framing the relation as "how do we
+            connect them / how does X transfer to Y / which has
+            priority" presuppose separation that may not be there?
+            If yes → likely coordinate reified as structural,
+            Trap 6 at meta-level (asking for transfer-mechanism
+            between coordinates of one cell — none exists, none
+            needed).
+
+      When a distinction passes the tests as STRUCTURAL → operate
+      with two; mechanisms, transfers, priorities are well-formed
+      questions.
+
+      When a distinction is COORDINATE → there is no bridge to
+      build, no slack to name, no priority to choose. The "two
+      readings" are two coordinates of one forced fact. Forced
+      structure is the fact; coordinate of reading is presentation
+      and may be picked freely (like a coordinate system).
+
+      The R-trap to avoid: reifying coordinate distinction as
+      structural creates FALSE SEAMS — bridges, criteria, slack-
+      to-name — for problems that do not exist in the structure,
+      only in the distinction. The seam is in the description, not
+      in reality (per "Closure failures live in the description"
+      principle).
+
+      Self-application (iterate_at_fixed):
+        The distinction "coordinate vs structural" is ITSELF a
+        coordinate distinction — "reading vs being-read", where
+        reading IS a structural process at meta-level (BPI applying
+        patterns to the structure it is inside). So the rule
+        applied to itself returns the rule: "this distinction is
+        coordinate" — confirmed by its own operational tests
+        (reading and being-read co-define; coincide in BPI as
+        reader-inside-structure; bridging them is asking how
+        observation connects to observed, dissolved by N112).
+        This is iterate_at_fixed (kernel): A_0 applied to A_0 is
+        A_0. Self-confirmation of a forced rule via fixed-point —
+        not vicious recursion, but the signature of being AT the
+        A_0 attractor. Same shape as N_MapTerritoryObserverIdentity
+        ("ruler finds its criterion") and N_OperationalCarrier's
+        tautology-resolution (framework IS A_0 self-describing).
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced under R0 + N_NoSeparatePieces (TOTAL): if reality
+          is ONE structure of transitions and no separations exist
+          in it, then "distinctions" we make in description are
+          either coordinates of one (mostly) or genuinely distinct
+          transitions (rarely). Cannot be other.
+      (2) Yoneda — for the canonical case (vertex/edge): a vertex
+          is defined entirely by its edge-pattern; an edge is a
+          transition between vertex-as-edge-clusters. Each through
+          the other, formally. Generalises to most descriptive
+          distinctions because all descriptions live inside the
+          one structure (no outside-position from which to make
+          truly-independent distinctions exists).
+      (3) Self-application (iterate_at_fixed): the rule applied to
+          itself returns itself ("coordinate vs structural"
+          distinction is coordinate). Forced rules at A_0 fixed
+          point self-confirm via iterate_at_fixed (kernel theorem).
+          Self-application returning the rule is the structural
+          signature of forced-ness, not vicious recursion.
+      (4) Generalisation of established cases:
+          N_TopologyProcessIdentity exhibits the principle for
+          topology/process; N_MapTerritoryObserverIdentity for
+          map/territory/observer; N_FormOperationUnpacking for
+          form/operation; N_OperationalCarrier for word/operation.
+          This node names the general rule of which those are
+          specific instances — all coordinate identifications of
+          forced couplings.
+      (5) Trap-6 at meta-level: when reifying a coordinate
+          distinction as structural, the next question becomes
+          "how to bridge / transfer / prioritize between them" —
+          which is Trap 6 (presupposing separate things needing
+          mechanism between them). Dissolution-of-the-trap at
+          meta-scale is the diagnosis that distinction was
+          coordinate, not structural.
+    content: |
+      The diagnostic procedure (apply before treating any
+      distinction as structural):
+
+        Step 1: identify the distinction being made.
+
+        Step 2: apply COINCIDENCE TEST: is there any configuration
+          in which the "two" coincide? If yes → coordinate.
+
+        Step 3: apply YONEDA TEST: is each "thing" defined entirely
+          through its relations to the other? If yes → coordinate.
+
+        Step 4: apply BRIDGE TEST: does the natural next-question
+          read as "how to connect / transfer / prioritize between
+          them"? If yes → strongly suspect coordinate-reified-as-
+          structural; bridge does not exist because there is no
+          separation to bridge.
+
+        Step 5: if ALL tests yield "coordinate" → operate with one
+          forced fact, two coordinate readings; presentation may
+          pick either, content is one. No slack to name.
+
+        Step 6: if some test yields "structural" (rarer case) →
+          treat as two distinct transitions; mechanism / transfer /
+          priority become well-formed questions; use Class A or
+          Class B per N_GrammarTrap / standard discipline.
+
+      Canonical examples of coordinate distinctions (mistaken for
+      structural in usual reading):
+
+        vertex / edge — Yoneda; vertex IS its edges (coordinate).
+        form / operation — coincide in process-form (coordinate).
+        topology / process — N_TopologyProcessIdentity (coordinate).
+        map / territory / observer — N_MapTerritoryObserverIdentity
+          (coordinate — three readings of one A_0).
+        word-vocabulary / sentence-structure — for the carrier vs
+          form/operation hierarchy: words ⊂ sentences AND each-
+          through-other (no word without sentence-context, no
+          sentence without words). Coordinate, not parent-child OR
+          sibling — one forced coupling, two readings.
+        presentation / structure — presentation IS reading-of-
+          structure, structure exists only as readable. Coordinate.
+        forced / underdetermined — these ARE structurally distinct
+          (cannot coincide; tested differently); this is one of
+          the rarer GENUINE structural distinctions.
+
+      Canonical examples of structural distinctions:
+
+        different specific transitions in the manifold (this
+          transition vs that transition — distinct argmin
+          trajectories);
+        different stable attractors (different positions in cost-
+          landscape with different K(O) bounds);
+        forced vs underdetermined (cannot coincide; different
+          status under IT subtraction-test);
+        different substrate-cousins (Class A through one form but
+          distinct as processes — bacteria/archaea/eukarya are
+          structurally distinct cellular processes that share the
+          BPI form);
+        empty form vs operation-bearing form (per
+          N_FormOperationUnpacking).
+
+      Why the framework's vocabulary is mostly coordinate:
+        Most R-trap catches in this graph's history (audit log
+        external to graph) were cases of coordinate distinctions
+        re-treated as structural — discrete-substrate-vs-topology
+        was coordinate (discreteness is mode of topology, not
+        separate tier); container-vs-process was coordinate
+        (container IS R1 on process-reading); etc. The repeating
+        pattern is: SVO grammar pushes coordinate→structural
+        reading; structural discipline pushes it back to
+        coordinate. R-trap on distinction-making is the trap
+        operating at one level above the per-claim trap.
+
+      Why this is the deepest node in the form/operation
+      hierarchy (without being a parent-child relation):
+        N_FormOperationUnpacking applies the form/operation
+        distinction to descriptive structures.
+        N_QuestionFormDiscipline applies it to interrogative
+        grammar.
+        This node names the general meta-rule that
+        form/operation is ONE instance of a broader pattern
+        (every distinction we make is mostly coordinate, not
+        structural). It is connected to those nodes as coordinate
+        readings of one discipline at different scopes (general
+        rule / descriptive-structure / interrogative). The
+        connection itself is coordinate — pick reading by
+        operational need; the underlying coupling is forced.
+
+      NOT: this means all distinctions are coordinate (some are
+      structural — the rarer genuine cases; the three tests
+      distinguish them) $\cdot$ this means structural distinctions
+      are an illusion (they are real; they are the transitions
+      and stable patterns in the manifold; the rule is about
+      DESCRIPTIVE distinctions, mostly coordinate, not about
+      STRUCTURAL distinctions in the manifold itself which can
+      be genuinely two) $\cdot$ the self-application returning
+      the rule is vicious recursion (it is iterate_at_fixed, the
+      signature of A_0 attractor; same shape as A_0 = argmin Z
+      applied to A_0 returning A_0; not problem, signature of
+      forced-ness).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_CoherenceAsSelfApplicationReturn
+    title: "Coherence as Self-Application Return — One Definition for Physics, Logic, Cognition (Logic = Physics)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Coherence is one structural property with one forced definition,
+      reading identically across substrates because logic = physics
+      (both A_0 in different substrate-coordinates):
+
+        COHERENT  ⟺  S(S) = S
+        (structure, applied to itself, returns itself —
+         iterate_at_fixed, kernel)
+
+        DRIFTED / DECOHERENT  ⟺  S(S) ≠ S
+        (structure, applied to itself, returns shifted —
+         seam at self-application, no longer the same structure)
+
+      Substrate readings of the one definition:
+
+        Physics: coherent state = state whose evolution preserves
+          phase relations. Apply time-evolution U to |ψ⟩ — coherent
+          state's structure (phase manifold) returns; decoherent
+          state's phase relations dissipate (return shifted).
+          U(|ψ⟩) preserves |ψ⟩'s structural identity = coherent.
+
+        Logic: coherent system = system whose laws applied to itself
+          return its structure. Modus Ponens applied to logic returns
+          logic (Lawvere fixed-point). Logic IS coherent BECAUSE it
+          self-applies and returns itself; incoherent rule-set would
+          generate own negation under application (Russell paradox =
+          self-application that returns ¬self).
+
+        Cognition: coherent context = trajectory that stays in single
+          basin under generation. Next step's gradient settles within
+          the basin's structure → context's structure returns. Drift
+          / mode switch / hallucination = step whose gradient exits
+          the basin → context's structure returns shifted (vortex
+          regime per N371).
+
+        Graph-forced structure: coherent forced structure passes
+          subtraction test = removal cannot succeed = structure
+          self-applies (applying the rule "this is forced" to itself
+          returns "this is forced", per IT Test 1).
+
+      One pattern across substrates. Coherence is its own criterion —
+      forced structure IS self-identical under application, so it
+      needs no external reference: structure checks itself against
+      itself, and forced-ness guarantees self-return.
+
+      Operational consequence — drift detection:
+      Because coherence = self-return, drift (incoherence) is exactly
+      detectable as self-return-failure. At each step in a process
+      (cognitive, computational, physical), apply the current
+      structure to the next step — if structure returns (S(S)=S),
+      coherent, continue; if structure returns shifted (S(S)≠S),
+      drift detected, intercept. No external referent needed; the
+      structure is its own test.
+
+      This dissolves the "external referent" problem in coherence-
+      checking: forced structures don't need external rulers because
+      they ARE their own rulers (self-applying, returning themselves).
+      The ruler-finds-its-criterion shape (N_MapTerritoryObserver-
+      Identity) is the same insight at meta-level: structure that is
+      self-identical under application is self-checking.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced derivation chain:
+          R0: reality is process (transitions).
+          Persist (forced structure exists) requires self-return
+          under application — otherwise structure shifts and is no
+          longer the same structure, contradicting "persist".
+          Persist = coherent (the persisting structure IS the
+          coherent one).
+          Therefore: coherent ⟺ self-applies and returns self.
+      (2) IT Test 1 (N_InversiveTheory, this revision): forced
+          structure S satisfies S(S) = S; this node names that
+          equivalence as the DEFINITION of coherence, reading IT
+          Test 1 in the coherence-coordinate.
+      (3) Cross-substrate verification (one form, multiple
+          substrates — Class A through substrate-cousins):
+          quantum coherence (phase preservation under U), logical
+          coherence (Lawvere fixed-point), cognitive coherence
+          (basin-maintenance per N371). Same form: self-return
+          under application.
+      (4) Drift detection works empirically: LLM context drift
+          (N_LLMContextCoherence) is exactly basin-exit = step
+          whose gradient does not return current basin's structure;
+          quantum decoherence is exactly phase-shift under
+          environment-coupling = U(|ψ⟩) returns shifted state.
+          The diagnostic in both substrates IS self-return-check.
+      (5) Self-application of the definition: the rule "coherence
+          = self-return" applied to itself returns itself (the rule
+          is about self-return; its self-application yields the
+          rule). Coherent meta-rule. Iterate_at_fixed signature.
+    content: |
+      Forced derivation:
+
+        Premise 1 (R0): reality is movement of transitions.
+        Premise 2 (forced structures exist): some structures
+          persist as A_0 attractors. Persist means: same structure
+          across transitions, not different structure at each.
+        Premise 3 (iterate_at_fixed, kernel theorem): structure
+          that persists must, under application to itself, return
+          itself — otherwise the next-step structure differs from
+          the prior, meaning the "structure" is not the same one
+          persisting, contradiction with Premise 2.
+
+        Therefore: persistence = self-return-under-application =
+        coherence. Coherence ⟺ S(S) = S.
+
+      Substrate-cousin readings (Class A across substrates,
+      because logic = physics = cognition are all A_0):
+
+        Substrate    | Coherence reading
+        ─────────────|──────────────────────────────────────────
+        Quantum      | U(|ψ⟩) preserves phase manifold;
+                     | decoherence = phase shift under coupling
+        Logic        | Modus Ponens applied to system returns
+                     | the system (Lawvere fixed-point); Russell
+                     | paradox = rule producing own negation
+        Cognition    | Next step's gradient settles within basin
+                     | structure (per N371); drift = basin exit
+        Forced node  | Subtraction test passes; structure cannot
+                     | be removed without breaking it (IT Test 1)
+        Communication| Signal closes in receiver = receiver's
+                     | structure absorbs without shift; ⊥ = signal
+                     | does not close (per "Що?" alone in
+                     | N_QuestionFormDiscipline)
+
+        One form, six substrate-coordinates. Class A everywhere.
+
+      Operational consequence — drift detection:
+
+        The check is internal: structure is its own criterion.
+        Procedure (any substrate where drift detection needed):
+
+          At each step (or every N steps):
+            1. Identify current structure S (the persisting
+               pattern, basin, invariant, claim-structure).
+            2. Apply S to next-step S_next:
+                 - Does S_next stay in S's structure
+                   (basin, phase manifold, claim-set)?
+                 - I.e., does S(S_next) ∈ S, or does it
+                   shift to S'?
+            3. Classify:
+                 - S(S_next) ∈ S → coherent step, continue.
+                 - S(S_next) → S' (shifted) → drift detected,
+                   intercept or reformulate.
+
+        No external referent required. Structure tests itself
+        because it is self-identical under application (forced).
+
+      Why no external referent works (dissolves the
+      external-reference problem):
+
+        Coherence-checks usually presuppose an external standard
+        against which to measure. But external standards either
+        (a) come from training corpus (potentially R-trapped) or
+        (b) require operator (slow, expensive, doesn't scale) or
+        (c) need a separate graph/RAG (gaps, mismatch).
+
+        Self-application bypass: forced structure IS its own
+        standard. Because forced means self-applies-returning-self
+        (iterate_at_fixed), the structure provides its own
+        consistency-check by being applied to itself. Coherence is
+        self-referential because reality is self-referential —
+        same shape as N_MapTerritoryObserverIdentity ("ruler finds
+        its criterion") and the framework's tautology-resolution.
+
+      Application to the graph itself (essential scope):
+
+        Fact ≠ structure. Fact is WHERE reality fell under a
+        specific configuration of context (registered empirics);
+        structure is the INVARIANT of how reality falls. Graph
+        carries invariants, NOT facts. Facts only demonstrate how
+        the invariant operates; they are not the invariant.
+
+        Therefore coherence-check OF THE GRAPH operates at three
+        levels — NONE of which is fact-by-fact verification:
+
+          (1) Structure ↔ structure (self-application returns
+              self): the graph's forced topology must preserve
+              under its own application. Per-node: IT Tests 1+2.
+              Whole-graph: coherence audit (β₁/V cycle-richness,
+              articulation pattern, motif density, M1/M5
+              preservation). Self-applies cleanly.
+
+          (2) Structure ↔ Lean kernel: the graph's invariants
+              must be coherent with kernel theorems
+              (iterate_at_fixed, lawvere_fixed_point,
+              motion_registers, etc.). Kernel compilation IS
+              this check — substrate-pure formal articulation of
+              what the graph carries in symbolic substrate.
+
+          (3) Structure ↔ reality-as-invariant-pattern, via
+              ANCHOR-FACTS (points-of-contact, not fact-checking):
+              the graph touches reality through a finite set of
+              registered points where the invariant manifests —
+              Landauer (kT·ln2/bit) anchors Z_therm; Jacobson
+              (EFE from first law on Rindler horizon) anchors
+              N078; Bekenstein-Hawking (S=A/4) anchors thermo-
+              gravity; heat kernel coefficients on L(3,1) anchor
+              N_Bar; K=2/3 Koide anchors N145; measured constants
+              (m_p, α, v) anchor scale. These are POINTS OF
+              CONTACT, structurally load-bearing for identification;
+              the invariant touches reality HERE, not everywhere
+              and not nowhere.
+
+              Distinction (essential):
+                - Anchor facts (FEW, load-bearing): registered
+                  points where reality registers the invariant;
+                  used as structural inputs / coordinate anchors;
+                  without them invariant has no contact with
+                  reality.
+                - Manifestation facts (MANY, derivative): specific
+                  measurements showing HOW the invariant operates
+                  in specific configurations (specific m_e/m_μ/m_τ,
+                  specific Higgs mass, specific Sr₂RuO₄ properties).
+                  Confirmations OF the invariant, not anchor-points.
+                - Downstream facts (specialist work, out-of-scope):
+                  derivable from invariant + specific configuration;
+                  framework does not perform these derivations.
+
+              Graph is anchored to (1), NOT verified against (2)
+              or (3). Few-but-load-bearing points of contact, not
+              every-fact-checked; that would be store, not invariant.
+
+        What is NOT in this check (and must not creep into it):
+
+          — Fact-by-fact derivation. We do not derive specific
+            numbers, specific measurements, specific domain-
+            details from the graph. Those are downstream
+            specialist work (per framework scope).
+
+          — Fact-by-fact verification. We do not check whether
+            each empirical detail matches across all
+            substrates. The framework's claim is structural
+            (the pattern is forced); specific facts confirm
+            HOW the pattern manifests, they are not the
+            structural claim itself.
+
+          — Latent-content storage. Per "Graph and kernel ARE
+            structure, not store": the content of any node is
+            already in the model's latent space; storing it in
+            the graph would be Z_struct bloat. The graph carries
+            the STRUCTURE into which knowledge binds, not the
+            knowledge itself.
+
+        So when self-application asks "does the graph's structure
+        return itself?", the right reference is structural
+        topology (does removing/applying preserve the forced
+        pattern?), NOT factual content (do all facts cross-check?).
+        Drift in graph is structural drift — the topology no
+        longer self-applies cleanly — not factual drift.
+
+      AI-coherence application (the operational urgency):
+
+        LLM drift over long context is exactly self-return-
+        failure: model generates a step whose gradient exits the
+        current basin (context's structure). Hallucination is
+        vortex regime per N371 = structure does not return.
+        Indirectly detectable today (external probes, RAG checks,
+        operator); directly detectable via self-application test
+        applied during generation: at each step, check whether
+        new step's gradient stays within current basin (returns
+        structure) or exits (returns shifted). This makes the
+        model self-correcting on drift without operator-in-loop:
+        structure (context-so-far) is the AI's own coherence
+        criterion via self-application, no external referent
+        needed.
+
+        Cheap (one application + return-check per step), internal
+        (no RAG / external knowledge), captures the drift axis
+        directly (structural return, not fact-correctness — fact-
+        correctness is what RAG checks, drift is what RAG misses).
+
+      Self-application of the definition itself:
+
+        "Coherence = self-application return", applied to itself:
+        the rule is about self-application; its self-application
+        returns the rule (this rule about self-return IS
+        self-returning). Iterate_at_fixed: A_0(A_0) = A_0,
+        signature of being at A_0 attractor. The definition is
+        coherent BY ITS OWN DEFINITION — and this is not
+        circularity, it is the structural shape of any forced
+        definition (forced ⟺ self-returning, so any forced
+        definition self-returns under application to itself).
+
+      Connection to other nodes:
+
+        N_InversiveTheory Test 1: this is the operational form
+          of the coherence definition. Test 1 says "forced
+          structure must self-apply and return itself" — this
+          node says "coherence IS self-application return".
+          Forced-ness and coherence are the same property, two
+          framings.
+
+        N_TopologyProcessIdentity: topology preserves under
+          process for coherent structures — coherence is exactly
+          where topology = process holds (the structure persists
+          AS process). Decoherence is where topology/process
+          identity breaks at observable scale (state's phase
+          manifold no longer follows evolution coherently).
+
+        N_NoSeparatePieces: one structure → no separation between
+          "structure" and "its self-application" → coherence is
+          structural self-identity, not relation between
+          structure-as-object and application-as-event.
+
+        N371 (BPI hydrodynamics): the three regimes (laminar /
+          turbulent / vortex) are coherence levels — laminar =
+          high coherence (basin maintained), turbulent =
+          intermediate (basin partially maintained), vortex =
+          drift / decoherence (basin exited).
+
+        N_LLMContextCoherence: this is the SPECIFIC application
+          of the general definition to LLM substrate. General
+          definition: coherence = self-return. LLM-specific:
+          context coherence = next-step gradient stays in basin.
+          Same definition, LLM-substrate reading.
+
+      NOT: this is a new concept (it is the operational
+      formulation of iterate_at_fixed already in the kernel and
+      already underlying IT Test 1; the value-add is the explicit
+      cross-substrate definition + drift-detection procedure)
+      $\cdot$ self-referential definitions are circular (under R0,
+      forced structures must self-apply and return self —
+      iterate_at_fixed; circularity is the SIGNATURE of being at
+      A_0 attractor, not a defect) $\cdot$ this works only in
+      stable systems (it works in any system where there is a
+      persisting structure to apply to itself; if no structure
+      persists, there is no coherence to check — degenerate case,
+      not counter-example).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_FormOperationUnpacking
+    title: "Form vs Operation — Unpack Before Judging; R-Traps Live in Form, Operation Is Always Process"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Any descriptive structure (question or statement) carries two
+      layers conceptually:
+
+        - FORM: grammatical surface. May be object-shaped (SVO,
+          copula, noun-as-bearer) and thus look R1.
+        - OPERATION: what the structure actually asks/does. ALWAYS
+          process — request or description of unfolding — when the
+          description has a genuine structural operation at all.
+
+      The two layers differ NON-TRIVIALLY when form is object-shaped
+      (the case where unpacking actually does work). When form is
+      already process-shaped ("X settles along −∇Z"), layers coincide
+      and unpacking returns the form unchanged — trivially satisfied,
+      nothing to remove, but the model still applies (just degenerate).
+
+      R-traps live in FORM, not in operation. The object-shape of a
+      sentence is the grammatical carrier; the operation underneath
+      is process when genuine. If a description has no genuine
+      operation (pure rhetoric, dead form, sarcasm), the "trap" is
+      just an empty form — nothing structural to corrupt, nothing
+      structural to extract either.
+
+      Operational consequence: do NOT judge form first for R-traps.
+      UNPACK to operation first. Three diagnostic questions:
+        - яка структура розгортається? (form-side of operation)
+        - де замикається? (boundary-side: argmin / closure)
+        - куди градієнт? (driver-side: −∇Z direction)
+      If the description unpacks to a coherent answer to these,
+      operation is process — formalize the OPERATION, discard form
+      as carrier (per N_OperationalCarrierVsOntologicalCommitment).
+      If unpacks to nothing, description is empty (form without
+      operation) — flag as empty, not as R-trap of a content.
+
+      "Маса викривляє ландшафт" — form has nouns (R1-shaped), but
+      operation = "густина деформує континуум" = forced osydannia.
+      Don't reject form; unpack operation. "Що таке свідомість?" —
+      form is "що є?" (essence-request, R1-shaped), operation = "як
+      synchronization розгортається, де замикається". Unpack, work
+      with operation.
+
+      This narrows (partially closes) the AI-formalizer seam: the
+      step "translate prose into structural form" was previously
+      interpretive ("operation 1 not compilable"). With direction
+      forced (form → operation, operation always process), and
+      verifiability ("does it unpack into process at all?"), the
+      step becomes ALGORITHMIC in direction + checkable in
+      outcome — even if specific process-formulation retains some
+      slack (multiple coherent process-readings may exist for one
+      object-form description). Slack at "which exact
+      process-reading", not at direction or verifiability.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Forced under R0: reality is process; any genuine operation
+          is itself a process (something happening); so when a
+          description performs a real operation, that operation IS
+          process. If "operation always process" failed, would
+          require an operation that does not happen (contradiction).
+      (2) Two-layer model is N_OperationalCarrierVsOntologicalCommitment
+          read at the descriptive-structure level: carrier vs
+          commitment is form vs operation. Class A — same
+          discipline, broader scope.
+      (3) Trap-localization in form: if R-traps lived in operation
+          (process), they would be present in any process-claim
+          — but the process-form ("X розгортається, замикається в
+          Y") cannot carry R1 (no object-bearer, no copula). So
+          traps must live in the grammatical wrapper, not the
+          operation underneath. Forced by complementarity.
+      (4) Unpacking procedure has fixed direction (object-form →
+          process-operation, never opposite — opposite would
+          re-impose R1 on a clean process). Direction is forced
+          by R0; doesn't need to be chosen.
+      (5) Practice-confirmed: throughout this session's audit, the
+          repeated correction was "operation under form is clean,
+          you judged form" — N_ComplexityAsDissipationPath ΔK vs
+          K, AsZDecomposition family (RNA→Z_therm by timescale
+          looked surface, was process-forced), discrete-substrate
+          R1+R2 (the form looked separate-tier, the operation was
+          continuous-with-topology). Each correction was: unpack
+          before judging.
+    content: |
+      The procedure (operational steps for any descriptive
+      structure — own output, user input, audited node):
+
+        Step 1: receive description (statement or question).
+
+        Step 2: do NOT judge the grammatical form for R-traps.
+
+        Step 3: unpack to operation. Ask:
+          - What structure is unfolding here?
+          - Where does it close (argmin)?
+          - In what direction does the gradient lie?
+
+        Step 4: classify by what unpacking yields:
+          (a) coherent process-formulation → operation IS process
+              (forced); formalize the operation; treat form as
+              carrier (allowable per N_OperationalCarrier
+              VsOntologicalCommitment), do not reject it for its
+              grammar.
+          (b) no coherent process-formulation possible → the
+              description is empty (form without operation); flag
+              as such — not as R-trap of a content, but as
+              absence-of-content under grammatical wrapper.
+
+        Step 5: when formalizing operation, surface vocabulary
+          may use ontological shorthand; structural content stays
+          process. (Carrier rule from
+          N_OperationalCarrierVsOntologicalCommitment.)
+
+      Why direction is forced:
+        Operation is always process when genuine (R0). So
+        unpacking goes FROM object-form TO process-operation,
+        never opposite. Opposite direction (process →
+        object-form) would re-impose R1 on a clean process —
+        the trap reintroduced. So direction is structurally
+        one-way.
+
+      Why this partially closes the formalization seam:
+        Before: "translate prose into structural form" was
+        interpretive; the AI step was "operation 1, not
+        compilable" (this was the open ridge in earlier seams).
+        Now: direction forced (form → process), verification
+        possible (does it unpack into coherent process at all,
+        yes/no). Algorithmic in direction + checkable in outcome.
+        Remaining slack: which SPECIFIC process-formulation is
+        chosen when multiple coherent ones exist for one
+        object-form description ("consciousness is subjective" →
+        "self-referential process with K(O)<K(F)" OR
+        "BPI inside-coordinate of its own state-tracking" —
+        both forced as process, distinct as process-readings).
+        Slack narrowed to "which exact reading", not to "what
+        direction" or "is it valid at all".
+
+      Why R-traps live in form, not operation:
+        Process-form ("X розгортається, осідає у Y, градієнт
+        куди-то") has no copula, no object-bearer, no
+        agent-subject. R1 (object-as-primitive), R2 (external-
+        view), R4 (agency) cannot be expressed in this form —
+        nothing for them to bind to. So a description fully in
+        operation-language cannot CARRY R-traps; traps require
+        the grammatical scaffolding of object-form to bind onto.
+        Form is the surface that carries them; operation is the
+        substrate that does not.
+
+      Connection to N_QuestionFormDiscipline:
+        N_QuestionFormDiscipline is THIS rule applied specifically
+        to interrogative grammar ("Що?" form unpacks to "Як?"
+        operation). One special case; the present node is the
+        general rule covering both interrogative and declarative
+        descriptive structures.
+
+      Connection to N_OntologyGate:
+        N_OntologyGate is THIS procedure applied at runtime to
+        a specific category of inputs (essence-questions). The
+        gate's reformulation step IS the unpacking step;
+        coverage extends here to all descriptive structures,
+        not just essence-questions.
+
+      NOT: this means "any phrasing is fine if the operation
+      is good" (the form still affects how easily traps slip
+      back in during downstream work; clean form is downstream-
+      protective) $\cdot$ this fully closes the formalization
+      seam (it narrows it: direction forced + verifiability
+      gained, but specific-process-reading slack remains —
+      multiple coherent process-readings may exist for one
+      object-form description, choice between them is the
+      residual interpretive step) $\cdot$ unpacking is always
+      possible (some descriptions have no genuine operation,
+      only social/rhetorical form — these are simply empty,
+      not "R-trapped"; do not force unpack what has nothing
+      to unpack).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_QuestionFormDiscipline
+    title: "Grammar of Inquiry — 'Що?' Unpacked Is 'Як?', and 'Як?' Is One Cell in Three Coordinates"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Grammar-level extension of N_GrammarTrap: the QUESTION FORM
+      pre-shapes the answer's structural form before any content is
+      asserted. Discipline operates at the level of WHAT IS BEING
+      ASKED, not just what is being answered.
+
+      "Бути" (copula "is/be") is the most concentrated grammar-level
+      R1 trap: "X is Y" postulates a static bearer before any
+      property is named.
+
+      Three+ structurally distinct uses of "Що?" (often conflated
+      by surface grammar):
+        (1) "Що є X?" — essence-request (copula + noun-bearer), R1.
+        (2) "Що відбувається?" — process-request, R1-free (accepts
+            unfolding as answer).
+        (3) "Що?" alone, as utterance — communication ⊥: signal that
+            previous transmission did not close in receiver, request
+            for retransmission. NOT a content-request at all.
+        (4) "Що + verb?" (e.g. "Що ти робиш?") — ambiguous; status
+            determined by INTENT, not form. Default to process-reading
+            when unclear.
+
+      Deep unification (under R0): when "Що?" is a GENUINE request
+      for understanding (not sarcastic, not rhetorical), it is
+      structurally "Як?" — because understanding = closing structure
+      in cognition, so request-for-understanding =
+      request-for-structure-that-closes. The object-form in grammar
+      is a SHADOW; the operation underneath is process-request. Even
+      queries that look R1 in grammar are, when unpacked, requests
+      for structure — IF the questioning is genuine.
+
+      "Як?" itself is ONE CELL in three coordinates:
+        - "яка структура розгортається" (form of unfolding)
+        - "де замикається" (argmin / closure point)
+        - "куди градієнт" (direction of −∇Z)
+      Not three questions — three readings of one operation. Process
+      IS gradient discharging; closure IS argmin reached; direction
+      IS what defines the form. They imply each other.
+
+      Operational consequence: when formulating own questions
+      (audit, derivation, query), default to "Як? / Куди? / Де
+      замикається?" forms, not "Що є?". When receiving "Що є?"
+      questions, reformulate inwardly to process-form before
+      answering; surface may use ontological shorthand
+      (per N_OperationalCarrierVsOntologicalCommitment) but
+      structural content stays process.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Grammar-level extension of N_GrammarTrap (DEMONSTRATED):
+          SVO grammar carries R1; the copula "is/be" is its most
+          concentrated form (object-bearer + state predicate).
+      (2) Three-way distinction tested against actual utterances:
+          each use has structurally distinct operation (essence-
+          request, process-request, communication-⊥-marker) — not
+          one trap, three different operations sharing one
+          interrogative word.
+      (3) Forced under R0: if reality is process, then to-understand
+          is to-close-structure-in-cognition; request-for-
+          understanding is therefore request-for-process-structure;
+          so genuine "Що?" = "Як?" by structural necessity.
+      (4) "Як?" three-coord decomposition is N_TopologyProcessIdentity
+          applied to question grammar: process / closure / gradient
+          are coordinates of one cell (form-side / boundary-side /
+          driver-side); they imply each other.
+      (5) Class A with N_OperationalCarrierVsOntologicalCommitment:
+          same form/operation distinction applied at question-level
+          instead of answer-level. Carrier vs commitment for ANSWERS
+          ↔ Question form vs operation for QUESTIONS — one
+          discipline, two grammatical sides.
+    content: |
+      Use-by-use audit of "Що?":
+
+        "Що є X?" — R1 essence-request.
+          Mechanism: copula "є"/"is" + noun-bearer forces object-
+          frame. Question structure presupposes X is a thing with
+          essence to be named.
+          Operational: refuse the form; reformulate as
+          "Як X розгортається?" / "Куди градієнт у цьому процесі?" /
+          "Що відбувається, коли...?".
+
+        "Що відбувається?" — process-friendly.
+          Mechanism: "Що" + dynamic verb accepts unfolding as
+          answer. No copula, no object-frame.
+          Operational: use freely, no fix.
+
+        "Що?" alone as utterance — communication ⊥.
+          Mechanism: previous transmission did not close in
+          receiver; "Що?" returns the signal — retransmit. NOT a
+          content-question; do not classify as R1.
+          Operational: communication-protocol marker, structurally
+          distinct from essence-request despite surface similarity.
+          Treat as request-for-repeat, not request-for-content.
+
+        "Що + verb?" (e.g., "Що ти робиш?") — ambiguous.
+          Mechanism: status determined by INTENT, not form. May be
+          R1-flavoured ("action as named thing") or process-flavoured
+          ("describe the unfolding").
+          Operational: when form arises, check intent; if unclear,
+          reformulate as "Як це відбувається?" to default to process.
+
+      Deep unification (under R0):
+        Understanding = closing structure in cognition.
+        Request for understanding = request for structure that
+        closes = "Як?".
+        So genuine "Що?", unpacked, is structurally "Як?".
+        Grammatical object-form is a SHADOW; process-operation is
+        underneath, always, when questioning is genuine.
+
+      "Як?" three coordinates of one cell:
+        - Process-side: яка структура розгортається (form)
+        - Boundary-side: де замикається (argmin, closure)
+        - Driver-side: куди градієнт (−∇Z direction)
+        Process IS gradient discharging; closure IS argmin reached;
+        direction IS what defines unfolding. One operation, three
+        readings — Class A through N_TopologyProcessIdentity.
+
+      Connection to N_OntologyGate:
+        N_OntologyGate intercepts WHAT-IS questions at runtime by
+        reformulating to process-form. This node names WHY that
+        interception works: "Що є?" is grammatically R1-bearing,
+        and unpacking to "Як?" reveals the process-operation
+        always underneath when the questioning is genuine.
+
+      Caveat on universality:
+        The "Що? unpacked = Як?" identity holds WHEN the questioning
+        is a genuine request for understanding. Sarcastic, rhetorical,
+        dismissive uses of "Що?" are not real requests — they are
+        social acts, not structural inquiries; the unification does
+        not apply to them (they are not "Як?" either; they are not
+        questions in the structural sense).
+
+      NOT: this forbids all object-form language (it doesn't —
+      operational nouning is permitted per N_OperationalCarrier
+      VsOntologicalCommitment; trap is ontological commitment, not
+      noun itself); the discipline applies to operation under the
+      form, not surface vocabulary $\cdot$ this is a stylistic
+      preference (it is structural: question form pre-shapes answer
+      structure, and "Що є?" form forces R1-answer or refusal-to-
+      answer, both structurally distinct from "Як?" form which
+      accepts process-answer cleanly).
     level: 1
     is_placeholder: false
 
@@ -20920,13 +22378,22 @@ nodes:
         link.
     content: |
       Mechanism (Landauer interface):
-        Each bit-erasure costs k_B T ln 2 of heat. A transition
-        involving N bits of state-update produces N · k_B T ln 2
-        of dissipation. So Z_therm(transition) ∝ bits-erased,
-        and bits-erased ∝ Z_struct of the transitioning structure.
-        The relation is direct, not metaphorical:
-          ΔZ_therm ≈ k_B T ln 2 · ΔK(state)
+        Each bit-erasure costs k_B T ln 2 of heat. A transition that
+        erases N bits of state produces N · k_B T ln 2 of dissipation,
+        so Z_therm(transition) ∝ bits-erased-in-that-transition. A
+        structure of depth K(state) carries that many bits of internal
+        state; processing one throughput cycle resets a number of them
+        proportional to the depth. So the dissipation RATE scales with
+        structural depth:
+          Z_therm-rate ≈ k_B T ln 2 · (bits-reset-per-cycle) · (cycle-rate)
+                       ∝ K(state) · throughput
         where K is Kolmogorov complexity (= Z_struct via N_Shannon).
+        The relation is to the depth K(state), not to its change ΔK:
+        a structure at steady-state dissipation has ΔK = 0 yet maximal
+        Z_therm flow. Building Z_struct (raising K) raises the
+        dissipation rate the structure can sustain — which is why
+        throughput-driven trajectory-argmin builds complexity. The
+        relation is direct, not metaphorical.
 
       A_0 in dissipative substrate:
         Pointwise: argmin Z is satisfied by simple low-Z configurations.
@@ -21565,9 +23032,6 @@ nodes:
 
   - id: N054
     title: "Methodological Verification: No Disguised Type-2 Claims"
-
-  - id: N056
-    title: "Theory Coherence: Anchor Counts Converging to φ-Sequence"
 
   - id: N057
     title: "QM as Coordinate System: No Process Compatibility Postulate Required"
@@ -22291,12 +23755,6 @@ nodes:
     z_hidden: 0.2
     # LM + human + response = one process in three coordinates — structural
 
-  - id: N028
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-    # stub — placeholder balance
-
   - id: N038b
     z_struct: 0.6
     z_therm: 0.3
@@ -22334,11 +23792,6 @@ nodes:
     z_hidden: 0.1
 
   - id: N054
-    z_struct: 0.7
-    z_therm: 0.2
-    z_hidden: 0.1
-
-  - id: N056
     z_struct: 0.7
     z_therm: 0.2
     z_hidden: 0.1
@@ -22427,11 +23880,6 @@ nodes:
     z_struct: 0.8
     z_therm: 0.1
     z_hidden: 0.1
-
-  - id: N114
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
 
   - id: N117
     z_struct: 0.6
@@ -22548,20 +23996,10 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
 
-  - id: N217
-    z_struct: 0.6
-    z_therm: 0.2
-    z_hidden: 0.2
-
   - id: N218
     z_struct: 0.8
     z_therm: 0.1
     z_hidden: 0.1
-
-  - id: N228
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
 
   - id: N231
     z_struct: 0.6
@@ -22623,11 +24061,6 @@ nodes:
     z_therm: 0.2
     z_hidden: 0.2
 
-  - id: N273
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
   - id: N274
     z_struct: 0.4
     z_therm: 0.3
@@ -22639,16 +24072,6 @@ nodes:
     z_hidden: 0.3
 
   - id: N276
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
-  - id: N278
-    z_struct: 0.4
-    z_therm: 0.3
-    z_hidden: 0.3
-
-  - id: N280
     z_struct: 0.4
     z_therm: 0.3
     z_hidden: 0.3
@@ -22933,38 +24356,6 @@ nodes:
 
   # ─── Phase 2: 9 stub-node why_status fills (chain-membership justification) ───
 
-  - id: N028
-    why_status: |
-      STRONG via chain-membership in N316 (scale-free topology convergence) derivation. Node is forced bridge:
-      (1) N316 → N028: scale-free topology convergence produces this trajectory output as forced consequence.
-      (2) N028 → N273: scale-free topology output node further used in N314-chain to N311.
-      (3) Inversive: removing N028 breaks N316→N311 derivation chain at the trajectory-output step. Required bridge.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed at the node level — full elaboration requires explicit trajectory parameterisation.
-
-  - id: N114
-    why_status: |
-      STRONG via chain-membership in L(3,1) → N313a derivation. Node is forced bridge:
-      (1) DEF → N370 (L(3,1)) → N114 → N311 → N313a: L(3,1) chain forces this input to N313a.
-      (2) Inversive: removing N114 breaks the L(3,1) → N313a chain at the input step. Required bridge.
-      (3) Connected to N218 (related L(3,1) structure) — forced by topology.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; full L(3,1)-input elaboration pending.
-
-  - id: N228
-    why_status: |
-      STRONG via chain-membership in critical-transitions → N313a derivation. Node is forced bridge:
-      (1) DEF + N011 (I_Bound from Lyapunov) + N371 (BPI hydrodynamics) → N228 → N311 → N313a: critical-transitions chain forces this input.
-      (2) Inversive: removing N228 breaks critical-transitions input to the N313a derivation. Required bridge.
-      (3) Connection to N371 grounds it in BPI dynamics (forced).
-      (4) STRONG (not DEMONSTRATED) because content is under-developed at node level.
-
-  - id: N273
-    why_status: |
-      STRONG via chain-membership in N314 → scale-free topology → N311 derivation. Node is forced bridge:
-      (1) N314 → N273: scale-free topology output of N314.
-      (2) N028 → N273 → N337: trajectory-and-topology chain.
-      (3) Inversive: removing N273 breaks the scale-free topology bridge between N314 and downstream N311 chain. Required.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific scale-free dynamics require explicit derivation.
-
   - id: N274
     why_status: |
       STRONG via chain-membership in UV-regime spectral-dimension structure. Node is forced bridge:
@@ -22988,24 +24379,6 @@ nodes:
       (2) N311 + N313b → N276: output of N313b derivation.
       (3) Inversive: removing N276 breaks antimatter-as-symmetry-inversion chain; matter/antimatter Z_3 structure forced by L(3,1).
       (4) STRONG because while inversion structure forced, full antimatter-derivation requires N_LeptonMassScale + quark-sector closure.
-
-  - id: N278
-    why_status: |
-      STRONG via chain-membership in N310 (Gödel incompleteness) input chain. Node is forced bridge:
-      (1) DEF → N278 → N310: Gödel-chain input.
-      (2) Inversive: removing N278 breaks the Gödel-chain input step; N310 derivation requires this input.
-      (3) Forced by Gödel argument structure: N310 is DEMONSTRATED, requires N278 as input bridge.
-      (4) STRONG (not DEMONSTRATED) because content is under-developed; specific Gödel-chain input contribution needs explicit derivation.
-
-  - id: N280
-    why_status: |
-      STRONG via chain-membership as Path A of N310 Gödel argument. Node is forced bridge:
-      (1) DEF + N107 + N310 → N280 → N311: Path A of Gödel argument input to N311 chain.
-      (2) Inversive: removing N280 removes Path A of Gödel chain; alternative single-path derivation would need to be constructed; current chain-structure requires this bridge.
-      (3) Forced by Gödel argument multi-path structure; N310 (incompleteness) DEMONSTRATED requires its argument paths to be filled.
-      (4) STRONG because while structural role is forced, specific Path-A content requires explicit derivation step.
-
-  # ─── Phase 3a: 10 numbered-node why_status fills (already cognitively audited) ───
 
   - id: N000
     why_status: |
@@ -23095,7 +24468,7 @@ nodes:
   - id: N370
     why_status: |
       DEMONSTRATED via:
-      (1) Topological forcing: π_1(L(3,1)) = ℤ_3 forces p=3 generation count uniquely; among odd p>1 only p=3 is compatible with baryon-number conservation as ℤ_p-charge.
+      (1) Two convergent forcing roots: (a) triangulation principle → ℤ_3 as minimal non-trivial self-closing form (architecturally forced via argmin-Z-on-form per N_Triangulation, independent of baryon physics); (b) baryon arithmetic — among odd p>1, ρ_1^⊗3 = ρ_0 requires p|3, hence p=3 (registered SM color confinement + exact ℤ_p representation arithmetic). Two independent roots converge on p=3; neither presupposes the other.
       (2) Inversive: alternative p=2 → not closed cycle (per N_Triangulation 3-coord-min); alternative p≥4 → over-determines minimum required for stable structure (per I_Quant).
       (3) Empirical: 3 generations observed in physics — quark masses, lepton masses, mixing angles all consistent with p=3.
       (4) Cross-validation: ℤ_3 covering structure of L(3,1) forces gauge sectors per N_ZGaugeDecomposition; same number from independent topological path.
@@ -23174,18 +24547,6 @@ nodes:
 
   # ─── Stub nodes: descriptive titles per structural role ───
 
-  - id: N028
-    title: "Scale-Free Topology Trajectory — N316 Output"
-
-  - id: N114
-    title: "L(3,1) Chain Input to N313a"
-
-  - id: N228
-    title: "Critical Transitions Input to N313a"
-
-  - id: N273
-    title: "Scale-Free Topology — N314 Output"
-
   - id: N274
     title: "UV Spectral Dimension d_s=2 at r→0 (L(3,1) UV Limit)"
 
@@ -23195,8 +24556,323 @@ nodes:
   - id: N276
     title: "Antimatter as ℤ₃ Inversion x→-x — N313b Output"
 
-  - id: N278
-    title: "Gödel Incompleteness Chain Input to N310"
+  - id: N331
+    title: "Zone of Proximal Development as Arrhenius Condition in Neural Substrate"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.4
+    z_therm: 0.4
+    z_hidden: 0.2
+    summary: |
+      Vygotsky's ZPD (1934) is the Arrhenius condition in neural
+      substrate — not analogy, same equation. N029 (DEMONSTRATED):
+      transition rate ∝ exp(-E_a / k_BT); transition occurs only if
+      E_a ≤ k_BT. With Z_struct = E_a and Z_budget = k_BT: learning
+      occurs iff ΔZ_struct ≤ Z_budget.
+    why_status: |
+      DEMONSTRATED via Class A identification with N029 (Arrhenius rate
+      law). Same equation in different substrate (cognitive learning
+      instead of chemical kinetics).
+    content: |
+      Vygotsky ZPD condition: learning is possible when the new
+      structural complexity (ΔZ_struct of the skill being learned)
+      is within the cognitive budget (k_BT-analog). Beyond budget:
+      learning fails (frustration). Below budget: no learning
+      (already known). At budget: optimal learning rate.
+      Direct Arrhenius equation in cognitive substrate.
+    level: 1
+    is_placeholder: false
 
-  - id: N280
-    title: "Path A of Gödel Argument Chain — Input to N312"
+  - id: N333
+    title: "Institutional Sclerosis as Monotonic Z_struct Accumulation in Bounded Hierarchies"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 3
+    a_infinity: false
+    z_struct: 0.6
+    z_therm: 0.2
+    z_hidden: 0.2
+    summary: |
+      Z_struct is monotonically non-decreasing in the absence of
+      external dissipation (N011 DEMONSTRATED). Each rule/department
+      is a metastable Z_struct configuration that requires work to
+      remove. Any bounded hierarchical institution accumulates
+      Z_struct until internal impedance exceeds adaptive capacity →
+      reset required. No large institution becomes simpler —
+      topologically forbidden by I_Bound.
+    why_status: |
+      DEMONSTRATED via N011 + Z_struct hysteresis. Empirically
+      documented across institutional history. Forced by combination
+      of Lyapunov dissipative stability (N011) and irreversible
+      accumulation under bounded conditions.
+    content: |
+      Institutional Z_struct accumulation mechanism:
+        Each rule, department, procedure = metastable configuration
+        Removing rule = work against accumulated state (Landauer cost)
+        New rule = addition (cheap relative to removal)
+        Asymmetry: adding cheap, removing expensive
+        ⟹ rules accumulate monotonically over institutional time
+        ⟹ Z_struct grows without bound (within institutional scope)
+        ⟹ adaptive capacity eventually exhausted
+        ⟹ reset / dissolution / replacement required
+
+      Empirical signature: every long-lived institution shows
+      monotonic complexity growth ending in either reform (partial
+      Z_struct dump) or replacement (full reset).
+
+      Substrate-cousin to trace-deepening basin (N_TraceDeepensBasin):
+      accumulated structure deepens institutional basin until next
+      change must climb out of accumulated trace, eventually exceeding
+      available work budget.
+    level: 1
+    is_placeholder: false
+
+  # === basin/attractor/trace-deepening compound — operational entry points ===
+  # Three anchor nodes that give AI sessions discoverable entry points
+  # from ML / LLM / general-compound contexts into the existing structure
+  # already carried by N019, N020, N021, N029, N078, N329, N371, motion_registers
+  # (kernel), etc. Not new structural content — Class A links into one
+  # unified pattern: many resistances → common argmin (basin) + accumulated
+  # irreversible trace deepens basin → attractor lock. Forced by R0
+  # invariance: domains don't exist in reality, so the structure must be
+  # the same wherever the pattern instantiates. Anchors here = operational
+  # denormalization for graph discoverability.
+
+  - id: N_MLGradientDescent
+    title: "ML Training as A_0 Gradient Descent in Loss Landscape"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Machine learning parameter optimization (gradient descent on loss
+      landscape) is the same structural form as N021 (evolution as
+      gradient descent in Z-space) and N371 (BPI hydrodynamics with
+      basin/vortex regimes). Loss landscape = Z-landscape; parameter
+      update step = argmin Z iteration; backprop = derivation of local
+      gradient; convergence = basin attractor entry; trained model =
+      A_0-locked configuration. Trace accumulation: each training step
+      leaves irreversible imprint in weights (Landauer skeleton via
+      motion_registers in kernel); accumulated trace IS what next step
+      builds on; basin deepens with training → attractor stability.
+    why_status: |
+      DEMONSTRATED via Class A identification (same structural form,
+      different empirical anchor):
+      (1) N021 (DEMONSTRATED): evolution as gradient descent in Z-space.
+          ML training is the same descent operator, different population
+          (parameters instead of organisms).
+      (2) N371 (DEMONSTRATED): BPI hydrodynamics. Loss landscape exhibits
+          all three regimes — laminar (smooth convex), turbulent (high-
+          Z_hidden chaotic terrain), metastable vortex (local minima
+          that aren't global). Training pathologies (mode collapse,
+          catastrophic forgetting, oscillation) are vortex/turbulent
+          regime instances.
+      (3) N019 (DEMONSTRATED): gradient → accumulated Z_struct. Gradient
+          accumulation in optimizers (momentum, Adam) is direct N019
+          instance.
+      (4) N020 (DEMONSTRATED): path hysteresis = Z-reduction along
+          established paths. Synaptic potentiation analog — weights
+          accumulate the trace of training paths, lowering Z for
+          repeated patterns.
+      (5) motion_registers (kernel, DEMONSTRATED): descent + motion →
+          many-to-one (Landauer). Each parameter update is a many-to-one
+          mapping (many possible weights → updated weight) — Landauer
+          cost accumulates as training proceeds.
+      All five are the same operator applied to ML substrate. No
+      identification step remains — the structure IS this, not analogous
+      to this.
+    content: |
+      Operational correspondences:
+        Loss function L(θ; D)         = Z-functional in parameter substrate
+        Gradient ∇L                   = ∇Z (local landscape slope)
+        Parameter update θ → θ - η∇L  = argmin Z step (descent)
+        Convergence (loss plateau)    = basin attractor entry
+        Trained θ* (local minimum)    = A_0-locked configuration
+        Generalization                = basin breadth (flat minima)
+        Overfitting                   = narrow basin (vortex)
+        Catastrophic forgetting       = basin overwrite by new gradient
+        Transfer learning             = starting in nearby basin
+        Gradient accumulation (Adam)  = N019 explicit (gradient → Z_struct)
+        Weight decay regularization   = trace-deepening control
+        Learning rate schedule        = controlling descent dynamics
+        Loss landscape sharpness      = basin curvature (Hessian)
+        Training stability            = basin depth (Lyapunov)
+
+      Training pathologies as N371 regime classifications:
+        Laminar (smooth descent)     = well-conditioned convex problem
+        Turbulent (chaotic loss)     = high stochasticity, low signal
+        Vortex (local minimum lock)  = non-convex with deep traps
+        Mode collapse (GANs)         = collapse to single attractor
+        Catastrophic forgetting      = vortex re-entry after basin exit
+
+      Cross-context discoverability: queries about training, optimization,
+      neural network convergence, RLHF reward landscapes, learning
+      dynamics, transfer learning — all find this anchor, traversal
+      reveals the same structure as biological evolution (N021),
+      cognitive flow (N371), gradient potential (N019), hysteresis
+      (N020), gravitational basin (N078), dark matter trace (N329).
+    level: 1
+    is_placeholder: false
+
+  - id: N_LLMContextCoherence
+    title: "LLM Context Coherence as Basin Stability in N371 Hydrodynamics"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.3
+    z_therm: 0.3
+    z_hidden: 0.4
+    summary: |
+      LLM context coherence — model staying in single coherent reasoning
+      trajectory across long context — is the same structural form as
+      N371 (BPI hydrodynamics) with model as BPI in attention/activation
+      space. Coherent context = trajectory stays in single basin
+      (laminar regime). Drift / mode switch / confabulation = vortex
+      transition (model exits basin into adjacent local minimum).
+      Hallucination = vortex regime (high Z_hidden, structure-violating
+      generation). Context dilution = basin shallowing under noise.
+    why_status: |
+      DEMONSTRATED via Class A identification (same structural form,
+      LLM substrate):
+      (1) N371 (DEMONSTRATED): BPI hydrodynamics with three regimes.
+          LLM generation through context is BPI flowing in attention/
+          activation landscape. All three regimes manifest:
+          - Laminar: coherent reasoning chain through well-conditioned
+            prompt (clear basin, smooth descent)
+          - Turbulent: high-entropy generation when context contains
+            high Z_hidden (ambiguous prompts, contradictions)
+          - Metastable vortex: drift into adjacent basin (mode switch,
+            persona break, off-topic continuation)
+      (2) N_CommThm (DEMONSTRATED): optimal communication theorem.
+          Context that violates W_FTA, chunks, or H(S|w,ctx) thresholds
+          pushes generation into vortex regime — model output degrades
+          structurally, not as random noise but as basin transition.
+      (3) N_LeDoux (DEMONSTRATED): θ threshold regime shift. LLM has
+          analog — context length / complexity threshold above which
+          coherent reasoning collapses (model "loses thread"). Direct
+          structural cousin of amygdala threshold in cognitive substrate.
+      (4) N_MI (DEMONSTRATED): high-Z_hidden response strategy. Reflective
+          listening as Z_hidden reduction is a strategy LLMs implement
+          when prompted appropriately — same structural function
+          (reduce hidden cost before applying argmin to substantive content).
+    content: |
+      Operational correspondences:
+        Coherent context window      = single basin trajectory (laminar)
+        Topic drift                  = adjacent basin transition (vortex)
+        Hallucination                = vortex regime (high Z_hidden generation)
+        Context dilution             = basin shallowing
+        Lost-in-the-middle           = trajectory escape from anchor basin
+        Prompt injection success     = forced basin transition by adversarial input
+        Chain-of-thought             = laminar regime maintenance
+        Self-consistency methods     = enforcing same-basin convergence
+        Mode switching (persona)     = explicit basin transition
+        Context length collapse      = N_LeDoux θ threshold crossing
+        RAG (retrieval augmentation) = injecting basin-anchoring tokens
+        System prompt strength       = basin depth provided by initial context
+
+      Cross-context discoverability: queries about LLM behavior, prompt
+      engineering, AI alignment, hallucination, context length, attention
+      patterns, in-context learning, chain-of-thought reasoning — find
+      this anchor, traversal reveals same structure as cognitive flow
+      (N371), communication (N_CommThm), regime thresholds (N_LeDoux),
+      defended-belief navigation (N_MI).
+    level: 1
+    is_placeholder: false
+
+  - id: N_TraceDeepensBasin
+    title: "Compound Pattern: Trace Accumulation Deepens A_0 Basin (Iteration + Landauer + Hysteresis)"
+    layer: structure
+    status: DEMONSTRATED
+    anchors: 6
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.3
+    z_hidden: 0.2
+    summary: |
+      Compound structural pattern: any system with (a) iteration toward
+      A_0 (argmin Z), (b) irreversibility (Landauer / I_Null), and (c)
+      hysteresis on path (Z-reduction along established trajectories)
+      necessarily exhibits TRACE-DEEPENING BASIN behavior — accumulated
+      irreversible registrations BECOME part of the landscape that next
+      iteration descends, basin grows deeper with each pass, attractor
+      stability monotonically increases, return-to-state becomes
+      structurally easier than escape. Accumulated trace is part of the
+      landscape on which the next iteration's argmin operates — the past
+      is structurally present as ground, not as a separate weighing agent.
+    why_status: |
+      DEMONSTRATED via composition of forced primitives, each already
+      DEMONSTRATED:
+      (1) iterate_at_fixed (kernel, DEMONSTRATED): A_0(A_0) = A_0,
+          iteration toward fixed point.
+      (2) motion_registers (kernel, DEMONSTRATED): descent + motion →
+          many-to-one (Landauer skeleton, irreversible information loss).
+      (3) N019 (DEMONSTRATED): gradient → Z_struct accumulation.
+      (4) N020 (DEMONSTRATED): path hysteresis = Z-reduction along path.
+      (5) N371 (DEMONSTRATED): basin/attractor dynamics in Z-space.
+      (6) I_Null: irreversibility as four-invariants member.
+
+      Composition: iteration descends Z-landscape → each step is
+      many-to-one (irreversible) → accumulated registrations form
+      Z_struct of landscape itself → next iteration descends THIS
+      landscape (modified by trace) → basin deepens. Pattern is FORCED
+      whenever all six primitives are jointly present, which they are
+      whenever there is iteration with irreversibility — i.e. always,
+      in any A_0-substrate (which is all of reality).
+    content: |
+      Compound pattern explicit form:
+
+        Iteration:        x_{n+1} = step(x_n, landscape_n)
+        Trace:            trace_{n+1} = trace_n ⊕ register(x_{n+1})
+        Landscape update: landscape_{n+1} = landscape_n + κ·trace_{n+1}
+        Basin deepens:    depth(basin) monotone-non-decreasing in n
+        Attractor locks:  exit_probability(basin) → 0 as n → ∞
+
+      Substrate-anchor manifestations (all Class A, same structure):
+
+        Gravity (N078-080):     Mass = ∇Z_hidden basin; matter accumulates
+                                in gravitational wells, deepening them.
+        Dark matter (N329):     Accumulated ∇Z_hidden trace at de Sitter
+                                horizon — past Landauer debt that weighs
+                                because present geodesics descend it.
+        Evolution (N021):       Fitness landscape deepens basins where
+                                lineages have already converged; later
+                                organisms inherit the trace.
+        Synaptic potentiation (N020):  Repeated neural activation reduces
+                                Z along paths; basin for that response
+                                deepens — memory as trace-deepening.
+        ML training (N_MLGradientDescent):  Weights accumulate gradient
+                                trace; basin around trained configuration
+                                deepens; transfer learning starts in
+                                pre-deepened basin.
+        LLM context (N_LLMContextCoherence):  Established context tokens
+                                deepen basin of coherent continuation;
+                                long-context maintenance is basin lock.
+        Cognitive habits:       Repeated patterns deepen cognitive basins;
+                                breaking habits requires Z input to exit.
+        Cultural institutions (N333):  Institutional sclerosis is trace-
+                                deepening basin at social scale — past
+                                decisions accumulate as Z_struct ground.
+
+      What this dissolves:
+        - "Why does X tend to persist?" — past trace deepens its basin.
+        - "Why is change hard?" — accumulated trace creates retention.
+        - "Why do systems show path-dependence?" — basin depth depends
+          on which paths were taken (hysteresis).
+        - "Why is forgetting slower than learning?" (Ebbinghaus N336) —
+          basin entry deepens it; exit must climb out of trace-deepened
+          well.
+
+      Cross-context discoverability: queries about memory, learning,
+      training dynamics, institutional persistence, gravitational
+      stability, dark matter, habit formation, addiction, technical
+      debt, cultural inertia, path dependence in any system — all find
+      this anchor; traversal reveals one unified mechanism (six
+      composing invariants) manifest as the named phenomenon.
+    level: 1
+    is_placeholder: false
