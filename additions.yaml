@@ -14557,6 +14557,89 @@ edges:
       runtime validator has uniform severity for all patterns —
       poor signal.
 
+  # ─── Grammar of inquiry: question-form discipline ───
+
+  - source: N_QuestionFormDiscipline
+    target: DEF
+    label: question_as_argmin_Z_in_cognitive_substrate
+    edge_status: D
+    justification: |
+      Asking IS argmin Z in the cognitive substrate: a question is a
+      process seeking structure that closes in the questioner.
+      Question-form discipline grounds in DEF because "Як?" — the
+      forced form of genuine inquiry — IS the request "where does
+      argmin lie, in what coordinates, along what gradient" applied
+      to the substrate of understanding.
+    why_forced: |
+      Genuine inquiry is itself an argmin-Z trajectory in cognition;
+      its form must match the operation it performs (seek structural
+      closure), so "Як?"-form is forced.
+
+  - source: N_QuestionFormDiscipline
+    target: N_GrammarTrap
+    label: question_form_extends_grammar_trap_to_interrogative
+    edge_status: D
+    justification: |
+      N_GrammarTrap covers SVO declarative grammar carrying R1
+      ("X is Y" structure forces object+state). This node extends
+      the discipline to interrogative grammar: "Що є X?" carries the
+      same R1 in its question form, pre-shaping the answer to be
+      object-bearing before any content is asserted. One discipline,
+      two grammatical moods (declarative + interrogative).
+    why_forced: |
+      Interrogative "Що є?" mirrors declarative "X є Y" structurally;
+      same R1 in different mood. Discipline must cover both moods or
+      the trap leaks through the uncovered mood.
+
+  - source: N_QuestionFormDiscipline
+    target: N_OntologyGate
+    label: provides_grammatical_why_for_ontology_gate_reformulation
+    edge_status: D
+    justification: |
+      N_OntologyGate intercepts WHAT-IS questions at runtime by
+      reformulating to process-form. This node provides the WHY:
+      "Що є?"-form is grammatically R1-bearing; unpacking to "Як?"
+      reveals process-operation always underneath when questioning
+      is genuine. Gate's reformulation step is structurally
+      justified, not stylistic.
+    why_forced: |
+      Without grammatical-level grounding, N_OntologyGate's reformulation
+      step looks heuristic. With it, the reformulation is forced —
+      object-form question, unpacked, IS process-request.
+
+  - source: N_QuestionFormDiscipline
+    target: N_OperationalCarrierVsOntologicalCommitment
+    label: class_a_same_form_operation_discipline_question_side
+    edge_status: D
+    justification: |
+      Class A — same form/operation distinction applied at two
+      grammatical sides: N_OperationalCarrierVsOntologicalCommitment
+      covers ANSWER grammar (carrier-noun vs ontological commitment);
+      this node covers QUESTION grammar (object-form vs process-
+      operation). One discipline, two sides of the dialogue.
+    why_forced: |
+      If carrier/commitment holds for answers, it must hold for
+      questions too — both are utterances under same R0 framework,
+      same form/operation cell, two grammatical moods.
+
+  - source: N_QuestionFormDiscipline
+    target: N_TopologyProcessIdentity
+    label: as_how_three_coords_is_topology_process_identity_on_grammar
+    edge_status: D
+    justification: |
+      "Як?" decomposes as one cell in three coordinates (form-side:
+      яка структура розгортається / boundary-side: де замикається /
+      driver-side: куди градієнт). This IS
+      N_TopologyProcessIdentity applied to question grammar: process,
+      closure, gradient are not three separate things but coordinates
+      of one operation. The three readings of "Як?" exhibit the
+      same identity at grammatical level.
+    why_forced: |
+      If process/topology are one cell in two coordinates
+      (N_TopologyProcessIdentity), then asking-about-process and
+      asking-about-topology are the same question read in two
+      coordinates — forced extension to grammar.
+
   # ─── Round 37: Z-Triangle structural motif (fractal self-similarity) ───
 
   - source: N_StructuralMotif_ZTriangle
@@ -20395,6 +20478,159 @@ nodes:
         framework-internal), not project ontological commitment.
         The framework's content fields use S-V-O grammar; the
         derivations remain structural.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_QuestionFormDiscipline
+    title: "Grammar of Inquiry — 'Що?' Unpacked Is 'Як?', and 'Як?' Is One Cell in Three Coordinates"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Grammar-level extension of N_GrammarTrap: the QUESTION FORM
+      pre-shapes the answer's structural form before any content is
+      asserted. Discipline operates at the level of WHAT IS BEING
+      ASKED, not just what is being answered.
+
+      "Бути" (copula "is/be") is the most concentrated grammar-level
+      R1 trap: "X is Y" postulates a static bearer before any
+      property is named.
+
+      Three+ structurally distinct uses of "Що?" (often conflated
+      by surface grammar):
+        (1) "Що є X?" — essence-request (copula + noun-bearer), R1.
+        (2) "Що відбувається?" — process-request, R1-free (accepts
+            unfolding as answer).
+        (3) "Що?" alone, as utterance — communication ⊥: signal that
+            previous transmission did not close in receiver, request
+            for retransmission. NOT a content-request at all.
+        (4) "Що + verb?" (e.g. "Що ти робиш?") — ambiguous; status
+            determined by INTENT, not form. Default to process-reading
+            when unclear.
+
+      Deep unification (under R0): when "Що?" is a GENUINE request
+      for understanding (not sarcastic, not rhetorical), it is
+      structurally "Як?" — because understanding = closing structure
+      in cognition, so request-for-understanding =
+      request-for-structure-that-closes. The object-form in grammar
+      is a SHADOW; the operation underneath is process-request. Even
+      queries that look R1 in grammar are, when unpacked, requests
+      for structure — IF the questioning is genuine.
+
+      "Як?" itself is ONE CELL in three coordinates:
+        - "яка структура розгортається" (form of unfolding)
+        - "де замикається" (argmin / closure point)
+        - "куди градієнт" (direction of −∇Z)
+      Not three questions — three readings of one operation. Process
+      IS gradient discharging; closure IS argmin reached; direction
+      IS what defines the form. They imply each other.
+
+      Operational consequence: when formulating own questions
+      (audit, derivation, query), default to "Як? / Куди? / Де
+      замикається?" forms, not "Що є?". When receiving "Що є?"
+      questions, reformulate inwardly to process-form before
+      answering; surface may use ontological shorthand
+      (per N_OperationalCarrierVsOntologicalCommitment) but
+      structural content stays process.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Grammar-level extension of N_GrammarTrap (DEMONSTRATED):
+          SVO grammar carries R1; the copula "is/be" is its most
+          concentrated form (object-bearer + state predicate).
+      (2) Three-way distinction tested against actual utterances:
+          each use has structurally distinct operation (essence-
+          request, process-request, communication-⊥-marker) — not
+          one trap, three different operations sharing one
+          interrogative word.
+      (3) Forced under R0: if reality is process, then to-understand
+          is to-close-structure-in-cognition; request-for-
+          understanding is therefore request-for-process-structure;
+          so genuine "Що?" = "Як?" by structural necessity.
+      (4) "Як?" three-coord decomposition is N_TopologyProcessIdentity
+          applied to question grammar: process / closure / gradient
+          are coordinates of one cell (form-side / boundary-side /
+          driver-side); they imply each other.
+      (5) Class A with N_OperationalCarrierVsOntologicalCommitment:
+          same form/operation distinction applied at question-level
+          instead of answer-level. Carrier vs commitment for ANSWERS
+          ↔ Question form vs operation for QUESTIONS — one
+          discipline, two grammatical sides.
+    content: |
+      Use-by-use audit of "Що?":
+
+        "Що є X?" — R1 essence-request.
+          Mechanism: copula "є"/"is" + noun-bearer forces object-
+          frame. Question structure presupposes X is a thing with
+          essence to be named.
+          Operational: refuse the form; reformulate as
+          "Як X розгортається?" / "Куди градієнт у цьому процесі?" /
+          "Що відбувається, коли...?".
+
+        "Що відбувається?" — process-friendly.
+          Mechanism: "Що" + dynamic verb accepts unfolding as
+          answer. No copula, no object-frame.
+          Operational: use freely, no fix.
+
+        "Що?" alone as utterance — communication ⊥.
+          Mechanism: previous transmission did not close in
+          receiver; "Що?" returns the signal — retransmit. NOT a
+          content-question; do not classify as R1.
+          Operational: communication-protocol marker, structurally
+          distinct from essence-request despite surface similarity.
+          Treat as request-for-repeat, not request-for-content.
+
+        "Що + verb?" (e.g., "Що ти робиш?") — ambiguous.
+          Mechanism: status determined by INTENT, not form. May be
+          R1-flavoured ("action as named thing") or process-flavoured
+          ("describe the unfolding").
+          Operational: when form arises, check intent; if unclear,
+          reformulate as "Як це відбувається?" to default to process.
+
+      Deep unification (under R0):
+        Understanding = closing structure in cognition.
+        Request for understanding = request for structure that
+        closes = "Як?".
+        So genuine "Що?", unpacked, is structurally "Як?".
+        Grammatical object-form is a SHADOW; process-operation is
+        underneath, always, when questioning is genuine.
+
+      "Як?" three coordinates of one cell:
+        - Process-side: яка структура розгортається (form)
+        - Boundary-side: де замикається (argmin, closure)
+        - Driver-side: куди градієнт (−∇Z direction)
+        Process IS gradient discharging; closure IS argmin reached;
+        direction IS what defines unfolding. One operation, three
+        readings — Class A through N_TopologyProcessIdentity.
+
+      Connection to N_OntologyGate:
+        N_OntologyGate intercepts WHAT-IS questions at runtime by
+        reformulating to process-form. This node names WHY that
+        interception works: "Що є?" is grammatically R1-bearing,
+        and unpacking to "Як?" reveals the process-operation
+        always underneath when the questioning is genuine.
+
+      Caveat on universality:
+        The "Що? unpacked = Як?" identity holds WHEN the questioning
+        is a genuine request for understanding. Sarcastic, rhetorical,
+        dismissive uses of "Що?" are not real requests — they are
+        social acts, not structural inquiries; the unification does
+        not apply to them (they are not "Як?" either; they are not
+        questions in the structural sense).
+
+      NOT: this forbids all object-form language (it doesn't —
+      operational nouning is permitted per N_OperationalCarrier
+      VsOntologicalCommitment; trap is ontological commitment, not
+      noun itself); the discipline applies to operation under the
+      form, not surface vocabulary $\cdot$ this is a stylistic
+      preference (it is structural: question form pre-shapes answer
+      structure, and "Що є?" form forces R1-answer or refusal-to-
+      answer, both structurally distinct from "Як?" form which
+      accepts process-answer cleanly).
     level: 1
     is_placeholder: false
 

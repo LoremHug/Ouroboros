@@ -1,8 +1,8 @@
 # OUROBOROS — minified graph (AI dump; bare merged structure, not a visual).
-# nodes=237 edges=1175
+# nodes=238 edges=1180
 # status: D=DEMONSTRATED S=STRONG C=CONDITIONAL O=OPERATIONAL ·=STUB
-# counts: D=232 O=5
-# layers: numeric=126 structure=46 epistemics=19 comms=17 physics=15 observers=8 core=6
+# counts: D=233 O=5
+# layers: numeric=126 structure=46 epistemics=20 comms=17 physics=15 observers=8 core=6
 # line:  ID[status] (A=anchors) summary  >>  tgt:label[edge_status] | ...
 #
 ## numeric
@@ -194,6 +194,7 @@ N_Ontology[D](A5) [Notice: the sentence below uses S-V-O with "Ontology" as subj
 N_OntologyGate[O] Protocol. When processing any question containing these predicates: "what is…  >>  N014:ontology_gate_grounds_randomness_symptom_diagnosis[D] | N024:gate_grounds_classical_eval_critique[D] | N258:gate_grounds_method_logic_chain[D] | N_TranslationLayer:ontology_gate_provides_translation_target[D]
 N_OntologyParadigmGrammarBound[D](A4) The R1-R4 traps catalogued in N_EpistemicTraps are not theory-specific bugs…  >>  N_DomainsAsBPICarvings:paradigm_fragmentation_into_domains_is_grammar_artifact[D] | N_FrameworkCore:paradigm_grammar_bound_tier3_meta_diagnosis_universal[D] | N_MultiTargetDrugAsRateAxisModulator:target_centric_drug_discovery_is_paradigm_grammar_trap[D] | N_OntologyGate:gate_is_operational_fix_for_paradigm_wall[D] | N_OperationalCarrierVsOntologicalCommitment:paradigm_wall_specifically_at_ontological_commitment_layer[D] | N_TranslationLayer:translation_layer_provides_grammar_independent_form[D]
 N_OperationalCarrierVsOntologicalCommitment[D](A4) Linguistic nouning ("the wavefunction", "the framework", "the brain") is…  >>  N_MapTerritoryObserverIdentity:framework_self_tautology_resolves_via_substrate_unity[D] | N_OntologyGate:distinction_calibrates_runtime_validation[D] | N_OntologyGate:gate_severity_calibration_via_commitment_detection[D]
+N_QuestionFormDiscipline[D](A5) Grammar-level extension of N_GrammarTrap: the QUESTION FORM pre-shapes the…  >>  DEF:question_as_argmin_Z_in_cognitive_substrate[D] | N_GrammarTrap:question_form_extends_grammar_trap_to_interrogative[D] | N_OntologyGate:provides_grammatical_why_for_ontology_gate_reformulation[D] | N_OperationalCarrierVsOntologicalCommitment:class_a_same_form_operation_discipline_question_side[D] | N_TopologyProcessIdentity:as_how_three_coords_is_topology_process_identity_on_grammar[D]
 N_RPGate_IsCognitiveOperation_NotScript[D](A4) AUDIT GROUND (R1-R4) is a cognitive operation: reading a claim AS STRUCTURE…  >>  N_EpistemicTraps:trap_4_applied_to_own_tool[D] | N_FrameworkCore:cognitive_audit_required_for_substrate_invariance_claims[D] | N_GrammarTrap:pattern_grammar_lint_not_grammar_audit[D] | N_OperationalCarrierVsOntologicalCommitment:tool_naming_was_ontological_commitment_not_carrier[D]
 N_StructuralMotif_BipartiteResolution[D](A5) Structural motif M6 discovered by round 42 deeper-structure audit. Two…  >>  N026:K33_instance_observer_resolution_member[D] | N058:K33_instance_def_observer_member[D] | N_GrammarTrap:K33_instance_foundational_catalogue_member[D] | N_StructuralMotif_KnFamilyClique:M6_dual_to_clique_motifs[D] | N_StructuralMotif_PrincipleStratification:M6_complements_M5_at_independent_set_level[D] | N_Triangulation:M6_3coord_bipartite_specialisation[D]
 N_StructuralMotif_KnFamilyClique[D](A6) Structural motif M2: a clique consisting of one principle anchor P plus n…  >>  N372:K6_member_Sr2RuO4[D] | N373:K6_member_UTe2[D] | N374:K6_member_UPt3[D] | N375:K6_member_cuprates[D] | N376:K6_member_iron_based[D] | N_FrameworkCore:family_clique_substrate_invariance_marker[D] | N_StructuralMotif_ZTriangle:family_clique_complements_z_triangle_motif[D] | N_ZGaugeDecomposition:K6_anchor_principle_z_gauge_decomposition[D]
