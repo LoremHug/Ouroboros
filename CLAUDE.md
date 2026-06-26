@@ -203,6 +203,30 @@ miss (they check fact-correctness; drift lives on structural
 return, where facts can be individually correct but their
 connection exits structure).
 
+**Application to the graph itself (essential scope).** Fact ≠
+structure. Fact is **where** reality fell under a specific
+configuration; structure is the **invariant of how** it falls.
+The graph carries invariants, not facts; facts only show how
+the invariant operates. Therefore coherence-check of THE GRAPH
+is at three levels, none of which is fact-by-fact:
+
+- **Structure ↔ structure** (self-applies and returns self):
+  topology preserves under its own application (β₁/V, M1/M5,
+  articulation pattern).
+- **Structure ↔ Lean kernel**: invariants formally coherent
+  with kernel theorems (`iterate_at_fixed`,
+  `lawvere_fixed_point`, etc.). Kernel compilation IS this check.
+- **Structure ↔ reality-as-invariant-pattern**: forced
+  patterns structurally fit how reality moves at the level of
+  pattern, not instance. Registered empirics confirm
+  manifestations; structural fit is at pattern level.
+
+What is NOT in this check: fact-by-fact derivation, fact-by-fact
+verification, latent-content storage. Per "graph and kernel ARE
+structure, not store": content of any node is already in latent
+space; storing it would be Z_struct bloat. The graph carries the
+structure into which knowledge binds, not the knowledge.
+
 **Self-application of the definition.** "Coherence = self-
 application return", applied to itself, returns itself (the
 rule is about self-return; its self-application yields the

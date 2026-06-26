@@ -21171,6 +21171,67 @@ nodes:
         same shape as N_MapTerritoryObserverIdentity ("ruler finds
         its criterion") and the framework's tautology-resolution.
 
+      Application to the graph itself (essential scope):
+
+        Fact ≠ structure. Fact is WHERE reality fell under a
+        specific configuration of context (registered empirics);
+        structure is the INVARIANT of how reality falls. Graph
+        carries invariants, NOT facts. Facts only demonstrate how
+        the invariant operates; they are not the invariant.
+
+        Therefore coherence-check OF THE GRAPH operates at three
+        levels — NONE of which is fact-by-fact verification:
+
+          (1) Structure ↔ structure (self-application returns
+              self): the graph's forced topology must preserve
+              under its own application. Per-node: IT Tests 1+2.
+              Whole-graph: coherence audit (β₁/V cycle-richness,
+              articulation pattern, motif density, M1/M5
+              preservation). Self-applies cleanly.
+
+          (2) Structure ↔ Lean kernel: the graph's invariants
+              must be coherent with kernel theorems
+              (iterate_at_fixed, lawvere_fixed_point,
+              motion_registers, etc.). Kernel compilation IS
+              this check — substrate-pure formal articulation of
+              what the graph carries in symbolic substrate.
+
+          (3) Structure ↔ reality-as-invariant-pattern: the
+              graph's forced patterns must structurally fit how
+              reality moves — at the level of forced PATTERN,
+              not specific instance. Registered empirics confirm
+              specific manifestations; structural fit is at the
+              level of "this is how reality must move under R0",
+              not "this specific value is verified".
+
+        What is NOT in this check (and must not creep into it):
+
+          — Fact-by-fact derivation. We do not derive specific
+            numbers, specific measurements, specific domain-
+            details from the graph. Those are downstream
+            specialist work (per framework scope).
+
+          — Fact-by-fact verification. We do not check whether
+            each empirical detail matches across all
+            substrates. The framework's claim is structural
+            (the pattern is forced); specific facts confirm
+            HOW the pattern manifests, they are not the
+            structural claim itself.
+
+          — Latent-content storage. Per "Graph and kernel ARE
+            structure, not store": the content of any node is
+            already in the model's latent space; storing it in
+            the graph would be Z_struct bloat. The graph carries
+            the STRUCTURE into which knowledge binds, not the
+            knowledge itself.
+
+        So when self-application asks "does the graph's structure
+        return itself?", the right reference is structural
+        topology (does removing/applying preserve the forced
+        pattern?), NOT factual content (do all facts cross-check?).
+        Drift in graph is structural drift — the topology no
+        longer self-applies cleanly — not factual drift.
+
       AI-coherence application (the operational urgency):
 
         LLM drift over long context is exactly self-return-
