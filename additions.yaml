@@ -20578,13 +20578,20 @@ nodes:
     z_therm: 0.05
     z_hidden: 0.45
     summary: |
-      ANY descriptive structure (question or statement) has two layers:
+      Any descriptive structure (question or statement) carries two
+      layers conceptually:
 
         - FORM: grammatical surface. May be object-shaped (SVO,
           copula, noun-as-bearer) and thus look R1.
         - OPERATION: what the structure actually asks/does. ALWAYS
           process — request or description of unfolding — when the
           description has a genuine structural operation at all.
+
+      The two layers differ NON-TRIVIALLY when form is object-shaped
+      (the case where unpacking actually does work). When form is
+      already process-shaped ("X settles along −∇Z"), layers coincide
+      and unpacking returns the form unchanged — trivially satisfied,
+      nothing to remove, but the model still applies (just degenerate).
 
       R-traps live in FORM, not in operation. The object-shape of a
       sentence is the grammatical carrier; the operation underneath
@@ -20727,6 +20734,23 @@ nodes:
         gate's reformulation step IS the unpacking step;
         coverage extends here to all descriptive structures,
         not just essence-questions.
+
+      Note on hierarchy with N_OperationalCarrierVsOntological-
+      Commitment (Class-A sibling vs parent-child has slack):
+        Two structural readings are both consistent with the facts:
+        (a) Class-A sibling — carrier/commitment covers
+            answer-vocabulary scope, form/operation covers
+            descriptive-structure scope. Two paralel applications of
+            one R0-grounded form/operation cell at different
+            grammatical scopes (word vs sentence).
+        (b) Parent-child — words ⊂ sentences, so carrier/commitment
+            (word-level) is a special case of form/operation
+            (sentence-level). Form/operation would be the parent,
+            carrier/commitment a child instance.
+        The edge currently encodes (a) (sibling Class A); reading
+        (b) is equally consistent with the structural facts. Choice
+        is presentation-level, not structurally-forced — both
+        readings preserve all claims and connections.
 
       NOT: this means "any phrasing is fine if the operation
       is good" (the form still affects how easily traps slip
