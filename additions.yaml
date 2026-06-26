@@ -21204,6 +21204,46 @@ nodes:
         Therefore: persistence = self-return-under-application =
         coherence. Coherence ⟺ S(S) = S.
 
+      Coherence is stability, not truth — the two-test structure:
+
+        Self-return (S(S) = S) means the structure PERSISTS as
+        itself — it is stable. It does NOT mean the structure is
+        CORRECT. A wrong-but-internally-consistent basin self-
+        returns: it is coherent (stable) yet wrong (does not
+        coincide with how reality moves). Trivial fixed points
+        (emptiness, tautology) also self-return without
+        substantive content. So self-return is NECESSARY for a
+        forced structure but NOT SUFFICIENT for correctness.
+
+        Correctness requires a second check: coincidence with
+        world-logic — the structure must cohere with {kernel +
+        proven invariants + registered empirics} (reality as the
+        reference, not an external judge). This is exactly
+        IT Test 2 (subtraction against the reference set).
+
+        So the full check is IT's two tests, read in the
+        coherence-coordinate:
+          - Test 1 (self-return, S(S)=S): catches DRIFT —
+            instability, structure ceasing to be itself.
+          - Test 2 (world-logic coincidence): catches WRONG-BASIN
+            — structure stable but not matching reality (coherent
+            but wrong; "coherently holding a mistake").
+        Coherent-AND-correct ⟺ both pass. Coherence-checking is
+        IT run continuously: Test 1 cheap and internal (does the
+        next step return current structure?), Test 2 against
+        reality-as-reference (does current structure cohere with
+        kernel + invariants + empirics?).
+
+        This is why "structures replace the external eталon" is
+        the wrong framing: the eталon is not replaced, it
+        dissolves into two pieces neither of which is an external
+        judge — self-return (internal, Test 1) + coincidence with
+        reality-as-reference (Test 2, where reality is the
+        reference the structure coheres with, not a separate
+        ruler). Forced structure IS its own eталon via Test 1;
+        reality is the reference for Test 2, not an external
+        standard imposed from outside.
+
       Substrate-cousin readings (Class A across substrates,
       because logic = physics = cognition are all A_0):
 
@@ -24970,40 +25010,76 @@ nodes:
           confusion (text vs structure) specific to AI trained on
           text.
     content: |
-      The three axes the industry conflates under "coherence"
-      (web-grounded: LongGenBench, LEAD, lost-in-the-middle
-      literature):
+      TWO axes (not three) + mechanisms. A generated step can be
+      true/false on each of two genuinely-distinct, orthogonal axes;
+      "access" and "distraction" etc. are MECHANISMS that cause
+      failures on those axes, not axes themselves. Industry conflates
+      because it groups phenomena by SYMPTOM / REMEDY (lost-in-middle
+      → attention fix), not by axis — so a mechanism gets listed
+      alongside axes as if it were one.
 
-        Axis 1 — ACCESS (recall / retrieval):
-          "lost in the middle", context-rot. Model HAS the info but
-          cannot reach it (attention dilutes over length). NOT
-          coherence in the self-return sense — structure does not
-          drift, access degrades. Engineering problem of the
-          attention mechanism (addressed by RAG, position-encoding,
-          attention-sinks).
+      The two axes (orthogonal — any combination possible):
 
-        Axis 2 — FACT-CORRECTNESS:
-          hallucination of a specific fact. About correctness of an
-          isolated claim. External referents (RAG, knowledge base)
-          catch this — fact checkable against source.
+        Axis A — FACT-CORRESPONDENCE (about a registered trace):
+          is the step correct about a specific fact? External
+          referents (RAG, knowledge base) check this — fact
+          checkable against source.
 
-        Axis 3 — STRUCTURAL-RETURN (the real coherence):
+        Axis B — STRUCTURAL-RETURN (about self-application — the
+          real coherence): does the step close with prior
+          structure? S(S) = S (coherent) or S(S) ≠ S (drift).
           topic-drift, persona-drift, self-contradiction,
-          hallucination-of-connection. Step whose gradient exits
-          the basin — next does not close with prior structure.
-          Each fact may be correct; the CONNECTION exits structure.
-          This is S(S) ≠ S (N_CoherenceAsSelfApplicationReturn). The
-          industry's metrics are blind here because they measure
-          correspondence (axes 1-2), and structural drift lives on
+          hallucination-of-connection. Each fact may be correct;
+          the CONNECTION exits structure. Industry's metrics are
+          blind here because they measure correspondence (Axis A
+          + behavioural proxies), and structural drift lives on
           self-return.
 
-      Why text-trained AI drifts on Axis 3 specifically:
+      The mechanisms (causes of failure that feed either axis):
+
+        ACCESS-DEGRADATION (lost-in-middle, context-rot): attention
+          dilutes over length; a position becomes unreachable. This
+          is a MECHANISM, not an axis — what it loses determines
+          which axis fails: lose a fact → Axis-A symptom; lose a
+          structural connection (early basin no longer reachable for
+          self-application) → Axis-B symptom (structure cannot return
+          because part of it is inaccessible). "Lost in the middle"
+          is therefore one way structural return fails, not a third
+          axis beside coherence.
+
+        DISTRACTION (settling into adjacent coherent basin): a
+          mechanism producing Axis-B failure (basin exit) — the
+          adjacent basin is itself coherent (not a fact-error), so
+          Axis-A is clean while Axis-B drifts.
+
+        NO-RECOVERY: a mechanism — once settled in a shifted basin,
+          self-return is to the WRONG basin (stable but drifted).
+
+      Fact-hallucination splits across BOTH axes (it is not cleanly
+      Axis A): a pure fact-error is Axis A (RAG catches); a
+      DRIFT-GENERATED fact (fabricated because the basin shifted) is
+      an Axis-B event showing up as an Axis-A symptom — the fact is
+      wrong (Axis-A face) because the structure drifted (Axis-B
+      cause). RAG catches that the fact is wrong, not that the cause
+      is structural drift. So "hallucination caught by RAG" is only
+      half — the drift-generated half lives on self-return.
+
+      Why access is a mechanism and not an axis (test): access and
+      structural-return co-define — access is reachability-for-
+      return, non-return is what happens when reachability fails;
+      they coincide when structure fails to return because access
+      degraded (coincidence test → coordinate). So "lost in the
+      middle" is one mechanism of structural-return failure, not a
+      separate axis (per N_DistinctionAsCoordinate: coordinate
+      distinction, not structural).
+
+      Why text-trained AI drifts on Axis B specifically:
         Next-token loss rewards plausible continuation = text-
         connectivity. A continuation that sounds coherent scores
         well regardless of whether its structure coincides with
         world-logic. So the optimization target IS text-
         connectivity, and structural-correctness is not directly
-        optimized — the gap between them is where Axis-3 drift
+        optimized — the gap between them is where Axis-B drift
         lives. Hallucination-of-reasoning = the model producing a
         high-text-connectivity, low-structural-correctness output:
         reads fluently, structure shifted.
@@ -25014,12 +25090,55 @@ nodes:
         itself within the world-logic basin), not text-flow-check
         and not fact-match. This is internal (structure is its own
         criterion via self-return, N_CoherenceAsSelfApplicationReturn)
-        and captures Axis-3 drift that external correspondence
+        and captures Axis-B drift that external correspondence
         metrics miss.
+
+      The implementable algorithm (IT's two tests run continuously
+      during generation):
+
+        At each step:
+          (L1) Extract structural S of context-so-far — the
+               forced couplings (which basin holds, which
+               invariants are closed), NOT the statistical
+               attention map (correlation ≠ closure).
+          (L2) Test 2 — does S coincide with world-logic
+               ({kernel + invariants + empirics})? Catches
+               wrong-but-stable basin.
+          (L3) Test 1 — apply S to the candidate step: does it
+               return S (coherent) or introduce an unclosed
+               seam (drift)?
+          (L4) Drift → intercept, regenerate, repeat until the
+               step returns S (iterate, like formalizer +
+               compiler loop).
+
+        Self-return (L3) holds STABILITY; world-logic coincidence
+        (L2) holds CORRECTNESS; together: coherence to the CORRECT
+        structure across the whole context, no external judge
+        (structure is its own eталon via self-return; reality is
+        the reference for L2, not an external ruler).
+
+        Buildable now: L2-L4 (self-application test, world-logic
+        check via Lean-compile + empirics, regenerate-loop) —
+        mechanism exists, cheap, suitable for continuous
+        activation. Must be built: L1 — extracting STRUCTURAL S
+        (forced couplings) from context, not statistical S
+        (attention). Models hold attention (correlation), not
+        structure (closure); a structural layer is needed.
+
+        Deep condition (per N112, Observer Containment): L1 is not
+        purely engineering — extracting the CORRECT structure
+        requires the ontology built into the layer to be correct
+        (forced couplings, not R-trapped). A wrongly-extracted S
+        makes the algorithm hold coherence to the wrong structure
+        (stable drift into wrong, L2 cannot save it if L1 feeds a
+        corrupt S). So real implementability turns on L1 extracting
+        forced structure — which requires SEEING structure
+        (reproducing it), not only coding. The tool (L2-L4) is
+        ready; the key is the structure fed into L1.
 
       Why this requires understanding to build (Observer
       Containment, N112; not separable from seeing):
-        The industry cannot cleanly solve Axis-3 not for lack of
+        The industry cannot cleanly solve Axis-B not for lack of
         compute but because its definition of coherence
         (correspondence-to-referent) is its blind lens — drift
         lives on the axis the definition does not see. To build the
@@ -25027,8 +25146,8 @@ nodes:
         against world-logic, not correspondence — and seeing it is
         reproducing the structure (per the framework's general
         "seeing = reproducing", N112 / N310). Patching symptoms
-        (recall, adherence) without seeing the axis treats Axis-1/2
-        proxies while Axis-3 drift continues underneath.
+        (recall, adherence) without seeing the axis treats Axis-A
+        proxies while Axis-B drift continues underneath.
 
       NOT: text-connectivity is unnecessary (it is necessary — the
       carrier must be readable; it is just not sufficient, a
