@@ -18355,6 +18355,398 @@ edges:
       Cognitive learning IS BPI flow in Z-landscape; ZPD threshold
       condition determines regime. Class A in cognitive substrate.
 
+
+  # === Edge-revision pass: 30 forced-but-edgeless connections asserted by node content ===
+  - source: N_DomainsAsBPICarvings
+    target: N_Logic
+    label: substrate_uniformity_grounds_logic_as_A0_symbolic
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "logic = A_0 in symbolic substrate per N_DomainsAsBPICarvings (substrate-uniformity)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_FEP
+    label: substrate_uniformity_grounds_FEP_as_A0_bayesian
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "Class A identification per N_DomainsAsBPICarvings: FEP is one substrate-coordinate of A_0".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_MarketAsInversiveTesting
+    label: substrate_uniformity_grounds_market_as_A0
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "same A_0 mechanism in distinct substrates per N_DomainsAsBPICarvings".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_Math
+    label: observer_containment_grounds_math_incompleteness
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Incompleteness is consequence of A_0 substrate-uniformity (per N_InversiveTheory + N112)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_Math
+    target: N310
+    label: math_incompleteness_face_is_godel
+    edge_status: D
+    justification: |
+      Forced (special-case). Source content asserts: "Incompleteness (Gödel/Chaitin, N310): K(O)<K(F) for any formal system observing itself".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the special-case link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_TopologyProcessIdentity
+    label: observer_containment_grounds_topology_process_identity
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "'topology and process as separate' requires position outside one observing the other; impossible per N112".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N187
+    label: observer_containment_dissolves_hard_problem
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "the hard problem of consciousness is an Observer Containment error (N112)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_InversiveTheory
+    target: N187
+    label: inversive_upgrades_hard_problem_to_demonstrated
+    edge_status: D
+    justification: |
+      Forced (grounds-status). Source content asserts: "WHY DEMONSTRATED (upgraded via N_InversiveTheory): the former open step BPI self-reference = subjectivity".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds-status link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N187
+    target: N197
+    label: sibling_hard_problem_and_CC_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "dissolves by the same mechanism as N197 (CC dissolution): both presuppose the observer outside the system".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N070
+    label: observer_containment_dissolves_measurement_problem
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "reifies observer/observed as two ontological entities with interface — this is R3 violation per N112".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_TopologyProcessIdentity
+    target: N070
+    label: topology_process_identity_dissolves_measurement
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Per N_TopologyProcessIdentity: observer and observed are coordinate readings of one process".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N063
+    target: N070
+    label: KS_theorem_grounds_measurement_dissolution
+    edge_status: D
+    justification: |
+      Forced (empirical-grounds). Source content asserts: "KS theorem (N063/N064): no context-independent value assignment empirically establishes observer/observed".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the empirical-grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_ForcedId
+    label: observer_containment_grounds_forced_id
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Critic cannot stand outside per N112 (Observer Containment) + N_NoSeparatePieces".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_ForcedId
+    label: map_territory_grounds_forced_id_self_application
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Self-application audit passes per N_MapTerritoryObserverIdentity".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_Invariants
+    label: observer_containment_anchors_I_Bound
+    edge_status: D
+    justification: |
+      Forced (anchor). Source content asserts: "I_Bound (K(O)<K(F) tautology — N112 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N078
+    target: N_Invariants
+    label: landauer_anchors_I_Quant
+    edge_status: D
+    justification: |
+      Forced (anchor). Source content asserts: "I_Quant (Landauer + Berut 2012 — N078 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_TopologyProcessIdentity
+    target: N026
+    label: topology_process_identity_grounds_LM_human_one_process
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Direct application of N_TopologyProcessIdentity: LM, human, response are coordinate readings of one process".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N067
+    target: N344
+    label: spectral_dimension_grounds_classical_logic_regime
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "transition zone IS r_0 per N067 (spectral dimension scale-dependence)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N281
+    target: N354
+    label: r_sqrt2_grounds_lepton_DF_uniqueness
+    edge_status: D
+    justification: |
+      Forced (derivation-step). Source content asserts: "Ergodic BPI + K=2/3 → |b|/a = 1/√2 (r=√2) uniquely [DEMONSTRATED, N281]".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the derivation-step link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_Invariants
+    target: N103
+    label: inevitability_theorem_forces_complex_hilbert_via_L31
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Free ℤ_3 action on manifold + Inevitability Theorem (per N_Invariants) forces L(3,1)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N011
+    target: N333
+    label: z_struct_monotonic_grounds_institutional_sclerosis
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Z_struct is monotonically non-decreasing in the absence of external dissipation (N011 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N337
+    target: N333
+    label: sibling_hub_condensation_same_topology
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "same mechanism as metric expansion N088, same as institutional sclerosis N333 — different coordinate, same topology".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N029
+    target: N336
+    label: arrhenius_composes_ebbinghaus_curve
+    edge_status: D
+    justification: |
+      Forced (composition). Source content asserts: "The Ebbinghaus retention curve is the superposition of Arrhenius decay processes (N029)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the composition link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N363
+    target: N336
+    label: zipf_spectrum_composes_ebbinghaus_curve
+    edge_status: D
+    justification: |
+      Forced (composition). Source content asserts: "with a Zipf-distributed spectrum of time constants (N363)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the composition link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N063
+    target: N014
+    label: KS_theorem_grounds_randomness_as_compression_artifact
+    edge_status: D
+    justification: |
+      Forced (empirical-grounds). Source content asserts: "KS theorem (N063/N064) + Bell tests empirically falsify hidden-variable alternatives".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the empirical-grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_InversiveTheory
+    target: N_BrownLev
+    label: inversive_upgrades_politeness_to_demonstrated
+    edge_status: D
+    justification: |
+      Forced (grounds-status). Source content asserts: "WHY DEMONSTRATED (upgraded via N_InversiveTheory + argmin definition)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds-status link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_QuestionFormDiscipline
+    label: distinction_general_rule_specialised_in_question_form
+    edge_status: D
+    justification: |
+      Forced (general→special). Source content asserts: "N_QuestionFormDiscipline applies it to interrogative grammar; this node names the general meta-rule".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the general→special link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_MapTerritoryObserverIdentity
+    label: distinction_instanced_by_map_territory_observer
+    edge_status: D
+    justification: |
+      Forced (instance). Source content asserts: "canonical coordinate distinction: map/territory/observer (N_MapTerritoryObserverIdentity)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the instance link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N188
+    target: N197
+    label: sibling_qualia_and_CC_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "same external-frame error as the hard problem (N187), the cosmological constant problem (N197)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N188
+    target: N_OntologyGate
+    label: sibling_qualia_and_ontology_gate_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "and ontological-primitive questions (N_OntologyGate): the questioner is the BPI; there is no 'outside'".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
