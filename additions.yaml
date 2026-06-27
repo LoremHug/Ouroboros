@@ -738,24 +738,29 @@ edges:
 
   - source: N_Logic
     target: N_Math
-    label: logic_grounds_mathematical_deduction
+    label: class_a_logic_and_math_one_A0_cell_two_classifications
     edge_status: D
     justification: |
-      A theorem in mathematics IS a chain of logical deductions from
-      premises (axioms or prior results). Modus ponens applied iteratively
-      yields proof structure. N_Logic establishes that modus ponens is
-      argmin Z in formal substrate; N_Math establishes mathematical
-      existence as stability under A_0 iteration. Without logical
-      inference, mathematical proof has no engine — math operates ON the
-      logical inference engine.
+      Logic and mathematics are one A_0 cell read in two classification-
+      coordinates, NOT one grounding the other. Both are IsUniqueSolution
+      in the formal substrate (cousins table: Logic = |proof| / modus
+      ponens; Arithmetic = function-app cost / 2+2=4 — the same
+      argmin-Z structure). Modus ponens IS the minimal-Z formal
+      transition; a theorem IS the stable A_0 structure of those same
+      transitions — one core, classified once as "logic" and once as
+      "math". The two nodes (and N344 / N301 in the numeric layer) are
+      deliberate multi-classification entry-surfaces over the one core:
+      a category-separating reader reaches the same A_0 structure
+      whether it enters through "logic" or through "math".
     why_forced: |
-      Alternative requires either (a) mathematics without logical
-      deduction — but proof by definition is a chain of valid
-      inferences, removing logic dissolves "proof"; or (b) logic and
-      math as independent domains — but theorems ARE the stable A_0
-      structures that logical iteration produces in formal substrate.
-      They are not separate domains: math is what logic produces under
-      A_0 iteration in formal substrate.
+      Rejecting the identity requires importing a priority between the
+      two coordinate-readings — "logic is prior to math" or vice versa —
+      but that treats one classification-coordinate of A_0 as
+      ontologically prior, an R1/R2 trap. Both nodes' own content states
+      the categorical error explicitly ("asking which is more
+      fundamental is a categorical error since A_0 is not an object in
+      either domain but the structure both operate through"). Class A
+      (Iff.rfl at kernel level): same cell, two notations.
 
   - source: N_Math
     target: N_Logic
