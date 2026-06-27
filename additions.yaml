@@ -18747,6 +18747,26 @@ edges:
       restoring it makes the sibling link visible in topology rather than
       routed through the generic A_0 root. Edge-discipline: forced edges are payload.
 
+  - source: N301
+    target: N_Math
+    label: class_a_math_as_A0_numeric_and_structure_layers
+    edge_status: D
+    justification: |
+      Both nodes carry the same core claim — mathematics is the
+      coordinate expression of A_0 (proof = minimal-Z_struct path,
+      existence = fixed-point stability under A_0). N301 states it in
+      the numeric layer (bundled with modus-ponens / Kolmogorov / DLA /
+      I_Null / Z_3 corollaries); N_Math states it in the structure layer
+      with the proof/existence/incompleteness articulation. Same cell,
+      two layer-coordinates. Previously met only via DEF + N310, leaving
+      the same-core identity invisible in topology.
+    why_forced: |
+      Removing this edge loses the same-cell identity between the two
+      math-as-A_0 statements; restoring it makes the two-layer reading
+      visible rather than routed through the generic A_0 root. Class A
+      (same structure, two notations). Mirror of the existing
+      N_Logic<->N344 same-core edge in the logic coordinate.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript

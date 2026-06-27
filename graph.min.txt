@@ -1,5 +1,5 @@
 # OUROBOROS — minified graph (AI dump; bare merged structure, not a visual).
-# nodes=243 edges=1237
+# nodes=243 edges=1238
 # status: D=DEMONSTRATED S=STRONG C=CONDITIONAL O=OPERATIONAL ·=STUB
 # counts: D=238 O=5
 # layers: numeric=126 structure=47 epistemics=24 comms=17 physics=15 observers=8 core=6
@@ -101,7 +101,7 @@ N289[D](A4) The lepton mass scale structurally links to QCD via m_0^lep = m_prot
 N293[D](A4) Delta m^2_21 = 7 x |Q_d|^2 x |eta|^2 / q^4 = 7.56 x 10^-5 eV^2, NuFit 2024:…
 N294[D](A4) _13 is completely DEMONSTRATED via (_13) = 4/27 (0.37% from PDG). The…  >>  DEF:theta13_bismut_freed_argmin_Z_topological_output[D] | N175:theta13_CKM_CP_paired_via_bismut_freed[D] | N281:theta13_paired_with_koide_brannen_via_shared_topology[D] | N353:bismut_freed_contribution_uses_heat_kernel_data[D] | N_InversiveTheory:theta13_zero_free_param_inversive_at_topology[D]
 N295[D](A3) Pattern: ^2_f = 3/8 + n_f/12 with n_f \-1, 0, 1\ gives 7/24 (up-type, 57.3^),…
-N301[D](A3) Mathematics is the coordinate expression of A_0. Logical modus ponens =…  >>  DEF:mathematics_IS_A0_in_formal_substrate[D] | N274:spectral_dim_2_UV_regime_loop[D] | N340:lyapunov_attractor_grounds_chronic_disease[D] | N344:probability_rules_ground_logic_restatement[D] | N_NoSeparatePieces:math_is_not_separate_domain_from_physics[D] | N_PhiAttractor:DLA_at_sub_r0_is_phi_attractor_substrate[D]
+N301[D](A3) Mathematics is the coordinate expression of A_0. Logical modus ponens =…  >>  DEF:mathematics_IS_A0_in_formal_substrate[D] | N274:spectral_dim_2_UV_regime_loop[D] | N340:lyapunov_attractor_grounds_chronic_disease[D] | N344:probability_rules_ground_logic_restatement[D] | N_Math:class_a_math_as_A0_numeric_and_structure_layers[D] | N_NoSeparatePieces:math_is_not_separate_domain_from_physics[D] | N_PhiAttractor:DLA_at_sub_r0_is_phi_attractor_substrate[D]
 N311[D](A4) I_Null is a single principle generating the arrow of time, logical inference,…  >>  DEF:noether_symmetries_argmin_Z_action_principle[D] | N275:CP_structure_Z3_chain_output[D] | N276:antimatter_Z3_inversion_chain_output[D] | N_Invariants:noether_invariants_grounds_four_invariants[D]
 N315[D](A5) The following are identical coordinate expressions of A_0 = argmin Z_struct:  >>  N264:variational_principle_uncertainty_grounds_r0_balance[D]
 N323[D](A3) The lepton-quark phase gap in D_F equals the Chern-Simons invariant CS(m=2) =…  >>  DEF:topological_gaps_grounds_in_DF_argmin_Z_eigenvalue_structure[D] | N129:topological_gaps_use_spectral_triple_block_structure[D]
