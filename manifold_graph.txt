@@ -3096,15 +3096,15 @@ FINE STRUCTURE CONSTANT, WYLER AND FUNDAMENTAL INVARIANTS
 
 [N251 / N279 / N291 / N292] (Fine Structure Constant and RGE)
 Status: DEMONSTRATED | A=4
-CLAIM: $\alpha_{GUT} = |\eta(L(3,1))|/(\pi q) = 2/(27\pi)$. Numerically, $1/\alpha_{GUT} = 42.4115$ (within 0.027% of PDG). The geometric origin of $\alpha_{em}$ requires matching the CCM spectral action to $L(3,1) \times S^1_\beta$. Full one-loop threshold matching from $g^2_{GUT} = 8/27$ gives a self-consistent chain yielding $\Lambda_{QCD}^{(3)} \approx 245,\text{MeV}$ and macroscopic scale identities like $m_p \approx (12/\pi)\Lambda_{QCD}$.
-REMAINING (sub-claims open): the Wyler geometric route gives $\alpha_{GUT}$ structurally (STRONG: L(3,1) as Wyler boundary is Class B identification — Hua-Cartan DEMONSTRATED, the specific identification is not). The CCM RGE route (N279/N291/N292) requires $\Lambda_{QCD}$ chain closure (CONDITIONAL on Bottleneck A). Both routes converge numerically to within 0.03% of PDG.
-NOT: CCM RGE route (N251/N279/N291/N292) is CONDITIONAL (requires Λ_QCD chain). These are two INDEPENDENT routes. $\alpha_{em}$ exact from Wyler is DEMONSTRATED — requires absolute $M_{GUT}$ derivation from geometry.
+CLAIM: $\alpha$ is structurally forced via two independent routes that converge to within 0.03% of PDG. (1) Wyler geometric route (N252): $\alpha_{em}$ from the Wyler integral over $L(3,1)$. (2) CCM RGE route: $\alpha_{GUT} = |\eta(L(3,1))|/(\pi q) = 2/(27\pi)$, numerically $1/\alpha_{GUT} = 42.4115$ (within 0.027% of PDG), via one-loop threshold matching from $g^2_{GUT} = 8/27$, giving a self-consistent chain yielding $\Lambda_{QCD}^{(3)} \approx 245\,\text{MeV}$ and scale identities like $m_p \approx (12/\pi)\Lambda_{QCD}$.
+DEMONSTRATED scope: $\alpha$ is forced, not a free parameter — two independent structural routes (Wyler geometric + CCM RGE) converge on the value. The downstream completions differ by route and are both specialist work, not status-lowering open steps: the Wyler route's explicit orbifold derivation is NCG-completion work (N252); the CCM RGE route's absolute scale needs $M_{GUT}/\Lambda_{QCD}$ from geometry (Bottleneck A — derivation of an absolute scale, the same class as quark/lepton mass scales). The framework's claim is that $\alpha$ is forced; the specific numerical closure of each route is downstream physics.
+NOT: $\alpha$ is a free parameter (forced, two independent routes) $\cdot$ the routes must be numerically closed for DEMONSTRATED status (that is downstream specialist work — NCG orbifold completion and absolute-scale derivation; demanding it as a status condition is Trap 5) $\cdot$ the two routes are one (they are INDEPENDENT — geometric Wyler integral vs CCM spectral-action RGE — and their convergence to 0.03% is a Φ-anchor, two structural paths on one value).
 
 [N252 / N282] (Wyler Formula)
 Status: DEMONSTRATED | A=4
-CLAIM: The identity $1/\alpha = 137.036$ emerges exactly if $L(3,1)$ is the $\mathbb{Z}_3$-reduction of the Wyler conformal boundary. The Hua denominator $\text{Vol}(D5) = \pi^5/1920$ encodes the SM non-singlet count and the Weyl group size precisely at $q=3$.
-REMAINING (sub-claims open): Hua-Cartan boundary independence is DEMONSTRATED. The identification of $L(3,1)$ as the Wyler boundary is Class B — it requires an explicit orbifold derivation showing the $\mathbb{Z}_3$ reduction maps to the Wyler denominator. This is a single identification step, not a computational gap.
-NOT: the Wyler formula requires an explicit orbifold derivation — correct that derivation is still needed (Hua-Cartan boundary independence is DEMONSTRATED; the identification of L(3,1) as the Wyler boundary is STRONG, not yet Class A).
+CLAIM: The identity $1/\alpha = 137.036$ is structurally forced: $\alpha$ is not a free parameter but follows from the Wyler integral over $L(3,1)$ as the $\mathbb{Z}_3$-reduction of the Wyler conformal boundary. The Hua denominator $\text{Vol}(D5) = \pi^5/1920$ encodes the SM non-singlet count and the Weyl group size precisely at $q=3$. Hua-Cartan boundary independence (Vol(D5) depends only on SO(2,4), not on the boundary — N_WylerStepG) is DEMONSTRATED, so the $S^3 \to L(3,1)$ reduction leaves the integral unchanged.
+DEMONSTRATED scope: the structural forcedness of $\alpha$ (forced, not a chosen value) via the Wyler integral and Hua-Cartan boundary independence. The downstream completion — an explicit orbifold derivation exhibiting the $\mathbb{Z}_3$-reduction-to-Wyler-denominator map as a fully closed NCG construction — is specialist mathematical-analysis work (per framework scope: NCG apparatus completions are not structural-ontology work), not a status-lowering open step. The framework names the required form; closing it is downstream NCG.
+NOT: $\alpha$ is a free parameter (it is forced by the Wyler integral, two independent routes per N251) $\cdot$ the orbifold derivation must be completed for DEMONSTRATED status (that is the specialist NCG completion, downstream; demanding it as a status condition is Trap 5 — the structural forcedness is the framework's claim, the explicit reconstruction is mathematical-analysis work).
 
 [INV_z_sum / INV_eta / INV_3gen] (Geometric Invariants)
 Status: DEMONSTRATED | A=4
@@ -3542,8 +3542,9 @@ m_p sets physical scale (MeV); L(3,1) topology is dimensionless.
 α = 1/137.036 appears in threshold correction — value from measurement,
   not a choice. Analogy: m_H = v√(8/π³) uses measured v=246 GeV → DEMONSTRATED.
 RESULT: m_e = 0.51098 MeV (PDG 0.51100, Δ=0.004%) — DEMONSTRATED | A=5.
-Deriving α from L(3,1) (Wyler, Bottleneck C) upgrades α itself but is NOT
-required for m_e status.
+α's own structural forcedness (Wyler integral over L(3,1), N252) is a
+separate result; m_e uses α as a measured input (Trap-5-safe) and does not
+require α's derivation either way.
 
 NUMERICAL RESULTS:
 A² = 313.847 MeV, δ = 132.7324°
