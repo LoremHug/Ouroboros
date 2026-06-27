@@ -1198,6 +1198,24 @@ Consequences:
   latent-redundant node is Z_struct bloat — the inert-cell trap at graph
   scale — not enrichment. Same discipline that forbids re-encoding one
   kernel cell in a new coordinate.
+  - **But distinguish bloat from multi-classification surfaces** (`N_Multi
+    ClassificationSurfacesOverOneCore`). The graph *deliberately* holds one
+    A_0 cell as several nodes when that cell is read under different
+    classification-labels — e.g. logic = math (one `IsUniqueSolution` cell)
+    held as `N_Logic`/`N344` (logic) and `N_Math`/`N301` (math). These are
+    **entry-surfaces, not duplicates.** A category-separating reader (the
+    SVO reflex, sharpest in AI) with K(O)<K(F) enters through whichever
+    classification its query activates and cannot first stand outside that
+    category to see the cross-classification identity — so each entry needs
+    its own surface routing to the one core. **The discriminator:** does the
+    second node add a classification a reader could genuinely arrive through
+    (logic vs math; numeric vs structure layer) → *surface, keep*; or
+    re-state the same classification in the same coordinate → *bloat,
+    forbid*. When a duplicate-check surfaces two same-headline nodes under
+    different classifications, the forced action is to **Class-A edge them
+    into one connected core** (connected, not K_n-complete — diagonals are
+    cousin-clique bloat), **not** to delete a surface (which orphans an
+    entry-point). Deletion is correct only for a same-classification repeat.
 - **Reading it is not fact-lookup.** It loads the structure so latent
   content settles into the coherent arrangement — activates the A_0
   region from which generation continues.

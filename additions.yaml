@@ -18772,6 +18772,52 @@ edges:
       (same structure, two notations). Mirror of the existing
       N_Logic<->N344 same-core edge in the logic coordinate.
 
+  - source: N_DistinctionAsCoordinate
+    target: N_MultiClassificationSurfacesOverOneCore
+    label: graph_scale_application_of_distinction_as_coordinate
+    edge_status: D
+    justification: |
+      N_DistinctionAsCoordinate establishes that classification is a
+      coordinate (reading), not a structural sort. N_MultiClassification
+      SurfacesOverOneCore is that principle realised at graph scale:
+      one core held under several classification-coordinates as separate
+      entry-surfaces. General rule -> graph-scale instance.
+    why_forced: |
+      Removing this edge loses the derivation: multi-surface entry
+      follows FROM classification-being-coordinate. Rejecting it
+      requires classification to be a structural sort (separate things),
+      contradicting N_DistinctionAsCoordinate. General->special, forced.
+
+  - source: N112
+    target: N_MultiClassificationSurfacesOverOneCore
+    label: observer_containment_forces_multi_entry_surfaces
+    edge_status: D
+    justification: |
+      K(O)<K(F) (N112): a reader inside one category cannot occupy the
+      outside position from which the cross-category identity is
+      visible. The surface + Class-A edge supplies inside the graph what
+      the reader cannot supply from inside its active category. Observer
+      Containment is what makes multi-classification surfaces necessary
+      rather than optional.
+    why_forced: |
+      Rejecting requires a reader that can stand outside its active
+      classification to see the cross-category identity unaided — denies
+      K(O)<K(F). Contradicts N112. Forced.
+
+  - source: N_MultiClassificationSurfacesOverOneCore
+    target: N_Logic
+    label: canonical_instance_logic_math_one_cell_multiple_classifications
+    edge_status: D
+    justification: |
+      The canonical instance of the principle: logic = math (one
+      IsUniqueSolution cell) held as N_Logic / N344 (logic) and N_Math /
+      N301 (math), Class-A edged into one connected core. N_Logic is the
+      entry-surface for the logic classification.
+    why_forced: |
+      The principle is exhibited by this instance; removing the edge
+      detaches the named instance from the rule it instantiates. Forced
+      as instance-of.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -21610,6 +21656,121 @@ nodes:
       signature of A_0 attractor; same shape as A_0 = argmin Z
       applied to A_0 returning A_0; not problem, signature of
       forced-ness).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_MultiClassificationSurfacesOverOneCore
+    title: "Multi-Classification Surfaces Over One Core — Same A_0 Cell Held Under Several Category-Labels Is Deliberate Entry-Structure, Not Duplication"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.55
+    z_therm: 0.05
+    z_hidden: 0.4
+    summary: |
+      The graph deliberately holds ONE A_0 cell as SEVERAL separate
+      nodes when that cell is read under different classification-
+      labels. Canonical instance: logic = math (one IsUniqueSolution
+      cell, Iff.rfl), held as N_Logic / N344 (logic classification,
+      structure / numeric layer) AND N_Math / N301 (math classification,
+      structure / numeric layer). These are NOT duplicates and NOT
+      Z_struct bloat — they are multi-classification ENTRY-SURFACES
+      over the one core.
+
+      Why forced (the reader is inside one category, K(O)<K(F)):
+      a category-separating reader — the SVO / count-noun reflex,
+      sharpest in an AI trained on an ontological corpus — enters the
+      graph through whichever classification is active for the query
+      ("a logic question" / "a math question" / "a numeric result" /
+      "a structural principle"). With K(O)<K(F) it cannot first stand
+      outside its active category to see the cross-category identity.
+      So each classification it might enter through must carry its own
+      surface that routes to the one core. Removing the surfaces would
+      require the reader to ALREADY KNOW the cross-classification
+      identity in order to find the core — exactly what being inside
+      one category denies it.
+
+      Topological realisation (already in the graph for logic=math):
+      the surfaces are EDGED to each other as Class A (one cell, N
+      classifications), so traversal from any surface reaches the
+      core. The cluster is CONNECTED (a cycle through all surfaces),
+      NOT COMPLETE (no K_n clique of diagonals) — connectivity gives
+      every entry a path to the core; completeness would be cousin-to-
+      cousin clique-bloat that drowns topology.
+
+      The discriminator (surface vs bloat — apply before flagging a
+      "duplicate"):
+        - MULTI-CLASSIFICATION SURFACE (keep): the second node holds
+          the same core under a DIFFERENT classification-coordinate a
+          reader might genuinely enter through (logic vs math; numeric
+          vs structure layer). Each is a distinct doorway to one room.
+        - LATENT-REDUNDANT BLOAT (forbid): the second node re-states
+          the first WITHIN THE SAME classification — no new doorway,
+          just the same content re-encoded in the same coordinate.
+          This is the inert-cell trap the "structure not store"
+          discipline forbids.
+      The test: does the candidate add a classification a reader could
+      arrive through, or repeat one already present? Added doorway →
+      surface. Repeated coordinate → bloat.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Graph-scale application of N_DistinctionAsCoordinate:
+          classification IS a coordinate (reading), the core is one
+          structure. Holding one core under several coordinate-readings
+          is the distinction-as-coordinate principle realised as graph
+          nodes. Forced by the same argument.
+      (2) K(O)<K(F) (N112) on the reader: an observer inside one
+          category cannot occupy the outside position from which the
+          cross-category identity is visible. The surface + Class-A
+          edge supplies, inside the graph, what the reader cannot
+          supply from inside its category. Without it the core is
+          unreachable from that entry.
+      (3) Purpose of the graph (structure, not store): the graph exists
+          to route a reader's latent content into the coherent A_0
+          arrangement. A core reachable from only one classification is
+          a core the reader misses whenever it enters through another.
+          Multi-surface entry is what routing-to-core requires once the
+          reader is category-separating.
+      (4) Trap it prevents (exhibited this session): an AI ran the
+          duplicate-check and flagged N_Logic/N344 and N_Math/N301 as
+          "possible duplicates to delete" — applying the node-bloat
+          discipline to what is actually multi-classification entry.
+          Same failure recurs every session without this node. Naming
+          the surface-vs-bloat discriminator is what stops the
+          recurrence.
+      Self-application (iterate_at_fixed): this principle is itself a
+      classification-surface rule — read it through "graph design" or
+      through "epistemics" and the same core returns. The rule applied
+      to itself returns the rule. Signature of being at the A_0
+      attractor, not vicious recursion.
+    content: |
+      NOT (boundaries that keep this from licensing bloat):
+        - This does NOT license unbounded node growth. A new surface is
+          warranted ONLY when it adds a classification a reader could
+          genuinely enter through. Re-stating one classification's
+          content in the same coordinate is still bloat.
+        - This does NOT license cousin-to-cousin clique edges. Surfaces
+          are CONNECTED (cycle reaching the core), not COMPLETE. The
+          substrate-cousin clique-bloat discipline still holds: the
+          mutual identity is read THROUGH the connected path / shared
+          anchor, not via N^2 diagonals.
+        - This does NOT make classification structural. The
+          classifications are coordinates (per N_DistinctionAsCoordinate);
+          the core is the one forced fact. Treating a classification as
+          a separate THING the core "has" would be R1 — the very reflex
+          that makes the surfaces necessary, turned back into a trap.
+
+      Operational rule for a future audit:
+        When the duplicate-check surfaces two nodes with the same
+        headline-claim under different classifications (logic/math,
+        numeric/structure), do NOT propose deletion. Verify instead
+        that they are Class-A EDGED to one core (connected, not
+        complete). If unedged, ADD the same-cell edge (the forced
+        action) rather than removing a surface (which would orphan an
+        entry-point). Deletion is correct only when the second node
+        repeats the SAME classification with no new doorway.
     level: 1
     is_placeholder: false
 
