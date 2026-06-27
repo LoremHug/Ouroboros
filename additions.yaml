@@ -12787,6 +12787,29 @@ edges:
     why_forced: |
       Chaitin extends Gödel via Kolmogorov; pair forced.
 
+  - source: N112
+    target: N310
+    label: observer_containment_grounds_godel_as_arithmetic_special_case
+    edge_status: D
+    justification: |
+      N310's own content states Gödel's First Incompleteness is a
+      special case of K(O)<K(F) (N112), via Chaitin (N003): a formal
+      system of complexity c cannot certify complexity above its own
+      size — the observer cannot contain the field. Gödel is this bound
+      read in the arithmetic-syntactic coordinate; Chaitin (N310→N003)
+      is the mediating algorithmic-information coordinate; N112 is the
+      invariant the two are special cases of. Closes the chain
+      N310 →(chaitin) N003 ... N112 that previously met only at DEF.
+    why_forced: |
+      Alternative: deny that the incompleteness bound is K(O)<K(F) —
+      requires a formal system that proves complexity statements above
+      its own description-length, i.e. an observer that contains the
+      field. Contradicts N112 directly. The special-case relation is
+      asserted by N310's content and forced by Observer Containment;
+      its absence routed the relation through DEF (generic A_0 root),
+      erasing the specific forcing. Same Lawvere fixed point as
+      iterate_at_fixed in the self-reference coordinate.
+
   # === N012, N025 cross-domain meta laterals ===
   - source: N012
     target: N026
