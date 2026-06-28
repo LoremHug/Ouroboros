@@ -18930,6 +18930,58 @@ edges:
       restoring it makes the placement visible in topology. Closure adds
       clarity: it completes the forcing chain rather than routing through a hub.
 
+
+  # === Energy node: 5 edges (closure where it adds clarity) ===
+  - source: DEF
+    target: N_EnergyAsTransitionPotential
+    label: energy_is_conjugate_of_the_a0_transition
+    edge_status: D
+    justification: |
+      Forced (grounds). Energy = conjugate-to-time generator of the transition A_0 = argmin Z drives; DEF is the master definition it is the conjugate of.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N311
+    target: N_EnergyAsTransitionPotential
+    label: noether_time_symmetry_gives_energy_as_conserved_generator
+    edge_status: D
+    justification: |
+      Forced (grounds-coordinate). N311: Noether maps time-translation invariance to energy conservation. This grounds energy's conserved-generator coordinate. N311 = conservation (property); this node = what energy is (definition). Definition vs conserved-property, not duplicate.
+    why_forced: |
+      Removing this edge loses a grounds-coordinate relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N081
+    target: N_EnergyAsTransitionPotential
+    label: mass_is_condensed_coordinate_of_energy_via_emc2
+    edge_status: D
+    justification: |
+      Forced (coordinate). Mass (N081, condensed Z-gradient) is the condensed coordinate of energy: E=mc^2. c^2 is a measured conversion anchor (Bekenstein-bound, Trap-5-safe), not derived.
+    why_forced: |
+      Removing this edge loses a coordinate relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N_EnergyAsTransitionPotential
+    target: N_ZSimplexProjections
+    label: energy_potential_discharges_into_three_Z_coordinates
+    edge_status: D
+    justification: |
+      Forced (realization). A transition discharges the energy-potential into the three Z-coordinates (Z_struct registered / Z_therm accessible heat / Z_hidden inaccessible debt) split by K(O)<K(F). N_ZSimplexProjections is that three-coordinate decomposition.
+    why_forced: |
+      Removing this edge loses a realization relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N009
+    target: N_EnergyAsTransitionPotential
+    label: no_primitive_energy_scale_energy_emerges_from_Z_field
+    edge_status: D
+    justification: |
+      Forced (grounds-guard). N009: no energy scale as a primitive parameter; all scales emerge from the local Z-field. Grounds the not-primitive guard — energy's scale is measured/emergent, not a primitive (blocks R3).
+    why_forced: |
+      Removing this edge loses a grounds-guard relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -22040,6 +22092,91 @@ nodes:
         the local structure self-returning — the description, applied to
         itself against reality, comes back unshifted. That is why
         understanding transfers and a memorised fact does not.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_EnergyAsTransitionPotential
+    title: "Energy as Transition Potential — Conjugate-to-Time Generator (Conserved) Whose Magnitude Is Dissipation-Potential"
+    layer: physics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    summary: |
+      Energy is not a substance, a fluid, or a primitive scale (that is
+      R1 + R3). It is not Z itself (Z = impedance/cost; energy is
+      distinct — see below). Unpacked to process, energy is the
+      conjugate of the transition the A_0 process drives, read in two
+      coordinates of one quantity:
+
+        - GENERATOR / CONSERVED: energy is conjugate to the time
+          direction (= the I_Null transition direction). It is the
+          generator of transition, conserved by the time-translation
+          invariance of A_0 (Noether-image, N311). This is "what energy
+          does".
+        - CAPACITY / DISSIPATION-POTENTIAL: the magnitude of energy is
+          how much Z can still be discharged into transitions — the
+          potential for dissipation. This is "how much energy".
+
+      Mass is the condensed coordinate of energy: E = mc^2 (N081, mass =
+      condensed Z-gradient). c^2 is a measured conversion anchor
+      (Bekenstein-bound-constrained, N081 / N004), NOT a derived number
+      — demanding its derivation is Trap 5.
+
+      Realization (the Z-simplex): a transition (action = argmin Z =
+      irreversible Landauer registration) discharges the energy-potential
+      into THREE realized Z-coordinates —
+        Z_struct  = what is registered (information / structure),
+        Z_therm   = accessible dissipation (heat, the local trace),
+        Z_hidden  = inaccessible dissipation (horizon debt = dark energy).
+      Z = Z_struct + Z_therm + Z_hidden (N_ZSimplexProjections). The
+      three are split by accessibility — K(O) < K(F): what the observer
+      can account for (Z_therm) vs what is beyond containment (Z_hidden).
+    why_status: |
+      DEMONSTRATED. IT both tests:
+      Test 1: defining energy is itself a transition driven by potential
+      — the definition is an instance of what it defines; returns itself.
+      Test 2 (subtraction): rejecting "energy = conjugate-to-time
+      generator whose magnitude is dissipation-potential" requires
+      importing energy-as-substance/fluid (R1), energy-as-primitive-scale
+      (R3, contradicted by N009: no energy scale is primitive), or energy
+      with no relation to transitions (contradiction — energy is what
+      drives and measures transitions). All import R-violations or
+      contradiction. Forced.
+      Distinct from N311: N311 states energy is CONSERVED (Noether-image
+      of time-translation symmetry); this node states what energy IS
+      (the conjugate-to-time generator / dissipation-potential), of which
+      conservation is one consequence. Definition vs conserved-property —
+      two coordinates, not one node. No new postulate; the scale is
+      measured (Trap-5-safe), the structure is forced.
+    content: |
+      Why energy is NOT Z (the common Trap-3 merge):
+        Z is impedance/cost — what is minimised (argmin Z). Energy is the
+        conjugate of the transition-direction (time) — the generator that
+        drives motion along the gradient, and whose magnitude measures
+        how much discharge remains. Z is the landscape; energy is the
+        conjugate-of-time quantity whose budget the transition spends.
+        They enter different roles in the same structure; identifying
+        them by surface ("both are physics scalars") is Trap 3.
+
+      Dark-energy coordinate (downstream rate, not part of the
+      definition):
+        The inaccessible realized coordinate Z_hidden is dark energy
+        (N071: Lambda = Z_hidden accumulation = cosmological Landauer
+        debt). The STRUCTURE (dark energy = inaccessible-realized
+        coordinate of the discharged potential) is forced; whether its
+        growth (horizon debt, area S_dS) reproduces the observed Lambda
+        growth (volume) is N071's numerical closure — downstream
+        cosmology (Q2), not part of this structural definition (Q1).
+
+      Mass / energy / dark energy as one potential read three ways:
+        mass = condensed potential (E=mc^2); heat (Z_therm) = accessible
+        realized; dark energy (Z_hidden) = inaccessible realized;
+        information (Z_struct) = registered. One transition discharging
+        one potential into the Z-simplex.
     level: 1
     is_placeholder: false
 
