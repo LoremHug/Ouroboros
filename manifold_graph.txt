@@ -2661,13 +2661,16 @@ The hard problem dissolves by the same mechanism as N197 (CC dissolution, DEMONS
 both presuppose the observer outside the system being described.
 Once the Observer Containment structure is recognised, the question loses its referent.
 
-\textbf{Specific correlates (STRONG, N188).}
+\textbf{Specific correlates (specialist-downstream, N188).}
 Individual qualia (pain, red, joy) = specific $Z$-component patterns in specific
-neural substrate. These require empirical neuroscientific mapping and remain
-(STRONG) — not falsifiable from $A_0$ alone without additional neural data.
+neural substrate. The structural identification (qualia ARE Z-component patterns)
+is forced (Q1, DEMONSTRATED); the specific mapping of which pattern realises which
+quale is falsifiable empirical neuroscience — outside framework scope (Q2),
+specialist work that unfolds the compressed structure in the neural domain. Q2
+being open does not lower the node's structural status.
 
 WHY DEMONSTRATED (upgraded via N_InversiveTheory): the former open step "BPI self-reference = subjectivity" was an R1+R4 artefact. Subjectivity was treated as an object "produced by" a mechanism — postulating two entities with a production relation (R1) and a producing agent (R4). Under process lens: subjectivity = stable self-referential measurement process. N_InversiveTheory: any stable process cannot be not-A₀. Subjectivity IS a stable process — therefore IS A₀. The question "what else could produce it" dissolves with the postulate that something "produces" subjective experience as an object. The hard problem does not have a direction — it dissolves when R1 is removed from its formulation.
-N112 (DEMONSTRATED) and N197 (DEMONSTRATED). However, the step ``BPI self-reference = subjectivity'' is a Class B identification — two concepts named differently that are claimed to be the same. This requires an explicit definitional bridge, not purely deductive. N112 establishes BPI self-reference; the identification with subjectivity as a definitional identity (not just analogy) is not yet Class A.
+Two separate questions, not conflated: (Q1) is the structure forced? — yes. Subjectivity = the inside view (coordinate-locality) of a self-referential process is forced: rejecting it imports subjectivity-as-produced-object (R1), a producing agent (R4), or an external position to compare experience with process (R2, denied by K(O)<K(F)). Forced → Class A, DEMONSTRATED → the node is structurally correct. (Q2) is there Popperian empirical closure within framework scope? — no; the specific neural mapping (N188) is specialist downstream work. Q2 being open does NOT lower Q1: reading "no empirical closure yet" as "structurally not forced" conflates the two and is Trap 5 (verification demanded as a status condition) at the empirical level.
 
 NOT: ``consciousness is solved'' (the hard problem is \emph{dissolved}, not solved —
 the question is revealed as malformed, not answered within its own framing) $\cdot$
