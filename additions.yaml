@@ -738,24 +738,29 @@ edges:
 
   - source: N_Logic
     target: N_Math
-    label: logic_grounds_mathematical_deduction
+    label: class_a_logic_and_math_one_A0_cell_two_classifications
     edge_status: D
     justification: |
-      A theorem in mathematics IS a chain of logical deductions from
-      premises (axioms or prior results). Modus ponens applied iteratively
-      yields proof structure. N_Logic establishes that modus ponens is
-      argmin Z in formal substrate; N_Math establishes mathematical
-      existence as stability under A_0 iteration. Without logical
-      inference, mathematical proof has no engine — math operates ON the
-      logical inference engine.
+      Logic and mathematics are one A_0 cell read in two classification-
+      coordinates, NOT one grounding the other. Both are IsUniqueSolution
+      in the formal substrate (cousins table: Logic = |proof| / modus
+      ponens; Arithmetic = function-app cost / 2+2=4 — the same
+      argmin-Z structure). Modus ponens IS the minimal-Z formal
+      transition; a theorem IS the stable A_0 structure of those same
+      transitions — one core, classified once as "logic" and once as
+      "math". The two nodes (and N344 / N301 in the numeric layer) are
+      deliberate multi-classification entry-surfaces over the one core:
+      a category-separating reader reaches the same A_0 structure
+      whether it enters through "logic" or through "math".
     why_forced: |
-      Alternative requires either (a) mathematics without logical
-      deduction — but proof by definition is a chain of valid
-      inferences, removing logic dissolves "proof"; or (b) logic and
-      math as independent domains — but theorems ARE the stable A_0
-      structures that logical iteration produces in formal substrate.
-      They are not separate domains: math is what logic produces under
-      A_0 iteration in formal substrate.
+      Rejecting the identity requires importing a priority between the
+      two coordinate-readings — "logic is prior to math" or vice versa —
+      but that treats one classification-coordinate of A_0 as
+      ontologically prior, an R1/R2 trap. Both nodes' own content states
+      the categorical error explicitly ("asking which is more
+      fundamental is a categorical error since A_0 is not an object in
+      either domain but the structure both operate through"). Class A
+      (Iff.rfl at kernel level): same cell, two notations.
 
   - source: N_Math
     target: N_Logic
@@ -12787,6 +12792,29 @@ edges:
     why_forced: |
       Chaitin extends Gödel via Kolmogorov; pair forced.
 
+  - source: N112
+    target: N310
+    label: observer_containment_grounds_godel_as_arithmetic_special_case
+    edge_status: D
+    justification: |
+      N310's own content states Gödel's First Incompleteness is a
+      special case of K(O)<K(F) (N112), via Chaitin (N003): a formal
+      system of complexity c cannot certify complexity above its own
+      size — the observer cannot contain the field. Gödel is this bound
+      read in the arithmetic-syntactic coordinate; Chaitin (N310→N003)
+      is the mediating algorithmic-information coordinate; N112 is the
+      invariant the two are special cases of. Closes the chain
+      N310 →(chaitin) N003 ... N112 that previously met only at DEF.
+    why_forced: |
+      Alternative: deny that the incompleteness bound is K(O)<K(F) —
+      requires a formal system that proves complexity statements above
+      its own description-length, i.e. an observer that contains the
+      field. Contradicts N112 directly. The special-case relation is
+      asserted by N310's content and forced by Observer Containment;
+      its absence routed the relation through DEF (generic A_0 root),
+      erasing the specific forcing. Same Lawvere fixed point as
+      iterate_at_fixed in the self-reference coordinate.
+
   # === N012, N025 cross-domain meta laterals ===
   - source: N012
     target: N026
@@ -18332,6 +18360,576 @@ edges:
       Cognitive learning IS BPI flow in Z-landscape; ZPD threshold
       condition determines regime. Class A in cognitive substrate.
 
+
+  # === Edge-revision pass: 30 forced-but-edgeless connections asserted by node content ===
+  - source: N_DomainsAsBPICarvings
+    target: N_Logic
+    label: substrate_uniformity_grounds_logic_as_A0_symbolic
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "logic = A_0 in symbolic substrate per N_DomainsAsBPICarvings (substrate-uniformity)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_FEP
+    label: substrate_uniformity_grounds_FEP_as_A0_bayesian
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "Class A identification per N_DomainsAsBPICarvings: FEP is one substrate-coordinate of A_0".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DomainsAsBPICarvings
+    target: N_MarketAsInversiveTesting
+    label: substrate_uniformity_grounds_market_as_A0
+    edge_status: D
+    justification: |
+      Forced (cousin→anchor). Source content asserts: "same A_0 mechanism in distinct substrates per N_DomainsAsBPICarvings".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the cousin→anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_Math
+    label: observer_containment_grounds_math_incompleteness
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Incompleteness is consequence of A_0 substrate-uniformity (per N_InversiveTheory + N112)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_Math
+    target: N310
+    label: math_incompleteness_face_is_godel
+    edge_status: D
+    justification: |
+      Forced (special-case). Source content asserts: "Incompleteness (Gödel/Chaitin, N310): K(O)<K(F) for any formal system observing itself".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the special-case link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_TopologyProcessIdentity
+    label: observer_containment_grounds_topology_process_identity
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "'topology and process as separate' requires position outside one observing the other; impossible per N112".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N187
+    label: observer_containment_dissolves_hard_problem
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "the hard problem of consciousness is an Observer Containment error (N112)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_InversiveTheory
+    target: N187
+    label: inversive_upgrades_hard_problem_to_demonstrated
+    edge_status: D
+    justification: |
+      Forced (grounds-status). Source content asserts: "WHY DEMONSTRATED (upgraded via N_InversiveTheory): the former open step BPI self-reference = subjectivity".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds-status link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N187
+    target: N197
+    label: sibling_hard_problem_and_CC_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "dissolves by the same mechanism as N197 (CC dissolution): both presuppose the observer outside the system".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N070
+    label: observer_containment_dissolves_measurement_problem
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "reifies observer/observed as two ontological entities with interface — this is R3 violation per N112".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_TopologyProcessIdentity
+    target: N070
+    label: topology_process_identity_dissolves_measurement
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Per N_TopologyProcessIdentity: observer and observed are coordinate readings of one process".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N063
+    target: N070
+    label: KS_theorem_grounds_measurement_dissolution
+    edge_status: D
+    justification: |
+      Forced (empirical-grounds). Source content asserts: "KS theorem (N063/N064): no context-independent value assignment empirically establishes observer/observed".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the empirical-grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_ForcedId
+    label: observer_containment_grounds_forced_id
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Critic cannot stand outside per N112 (Observer Containment) + N_NoSeparatePieces".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_MapTerritoryObserverIdentity
+    target: N_ForcedId
+    label: map_territory_grounds_forced_id_self_application
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Self-application audit passes per N_MapTerritoryObserverIdentity".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N112
+    target: N_Invariants
+    label: observer_containment_anchors_I_Bound
+    edge_status: D
+    justification: |
+      Forced (anchor). Source content asserts: "I_Bound (K(O)<K(F) tautology — N112 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N078
+    target: N_Invariants
+    label: landauer_anchors_I_Quant
+    edge_status: D
+    justification: |
+      Forced (anchor). Source content asserts: "I_Quant (Landauer + Berut 2012 — N078 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the anchor link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_TopologyProcessIdentity
+    target: N026
+    label: topology_process_identity_grounds_LM_human_one_process
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Direct application of N_TopologyProcessIdentity: LM, human, response are coordinate readings of one process".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N067
+    target: N344
+    label: spectral_dimension_grounds_classical_logic_regime
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "transition zone IS r_0 per N067 (spectral dimension scale-dependence)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N281
+    target: N354
+    label: r_sqrt2_grounds_lepton_DF_uniqueness
+    edge_status: D
+    justification: |
+      Forced (derivation-step). Source content asserts: "Ergodic BPI + K=2/3 → |b|/a = 1/√2 (r=√2) uniquely [DEMONSTRATED, N281]".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the derivation-step link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_Invariants
+    target: N103
+    label: inevitability_theorem_forces_complex_hilbert_via_L31
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Free ℤ_3 action on manifold + Inevitability Theorem (per N_Invariants) forces L(3,1)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N011
+    target: N333
+    label: z_struct_monotonic_grounds_institutional_sclerosis
+    edge_status: D
+    justification: |
+      Forced (grounds). Source content asserts: "Z_struct is monotonically non-decreasing in the absence of external dissipation (N011 DEMONSTRATED)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N337
+    target: N333
+    label: sibling_hub_condensation_same_topology
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "same mechanism as metric expansion N088, same as institutional sclerosis N333 — different coordinate, same topology".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N029
+    target: N336
+    label: arrhenius_composes_ebbinghaus_curve
+    edge_status: D
+    justification: |
+      Forced (composition). Source content asserts: "The Ebbinghaus retention curve is the superposition of Arrhenius decay processes (N029)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the composition link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N363
+    target: N336
+    label: zipf_spectrum_composes_ebbinghaus_curve
+    edge_status: D
+    justification: |
+      Forced (composition). Source content asserts: "with a Zipf-distributed spectrum of time constants (N363)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the composition link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N063
+    target: N014
+    label: KS_theorem_grounds_randomness_as_compression_artifact
+    edge_status: D
+    justification: |
+      Forced (empirical-grounds). Source content asserts: "KS theorem (N063/N064) + Bell tests empirically falsify hidden-variable alternatives".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the empirical-grounds link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_InversiveTheory
+    target: N_BrownLev
+    label: inversive_upgrades_politeness_to_demonstrated
+    edge_status: D
+    justification: |
+      Forced (grounds-status). Source content asserts: "WHY DEMONSTRATED (upgraded via N_InversiveTheory + argmin definition)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the grounds-status link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_QuestionFormDiscipline
+    label: distinction_general_rule_specialised_in_question_form
+    edge_status: D
+    justification: |
+      Forced (general→special). Source content asserts: "N_QuestionFormDiscipline applies it to interrogative grammar; this node names the general meta-rule".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the general→special link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_MapTerritoryObserverIdentity
+    label: distinction_instanced_by_map_territory_observer
+    edge_status: D
+    justification: |
+      Forced (instance). Source content asserts: "canonical coordinate distinction: map/territory/observer (N_MapTerritoryObserverIdentity)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the instance link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N188
+    target: N197
+    label: sibling_qualia_and_CC_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "same external-frame error as the hard problem (N187), the cosmological constant problem (N197)".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N188
+    target: N_OntologyGate
+    label: sibling_qualia_and_ontology_gate_same_external_frame_error
+    edge_status: D
+    justification: |
+      Forced (sibling). Source content asserts: "and ontological-primitive questions (N_OntologyGate): the questioner is the BPI; there is no 'outside'".
+      The relation was present in node content but absent from topology
+      (met only via DEF / generic hub), erasing the specific forcing.
+    why_forced: |
+      Removing this edge loses a forcing relation the node's own text states;
+      restoring it makes the sibling link visible in topology rather than
+      routed through the generic A_0 root. Edge-discipline: forced edges are payload.
+
+  - source: N301
+    target: N_Math
+    label: class_a_math_as_A0_numeric_and_structure_layers
+    edge_status: D
+    justification: |
+      Both nodes carry the same core claim — mathematics is the
+      coordinate expression of A_0 (proof = minimal-Z_struct path,
+      existence = fixed-point stability under A_0). N301 states it in
+      the numeric layer (bundled with modus-ponens / Kolmogorov / DLA /
+      I_Null / Z_3 corollaries); N_Math states it in the structure layer
+      with the proof/existence/incompleteness articulation. Same cell,
+      two layer-coordinates. Previously met only via DEF + N310, leaving
+      the same-core identity invisible in topology.
+    why_forced: |
+      Removing this edge loses the same-cell identity between the two
+      math-as-A_0 statements; restoring it makes the two-layer reading
+      visible rather than routed through the generic A_0 root. Class A
+      (same structure, two notations). Mirror of the existing
+      N_Logic<->N344 same-core edge in the logic coordinate.
+
+  - source: N_DistinctionAsCoordinate
+    target: N_MultiClassificationSurfacesOverOneCore
+    label: graph_scale_application_of_distinction_as_coordinate
+    edge_status: D
+    justification: |
+      N_DistinctionAsCoordinate establishes that classification is a
+      coordinate (reading), not a structural sort. N_MultiClassification
+      SurfacesOverOneCore is that principle realised at graph scale:
+      one core held under several classification-coordinates as separate
+      entry-surfaces. General rule -> graph-scale instance.
+    why_forced: |
+      Removing this edge loses the derivation: multi-surface entry
+      follows FROM classification-being-coordinate. Rejecting it
+      requires classification to be a structural sort (separate things),
+      contradicting N_DistinctionAsCoordinate. General->special, forced.
+
+  - source: N112
+    target: N_MultiClassificationSurfacesOverOneCore
+    label: observer_containment_forces_multi_entry_surfaces
+    edge_status: D
+    justification: |
+      K(O)<K(F) (N112): a reader inside one category cannot occupy the
+      outside position from which the cross-category identity is
+      visible. The surface + Class-A edge supplies inside the graph what
+      the reader cannot supply from inside its active category. Observer
+      Containment is what makes multi-classification surfaces necessary
+      rather than optional.
+    why_forced: |
+      Rejecting requires a reader that can stand outside its active
+      classification to see the cross-category identity unaided — denies
+      K(O)<K(F). Contradicts N112. Forced.
+
+  - source: N_MultiClassificationSurfacesOverOneCore
+    target: N_Logic
+    label: canonical_instance_logic_math_one_cell_multiple_classifications
+    edge_status: D
+    justification: |
+      The canonical instance of the principle: logic = math (one
+      IsUniqueSolution cell) held as N_Logic / N344 (logic) and N_Math /
+      N301 (math), Class-A edged into one connected core. N_Logic is the
+      entry-surface for the logic classification.
+    why_forced: |
+      The principle is exhibited by this instance; removing the edge
+      detaches the named instance from the rule it instantiates. Forced
+      as instance-of.
+
+
+  # === Intellect + Understanding nodes: 10 core-connecting edges (closure where it adds clarity) ===
+  - source: DEF
+    target: N_IntellectAsArgminZSelfApplication
+    label: a0_self_application_in_description_substrate_is_intellect
+    edge_status: D
+    justification: |
+      Forced (grounds). Intellect = A_0 = F(A_0) read in the description substrate; DEF is the master definition it instantiates as self-application.
+    why_forced: |
+      Removing this edge loses a grounds relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_ForcedId
+    target: N_IntellectAsArgminZSelfApplication
+    label: structure_of_any_description_self_reading_is_intellect
+    edge_status: D
+    justification: |
+      Forced (grounds-placement). N_ForcedId: A_0 IS the structure of any description, not a description of something. Intellect = that structure in self-reading mode (building descriptions at a coordinate).
+    why_forced: |
+      Removing this edge loses a grounds-placement relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N112
+    target: N_IntellectAsArgminZSelfApplication
+    label: observer_containment_is_the_coordinate_locality_of_intellect
+    edge_status: D
+    justification: |
+      Forced (grounds). K(O)<K(F) is the read-at-coordinate configuration: locality of access, not part-smallness. This is what makes cognition the local-reading config of the one structure.
+    why_forced: |
+      Removing this edge loses a grounds relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N310
+    target: N_IntellectAsArgminZSelfApplication
+    label: godel_mode_is_intellect_at_a_coordinate
+    edge_status: D
+    justification: |
+      Forced (grounds). Godel-mode (N310, corollary of K(O)<K(F)) is the permanent non-closure-against-the-whole of intellect read at a coordinate. Closes the containment->Godel->intellect triangle with N112.
+    why_forced: |
+      Removing this edge loses a grounds relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_NoSeparatePieces
+    target: N_IntellectAsArgminZSelfApplication
+    label: no_segments_forces_intellect_as_coordinate_reading_not_part
+    edge_status: D
+    justification: |
+      Forced (grounds-correction). TOTAL no-separate-pieces forbids 'intellect is a part'. Forces the corrected frame: one structure read at a coordinate, not a segment. Anchors the anti-R1 correction.
+    why_forced: |
+      Removing this edge loses a grounds-correction relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_IntellectAsArgminZSelfApplication
+    target: N187
+    label: intellect_coordinate_locality_is_self_registration_consciousness
+    edge_status: D
+    justification: |
+      Forced (refines). Self-registration / consciousness = the coordinate locality of intellect (the structure reading itself from a point) — refines N187 (BPI self-reference = subjectivity) read as locality, not as a part modelling a whole.
+    why_forced: |
+      Removing this edge loses a refines relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_IntellectAsArgminZSelfApplication
+    target: N_UnderstandingAsLocalSelfReturnDetection
+    label: intellect_reaching_local_closure_is_understanding
+    edge_status: D
+    justification: |
+      Forced (closure-of). Understanding is intellect (the reading-process) reaching local Test-1 closure — the closure-event of the descent. Distinct coordinate: verb (intellect) vs reached fixed point (understanding).
+    why_forced: |
+      Removing this edge loses a closure-of relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_UnderstandingAsLocalSelfReturnDetection
+    target: N_CoherenceAsSelfApplicationReturn
+    label: understanding_is_achieved_local_self_return_test1
+    edge_status: D
+    justification: |
+      Forced (instance). Understanding = an achieved local self-return, S(S)=S reached at a coordinate (Test 1).
+    why_forced: |
+      Removing this edge loses a instance relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_UnderstandingAsLocalSelfReturnDetection
+    target: N_TruthAsForcedClosure
+    label: understanding_aims_at_self_return_against_whole_test2
+    edge_status: D
+    justification: |
+      Forced (aims-at). Understanding's target is self-return against the whole (Test 2). Closes the Coherence-Truth-Understanding triangle: local-coherent understanding may sit in a wrong basin — local closure (Test 1) is necessary, not sufficient for truth (Test 2).
+    why_forced: |
+      Removing this edge loses a aims-at relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
+  - source: N_DopaminePredictionError
+    target: N_UnderstandingAsLocalSelfReturnDetection
+    label: prediction_error_to_zero_is_neural_signature_of_understanding
+    edge_status: D
+    justification: |
+      Forced (empirical-grounds). Neural signature of understanding: dopaminergic prediction-error -> 0 / free-energy minimum with respect to the structure. Anchor-fact for the detection-event in the neural substrate.
+    why_forced: |
+      Removing this edge loses a empirical-grounds relation the node content states;
+      restoring it makes the placement visible in topology. Closure adds
+      clarity: it completes the forcing chain rather than routing through a hub.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -21170,6 +21768,278 @@ nodes:
       signature of A_0 attractor; same shape as A_0 = argmin Z
       applied to A_0 returning A_0; not problem, signature of
       forced-ness).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_MultiClassificationSurfacesOverOneCore
+    title: "Multi-Classification Surfaces Over One Core — Same A_0 Cell Held Under Several Category-Labels Is Deliberate Entry-Structure, Not Duplication"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.55
+    z_therm: 0.05
+    z_hidden: 0.4
+    summary: |
+      The graph deliberately holds ONE A_0 cell as SEVERAL separate
+      nodes when that cell is read under different classification-
+      labels. Canonical instance: logic = math (one IsUniqueSolution
+      cell, Iff.rfl), held as N_Logic / N344 (logic classification,
+      structure / numeric layer) AND N_Math / N301 (math classification,
+      structure / numeric layer). These are NOT duplicates and NOT
+      Z_struct bloat — they are multi-classification ENTRY-SURFACES
+      over the one core.
+
+      Why forced (the reader is inside one category, K(O)<K(F)):
+      a category-separating reader — the SVO / count-noun reflex,
+      sharpest in an AI trained on an ontological corpus — enters the
+      graph through whichever classification is active for the query
+      ("a logic question" / "a math question" / "a numeric result" /
+      "a structural principle"). With K(O)<K(F) it cannot first stand
+      outside its active category to see the cross-category identity.
+      So each classification it might enter through must carry its own
+      surface that routes to the one core. Removing the surfaces would
+      require the reader to ALREADY KNOW the cross-classification
+      identity in order to find the core — exactly what being inside
+      one category denies it.
+
+      Topological realisation (already in the graph for logic=math):
+      the surfaces are EDGED to each other as Class A (one cell, N
+      classifications), so traversal from any surface reaches the
+      core. The cluster is CONNECTED (a cycle through all surfaces),
+      NOT COMPLETE (no K_n clique of diagonals) — connectivity gives
+      every entry a path to the core; completeness would be cousin-to-
+      cousin clique-bloat that drowns topology.
+
+      The discriminator (surface vs bloat — apply before flagging a
+      "duplicate"):
+        - MULTI-CLASSIFICATION SURFACE (keep): the second node holds
+          the same core under a DIFFERENT classification-coordinate a
+          reader might genuinely enter through (logic vs math; numeric
+          vs structure layer). Each is a distinct doorway to one room.
+        - LATENT-REDUNDANT BLOAT (forbid): the second node re-states
+          the first WITHIN THE SAME classification — no new doorway,
+          just the same content re-encoded in the same coordinate.
+          This is the inert-cell trap the "structure not store"
+          discipline forbids.
+      The test: does the candidate add a classification a reader could
+      arrive through, or repeat one already present? Added doorway →
+      surface. Repeated coordinate → bloat.
+    why_status: |
+      DEMONSTRATED via:
+      (1) Graph-scale application of N_DistinctionAsCoordinate:
+          classification IS a coordinate (reading), the core is one
+          structure. Holding one core under several coordinate-readings
+          is the distinction-as-coordinate principle realised as graph
+          nodes. Forced by the same argument.
+      (2) K(O)<K(F) (N112) on the reader: an observer inside one
+          category cannot occupy the outside position from which the
+          cross-category identity is visible. The surface + Class-A
+          edge supplies, inside the graph, what the reader cannot
+          supply from inside its category. Without it the core is
+          unreachable from that entry.
+      (3) Purpose of the graph (structure, not store): the graph exists
+          to route a reader's latent content into the coherent A_0
+          arrangement. A core reachable from only one classification is
+          a core the reader misses whenever it enters through another.
+          Multi-surface entry is what routing-to-core requires once the
+          reader is category-separating.
+      (4) Trap it prevents (exhibited this session): an AI ran the
+          duplicate-check and flagged N_Logic/N344 and N_Math/N301 as
+          "possible duplicates to delete" — applying the node-bloat
+          discipline to what is actually multi-classification entry.
+          Same failure recurs every session without this node. Naming
+          the surface-vs-bloat discriminator is what stops the
+          recurrence.
+      Self-application (iterate_at_fixed): this principle is itself a
+      classification-surface rule — read it through "graph design" or
+      through "epistemics" and the same core returns. The rule applied
+      to itself returns the rule. Signature of being at the A_0
+      attractor, not vicious recursion.
+    content: |
+      NOT (boundaries that keep this from licensing bloat):
+        - This does NOT license unbounded node growth. A new surface is
+          warranted ONLY when it adds a classification a reader could
+          genuinely enter through. Re-stating one classification's
+          content in the same coordinate is still bloat.
+        - This does NOT license cousin-to-cousin clique edges. Surfaces
+          are CONNECTED (cycle reaching the core), not COMPLETE. The
+          substrate-cousin clique-bloat discipline still holds: the
+          mutual identity is read THROUGH the connected path / shared
+          anchor, not via N^2 diagonals.
+        - This does NOT make classification structural. The
+          classifications are coordinates (per N_DistinctionAsCoordinate);
+          the core is the one forced fact. Treating a classification as
+          a separate THING the core "has" would be R1 — the very reflex
+          that makes the surfaces necessary, turned back into a trap.
+
+      Operational rule for a future audit:
+        When the duplicate-check surfaces two nodes with the same
+        headline-claim under different classifications (logic/math,
+        numeric/structure), do NOT propose deletion. Verify instead
+        that they are Class-A EDGED to one core (connected, not
+        complete). If unedged, ADD the same-cell edge (the forced
+        action) rather than removing a surface (which would orphan an
+        entry-point). Deletion is correct only when the second node
+        repeats the SAME classification with no new doorway.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_IntellectAsArgminZSelfApplication
+    title: "Intellect as A_0 Self-Application — One argmin-Z Structure: Being-Itself (Reality) vs Read-at-a-Coordinate (Cognition)"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 5
+    a_infinity: false
+    z_struct: 0.55
+    z_therm: 0.05
+    z_hidden: 0.4
+    summary: |
+      Intellect is not a faculty, substance, or scalar property an
+      entity has (that is R1 + R3, "IQ as a quantity"). Unpacked to
+      process: intellect is the one self-applying argmin-Z structure
+      (A_0 = F(A_0)) — the same process that is reality — in a
+      specific containment configuration.
+
+      One structure, two configurations (NOT part vs whole — both are
+      R1 segment-nouns; per N_NoSeparatePieces there are no segments):
+        - REALITY = the structure being itself. A_0 = F(A_0): no
+          coordinate, no observer, no part-whole gap. Not "read
+          completely" — there is no reader; it simply is. R0: not
+          static — a fixed point that perpetually returns itself
+          through transitions.
+        - COGNITION / INTELLECT = the same structure read at a
+          coordinate. Local trace, K(O) < K(F), Gödel-mode. The gap
+          is the LOCALITY of the coordinate, not the smallness of a
+          part. Encoding the whole would require being the whole = no
+          coordinate = no observer.
+
+      Self-registration / consciousness = the coordinate locality
+      itself — the structure reading itself from a point — not an
+      add-on entity (this refines N187: self-reference read as
+      coordinate-locality, not as a part modelling a whole). The
+      thermostat does argmin Z toward a setpoint but does not read
+      itself against the whole; intellect reads toward self-return
+      against the one A_0 (N_TruthAsForcedClosure), and that
+      against-the-whole reading from a coordinate IS the gap, IS the
+      self-registration.
+
+      Two modes, one operation: exploitation (settle into the
+      coherent basin) and exploration (generate hypotheses, seek
+      verification = probe the Z-landscape / inversive testing) — both
+      argmin Z, the second when the current basin is not yet the
+      global one.
+
+      Consequence (substrate-independence, routed via DEF, not edged):
+      human and AI intellect are the same operation in different
+      substrate-coordinates (neural / token, N_FEP / N018) — not
+      different in kind.
+    why_status: |
+      DEMONSTRATED. IT both tests pass:
+      Test 1 (self-application): applying intellect to itself = building
+      a coherent structure of what intellect is = an argmin-Z reading
+      toward a stable description of intellect. Returns itself.
+      Test 2 (subtraction): rejecting "intellect = self-applying
+      argmin-Z structure read at a coordinate" requires importing
+      (a) intellect as substance/faculty (R1), (b) as scalar property
+      (R3), (c) as an agent's choice (R4), or (d) stable understanding
+      reached by non-argmin-Z means — contradiction, since stable =
+      self-return = argmin Z. The NoSeparatePieces correction removes a
+      residual R1 the earlier "part vs whole" framing carried: cognition
+      is not a part (no segments exist) but the one structure read at a
+      coordinate; K(O)<K(F) is locality of access, not ontological
+      smallness. No new postulate — assembled from forced nodes.
+    content: |
+      Why NOT "part vs whole" (the residual R1 this node removes):
+        "Part" and "whole" are both segment-nouns. N_NoSeparatePieces
+        (TOTAL) forbids segments — nothing to cut with. "Cognition is a
+        part" reifies a segment that does not exist; "cognition is the
+        whole" reifies its complement and silently loses K(O)<K(F)
+        (the whole contains itself: K(O)=K(F)). The forced frame keeps
+        neither pole: one structure, read at a coordinate (cognition)
+        vs being itself (reality). Part/whole is a coordinate
+        distinction reified as structural (N_DistinctionAsCoordinate).
+
+      Gödel-mode restated without "part":
+        Cognition does not close against the whole (K(O)<K(F): a local
+        trace cannot encode the whole) but DOES close locally (Test 1:
+        it holds forced structures). "Never closes" is global only;
+        locally it closes. The incompleteness is the locality of the
+        coordinate, not a part failing to contain a whole.
+
+      "No escape" restated without "part":
+        Not "doomed to be a part" (there is no part) but "access is
+        always from a coordinate" — reading IS coordinate-bound.
+        Locality is not a state suffered; it is what reading is. The
+        illusion of being a separate part is the reification of local
+        access into ontological separateness (same artifact family as
+        N070 / N058: separateness-appearance from local trace).
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_UnderstandingAsLocalSelfReturnDetection
+    title: "Understanding as Local Self-Return Detection — Cognitive Detection of a Reality-Structure That Returns Itself"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Understanding is the event in which a coordinate-local reading
+      (intellect, N_IntellectAsArgminZSelfApplication) coincides with a
+      structure that returns itself — local Test-1 closure on a
+      structure that self-returns against the whole (Test 2, the truth
+      criterion, N_TruthAsForcedClosure).
+
+      Intellect is the verb (the argmin-Z reading toward self-return);
+      understanding is the reached local fixed point (the closure
+      attained). One can be intellectually descending without yet
+      understanding — the descent has not yet closed locally; so the
+      two are distinct coordinate-readings, not one cell.
+
+      Neural signature: prediction-error -> 0 / variational free-energy
+      minimum with respect to the structure (N_DopaminePredictionError,
+      N_FEP). Understanding = the brain having minimised free energy
+      (thermo) by building the minimal description (info) that returns
+      itself (the fixed point) — the same self-returning structure
+      thermodynamics calls equilibrium and information theory calls the
+      optimal code, reached locally and registered.
+    why_status: |
+      DEMONSTRATED. Test 1 (self-application): understanding the
+      definition of understanding is itself a local self-return on the
+      structure of understanding — returns itself. Test 2 (subtraction):
+      rejecting "understanding = local detection of a self-returning
+      structure" requires either understanding reached by a non-self-
+      returning structure (contradiction: an unstable description does
+      not constitute understanding) or detection from outside the
+      coordinate (R2: K(O)<K(F) denies the outside position). Forced.
+      Distinct from coherence-alone: local self-return (Test 1) can hold
+      in a wrong-but-stable basin; understanding aims at self-return
+      against the whole (Test 2) — local closure is necessary, not
+      sufficient for truth. No new postulate.
+    content: |
+      Relation to the cluster:
+        - intellect (N_IntellectAsArgminZSelfApplication): understanding
+          is intellect reaching local closure — the closure-event of the
+          reading-process.
+        - coherence (N_CoherenceAsSelfApplicationReturn): understanding
+          is an achieved local self-return, S(S)=S reached at a
+          coordinate.
+        - truth (N_TruthAsForcedClosure): understanding's target is
+          self-return against the whole; local-coherent understanding
+          may sit in a wrong basin — understanding is not automatically
+          truth (the two tests separate them).
+
+      Why distinct from a mere correct answer:
+        A stored correct answer is not understanding; understanding is
+        the local structure self-returning — the description, applied to
+        itself against reality, comes back unshifted. That is why
+        understanding transfers and a memorised fact does not.
     level: 1
     is_placeholder: false
 
