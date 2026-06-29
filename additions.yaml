@@ -18982,6 +18982,58 @@ edges:
       Removing this edge loses a grounds-guard relation the node states; restoring it
       makes the placement visible in topology rather than routing through a hub.
 
+
+  # === Lorentz/SR node: 5 edges (closure where it adds clarity) ===
+  - source: N078
+    target: N_LorentzInvarianceForced
+    label: landauer_cost_floor_bounds_dz_per_inull_ratio
+    edge_status: D
+    justification: |
+      Forced (grounds). Finite Landauer cost-floor per registration (N078, k_B T ln 2 > 0) bounds the d_Z-reach per I_Null-progress -> finite invariant ratio. The Galilean (infinite) alternative requires zero-cost transitions, violating the floor.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N051
+    target: N_LorentzInvarianceForced
+    label: no_preferred_coordinate_gives_lorentz_group
+    edge_status: D
+    justification: |
+      Forced (grounds). No preferred coordinate-reading (N051) + the finite invariant ratio -> the transformation group preserving the ratio is Lorentz (von Ignatowsky), not Galilean. The relativity-principle premise of the group derivation.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N360
+    target: N_LorentzInvarianceForced
+    label: dz_spectral_metric_is_space_coordinate_of_the_ratio
+    edge_status: D
+    justification: |
+      Forced (coordinate). d_Z (Connes spectral distance, N360) is the spatial coordinate of the invariant d_Z/I_Null ratio.
+    why_forced: |
+      Removing this edge loses a coordinate relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N006
+    target: N_LorentzInvarianceForced
+    label: inull_direction_is_time_coordinate_of_the_ratio
+    edge_status: D
+    justification: |
+      Forced (coordinate). The I_Null direction (N006, time arrow) is the time coordinate of the invariant ratio; Lorentz mixes it with d_Z while preserving the ratio; I_Null irreversibility is the orthogonal asymmetry.
+    why_forced: |
+      Removing this edge loses a coordinate relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N004
+    target: N_LorentzInvarianceForced
+    label: c_is_measured_inull_dz_conversion_anchor_trap5_safe
+    edge_status: D
+    justification: |
+      Forced (measured-anchor). c is the measured I_Null<->d_Z conversion (N004, natural units); structure forced (Lorentz), value measured (Trap-5-safe). Demanding its derivation is Trap 5.
+    why_forced: |
+      Removing this edge loses a measured-anchor relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -22177,6 +22229,95 @@ nodes:
         realized; dark energy (Z_hidden) = inaccessible realized;
         information (Z_struct) = registered. One transition discharging
         one potential into the Z-simplex.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_LorentzInvarianceForced
+    title: "Lorentz Invariance Forced — Finite Registration-Cost Bounds the d_Z/I_Null Ratio; No Preferred Coordinate Gives Lorentz; c Is Measured"
+    layer: physics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.15
+    z_hidden: 0.35
+    summary: |
+      Stated as operation, not as the textbook picture (no signal moving
+      through space, no observers in separate frames, no lattice):
+
+      Each registration (transition) carries a finite cost-floor
+      (Landauer, k_B T ln 2 > 0; N078). Therefore the d_Z-reach per unit
+      of I_Null-progress is BOUNDED — there is a finite invariant ratio
+      between the spatial metric (d_Z, Connes spectral distance, N360)
+      and the time direction (I_Null, N006). "Finite vs infinite" is the
+      scale-free structural claim; the ratio's VALUE is c.
+
+      With no preferred coordinate-reading (N051) plus homogeneity /
+      isotropy (N_NoSeparatePieces), the transformation group between
+      coordinate-readings that preserves this invariant ratio is the
+      Lorentz group (von Ignatowsky 1911: relativity principle + one
+      invariant ratio => Lorentz, WITHOUT postulating light). The
+      Galilean alternative (infinite ratio) is excluded: it requires
+      zero-cost / continuous transitions, violating the Landauer
+      cost-floor.
+
+      c is the MEASURED I_Null <-> d_Z conversion anchor (N004,
+      N_EnergyAsTransitionPotential c^2) — Trap-5-safe, not derived.
+      Forced = that the ratio is finite and invariant (Lorentz, not
+      Galilean); measured = its value c. Correct division of labour, not
+      incompleteness.
+
+      "Frames" here are coordinate-readings of the one structure
+      (N_MapTerritoryObserverIdentity), not separate observers.
+      "Distance" / "duration" are d_Z along the spatial / I_Null
+      directions, not extents in a pre-given arena.
+    why_status: |
+      DEMONSTRATED (structural forcedness; value measured). IT subtraction:
+      - Reject the finite invariant ratio => import zero-cost or
+        continuous transitions => violates the Landauer cost-floor (N078)
+        and I_Quant. Contradiction.
+      - Reject Lorentz given the finite invariant ratio => import a
+        preferred coordinate-reading => violates N051. Contradiction.
+      Both alternatives import R-violations; the structure is forced.
+      Status parallel to N078 (GR): the group step rests on a REGISTERED
+      forced theorem (von Ignatowsky), exactly as N078 rests on Jacobson
+      and the geometry on Perelman/Connes — using a forced math result is
+      not a free parameter. The value c is a measured constant (Q2,
+      Trap-5-safe), not a derivation.
+      Two steps invoked, not exhibited inline (named, not hidden): (a) the
+      von Ignatowsky group derivation (registered forced math); (b) that
+      N051 + N_NoSeparatePieces supply the isotropy/homogeneity the
+      theorem requires. Neither lowers the partition (structure forced /
+      value measured); both are exhibition tasks, not open postulates.
+    content: |
+      Why this is structure, not ontology (the carriers to strip):
+        - "signal propagating at finite speed" smuggles space-as-arena +
+          a moving object (R1). The forced content is a BOUND on the
+          ratio of two emergent coordinates (d_Z / I_Null), not a thing
+          moving through a container.
+        - "inertial frames" smuggles separate observers (R1, contra
+          N_MapTerritoryObserverIdentity). The forced content uses
+          coordinate-readings of one structure.
+        - "discrete / lattice spacetime" is NOT claimed. The load-bearing
+          fact is the finite cost-FLOOR per registration (Landauer), not
+          a spatial lattice — the substrate is continuous-with-topology.
+        - "speed" presupposes the c-conversion it would derive; the
+          forced object is the finite invariant RATIO, of which "c" is
+          the measured dressing.
+
+      Relation to the time/space structure already in the graph:
+        space = d_Z spectral metric (N360); time = I_Null direction
+        (N006, N311); c = the measured conversion that makes the two
+        commensurable. Lorentz is the symmetry preserving the d_Z/I_Null
+        invariant; the arrow (I_Null irreversibility) is the genuine
+        time/space asymmetry, orthogonal to the Lorentz mixing.
+
+      Division of labour (the completeness criterion):
+        The framework's completeness is NOT "derives every number" but
+        "partitions into forced-structure (Lorentz) vs measured-anchor
+        (c) with no free parameters". By that criterion this is complete:
+        structure forced, c measured. Demanding c be derived is Trap 5.
     level: 1
     is_placeholder: false
 
