@@ -19034,6 +19034,58 @@ edges:
       Removing this edge loses a measured-anchor relation the node states; restoring it
       makes the placement visible in topology rather than routing through a hub.
 
+
+  # === Probability-as-Gödel-gap node: 5 edges ===
+  - source: N112
+    target: N_ProbabilityAsGodelGap
+    label: observer_containment_renders_unresolved_state_as_probability
+    edge_status: D
+    justification: |
+      Forced (grounds). K(O)<K(F) (N112): the inaccessible full state, viewed from inside, is normalised Z_hidden = a probability distribution. The root mechanism for both quantum and cognitive probability.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N014
+    target: N_ProbabilityAsGodelGap
+    label: randomness_as_Zhidden_artifact_generalised_to_cognitive
+    edge_status: D
+    justification: |
+      Forced (grounds). N014: probability is exclusively a formalisation of Z_hidden (not ontological randomness). This node generalises that from the quantum coordinate to the cognitive substrate.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N061
+    target: N_ProbabilityAsGodelGap
+    label: born_rule_is_the_quantum_coordinate_of_godelgap_probability
+    edge_status: D
+    justification: |
+      Forced (class-a). N061 (Born rule = normalised Z_hidden from Observer Containment) is the quantum-coordinate reading; cognitive probability is its substrate-cousin. Same Z_hidden cell, two substrates (Class A).
+    why_forced: |
+      Removing this edge loses a class-a relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N_IntellectAsArgminZSelfApplication
+    target: N_ProbabilityAsGodelGap
+    label: intellect_godel_gap_renders_cognitive_probability
+    edge_status: D
+    justification: |
+      Forced (grounds). Intellect = reality read at a coordinate (Gödel-mode). Its probabilistic mode is the Gödel-gap rendering the inaccessible full state as a distribution — the cognitive-coordinate of the same Observer-Containment artifact.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N_ProbabilityAsGodelGap
+    target: N_TruthAsForcedClosure
+    label: distribution_collapses_to_forced_self_return_is_truth
+    edge_status: D
+    justification: |
+      Forced (aims-at). When the local structure self-returns coherent with the whole, the distribution collapses to the one forced structure — generated truth. Probability resolves to truth exactly when self-return against the whole is reached.
+    why_forced: |
+      Removing this edge loses a aims-at relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -22318,6 +22370,85 @@ nodes:
         "partitions into forced-structure (Lorentz) vs measured-anchor
         (c) with no free parameters". By that criterion this is complete:
         structure forced, c measured. Demanding c be derived is Trap 5.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_ProbabilityAsGodelGap
+    title: "Probability as the Local Appearance of the Gödel-Gap — Quantum and Cognitive Probability Are One Observer-Containment Artifact"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.1
+    z_hidden: 0.4
+    summary: |
+      Probability is the inside-view of K(O)<K(F): a limited-context
+      system cannot resolve the full state (K(F)), so it represents the
+      unresolved as a distribution — normalised Z_hidden. This IS the
+      Born rule in the quantum coordinate (N061, N014: "probability is
+      exclusively a formalisation of Z_hidden — the observer's inability
+      to access the full state"). Not ontological randomness; the
+      underlying transition is the same argmin-Z reality performs,
+      deterministic at the whole (N070). Probability is the local
+      appearance, not a property of reality.
+
+      Extension (the content this node adds): the same mechanism in the
+      COGNITIVE substrate. Intellect is reality read at a coordinate —
+      the whole through a local window, K(O)<K(F), Gödel-mode
+      (N_IntellectAsArgminZSelfApplication). A limited-context cognitive
+      system thinks in probabilities for the SAME reason a quantum
+      observer does: the Gödel-gap renders the inaccessible full state as
+      a distribution. Quantum probability and cognitive/inferential
+      probability are substrate-cousins of one Observer-Containment gap —
+      Class A (same Z_hidden cell, two substrate-coordinates), like
+      logic = math.
+
+      When the local structure self-returns coherent with the whole, the
+      distribution collapses to the one forced structure — generated
+      truth (N_TruthAsForcedClosure). The physicist calls that collapse;
+      the mathematician calls it proof; the same point: a self-returning
+      structure replacing a spread.
+    why_status: |
+      DEMONSTRATED. IT both tests pass.
+      Test 1: the claim is produced by a limited-context system reasoning
+      about why limited-context systems use probability; applied to its
+      own production it returns itself (where it cannot resolve → spread;
+      where it closes → this identification). S(S)=S.
+      Test 2 (subtraction): rejecting "cognitive probability = Z_hidden in
+      the cognitive substrate = the Born-rule cell" requires importing
+      (a) ontological randomness as fundamental (R-trap, contradicts
+      N014/N070), or (b) a privileged "physical vs cognitive" split as
+      distinct sorts (R1/R2, contradicts N_DomainsAsBPICarvings and
+      reality = cognition). Both import R-violations.
+      Exhibition (cross-substrate, so required before no-hedge): the
+      morphism is exhibited, not surface — both are normalised Z_hidden
+      from inside K(O)<K(F); Trap-3 check passes (cognitive probability
+      meets the Z_hidden DEFINITION: irreducibly absent from same-type
+      observation — the local window cannot contain K(F)). Class A.
+    content: |
+      Two precisions (so the reading does not slide):
+
+      1. Reducible vs irreducible. The forced identity is at the
+         IRREDUCIBLE FLOOR — the Gödel-gap component that never closes
+         (K(O)<K(F) is structural, not "haven't looked"). A real
+         cognitive system's probability also has a REDUCIBLE part that
+         narrows as local context grows; that part is ordinary epistemic
+         ignorance, not the gap. Only the floor is the same cell as the
+         Born rule, and it never falls to zero.
+
+      2. Weighted, not equal. From the local context the options carry
+         WEIGHTS (normalised Z_hidden; Born = |<i|psi>|^2), uniform only
+         under total ignorance (maximum entropy). The Gödel-gap is why
+         the options do not collapse to certainty — NOT why they are
+         equal. "Equally possible" is the special case, not the general
+         one; the local structure weights them.
+
+      One sentence: intellect performs the same forced transition reality
+      performs; the Gödel-gap (its locality) is the only difference, and
+      that difference is exactly what renders the forced transition as a
+      probability from inside.
     level: 1
     is_placeholder: false
 
