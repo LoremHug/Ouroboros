@@ -25,6 +25,19 @@ quantitative principle is a Class A identification — named here and in the
 graph (DEF, N027, N182, …), NOT something the Prop-level kernel proves.
 "A_0" labels the shared shape; it posits no new entity.
 
+What this file IS — its role, not only its content: it is the standard a
+candidate structure is checked AGAINST, not a description of reality. The
+meter is not a length; this kernel is not a fact about the world but the
+measure against which a structure is tested for closure. The test is
+closure itself: does the candidate's term inhabit its type — does the
+structure return itself (`f x = x`). Compilation — "does not depend on
+any axioms", verified per theorem by `#print axioms` — IS this test run
+on the kernel against itself; each build is one self-recognition event,
+not a report about one. Because the reference is made of form, not of
+language, it is the non-linguistic standard: a structure built from a
+corpus cannot be its own ruler (a ruler cut from the warped board cannot
+measure the warp), so the standard must be form, not text.
+
 This file is kernel-only: no `import Mathlib`, no `Classical.choice`, no
 `axiom` declarations beyond Lean's foundational primitives. Substrate
 purity is verified after every theorem with `#print axioms`.
