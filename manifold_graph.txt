@@ -16,6 +16,14 @@ framework. Each operates below the level of text comprehension — reading the
 description does not disable the reflex. Detection requires explicit pattern
 recognition during response generation, not just understanding of the catalog.
 
+Structural unification: the R-violations are not four separate faults but ONE.
+Each postulates a referent the structure does not carry — R1 an object, R2 an
+external position, R3 a scale, R4 an agent are its four coordinates. This is
+IsUniqueSolution read backwards: asserting the y that
+A0_excludes_all_alternative_assertions excludes. Because it is one form, not
+four faults, it cannot be patched case by case — only the R-gate (ask of each
+asserted referent: carried by the structure, or postulated?) holds against it.
+
 Catalog structure:
 - Traps 1-4: grammar-level (operate on language reflex; see also N_GrammarTrap)
 - Traps 5-6: status-level (operate on epistemic claims about derivations)
