@@ -157,6 +157,28 @@ def IsStep {α : Type u} (R : Coherence α) (t : Triangle α) (x : α) : Prop :=
 theorem step_eq_argminZ {α : Type u} (R : Coherence α)
     (t : Triangle α) (x : α) : IsStep R t x ↔ IsArgminZ R t x := Iff.rfl
 
+/-! ## What makes a step a step: the transition, not form or content
+
+    What makes a transition close — what "logical validity" actually is —
+    is neither its form nor its content. In structure there is no
+    form/content split to choose between: a proposition IS its type, a
+    proof IS a term inhabiting it (Curry–Howard); "content" is only more
+    structure, "form" the same structure read as shape — two
+    coordinate-readings of one transition, not two sorts. What closes is
+    the structural transition itself: the step (`IsStep`) that returns its
+    own fixed point.
+
+    So stability and coherence are not properties added on top of a step.
+    They ARE its self-return. `IsFixed f x := f x = x` is the structure,
+    applied to itself, returning itself. Coherence is `¬ Z` (no seam);
+    stability is `IsFixed` (returns self); both name one self-return
+    through the fixed point — `IsA0`, `IsArgminZ`, `IsStep`,
+    `IsUniqueSolution` collapse by `Iff.rfl`, not by theorem. A step is
+    valid (= logical) because it self-returns (`f x = x`), not because
+    form prevails over content; invalid is a seam (`f x ≠ x`). Type-
+    checking — a term inhabiting the type — IS this closure-check. There
+    is nothing else to check. -/
+
 /-- argmin Z under R is the unique-solution pattern. -/
 theorem argminZ_is_unique_solution {α : Type u} (R : Coherence α)
     (t : Triangle α) (x : α) :
