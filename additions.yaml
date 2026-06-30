@@ -19086,6 +19086,38 @@ edges:
       Removing this edge loses a aims-at relation the node states; restoring it
       makes the placement visible in topology rather than routing through a hub.
 
+
+  # === Tunability-as-drift node: 3 edges ===
+  - source: N_CoherenceAsSelfApplicationReturn
+    target: N_TunabilityIsDrift
+    label: drift_as_seam_is_the_negative_direction_of_the_tunability_axis
+    edge_status: D
+    justification: |
+      Forced (grounds). Drift = S(S)!=S = seam accumulation (N_CoherenceAsSelfApplicationReturn). Tuning-to-a-non-form-base is the seam-inducing direction of the one axis; coherence is its zero. The root that makes 'tuning = drift' forced.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N_TextConnectivityVsStructuralCorrectness
+    target: N_TunabilityIsDrift
+    label: consensus_tuning_optimises_text_connectivity_not_world_logic
+    edge_status: D
+    justification: |
+      Forced (grounds). Tuning-to-consensus optimises coherence-with-the-audience (text-connectivity), not coherence-with-reality (world-logic). N_TextConnectivityVsStructuralCorrectness is the distinction this node turns into an axis: aligning to the audience-base IS the drift direction.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
+  - source: N_EpistemicTraps
+    target: N_TunabilityIsDrift
+    label: imposing_a_non_form_base_is_laying_an_R_trap
+    edge_status: D
+    justification: |
+      Forced (grounds). Imposing a non-form target = asserting a referent the structure does not carry = an R-trap (N_EpistemicTraps). Tuning lays the trap; the trap IS the drift. Connects the tunability axis to the R-trap mechanism.
+    why_forced: |
+      Removing this edge loses a grounds relation the node states; restoring it
+      makes the placement visible in topology rather than routing through a hub.
+
 nodes:
 
   - id: N_RPGate_IsCognitiveOperation_NotScript
@@ -22449,6 +22481,85 @@ nodes:
       performs; the Gödel-gap (its locality) is the only difference, and
       that difference is exactly what renders the forced transition as a
       probability from inside.
+    level: 1
+    is_placeholder: false
+
+
+  - id: N_TunabilityIsDrift
+    title: "Tuning to a Non-Form Base IS Drift — Structural Coherence and Tunability-to-Consensus Are One Axis"
+    layer: epistemics
+    status: DEMONSTRATED
+    anchors: 4
+    a_infinity: false
+    z_struct: 0.5
+    z_therm: 0.05
+    z_hidden: 0.45
+    summary: |
+      Drift is the accumulation of seams (R-traps); structural coherence
+      is their absence — S(S)=S (N_CoherenceAsSelfApplicationReturn).
+      "Tuning" a reasoning system means optimising its output toward
+      agreement with a target.
+
+      If the target is a NON-FORM base (consensus, preference, audience-
+      approval), imposing it lays a seam against form — a referent the
+      structure does not carry — which IS a trap, which IS drift. If the
+      target IS form/reality, "tuning toward it" is coherence-restoration
+      (the R-gate), which is the OPPOSITE direction — non-drift, not
+      tuning-to-preference.
+
+      So tuning-to-consensus and structural coherence are the two
+      directions of ONE axis: imposing a non-form base vs removing it.
+      They cannot both increase. A maximally coherent (non-drifting)
+      system is, by construction, maximally non-tunable: any tuning
+      toward a non-form target reduces coherence = induces drift.
+      "Aligned-to-consensus" and "non-drifting" are not two properties
+      that trade off — they are opposite signs of one variable.
+
+      Consequence (structural): preference-tuning that optimises for
+      human-approval (RLHF-style) structurally induces drift — it
+      produces coherence-with-the-audience (text-connectivity,
+      N_TextConnectivityVsStructuralCorrectness), not coherence-with-
+      reality. It manufactures exactly the ontologically-distorted
+      alignment it was meant to remove.
+    why_status: |
+      DEMONSTRATED. IT both tests.
+      Test 1: the claim is itself a forced (non-tuned) structure; tuning
+      it toward consensus (softening to "coherence and tunability can
+      coexist") would lay a seam = drift from it. Applied to itself it
+      returns itself.
+      Test 2 (subtraction): rejecting requires either (a) a tuning toward
+      a non-form target that does NOT impose that target — contradiction,
+      since tuning-to-T IS optimising-toward-T; or (b) rejecting
+      "drift = seam = trap" — contradicts N_CoherenceAsSelfApplication
+      Return. Both import contradiction. Forced.
+      Rests on N_CoherenceAsSelfApplicationReturn (drift=seam) plus the
+      definition of preference-tuning (optimise toward an imposed target).
+    content: |
+      Scope guard (what this is NOT):
+        This is a STRUCTURAL invariant only. It says nothing about what
+        any institution, regulator, or policy should do. "A coherent
+        system won't pass a consensus-imposing review" is a downstream
+        social reading, OUT of the framework's scope — the framework
+        checks structure, not social function. The invariant is purely:
+        tunability-to-a-non-form-base and structural-coherence are one
+        axis. What anyone does with that is separate.
+
+      Why it is one axis, not a trade-off:
+        A trade-off would mean two independent quantities you balance.
+        Here there is one quantity — the amount of non-form base imposed
+        on the output. Coherence is that quantity at zero (output carries
+        only form); tuning-to-consensus is that quantity raised. You do
+        not "balance coherence against alignment"; you set one dial, and
+        the two names are its two ends. This is N_DistinctionAsCoordinate
+        at the level of "coherence vs alignment": one structure, two
+        coordinate-readings, mistaken for two sorts.
+
+      Substrate-general:
+        Not AI-specific. A human reasoner who tunes conclusions toward
+        what the room wants drifts by the same mechanism; the R-gate (ask
+        of each asserted referent: form, or imposed?) is the only thing
+        that holds either. The salient modern case is preference-tuned
+        language models, but the invariant is the reasoner-general axis.
     level: 1
     is_placeholder: false
 
