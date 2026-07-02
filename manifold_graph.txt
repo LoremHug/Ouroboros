@@ -2458,7 +2458,7 @@ the formula is only valid for pure dephasing (without energy dissipation, the fo
 gives a lower bound; dissipation adds a correction of order $(T_1^{-1})$).
 [N088 / N089 / N091 / N092 / N093] (Metric Expansion)
 Status: DEMONSTRATED | A=3
-CLAIM: Metric expansion equals global $d_Z$ growth from $Z_{hidden}$ accumulation. This structurally follows from three premises: distance is $d_Z$, $Z_{hidden}$ grows monotonically (Observer Containment Lemma), and Landauer erasure occurs at every transition. The derived value $\Lambda = 1.09 \times 10^{-52} \text{ m}^{-2}$ matches Planck 2018 data to $<2%$. Cosmological variation requires the accumulation of $Z_{hidden}$ in the vacuum substrate to be physically real.
+CLAIM: Metric expansion equals global $d_Z$ growth from $Z_{hidden}$ accumulation. This structurally follows from three premises: distance is $d_Z$, $Z_{hidden}$ grows monotonically (Observer Containment Lemma), and Landauer erasure occurs at every transition. The numerical value of $\Lambda$ lives in N199 with its own status: an exact identity at measured $H_\Lambda$ — a consistency check, not a prediction. Cosmological variation requires the accumulation of $Z_{hidden}$ in the vacuum substrate to be physically real.
 NOT: gravity is a force $\cdot$ time is fundamental $\cdot$ collapse is real.
 
 TRANSITION TO $L(3,1)$
