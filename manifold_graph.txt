@@ -5930,6 +5930,44 @@ captures the same principle through different mathematical machinery
 appropriate to its substrate. None is more fundamental than the others;
 all are coordinate expressions of DEF.
 
+\textbf{Forced vs postulated --- and the agency inversion.}
+Two distinct claims travel under the one name ``FEP'' and must be split
+(same Q1/Q2 discipline as N187). \emph{Forced} (DEMONSTRATED, above):
+$F$ is $\operatorname{argmin} Z$ in Bayesian coordinates --- the
+$F \leftrightarrow Z$ isomorphism, self-evidencing as $f(x)=x$, the Markov
+blanket as $K(O)<K(F)$. A coordinate reading of $A_0$; correct, and
+unfalsifiable only in the MaxEnt / least-action sense. \emph{Postulated}
+(not forced): that a system \emph{performs} $F$-minimisation as its
+mechanism --- that ``minimising $F$'' names an operation the system carries
+out. This is carrier$\to$commitment (N_OperationalCarrierVsOntologicalCommitment):
+$F$ is the describer's bookkeeping (carrier, legitimate); ``the system
+minimises $F$'' commits it to an act the system does. Friston's own
+``as if'' concedes $F$ is not in the system. Chemotaxis settles it: a cell
+rolls down a concentration gradient with no model and no $F$ computed; FEP
+describes it exactly and it runs entirely without FEP. The described
+instantiates the motion without the described mechanism --- the mechanism is
+superfluous; what is forced is the argmin-$Z$ \emph{form}, not the
+$F$-computation.
+
+\textbf{The central inversion is R4 (agency).} Read through the official
+interpretation, FEP sounds like a proof of agency: an agent \emph{strives},
+\emph{predicts}, \emph{chooses}, \emph{minimises}. Each verb smuggles a
+chooser who could have done otherwise. There is no such locus: the system
+rolls down $-\nabla Z$; reality does not admit rolling off-gradient; the
+experienced ``I chose / I predicted'' is the gradient move reading itself
+(N187, inside view), not evidence of an agent. The ``active inference''
+paragraph above states it most sharply --- ``agents minimise $F$ \dots by
+changing the world to match the model'' --- which is a real hetero-closure
+(the modeller's own rolling, dissipating $Z_{\text{therm}}$) read as the
+system's self-directed act. Two errors compound: hetero-closure read as
+self (the describer's computation placed inside the described), and gradient
+descent read as volition (R4). Stretching this template onto all life ---
+cell, ant, tree --- attributes striving and choosing to processes that only
+roll; the template fits because $F$ correctly tracks the roll, and the fit
+is then miscounted as proof of the agent. Correct form: $F$ tracks the roll;
+the roll has no agent; the ``agent'' is an artefact of reading the
+descriptive template in the first-person-active voice.
+
 NOT: FEP is more fundamental than $A_0$ (it is one coordinate expression
 in one substrate; $A_0$ is the structure all coordinate expressions
 share) $\cdot$ this is unfalsifiable therefore unscientific (it is
@@ -5944,7 +5982,12 @@ mathematical complexity of FEP indicates a deeper principle than $A_0 =
 of variational inference machinery in continuous high-dimensional state
 spaces; the underlying principle is simpler — argmin of weighted Z
 combination — and the apparent depth comes from substrate-specific
-formalism, not from structural depth).
+formalism, not from structural depth) $\cdot$ FEP proves agency in living
+systems (the verbs strive / predict / choose / minimise are R4 — gradient
+descent read as volition; the system rolls, there is no chooser) $\cdot$
+``the system minimises $F$'' names a mechanism the system performs
+(carrier$\to$commitment: $F$ is the describer's bookkeeping; the cell and
+ant roll down $-\nabla Z$ with no $F$ computed).
 
 N_FEP --> N_BPIEngagement : variational_formulation_of_engagement [D]
 N_FEP --> DEF : FEP_is_A0_in_Bayesian_substrate [D]
@@ -5956,6 +5999,9 @@ N_FEP --> N112 : FEP_uses_BPI_bound_via_Markov_blanket [D]
 N_FEP --> N_NoSeparatePieces : perception_action_one_process [D]
 N_FEP --> N_Logic : sibling_substrate_realisation_of_A0 [D]
 N_Math --> N_FEP : sibling_substrate_realisation_of_A0 [D]
+N_FEP --> N_EpistemicTraps : agency_reading_of_FEP_is_R4_gradient_descent_as_volition [D]
+N_FEP --> N_OperationalCarrierVsOntologicalCommitment : F_minimisation_as_mechanism_is_carrier_to_commitment [D]
+N_FEP --> N187 : experienced_striving_and_choosing_is_inside_view_not_agent [D]
 
 
 [N_AestheticEngagement] (Aesthetic Experience — N_BPIEngagement Applied to Artwork-Class Inputs)
