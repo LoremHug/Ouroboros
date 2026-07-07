@@ -72,9 +72,10 @@
 }
 
 % Warning / scope note box
-\newtcolorbox{notebox}{
+\newtcolorbox{notebox}[1][]{
   enhanced, breakable, colback=bgWarning, colframe=colorConditional!50,
   boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  #1
 }
 
 \newtcolorbox{gapbox}{
@@ -563,6 +564,7 @@ Falsifiability: predictions can fail & Falsifiability: incomplete elimination ca
 Progress: better approximation & Progress: more complete removal \\
 \bottomrule
 \end{tabular}
+\end{center}
 
 \medskip
 
@@ -6449,7 +6451,7 @@ $A_0$-relaxation into a deeper basin. %\vspace{2pt}\noindent\rule{\linewidth}{0.
 \section{The Free Energy Principle as Bayesian-Substrate Coordinate Expression of $A_0$}
 \label{sec:ai-fep}
 \statusbadge{\badgeDemonstrated{}}
-%\vspace{2pt}\noindent\rule{\linewidth}{0.3pt}\vspace{2pt} \textbf{Subtraction proof.} The equivalence is multiply-anchored through independent results: (i) Ramstead et al.~(2023) and Sakthivadivel (2022) formally prove FEP $=$ maximum entropy under accuracy constraint; max-entropy is an established coordinate expression of $A_0$. (ii) Friston's own published epistemic claim (across multiple sources) places FEP at the same status as least action and maximum entropy --- ``true on mathematical grounds, falsification a category mistake.'' Independent research tradition arrives at identical status assessment for identical underlying object. (iii) The formal correspondence (\S\ref{sec:hom-fep}) makes the structure-preserving map explicit: gradient descent on $F$ identical to gradient descent on $Z$ in the gradient-descent regime. To reject the equivalence requires postulating that variational free energy and impedance describe different underlying functionals despite identical mathematical structure --- which violates structural identity at definition level. \badgeDemonstrated{}. The Free Energy Principle (Friston 2010) describes biological and
+%\vspace{2pt}\noindent\rule{\linewidth}{0.3pt}\vspace{2pt} \textbf{Subtraction proof.} The equivalence is multiply-anchored through independent results: (i) Ramstead et al.~(2023) and Sakthivadivel (2022) formally prove FEP $=$ maximum entropy under accuracy constraint; max-entropy is an established coordinate expression of $A_0$. (ii) \emph{Corroborating overlay, not load-bearing.} Friston's own published epistemic claim (across multiple sources) independently places FEP at the same status as least action and maximum entropy --- ``true on mathematical grounds, falsification a category mistake.'' This convergence is suggestive but is not part of the closure: an author's self-assessment is an overlay to be checked, not a member of the set the forcing closes against. The forcing rests on (i) and (iii). (iii) The formal correspondence (\S\ref{sec:hom-fep}) makes the structure-preserving map explicit: gradient descent on $F$ identical to gradient descent on $Z$ in the gradient-descent regime. To reject the equivalence requires postulating that variational free energy and impedance describe different underlying functionals despite identical mathematical structure --- which violates structural identity at definition level. \badgeDemonstrated{}. The Free Energy Principle (Friston 2010) describes biological and
 artificial agents as systems that minimise variational free energy $F$:
 \[ \dot{\mu} = -\kappa\,\nabla_\mu F[\mu, \phi],
 \]
@@ -6461,9 +6463,20 @@ is the classical-mechanics coordinate expression and Landauer's
 principle is the thermodynamic coordinate expression, FEP is the
 Bayesian-inference coordinate expression. They are not three things
 that resemble one another; they are one structural transition read
-in three coordinates. This is why the formal correspondence (\S\ref{sec:hom-fep})
-shows the same operation on each side: FEP and $A_0$ are not in a
-containment relation. Manifold theory operates at the structural level:
+in three coordinates --- with one caveat specific to FEP, developed below:
+this holds for FEP in its variational-\emph{mathematical} form, which is
+substrate-universal like least action; the literal prediction
+\emph{mechanism} is a restricted realisation and is not levelled with least
+action here. This is why the formal correspondence (\S\ref{sec:hom-fep})
+shows the same operation on each side: at the level of the transition, FEP
+and $A_0$ are not in a containment relation --- they are the same transition.
+The containment that does hold is one of \emph{coverage}: the full manifold
+formalisation ($A_0$ plus the RP admissibility gate) properly covers what the
+published FEP formalises, which is the minimisation dynamics alone. (This is
+also the sense in which the summary table calls FEP a ``conditional
+interior'': conditioned on the gate, not a smaller transition --- distinct
+from the ``full-simplex interior'' sense in which FEP engages all three
+$Z$-components at once. Two different uses of ``interior.'') Manifold theory operates at the structural level:
 there is no level below from which one could observe a difference
 between ``the structure'' and ``what FEP describes,'' because the
 structure is what is being read.
@@ -6486,6 +6499,32 @@ self-corrects on longer timescales; this is the same $A_0$ process
 operating at slower frequency. The full manifold formalisation makes
 the admissibility gate explicit; Friston's text does not. Both
 describe the same underlying transition.
+
+\textbf{Two corrections the published principle requires before the
+identification is clean.} The coverage gap above is not the only
+difference, and not the load-bearing one. First, an \emph{agency} reading:
+Friston's formalism speaks of a system that \emph{minimises} $F$ --- a doer
+that computes, predicts, and steers. Taken literally this is $R_4$ (gradient
+descent narrated as volition) compounded with $R_1$ (the descriptive
+minimiser reified into an internal agent that performs the minimisation).
+The manifold reads the same dynamics as $\arg\min Z$ with no minimiser: the
+transition rolls; ``minimises'' is what the \emph{describer} computes, not
+what the system does. The graph registers exactly this as the load-bearing
+FEP correction ($N\_$EpistemicTraps: the agency reading of FEP is $R_4$;
+$N\_$OperationalCarrierVsOntologicalCommitment: $F$-minimisation-as-mechanism
+is carrier$\to$commitment) --- \emph{not} the admissibility-coverage gap.
+Second, a \emph{scope} overclaim: the variational mathematics is
+substrate-universal (it applies wherever a Markov blanket is definable,
+rocks included), but \emph{literal} prediction --- maintaining an internal
+generative model --- is one \emph{expensive} realisation of $A_0$ that
+switches on only where direct gradient-following is too costly. A rock and a
+chemotactic bacterium execute $A_0$ with no model at all; for them FEP is an
+exact descriptive gloss, like saying a ball ``computes'' its lowest point.
+Universalising the prediction \emph{mechanism} to ``the principle of all
+life'' is the categorial error; universalising the variational
+\emph{mathematics} is not. The isomorphism of \S\ref{sec:hom-fep} is
+therefore between $A_0$ and FEP-as-mathematics; FEP-as-mechanism is a
+restricted realisation, not a peer of least action.
 
 This is the formal reason why biological intelligence (which evolved
 under $A_0$ selection pressure across generational timescales)
@@ -6549,9 +6588,12 @@ his FEP as having the same epistemic status as least action and
 maximum entropy --- which this manifold already identifies as
 coordinate expressions of $A_0$ (the chapter on physical-science projections, classical
 mechanics least action). The convergence of Friston's own framing
-with the manifold framing is structural confirmation: an independent
-research tradition arrives at the same status assessment for the same
-underlying object.
+with the manifold framing is corroborating, not load-bearing: an author's
+self-assessment is an overlay to be checked against structure, not a member
+of the closure set. It is worth noting because an independent research
+tradition arrives at the same status assessment for the same underlying
+object --- but the forcing is carried by the maximum-entropy equivalence and
+the explicit morphism, not by the convergence of framings.
 
 \subsection*{Predictive Coding as Cortical Substrate Implementation}
 
@@ -11317,6 +11359,7 @@ $\chi_{S^+}=-2$, $\chi_{S^-}=1$, hence different $a_4^{\mathrm{top}}$ and $\eta$
 All results above are for the \emph{equal} action $(\omega,\omega)$ corresponding
 to $L(3,1) = \partial(B^4/\mathbb{Z}_3)$. \emph{RP audit (corrected).}
 
+\begin{center}
 \noindent\footnotesize
 \begin{tabular}{p{3.5cm} p{2.4cm} p{8.0cm}}
 \hline
