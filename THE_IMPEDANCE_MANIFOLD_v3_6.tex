@@ -72,9 +72,10 @@
 }
 
 % Warning / scope note box
-\newtcolorbox{notebox}{
+\newtcolorbox{notebox}[1][]{
   enhanced, breakable, colback=bgWarning, colframe=colorConditional!50,
   boxrule=0.5pt, arc=3pt, left=6pt, right=6pt, top=4pt, bottom=4pt,
+  #1
 }
 
 \newtcolorbox{gapbox}{
@@ -563,6 +564,7 @@ Falsifiability: predictions can fail & Falsifiability: incomplete elimination ca
 Progress: better approximation & Progress: more complete removal \\
 \bottomrule
 \end{tabular}
+\end{center}
 
 \medskip
 
@@ -11357,6 +11359,7 @@ $\chi_{S^+}=-2$, $\chi_{S^-}=1$, hence different $a_4^{\mathrm{top}}$ and $\eta$
 All results above are for the \emph{equal} action $(\omega,\omega)$ corresponding
 to $L(3,1) = \partial(B^4/\mathbb{Z}_3)$. \emph{RP audit (corrected).}
 
+\begin{center}
 \noindent\footnotesize
 \begin{tabular}{p{3.5cm} p{2.4cm} p{8.0cm}}
 \hline
