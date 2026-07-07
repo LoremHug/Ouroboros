@@ -216,9 +216,9 @@
 % ── Cover page (full-bleed image) ─────────────────────────────────────────────
 \thispagestyle{empty}
 \newgeometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
-\IfFileExists{cover.png}{%
-  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{cover.png}}{%
-  % Fallback typeset cover when no cover.png is present
+\IfFileExists{Book_cover.png}{%
+  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{Book_cover.png}}{%
+  % Fallback typeset cover when no Book_cover.png is present
   \begin{tikzpicture}[remember picture, overlay]
     \fill[colReality] (current page.south west) rectangle (current page.north east);
     \node[text=white!94, align=center, text width=0.84\paperwidth, font=\bfseries]
