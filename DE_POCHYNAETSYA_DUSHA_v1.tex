@@ -217,7 +217,20 @@
 \thispagestyle{empty}
 \newgeometry{top=0cm, bottom=0cm, left=0cm, right=0cm}
 \IfFileExists{cover.png}{%
-  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{cover.png}}{}
+  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio=false]{cover.png}}{%
+  % Fallback typeset cover when no cover.png is present
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[colReality] (current page.south west) rectangle (current page.north east);
+    \node[text=white!94, align=center, text width=0.84\paperwidth, font=\bfseries]
+      at ([yshift=1.4cm]current page.center)
+      {\fontsize{42}{50}\selectfont Де починається\\[2pt] душа};
+    \draw[white!55, line width=0.6pt]
+      ([xshift=-3.2cm,yshift=-1.7cm]current page.center) --
+      ([xshift=3.2cm,yshift=-1.7cm]current page.center);
+    \node[text=white!70, font=\itshape\large]
+      at ([yshift=-2.6cm]current page.center)
+      {структурний погляд на те, що здавалося очевидним};
+  \end{tikzpicture}}
 \restoregeometry
 \clearpage
 
