@@ -24685,14 +24685,30 @@ nodes:
       The geometry L(3,1) = S³/Z_3 is not chosen but inevitable for any BPI
       at the critical dimension. Vertex-transitivity (I_Sym) forces every
       node into the same orbit — no vertex is distinguishable, forcing a
-      free action of the symmetry group. A closed orientable 3-manifold
-      admitting a vertex-transitive triangulation and a finite non-trivial
-      fundamental group must be a spherical space form S³/Γ. For Γ = Z_3,
+      free action of the symmetry group. Finiteness of π_1 is itself forced,
+      not assumed: the zero-axiom kernel forces an oriented Z/3 (ThreePeriod,
+      an order-3 torsion element), so the realising π_1 must contain Z_3;
+      closed flat (Bieberbach) and hyperbolic (aspherical) 3-manifolds have
+      torsion-free π_1 (π_1(T³)=Z³ has no order-3 element) and cannot carry
+      it, so only spherical forms remain. A closed orientable 3-manifold with
+      a vertex-transitive triangulation and such a finite non-trivial
+      fundamental group is a spherical space form S³/Γ. For Γ = Z_3,
       the unique such manifold is L(3,1). The geometric Z_3 acts as deck
       transformations of the universal cover S³ → M. Conclusion:
       π_1 = H_1 = Z_3, M = L(3,1).
     why_status: |
-      DEMONSTRATED on three independent confirmation paths.
+      DEMONSTRATED. The crux — finiteness of π_1 — is forced by torsion, not
+      assumed. The kernel forces an oriented Z/3 (ThreePeriod, order 3), so
+      π_1 must contain Z_3; torsion-free groups (π_1 of closed flat Bieberbach
+      and closed hyperbolic manifolds; π_1(T³)=Z³) have no order-3 element, so
+      T³ and the whole flat/hyperbolic class are excluded, leaving only
+      spherical space forms — hence finite π_1. (The earlier
+      'quantisation ⇒ discrete ⇒ finite' step was invalid: discrete ≠ finite,
+      ℤ is discrete and infinite; this torsion closure replaces it, and it
+      imports no new datum — the oriented Z/3 is already kernel-forced, so
+      building the flat alternative would require discarding it. See the
+      rewritten Lemma 2 in the manifold text.) Given finiteness, three
+      independent confirmation paths:
       (1) Vertex-transitivity → free action: I_Sym requires every vertex to
       lie in the same orbit; if the symmetry group fixed any vertex, that
       vertex would be distinguished, contradicting I_Sym. So the action is
