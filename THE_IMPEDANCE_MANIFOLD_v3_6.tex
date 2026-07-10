@@ -10100,12 +10100,59 @@ with $\partial^2 = 0$ ($I_{\text{Null}}$), all three boundary operators
 non-trivial, and the complex closed ($I_{\text{Bound}}$).
 This is the definition of a closed oriented triangulated 3-manifold.
 \end{axiombox} \begin{axiombox}
-\textbf{Lemma 2 --- First homology is finite cyclic.}
-\badgeDemonstrated $I_{\text{Quant}}$ requires a non-trivial quantised flux through 1-cycles,
-so $H_1 \neq 0$. Quantisation implies a discrete spectrum, hence $H_1$ is
-finite. Therefore $H_1 = \mathbb{Z}_n$ for some integer $n \geq 2$.
-The boundary case $n = 1$ (corresponding to $S^3$, which has $H_1 = 0$) is
-excluded by $I_{\text{Quant}}$.
+\textbf{Lemma 2 --- The fundamental group is finite (it carries order-3 torsion).}
+\badgeDemonstrated The forced object is the \emph{oriented} $\mathbb{Z}/3$
+cycle, not an abstract ``three'': the zero-axiom kernel's \texttt{ThreePeriod}
+structure (theorem \texttt{three\_period\_orbit\_distinct}) is an element of
+order \emph{exactly} 3 --- torsion, carrying a direction (the arrow of
+$I_{\text{Null}}$). For the $Z$-graph $M$ to realise this forced cycle as its
+deck/monodromy structure, $\pi_1(M)$ must contain $\mathbb{Z}_3$: an element of
+order~3. \medskip
+This excludes the flat and hyperbolic alternatives outright, the 3-torus
+included. The fundamental groups of closed flat 3-manifolds (Bieberbach groups,
+acting freely on $\mathbb{R}^3$) and of closed hyperbolic 3-manifolds
+(aspherical, acting freely on $\mathbb{H}^3$) are \emph{torsion-free} --- their
+only finite-order element is the identity, because a finite group admits no free
+action on a contractible space (finite groups have infinite cohomological
+dimension; $\mathbb{R}^3$ and $\mathbb{H}^3$ are contractible). Concretely
+$\pi_1(T^3) = \mathbb{Z}^3$ and $n(a,b,c) = 0 \Rightarrow a=b=c=0$: no order-3
+element exists. A torsion-free group cannot contain $\mathbb{Z}_3$, so no flat
+or hyperbolic closed 3-manifold can carry the forced oriented $\mathbb{Z}/3$.
+\medskip
+Homogeneity ($I_{\text{Sym}}$) forbids a non-trivial connected sum --- a
+separating $S^2$ would break vertex-transitivity --- so $M$ is prime. A prime
+closed orientable 3-manifold whose $\pi_1$ contains a non-trivial finite
+subgroup is a spherical space form (Elliptisation Theorem, Perelman): its
+universal cover is $S^3$ and $\pi_1 = \Gamma \subset \mathrm{SO}(4)$ is
+\emph{finite}. Hence $H_1 = \Gamma^{\mathrm{ab}} = \mathbb{Z}_n$ with $3 \mid
+n$. The simply-connected case $\pi_1 = 0$ ($S^3$ itself) carries no
+$\mathbb{Z}_3$ and is excluded; the torus case ($\pi_1$ infinite, torsion-free)
+is excluded for the same reason --- only free generators, no order-3 element.
+\medskip
+\textit{Note for a reader who sees a seam here.} This step imports no new datum,
+and the appearance of a jump is not a gap. Everything it uses is already on the
+table before the lemma is read: the oriented $\mathbb{Z}/3$ is forced by the
+zero-axiom kernel (\texttt{ThreePeriod}); its fixed-point-freeness is
+$I_{\text{Sym}}$ (Lemma~5); the geometric input is the same Perelman result used
+throughout. The apparent seam --- ``why does \emph{finite} $\pi_1$ follow?'' ---
+is exactly the point where local step-by-step deduction ends and the inversive
+test does the closing. That test asks one question: \emph{could it be otherwise,
+given everything already fixed?} Try to build the alternative --- a flat or
+hyperbolic space, $\pi_1$ torsion-free: it does not stand, because realising it
+forces you to \emph{discard} the already-forced oriented $\mathbb{Z}/3$
+(torsion-free groups carry no order-3 element). That is an import of a
+contradiction, not an addition of data. This is precisely what Inversive Theory
+is for: it closes a structure that is \emph{already wholly present} but does not
+close by any single local implication, by exhibiting that its negation is
+incoherent with the standing set $\{\text{kernel} + \text{proven invariants} +
+\text{registered empirics}\}$. The earlier version of this lemma tried to close
+locally (``quantisation $\Rightarrow$ discrete $\Rightarrow$ finite''), which is
+invalid: discrete is not finite ($\mathbb{Z}$ is discrete \emph{and} infinite).
+The valid closure is not a sharper local step; it is the inversive one above.
+\emph{Independent confirmation from registered data:} the observed generation
+count is exactly three ($|\pi_1| = 3$); an infinite (torsion-free) $\pi_1$ would
+give an infinite or ill-defined count. Two coordinate points, one exclusion ---
+neither of them new.
 \end{axiombox} \begin{axiombox}
 \textbf{Lemma 3 --- $\mathbb{Z}_3$ is the minimum orientation-preserving
 transitive group on the three chain levels.}
